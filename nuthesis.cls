@@ -847,7 +847,7 @@ The \nu@college{} at the \nu@university\\[\baselineskip]
 In Partial Fulfilment of Requirements\\[\baselineskip]
 For the Degree of \nu@degree\\[3\baselineskip]
 Major: \nu@major\\[3\baselineskip]
-Under the Supervision of \nu@adviser\\[3\baselineskip]
+Under the Supervision of Professors \nu@adviser\\[3\baselineskip]
 \nu@city, \nu@state\\[1\baselineskip]
 \nu@month, \nu@year
 \end{center}
@@ -863,7 +863,7 @@ Under the Supervision of \nu@adviser\\[3\baselineskip]
       \nu@university, \nu@year%
     \end{center}%
     \begin{flushleft}%
-      Adviser: \nu@adviserAbstract%
+      Advisers: \nu@adviser%
     \end{flushleft}%
   }{\par\end{doublespacing}\cleardoublepage}
 

@@ -1,15 +1,15 @@
 ---
 # UNL thesis fields
-title: "DISSERTATION TITLE IN ALL CAPS"
-author: "Author Full Name"
-month: "Month"
-year: "Year"
+title: "HUMAN PERCEPTION OF EXPONENTIALLY INCREASING DATA DISPLAYED ON A LOG SCALE"
+author: "Emily Anna Robinson"
+month: "August"
+year: "2022"
 location: "Lincoln, Nebraska"
 major: "Statistics"
-advisor: "Chair and Co-chair"
+adviser: "Susan VanderPlas and Reka Howard"
 adviserAbstract: 
 abstract: |
-  Here is my abstract. *(350 word limit)*
+  Log scales are often used to display data over several orders of magnitude within one graph. During the COVID-19 pandemic, we have seen both the benefits and the pitfalls of using log scales to display case counts. Three graphical experimental tasks were conducted to evaluate the impact our choice of scale has on human perception of exponentially increasing trends. The first experiment evaluates whether our ability to perceptually notice differences in exponentially increasing trends is impacted by the choice of scale. We conducted a visual inference experiment in which participants were shown a series of lineup plots (consisting of 19 null panels and 1 target panel) and asked to identify the panel that was most different from the others. Our results indicated that when there was a large difference in curvature between the target plot and null plots, the choice of scale had no impact and participants accurately differentiated between the two curves on both the linear and log scale. However, displaying exponentially increasing data on a log scale improved the accuracy of differentiating between models with slight curvature differences. An exception occurred when identifying a plot with curvature embedded in surrounding plots closely relating to a linear trend, indicating that it is easy to identify a curve in a group of lines but much harder to identify a line in a group of curves. The use of visual inference to identify these guidelines suggests that there are *perceptual* advantages to log scales when differences are subtle. Our other experimental tasks focus on determining whether there are cognitive disadvantages to log scales: do log scales make it harder to make use of graphical information? We conducted a graphical task similar to the New York Times "You Draw It" page to test an individual's ability to use and make predictions for exponentially increasing data. We asked participants to draw a line using their computer mouse through the increasing exponential trend shown on both scales. In addition to differentiation and prediction of exponentially increasing data, we conduct an experimental task to test an individuals' ability to translate a graph of exponentially increasing data into real value quantities and extend their estimations by making comparisons. The results of our experimental tasks allow us to provide guidelines for readers to actively choose which of many possible graphics to draw, according to some set of design choices, to ensure that our charts are effective. *(399 words; 350 word limit)*
 acknowledgments: |
   Thank you to all my people!
 dedication: |
@@ -50,7 +50,8 @@ If you receive a duplicate label error after knitting, make sure to delete the i
 ```{r setup, include = F}
 options(width = 60)
 knitr::opts_chunk$set(
-  fig.width = 6, fig.height = 4, 
+  echo = F, eval = T, messages = F, warnings = F,
+  fig.width = 6, fig.height = 4,  fig.align = 'center',
   out.width = "\\linewidth", dpi = 300, 
   tidy = T, tidy.opts=list(width.cutoff=45)
 )
@@ -68,30 +69,116 @@ if(!require(huskydown))
     "benmarwick/huskydown"
   )
 library(huskydown)
+library(readr)
+library(tidyverse)
+library(scales)
+library(knitr)
+library(gridExtra)
 ```
 
 <!-- The {.unnumbered} option here means that the introduction will be "Chapter 0." You can also use {-} for no numbers on chapters. -->
 
 <!-- # Introduction {.unnumbered} -->
 
-# Introduction
+# Literature Review
 
-Editing text colors: \authorcol{Author's editing color. Use \expandafter\string\authorcol{}} Author may also use mostly black text as well. \chaircol{Chair's editing color. Use \expandafter\string\chaircol{}} \cochaircol{Co-chair's editing color. Use \expandafter\string\cochaircol{}} Redefine commands in unlthesis.cls with initials.
+Editing text colors: \ear{Emily's editing color.} Emily may also use mostly black text as well. \svp{Susan's editing color.} \rh{Reka's editing color.}
 
-Welcome to the _R Markdown_ thesis template. This template is based on (and in many places copied directly from) the UW LaTeX template, and has been modified to use the UNL LaTeX thesis class maintained by the math department. Hopefully it will provide a nicer interface for those that have never used TeX or LaTeX before. 
++ Motivation (COVID-19)
+    + @lisa_charlotte_2020
+    + @romano_scale_2020
+    + @rost_2020
+    + @bavel_using_2020
+    + @wade_fagen_ulmschneider_2020
+    + @financial_times_2020
++ General Sensation and Perception
++ General Graphics Research
+    + @vanderplas2020testing
+    + @unwin_why_2020
++ Logrithms
+    + @menge_logarithmic_2018
+    + @xkcd
+    + @heckler_student_2013
+    + @varshney_why_2013
+    + @siegler_numerical_2017
+    + @dehaeneLogLinearDistinct2008
++ Visual Inference through Lineups
+    + @best_perception_2007
+    + @vanderplas_clusters_2017
+    + @hofmann_graphical_2012
+    + @loyVariationsQQPlots2016
+    + @wickham2010graphical
+    + @majumder_validation_2013
+    + @vanderplas_statistical_nodate
++ Prediction with You Draw It
+    + @wagenaar_misperception_1975
+    + @mackinnon_feedback_1991
+    + @jones_polynomial_1977
+    + @jones_generalized_1979
+    + @wagenaar_extrapolation_1978
+    + @timmers_inverse_1977
+    + @mosteller_eye_1981
+    + @finney1951subjective
++ Numerical Translation and Estimation
 
-Using _R Markdown_ will also allow you to easily keep track of your analyses in **R** chunks of code, with the resulting plots and output included as well. The hope is this _R Markdown_ template gets you in the habit of doing reproducible research, which benefits you long-term as a researcher, but also will greatly help anyone that is trying to reproduce or build onto your results down the road.
+*Text below copied from JSM 2021 Student Paper*
 
-Hopefully, you won't have much of a learning period to go through and you will reap the benefits of a nicely formatted thesis. The use of LaTeX in combination with _Markdown_ is more consistent than the output of a word processor, much less prone to corruption or crashing, and the resulting file is smaller than a Word file. While you may have never had problems using Word in the past, your thesis is likely going to be at least twice as large and complex as anything you've written before, taxing Word's capabilities. After working with _Markdown_ and **R** together for a few weeks, we are confident this will be your reporting style of choice going forward.
+Graphics are a useful tool for displaying and communicating information [@vanderplas2020testing].
+Researchers include graphics to communicate their results in scientific publications and news sources rely on graphics to convey news stories to the public. 
+At the beginning of the SARS-NCOV-2 pandemic (COVID-19), we saw an influx of dashboards being developed to display case counts, transmission rates, and outbreak regions [@lisa_charlotte_2020]; mass media routinely showed charts to share information with the public about the progression of the pandemic [@romano_scale_2020].
+People began seeking out graphical displays of COVID-19 data as a direct result of these pieces of work [@rost_2020]; providing increased and ongoing exposure to these graphics over time.
+Many of these graphics helped guide decision makers to implement policies such as shut-downs or mandated mask wearing, as well as facilitated communication with the public to increase compliance [@bavel_using_2020].
+With the increasing importance graphics play in our everyday lives, we must actively choose which of many possible graphics to draw, according to some set of design choices, to ensure that our charts are effective, as suggested in [@unwin_why_2020].
+When faced with data which spans several orders of magnitude, we must decide whether to show the data on its original scale (compressing the smaller magnitudes into relatively little area) or to transform the scale and alter the contextual appearance of the data.
+One common solution is to use a log scale transformation to display data over several orders of magnitude within one graph.
+Logarithms make multiplicative relationships additive, showing elasticities and other proportional changes, and also linearize power laws [@menge_logarithmic_2018]. 
+When presenting log scaled data, it is possible to use either untransformed scale labels (for example, values of 1, 10 and 100 are equally spaced along the axis) or log transformed scale labels (for example, 0, 1, and 2, showing the corresponding powers of 10).
+We have recently experienced the benefits and pitfalls of using log scales as COVID-19 dashboards displayed case count data on both the log and linear scale [@wade_fagen_ulmschneider_2020, @financial_times_2020]. 
+In spring 2020, during the early stages of the COVID-19 pandemic, there were large magnitude discrepancies in case counts at a given time point between different geographic regions (e.g. states and provinces as well as countries and continents). 
+During this time, we saw the usefulness of log scale transformations showing case count curves for areas with few cases and areas with many cases within one chart.
+As the pandemic evolved, and the case counts were no longer spreading exponentially, graphs with linear scales seemed more effective at spotting early increases in case counts that signaled more localized outbreaks.
+This is only one recent example of a situation in which both log and linear scales are useful for showing different aspects of the same data; there are long histories of using log scales to display results in ecology, psychophysics, engineering, and physics 
+[@xkcd, @menge_logarithmic_2018, @heckler_student_2013].
+In fact, research shows that we do not perceive exponential growth accurately (whether information is presented in graphical or tabular form): we systematically under-estimate exponential growth.
 
-<!--  If you're still on the fence about using _R Markdown_, check out the resource for newbies available at <https://ismayc.github.io/rbasics-book/> .  -->
+Research suggests our perception and mapping of numbers to a number line is logarithmic at first, but transitions to a linear scale later in development, with formal mathematics education [@varshney_why_2013, @siegler_numerical_2017, @dehaeneLogLinearDistinct2008].
+This transition to linear scales occurs first in small numbers (e.g. 1-10) and then gradually expands to higher orders of magnitude; thus, the logarithmic intuition about numbers in children is often more noticeable on scales in the thousands to hundreds of thousands.
+If we perceive logarithmically by default, it is a natural (and presumably low-effort) way to display information and should be easy to read and understand/use.
+In fact, early studies explored the estimation and prediction of exponential growth, finding that growth is underestimated when presented both numerically and graphically but that numerical estimation is more accurate than graphical estimation for exponential curves [@wagenaar_misperception_1975].
+One way to improve estimation of increasing exponential trends is to provide immediate feedback to participants about the accuracy of their current predictions [@mackinnon_feedback_1991].
+While prior contextual knowledge or experience with exponential growth does not improve estimation, instruction on exponential growth reduces the underestimation: participants adjust their initial starting value but not their perception of growth rate [@wagenaar_misperception_1975, @jones_polynomial_1977].
+Estimation was shown to improve when subjects were presented with decreasing exponential functions [@timmers_inverse_1977].
+@jones_polynomial_1977,@jones_generalized_1979 and @wagenaar_extrapolation_1978 propose competing polynomial models for the perception and extrapolation of exponential series.
+It seems that estimation is a two-stage process: first, we identify the type of curve and direction and then, we use that information for prediction [@best_perception_2007].
 
-**Why use it?**
+Our inability to accurately predict exponential growth might also be addressed by log transforming the data, however, this transformation introduces new complexities; most readers are not mathematically sophisticated enough to intuitively understand logarithmic math and translate that back into real-world effects.
+In @menge_logarithmic_2018, ecologists were surveyed to determine how often ecologists encounter log scaled data and how well ecologists understand log scaled data when they see it in the literature. 
+Participants were presented two relationships displayed on linear-linear scales, log-log scales with untransformed values, or log–log scales with log transformed values. 
+@menge_logarithmic_2018 propose three types of misconceptions participants encountered when presented data on log-log scales: 
+'hand-hold fallacy', 'Zeno's zero fallacy', and 'watch out for curves fallacies'. These misconceptions are a result of linear extrapolation assuming that a line in log-log space represents a line instead of the power law in linear-linear space. The study found that in each of these scenarios, participants were confident in their incorrect responses, indicating incorrect knowledge rather than a lack of knowledge.
 
-_R Markdown_ creates a simple and straightforward way to interface with the beauty of LaTeX.  Packages have been written in **R** to work directly with LaTeX to produce nicely formatting tables and paragraphs. In addition to creating a user friendly interface to LaTeX, _R Markdown_ also allows you to read in your data, to analyze it and to visualize it using **R** functions, and also to provide the documentation and commentary on the results of your project.  Further, it allows for **R** results to be passed inline to the commentary of your results.  You'll see more on this later.  
+The 'hand-hold falacy' stems from the misconception that steeper slopes in log-log relationships are steeper slopes in linear-linear space.
+In fact, it is not only the slope that matters, but also the intercept and the location on the horizontal axis since a line in log-log space represents a power law in linear-linear space (i.e. linear extraploation).
+Emerging from 'Zeno's zero fallacy' is the misconception that positively sloped lines in log-log space can imply a non-zero value of y when x is zero. This is never true as postively sloped lines in log-log space actually imply that y = 0 when x = 0.
+This misconception again is a result of linear extrapolation assuming that a line in log-log space represents a line instead of the power law in linear-linear space.
+The last misconception, 'watch out for curves fallacies' encompases three faults: (1) lines in log-log space are lines in linear-linear space, (2) lines in log-log space curve upward in linear-linear space, and (3) curves in log-log space have the same curvature in linear-linear space.
+Linear extrapolation is again responsible for the first and third faults while the second fault is a result of error in thinking that log-log lines represent power laws (which are exponential relationships), and all exponential relationships curve upward; this is only true when the log-log slope is greater than one. @menge_logarithmic_2018 found that in each of these scenarios, participants were confident in their incorrect responses, indicating incorrect knowledge rather than a lack of knowledge.
 
-<!--  Having your code and commentary all together in one place has a plethora of benefits! -->
+In order to provide a set of principles to guide design choices, we must evaluate these design choices through the use of graphical tests. 
+These tests may take many forms: identifying differences in graphs, reading information off of a chart accurately, using data to make correct real-world decisions, or predicting the next few observations. 
+All of these types of tests require different levels of use and manipulation of the information presented in the chart.
+To lay a foundation for future exploration of the use of log scales, we begin with the most fundamental ability to identify differences in charts; this does not require that participants understand exponential growth, identify log scales, or have any mathematical training.
+Instead, we are simply testing the change in perceptual sensitivity resulting from visualization choices. In @best_perception_2007, the authors explored whether discrimination between curve types is possible.
+They found that accuracy of identifying the correct curve type is higher when nonlinear trends were presented (e.g. it’s hard to say something is linear, but easy to say that it is not linear) and that accuracy is higher with low additive variability.
 
-**Who should use it?**
-
-Anyone who needs to use data analysis, math, tables, a lot of figures, complex cross-references, or who just cares about the final appearance of their document should use _R Markdown_. Of particular use should be anyone in the sciences, but the user-friendly nature of _Markdown_ and its ability to keep track of and easily include figures, automatically generate a table of contents, index, references, table of figures, etc. should make it of great benefit to nearly anyone writing a thesis project.
+A statistic is a numerical function which summarizes the data; by this definition, graphs are visual statistics.
+To evaluate a graph, we have to run our statistic through a visual evaluation - a person. 
+If two different methods of presenting data result in qualitatively different results when evaluated visually, then we can conclude that the visual statistics are significantly different. 
+Recent graphical experiments have utilized statistical lineups to quantify the perception of graphical design choices[@vanderplas_clusters_2017, @hofmann_graphical_2012, @loyVariationsQQPlots2016]. 
+Statistical lineups provide an elegant way of combining perception and statistical hypothesis testing using graphical experiments [@wickham2010graphical, @majumder_validation_2013, @vanderplas_statistical_nodate].
+'Lineups' are named after the 'police lineup' of criminal investigations where witnesses are asked to identify the criminal from a set of individuals. 
+Similarly, a statistical lineup is a plot consisting of smaller panels; the viewer is asked to identify the plot of the real data from among a set of decoy null plots. 
+A statistical lineup typically consists of 20 panels - 1 target panel and 19 null panels (Figure \ref{fig:lineup-example}). 
+If the viewer can identify the target panel embedded within the set of null panels, this suggests that the real data is visually distinct from data generated under the null model.
+Crowd sourcing websites such as Amazon Mechanical Turk, Reddit, and Prolific allow us to collect responses from multiple viewers.
+In this paper, we use statistical lineups to test our ability to differentiate between exponentially increasing curves with differing levels of curvature, using linear and log scales. @vanderplas_statistical_nodate provides an approach for calculating visual p-values utilizing a 'rorschach' lineup which consists soley of null panels.
