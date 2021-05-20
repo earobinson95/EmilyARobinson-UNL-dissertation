@@ -3,6 +3,7 @@ fig:lof-density-curves
 fig:odds-ratio-plot
 literature-review
 lineups
+introduction
 data-generation
 parameter-selection
 lineup-setup

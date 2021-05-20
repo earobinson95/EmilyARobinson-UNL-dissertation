@@ -37,16 +37,6 @@ lof: true
 #- \usepackage{tikz}
 ---
 
-<!--
-Above is the YAML (YAML Ain't Markup Language) header that includes a lot of metadata used to produce the document.  Be careful with spacing in this header!
-
-If you'd like to include a comment that won't be produced in your resulting file enclose it in a block like this.
--->
-
-<!--
-If you receive a duplicate label error after knitting, make sure to delete the index.Rmd file and then knit again.
--->
-
 ```{r setup, include = F}
 options(width = 60)
 knitr::opts_chunk$set(
@@ -76,13 +66,16 @@ library(knitr)
 library(gridExtra)
 ```
 
-<!-- The {.unnumbered} option here means that the introduction will be "Chapter 0." You can also use {-} for no numbers on chapters. -->
-
-<!-- # Introduction {.unnumbered} -->
-
 # Literature Review
 
 Editing text colors: \ear{Emily's editing color.} Emily may also use mostly black text as well. \svp{Susan's editing color.} \rh{Reka's editing color.}
+
++ Introduction
+
+With the advancement of technology, access to data is more readily available more than ever before.
+With this abundance of data comes the responsibility to make sense out of the numbers in order to convey the message clearly. 
+Graphics are a useful tool for displaying and communicating information [@vanderplas2020testing].
+Researchers include graphics to communicate their results in scientific publications and news sources rely on graphics to convey news stories to the public [\ear{CITE ME}].
 
 + Motivation (COVID-19)
     + @lisa_charlotte_2020
@@ -91,10 +84,18 @@ Editing text colors: \ear{Emily's editing color.} Emily may also use mostly blac
     + @bavel_using_2020
     + @wade_fagen_ulmschneider_2020
     + @financial_times_2020
+    
+At the beginning of the SARS-NCOV-2 pandemic (COVID-19), we saw an influx of dashboards being developed to display case counts, transmission rates, and outbreak regions [@lisa_charlotte_2020]; mass media routinely showed charts to share information with the public about the progression of the pandemic [@romano_scale_2020].
+People began seeking out graphical displays of COVID-19 data as a direct result of these pieces of work [@rost_2020]; providing increased and ongoing exposure to these graphics over time.
+Many of these graphics helped guide decision makers to implement policies such as shut-downs or mandated mask wearing, as well as facilitated communication with the public to increase compliance [@bavel_using_2020].
+
 + General Sensation and Perception
 + General Graphics Research
     + @vanderplas2020testing
     + @unwin_why_2020
+    
+With the increasing importance graphics play in our everyday lives, we must actively choose which of many possible graphics to draw, according to some set of design choices, to ensure that our charts are effective, as suggested in [@unwin_why_2020].
+
 + Logrithms
     + @menge_logarithmic_2018
     + @xkcd
@@ -123,12 +124,7 @@ Editing text colors: \ear{Emily's editing color.} Emily may also use mostly blac
 
 *Text below copied from JSM 2021 Student Paper*
 
-Graphics are a useful tool for displaying and communicating information [@vanderplas2020testing].
-Researchers include graphics to communicate their results in scientific publications and news sources rely on graphics to convey news stories to the public. 
-At the beginning of the SARS-NCOV-2 pandemic (COVID-19), we saw an influx of dashboards being developed to display case counts, transmission rates, and outbreak regions [@lisa_charlotte_2020]; mass media routinely showed charts to share information with the public about the progression of the pandemic [@romano_scale_2020].
-People began seeking out graphical displays of COVID-19 data as a direct result of these pieces of work [@rost_2020]; providing increased and ongoing exposure to these graphics over time.
-Many of these graphics helped guide decision makers to implement policies such as shut-downs or mandated mask wearing, as well as facilitated communication with the public to increase compliance [@bavel_using_2020].
-With the increasing importance graphics play in our everyday lives, we must actively choose which of many possible graphics to draw, according to some set of design choices, to ensure that our charts are effective, as suggested in [@unwin_why_2020].
+
 When faced with data which spans several orders of magnitude, we must decide whether to show the data on its original scale (compressing the smaller magnitudes into relatively little area) or to transform the scale and alter the contextual appearance of the data.
 One common solution is to use a log scale transformation to display data over several orders of magnitude within one graph.
 Logarithms make multiplicative relationships additive, showing elasticities and other proportional changes, and also linearize power laws [@menge_logarithmic_2018]. 
@@ -167,18 +163,3 @@ Linear extrapolation is again responsible for the first and third faults while t
 In order to provide a set of principles to guide design choices, we must evaluate these design choices through the use of graphical tests. 
 These tests may take many forms: identifying differences in graphs, reading information off of a chart accurately, using data to make correct real-world decisions, or predicting the next few observations. 
 All of these types of tests require different levels of use and manipulation of the information presented in the chart.
-To lay a foundation for future exploration of the use of log scales, we begin with the most fundamental ability to identify differences in charts; this does not require that participants understand exponential growth, identify log scales, or have any mathematical training.
-Instead, we are simply testing the change in perceptual sensitivity resulting from visualization choices. In @best_perception_2007, the authors explored whether discrimination between curve types is possible.
-They found that accuracy of identifying the correct curve type is higher when nonlinear trends were presented (e.g. it’s hard to say something is linear, but easy to say that it is not linear) and that accuracy is higher with low additive variability.
-
-A statistic is a numerical function which summarizes the data; by this definition, graphs are visual statistics.
-To evaluate a graph, we have to run our statistic through a visual evaluation - a person. 
-If two different methods of presenting data result in qualitatively different results when evaluated visually, then we can conclude that the visual statistics are significantly different. 
-Recent graphical experiments have utilized statistical lineups to quantify the perception of graphical design choices[@vanderplas_clusters_2017, @hofmann_graphical_2012, @loyVariationsQQPlots2016]. 
-Statistical lineups provide an elegant way of combining perception and statistical hypothesis testing using graphical experiments [@wickham2010graphical, @majumder_validation_2013, @vanderplas_statistical_nodate].
-'Lineups' are named after the 'police lineup' of criminal investigations where witnesses are asked to identify the criminal from a set of individuals. 
-Similarly, a statistical lineup is a plot consisting of smaller panels; the viewer is asked to identify the plot of the real data from among a set of decoy null plots. 
-A statistical lineup typically consists of 20 panels - 1 target panel and 19 null panels (Figure \ref{fig:lineup-example}). 
-If the viewer can identify the target panel embedded within the set of null panels, this suggests that the real data is visually distinct from data generated under the null model.
-Crowd sourcing websites such as Amazon Mechanical Turk, Reddit, and Prolific allow us to collect responses from multiple viewers.
-In this paper, we use statistical lineups to test our ability to differentiate between exponentially increasing curves with differing levels of curvature, using linear and log scales. @vanderplas_statistical_nodate provides an approach for calculating visual p-values utilizing a 'rorschach' lineup which consists soley of null panels.
