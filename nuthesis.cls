@@ -888,7 +888,7 @@ Under the Supervision of Professors \nu@adviser\\[3\baselineskip]
 
 \newenvironment{acknowledgments}[1][Acknowledgments]{%
   \begin{center}
-    \MakeUppercase{#1}
+    % \MakeUppercase{#1}
   \end{center}
   \ifthenelse{\boolean{nu@single}}{\begin{singlespacing}}{\begin{doublespacing}}%
     }{\par%

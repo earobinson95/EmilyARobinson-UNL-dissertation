@@ -1,7 +1,7 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.5.4)  20 MAY 2021 17:11
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.5.4)  24 MAY 2021 11:35
 entering extended mode
-**./_main.tex
-(_main.tex
+**./thesis.tex
+(thesis.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (nuthesis.cls
 Document Class: nuthesis 2017/10/12 v0.7.2 University of Nebraska Thesis class
@@ -1413,8 +1413,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Hy@SectionHShift=\skip266
 )
 Package hyperref Info: Option `breaklinks' set `true' on input line 137.
-(preamble.tex) (_main.aux)
-\openout1 = `_main.aux'.
+(preamble.tex) (thesis.aux)
+\openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 146.
 LaTeX Font Info:    ... okay on input line 146.
@@ -1577,9 +1577,9 @@ LaTeX Info: Redefining \nameref on input line 146.
 LaTeX Info: Redefining \ref on input line 146.
 LaTeX Info: Redefining \pageref on input line 146.
 LaTeX Info: Redefining \nameref on input line 146.
-(_main.out) (_main.out)
+(thesis.out) (thesis.out)
 \@outlinefile=\write6
-\openout6 = `_main.out'.
+\openout6 = `thesis.out'.
 
 
 (C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/stringenc\se-asci
@@ -1600,7 +1600,7 @@ either increase the foot skip or redesign the footer
 
 [4
 
-] (_main.toc
+] (thesis.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
 (C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1621,9 +1621,9 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [5
 
 
-]) [6] (_main.lof) [7
+]) [6] (thesis.lof) [7
 
-] (_main.lot) [8
+] (thesis.lot) [8
 
 ] [1
 
@@ -1631,15 +1631,15 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ] [2] [3] [4] [5] [6] [7] [8] [9
 
 ]
-File: _main_files/figure-latex/lineup-example-1.pdf Graphic file (type pdf)
-<use _main_files/figure-latex/lineup-example-1.pdf>
+File: thesis_files/figure-latex/lineup-example-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/lineup-example-1.pdf>
 [10] [11] [12]
-File: _main_files/figure-latex/lof-density-curves-1.pdf Graphic file (type pdf)
-
-<use _main_files/figure-latex/lof-density-curves-1.pdf>
+File: thesis_files/figure-latex/lof-density-curves-1.pdf Graphic file (type pdf
+)
+<use thesis_files/figure-latex/lof-density-curves-1.pdf>
 [13] [14] [15] [16]
-File: _main_files/figure-latex/odds-ratio-plot-1.pdf Graphic file (type pdf)
-<use _main_files/figure-latex/odds-ratio-plot-1.pdf>
+File: thesis_files/figure-latex/odds-ratio-plot-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/odds-ratio-plot-1.pdf>
 [17] [18] [19] [20
 
 ] [21
@@ -1653,7 +1653,7 @@ File: _main_files/figure-latex/odds-ratio-plot-1.pdf Graphic file (type pdf)
 ] [25
 
 ] [26] [27] [28]
-No file _main.bbl.
+No file thesis.bbl.
 
 Class memoir Warning: The material used in the footer is too large
 (10.14995pt) for the given foot skip (0.0pt), it is recommended to
@@ -1662,25 +1662,25 @@ either increase the foot skip or redesign the footer
 
 [29]
 \tf@toc=\write7
-\openout7 = `_main.toc'.
+\openout7 = `thesis.toc'.
 
 \tf@lof=\write8
-\openout8 = `_main.lof'.
+\openout8 = `thesis.lof'.
 
 \tf@lot=\write9
-\openout9 = `_main.lot'.
+\openout9 = `thesis.lot'.
 
-(_main.aux)
-Package rerunfilecheck Info: File `_main.out' has not changed.
+(thesis.aux)
+Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 5E3B022D20CBC86E8BF09F6E032E501D;1052.
  ) 
 Here is how much of TeX's memory you used:
  34402 strings out of 411690
- 623560 string characters out of 2834884
- 1013422 words of memory out of 3000000
+ 623605 string characters out of 2834884
+ 1013768 words of memory out of 3000000
  53879 multiletter control sequences out of 15000+600000
  409706 words of font info for 67 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 126i,12n,130p,2601b,511s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 126i,12n,130p,2602b,511s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on _main.pdf (37 pages).
+Output written on thesis.pdf (37 pages).
