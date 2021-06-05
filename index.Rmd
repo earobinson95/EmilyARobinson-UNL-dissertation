@@ -70,96 +70,186 @@ library(gridExtra)
 
 Editing text colors: \ear{Emily's editing color.} Emily may also use mostly black text as well. \svp{Susan's editing color.} \rh{Reka's editing color.}
 
-+ Introduction
+## Introduction to Graphics
 
-With the advancement of technology, access to data is more readily available more than ever before.
-With this abundance of data comes the responsibility to make sense out of the numbers in order to convey the message clearly. 
-Graphics are a useful tool for displaying and communicating information [@vanderplas2020testing].
-Researchers include graphics to communicate their results in scientific publications and news sources rely on graphics to convey news stories to the public [\ear{CITE ME}].
+Advanced technology and computing power has promoted data visualization as a central tool in modern data science [@unwin_why_2020]. 
+Data visualization is defined as the art of drawing graphical charts in order to display data.
+@vanderplas_testing_2020 describe the process of creating a graphic from a dataset through the use of variable mapping, data transformations, coordinate systems, and aesthetic features. 
+Graphics are useful for data cleaning, exploring data structure, and have been an essential component in communicating information for the last 200 years [@lewandowsky_perception_1989; @unwin_why_2020; @vanderplas_testing_2020]
+During the 20th century, companies began utilizing graphics to understand their mechanics and support business decisions; news sources began displaying graphics of weather forecasts as a means to communicate critical information and aid in decision-making [@vanderplas_testing_2020]. 
+Today, we encounter data visualizations everywhere, researchers include graphics to communicate their results in scientific publications and mass media relies on graphics to convey news stories to the public through newspapers, TV, and the Web [@unwin_why_2020].
 
-+ Motivation (COVID-19)
-    + @lisa_charlotte_2020
-    + @romano_scale_2020
-    + @rost_2020
-    + @bavel_using_2020
-    + @wade_fagen_ulmschneider_2020
-    + @financial_times_2020
+In general, the public holds the self perception that numbers are difficult to understand and that they did not perform well in mathematics during school [@unwin_why_2020]. 
+In contrary, there tends to be a positive self perception when it comes to graphics as they are viewed more as illustrations and not as critical parts of an argument [@unwin_why_2020].
+While tables can be burdensome to readers, graphics can improve the interpretation and representation of the same data [@uri_presentation_1948]. 
+@shah_graphs_nodate presents an opposing argument claiming there are still difficulties interpreting and explaining quantitative information depicted in graphs. 
+One explanation for the opposing views is that the general public is untrained in the ability required in the evaluation of graphic material. 
+The complexity of graphic devices is directly related to the degree and formality of training necessary for understanding [@haemer_presentation_1949].
+
+Although statistical graphics have become widely used and valued in science, business, and in many other aspects of life, as creators of graphics, we are too accepting of them as default without asking critical questions about the graphics we create or view [@unwin_why_2020]. 
+@vanderplas_testing_2020 poses the general question we must ask ourselves, “how effective is this graph at communicating useful information?”
+Higher quality of technology has influenced the creation, replication, and complexity of graphics as there are an infinitely many number of graphical displays and design choices that can be implemented at faster speeds with more flexibility. 
+The creator of a graphic makes decisions about the variables displayed, the type of graphic, the size of the graphic and the aspect ratio, the colors and symbols used, the scales and limits, the ordering of categorical variables, and the ordering of variables in multivariate displays [@unwin_why_2020]. 
+In response to the increasing number of design choices, consistent themes and higher standards are being placed on graphics. 
+Selecting from an extensive styles and choices of graphics in order effectively communicate insights into the data is a challenging task [@unwin_why_2020]. 
+A consistent concern is the lack of theory of graphics available to build on; better theory should result in better graphics [@unwin_why_2020]. 
+Creators of graphics need an established set of concepts and terminology to build their graphics from so they can actively choose which of many possible graphics to draw to ensure their charts are effective [@unwin_why_2020]. 
+
+Many efforts have been made to provide guidelines for graphical designs including Wilkinson's Grammar of Graphics \ear{CITE}.
+These guidelines provide the ground work necessary for data plots to be depicted and interpreted as statistics [@majumder_validation_2013]. 
+@vanderplas_testing_2020 define a statistic as, "a functional mapping of a variable or set of variables".
+The grammar of graphics constructs visual statistics through the use of “tidy data”, charactarized as a data set in which each variable is in its own column, each observation is in its own row, and each value is in its own cell [@wickham2016r].
+The grammar allows variables, as designated in columns, to be mapped to different elements of the graphic such as the axes, colors, shapes, or facets. 
+Software, such as Hadley Wickham's ggplot2 \ear{CITE}, aims to implement these guidelines recommended through the grammar of graphics.  
+Later, it is illustrated how the structure of "tidy data" and the construction of graphics as statistics aid themselves for easy experimentation which allows researchers to compare the effectiveness and understand the perception of different types of charts @vanderplas_testing_2020.
+It is important to consider the purpose and motivation behind the generation of the chart as well as the complexity and intended audience you intend to view the chart [@vanderplas_testing_2020].
+A general guideline when generating graphics is to keep it familiar in order to not intimidate and to encourage further interaction from our readers [@unwin_why_2020].
+Despite past attempts to improve the use of graphics in science, @gordon_statistician_2015 evaluated 97 graphs for overall quality, based on five principles of graphical excellence, and found there is still an astonishing lack in the quality of graphics. More startling is the fact that the source of the graphic from an applied science or a statistics graphic had no effect on the quality of the graphic [@gordon_statistician_2015]. 
+The improvement in graphics depends on both a better definition of variables, units of measurements, scales, and other graphical elements as well as a typical use of grid lines on an accepted set of graphical forms [@gordon_statistician_2015]. 
+with the support of changes in software defaults, future work must be done in order to implement the academic research being conducted in graphics into practice for both academics and non-academics in order to achieve a higher standard of the graphics being presented [@vanderplas_testing_2020].
+
+<!-- it is necessary to evaluate how people perceive and process statistical graphs. -->
+
+<!-- + **Data/Graphics used to communicate and make decisions** -->
+
+<!--     + "I have many times heard people say that they do not understand numbers and were bad at mathematics in school. No one has ever said to me they do not understand graphics, perhaps because they regard them as illustrations and not as central parts of an argument." @unwin_why_2020 -->
+<!--     + The hurricane forecast map is designed to communicate urgent information and facilitate decision-making by the US National Hurricane Center [@vanderplas_testing_2020]. -->
+<!--     + In the 20th century, corporations began using charts and graphs to understand their inner workings - studies of the use of charts and graphs at AT&T (Chandar et al. 2012) and DuPont (Yates 1985) show efforts to standardize and formalize the use of graphics in decision-making at both companies." @vanderplas_testing_2020 -->
+<!--     + "in the first half of the 20th century, graphics were regularly used for mundane purposes as well, such as supporting business decisions (Chandar et al. 2012, Yates 1985) and communicating weather forecasts [@vanderplas_testing_2020]. -->
+
+<!-- + **Data visualization** -->
+
+<!--     + general question: “how effective is this graph at communicating useful information?” @vanderplas_testing_2020 -->
+<!--     + even the best of tables is uninviting reading matter and, for most readers, is not as easy to interpret as a graphic portrayal of the same data @uri_presentation_1948 -->
     
-At the beginning of the SARS-NCOV-2 pandemic (COVID-19), we saw an influx of dashboards being developed to display case counts, transmission rates, and outbreak regions [@lisa_charlotte_2020]; mass media routinely showed charts to share information with the public about the progression of the pandemic [@romano_scale_2020].
-People began seeking out graphical displays of COVID-19 data as a direct result of these pieces of work [@rost_2020]; providing increased and ongoing exposure to these graphics over time.
-Many of these graphics helped guide decision makers to implement policies such as shut-downs or mandated mask wearing, as well as facilitated communication with the public to increase compliance [@bavel_using_2020].
+<!-- + **Technology** -->
 
-+ General Sensation and Perception
-+ General Graphics Research
-    + @vanderplas2020testing
-    + @unwin_why_2020
+<!--     + Better technology and software means better reproduction of graphics, better color, faster drawing, easier and more flexible drawing, consistent themes, and higher standards. -->
+<!--     + "What used to be a slow and wearisome process, even including having to print out displays, has become fast and flexible. At the same time, new, additional skills are required." @unwin_why_2020 -->
+<!--     + "technological changes have impacted both our charts and our testing methods, resulting in a dizzying array of charts, many different taxonomies to classify graphics, and several different philosophical approaches to testing the efficacy of charts and graphs experimentally." @vanderplas_testing_2020 -->
+
+<!-- + **The need for graphics guidelines** -->
+
+<!--     + people can have difficulty interpreting and explaining quantitative information depicted in graphs (Culbertson & Powers, 1959; Guthrie, Weber, & Kimmerly, 1993; Leinhardt, Zaslavsky, & Stein, 1990; Mayer, 1993b; Mayer et al., 1995; Shah & Carpenter, 1995; Vernon, 1946, 1950). @shah_graphs_nodate -->
+<!--     + The talent required in the appraisal of graphic material, though universal, is generally untrained. There is a direct relationship between the complexity of graphic devices and the extent and technicality of the training called for in their understanding @haemer_presentation_1949 -->
+<!--     + "We are too used to accepting graphics uncritically, not asking enough questions of them." @unwin_why_2020 -->
+<!--     + Selecting from the wide range of graphics wisely, and understanding how to gain insights, are not trivial tasks. The lack of a theory of data visualization to guide and build on is a key issue. "there should be better theory, and consequently better graphics." @unwin_why_2020 -->
+<!--     + "Principles are needed on how to decide which of many possible graphics to draw." @unwin_why_2020 -->
+<!--     + There is so much that can be varied: the variables displayed, the types of graphics, the sizes of graphics and their aspect ratios, the colors and symbols used, the scales and limits, the ordering of categorical variables, the ordering of variables in multivariate displays." @unwin_why_2020 -->
+<!--     + "As with other aspects of working with graphics, it would be useful to have an agreed base of concepts and terminology to build on." @unwin_why_2020 -->
+
+<!-- + **Graphics Guidelines** -->
+
+<!--     + Wilkinson's Grammar of Graphics @unwin_why_2020 -->
+<!--         + The grammar of graphics also enables data plots to be considered to be statistics (Majumder et al. 2013). A statistic is a functional mapping of a variable or set of variables. With “tidy data”, that is, data where each variable is in its own column, each observation is in its own row, and each value is in its own cell (Wickham & Grolemund 2017), the grammar of graphics creates visual statistics. Variables, as columns in the data table, are mapped to graphical elements, such as the x axis, or y axis, or to colour, shape or even facet, using the grammar. The data plot can then be treated like other statistics: by imagining what the plot might look like in the absence of of any structure, we can use the plot of the actual observed data to test for the likelihood of any perceived structure being significant." -> easy for experimenters to compare different types of charts. @vanderplas_testing_2020 -->
+<!--     + Hadley Wickham's ggplot2 (following Grammar of Graphics) @unwin_why_2020 -->
+<!--     + Keep it familiar, graphics can be intimidating and not obvious to everyone. We should build on the familiar to carry our readers along with us. @unwin_why_2020 -->
+<!--     + "The different purposes motivating the creation of the chart influence the form and complexity of the chart, and the intended audience and the reach of the chart are also important considerations." @vanderplas_testing_2020 -->
+<!--     + understand the perception of charts @vanderplas_testing_2020 -->
+<!--     + Going forward, we must do a better job of translating the academic research into practice, making it easier for academics and non-academics alike to create useful, well-designed graphics. @vanderplas_testing_2020 -->
     
-With the increasing importance graphics play in our everyday lives, we must actively choose which of many possible graphics to draw, according to some set of design choices, to ensure that our charts are effective, as suggested in [@unwin_why_2020].
+## Graphical Experiments
 
-+ Logrithms
-    + @menge_logarithmic_2018
-    + @xkcd
-    + @heckler_student_2013
-    + @varshney_why_2013
-    + @siegler_numerical_2017
-    + @dehaeneLogLinearDistinct2008
-+ Visual Inference through Lineups
-    + @best_perception_2007
-    + @vanderplas_clusters_2017
-    + @hofmann_graphical_2012
-    + @loyVariationsQQPlots2016
-    + @wickham2010graphical
-    + @majumder_validation_2013
-    + @vanderplas_statistical_nodate
-+ Prediction with You Draw It
-    + @wagenaar_misperception_1975
-    + @mackinnon_feedback_1991
-    + @jones_polynomial_1977
-    + @jones_generalized_1979
-    + @wagenaar_extrapolation_1978
-    + @timmers_inverse_1977
-    + @mosteller_eye_1981
-    + @finney1951subjective
-+ Numerical Translation and Estimation
+In order to provide a set of principles to guide design choices, we must evaluate these design choices through
+the use of graphical tests. These tests may take many forms: identifying differences in graphs, reading information
+off of a chart accurately, using data to make correct real-world decisions, or predicting the next few observations.
+All of these types of tests require different levels of use and manipulation of the information presented in the chart.
+The initial push to develop classification and recommendation systems for charts was grounded on heuristics rather than on experimentation [@vanderplas_testing_2020].
+Request were made for the validation of the perception and utility of statistical charts through graphical experiments.
+Initial experiments struggled with methodological issues \ear{[CITE: Eells (1926), Croxton and Stryker (1927) and Croxton (1932)]} with most early experimentation stemmed from pyschophysics research on the perception of size and shape \ear{[CITE: Teghtsoonian (1965)]}; these early experiments depended on speed and accuracy for plot evaluation.
+Cognitive psychologists and statisticians made progress by conducting experiments to identify perceptual errors associated with different styles of graphics and charts [\ear{CITE: Spence 1990}; @cleveland_graphical_1985].
+These later experiments relied on similar methodology as early studies by relying on participants directly reading information from the charts to provide a quantitative estimate or answering a predefined question; as with the early studies, accuracy and response time being evaluated (Peterson and Schramm 1954, @cleveland_graphical_1984, Broersma and Molenaar 1985, Dunn 1988, Tan 1994, Amer 2005).
+@cleveland_graphical_1984 provide a basis for perceptual judgment, still utilized today, by examining six basic stimuli: position along a common scale, position along nonaligned scales, length, angle, slope, and area.
+Other experiments established the notion that redesigning graphs can result in the improvement of the viewer's interpretation [@shah_graphs_nodate]. This is done by relying on gestalt principles to minimize the inferential processes and maximize the pattern association processes required to interpret relevant information. The viewer must first encode the visual array by identifying meaningful visual features, such as a straight light slanting downward. Next, the viewer must classify the quantitative measures and relationships in which those visual features illustrate, such as a decreasing linear relationship between x and y. 
+The last step involves translating the quantiative measures and relationships to the variables defined in the data set, such as a population decreasing over years.
+These studies establish the process in which viewers interact with charts by first perceptually observing the visual features and later translating to cognitive processing of the information depicted by those features \ear{[CITE: Carpenter and Shah, 1998]}.
+In recent years, there have been advancements in the methodology used to investigate the effectiveness of statistical charts [@vanderplas_testing_2020]. Some of the new methods, such as the lineup protocol [@buja_statistical_2009], utilize the grammar of graphics designation of a data plot as a statistic through the functional mapping of variable(s). This allows the data plot to be tested similar to other statistics, by comparing the actual data plot to a set of plots with the absence of any data structure we can test the likelihood of any perceived structure being significant [@vanderplas_testing_2020].
+While the methodology of these recent experiments differs from earlier studies, the focus is still placed on the initial perception and graph comprehension with a relatively small amount of work conducted to understand the effect of design choices on higher cognitive processes such as learning or analysis \ear{[CITE: Green and Fisher 2011]}. 
+Most recent graphics experiments have utilized tools such as Amazon Turk, Prolific, Reddit, and other crowd sourcing websites to evaluate the psychophysics and patterns associated with design choices [@vanderplas_clusters_2017].
 
-*Text below copied from JSM 2021 Student Paper*
+<!-- **Graphical Experiments** -->
+<!-- + Early experiments, such as Eells (1926), Croxton & Stryker (1927) and Croxton (1932) used accuracy alongside speed and other considerations for plot evaluation. Later studies (Peterson & Schramm 1954, Cleveland & McGill 1984, Broersma & Molenaar 1985, Dunn 1988, Tan 1994, Amer 2005) were conducted with similar methodology; in essence, the participants are provided with a chart and asked to estimate some quantity or answer a predefined question using the information provided in the chart. @vanderplas_testing_2020 -->
+<!-- + perceptual judgments of six basic stimuli were examined: (1) position along a common scale, (2) position along nonaligned scales, (3) length, (4) angle, (5) slope, and (6) area. @cleveland_graphical_1984 -->
+<!-- + Experiment conducted that establishes that graphs can be redesigned to improve viewers' interpretations by minimizing the inferential processes and maximizing the pattern association processes required to interpret relevant information. @shah_graphs_nodate -->
+<!--     + First, viewers must encode the visual array and identify the important visual features (e.g., a straight line slanting downward). Second, viewers must identify the quantitative facts or relations that those features represent (e.g., a decreasing linear relationship between x and y). Finally, viewers must relate those quantitative relations to the graphic variables depicted (e.g., population vs. year). These three processes are incremental and interactive such that viewers sequentially encode a portion of the visual pattern, identify what quantitative fact or function it implies, and relate it to its graphic referents (Carpenter & Shah, 1998). -->
+<!--     + we focus on the second process, identification of the quantitative facts or trends from a graph. -->
+<!--     + Such complex inferential processes involve quantitatively transforming the information in the display (e.g., mentally transforming from a linear to logarithmic scale or calculating the difference between two or more data points; Cleveland, 1984, 1985). -->
+<!--     + Experiment 3 tested the idea that the perceptual organization of the data, or where information is placed within a particular graphic format, rather than the graphic format per se, is the major variable that influences viewers' interpretations. -->
+<!--     + format-only hypothesis, is that line graphs cue trends, whereas bar graphs cue facts.   -->
+<!-- + "the drive to produce a classification system for charts and graphs or a system of recommendations for presenting charts and graphs were based on heuristics and largely unsupported by experimentation" @vanderplas_testing_2020 -->
+<!-- + "Calls for experimental validation of the perception and utility of statistical charts were heeded, though at first the experiments were fraught with methodological issues (Croxton & Stryker 1927). Much of the early experimentation regarding the accuracy of graphical forms was based in psychophysics research (Teghtsoonian 1965) on the perception of size and shape. Eventually experiments became more naturalistic: cognitive psychologists and statisticians began testing different types of graphics, identifying types of perceptual errors associated with different plots (Spence 1990, Cleveland & McGill 1985). In most cases, this testing was limited to simply reading information from the charts, using accuracy or response time measurement. More recently, other methods for examining statistical charts have been developed, including the lineup protocol (Wickham et al. 2010). Even with these developments, the aim of most experimental research in statistical graphics focuses on the initial perception and graph comprehension. Very little work has been done to understand the effect of charts and graphs on higher cognitive processes such as learning or analysis (Green & Fisher 2011)." @vanderplas_testing_2020 -->
+<!-- + informal and formal graphical exploration. informal: changes are made to the graph and the iterative versions are compared to determine what information is easily acceptable formal: an experiment is designed and participants are tested in a controlled manner. @vanderplas_testing_2020 -->
+<!-- + Statistic is a functional mapping of a variable or set of variables (pg 7) @vanderplas_testing_2020 -->
+<!-- + The data plot can then be treated like other statistics: by imagining what the plot might look like in the absence of of any structure, we can use the plot of the actual observed data to test for the likelihood of any perceived structure being significant.  @vanderplas_testing_2020 -->
+<!-- + It should be noted that some of the other experimental paradigms, such as psychophysics and implicit tests, can also be used in combination with Amazon Turk and other online testing services. @vanderplas_testing_2020 -->
+
+## Logarithmic Scales and Mapping
+
+Logarithms convert multiplicative relationships to additive ones, providing an elegant way to span many orders of magnitude, to show elasticities and other proportional changes, and to linearize power laws. 
+They also have practical purposes, easing the computation of small numbers such as likelihoods and transforming data to fit statistical assumptions. 
+When faced with data which spans several orders of magnitude, we must decide whether to show the data on its original scale (compressing the smaller magnitudes into relatively little area) or to transform the scale and alter the contextual appearance of the data. 
+One common solution is to use a log scale transformation to display data over several orders of magnitude within one graph. Logarithms make multiplicative relationships additive, showing elasticities and other proportional changes, and also linearize power laws @menge_logarithmic_2018
+When presenting log scaled data, it is possible to use either un-transformed scale labels (for example, values of 1, 10 and 100 are equally spaced along the axis) or log transformed scale labels (for example, 0, 1, and 2, showing the corresponding powers of 10).
 
 
-When faced with data which spans several orders of magnitude, we must decide whether to show the data on its original scale (compressing the smaller magnitudes into relatively little area) or to transform the scale and alter the contextual appearance of the data.
-One common solution is to use a log scale transformation to display data over several orders of magnitude within one graph.
-Logarithms make multiplicative relationships additive, showing elasticities and other proportional changes, and also linearize power laws [@menge_logarithmic_2018]. 
-When presenting log scaled data, it is possible to use either untransformed scale labels (for example, values of 1, 10 and 100 are equally spaced along the axis) or log transformed scale labels (for example, 0, 1, and 2, showing the corresponding powers of 10).
-We have recently experienced the benefits and pitfalls of using log scales as COVID-19 dashboards displayed case count data on both the log and linear scale [@wade_fagen_ulmschneider_2020, @financial_times_2020]. 
-In spring 2020, during the early stages of the COVID-19 pandemic, there were large magnitude discrepancies in case counts at a given time point between different geographic regions (e.g. states and provinces as well as countries and continents). 
-During this time, we saw the usefulness of log scale transformations showing case count curves for areas with few cases and areas with many cases within one chart.
-As the pandemic evolved, and the case counts were no longer spreading exponentially, graphs with linear scales seemed more effective at spotting early increases in case counts that signaled more localized outbreaks.
-This is only one recent example of a situation in which both log and linear scales are useful for showing different aspects of the same data; there are long histories of using log scales to display results in ecology, psychophysics, engineering, and physics 
-[@xkcd, @menge_logarithmic_2018, @heckler_student_2013].
-In fact, research shows that we do not perceive exponential growth accurately (whether information is presented in graphical or tabular form): we systematically under-estimate exponential growth.
++ At the beginning of the SARSNCOV-2 pandemic (COVID-19), we saw an influx of dashboards being developed to display case counts, transmission rates, and outbreak regions @gmbh_youve_2020; mass media routinely showed charts to share information with the public about the progression of the pandemic @romano_scale_2020. People began seeking out graphical displays of COVID-19 data as a direct result of these pieces of work @gmbh_youve_2020; providing increased and ongoing exposure to these graphics over time. Many of these graphics helped guide decision makers to implement policies such as shut-downs or mandated mask wearing, as well as facilitated communication with the public to increase compliance @bavel_using_2020.
++ We have recently experienced the benefits and pitfalls of using log scales as COVID-19 dashboards displayed
+case count data on both the log and linear scale @noauthor_interactive_nodate @noauthor_coronavirus_nodate. In spring 2020, during the early stages of the COVID-19 pandemic, there were large magnitude discrepancies in case counts at a given time point between different geographic regions (e.g. states and provinces as well as countries and continents). During this time, we saw the usefulness of log scale transformations showing case count curves for areas with few cases and areas with many cases within one chart. As the pandemic evolved, and the case counts were no longer spreading exponentially, graphs with linear scales seemed more effective at spotting early increases in case counts that signaled more localized outbreaks.
++ This is only one recent example of a situation in which both log and linear scales are useful for showing different aspects of the same data; there are long histories of using log scales to display results in ecology, psychophysics, engineering, and physics @noauthor_log_nodate-1 @menge_logarithmic_2018 @heckler_student_2013
 
-Research suggests our perception and mapping of numbers to a number line is logarithmic at first, but transitions to a linear scale later in development, with formal mathematics education [@varshney_why_2013, @siegler_numerical_2017, @dehaeneLogLinearDistinct2008].
-This transition to linear scales occurs first in small numbers (e.g. 1-10) and then gradually expands to higher orders of magnitude; thus, the logarithmic intuition about numbers in children is often more noticeable on scales in the thousands to hundreds of thousands.
-If we perceive logarithmically by default, it is a natural (and presumably low-effort) way to display information and should be easy to read and understand/use.
-In fact, early studies explored the estimation and prediction of exponential growth, finding that growth is underestimated when presented both numerically and graphically but that numerical estimation is more accurate than graphical estimation for exponential curves [@wagenaar_misperception_1975].
-One way to improve estimation of increasing exponential trends is to provide immediate feedback to participants about the accuracy of their current predictions [@mackinnon_feedback_1991].
-While prior contextual knowledge or experience with exponential growth does not improve estimation, instruction on exponential growth reduces the underestimation: participants adjust their initial starting value but not their perception of growth rate [@wagenaar_misperception_1975, @jones_polynomial_1977].
-Estimation was shown to improve when subjects were presented with decreasing exponential functions [@timmers_inverse_1977].
-@jones_polynomial_1977,@jones_generalized_1979 and @wagenaar_extrapolation_1978 propose competing polynomial models for the perception and extrapolation of exponential series.
-It seems that estimation is a two-stage process: first, we identify the type of curve and direction and then, we use that information for prediction [@best_perception_2007].
++ The necessary training required in the appraisal of graphic material may be more involved, for example when an ordinate must be associated with the logarithm of a magnitude. @haemer_presentation_1949
+Overall, these results reveal both universal and culture-dependent facets of the sense of number. After a minimal instruction period, even members of a remote culture with reduced vocabulary and education readily understand that number can be mapped onto a spatial scale. The exact form of this mapping switches dramatically from logarithmic to linear, however, depending on the ages at which people are tested, the education they have received, and the format in which numbers are presented. @noauthor_log_nodate
++ In American children, logarithmic mapping does not disappear all at once, but vanishes first for small numbers and much later for larger numbers from 1 to 1000 (up to fourth or sixth grade in some children). @noauthor_log_nodate
++ Whole number magnitude representations progress from a compressive, approximately logarithmic distribution to an approximately linear one. Transitions occur earlier for smaller than for larger ranges of whole numbers, corresponding both to the complexity of the numbers and to the ages when children gain experience with them. Estimation proceeds logarithmically initially and transitions to linear later in development, for several different numerical ranges. @siegler_numerical_2017
++ Certain graphic forms are inseparable from concepts that require special training for their understanding and in such cases the relative difficulty is intrinsic. Curves plotted on double logarithmic paper on on probability paper are typical examples of this type. Semi - Logarithmic chart for Temporal series falls under the "understanding calls for a certain degree of technical training" @haemer_presentation_1949
++ Therefore, if a continuumbetween perceptual and cognitive processes exists, numerical representations should also be represented on a nonlinear, compressed “number scale.” @nieder_coding_nodate
++ the idea is that compression enlarges the coding space, thus increasing the dynamic range of perception and firing neurons. @nieder_coding_nodate
 
 Our inability to accurately predict exponential growth might also be addressed by log transforming the data, however, this transformation introduces new complexities; most readers are not mathematically sophisticated enough to intuitively understand logarithmic math and translate that back into real-world effects.
 In @menge_logarithmic_2018, ecologists were surveyed to determine how often ecologists encounter log scaled data and how well ecologists understand log scaled data when they see it in the literature. 
 Participants were presented two relationships displayed on linear-linear scales, log-log scales with untransformed values, or log–log scales with log transformed values. 
-@menge_logarithmic_2018 propose three types of misconceptions participants encountered when presented data on log-log scales: 
-'hand-hold fallacy', 'Zeno's zero fallacy', and 'watch out for curves fallacies'. These misconceptions are a result of linear extrapolation assuming that a line in log-log space represents a line instead of the power law in linear-linear space. The study found that in each of these scenarios, participants were confident in their incorrect responses, indicating incorrect knowledge rather than a lack of knowledge.
+@menge_logarithmic_2018 propose three types of misconceptions participants encountered when presented data on log-log scales: 'hand-hold fallacy', 'Zeno's zero fallacy', and 'watch out for curves fallacies'. These misconceptions are a result of linear extrapolation assuming that a line in log-log space represents a line instead of the power law in linear-linear space. The study found that in each of these scenarios, participants were confident in their incorrect responses, indicating incorrect knowledge rather than a lack of knowledge. The 'hand-hold falacy' stems from the misconception that steeper slopes in log-log relationships are steeper slopes in linear-linear space. In fact, it is not only the slope that matters, but also the intercept and the location on the horizontal axis since a line in log-log space represents a power law in linear-linear space (i.e. linear extraploation). Emerging from 'Zeno's zero fallacy' is the misconception that positively sloped lines in log-log space can imply a non-zero value of y when x is zero. This is never true as positively sloped lines in log-log space actually imply that y = 0 when x = 0. This misconception again is a result of linear extrapolation assuming that a line in log-log space represents a line instead of the power law in linear-linear space. The last misconception, 'watch out for curves fallacies' encompasses three faults: (1) lines in log-log space are lines in linear-linear space, (2) lines in log-log space curve upward in linear-linear space, and (3) curves in log-log space have the same curvature in linear-linear space. Linear extrapolation is again responsible for the first and third faults while the second fault is a result of error in thinking that log-log lines represent power laws (which are exponential relationships), and all exponential relationships curve upward; this is only true when the log-log slope is greater than 1. @menge_logarithmic_2018 found that in each of these scenarios, participants were confident in their incorrect responses, indicating incorrect knowledge rather than a lack of knowledge.
 
-The 'hand-hold falacy' stems from the misconception that steeper slopes in log-log relationships are steeper slopes in linear-linear space.
-In fact, it is not only the slope that matters, but also the intercept and the location on the horizontal axis since a line in log-log space represents a power law in linear-linear space (i.e. linear extraploation).
-Emerging from 'Zeno's zero fallacy' is the misconception that positively sloped lines in log-log space can imply a non-zero value of y when x is zero. This is never true as postively sloped lines in log-log space actually imply that y = 0 when x = 0.
-This misconception again is a result of linear extrapolation assuming that a line in log-log space represents a line instead of the power law in linear-linear space.
-The last misconception, 'watch out for curves fallacies' encompases three faults: (1) lines in log-log space are lines in linear-linear space, (2) lines in log-log space curve upward in linear-linear space, and (3) curves in log-log space have the same curvature in linear-linear space.
-Linear extrapolation is again responsible for the first and third faults while the second fault is a result of error in thinking that log-log lines represent power laws (which are exponential relationships), and all exponential relationships curve upward; this is only true when the log-log slope is greater than one. @menge_logarithmic_2018 found that in each of these scenarios, participants were confident in their incorrect responses, indicating incorrect knowledge rather than a lack of knowledge.
+## Psychophysics
 
-In order to provide a set of principles to guide design choices, we must evaluate these design choices through the use of graphical tests. 
-These tests may take many forms: identifying differences in graphs, reading information off of a chart accurately, using data to make correct real-world decisions, or predicting the next few observations. 
-All of these types of tests require different levels of use and manipulation of the information presented in the chart.
++ "Preattentive perceptual effects are those which do not require sustained cognitive attention; they are processed automatically within the first 500 milliseconds of viewing a chart or graph. Components processed preattentively include colour and shape, as well as some basic information about coarse relationships between individual components." @vanderplas_testing_2020
++ Preattentively processed features include shape, angle, size, and texture; however, typically, combinations of preattentive features which represent separate features in the data are processed attentively
+After the preattentive stage, attention is necessary for subsequent processing; this directed attention scaffolds relationships between components and helps us interpret the chart or graph in context. Most of the insights we gain from charts and graphs are due to the cognitive processes that occur after attention is focused on specific aspects of the graph. @vanderplas_testing_2020
++ According to a cognitive analysis, graph interpretation involves (a) relatively simple pattern perception and association processes in which viewers can associate graphic patterns to quantitative referents and (b) more complex and error-prone inferential processes in which viewers must mentally transform data. @shah_graphs_nodate
++ There are limits to what one can test using direct estimation: it is generally preferable to test only very straightforward assessments of the content of a chart or graph, to fit within a simple experimental paradigm. Some studies of graphs utilize psychophysics methodology to assess data visualizations. Initially, of course, a significant portion of the research in statistical graphics came from the fields of psychophysics and cognitive psychology (Spence 1990, Teghtsoonian 1965, Lewandowsky and Spence 1989), but in most cases this was not accompanied by a use of the methods of psychophysics for experimental texting of charts and graphcs. Psychophysical experimental design is focused on whether an effect is detectable, and whether the magnitude of the effect can be accurately estimated. Psychophysics and direct
+observation studies are limited by the questions that are asked; @vanderplas_testing_2020
++ Other methods: Thinking aloud, Eye Tracking, etc. @vanderplas_testing_2020
+
++ **Webers Law**
+
+    + Weber's law: the fact that larger numbers require a proportional larger difference in order to remain equally discriminate. @noauthor_log_nodate
+    + we do not notice absolute changes in stimuli; we notice relative changes. @sun_framework_2012
+    + Weber–Fechner law. It states that perceived intensity P is logarithmic to the stimulus intensity S (above a minimal threshold of perception S0) @sun_framework_2012
+    
++ **Underestimation of Exponential Growth**
+
+    + In fact, early studies explored the estimation and prediction of exponential growth, finding that growth is underestimated when presented both numerically and graphically but that numerical estimation is more accurate than graphical estimation for exponential curves @wagenaar_misperception_1975. One way to improve estimation of increasing exponential trends is to provide immediate feedback to participants about the accuracy of their current predictions @mackinnon_feedback_1991. While prior contextual knowledge or experience with exponential growth does not improve estimation, instruction on exponential growth reduces the underestimation: participants adjust their initial starting value but not their perception of growth rate @wagenaar_misperception_1975, @jones_polynomial_1977.
+
++ **Risk Assessment**
+
+## Visual Inference
+
+To lay a foundation for future exploration of the use of log scales, we begin with the most fundamental ability to identify differences in charts; this does not require that participants understand exponential growth, identify log scales, or have any mathematical training. Instead, we are simply testing the change in perceptual sensitivity resulting from visualization choices.
+
+A statistic is a numerical function which summarizes the data; by this definition, graphs are visual statistics.
+To evaluate a graph, we have to run our statistic through a visual evaluation - a person. If two different methods
+of presenting data result in qualitatively different results when evaluated visually, then we can conclude that the visual statistics are signiffcantly different. Recent graphical experiments have utilized statistical lineups to quantify the perception of graphical design choices[VanderPlas and Hofmann, 2017, Hofmann et al., 2012, Loy et al., 2016]. Statistical lineups provide an elegant way of combining perception and statistical hypothesis testing using graphical experiments [Wickham et al., 2010, Majumder et al., 2013, Vanderplas et al., 2020b]. 'Lineups' are named after the 'police lineup' of criminal investigations where witnesses are asked to identify the criminal from a set of
+individuals. Similarly, a statistical lineup is a plot consisting of smaller panels; the viewer is asked to identify the plot of the real data from among a set of decoy null plots. A statistical lineup typically consists of 20 panels - 1 target panel and 19 null panels (Figure 1). If the viewer can identify the target panel embedded within the set of null panels, this suggests that the real data is visually distinct from data generated under the null model. Crowd sourcing websites such as Amazon Mechanical Turk, Reddit, and Prolifc allow us to collect responses from multiple
+viewers. In this paper, we use statistical lineups to test our ability to differentiate between exponentially increasing curves with differing levels of curvature, using linear and log scales.
+
++ Explicit graphical tests, as we have referred to them, are tests where the user is directed to assess a specific feature of a plot or answer a specific question. @vanderplas_testing_2020
+implicit graphical test, the user must identify both the purpose and function of the plot and use that information to evaluate the plots as shown. Visual inference (pg 14) problems. @vanderplas_testing_2020
+Implicit graphical tests approach the problem of spurious plot relationships at the level of the data, leveraging the human visual system to conduct a suite of visual tests for features such as outliers, clusters, linear and nonlinear relationships. The advantage to implicit testing is that lineups do not require a specification of a feature of interest in the testing framework, @vanderplas_testing_2020
+
+## You Draw It
+
++ advocate smoothing of scatterplots to assist in detecting the shape of the point cloud in situations where the error in the data is substantial, or where the density of points changes along the abscissa @cleveland_graphical_1984
+
+## Graphics Context Questions
+
++ Such complex inferential processes involve quantitatively transforming the information in the display (e.g., mentally transforming from a linear to logarithmic scale or calculating the difference between two or more data points; Cleveland, 1984, 1985).

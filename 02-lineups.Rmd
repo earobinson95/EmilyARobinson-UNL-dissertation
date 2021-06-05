@@ -3,20 +3,7 @@
 ## Introduction
 
 To lay a foundation for future exploration of the use of log scales, we begin with the most fundamental ability to identify differences in charts; this does not require that participants understand exponential growth, identify log scales, or have any mathematical training.
-Instead, we are simply testing the change in perceptual sensitivity resulting from visualization choices. In @best_perception_2007, the authors explored whether discrimination between curve types is possible.
-They found that accuracy of identifying the correct curve type is higher when nonlinear trends were presented (e.g. it’s hard to say something is linear, but easy to say that it is not linear) and that accuracy is higher with low additive variability.
-
-A statistic is a numerical function which summarizes the data; by this definition, graphs are visual statistics.
-To evaluate a graph, we have to run our statistic through a visual evaluation - a person. 
-If two different methods of presenting data result in qualitatively different results when evaluated visually, then we can conclude that the visual statistics are significantly different. 
-Recent graphical experiments have utilized statistical lineups to quantify the perception of graphical design choices[@vanderplas_clusters_2017, @hofmann_graphical_2012, @loyVariationsQQPlots2016]. 
-Statistical lineups provide an elegant way of combining perception and statistical hypothesis testing using graphical experiments [@wickham2010graphical, @majumder_validation_2013, @vanderplas_statistical_nodate].
-'Lineups' are named after the 'police lineup' of criminal investigations where witnesses are asked to identify the criminal from a set of individuals. 
-Similarly, a statistical lineup is a plot consisting of smaller panels; the viewer is asked to identify the plot of the real data from among a set of decoy null plots. 
-A statistical lineup typically consists of 20 panels - 1 target panel and 19 null panels (Figure \ref{fig:lineup-example}). 
-If the viewer can identify the target panel embedded within the set of null panels, this suggests that the real data is visually distinct from data generated under the null model.
-Crowd sourcing websites such as Amazon Mechanical Turk, Reddit, and Prolific allow us to collect responses from multiple viewers.
-In this paper, we use statistical lineups to test our ability to differentiate between exponentially increasing curves with differing levels of curvature, using linear and log scales. @vanderplas_statistical_nodate provides an approach for calculating visual p-values utilizing a 'rorschach' lineup which consists solely of null panels.
+Instead, we are simply testing the change in perceptual sensitivity resulting from visualization choices.
 
 ```{r lineup-example, fig.height = 2.75, fig.width = 5.75, fig.cap = "Lineup example"}
 lineupData_linear <- read.csv(file = "data/lineupData_linear.csv")

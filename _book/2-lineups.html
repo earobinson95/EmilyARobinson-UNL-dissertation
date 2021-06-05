@@ -102,7 +102,16 @@ div.csl-indent {
 <ul class="summary">
 <li><a href="./"></a></li>
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Literature Review</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Literature Review</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#introduction-to-graphics"><i class="fa fa-check"></i><b>1.1</b> Introduction to Graphics</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#graphical-experiments"><i class="fa fa-check"></i><b>1.2</b> Graphical Experiments</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#logarithmic-scales-and-mapping"><i class="fa fa-check"></i><b>1.3</b> Logarithmic Scales and Mapping</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#psychophysics"><i class="fa fa-check"></i><b>1.4</b> Psychophysics</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#visual-inference"><i class="fa fa-check"></i><b>1.5</b> Visual Inference</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#you-draw-it"><i class="fa fa-check"></i><b>1.6</b> You Draw It</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#graphics-context-questions"><i class="fa fa-check"></i><b>1.7</b> Graphics Context Questions</a></li>
+</ul></li>
 <li class="chapter" data-level="2" data-path="2-lineups.html"><a href="2-lineups.html"><i class="fa fa-check"></i><b>2</b> Perception through lineups</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="2-lineups.html"><a href="2-lineups.html#introduction"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
@@ -113,7 +122,10 @@ div.csl-indent {
 <li class="chapter" data-level="2.6" data-path="2-lineups.html"><a href="2-lineups.html#results"><i class="fa fa-check"></i><b>2.6</b> Results</a></li>
 <li class="chapter" data-level="2.7" data-path="2-lineups.html"><a href="2-lineups.html#discussion-and-conclusion"><i class="fa fa-check"></i><b>2.7</b> Discussion and Conclusion</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="3-youdrawit.html"><a href="3-youdrawit.html"><i class="fa fa-check"></i><b>3</b> Prediction with you draw it</a></li>
+<li class="chapter" data-level="3" data-path="3-youdrawit.html"><a href="3-youdrawit.html"><i class="fa fa-check"></i><b>3</b> Prediction with you draw it</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="3-youdrawit.html"><a href="3-youdrawit.html#introduction-1"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="4-estimation.html"><a href="4-estimation.html"><i class="fa fa-check"></i><b>4</b> Numerical Translation and Estimation</a></li>
 <li class="chapter" data-level="5" data-path="5-conclusion.html"><a href="5-conclusion.html"><i class="fa fa-check"></i><b>5</b> Conclusion</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
@@ -144,19 +156,7 @@ div.csl-indent {
 <div id="introduction" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> Introduction</h2>
 <p>To lay a foundation for future exploration of the use of log scales, we begin with the most fundamental ability to identify differences in charts; this does not require that participants understand exponential growth, identify log scales, or have any mathematical training.
-Instead, we are simply testing the change in perceptual sensitivity resulting from visualization choices. In <span class="citation">Best, Smith, &amp; Stubbs (2007)</span>, the authors explored whether discrimination between curve types is possible.
-They found that accuracy of identifying the correct curve type is higher when nonlinear trends were presented (e.g. it’s hard to say something is linear, but easy to say that it is not linear) and that accuracy is higher with low additive variability.</p>
-<p>A statistic is a numerical function which summarizes the data; by this definition, graphs are visual statistics.
-To evaluate a graph, we have to run our statistic through a visual evaluation - a person.
-If two different methods of presenting data result in qualitatively different results when evaluated visually, then we can conclude that the visual statistics are significantly different.
-Recent graphical experiments have utilized statistical lineups to quantify the perception of graphical design choices<span class="citation">Loy, Follett, &amp; Hofmann (2016)</span>.
-Statistical lineups provide an elegant way of combining perception and statistical hypothesis testing using graphical experiments <span class="citation">Vanderplas, Röttger, Cook, &amp; Hofmann (2020)</span>.
-‘Lineups’ are named after the ‘police lineup’ of criminal investigations where witnesses are asked to identify the criminal from a set of individuals.
-Similarly, a statistical lineup is a plot consisting of smaller panels; the viewer is asked to identify the plot of the real data from among a set of decoy null plots.
-A statistical lineup typically consists of 20 panels - 1 target panel and 19 null panels (Figure ).
-If the viewer can identify the target panel embedded within the set of null panels, this suggests that the real data is visually distinct from data generated under the null model.
-Crowd sourcing websites such as Amazon Mechanical Turk, Reddit, and Prolific allow us to collect responses from multiple viewers.
-In this paper, we use statistical lineups to test our ability to differentiate between exponentially increasing curves with differing levels of curvature, using linear and log scales. <span class="citation">Vanderplas, Röttger, Cook, &amp; Hofmann (2020)</span> provides an approach for calculating visual p-values utilizing a ‘rorschach’ lineup which consists solely of null panels.</p>
+Instead, we are simply testing the change in perceptual sensitivity resulting from visualization choices.</p>
 <div class="figure" style="text-align: center"><span id="fig:lineup-example"></span>
 <img src="thesis_files/figure-html/lineup-example-1.png" alt="Lineup example" width="\linewidth" />
 <p class="caption">
@@ -226,7 +226,7 @@ In addition, there are three parameter combinations which generate homogeneous �
 <p>Each participant was shown a total of thirteen lineup plots (twelve test lineup plots and one Rorschach lineup plot). Participants were randomly assigned one of the two replicate data sets for each of the six unique lineup parameter combinations. For each assigned test data set, the participant was shown the lineup plot corresponding to both the linear scale and the log scale. For the additional Rorschach lineup plot, participants were randomly assigned one data set shown on either the linear or the log scale. The order of the thirteen lineup plots shown was randomized for each participant.</p>
 <p>Participants above the age of majority were recruited from Reddit’s Visualization and Sample Size communities.
 Since participants recruited on Reddit were not compensated for their time, most participants have an interest in data visualization research.
-Previous literature suggests that prior mathematical knowledge or experience with exponential data is not associated with the outcome of graphical experiments <span class="citation">(S. VanderPlas &amp; Hofmann, 2016)</span>.
+Previous literature suggests that prior mathematical knowledge or experience with exponential data is not associated with the outcome of graphical experiments <span class="citation">(<strong>vanderplasSpatialReasoningData2016?</strong>)</span>.
 Participants completed the experiment using a Shiny applet (<a href="https://shiny.srvanderplas.com/log-study/" class="uri">https://shiny.srvanderplas.com/log-study/</a>).</p>
 <p>Participants were shown a series of lineup plots and asked to identify the plot that was most different from the others.
 On each plot, participants were asked to justify their choice and provide their level of confidence in their choice.
@@ -234,7 +234,7 @@ The goal of this experimental task is to test an individuals ability to perceptu
 </div>
 <div id="results" class="section level2" number="2.6">
 <h2><span class="header-section-number">2.6</span> Results</h2>
-<p>Participant recruitment through Reddit occurred over the course of two weeks during which 58 individuals completed 518 unique test lineup evaluations. Previous studies have found that results do not differ on lineup-related tasks between Reddit and e.g. Amazon Mechanical Turk <span class="citation">(Susan VanderPlas &amp; Hofmann, 2017)</span>.
+<p>Participant recruitment through Reddit occurred over the course of two weeks during which 58 individuals completed 518 unique test lineup evaluations. Previous studies have found that results do not differ on lineup-related tasks between Reddit and e.g. Amazon Mechanical Turk <span class="citation">(VanderPlas &amp; Hofmann, 2017)</span>.
 Participants who completed fewer than 6 lineup evaluations were removed from the study (17 participants, 41 evaluations).
 The final data set included a total of 41 participants and 477 lineup evaluations.
 Each plot was evaluated by between 18 and 28 individuals (Mean: 21.77, SD: 2.29).

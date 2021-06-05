@@ -769,7 +769,7 @@
 }
 \DeclareOption{print}{%
   \setboolean{nu@print}{true}
-  \PassOptionsToPackage{bindingoffset=0.5in}{geometry}
+  % \PassOptionsToPackage{bindingoffset=0.5in}{geometry}
 }
 \DeclareOption{electronic}{%
 \relax
@@ -888,7 +888,7 @@ Under the Supervision of Professors \nu@adviser\\[3\baselineskip]
 
 \newenvironment{acknowledgments}[1][Acknowledgments]{%
   \begin{center}
-    % \MakeUppercase{#1}
+    #1
   \end{center}
   \ifthenelse{\boolean{nu@single}}{\begin{singlespacing}}{\begin{doublespacing}}%
     }{\par%

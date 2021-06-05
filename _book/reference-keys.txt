@@ -2,6 +2,13 @@ fig:lineup-example
 fig:lof-density-curves
 fig:odds-ratio-plot
 literature-review
+introduction-to-graphics
+graphical-experiments
+logarithmic-scales-and-mapping
+psychophysics
+visual-inference
+you-draw-it
+graphics-context-questions
 lineups
 introduction
 data-generation
@@ -11,6 +18,7 @@ study-design
 results
 discussion-and-conclusion
 youdrawit
+introduction-1
 estimation
 conclusion
 the-first-appendix
