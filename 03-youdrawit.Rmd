@@ -1,3 +1,5 @@
 # Prediction with you draw it {#youdrawit}
 
 ## Introduction
+
++ advocate smoothing of scatterplots to assist in detecting the shape of the point cloud in situations where the error in the data is substantial, or where the density of points changes along the abscissa @cleveland_graphical_1984

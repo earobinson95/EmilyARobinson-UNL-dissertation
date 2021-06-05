@@ -107,10 +107,13 @@ div.csl-indent {
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#introduction-to-graphics"><i class="fa fa-check"></i><b>1.1</b> Introduction to Graphics</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#graphical-experiments"><i class="fa fa-check"></i><b>1.2</b> Graphical Experiments</a></li>
 <li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#logarithmic-scales-and-mapping"><i class="fa fa-check"></i><b>1.3</b> Logarithmic Scales and Mapping</a></li>
-<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#psychophysics"><i class="fa fa-check"></i><b>1.4</b> Psychophysics</a></li>
-<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#visual-inference"><i class="fa fa-check"></i><b>1.5</b> Visual Inference</a></li>
-<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#you-draw-it"><i class="fa fa-check"></i><b>1.6</b> You Draw It</a></li>
-<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#graphics-context-questions"><i class="fa fa-check"></i><b>1.7</b> Graphics Context Questions</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#psychophysics"><i class="fa fa-check"></i><b>1.4</b> Psychophysics</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="index.html"><a href="index.html#logarithmic-perception"><i class="fa fa-check"></i><b>1.4.1</b> Logarithmic Perception</a></li>
+<li class="chapter" data-level="1.4.2" data-path="index.html"><a href="index.html#underestimation-of-exponential-growth"><i class="fa fa-check"></i><b>1.4.2</b> Underestimation of Exponential Growth</a></li>
+<li class="chapter" data-level="1.4.3" data-path="index.html"><a href="index.html#risk-assessment"><i class="fa fa-check"></i><b>1.4.3</b> <strong>Risk Assessment</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#research-objectives"><i class="fa fa-check"></i><b>1.5</b> Research Objectives</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="2-lineups.html"><a href="2-lineups.html"><i class="fa fa-check"></i><b>2</b> Perception through lineups</a>
 <ul>
@@ -126,7 +129,10 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="3.1" data-path="3-youdrawit.html"><a href="3-youdrawit.html#introduction-1"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="4-estimation.html"><a href="4-estimation.html"><i class="fa fa-check"></i><b>4</b> Numerical Translation and Estimation</a></li>
+<li class="chapter" data-level="4" data-path="4-estimation.html"><a href="4-estimation.html"><i class="fa fa-check"></i><b>4</b> Numerical Translation and Estimation</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="4-estimation.html"><a href="4-estimation.html#introduction-2"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
+</ul></li>
 <li class="chapter" data-level="5" data-path="5-conclusion.html"><a href="5-conclusion.html"><i class="fa fa-check"></i><b>5</b> Conclusion</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="A-the-first-appendix.html"><a href="A-the-first-appendix.html"><i class="fa fa-check"></i><b>A</b> The First Appendix</a></li>
@@ -155,8 +161,17 @@ div.csl-indent {
 <h1><span class="header-section-number">CHAPTER 2</span> Perception through lineups</h1>
 <div id="introduction" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> Introduction</h2>
-<p>To lay a foundation for future exploration of the use of log scales, we begin with the most fundamental ability to identify differences in charts; this does not require that participants understand exponential growth, identify log scales, or have any mathematical training.
-Instead, we are simply testing the change in perceptual sensitivity resulting from visualization choices.</p>
+<p>To lay a foundation for future exploration of the use of log scales, we begin with the most fundamental ability to identify differences in charts; this does not require that participants understand exponential growth, identify log scales, or have any mathematical training. Instead, we are simply testing the change in perceptual sensitivity resulting from visualization choices.</p>
+<p>A statistic is a numerical function which summarizes the data; by this definition, graphs are visual statistics.
+To evaluate a graph, we have to run our statistic through a visual evaluation - a person. If two different methods
+of presenting data result in qualitatively different results when evaluated visually, then we can conclude that the visual statistics are signiffcantly different. Recent graphical experiments have utilized statistical lineups to quantify the perception of graphical design choices[VanderPlas and Hofmann, 2017, Hofmann et al., 2012, Loy et al., 2016]. Statistical lineups provide an elegant way of combining perception and statistical hypothesis testing using graphical experiments [Wickham et al., 2010, Majumder et al., 2013, Vanderplas et al., 2020b]. ‘Lineups’ are named after the ‘police lineup’ of criminal investigations where witnesses are asked to identify the criminal from a set of
+individuals. Similarly, a statistical lineup is a plot consisting of smaller panels; the viewer is asked to identify the plot of the real data from among a set of decoy null plots. A statistical lineup typically consists of 20 panels - 1 target panel and 19 null panels (Figure 1). If the viewer can identify the target panel embedded within the set of null panels, this suggests that the real data is visually distinct from data generated under the null model. Crowd sourcing websites such as Amazon Mechanical Turk, Reddit, and Prolifc allow us to collect responses from multiple
+viewers. In this paper, we use statistical lineups to test our ability to differentiate between exponentially increasing curves with differing levels of curvature, using linear and log scales.</p>
+<ul>
+<li>Explicit graphical tests, as we have referred to them, are tests where the user is directed to assess a specific feature of a plot or answer a specific question. <span class="citation">Vanderplas, Cook, &amp; Hofmann (2020)</span>
+implicit graphical test, the user must identify both the purpose and function of the plot and use that information to evaluate the plots as shown. Visual inference (pg 14) problems. <span class="citation">Vanderplas, Cook, &amp; Hofmann (2020)</span>
+Implicit graphical tests approach the problem of spurious plot relationships at the level of the data, leveraging the human visual system to conduct a suite of visual tests for features such as outliers, clusters, linear and nonlinear relationships. The advantage to implicit testing is that lineups do not require a specification of a feature of interest in the testing framework, <span class="citation">Vanderplas, Cook, &amp; Hofmann (2020)</span></li>
+</ul>
 <div class="figure" style="text-align: center"><span id="fig:lineup-example"></span>
 <img src="thesis_files/figure-html/lineup-example-1.png" alt="Lineup example" width="\linewidth" />
 <p class="caption">

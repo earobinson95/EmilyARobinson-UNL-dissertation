@@ -6,9 +6,10 @@ introduction-to-graphics
 graphical-experiments
 logarithmic-scales-and-mapping
 psychophysics
-visual-inference
-you-draw-it
-graphics-context-questions
+logarithmic-perception
+underestimation-of-exponential-growth
+risk-assessment
+research-objectives
 lineups
 introduction
 data-generation
@@ -20,6 +21,7 @@ discussion-and-conclusion
 youdrawit
 introduction-1
 estimation
+introduction-2
 conclusion
 the-first-appendix
 the-second-appendix
