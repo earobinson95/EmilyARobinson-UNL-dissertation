@@ -3,10 +3,9 @@ fig:lof-density-curves
 fig:odds-ratio-plot
 literature-review
 introduction-to-graphics
+perception-and-psychophysics
 graphical-experiments
 logarithmic-scales-and-mapping
-psychophysics
-logarithmic-perception
 underestimation-of-exponential-growth
 risk-assessment
 research-objectives
