@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.5.4)  7 JUN 2021 13:11
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.5.4)  7 JUN 2021 15:21
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1651,15 +1651,15 @@ File: thesis_files/figure-latex/odds-ratio-plot-1.pdf Graphic file (type pdf)
 
 ] [31
 
-] [32] [33]
+] [32] [33] [34] [35]
 No file thesis.bbl.
 
 Class memoir Warning: The material used in the footer is too large
 (10.14995pt) for the given foot skip (0.0pt), it is recommended to
 either increase the foot skip or redesign the footer
-(in both cases you will find help in the memoir manual). on input line 737.
+(in both cases you will find help in the memoir manual). on input line 794.
 
-[34]
+[36] [37]
 \tf@toc=\write7
 \openout7 = `thesis.toc'.
 
@@ -1676,10 +1676,10 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 Here is how much of TeX's memory you used:
  34414 strings out of 411690
  623858 string characters out of 2834884
- 1014428 words of memory out of 3000000
+ 1017428 words of memory out of 3000000
  53891 multiletter control sequences out of 15000+600000
  409706 words of font info for 67 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  126i,12n,130p,2602b,436s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (42 pages).
+Output written on thesis.pdf (45 pages).
