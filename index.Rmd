@@ -43,7 +43,9 @@ knitr::opts_chunk$set(
   echo = F, eval = T, messages = F, warnings = F,
   fig.width = 6, fig.height = 4,  fig.align = 'center',
   out.width = "\\linewidth", dpi = 300, 
-  tidy = T, tidy.opts=list(width.cutoff=45)
+  tidy = T, tidy.opts=list(width.cutoff=45)#,
+  # fig.pos = "h", 
+  # out.extra = ""
 )
 ```
 
@@ -74,10 +76,14 @@ Editing text colors: \ear{Emily's editing color.} Emily may also use mostly blac
 
 Advanced technology and computing power has promoted data visualization as a central tool in modern data science [@unwin_why_2020]. 
 Data visualization is defined as the art of drawing graphical charts in order to display data.
-@vanderplas_testing_2020 describe the process of creating a graphic from a dataset through the use of variable mapping, data transformations, coordinate systems, and aesthetic features. 
+Figure \ref{fig:graphic-flowchart} illustrates the process of creating a graphic from a dataset through the use of variable mapping, data transformations, coordinate systems, and aesthetic features [@vanderplas_testing_2020]. 
 Graphics are useful for data cleaning, exploring data structure, and have been an essential component in communicating information for the last 200 years [@lewandowsky_perception_1989; @unwin_why_2020; @vanderplas_testing_2020]
 During the 20th century, companies began utilizing graphics to understand their mechanics and support business decisions; news sources began displaying graphics of weather forecasts as a means to communicate critical information and aid in decision-making [@vanderplas_testing_2020]. 
 Today, we encounter data visualizations everywhere, researchers include graphics to communicate their results in scientific publications and mass media relies on graphics to convey news stories to the public through newspapers, TV, and the Web [@unwin_why_2020].
+
+```{r graphic-flowchart, fig.cap = "Graphic flowchart", out.width="50%"}
+knitr::include_graphics("images/graphic-flowchart.png")
+```
 
 In general, the public holds the self perception that numbers are difficult to understand and that they did not perform well in mathematics during school [@unwin_why_2020]. 
 In contrary, there tends to be a positive self perception when it comes to graphics as they are viewed more as illustrations and not as critical parts of an argument.
@@ -112,8 +118,12 @@ With the support of changes in software defaults, future work must be done in or
 ## Perception and Psychophysics
 
 In order to develop guiding principles for generating graphics effective in communication, we must first understand the basic mechanics of the human perceptual system and the biases we are vulnerable to [@goldstein_sensation_2017]. 
-The perceptual process is complex and involved \ear{[INSERT CYCLE PICTURE HERE?]}. 
-<!-- !["images/perceptual-process-goldsein-pg5.png"] -->
+The perceptual process is complex and involved (Figure \ref{fig:perceptual-process}). 
+
+```{r perceptual-process, fig.cap = "Perceptual process", out.width="75%"}
+knitr::include_graphics("images/perceptual-process-goldsein-pg5.png")
+```
+
 This process is broken down into sensation - involving simple processes that occur right at the beginning of a sensory system - and perception - involving higher-order mechanisms and identified with more complex processes. 
 The perceptual process begins when there is a stimulus in the environment and light is reflected and focused back into the viewer's eyes. 
 Within the eye, the light reflected is transformed and focused by the eye's optical system and an image is formed on the receptors of the viewer's retina. 
@@ -156,13 +166,13 @@ In recent years, there have been advancements in the methodology used to investi
 Some of the new methods, such as the lineup protocol [@buja_statistical_2009], utilize the grammar of graphics designation of a data plot as a statistic through the functional mapping of variable(s). 
 This allows the data plot to be tested similar to other statistics, by comparing the actual data plot to a set of plots with the absence of any data structure we can test the likelihood of any perceived structure being significant [@vanderplas_testing_2020].
 While the methodology of these recent experiments differs from earlier studies, the focus is still placed on the initial perception and graph comprehension with a relatively small amount of work conducted to understand the effect of design choices on higher cognitive processes such as learning or analysis [@green2009personal]. 
-Most recent graphics experiments have utilized tools such as Amazon Turk, Prolific, Reddit, and other crowd sourcing websites to evaluate the psychophysics and patterns associated with design choices [@vanderplas_clusters_2017].
+Most recent graphics experiments have utilized tools such as Amazon Turk, Prolific, Reddit, and other crowd sourcing websites to evaluate the psychophysics and patterns associated with design choices [@vanderplas_clusters_2017]. Such studies tend to be limited by the questions asked while other methods such as Thinking aloud and Eye Tracking allow researchers to evaluate the overall perception of the graphic [@vanderplas_testing_2020].
 
-+ informal and formal graphical exploration. informal: changes are made to the graph and the iterative versions are compared to determine what information is easily acceptable formal: an experiment is designed and participants are tested in a controlled manner. @vanderplas_testing_2020
-+ There are limits to what one can test using direct estimation: it is generally preferable to test only very straightforward assessments of the content of a chart or graph, to fit within a simple experimental paradigm. 
-Some studies of graphs utilize psychophysics methodology to assess data visualizations. 
-+ Psychophysics and direct observation studies are limited by the questions that are asked; @vanderplas_testing_2020
-+ Other methods: Thinking aloud, Eye Tracking, etc. @vanderplas_testing_2020
+<!-- + informal and formal graphical exploration. informal: changes are made to the graph and the iterative versions are compared to determine what information is easily acceptable formal: an experiment is designed and participants are tested in a controlled manner. @vanderplas_testing_2020 -->
+<!-- + There are limits to what one can test using direct estimation: it is generally preferable to test only very straightforward assessments of the content of a chart or graph, to fit within a simple experimental paradigm. -->
+<!-- Some studies of graphs utilize psychophysics methodology to assess data visualizations. -->
+<!-- + Psychophysics and direct observation studies are limited by the questions that are asked; @vanderplas_testing_2020 -->
+<!-- + Other methods: Thinking aloud, Eye Tracking, etc. @vanderplas_testing_2020 -->
 
 ## Logarithmic Scales and Mapping
 
@@ -181,19 +191,36 @@ We have recently experienced the benefits and pitfalls of using log scales as CO
 case count data on both the log and linear scale [@fagen-ulmschneider_2020; @burnmurdoch_2020]. In spring 2020, during the early stages of the COVID-19 pandemic, there were large magnitude discrepancies in case counts at a given time point between different geographic regions (e.g. states and provinces as well as countries and continents). 
 During this time, we saw the usefulness of log scale transformations showing case count curves for areas with few cases and areas with many cases within one chart. 
 As the pandemic evolved, and the case counts were no longer spreading exponentially, graphs with linear scales seemed more effective at spotting early increases in case counts that signaled more localized outbreaks.
-This is only one recent example of a situation in which both log and linear scales are useful for showing different aspects of the same data; there are long histories of using log scales to display results in ecology, psychophysics, engineering, and physics [@munroe_2005; @menge_logarithmic_2018; @heckler_student_2013].
+This is only one recent example of a situation in which both log and linear scales are useful for showing different aspects of the same data; there are long histories of using log scales to display results in ecology, psychophysics, engineering, and physics [@menge_logarithmic_2018; @heckler_student_2013]. The usefulness of the log scale in science is exemplified in Figure \ref{fig:log-scale-comic} [@munroe_2005].
+
+```{r log-scale-comic, fig.cap = "Log scale comic", out.width="70%"}
+knitr::include_graphics("images/log-scale-comic.png")
+```
 
 Research suggests our perception and mapping of numbers to a number line is logarithmic at first, but transitions
 to a linear scale later in development, with formal mathematics education [@siegler_numerical_2017; @siegler_numerical_2017; @varshney_why_2013; @dehaene2008log].
+For example, a kindergartner asked to place numbers 1-10 along a number line would place 3 close to the middle, following the logarithmic perspective [@varshney_why_2013].
 With basic training, members of remote cultures with a basic vocabulary and minimal education understood the concept that numbers can be mapped into a spacial space [@dehaene2008log]. There was a gradual transition from logarithmic to linear scale as the mapping of whole number magnitude representations transitioned from a compressed (approximately lograithmic) distribution to an approximately linear one. 
-These results indicate the universal and cultural-dependent characteristics of the sense of number.
+These results indicate the universal and cultural-dependent characteristics of the sense of number. 
+
+This phenomenon was first discovered by Ernst Weber, an early psychophysics researcher, by determining the relationship between the difference threshold (smallest detectable difference between two sensory stimuli; known as the "Just Noticable Difference") and the magnitude of a stimulus. 
+This holds true for a variety of stimuli such as weight, light, and sound as well as for a range of magnitudes; larger numbers require a proportional larger difference in order to remain equally discriminate [@dehaene2008log]. 
+Known as Weber's law, it was established that we do not notice absolute changes in stimuli, but instead that we notice the relative change [@sun_framework_2012]. 
+Numerically, Weber's Law is defined as 
+\begin{equation}
+\frac{\Delta S}{S} = K
+\end{equation}
+where $\Delta S$ represents the difference threshold, S represents the initial stimulus intensity, and K is called Weber's contrast which remains constant as the magnitude of S changes. 
+Gustav Fechner, a founder of psychophysics, provided further extension to Weber's law by discovering the relationship between the perceived intensity is logarithmic to the stimulus intensity when observed above a minimal threshold of perception [@sun_framework_2012]. 
+Formally known as the Weber-Fechner law is derived from Weber's law as
+\begin{equation}
+P = K\ln \frac{S}{S_0}
+\end{equation}
+where P represents the perceived stimulus, K represents Weber's contrast, S represents the initial stimulus intensity, and $S_0$ represents the minimal threshold of perception.
+    
 Assuming there is a direct relationship between perceptual and cognitive processes, it is reasonable to assume numerical representations should also be displayed on a nonlinear, compressed number scale. Therefore, if we perceive logarithmically by default, it is a natural (and presumably low effort) way to display information and should be easy to read and understand/use.
 The idea is compression enlarges the coding space, thus increasing the dynamic range of perception and firing neurons within our visual system [@nieder2003coding].
-Similar to the training and education required to transition from logrithmic mapping to linear mapping, there is also necessary training required in the assessment of graphical displays associated with logarithmic scales. @haemer_presentation_1949 identify semi-logarithmic charts for temporal series as requiring a certain degree of technical training.
-
-**Weber's law**: the fact that larger numbers require a proportional larger difference in order to remain equally discriminate. @dehaene2008log
-we do not notice absolute changes in stimuli; we notice relative changes. @sun_framework_2012
-Weber–Fechner law. It states that perceived intensity P is logarithmic to the stimulus intensity S (above a minimal threshold of perception S0) @sun_framework_2012
+Similar to the training and education required to transition from logarithmic mapping to linear mapping, there is also necessary training required in the assessment of graphical displays associated with logarithmic scales. @haemer_presentation_1949 identify semi-logarithmic charts for temporal series as requiring a certain degree of technical training.
     
 ## Underestimation of Exponential Growth
 
@@ -201,11 +228,13 @@ Early studies explored the estimation and prediction of exponential growth, find
 One way to improve estimation of increasing exponential trends is to provide immediate feedback to participants about the accuracy of their current predictions [@mackinnon_feedback_1991]. 
 While prior contextual knowledge or experience with exponential growth does not improve estimation, instruction on exponential growth reduces the underestimation: participants adjust their initial starting value but not their perception of growth rate [@wagenaar_misperception_1975; @jones_polynomial_1977].
 Our inability to accurately predict exponential growth might also be addressed by log transforming the data, however, this transformation introduces new complexities; most readers are not mathematically sophisticated enough to intuitively understand logarithmic math and translate that back into real-world effects.
+
 In @menge_logarithmic_2018, ecologists were surveyed to determine how often ecologists encounter log scaled data and how well ecologists understand log scaled data when they see it in the literature. 
 Participants were presented two relationships displayed on linear-linear scales, log-log scales with untransformed values, or log–log scales with log transformed values. 
 The authors propose three types of misconceptions participants encountered when presented data on log-log scales: 'hand-hold fallacy', 'Zeno's zero fallacy', and 'watch out for curves fallacies'. 
 These misconceptions are a result of linear extrapolation assuming that a line in log-log space represents a line instead of the power law in linear-linear space. 
 The study found that in each of these scenarios, participants were confident in their incorrect responses, indicating incorrect knowledge rather than a lack of knowledge. 
+
 The 'hand-hold falacy' stems from the misconception that steeper slopes in log-log relationships are steeper slopes in linear-linear space. In fact, it is not only the slope that matters, but also the intercept and the location on the horizontal axis since a line in log-log space represents a power law in linear-linear space (i.e. linear extraploation). 
 Emerging from 'Zeno's zero fallacy' is the misconception that positively sloped lines in log-log space can imply a non-zero value of y when x is zero. 
 This is never true as positively sloped lines in log-log space actually imply that y = 0 when x = 0. This misconception again is a result of linear extrapolation assuming that a line in log-log space represents a line instead of the power law in linear-linear space. 
@@ -213,11 +242,11 @@ The last misconception, 'watch out for curves fallacies' encompasses three fault
 Linear extrapolation is again responsible for the first and third faults while the second fault is a result of error in thinking that log-log lines represent power laws (which are exponential relationships), and all exponential relationships curve upward; this is only true when the log-log slope is greater than 1. 
 @menge_logarithmic_2018 found that in each of these scenarios, participants were confident in their incorrect responses, indicating incorrect knowledge rather than a lack of knowledge.
 
-## Risk Assessment
+<!-- ## Risk Assessment -->
 
 ## Research Objectives
 In my research, I conduct three graphical experimental tasks to evaluate the impact our choice of scale (log/linear) has on human perception of exponentially increasing trends. 
-The first experiment evaluates whether our ability to perceptually notice differences in exponentially increasing trends is impacted by the choice of scale. I conducted a visual inference experiment in which participants were shown a series of lineup plots (consisting of 19 null panels and 1 target panel) and asked to identify the panel that was most different from the others. 
+The first experiment evaluates whether our ability to perceptually notice differences in exponentially increasing trends is impacted by the choice of scale. I conducted a visual inference experiment in which participants were shown a series of lineup plots and asked to identify the panel that was most different from the others. 
 The other experimental tasks focus on determining whether there are cognitive disadvantages to log scales: do log scales make it harder to make use of graphical information? 
 I conducted a graphical task similar to the New York Times "You Draw It" page to test an individual's ability to use and make predictions for exponentially increasing data. 
 Participants were asked to draw a line using their computer mouse through the increasing exponential trend shown on both scales. 

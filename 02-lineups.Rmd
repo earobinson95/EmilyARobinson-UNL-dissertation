@@ -2,17 +2,20 @@
 
 ## Introduction
 
-To lay a foundation for future exploration of the use of log scales, we begin with the most fundamental ability to identify differences in charts; this does not require that participants understand exponential growth, identify log scales, or have any mathematical training. Instead, we are simply testing the change in perceptual sensitivity resulting from visualization choices.
-
-A statistic is a numerical function which summarizes the data; by this definition, graphs are visual statistics.
-To evaluate a graph, we have to run our statistic through a visual evaluation - a person. If two different methods
-of presenting data result in qualitatively different results when evaluated visually, then we can conclude that the visual statistics are signiffcantly different. Recent graphical experiments have utilized statistical lineups to quantify the perception of graphical design choices[VanderPlas and Hofmann, 2017, Hofmann et al., 2012, Loy et al., 2016]. Statistical lineups provide an elegant way of combining perception and statistical hypothesis testing using graphical experiments [Wickham et al., 2010, Majumder et al., 2013, Vanderplas et al., 2020b]. 'Lineups' are named after the 'police lineup' of criminal investigations where witnesses are asked to identify the criminal from a set of
-individuals. Similarly, a statistical lineup is a plot consisting of smaller panels; the viewer is asked to identify the plot of the real data from among a set of decoy null plots. A statistical lineup typically consists of 20 panels - 1 target panel and 19 null panels (Figure 1). If the viewer can identify the target panel embedded within the set of null panels, this suggests that the real data is visually distinct from data generated under the null model. Crowd sourcing websites such as Amazon Mechanical Turk, Reddit, and Prolifc allow us to collect responses from multiple
-viewers. In this paper, we use statistical lineups to test our ability to differentiate between exponentially increasing curves with differing levels of curvature, using linear and log scales.
-
-+ Explicit graphical tests, as we have referred to them, are tests where the user is directed to assess a specific feature of a plot or answer a specific question. @vanderplas_testing_2020
-implicit graphical test, the user must identify both the purpose and function of the plot and use that information to evaluate the plots as shown. Visual inference (pg 14) problems. @vanderplas_testing_2020
-Implicit graphical tests approach the problem of spurious plot relationships at the level of the data, leveraging the human visual system to conduct a suite of visual tests for features such as outliers, clusters, linear and nonlinear relationships. The advantage to implicit testing is that lineups do not require a specification of a feature of interest in the testing framework, @vanderplas_testing_2020
+Previously, we saw how a data plot can be evaluated and treated as a visual statistic, a numerical function which summarizes the data.
+To evaluate a graph, we have to run our statistic through a visual evaluation - a person. 
+If two different methods of presenting data result in qualitatively different results when evaluated visually, then we can conclude that the visual statistics are significantly different. 
+Recent graphical experiments have utilized statistical lineups to quantify the perception of graphical design choices 
+[@hofmann_graphical_2012; @loy_model_2017; @loy_variations_2016; @vanderplas_clusters_2017]. 
+Statistical lineups provide an elegant way of combining perception and statistical hypothesis testing using graphical experiments [@majumder_validation_2013; @vanderplas_testing_2020; @wickham_graphical_2010].
+'Lineups' are named after the 'police lineup' of criminal investigations where witnesses are asked to identify the criminal from a set of individuals. 
+Similarly, a statistical lineup is a plot consisting of smaller panels; the viewer is asked to identify the plot of the real data from among a set of decoy null plots. 
+A statistical lineup typically consists of 20 panels - 1 target panel and 19 null panels. Figure 
+If the viewer can identify the target panel embedded within the set of null panels, this suggests that the real data is visually distinct from data generated under the null model. 
+\ref{fig:lineup-example} provides example's of a statistical lineup's. The lineup plot on the left displays increasing exponential data on a linear scale with panel (2 x 5) + 3 as the target.
+The lineup plot on the right displays increasing exponential data on the log scale with panel 2 x 2 as the
+target.
+Crowd sourcing websites such as Amazon Mechanical Turk, Reddit, and Prolifc allow us to collect responses from multiple viewers. 
 
 ```{r lineup-example, fig.height = 2.75, fig.width = 5.75, fig.cap = "Lineup example"}
 lineupData_linear <- read.csv(file = "data/lineupData_linear.csv")
@@ -47,28 +50,32 @@ logPlot <- ggplot(lineupData_log, aes(x=x, y=y)) +
 grid.arrange(linearPlot, logPlot, ncol = 2)
 ```
 
+While explicit graphical tests direct the participant to a specific feature of a plot to answer a specific question, implicit graphical tests require the user to identify both the purpose and function of the plot in order to evaluate the plots shown [@vanderplas_testing_2020]. 
+Implicit graphical tests, such as lineups, have the advantage of simultaneously visually testing for multiple visual features including outliers, clusters, linear and nonlinear relationships. 
+To lay a foundation for future exploration of the use of log scales, we begin with the most fundamental ability to identify differences in charts; this does not require that participants understand exponential growth, identify log scales, or have any mathematical training. 
+Instead, we are simply testing the change in perceptual sensitivity resulting from visualization choices.
+The study in this chapter is conducted through visual inference and the use of statistical lineups to differentiate between exponentially increasing curves with differing levels of curvature, using linear and log scales.
+
 ## Data Generation
 
 In this study, both the target and null data sets were generated by simulating data from an exponential model; the models differ in the parameters selected for the null and target panels. 
 In order to guarantee the simulated data spans the same domain and range of values, we implemented a domain constraint of $x\in [0,20]$ and a range constraint of $y\in [10,100]$ with $N = 50$ points randomly assigned throughout the domain and mapped to the y-axis using the exponential model with the selected parameters. 
 These constraints provide some assurance that participants who select the target plot are doing so because of their visual perception differentiating between curvature or growth rate rather than different starting or ending values.
 
-We simulated data based on a three-parameter exponential model with multiplicative errors: 
-
+Data was simulated based on a three-parameter exponential model with multiplicative errors: 
 \begin{align}
 y_i & = \alpha\cdot e^{\beta\cdot x_i + \epsilon_i} + \theta \\
 \text{with } \epsilon_i & \sim N(0, \sigma^2). \nonumber
 \end{align} 
-
-\noindent The parameters $\alpha$ and $\theta$ are adjusted based on $\beta$ and $\sigma^2$ to guarantee the range and domain constraints are met. 
+The parameters $\alpha$ and $\theta$ are adjusted based on $\beta$ and $\sigma^2$ to guarantee the range and domain constraints are met. 
 The model generated $N = 50$ points $(x_i, y_i), i = 1,...,N$ where $x$ and $y$ have an increasing exponential relationship. 
 The heuristic data generation procedure is described below:
 
-\textit{Algorithm 2.1.1: Paremeter Estimation}
+\noindent \textit{Algorithm 2.1.1: Paremeter Estimation}
 
-Input Parameters: domain $x\in[0,20]$, range $y\in[10,100]$, midpoint $x_{mid}$.
+\noindent \textbf{Input Parameters:} domain $x\in[0,20]$, range $y\in[10,100]$, midpoint $x_{mid}$.
 
-Output: estimated model parameters $\hat\alpha, \hat\beta, \hat\theta$
+\noindent \textbf{Output:} estimated model parameters $\hat\alpha, \hat\beta, \hat\theta$
 
 1. Determine the $y=-x$ line scaled to fit the assigned domain and range.
 
@@ -80,9 +87,9 @@ Output: estimated model parameters $\hat\alpha, \hat\beta, \hat\theta$
 
 \noindent\textit{Algorithm 2.1.2: Exponential Simulation}
 
-Input Paremeters: sample size $N = 50$, estimated parameters $\hat\alpha$, $\hat\beta$, and $\hat\theta$, $\sigma$ standard deviation from the exponential curve.
+\noindent \textbf{Input Paremeters:} sample size $N = 50$, estimated parameters $\hat\alpha$, $\hat\beta$, and $\hat\theta$, $\sigma$ standard deviation from the exponential curve.
 
-Output Parameters: $N$ points, in the form of vectors $\mathbf{x}$ and $\mathbf{y}$.
+\noindent \textbf{Output Parameters:} $N$ points, in the form of vectors $\mathbf{x}$ and $\mathbf{y}$.
 
 1. Generate $\tilde x_j, j = 1,..., N\cdot \frac{3}{4}$ as a sequence of evenly spaced points in $[0,20]$. This ensures the full domain of $x$ is used, fulfilling the constraints of spanning the same domain and range for each parameter combination.
 
@@ -97,10 +104,12 @@ Output Parameters: $N$ points, in the form of vectors $\mathbf{x}$ and $\mathbf{
 ## Parameter Selection
 
 For each level of difficulty, we simulated 1000 data sets of $(x_{ij}, y_{ij})$ points for $i = 1,...,50$ and $j = 1...10$.
-Each generated $x_i$ point from \textit{Algorithm 2.1.2} was replicated 10 times. Then the lack of fit statistic (LOF) was computed for each simulated data set by calculating the deviation of the data from a linear line.
+Each generated $x_i$ point from \textit{Algorithm 2.1.2} was replicated 10 times. 
+Then the lack of fit statistic (LOF) was computed for each simulated data set by calculating the deviation of the data from a linear line.
 Plotting the density curves of the LOF statistics for each level of difficulty choice allows us to evaluate the ability of differentiating between the difficulty levels and thus detecting the target plot.
 In Figure \ref{fig:lof-density-curves}, we can see the densities of each of the three difficulty levels.
-While the LOF statistic provides us a numerical value for discriminating between the difficulty levels, we cannot directly relate this to the perceptual discriminability; it serves primarily as an approximation to ensure that we are testing parameters at several distinct levels of difficulty.
+While the LOF statistic provides us a numerical value for discriminating between the difficulty levels, we cannot directly relate this to the perceptual discriminability; it serves primarily as an approximation to ensure that we are testing parameters at several distinct levels of difficulty. 
+Final parameter estimates are shown in Table \ref{tab:parameter-data}.
 
 ```{r lof-density-curves, fig.height = 2.5, fig.width = 5, fig.cap = "Lack of fit statistic density curves"}
 lofData <- read.csv(file = "data/lofData.csv")
@@ -122,8 +131,6 @@ lofPlot_curvature <- lofData %>%
   scale_x_continuous("Lack of Fit Statistic")
 lofPlot_curvature
 ```
-
-Final parameter estimates are shown in Table \ref{tab:parameter-data}.
 
 ```{r parameter-data}
 parameter_data <- read.csv(file = "data/parameter_data.csv")
@@ -148,11 +155,13 @@ In addition, there are three parameter combinations which generate homogeneous "
 
 ## Study Design
 
-Each participant was shown a total of thirteen lineup plots (twelve test lineup plots and one Rorschach lineup plot). Participants were randomly assigned one of the two replicate data sets for each of the six unique lineup parameter combinations. For each assigned test data set, the participant was shown the lineup plot corresponding to both the linear scale and the log scale. For the additional Rorschach lineup plot, participants were randomly assigned one data set shown on either the linear or the log scale. The order of the thirteen lineup plots shown was randomized for each participant. 
+Each participant was shown a total of thirteen lineup plots (twelve test lineup plots and one Rorschach lineup plot). Participants were randomly assigned one of the two replicate data sets for each of the six unique lineup parameter combinations. 
+For each assigned test data set, the participant was shown the lineup plot corresponding to both the linear scale and the log scale. For the additional Rorschach lineup plot, participants were randomly assigned one data set shown on either the linear or the log scale. 
+The order of the thirteen lineup plots shown was randomized for each participant. 
 
 Participants above the age of majority were recruited from Reddit's Visualization and Sample Size communities.
 Since participants recruited on Reddit were not compensated for their time, most participants have an interest in data visualization research. 
-Previous literature suggests that prior mathematical knowledge or experience with exponential data is not associated with the outcome of graphical experiments [@vanderplasSpatialReasoningData2016]. 
+Previous literature suggests that prior mathematical knowledge or experience with exponential data is not associated with the outcome of graphical experiments [@vanderplas2015spatial]. 
 Participants completed the experiment using a Shiny applet (https://shiny.srvanderplas.com/log-study/).
 
 Participants were shown a series of lineup plots and asked to identify the plot that was most different from the others. 
@@ -161,15 +170,41 @@ The goal of this experimental task is to test an individuals ability to perceptu
 
 ## Results
 
-Participant recruitment through Reddit occurred over the course of two weeks during which 58 individuals completed 518 unique test lineup evaluations. Previous studies have found that results do not differ on lineup-related tasks between Reddit and e.g. Amazon Mechanical Turk [@vanderplas_clusters_2017].
+Participant recruitment through Reddit occurred over the course of two weeks during which 58 individuals completed 518 unique test lineup evaluations. 
+Previous studies have found that results do not differ on lineup-related tasks between Reddit and e.g. Amazon Mechanical Turk [@vanderplas_clusters_2017].
 Participants who completed fewer than 6 lineup evaluations were removed from the study (17 participants, 41 evaluations).
 The final data set included a total of 41 participants and 477 lineup evaluations. 
 Each plot was evaluated by between 18 and 28 individuals (Mean: 21.77, SD: 2.29). 
 In 67\% of the 477 lineup evaluations, participants correctly identified the target panel. 
 
-Target plot identification was analyzed using the Glimmix Procedure in SAS 9.4. 
-Each lineup plot evaluated was assigned a value based on the participant response (correct = 1, not correct = 0). 
-The binary response was analyzed using a generalized linear mixed model following a binomial distribution with a logit link function following a row-column blocking design to account for the variation due to participant and data set respectively. See model details and estimates in \ear{Appendix Reference}.
+Target plot identification was analyzed using the Glimmix Procedure in SAS 9.4.
+Each lineup plot evaluated was assigned a value based on the participant response (correct = 1, not correct = 0).
+Define $Y_{ijkl}$ to be the event that participant $l$ correctly identifies the target plot for data set $k$ with curvature $j$ plotted on scale $i$.
+The binary response was analyzed using generalized linear mixed model following a binomial distribution with a logit link function following a row-column blocking design accounting for the variation due to participant and data set respectively as 
+\begin{equation}
+\text{logit }P(Y_{ijk}) = \eta + \delta_i + \gamma_j + \delta \gamma_{ij} + s_l + d_k
+\end{equation}
+where
+\begin{itemize}
+\item $\eta$ is the baseline average probability of selecting the target plot
+\item $\delta_i$ is the effect of the log/linear scale
+\item $\gamma_j$ is the effect of the curvature combination
+\item $\delta\gamma_{ij}$ is the two-way interaction effect of the scale and curvature
+\item $s_l \sim N(0,\sigma^2_\text{participant})$, random effect for participant characteristics
+\item $d_k \sim N(0,\sigma^2_{\text{data}})$, random effect for data specific characteristics. 
+\end{itemize}
+\noindent We assume that random effects for data set and participant are independent.
+
+Type III tests for fixed effects shown in Table \ref{tab:type3-fixed-effects} indicate a significant interaction between the curvature combination and scale. Variance due to participant and data set were estimated to be $\sigma^2_{\text{participant}} = 2.13$ (s.e. 0.74) and $\sigma^2_{\text{data}} = 0.92$ (s.e. 0.70).
+
+```{r anova}
+read.csv("data/jsm-student-paper-tests3.csv") %>%
+  mutate(DF = paste(NumDF, ",", DenDF)) %>%
+  select(Effect, FValue, DF, ProbF) %>%
+  kable("latex", escape = F, booktabs = T, linesep = "", align = "c", label = "type3-fixed-effects",
+        col.names = c("Fixed Effect", "F", "DF", "P-value"),
+        caption = "Type III Tests for Fixed Effects")
+```
 
 On both the log and linear scales, the highest accuracy occurred in lineup plots where the target model and null model had large curvature differences (Easy Null - Hard Target; Hard Null - Easy Target).
 <!-- When comparing models that have slight curvature differences \er{(e.g. Medium Null - Hard Target, Medium Null - Easy Target, Easy Null - Medium Target)}, there is a sacrifice in accuracy when displayed on the linear scale.  -->
@@ -211,7 +246,7 @@ odds_ratio_plot
 
 ## Discussion and Conclusion
 
-The overall goal of this paper is to provide basic research to support the principles used to guide design decisions in scientific visualizations of exponential data. 
+The overall goal of this chapter is to provide basic research to support the principles used to guide design decisions in scientific visualizations of exponential data. 
 In this study, we explore the use of linear and log scales to determine whether our ability to notice differences in exponentially increasing trends is impacted by the choice of scale. 
 Our results indicated that when there was a large difference in curvature between the target plot and null plots, the choice of scale had no impact and participants accurately differentiated between the two curves on both the linear and log scale. 
 However, displaying exponentially increasing data on a log scale improved the accuracy of differentiating between models with slight curvature differences.

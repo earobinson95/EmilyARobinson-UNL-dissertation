@@ -233,10 +233,19 @@ Editing text colors: \ear{Emily's editing color.} Emily may also use mostly blac
 
 Advanced technology and computing power has promoted data visualization as a central tool in modern data science (Unwin, 2020).
 Data visualization is defined as the art of drawing graphical charts in order to display data.
-Vanderplas, Cook, \& Hofmann (2020) describe the process of creating a graphic from a dataset through the use of variable mapping, data transformations, coordinate systems, and aesthetic features.
+Figure \ref{fig:graphic-flowchart} illustrates the process of creating a graphic from a dataset through the use of variable mapping, data transformations, coordinate systems, and aesthetic features (Vanderplas, Cook, \& Hofmann, 2020).
 Graphics are useful for data cleaning, exploring data structure, and have been an essential component in communicating information for the last 200 years (Lewandowsky \& Spence, 1989; Unwin, 2020; Vanderplas, Cook, \& Hofmann, 2020)
 During the 20th century, companies began utilizing graphics to understand their mechanics and support business decisions; news sources began displaying graphics of weather forecasts as a means to communicate critical information and aid in decision-making (Vanderplas, Cook, \& Hofmann, 2020).
 Today, we encounter data visualizations everywhere, researchers include graphics to communicate their results in scientific publications and mass media relies on graphics to convey news stories to the public through newspapers, TV, and the Web (Unwin, 2020).
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{images/graphic-flowchart} 
+
+}
+
+\caption{Graphic flowchart}\label{fig:graphic-flowchart}
+\end{figure}
 
 In general, the public holds the self perception that numbers are difficult to understand and that they did not perform well in mathematics during school (Unwin, 2020).
 In contrary, there tends to be a positive self perception when it comes to graphics as they are viewed more as illustrations and not as critical parts of an argument.
@@ -257,9 +266,9 @@ Creators of graphics need an established set of concepts and terminology to buil
 Many efforts have been made to provide guidelines for graphical designs including Wilkinson's Grammar of Graphics (Wilkinson, 2012).
 These guidelines provide the ground work necessary for data plots to be depicted and interpreted as statistics (Buja et al., 2009; Majumder, Hofmann, \& Cook, 2013).
 Vanderplas, Cook, \& Hofmann (2020) define a statistic as, ``a functional mapping of a variable or set of variables.''
-The grammar of graphics constructs visual statistics through the use of ``tidy data,'' characterized as a data set in which each variable is in its own column, each observation is in its own row, and each value is in its own cell (Wickham \& Grolemund, 2016).
+The grammar of graphics constructs visual statistics through the use of ``tidy data,'' characterized as a data set in which each variable is in its own column, each observation is in its own row, and each value is in its own cell (Hadley Wickham \& Grolemund, 2016).
 The grammar allows variables, as designated in columns, to be mapped to different elements of the graphic such as the axes, colors, shapes, or facets.
-Software, such as Hadley Wickham's ggplot2 (Wickham, 2011), aims to implement these guidelines recommended through the grammar of graphics.\\
+Software, such as Hadley Wickham's ggplot2 (Hadley Wickham, 2011), aims to implement these guidelines recommended through the grammar of graphics.\\
 Later, it is illustrated how the structure of ``tidy data'' and the construction of graphics as statistics aid themselves for easy experimentation which allows researchers to compare the effectiveness and understand the perception of different types of charts (Vanderplas, Cook, \& Hofmann, 2020).
 It is important to consider the purpose and motivation behind the generation of the chart as well as the complexity and intended audience you intend to view the chart.
 A general guideline when generating graphics is to keep it familiar in order to not intimidate your audience and to encourage further interaction from the viewers (Unwin, 2020).
@@ -272,7 +281,17 @@ With the support of changes in software defaults, future work must be done in or
 \section{Perception and Psychophysics}\label{perception-and-psychophysics}}
 
 In order to develop guiding principles for generating graphics effective in communication, we must first understand the basic mechanics of the human perceptual system and the biases we are vulnerable to (Goldstein \& Brockmole, 2017).
-The perceptual process is complex and involved \ear{[INSERT CYCLE PICTURE HERE?]}.
+The perceptual process is complex and involved (Figure \ref{fig:perceptual-process}).
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/perceptual-process-goldsein-pg5} 
+
+}
+
+\caption{Perceptual process}\label{fig:perceptual-process}
+\end{figure}
+
 This process is broken down into sensation - involving simple processes that occur right at the beginning of a sensory system - and perception - involving higher-order mechanisms and identified with more complex processes.
 The perceptual process begins when there is a stimulus in the environment and light is reflected and focused back into the viewer's eyes.
 Within the eye, the light reflected is transformed and focused by the eye's optical system and an image is formed on the receptors of the viewer's retina.
@@ -316,20 +335,7 @@ In recent years, there have been advancements in the methodology used to investi
 Some of the new methods, such as the lineup protocol (Buja et al., 2009), utilize the grammar of graphics designation of a data plot as a statistic through the functional mapping of variable(s).
 This allows the data plot to be tested similar to other statistics, by comparing the actual data plot to a set of plots with the absence of any data structure we can test the likelihood of any perceived structure being significant (Vanderplas, Cook, \& Hofmann, 2020).
 While the methodology of these recent experiments differs from earlier studies, the focus is still placed on the initial perception and graph comprehension with a relatively small amount of work conducted to understand the effect of design choices on higher cognitive processes such as learning or analysis (Green \& Fisher, 2009).
-Most recent graphics experiments have utilized tools such as Amazon Turk, Prolific, Reddit, and other crowd sourcing websites to evaluate the psychophysics and patterns associated with design choices (VanderPlas \& Hofmann, 2017).
-
-\begin{itemize}
-\tightlist
-\item
-  informal and formal graphical exploration. informal: changes are made to the graph and the iterative versions are compared to determine what information is easily acceptable formal: an experiment is designed and participants are tested in a controlled manner. Vanderplas, Cook, \& Hofmann (2020)
-\item
-  There are limits to what one can test using direct estimation: it is generally preferable to test only very straightforward assessments of the content of a chart or graph, to fit within a simple experimental paradigm.
-  Some studies of graphs utilize psychophysics methodology to assess data visualizations.
-\item
-  Psychophysics and direct observation studies are limited by the questions that are asked; Vanderplas, Cook, \& Hofmann (2020)
-\item
-  Other methods: Thinking aloud, Eye Tracking, etc. Vanderplas, Cook, \& Hofmann (2020)
-\end{itemize}
+Most recent graphics experiments have utilized tools such as Amazon Turk, Prolific, Reddit, and other crowd sourcing websites to evaluate the psychophysics and patterns associated with design choices (VanderPlas \& Hofmann, 2017). Such studies tend to be limited by the questions asked while other methods such as Thinking aloud and Eye Tracking allow researchers to evaluate the overall perception of the graphic (Vanderplas, Cook, \& Hofmann, 2020).
 
 \hypertarget{logarithmic-scales-and-mapping}{%
 \section{Logarithmic Scales and Mapping}\label{logarithmic-scales-and-mapping}}
@@ -349,19 +355,41 @@ We have recently experienced the benefits and pitfalls of using log scales as CO
 case count data on both the log and linear scale (Burn-Murdoch et al., 2020; Fagen-Ulmschneider, 2020). In spring 2020, during the early stages of the COVID-19 pandemic, there were large magnitude discrepancies in case counts at a given time point between different geographic regions (e.g.~states and provinces as well as countries and continents).
 During this time, we saw the usefulness of log scale transformations showing case count curves for areas with few cases and areas with many cases within one chart.
 As the pandemic evolved, and the case counts were no longer spreading exponentially, graphs with linear scales seemed more effective at spotting early increases in case counts that signaled more localized outbreaks.
-This is only one recent example of a situation in which both log and linear scales are useful for showing different aspects of the same data; there are long histories of using log scales to display results in ecology, psychophysics, engineering, and physics (Heckler, Mikula, \& Rosenblatt, 2013; Menge et al., 2018; Munroe, 2005).
+This is only one recent example of a situation in which both log and linear scales are useful for showing different aspects of the same data; there are long histories of using log scales to display results in ecology, psychophysics, engineering, and physics (Heckler, Mikula, \& Rosenblatt, 2013; Menge et al., 2018). The usefulness of the log scale in science is exemplified in Figure \ref{fig:log-scale-comic} (Munroe, 2005).
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{images/log-scale-comic} 
+
+}
+
+\caption{Log scale comic}\label{fig:log-scale-comic}
+\end{figure}
 
 Research suggests our perception and mapping of numbers to a number line is logarithmic at first, but transitions
 to a linear scale later in development, with formal mathematics education (Dehaene, Izard, Spelke, \& Pica, 2008; Siegler \& Braithwaite, 2017, 2017; Varshney \& Sun, 2013).
+For example, a kindergartner asked to place numbers 1-10 along a number line would place 3 close to the middle, following the logarithmic perspective (Varshney \& Sun, 2013).
 With basic training, members of remote cultures with a basic vocabulary and minimal education understood the concept that numbers can be mapped into a spacial space (Dehaene, Izard, Spelke, \& Pica, 2008). There was a gradual transition from logarithmic to linear scale as the mapping of whole number magnitude representations transitioned from a compressed (approximately lograithmic) distribution to an approximately linear one.
 These results indicate the universal and cultural-dependent characteristics of the sense of number.
+
+This phenomenon was first discovered by Ernst Weber, an early psychophysics researcher, by determining the relationship between the difference threshold (smallest detectable difference between two sensory stimuli; known as the ``Just Noticable Difference'') and the magnitude of a stimulus.
+This holds true for a variety of stimuli such as weight, light, and sound as well as for a range of magnitudes; larger numbers require a proportional larger difference in order to remain equally discriminate (Dehaene, Izard, Spelke, \& Pica, 2008).
+Known as Weber's law, it was established that we do not notice absolute changes in stimuli, but instead that we notice the relative change (Sun, Wang, Goyal, \& Varshney, 2012).
+Numerically, Weber's Law is defined as
+\begin{equation}
+\frac{\Delta S}{S} = K
+\end{equation}
+where \(\Delta S\) represents the difference threshold, S represents the initial stimulus intensity, and K is called Weber's contrast which remains constant as the magnitude of S changes.
+Gustav Fechner, a founder of psychophysics, provided further extension to Weber's law by discovering the relationship between the perceived intensity is logarithmic to the stimulus intensity when observed above a minimal threshold of perception (Sun, Wang, Goyal, \& Varshney, 2012).
+Formally known as the Weber-Fechner law is derived from Weber's law as
+\begin{equation}
+P = K\ln \frac{S}{S_0}
+\end{equation}
+where P represents the perceived stimulus, K represents Weber's contrast, S represents the initial stimulus intensity, and \(S_0\) represents the minimal threshold of perception.
+
 Assuming there is a direct relationship between perceptual and cognitive processes, it is reasonable to assume numerical representations should also be displayed on a nonlinear, compressed number scale. Therefore, if we perceive logarithmically by default, it is a natural (and presumably low effort) way to display information and should be easy to read and understand/use.
 The idea is compression enlarges the coding space, thus increasing the dynamic range of perception and firing neurons within our visual system (Nieder \& Miller, 2003).
-Similar to the training and education required to transition from logrithmic mapping to linear mapping, there is also necessary training required in the assessment of graphical displays associated with logarithmic scales. Haemer \& Kelley (1949) identify semi-logarithmic charts for temporal series as requiring a certain degree of technical training.
-
-\textbf{Weber's law}: the fact that larger numbers require a proportional larger difference in order to remain equally discriminate. Dehaene, Izard, Spelke, \& Pica (2008)
-we do not notice absolute changes in stimuli; we notice relative changes. Sun, Wang, Goyal, \& Varshney (2012)
-Weber--Fechner law. It states that perceived intensity P is logarithmic to the stimulus intensity S (above a minimal threshold of perception S0) Sun, Wang, Goyal, \& Varshney (2012)
+Similar to the training and education required to transition from logarithmic mapping to linear mapping, there is also necessary training required in the assessment of graphical displays associated with logarithmic scales. Haemer \& Kelley (1949) identify semi-logarithmic charts for temporal series as requiring a certain degree of technical training.
 
 \hypertarget{underestimation-of-exponential-growth}{%
 \section{Underestimation of Exponential Growth}\label{underestimation-of-exponential-growth}}
@@ -370,11 +398,13 @@ Early studies explored the estimation and prediction of exponential growth, find
 One way to improve estimation of increasing exponential trends is to provide immediate feedback to participants about the accuracy of their current predictions (Mackinnon \& Wearing, 1991).
 While prior contextual knowledge or experience with exponential growth does not improve estimation, instruction on exponential growth reduces the underestimation: participants adjust their initial starting value but not their perception of growth rate (Jones, 1977; Wagenaar \& Sagaria, 1975).
 Our inability to accurately predict exponential growth might also be addressed by log transforming the data, however, this transformation introduces new complexities; most readers are not mathematically sophisticated enough to intuitively understand logarithmic math and translate that back into real-world effects.
+
 In Menge et al. (2018), ecologists were surveyed to determine how often ecologists encounter log scaled data and how well ecologists understand log scaled data when they see it in the literature.
 Participants were presented two relationships displayed on linear-linear scales, log-log scales with untransformed values, or log--log scales with log transformed values.
 The authors propose three types of misconceptions participants encountered when presented data on log-log scales: `hand-hold fallacy,' `Zeno's zero fallacy,' and `watch out for curves fallacies.'
 These misconceptions are a result of linear extrapolation assuming that a line in log-log space represents a line instead of the power law in linear-linear space.
 The study found that in each of these scenarios, participants were confident in their incorrect responses, indicating incorrect knowledge rather than a lack of knowledge.
+
 The `hand-hold falacy' stems from the misconception that steeper slopes in log-log relationships are steeper slopes in linear-linear space. In fact, it is not only the slope that matters, but also the intercept and the location on the horizontal axis since a line in log-log space represents a power law in linear-linear space (i.e.~linear extraploation).
 Emerging from `Zeno's zero fallacy' is the misconception that positively sloped lines in log-log space can imply a non-zero value of y when x is zero.
 This is never true as positively sloped lines in log-log space actually imply that y = 0 when x = 0. This misconception again is a result of linear extrapolation assuming that a line in log-log space represents a line instead of the power law in linear-linear space.
@@ -382,14 +412,11 @@ The last misconception, `watch out for curves fallacies' encompasses three fault
 Linear extrapolation is again responsible for the first and third faults while the second fault is a result of error in thinking that log-log lines represent power laws (which are exponential relationships), and all exponential relationships curve upward; this is only true when the log-log slope is greater than 1.
 Menge et al. (2018) found that in each of these scenarios, participants were confident in their incorrect responses, indicating incorrect knowledge rather than a lack of knowledge.
 
-\hypertarget{risk-assessment}{%
-\section{Risk Assessment}\label{risk-assessment}}
-
 \hypertarget{research-objectives}{%
 \section{Research Objectives}\label{research-objectives}}
 
 In my research, I conduct three graphical experimental tasks to evaluate the impact our choice of scale (log/linear) has on human perception of exponentially increasing trends.
-The first experiment evaluates whether our ability to perceptually notice differences in exponentially increasing trends is impacted by the choice of scale. I conducted a visual inference experiment in which participants were shown a series of lineup plots (consisting of 19 null panels and 1 target panel) and asked to identify the panel that was most different from the others.
+The first experiment evaluates whether our ability to perceptually notice differences in exponentially increasing trends is impacted by the choice of scale. I conducted a visual inference experiment in which participants were shown a series of lineup plots and asked to identify the panel that was most different from the others.
 The other experimental tasks focus on determining whether there are cognitive disadvantages to log scales: do log scales make it harder to make use of graphical information?
 I conducted a graphical task similar to the New York Times ``You Draw It'' page to test an individual's ability to use and make predictions for exponentially increasing data.
 Participants were asked to draw a line using their computer mouse through the increasing exponential trend shown on both scales.
@@ -402,21 +429,20 @@ The results of the three experimental tasks provide guidelines for readers to ac
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
 
-To lay a foundation for future exploration of the use of log scales, we begin with the most fundamental ability to identify differences in charts; this does not require that participants understand exponential growth, identify log scales, or have any mathematical training. Instead, we are simply testing the change in perceptual sensitivity resulting from visualization choices.
-
-A statistic is a numerical function which summarizes the data; by this definition, graphs are visual statistics.
-To evaluate a graph, we have to run our statistic through a visual evaluation - a person. If two different methods
-of presenting data result in qualitatively different results when evaluated visually, then we can conclude that the visual statistics are signiffcantly different. Recent graphical experiments have utilized statistical lineups to quantify the perception of graphical design choices{[}VanderPlas and Hofmann, 2017, Hofmann et al., 2012, Loy et al., 2016{]}. Statistical lineups provide an elegant way of combining perception and statistical hypothesis testing using graphical experiments {[}Wickham et al., 2010, Majumder et al., 2013, Vanderplas et al., 2020b{]}. `Lineups' are named after the `police lineup' of criminal investigations where witnesses are asked to identify the criminal from a set of
-individuals. Similarly, a statistical lineup is a plot consisting of smaller panels; the viewer is asked to identify the plot of the real data from among a set of decoy null plots. A statistical lineup typically consists of 20 panels - 1 target panel and 19 null panels (Figure 1). If the viewer can identify the target panel embedded within the set of null panels, this suggests that the real data is visually distinct from data generated under the null model. Crowd sourcing websites such as Amazon Mechanical Turk, Reddit, and Prolifc allow us to collect responses from multiple
-viewers. In this paper, we use statistical lineups to test our ability to differentiate between exponentially increasing curves with differing levels of curvature, using linear and log scales.
-
-\begin{itemize}
-\tightlist
-\item
-  Explicit graphical tests, as we have referred to them, are tests where the user is directed to assess a specific feature of a plot or answer a specific question. Vanderplas, Cook, \& Hofmann (2020)
-  implicit graphical test, the user must identify both the purpose and function of the plot and use that information to evaluate the plots as shown. Visual inference (pg 14) problems. Vanderplas, Cook, \& Hofmann (2020)
-  Implicit graphical tests approach the problem of spurious plot relationships at the level of the data, leveraging the human visual system to conduct a suite of visual tests for features such as outliers, clusters, linear and nonlinear relationships. The advantage to implicit testing is that lineups do not require a specification of a feature of interest in the testing framework, Vanderplas, Cook, \& Hofmann (2020)
-\end{itemize}
+Previously, we saw how a data plot can be evaluated and treated as a visual statistic, a numerical function which summarizes the data.
+To evaluate a graph, we have to run our statistic through a visual evaluation - a person.
+If two different methods of presenting data result in qualitatively different results when evaluated visually, then we can conclude that the visual statistics are significantly different.
+Recent graphical experiments have utilized statistical lineups to quantify the perception of graphical design choices
+(Hofmann, Follett, Majumder, \& Cook, 2012; Loy, Follett, \& Hofmann, 2016; Loy, Hofmann, \& Cook, 2017; VanderPlas \& Hofmann, 2017).
+Statistical lineups provide an elegant way of combining perception and statistical hypothesis testing using graphical experiments (Majumder, Hofmann, \& Cook, 2013; Vanderplas, Cook, \& Hofmann, 2020; H. Wickham, Cook, Hofmann, \& Buja, 2010).
+`Lineups' are named after the `police lineup' of criminal investigations where witnesses are asked to identify the criminal from a set of individuals.
+Similarly, a statistical lineup is a plot consisting of smaller panels; the viewer is asked to identify the plot of the real data from among a set of decoy null plots.
+A statistical lineup typically consists of 20 panels - 1 target panel and 19 null panels. Figure
+If the viewer can identify the target panel embedded within the set of null panels, this suggests that the real data is visually distinct from data generated under the null model.
+\ref{fig:lineup-example} provides example's of a statistical lineup's. The lineup plot on the left displays increasing exponential data on a linear scale with panel (2 x 5) + 3 as the target.
+The lineup plot on the right displays increasing exponential data on the log scale with panel 2 x 2 as the
+target.
+Crowd sourcing websites such as Amazon Mechanical Turk, Reddit, and Prolifc allow us to collect responses from multiple viewers.
 
 \begin{figure}
 
@@ -427,6 +453,10 @@ viewers. In this paper, we use statistical lineups to test our ability to differ
 \caption{Lineup example}\label{fig:lineup-example}
 \end{figure}
 
+While explicit graphical tests direct the participant to a specific feature of a plot to answer a specific question, implicit graphical tests require the user to identify both the purpose and function of the plot in order to evaluate the plots shown (Vanderplas, Cook, \& Hofmann, 2020). Implicit graphical tests, such as lineups, have the advantage of simultaneously visually testing for multiple visual features including outliers, clusters, linear and nonlinear relationships. To lay a foundation for future exploration of the use of log scales, we begin with the most fundamental ability to identify differences in charts; this does not require that participants understand exponential growth, identify log scales, or have any mathematical training.
+Instead, we are simply testing the change in perceptual sensitivity resulting from visualization choices.
+The study in this chapter is conducted through visual inference and the use of statistical lineups to differentiate between exponentially increasing curves with differing levels of curvature, using linear and log scales.
+
 \hypertarget{data-generation}{%
 \section{Data Generation}\label{data-generation}}
 
@@ -434,22 +464,20 @@ In this study, both the target and null data sets were generated by simulating d
 In order to guarantee the simulated data spans the same domain and range of values, we implemented a domain constraint of \(x\in [0,20]\) and a range constraint of \(y\in [10,100]\) with \(N = 50\) points randomly assigned throughout the domain and mapped to the y-axis using the exponential model with the selected parameters.
 These constraints provide some assurance that participants who select the target plot are doing so because of their visual perception differentiating between curvature or growth rate rather than different starting or ending values.
 
-We simulated data based on a three-parameter exponential model with multiplicative errors:
-
+Data was simulated based on a three-parameter exponential model with multiplicative errors:
 \begin{align}
 y_i & = \alpha\cdot e^{\beta\cdot x_i + \epsilon_i} + \theta \\
 \text{with } \epsilon_i & \sim N(0, \sigma^2). \nonumber
 \end{align}
-
-\noindent The parameters \(\alpha\) and \(\theta\) are adjusted based on \(\beta\) and \(\sigma^2\) to guarantee the range and domain constraints are met.
+The parameters \(\alpha\) and \(\theta\) are adjusted based on \(\beta\) and \(\sigma^2\) to guarantee the range and domain constraints are met.
 The model generated \(N = 50\) points \((x_i, y_i), i = 1,...,N\) where \(x\) and \(y\) have an increasing exponential relationship.
 The heuristic data generation procedure is described below:
 
-\textit{Algorithm 2.1.1: Paremeter Estimation}
+\noindent \textit{Algorithm 2.1.1: Paremeter Estimation}
 
-Input Parameters: domain \(x\in[0,20]\), range \(y\in[10,100]\), midpoint \(x_{mid}\).
+\noindent \textbf{Input Parameters:} domain \(x\in[0,20]\), range \(y\in[10,100]\), midpoint \(x_{mid}\).
 
-Output: estimated model parameters \(\hat\alpha, \hat\beta, \hat\theta\)
+\noindent \textbf{Output:} estimated model parameters \(\hat\alpha, \hat\beta, \hat\theta\)
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -465,9 +493,9 @@ Output: estimated model parameters \(\hat\alpha, \hat\beta, \hat\theta\)
 
 \noindent\textit{Algorithm 2.1.2: Exponential Simulation}
 
-Input Paremeters: sample size \(N = 50\), estimated parameters \(\hat\alpha\), \(\hat\beta\), and \(\hat\theta\), \(\sigma\) standard deviation from the exponential curve.
+\noindent \textbf{Input Paremeters:} sample size \(N = 50\), estimated parameters \(\hat\alpha\), \(\hat\beta\), and \(\hat\theta\), \(\sigma\) standard deviation from the exponential curve.
 
-Output Parameters: \(N\) points, in the form of vectors \(\mathbf{x}\) and \(\mathbf{y}\).
+\noindent \textbf{Output Parameters:} \(N\) points, in the form of vectors \(\mathbf{x}\) and \(\mathbf{y}\).
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -487,10 +515,12 @@ Output Parameters: \(N\) points, in the form of vectors \(\mathbf{x}\) and \(\ma
 \section{Parameter Selection}\label{parameter-selection}}
 
 For each level of difficulty, we simulated 1000 data sets of \((x_{ij}, y_{ij})\) points for \(i = 1,...,50\) and \(j = 1...10\).
-Each generated \(x_i\) point from \textit{Algorithm 2.1.2} was replicated 10 times. Then the lack of fit statistic (LOF) was computed for each simulated data set by calculating the deviation of the data from a linear line.
+Each generated \(x_i\) point from \textit{Algorithm 2.1.2} was replicated 10 times.
+Then the lack of fit statistic (LOF) was computed for each simulated data set by calculating the deviation of the data from a linear line.
 Plotting the density curves of the LOF statistics for each level of difficulty choice allows us to evaluate the ability of differentiating between the difficulty levels and thus detecting the target plot.
 In Figure \ref{fig:lof-density-curves}, we can see the densities of each of the three difficulty levels.
 While the LOF statistic provides us a numerical value for discriminating between the difficulty levels, we cannot directly relate this to the perceptual discriminability; it serves primarily as an approximation to ensure that we are testing parameters at several distinct levels of difficulty.
+Final parameter estimates are shown in Table \ref{tab:parameter-data}.
 
 \begin{figure}
 
@@ -500,8 +530,6 @@ While the LOF statistic provides us a numerical value for discriminating between
 
 \caption{Lack of fit statistic density curves}\label{fig:lof-density-curves}
 \end{figure}
-
-Final parameter estimates are shown in Table \ref{tab:parameter-data}.
 
 \begin{table}
 
@@ -531,11 +559,13 @@ In addition, there are three parameter combinations which generate homogeneous `
 \hypertarget{study-design}{%
 \section{Study Design}\label{study-design}}
 
-Each participant was shown a total of thirteen lineup plots (twelve test lineup plots and one Rorschach lineup plot). Participants were randomly assigned one of the two replicate data sets for each of the six unique lineup parameter combinations. For each assigned test data set, the participant was shown the lineup plot corresponding to both the linear scale and the log scale. For the additional Rorschach lineup plot, participants were randomly assigned one data set shown on either the linear or the log scale. The order of the thirteen lineup plots shown was randomized for each participant.
+Each participant was shown a total of thirteen lineup plots (twelve test lineup plots and one Rorschach lineup plot). Participants were randomly assigned one of the two replicate data sets for each of the six unique lineup parameter combinations.
+For each assigned test data set, the participant was shown the lineup plot corresponding to both the linear scale and the log scale. For the additional Rorschach lineup plot, participants were randomly assigned one data set shown on either the linear or the log scale.
+The order of the thirteen lineup plots shown was randomized for each participant.
 
 Participants above the age of majority were recruited from Reddit's Visualization and Sample Size communities.
 Since participants recruited on Reddit were not compensated for their time, most participants have an interest in data visualization research.
-Previous literature suggests that prior mathematical knowledge or experience with exponential data is not associated with the outcome of graphical experiments (\textbf{vanderplasSpatialReasoningData2016?}).
+Previous literature suggests that prior mathematical knowledge or experience with exponential data is not associated with the outcome of graphical experiments (VanderPlas \& Hofmann, 2015).
 Participants completed the experiment using a Shiny applet (\url{https://shiny.srvanderplas.com/log-study/}).
 
 Participants were shown a series of lineup plots and asked to identify the plot that was most different from the others.
@@ -545,7 +575,8 @@ The goal of this experimental task is to test an individuals ability to perceptu
 \hypertarget{results}{%
 \section{Results}\label{results}}
 
-Participant recruitment through Reddit occurred over the course of two weeks during which 58 individuals completed 518 unique test lineup evaluations. Previous studies have found that results do not differ on lineup-related tasks between Reddit and e.g.~Amazon Mechanical Turk (VanderPlas \& Hofmann, 2017).
+Participant recruitment through Reddit occurred over the course of two weeks during which 58 individuals completed 518 unique test lineup evaluations.
+Previous studies have found that results do not differ on lineup-related tasks between Reddit and e.g.~Amazon Mechanical Turk (VanderPlas \& Hofmann, 2017).
 Participants who completed fewer than 6 lineup evaluations were removed from the study (17 participants, 41 evaluations).
 The final data set included a total of 41 participants and 477 lineup evaluations.
 Each plot was evaluated by between 18 and 28 individuals (Mean: 21.77, SD: 2.29).
@@ -553,7 +584,40 @@ In 67\% of the 477 lineup evaluations, participants correctly identified the tar
 
 Target plot identification was analyzed using the Glimmix Procedure in SAS 9.4.
 Each lineup plot evaluated was assigned a value based on the participant response (correct = 1, not correct = 0).
-The binary response was analyzed using a generalized linear mixed model following a binomial distribution with a logit link function following a row-column blocking design to account for the variation due to participant and data set respectively. See model details and estimates in \ear{Appendix Reference}.
+Define \(Y_{ijkl}\) to be the event that participant \(l\) correctly identifies the target plot for data set \(k\) with curvature \(j\) plotted on scale \(i\).
+The binary response was analyzed using generalized linear mixed model following a binomial distribution with a logit link function following a row-column blocking design accounting for the variation due to participant and data set respectively as
+\begin{equation}
+\text{logit }P(Y_{ijk}) = \eta + \delta_i + \gamma_j + \delta \gamma_{ij} + s_l + d_k
+\end{equation}
+where
+
+\begin{itemize}
+\item $\eta$ is the beaseline average probability of selecting the target plot
+\item $\delta_i$ is the effect of the log/linear scale
+\item $\gamma_j$ is the effect of the curvature combination
+\item $\delta\gamma_{ij}$is the two-way interaction effect of the scale and curvature
+\item $s_l \sim N(0,\sigma^2_\text{participant})$, random effect for participant characteristics
+\item $d_k \sim N(0,\sigma^2_{\text{data}})$, random effect for data specific characteristics. 
+\end{itemize}
+
+\noindent We assume that random effects for data set and participant are independent.
+
+Type III tests for fixed effects shown in Table \ref{tab:type3-fixed-effects} indicate a significant interaction between the curvature combination and scale. Variance due to participant and data set were estimated to be \(\sigma^2_{\text{participant}} = 2.13\) (s.e. 0.74) and \(\sigma^2_{\text{data}} = 0.92\) (s.e. 0.70).
+
+\begin{table}
+
+\caption{\label{tab:type3-fixed-effects}Type III Tests for Fixed Effects}
+\centering
+\begin{tabular}[t]{cccc}
+\toprule
+Fixed Effect & F & DF & P-value\\
+\midrule
+Curvature & 3.66 & 5 , 419 & 0.003\\
+Scale & 14.89 & 1 , 419 & 0.0001\\
+Curvature x Scale & 6.58 & 5 , 419 & <0.0001\\
+\bottomrule
+\end{tabular}
+\end{table}
 
 On both the log and linear scales, the highest accuracy occurred in lineup plots where the target model and null model had large curvature differences (Easy Null - Hard Target; Hard Null - Easy Target).
 There is a decrease in accuracy on the linear scale when comparing a target plot with less curvature to null plots with more curvature (Easy Null - Medium Target; Medium Null - Hard Target).
@@ -576,7 +640,7 @@ An exception occurs when identifying a plot with curvature embedded in null plot
 \hypertarget{discussion-and-conclusion}{%
 \section{Discussion and Conclusion}\label{discussion-and-conclusion}}
 
-The overall goal of this paper is to provide basic research to support the principles used to guide design decisions in scientific visualizations of exponential data.
+The overall goal of this chapter is to provide basic research to support the principles used to guide design decisions in scientific visualizations of exponential data.
 In this study, we explore the use of linear and log scales to determine whether our ability to notice differences in exponentially increasing trends is impacted by the choice of scale.
 Our results indicated that when there was a large difference in curvature between the target plot and null plots, the choice of scale had no impact and participants accurately differentiated between the two curves on both the linear and log scale.
 However, displaying exponentially increasing data on a log scale improved the accuracy of differentiating between models with slight curvature differences.
@@ -693,11 +757,20 @@ Haemer, K. W., \& Kelley, T. L. (1949). Presentation {Problems}: {Suiting} the {
 \leavevmode\hypertarget{ref-heckler_student_2013}{}%
 Heckler, A. F., Mikula, B., \& Rosenblatt, R. (2013). Student accuracy in reading logarithmic plots: {The} problem and how to fix it. In \emph{2013 {IEEE} {Frontiers} in {Education} {Conference} ({FIE})} (pp. 1066--1071). http://doi.org/\href{https://doi.org/10.1109/FIE.2013.6684990}{10.1109/FIE.2013.6684990}
 
+\leavevmode\hypertarget{ref-hofmann_graphical_2012}{}%
+Hofmann, H., Follett, L., Majumder, M., \& Cook, D. (2012). Graphical {Tests} for {Power} {Comparison} of {Competing} {Designs}. \emph{IEEE Transactions on Visualization and Computer Graphics}, \emph{18}(12), 2441--2448. http://doi.org/\href{https://doi.org/10.1109/TVCG.2012.230}{10.1109/TVCG.2012.230}
+
 \leavevmode\hypertarget{ref-jones_polynomial_1977}{}%
 Jones, G. V. (1977). Polynomial perception of exponential growth. \emph{Perception \& Psychophysics}, \emph{21}(2), 197--198. http://doi.org/\href{https://doi.org/10.3758/BF03198726}{10.3758/BF03198726}
 
 \leavevmode\hypertarget{ref-lewandowsky_perception_1989}{}%
 Lewandowsky, S., \& Spence, I. (1989). The {Perception} of {Statistical} {Graphs}. \emph{Sociological Methods \& Research}, \emph{18}(2-3), 200--242. http://doi.org/\href{https://doi.org/10.1177/0049124189018002002}{10.1177/0049124189018002002}
+
+\leavevmode\hypertarget{ref-loy_variations_2016}{}%
+Loy, A., Follett, L., \& Hofmann, H. (2016). Variations of \emph{q} -- \emph{q} {Plots}: {The} {Power} of {Our} {Eyes}! \emph{The American Statistician}, \emph{70}(2), 202--214. http://doi.org/\href{https://doi.org/10.1080/00031305.2015.1077728}{10.1080/00031305.2015.1077728}
+
+\leavevmode\hypertarget{ref-loy_model_2017}{}%
+Loy, A., Hofmann, H., \& Cook, D. (2017). Model {Choice} and {Diagnostics} for {Linear} {Mixed}-{Effects} {Models} {Using} {Statistics} on {Street} {Corners}. \emph{Journal of Computational and Graphical Statistics}, \emph{26}(3), 478--492. http://doi.org/\href{https://doi.org/10.1080/10618600.2017.1330207}{10.1080/10618600.2017.1330207}
 
 \leavevmode\hypertarget{ref-mackinnon_feedback_1991}{}%
 Mackinnon, A. J., \& Wearing, A. J. (1991). Feedback and the forecasting of exponential change. \emph{Acta Psychologica}, \emph{76}(2), 177--191. http://doi.org/\href{https://doi.org/10.1016/0001-6918(91)90045-2}{10.1016/0001-6918(91)90045-2}
@@ -750,6 +823,9 @@ Uri, G., \& Haemer, K. (1948). Presentation {Problems}: {Graphic} {Representatio
 \leavevmode\hypertarget{ref-vanderplas_testing_2020}{}%
 Vanderplas, S., Cook, D., \& Hofmann, H. (2020). Testing {Statistical} {Charts}: {What} {Makes} a {Good} {Graph}? \emph{Annual Review of Statistics and Its Application}, \emph{7}(1), 61--88. http://doi.org/\href{https://doi.org/10.1146/annurev-statistics-031219-041252}{10.1146/annurev-statistics-031219-041252}
 
+\leavevmode\hypertarget{ref-vanderplas2015spatial}{}%
+VanderPlas, S., \& Hofmann, H. (2015). Spatial reasoning and data displays. \emph{IEEE Transactions on Visualization and Computer Graphics}, \emph{22}(1), 459--468.
+
 \leavevmode\hypertarget{ref-vanderplas_clusters_2017}{}%
 VanderPlas, S., \& Hofmann, H. (2017). Clusters {Beat} {Trend}!? {Testing} {Feature} {Hierarchy} in {Statistical} {Graphics}. \emph{Journal of Computational and Graphical Statistics}, \emph{26}(2), 231--242. http://doi.org/\href{https://doi.org/10.1080/10618600.2016.1209116}{10.1080/10618600.2016.1209116}
 
@@ -760,10 +836,13 @@ Varshney, L. R., \& Sun, J. Z. (2013). Why do we perceive logarithmically? \emph
 Wagenaar, W. A., \& Sagaria, S. D. (1975). Misperception of exponential growth. \emph{Perception \& Psychophysics}, \emph{18}(6), 416--422. http://doi.org/\href{https://doi.org/10.3758/BF03204114}{10.3758/BF03204114}
 
 \leavevmode\hypertarget{ref-wickham2011ggplot2}{}%
-Wickham, H. (2011). ggplot2. \emph{Wiley Interdisciplinary Reviews: Computational Statistics}, \emph{3}(2), 180--185.
+Wickham, Hadley. (2011). ggplot2. \emph{Wiley Interdisciplinary Reviews: Computational Statistics}, \emph{3}(2), 180--185.
+
+\leavevmode\hypertarget{ref-wickham_graphical_2010}{}%
+Wickham, H., Cook, D., Hofmann, H., \& Buja, A. (2010). Graphical inference for infovis. \emph{IEEE Transactions on Visualization and Computer Graphics}, \emph{16}(6), 973--979. http://doi.org/\href{https://doi.org/10.1109/TVCG.2010.161}{10.1109/TVCG.2010.161}
 
 \leavevmode\hypertarget{ref-wickham2016r}{}%
-Wickham, H., \& Grolemund, G. (2016). \emph{R for data science: Import, tidy, transform, visualize, and model data}. " O'Reilly Media, Inc.".
+Wickham, Hadley, \& Grolemund, G. (2016). \emph{R for data science: Import, tidy, transform, visualize, and model data}. " O'Reilly Media, Inc.".
 
 \leavevmode\hypertarget{ref-wilkinson2012grammar}{}%
 Wilkinson, L. (2012). The grammar of graphics. In \emph{Handbook of computational statistics} (pp. 375--414). Springer.
