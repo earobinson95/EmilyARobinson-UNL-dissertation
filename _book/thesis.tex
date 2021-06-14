@@ -453,7 +453,9 @@ Crowd sourcing websites such as Amazon Mechanical Turk, Reddit, and Prolifc allo
 \caption{Lineup example}\label{fig:lineup-example}
 \end{figure}
 
-While explicit graphical tests direct the participant to a specific feature of a plot to answer a specific question, implicit graphical tests require the user to identify both the purpose and function of the plot in order to evaluate the plots shown (Vanderplas, Cook, \& Hofmann, 2020). Implicit graphical tests, such as lineups, have the advantage of simultaneously visually testing for multiple visual features including outliers, clusters, linear and nonlinear relationships. To lay a foundation for future exploration of the use of log scales, we begin with the most fundamental ability to identify differences in charts; this does not require that participants understand exponential growth, identify log scales, or have any mathematical training.
+While explicit graphical tests direct the participant to a specific feature of a plot to answer a specific question, implicit graphical tests require the user to identify both the purpose and function of the plot in order to evaluate the plots shown (Vanderplas, Cook, \& Hofmann, 2020).
+Implicit graphical tests, such as lineups, have the advantage of simultaneously visually testing for multiple visual features including outliers, clusters, linear and nonlinear relationships.
+To lay a foundation for future exploration of the use of log scales, we begin with the most fundamental ability to identify differences in charts; this does not require that participants understand exponential growth, identify log scales, or have any mathematical training.
 Instead, we are simply testing the change in perceptual sensitivity resulting from visualization choices.
 The study in this chapter is conducted through visual inference and the use of statistical lineups to differentiate between exponentially increasing curves with differing levels of curvature, using linear and log scales.
 
@@ -582,7 +584,7 @@ The final data set included a total of 41 participants and 477 lineup evaluation
 Each plot was evaluated by between 18 and 28 individuals (Mean: 21.77, SD: 2.29).
 In 67\% of the 477 lineup evaluations, participants correctly identified the target panel.
 
-Target plot identification was analyzed using the Glimmix Procedure in SAS 9.4.
+Target plot identification was analyzed using the lme4 R package and glmer function (Bates, Mächler, Bolker, \& Walker, 2015). Estimates and odds ratio comparisons were calculated using the emmeans R package (Lenth, 2021).
 Each lineup plot evaluated was assigned a value based on the participant response (correct = 1, not correct = 0).
 Define \(Y_{ijkl}\) to be the event that participant \(l\) correctly identifies the target plot for data set \(k\) with curvature \(j\) plotted on scale \(i\).
 The binary response was analyzed using generalized linear mixed model following a binomial distribution with a logit link function following a row-column blocking design accounting for the variation due to participant and data set respectively as
@@ -592,29 +594,29 @@ The binary response was analyzed using generalized linear mixed model following 
 where
 
 \begin{itemize}
-\item $\eta$ is the beaseline average probability of selecting the target plot
+\item $\eta$ is the baseline average probability of selecting the target plot
 \item $\delta_i$ is the effect of the log/linear scale
 \item $\gamma_j$ is the effect of the curvature combination
-\item $\delta\gamma_{ij}$is the two-way interaction effect of the scale and curvature
+\item $\delta\gamma_{ij}$ is the two-way interaction effect of the scale and curvature
 \item $s_l \sim N(0,\sigma^2_\text{participant})$, random effect for participant characteristics
 \item $d_k \sim N(0,\sigma^2_{\text{data}})$, random effect for data specific characteristics. 
 \end{itemize}
 
 \noindent We assume that random effects for data set and participant are independent.
 
-Type III tests for fixed effects shown in Table \ref{tab:type3-fixed-effects} indicate a significant interaction between the curvature combination and scale. Variance due to participant and data set were estimated to be \(\sigma^2_{\text{participant}} = 2.13\) (s.e. 0.74) and \(\sigma^2_{\text{data}} = 0.92\) (s.e. 0.70).
+The analysis of variance table shown in Table \ref{tab:lineup-anova-table} indicate a significant interaction between the curvature combination and scale. Variance due to participant and data set were estimated to be \(\sigma^2_{\text{participant}} = 2.79\) (s.e. 1.67) and \(\sigma^2_{\text{data}} = 0.44\) (s.e. 0.66) respectively.
 
 \begin{table}
 
-\caption{\label{tab:type3-fixed-effects}Type III Tests for Fixed Effects}
+\caption{\label{tab:lineup-anova-table}Lineup ANOVA table for fixed effects.}
 \centering
 \begin{tabular}[t]{cccc}
 \toprule
-Fixed Effect & F & DF & P-value\\
+Effect & Chisq & Df & Pr..Chisq.\\
 \midrule
-Curvature & 3.66 & 5 , 419 & 0.003\\
-Scale & 14.89 & 1 , 419 & 0.0001\\
-Curvature x Scale & 6.58 & 5 , 419 & <0.0001\\
+Curvature & 19.96 & 5 & 0.00127\\
+Scale & 14.43 & 1 & 0.00015\\
+Curvature x Scale & 33.65 & 5 & <0.0001\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -700,6 +702,9 @@ What remains to be seen is whether there are cognitive disadvantages to log scal
 \leavevmode\hypertarget{ref-amer2005bias}{}%
 Amer, T. (2005). Bias due to visual illusion in the graphical presentation of accounting information. \emph{Journal of Information Systems}, \emph{19}(1), 1--18.
 
+\leavevmode\hypertarget{ref-lme4}{}%
+Bates, D., Mächler, M., Bolker, B., \& Walker, S. (2015). Fitting linear mixed-effects models using {lme4}. \emph{Journal of Statistical Software}, \emph{67}(1), 1--48. http://doi.org/\href{https://doi.org/10.18637/jss.v067.i01}{10.18637/jss.v067.i01}
+
 \leavevmode\hypertarget{ref-bavel_using_2020}{}%
 Bavel, J. J. V., Baicker, K., Boggio, P. S., Capraro, V., Cichocka, A., Cikara, M., \ldots{} Willer, R. (2020). Using social and behavioural science to support {COVID}-19 pandemic response. \emph{Nature Human Behaviour}, \emph{4}(5), 460--471. http://doi.org/\href{https://doi.org/10.1038/s41562-020-0884-z}{10.1038/s41562-020-0884-z}
 
@@ -762,6 +767,9 @@ Hofmann, H., Follett, L., Majumder, M., \& Cook, D. (2012). Graphical {Tests} fo
 
 \leavevmode\hypertarget{ref-jones_polynomial_1977}{}%
 Jones, G. V. (1977). Polynomial perception of exponential growth. \emph{Perception \& Psychophysics}, \emph{21}(2), 197--198. http://doi.org/\href{https://doi.org/10.3758/BF03198726}{10.3758/BF03198726}
+
+\leavevmode\hypertarget{ref-emmeans}{}%
+Lenth, R. V. (2021). \emph{Emmeans: Estimated marginal means, aka least-squares means}. Retrieved from \url{https://CRAN.R-project.org/package=emmeans}
 
 \leavevmode\hypertarget{ref-lewandowsky_perception_1989}{}%
 Lewandowsky, S., \& Spence, I. (1989). The {Perception} of {Statistical} {Graphs}. \emph{Sociological Methods \& Research}, \emph{18}(2-3), 200--242. http://doi.org/\href{https://doi.org/10.1177/0049124189018002002}{10.1177/0049124189018002002}

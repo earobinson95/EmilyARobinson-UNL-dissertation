@@ -177,7 +177,9 @@ Crowd sourcing websites such as Amazon Mechanical Turk, Reddit, and Prolifc allo
 Figure 2.1: Lineup example
 </p>
 </div>
-<p>While explicit graphical tests direct the participant to a specific feature of a plot to answer a specific question, implicit graphical tests require the user to identify both the purpose and function of the plot in order to evaluate the plots shown <span class="citation">(Vanderplas, Cook, &amp; Hofmann, 2020)</span>. Implicit graphical tests, such as lineups, have the advantage of simultaneously visually testing for multiple visual features including outliers, clusters, linear and nonlinear relationships. To lay a foundation for future exploration of the use of log scales, we begin with the most fundamental ability to identify differences in charts; this does not require that participants understand exponential growth, identify log scales, or have any mathematical training.
+<p>While explicit graphical tests direct the participant to a specific feature of a plot to answer a specific question, implicit graphical tests require the user to identify both the purpose and function of the plot in order to evaluate the plots shown <span class="citation">(Vanderplas, Cook, &amp; Hofmann, 2020)</span>.
+Implicit graphical tests, such as lineups, have the advantage of simultaneously visually testing for multiple visual features including outliers, clusters, linear and nonlinear relationships.
+To lay a foundation for future exploration of the use of log scales, we begin with the most fundamental ability to identify differences in charts; this does not require that participants understand exponential growth, identify log scales, or have any mathematical training.
 Instead, we are simply testing the change in perceptual sensitivity resulting from visualization choices.
 The study in this chapter is conducted through visual inference and the use of statistical lineups to differentiate between exponentially increasing curves with differing levels of curvature, using linear and log scales.</p>
 </div>
@@ -260,7 +262,7 @@ Participants who completed fewer than 6 lineup evaluations were removed from the
 The final data set included a total of 41 participants and 477 lineup evaluations.
 Each plot was evaluated by between 18 and 28 individuals (Mean: 21.77, SD: 2.29).
 In 67% of the 477 lineup evaluations, participants correctly identified the target panel.</p>
-Target plot identification was analyzed using the Glimmix Procedure in SAS 9.4.
+Target plot identification was analyzed using the lme4 R package and glmer function <span class="citation">(Bates, Mächler, Bolker, &amp; Walker, 2015)</span>. Estimates and odds ratio comparisons were calculated using the emmeans R package <span class="citation">(Lenth, 2021)</span>.
 Each lineup plot evaluated was assigned a value based on the participant response (correct = 1, not correct = 0).
 Define <span class="math inline">\(Y_{ijkl}\)</span> to be the event that participant <span class="math inline">\(l\)</span> correctly identifies the target plot for data set <span class="math inline">\(k\)</span> with curvature <span class="math inline">\(j\)</span> plotted on scale <span class="math inline">\(i\)</span>.
 The binary response was analyzed using generalized linear mixed model following a binomial distribution with a logit link function following a row-column blocking design accounting for the variation due to participant and data set respectively as
@@ -269,7 +271,7 @@ The binary response was analyzed using generalized linear mixed model following 
 \end{equation}\]</span>
 where
 <p>We assume that random effects for data set and participant are independent.</p>
-<p>Type III tests for fixed effects shown in Table  indicate a significant interaction between the curvature combination and scale. Variance due to participant and data set were estimated to be <span class="math inline">\(\sigma^2_{\text{participant}} = 2.13\)</span> (s.e. 0.74) and <span class="math inline">\(\sigma^2_{\text{data}} = 0.92\)</span> (s.e. 0.70).</p>
+<p>The analysis of variance table shown in Table  indicate a significant interaction between the curvature combination and scale. Variance due to participant and data set were estimated to be <span class="math inline">\(\sigma^2_{\text{participant}} = 2.79\)</span> (s.e. 1.67) and <span class="math inline">\(\sigma^2_{\text{data}} = 0.44\)</span> (s.e. 0.66) respectively.</p>
 <p>On both the log and linear scales, the highest accuracy occurred in lineup plots where the target model and null model had large curvature differences (Easy Null - Hard Target; Hard Null - Easy Target).
 <!-- When comparing models that have slight curvature differences \er{(e.g. Medium Null - Hard Target, Medium Null - Easy Target, Easy Null - Medium Target)}, there is a sacrifice in accuracy when displayed on the linear scale.  -->
 There is a decrease in accuracy on the linear scale when comparing a target plot with less curvature to null plots with more curvature (Easy Null - Medium Target; Medium Null - Hard Target).
