@@ -233,7 +233,7 @@ Editing text colors: \ear{Emily's editing color.} Emily may also use mostly blac
 
 Advanced technology and computing power has promoted data visualization as a central tool in modern data science (Unwin, 2020).
 Data visualization is defined as the art of drawing graphical charts in order to display data.
-Figure \ref{fig:graphic-flowchart} illustrates the process of creating a graphic from a dataset through the use of variable mapping, data transformations, coordinate systems, and aesthetic features (Vanderplas, Cook, \& Hofmann, 2020).
+\cref{fig:graphic-flowchart} illustrates the process of creating a graphic from a dataset through the use of variable mapping, data transformations, coordinate systems, and aesthetic features (Vanderplas, Cook, \& Hofmann, 2020).
 Graphics are useful for data cleaning, exploring data structure, and have been an essential component in communicating information for the last 200 years (Lewandowsky \& Spence, 1989; Unwin, 2020; Vanderplas, Cook, \& Hofmann, 2020)
 During the 20th century, companies began utilizing graphics to understand their mechanics and support business decisions; news sources began displaying graphics of weather forecasts as a means to communicate critical information and aid in decision-making (Vanderplas, Cook, \& Hofmann, 2020).
 Today, we encounter data visualizations everywhere, researchers include graphics to communicate their results in scientific publications and mass media relies on graphics to convey news stories to the public through newspapers, TV, and the Web (Unwin, 2020).
@@ -281,7 +281,7 @@ With the support of changes in software defaults, future work must be done in or
 \section{Perception and Psychophysics}\label{perception-and-psychophysics}}
 
 In order to develop guiding principles for generating graphics effective in communication, we must first understand the basic mechanics of the human perceptual system and the biases we are vulnerable to (Goldstein \& Brockmole, 2017).
-The perceptual process is complex and involved (Figure \ref{fig:perceptual-process}).
+The perceptual process is complex and involved \pcref{fig:perceptual-process}.
 
 \begin{figure}
 
@@ -355,7 +355,7 @@ We have recently experienced the benefits and pitfalls of using log scales as CO
 case count data on both the log and linear scale (Burn-Murdoch et al., 2020; Fagen-Ulmschneider, 2020). In spring 2020, during the early stages of the COVID-19 pandemic, there were large magnitude discrepancies in case counts at a given time point between different geographic regions (e.g.~states and provinces as well as countries and continents).
 During this time, we saw the usefulness of log scale transformations showing case count curves for areas with few cases and areas with many cases within one chart.
 As the pandemic evolved, and the case counts were no longer spreading exponentially, graphs with linear scales seemed more effective at spotting early increases in case counts that signaled more localized outbreaks.
-This is only one recent example of a situation in which both log and linear scales are useful for showing different aspects of the same data; there are long histories of using log scales to display results in ecology, psychophysics, engineering, and physics (Heckler, Mikula, \& Rosenblatt, 2013; Menge et al., 2018). The usefulness of the log scale in science is exemplified in Figure \ref{fig:log-scale-comic} (Munroe, 2005).
+This is only one recent example of a situation in which both log and linear scales are useful for showing different aspects of the same data; there are long histories of using log scales to display results in ecology, psychophysics, engineering, and physics (Heckler, Mikula, \& Rosenblatt, 2013; Menge et al., 2018). The usefulness of the log scale in science is exemplified in \cref{fig:log-scale-comic} (Munroe, 2005).
 
 \begin{figure}
 
@@ -439,7 +439,7 @@ Statistical lineups provide an elegant way of combining perception and statistic
 Similarly, a statistical lineup is a plot consisting of smaller panels; the viewer is asked to identify the plot of the real data from among a set of decoy null plots.
 A statistical lineup typically consists of 20 panels - 1 target panel and 19 null panels. Figure
 If the viewer can identify the target panel embedded within the set of null panels, this suggests that the real data is visually distinct from data generated under the null model.
-\ref{fig:lineup-example} provides example's of a statistical lineup's. The lineup plot on the left displays increasing exponential data on a linear scale with panel (2 x 5) + 3 as the target.
+\cref{fig:lineup-example} provides example's of a statistical lineup's. The lineup plot on the left displays increasing exponential data on a linear scale with panel (2 x 5) + 3 as the target.
 The lineup plot on the right displays increasing exponential data on the log scale with panel 2 x 2 as the
 target.
 Crowd sourcing websites such as Amazon Mechanical Turk, Reddit, and Prolifc allow us to collect responses from multiple viewers.
@@ -520,9 +520,9 @@ For each level of difficulty, we simulated 1000 data sets of \((x_{ij}, y_{ij})\
 Each generated \(x_i\) point from \textit{Algorithm 2.1.2} was replicated 10 times.
 Then the lack of fit statistic (LOF) was computed for each simulated data set by calculating the deviation of the data from a linear line.
 Plotting the density curves of the LOF statistics for each level of difficulty choice allows us to evaluate the ability of differentiating between the difficulty levels and thus detecting the target plot.
-In Figure \ref{fig:lof-density-curves}, we can see the densities of each of the three difficulty levels.
+In \cref{fig:lof-density-curves}, we can see the densities of each of the three difficulty levels.
 While the LOF statistic provides us a numerical value for discriminating between the difficulty levels, we cannot directly relate this to the perceptual discriminability; it serves primarily as an approximation to ensure that we are testing parameters at several distinct levels of difficulty.
-Final parameter estimates are shown in Table \ref{tab:parameter-data}.
+Final parameter estimates are shown in \cref{tab:parameter-data}.
 
 \begin{figure}
 
@@ -604,7 +604,7 @@ where
 
 \noindent We assume that random effects for data set and participant are independent.
 
-The analysis of variance table shown in Table \ref{tab:lineup-anova-table} indicate a significant interaction between the curvature combination and scale. Variance due to participant and data set were estimated to be \(\sigma^2_{\text{participant}} = 2.79\) (s.e. 1.67) and \(\sigma^2_{\text{data}} = 0.44\) (s.e. 0.66) respectively.
+The analysis of variance table shown in \cref{tab:lineup-anova-table} indicate a significant interaction between the curvature combination and scale. Variance due to participant and data set were estimated to be \(\sigma^2_{\text{participant}} = 2.79\) (s.e. 1.67) and \(\sigma^2_{\text{data}} = 0.44\) (s.e. 0.66) respectively.
 
 \begin{table}
 
@@ -625,7 +625,7 @@ On both the log and linear scales, the highest accuracy occurred in lineup plots
 There is a decrease in accuracy on the linear scale when comparing a target plot with less curvature to null plots with more curvature (Easy Null - Medium Target; Medium Null - Hard Target).
 Best, Smith, \& Stubbs (2007) found that accuracy of identifying the correct curve type was higher when nonlinear trends were presented indicating that it is hard to say something is linear (i.e.~something has less curvature), but easy to say that it is not linear; our results concur with this observation.
 Overall, there are no significant differences in accuracy between curvature combinations when data is presented on a log scale indicating participants were consistent in their success of identifying the target panel on the log scale.
-Figure \ref{fig:odds-ratio-plot} displays the estimated (log) odds ratio of successfully identifying the target panel on the log scale compared to the linear scale.
+\cref{fig:odds-ratio-plot} displays the estimated (log) odds ratio of successfully identifying the target panel on the log scale compared to the linear scale.
 The choice of scale has no impact if curvature differences are large (Hard Null - Easy Target; Easy Null - Hard Target).
 However, presenting data on the log scale makes us more sensitive to slight changes in curvature (Medium Null - Easy Target; Medium Null - Hard Target; Easy Null - Medium Target).
 An exception occurs when identifying a plot with curvature embedded in null plots close to a linear trend (Hard Null - Medium Target), again supporting the claim that it is easy to identify a curve in a bunch of lines but much harder to identify a line in a bunch of curves (Best, Smith, \& Stubbs, 2007).
@@ -661,6 +661,304 @@ What remains to be seen is whether there are cognitive disadvantages to log scal
 \item
   advocate smoothing of scatterplots to assist in detecting the shape of the point cloud in situations where the error in the data is substantial, or where the density of points changes along the abscissa Cleveland \& McGill (1984)
 \end{itemize}
+
+\hypertarget{past-methodology}{%
+\subsection{Past Methodology}\label{past-methodology}}
+
+\begin{itemize}
+\tightlist
+\item
+  Finney (1951)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Big Idea: Determine the effect of stopping iterative maximum likelihood calculations after one iteration.
+  \item
+    Metod: Judge by eye the positions for a pair of parallel probit regression lines in a biological assay. Sent out by mail, asked to ``rule two lines.''
+  \item
+    Sample: 21 scientists
+  \item
+    Findings: One cycle of iterations was sufficient
+  \end{itemize}
+\item
+  Mosteller, Siegel, Trapido, \& Youtz (1981)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Big Idea: Sutdents fitted lines by eye to four sets of points.
+  \item
+    Method: 8.5 x 11 inche transparency with a straight line etched completely across the middle
+  \item
+    Sample: 153 graduate students and post docs in Introductory Biostatistics
+  \item
+    Experimental Deisgn: Latin square with packets stapeled in four different orders.
+  \item
+    Findings: Students tended to fit the slope of the first principal component.
+  \end{itemize}
+\item
+  NYT You Draw It (Aisch, Cox, \& Quealy, 2015; Buchanan, Park, \& Pearce, 2017; Katz, 2017)
+\end{itemize}
+
+\hypertarget{data-driven-documents}{%
+\subsection{Data Driven Documents}\label{data-driven-documents}}
+
+\begin{itemize}
+\tightlist
+\item
+  Data Driven Documents (D3) created by Mike Bostock while working on graphics at the New York Times
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Open-source JavaScript-based graphing framework
+  \item
+    ggplot2 is to R as D3.js is to JavaScript
+  \item
+    Allows binding objects and layers to plotting area
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Scalable Vector Graphics (SVG)
+
+      \begin{itemize}
+      \tightlist
+      \item
+        Scaling of vector graphics preserves the shapes rather than the pixels
+      \item
+        Extemsible Markup Language-based (XML) (Human readable + machine readable; Interactivity + animation supported)
+      \item
+        JavaScript for scripting, CSS for styling
+      \end{itemize}
+    \end{itemize}
+  \item
+    Movement and user interaction (Hovering = highlighting, clicking = turning elements on/off, brushing, linking, etc.)
+  \item
+    Highly customizable
+  \item
+    Styling (pair with CSS)
+  \item
+    Tons of visualization formats!
+  \item
+    Can integrate multiple plots together \& transitions (``scrollytelling'')
+  \item
+    Used by NYT, FiveThirtyEight, Washington Post, Pew Research Center
+  \end{itemize}
+\item
+  Luraschi \& Allaire (2018)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    integrates D3 visual into existing formats in R
+  \item
+    RMarkdown with HTML output or Shiny applications (SUPER POWERFUL)
+  \item
+    easy to do data processing in R then apply D3.js code to visualize that data.
+  \item
+    \textbf{How it works}:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Converts data in R to JSON that can be interpreted by JavaScript
+
+      \begin{itemize}
+      \tightlist
+      \item
+        Object is named `data'
+      \item
+        Columns can be accessed
+      \end{itemize}
+    \item
+      Sources D3 code library
+
+      \begin{itemize}
+      \tightlist
+      \item
+        Grabs version specified in function
+      \end{itemize}
+    \item
+      Creates plot container (svg is default)
+
+      \begin{itemize}
+      \tightlist
+      \item
+        Or different container if specified
+      \item
+        specifies width and height of plot container
+      \end{itemize}
+    \item
+      Renders plot object using JavaScript and CSS files called in r2d3 call
+    \end{itemize}
+  \end{itemize}
+\item
+  Grammar of D3
+
+  \begin{itemize}
+  \tightlist
+  \item
+    elements (attributes + styles)
+  \item
+    scales (not automatically assigned in D3 like they are in ggplot2)
+  \item
+    New! (animations - transitions, enters, exits; interactions - mouseover/mouseleave)
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{interactive-plot-development}{%
+\section{Interactive Plot Development}\label{interactive-plot-development}}
+
+\hypertarget{data-simulation}{%
+\subsection{Data Simulation}\label{data-simulation}}
+
+\noindent *Algorithm 3.1: Exponential Data Generation*
+
+\textbf{In parameters:} \texttt{beta,\ sd,\ points\_choice\ =\ "partial",\ points\_end\_scale,\ N\ =\ 30,\ xmin\ =\ 20,\ xmax\ =\ 20,\ xby\ =\ 0.25}
+
+\textbf{Out:} data list of point data and line data
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Randomly select and jitter N = 30 x-values along the domain.
+\item
+  Generate ``good'' errors based on N(0,sd).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Set constraint of the mean of the first N/3 = 10 errors less than \textbar2*sd\textbar{}
+  \end{itemize}
+\item
+  Simulate point data based on
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{y\ =\ exp(x*beta\ +\ errorVals)}
+  \end{itemize}
+\item
+  Obtain starting value for beta
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{lm(log(y)\ \textasciitilde{}\ x,\ data\ =\ point\_data)}
+  \end{itemize}
+\item
+  Use NLS to fit a better line to the point data
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{nls(y\ \textasciitilde{}\ exp(x*beta),\ data\ =\ point\_data,\ ...)}
+  \end{itemize}
+\item
+  Simulate nonlinear least squares line data
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{y\ =\ exp(x*betahat)}
+  \end{itemize}
+\item
+  Output data list of point data and line data
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Specific r2d3 options:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    aspect ratio = 1
+  \item
+    \textbf{linear =}
+  \item
+    free\_draw = FALSE
+  \item
+    points = ``partial,''
+  \item
+    x\_by = 0.25
+  \item
+    draw\_start\_scale = 0.5 (start drawing at x = 10)
+  \item
+    show\_finished = T - graphics group / F
+  \item
+    x\_range = c(0,20)
+  \item
+    y\_range = range(y-points)*c(0.5, 2)
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{parameter-selection-1}{%
+\subsection{Parameter Selection}\label{parameter-selection-1}}
+
+\begin{itemize}
+\item
+  Visit \href{https://emily-robinson.shinyapps.io/you-draw-it-parameter-selection/}{You Draw It Development - parameter selection} for examples.
+\item
+  Exponential (Linear/Log): 2 x 2 x 2 Factorial
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Beta: 0.1 (sd. 0.09); 0.23 (0.25)
+  \item
+    Points End: 0.5; 0.75
+  \item
+    Scale: Linear; Log
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{data-driven-document-setup}{%
+\subsection{Data Driven Document Setup}\label{data-driven-document-setup}}
+
+\cref{fig:r2d3-shiny-flowchart}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{images/r2d3+shiny-inkscape} 
+
+}
+
+\caption{Interactive plot development}\label{fig:r2d3-shiny-flowchart}
+\end{figure}
+
+\hypertarget{study-design-1}{%
+\section{Study Design}\label{study-design-1}}
+
+\begin{itemize}
+\tightlist
+\item
+  8 data sets were generated for each individual upon start of experiment (4 Linear + 4 Exponential)
+\item
+  12 you draw it task plots were shown to each individual (4 Linear + (4 Exponential x 2 Scales))
+\item
+  The order of each of the 12 plots was randomly assigned for each individual in a CRD.
+\end{itemize}
+
+\hypertarget{results-1}{%
+\section{Results}\label{results-1}}
+
+\begin{itemize}
+\tightlist
+\item
+  Twitter/Reddit/Direct Email Pilot Study (05/03/2021): \href{https://srvanderplas.github.io/Perception-of-Log-Scales/you-draw-it-development/you-draw-it-pilot-app/analyses/you-draw-it-exponential-prediction-pilot.html}{Exponential Prediction}
+\item
+  \url{https://shiny.srvanderplas.com/you-draw-it/}
+\item
+  Twitter/Reddit/Direct Email Pilot Study (05/03/2021): \href{https://srvanderplas.github.io/Perception-of-Log-Scales/you-draw-it-development/you-draw-it-pilot-app/analyses/you-draw-it-exponential-prediction-pilot.html}{Exponential Prediction}
+\end{itemize}
+
+\hypertarget{discussion-and-conclusion-1}{%
+\section{Discussion and Conclusion}\label{discussion-and-conclusion-1}}
 
 \hypertarget{estimation}{%
 \chapter{Numerical Translation and Estimation}\label{estimation}}
@@ -699,6 +997,9 @@ What remains to be seen is whether there are cognitive disadvantages to log scal
 
 \hypertarget{refs}{}
 \begin{CSLReferences}{1}{0}
+\leavevmode\hypertarget{ref-aisch_cox_quealy_2015}{}%
+Aisch, G., Cox, A., \& Quealy, K. (2015, May). You draw it: How family income predicts children's college chances. \emph{The New York Times}. The New York Times. Retrieved from \url{https://www.nytimes.com/interactive/2015/05/28/upshot/you-draw-it-how-family-income-affects-childrens-college-chances.html}
+
 \leavevmode\hypertarget{ref-amer2005bias}{}%
 Amer, T. (2005). Bias due to visual illusion in the graphical presentation of accounting information. \emph{Journal of Information Systems}, \emph{19}(1), 1--18.
 
@@ -713,6 +1014,9 @@ Best, L. A., Smith, L. D., \& Stubbs, D. A. (2007). Perception of {Linear} and {
 
 \leavevmode\hypertarget{ref-broersma1985graphical}{}%
 Broersma, H., \& Molenaar, I. (1985). Graphical perception of distributional aspects of data. \emph{Computational Statistics Quarterly}, \emph{2}(1), 53--72.
+
+\leavevmode\hypertarget{ref-buchanan_park_pearce_2017}{}%
+Buchanan, L., Park, H., \& Pearce, A. (2017, January). You draw it: What got better or worse during obama's presidency. \emph{The New York Times}. The New York Times. Retrieved from \url{https://www.nytimes.com/interactive/2017/01/15/us/politics/you-draw-obama-legacy.html}
 
 \leavevmode\hypertarget{ref-buja_statistical_2009}{}%
 Buja, A., Cook, D., Hofmann, H., Lawrence, M., Lee, E.-K., Swayne, D. F., \& Wickham, H. (2009). Statistical inference for exploratory data analysis and model diagnostics. \emph{Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences}, \emph{367}(1906), 4361--4383. http://doi.org/\href{https://doi.org/10.1098/rsta.2009.0120}{10.1098/rsta.2009.0120}
@@ -744,6 +1048,9 @@ Eells, W. C. (1926). The relative merits of circles and bars for representing co
 \leavevmode\hypertarget{ref-fagen-ulmschneider_2020}{}%
 Fagen-Ulmschneider, W. (2020). 91-DIVOC. \emph{An interactive visualization of COVID-19}. University of Illinois. Retrieved from \url{https://91-divoc.com/pages/covid-visualization/}
 
+\leavevmode\hypertarget{ref-finney_subjective_1951}{}%
+Finney, D. J. (1951). Subjective {Judgment} in {Statistical} {Analysis}: {An} {Experimental} {Study}. \emph{Journal of the Royal Statistical Society. Series B (Methodological)}, \emph{13}(2), 284--297. Retrieved from \url{https://www.jstor.org/stable/2984070}
+
 \leavevmode\hypertarget{ref-gmbh_youve_2020}{}%
 GmbH, D. (2020, July). You've informed the public with visualizations about the coronavirus. {Thank} you. \emph{Chartable}. Retrieved from \url{https://blog.datawrapper.de/datawrapper-effect-corona/index.html}
 
@@ -768,6 +1075,9 @@ Hofmann, H., Follett, L., Majumder, M., \& Cook, D. (2012). Graphical {Tests} fo
 \leavevmode\hypertarget{ref-jones_polynomial_1977}{}%
 Jones, G. V. (1977). Polynomial perception of exponential growth. \emph{Perception \& Psychophysics}, \emph{21}(2), 197--198. http://doi.org/\href{https://doi.org/10.3758/BF03198726}{10.3758/BF03198726}
 
+\leavevmode\hypertarget{ref-katz_2017}{}%
+Katz, J. (2017, April). You draw it: Just how bad is the drug overdose epidemic? \emph{The New York Times}. The New York Times. Retrieved from \url{https://www.nytimes.com/interactive/2017/04/14/upshot/drug-overdose-epidemic-you-draw-it.html}
+
 \leavevmode\hypertarget{ref-emmeans}{}%
 Lenth, R. V. (2021). \emph{Emmeans: Estimated marginal means, aka least-squares means}. Retrieved from \url{https://CRAN.R-project.org/package=emmeans}
 
@@ -780,6 +1090,9 @@ Loy, A., Follett, L., \& Hofmann, H. (2016). Variations of \emph{q} -- \emph{q} 
 \leavevmode\hypertarget{ref-loy_model_2017}{}%
 Loy, A., Hofmann, H., \& Cook, D. (2017). Model {Choice} and {Diagnostics} for {Linear} {Mixed}-{Effects} {Models} {Using} {Statistics} on {Street} {Corners}. \emph{Journal of Computational and Graphical Statistics}, \emph{26}(3), 478--492. http://doi.org/\href{https://doi.org/10.1080/10618600.2017.1330207}{10.1080/10618600.2017.1330207}
 
+\leavevmode\hypertarget{ref-r2d3}{}%
+Luraschi, J., \& Allaire, J. (2018). \emph{r2d3: Interface to 'D3' visualizations}. Retrieved from \url{https://CRAN.R-project.org/package=r2d3}
+
 \leavevmode\hypertarget{ref-mackinnon_feedback_1991}{}%
 Mackinnon, A. J., \& Wearing, A. J. (1991). Feedback and the forecasting of exponential change. \emph{Acta Psychologica}, \emph{76}(2), 177--191. http://doi.org/\href{https://doi.org/10.1016/0001-6918(91)90045-2}{10.1016/0001-6918(91)90045-2}
 
@@ -788,6 +1101,9 @@ Majumder, M., Hofmann, H., \& Cook, D. (2013). Validation of {Visual} {Statistic
 
 \leavevmode\hypertarget{ref-menge_logarithmic_2018}{}%
 Menge, D. N. L., MacPherson, A. C., Bytnerowicz, T. A., Quebbeman, A. W., Schwartz, N. B., Taylor, B. N., \& Wolf, A. A. (2018). Logarithmic scales in ecological data presentation may cause misinterpretation. \emph{Nature Ecology \& Evolution}, \emph{2}(9), 1393--1402. http://doi.org/\href{https://doi.org/10.1038/s41559-018-0610-7}{10.1038/s41559-018-0610-7}
+
+\leavevmode\hypertarget{ref-mosteller_eye_1981}{}%
+Mosteller, F., Siegel, A. F., Trapido, E., \& Youtz, C. (1981). Eye {Fitting} {Straight} {Lines}. \emph{The American Statistician}, \emph{35}(3), 150--152. http://doi.org/\href{https://doi.org/10.1080/00031305.1981.10479335}{10.1080/00031305.1981.10479335}
 
 \leavevmode\hypertarget{ref-munroe_2005}{}%
 Munroe, R. (2005). Log scale. \emph{xkcd: A webcomic of romance, sarcasm, math, and language}. Creative Commons. Retrieved from \url{https://xkcd.com/1162/}

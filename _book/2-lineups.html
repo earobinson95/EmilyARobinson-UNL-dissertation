@@ -123,7 +123,20 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="3" data-path="3-youdrawit.html"><a href="3-youdrawit.html"><i class="fa fa-check"></i><b>3</b> Prediction with you draw it</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="3-youdrawit.html"><a href="3-youdrawit.html#introduction-1"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.1" data-path="3-youdrawit.html"><a href="3-youdrawit.html#introduction-1"><i class="fa fa-check"></i><b>3.1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="3-youdrawit.html"><a href="3-youdrawit.html#past-methodology"><i class="fa fa-check"></i><b>3.1.1</b> Past Methodology</a></li>
+<li class="chapter" data-level="3.1.2" data-path="3-youdrawit.html"><a href="3-youdrawit.html#data-driven-documents"><i class="fa fa-check"></i><b>3.1.2</b> Data Driven Documents</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="3-youdrawit.html"><a href="3-youdrawit.html#interactive-plot-development"><i class="fa fa-check"></i><b>3.2</b> Interactive Plot Development</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="3-youdrawit.html"><a href="3-youdrawit.html#data-simulation"><i class="fa fa-check"></i><b>3.2.1</b> Data Simulation</a></li>
+<li class="chapter" data-level="3.2.2" data-path="3-youdrawit.html"><a href="3-youdrawit.html#parameter-selection-1"><i class="fa fa-check"></i><b>3.2.2</b> Parameter Selection</a></li>
+<li class="chapter" data-level="3.2.3" data-path="3-youdrawit.html"><a href="3-youdrawit.html#data-driven-document-setup"><i class="fa fa-check"></i><b>3.2.3</b> Data Driven Document Setup</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="3-youdrawit.html"><a href="3-youdrawit.html#study-design-1"><i class="fa fa-check"></i><b>3.3</b> Study Design</a></li>
+<li class="chapter" data-level="3.4" data-path="3-youdrawit.html"><a href="3-youdrawit.html#results-1"><i class="fa fa-check"></i><b>3.4</b> Results</a></li>
+<li class="chapter" data-level="3.5" data-path="3-youdrawit.html"><a href="3-youdrawit.html#discussion-and-conclusion-1"><i class="fa fa-check"></i><b>3.5</b> Discussion and Conclusion</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="4-estimation.html"><a href="4-estimation.html"><i class="fa fa-check"></i><b>4</b> Numerical Translation and Estimation</a>
 <ul>
@@ -222,9 +235,9 @@ The heuristic data generation procedure is described below:</p>
 Each generated <span class="math inline">\(x_i\)</span> point from  was replicated 10 times.
 Then the lack of fit statistic (LOF) was computed for each simulated data set by calculating the deviation of the data from a linear line.
 Plotting the density curves of the LOF statistics for each level of difficulty choice allows us to evaluate the ability of differentiating between the difficulty levels and thus detecting the target plot.
-In Figure , we can see the densities of each of the three difficulty levels.
+In , we can see the densities of each of the three difficulty levels.
 While the LOF statistic provides us a numerical value for discriminating between the difficulty levels, we cannot directly relate this to the perceptual discriminability; it serves primarily as an approximation to ensure that we are testing parameters at several distinct levels of difficulty.
-Final parameter estimates are shown in Table .</p>
+Final parameter estimates are shown in .</p>
 <div class="figure" style="text-align: center"><span id="fig:lof-density-curves"></span>
 <img src="thesis_files/figure-html/lof-density-curves-1.png" alt="Lack of fit statistic density curves" width="\linewidth" />
 <p class="caption">
@@ -271,13 +284,13 @@ The binary response was analyzed using generalized linear mixed model following 
 \end{equation}\]</span>
 where
 <p>We assume that random effects for data set and participant are independent.</p>
-<p>The analysis of variance table shown in Table  indicate a significant interaction between the curvature combination and scale. Variance due to participant and data set were estimated to be <span class="math inline">\(\sigma^2_{\text{participant}} = 2.79\)</span> (s.e. 1.67) and <span class="math inline">\(\sigma^2_{\text{data}} = 0.44\)</span> (s.e. 0.66) respectively.</p>
+<p>The analysis of variance table shown in  indicate a significant interaction between the curvature combination and scale. Variance due to participant and data set were estimated to be <span class="math inline">\(\sigma^2_{\text{participant}} = 2.79\)</span> (s.e. 1.67) and <span class="math inline">\(\sigma^2_{\text{data}} = 0.44\)</span> (s.e. 0.66) respectively.</p>
 <p>On both the log and linear scales, the highest accuracy occurred in lineup plots where the target model and null model had large curvature differences (Easy Null - Hard Target; Hard Null - Easy Target).
 <!-- When comparing models that have slight curvature differences \er{(e.g. Medium Null - Hard Target, Medium Null - Easy Target, Easy Null - Medium Target)}, there is a sacrifice in accuracy when displayed on the linear scale.  -->
 There is a decrease in accuracy on the linear scale when comparing a target plot with less curvature to null plots with more curvature (Easy Null - Medium Target; Medium Null - Hard Target).
 <span class="citation">Best, Smith, &amp; Stubbs (2007)</span> found that accuracy of identifying the correct curve type was higher when nonlinear trends were presented indicating that it is hard to say something is linear (i.e. something has less curvature), but easy to say that it is not linear; our results concur with this observation.
 Overall, there are no significant differences in accuracy between curvature combinations when data is presented on a log scale indicating participants were consistent in their success of identifying the target panel on the log scale.
-Figure  displays the estimated (log) odds ratio of successfully identifying the target panel on the log scale compared to the linear scale.
+ displays the estimated (log) odds ratio of successfully identifying the target panel on the log scale compared to the linear scale.
 The choice of scale has no impact if curvature differences are large (Hard Null - Easy Target; Easy Null - Hard Target).
 However, presenting data on the log scale makes us more sensitive to slight changes in curvature (Medium Null - Easy Target; Medium Null - Hard Target; Easy Null - Medium Target).
 An exception occurs when identifying a plot with curvature embedded in null plots close to a linear trend (Hard Null - Medium Target), again supporting the claim that it is easy to identify a curve in a bunch of lines but much harder to identify a line in a bunch of curves <span class="citation">(Best, Smith, &amp; Stubbs, 2007)</span>.</p>

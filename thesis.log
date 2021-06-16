@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.5.4)  14 JUN 2021 16:32
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.5.4)  16 JUN 2021 11:03
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1413,7 +1413,29 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Hy@SectionHShift=\skip266
 )
 Package hyperref Info: Option `breaklinks' set `true' on input line 137.
-(preamble.tex) (thesis.aux)
+(preamble.tex
+(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/cleveref\cleveref.s
+ty
+Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
+LaTeX Info: Redefining \Cref on input line 925.
+Package cleveref Info: `hyperref' support loaded on input line 2370.
+LaTeX Info: Redefining \cref on input line 2370.
+LaTeX Info: Redefining \Cref on input line 2370.
+LaTeX Info: Redefining \crefrange on input line 2370.
+LaTeX Info: Redefining \Crefrange on input line 2370.
+LaTeX Info: Redefining \cpageref on input line 2370.
+LaTeX Info: Redefining \Cpageref on input line 2370.
+LaTeX Info: Redefining \cpagerefrange on input line 2370.
+LaTeX Info: Redefining \Cpagerefrange on input line 2370.
+LaTeX Info: Redefining \labelcref on input line 2370.
+LaTeX Info: Redefining \labelcpageref on input line 2370.
+Package cleveref Info: `amsthm' support loaded on input line 3026.
+Package cleveref Info: `listings' support loaded on input line 3131.
+Package cleveref Info: always capitalise cross-reference names on input line 78
+25.
+Package cleveref Info: always capitalise cross-reference names on input line 78
+52.
+)) (thesis.aux)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 146.
@@ -1650,25 +1672,28 @@ File: thesis_files/figure-latex/odds-ratio-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/odds-ratio-plot-1.pdf>
 [26] [27] [28
 
-] [29
+] [29] [30] [31]
+File: images/r2d3+shiny-inkscape.png Graphic file (type bmp)
+<images/r2d3+shiny-inkscape.png>
+[32] [33] [34
 
-] [30
+] [35
 
-] [31
+] [36
 
-] [32
+] [37
 
-] [33
+] [38
 
-] [34] [35] [36] [37] [38]
+] [39] [40] [41] [42] [43] [44]
 No file thesis.bbl.
 
 Class memoir Warning: The material used in the footer is too large
 (10.14995pt) for the given foot skip (0.0pt), it is recommended to
 either increase the foot skip or redesign the footer
-(in both cases you will find help in the memoir manual). on input line 881.
+(in both cases you will find help in the memoir manual). on input line 1197.
 
-[39]
+[45]
 \tf@toc=\write7
 \openout7 = `thesis.toc'.
 
@@ -1680,15 +1705,15 @@ either increase the foot skip or redesign the footer
 
 (thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 9D3A46CF54594D16685446C344CCADB1;1648.
+(rerunfilecheck)             Checksum: 8A0C0664F5B54D29F318C6E7C4926C72;1923.
  ) 
 Here is how much of TeX's memory you used:
- 34455 strings out of 411690
- 625007 string characters out of 2834884
- 1016700 words of memory out of 3000000
- 53924 multiletter control sequences out of 15000+600000
+ 36092 strings out of 411690
+ 663488 string characters out of 2834884
+ 1076363 words of memory out of 3000000
+ 55557 multiletter control sequences out of 15000+600000
  409706 words of font info for 67 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 126i,12n,130p,2602b,457s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 126i,12n,130p,2602b,528s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (47 pages).
+Output written on thesis.pdf (53 pages).

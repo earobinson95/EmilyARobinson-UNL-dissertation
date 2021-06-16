@@ -76,7 +76,7 @@ Editing text colors: \ear{Emily's editing color.} Emily may also use mostly blac
 
 Advanced technology and computing power has promoted data visualization as a central tool in modern data science [@unwin_why_2020]. 
 Data visualization is defined as the art of drawing graphical charts in order to display data.
-Figure \ref{fig:graphic-flowchart} illustrates the process of creating a graphic from a dataset through the use of variable mapping, data transformations, coordinate systems, and aesthetic features [@vanderplas_testing_2020]. 
+\cref{fig:graphic-flowchart} illustrates the process of creating a graphic from a dataset through the use of variable mapping, data transformations, coordinate systems, and aesthetic features [@vanderplas_testing_2020]. 
 Graphics are useful for data cleaning, exploring data structure, and have been an essential component in communicating information for the last 200 years [@lewandowsky_perception_1989; @unwin_why_2020; @vanderplas_testing_2020]
 During the 20th century, companies began utilizing graphics to understand their mechanics and support business decisions; news sources began displaying graphics of weather forecasts as a means to communicate critical information and aid in decision-making [@vanderplas_testing_2020]. 
 Today, we encounter data visualizations everywhere, researchers include graphics to communicate their results in scientific publications and mass media relies on graphics to convey news stories to the public through newspapers, TV, and the Web [@unwin_why_2020].
@@ -118,7 +118,7 @@ With the support of changes in software defaults, future work must be done in or
 ## Perception and Psychophysics
 
 In order to develop guiding principles for generating graphics effective in communication, we must first understand the basic mechanics of the human perceptual system and the biases we are vulnerable to [@goldstein_sensation_2017]. 
-The perceptual process is complex and involved (Figure \ref{fig:perceptual-process}). 
+The perceptual process is complex and involved \pcref{fig:perceptual-process}. 
 
 ```{r perceptual-process, fig.cap = "Perceptual process", out.width="75%"}
 knitr::include_graphics("images/perceptual-process-goldsein-pg5.png")
@@ -191,7 +191,7 @@ We have recently experienced the benefits and pitfalls of using log scales as CO
 case count data on both the log and linear scale [@fagen-ulmschneider_2020; @burnmurdoch_2020]. In spring 2020, during the early stages of the COVID-19 pandemic, there were large magnitude discrepancies in case counts at a given time point between different geographic regions (e.g. states and provinces as well as countries and continents). 
 During this time, we saw the usefulness of log scale transformations showing case count curves for areas with few cases and areas with many cases within one chart. 
 As the pandemic evolved, and the case counts were no longer spreading exponentially, graphs with linear scales seemed more effective at spotting early increases in case counts that signaled more localized outbreaks.
-This is only one recent example of a situation in which both log and linear scales are useful for showing different aspects of the same data; there are long histories of using log scales to display results in ecology, psychophysics, engineering, and physics [@menge_logarithmic_2018; @heckler_student_2013]. The usefulness of the log scale in science is exemplified in Figure \ref{fig:log-scale-comic} [@munroe_2005].
+This is only one recent example of a situation in which both log and linear scales are useful for showing different aspects of the same data; there are long histories of using log scales to display results in ecology, psychophysics, engineering, and physics [@menge_logarithmic_2018; @heckler_student_2013]. The usefulness of the log scale in science is exemplified in \cref{fig:log-scale-comic} [@munroe_2005].
 
 ```{r log-scale-comic, fig.cap = "Log scale comic", out.width="70%"}
 knitr::include_graphics("images/log-scale-comic.png")

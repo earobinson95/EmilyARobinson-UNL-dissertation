@@ -4,6 +4,7 @@ fig:log-scale-comic
 fig:lineup-example
 fig:lof-density-curves
 fig:odds-ratio-plot
+fig:r2d3-shiny-flowchart
 literature-review
 introduction-to-graphics
 perception-and-psychophysics
@@ -21,6 +22,15 @@ results
 discussion-and-conclusion
 youdrawit
 introduction-1
+past-methodology
+data-driven-documents
+interactive-plot-development
+data-simulation
+parameter-selection-1
+data-driven-document-setup
+study-design-1
+results-1
+discussion-and-conclusion-1
 estimation
 introduction-2
 conclusion

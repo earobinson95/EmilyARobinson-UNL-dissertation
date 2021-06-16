@@ -3,3 +3,120 @@
 ## Introduction
 
 + advocate smoothing of scatterplots to assist in detecting the shape of the point cloud in situations where the error in the data is substantial, or where the density of points changes along the abscissa @cleveland_graphical_1984
+
+### Past Methodology
++ @finney_subjective_1951
+    + Big Idea: Determine the effect of stopping iterative maximum likelihood calculations after one iteration.
+    + Metod: Judge by eye the positions for a pair of parallel probit regression lines in a biological assay. Sent out by mail, asked to "rule two lines."
+    + Sample: 21 scientists
+    + Findings: One cycle of iterations was sufficient
++ @mosteller_eye_1981 
+    + Big Idea: Sutdents fitted lines by eye to four sets of points.
+    + Method: 8.5 x 11 inche transparency with a straight line etched completely across the middle
+    + Sample: 153 graduate students and post docs in Introductory Biostatistics
+    + Experimental Deisgn: Latin square with packets stapeled in four different orders.
+    + Findings: Students tended to fit the slope of the first principal component.
++ NYT You Draw It [@aisch_cox_quealy_2015; @buchanan_park_pearce_2017; @katz_2017]
+
+### Data Driven Documents
+
++ Data Driven Documents (D3) created by Mike Bostock while working on graphics at the New York Times
+    + Open-source JavaScript-based graphing framework
+    + ggplot2 is to R as D3.js is to JavaScript
+    + Allows binding objects and layers to plotting area
+        + Scalable Vector Graphics (SVG)
+            + Scaling of vector graphics preserves the shapes rather than the pixels
+            + Extemsible Markup Language-based (XML) (Human readable + machine readable; Interactivity + animation supported)
+            + JavaScript for scripting, CSS for styling
+    + Movement and user interaction (Hovering = highlighting, clicking = turning elements on/off, brushing, linking, etc.)
+    + Highly customizable
+    + Styling (pair with CSS)
+    + Tons of visualization formats!
+    + Can integrate multiple plots together & transitions ("scrollytelling")
+    + Used by NYT, FiveThirtyEight, Washington Post, Pew Research Center
++ @r2d3
+    + integrates D3 visual into existing formats in R
+    + RMarkdown with HTML output or Shiny applications (SUPER POWERFUL)
+    +  easy to do data processing in R then apply D3.js code to visualize that data.
+    + **How it works**:
+        + Converts data in R to JSON that can be interpreted by JavaScript 
+            + Object is named 'data'
+            + Columns can be accessed
+        + Sources D3 code library
+            + Grabs version specified in function
+        + Creates plot container (svg is default)
+            + Or different container if specified
+            + specifies width and height of plot container
+        + Renders plot object using JavaScript and CSS files called in r2d3 call
++ Grammar of D3
+    + elements (attributes + styles)
+    + scales (not automatically assigned in D3 like they are in ggplot2)
+    + New! (animations - transitions, enters, exits; interactions - mouseover/mouseleave)
+
+## Interactive Plot Development
+
+### Data Simulation
+
+\noindent *Algorithm 3.1: Exponential Data Generation*
+
+**In parameters:** `beta, sd, points_choice = "partial", points_end_scale, N = 30, xmin = 20, xmax = 20, xby = 0.25`
+
+**Out:** data list of point data and line data
+
+1. Randomly select and jitter N = 30 x-values along the domain.
+2. Generate "good" errors based on N(0,sd). 
+    + Set constraint of the mean of the first N/3 = 10 errors less than |2*sd|
+3. Simulate point data based on
+    + `y = exp(x*beta + errorVals)`
+4. Obtain starting value for beta
+    + `lm(log(y) ~ x, data = point_data)`
+5. Use NLS to fit a better line to the point data
+    + `nls(y ~ exp(x*beta), data = point_data, ...)`
+6. Simulate nonlinear least squares line data
+    + `y = exp(x*betahat)`
+7. Output data list of point data and line data
+
++ Specific r2d3 options:
+    + aspect ratio = 1
+    + **linear =**
+    + free_draw = FALSE
+    + points = "partial",
+    + x_by = 0.25
+    + draw_start_scale = 0.5 (start drawing at x = 10)
+    + show_finished = T - graphics group / F
+    + x_range = c(0,20)
+    + y_range = range(y-points)*c(0.5, 2)
+    
+### Parameter Selection
+
++ Visit [You Draw It Development - parameter selection](https://emily-robinson.shinyapps.io/you-draw-it-parameter-selection/) for examples.
+
++ Exponential (Linear/Log): 2 x 2 x 2 Factorial
+    + Beta: 0.1 (sd. 0.09); 0.23 (0.25)
+    + Points End: 0.5; 0.75
+    + Scale: Linear; Log
+
+### Data Driven Document Setup
+
+\cref{fig:r2d3-shiny-flowchart}
+
+```{r r2d3-shiny-flowchart, fig.cap = "Interactive plot development", out.width="80%"}
+knitr::include_graphics("images/r2d3+shiny-inkscape.png")
+```
+
+## Study Design
+
++ 8 data sets were generated for each individual upon start of experiment (4 Linear + 4 Exponential)
++ 12 you draw it task plots were shown to each individual (4 Linear + (4 Exponential x 2 Scales))
++ The order of each of the 12 plots was randomly assigned for each individual in a CRD.
+
+## Results
+
++ Twitter/Reddit/Direct Email Pilot Study (05/03/2021): [Exponential Prediction](https://srvanderplas.github.io/Perception-of-Log-Scales/you-draw-it-development/you-draw-it-pilot-app/analyses/you-draw-it-exponential-prediction-pilot.html)
++ https://shiny.srvanderplas.com/you-draw-it/
++ Twitter/Reddit/Direct Email Pilot Study (05/03/2021): [Exponential Prediction](https://srvanderplas.github.io/Perception-of-Log-Scales/you-draw-it-development/you-draw-it-pilot-app/analyses/you-draw-it-exponential-prediction-pilot.html)
+
+## Discussion and Conclusion
+
+
+

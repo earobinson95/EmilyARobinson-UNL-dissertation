@@ -12,7 +12,7 @@ Statistical lineups provide an elegant way of combining perception and statistic
 Similarly, a statistical lineup is a plot consisting of smaller panels; the viewer is asked to identify the plot of the real data from among a set of decoy null plots. 
 A statistical lineup typically consists of 20 panels - 1 target panel and 19 null panels. Figure 
 If the viewer can identify the target panel embedded within the set of null panels, this suggests that the real data is visually distinct from data generated under the null model. 
-\ref{fig:lineup-example} provides example's of a statistical lineup's. The lineup plot on the left displays increasing exponential data on a linear scale with panel (2 x 5) + 3 as the target.
+\cref{fig:lineup-example} provides example's of a statistical lineup's. The lineup plot on the left displays increasing exponential data on a linear scale with panel (2 x 5) + 3 as the target.
 The lineup plot on the right displays increasing exponential data on the log scale with panel 2 x 2 as the
 target.
 Crowd sourcing websites such as Amazon Mechanical Turk, Reddit, and Prolifc allow us to collect responses from multiple viewers. 
@@ -107,9 +107,9 @@ For each level of difficulty, we simulated 1000 data sets of $(x_{ij}, y_{ij})$ 
 Each generated $x_i$ point from \textit{Algorithm 2.1.2} was replicated 10 times. 
 Then the lack of fit statistic (LOF) was computed for each simulated data set by calculating the deviation of the data from a linear line.
 Plotting the density curves of the LOF statistics for each level of difficulty choice allows us to evaluate the ability of differentiating between the difficulty levels and thus detecting the target plot.
-In Figure \ref{fig:lof-density-curves}, we can see the densities of each of the three difficulty levels.
+In \cref{fig:lof-density-curves}, we can see the densities of each of the three difficulty levels.
 While the LOF statistic provides us a numerical value for discriminating between the difficulty levels, we cannot directly relate this to the perceptual discriminability; it serves primarily as an approximation to ensure that we are testing parameters at several distinct levels of difficulty. 
-Final parameter estimates are shown in Table \ref{tab:parameter-data}.
+Final parameter estimates are shown in \cref{tab:parameter-data}.
 
 ```{r lof-density-curves, fig.height = 2.5, fig.width = 5, fig.cap = "Lack of fit statistic density curves"}
 lofData <- read.csv(file = "data/lineup-lof-data.csv")
@@ -195,7 +195,7 @@ where
 \end{itemize}
 \noindent We assume that random effects for data set and participant are independent.
 
-The analysis of variance table shown in Table \ref{tab:lineup-anova-table} indicate a significant interaction between the curvature combination and scale. Variance due to participant and data set were estimated to be $\sigma^2_{\text{participant}} = 2.79$ (s.e. 1.67) and $\sigma^2_{\text{data}} = 0.44$ (s.e. 0.66) respectively.
+The analysis of variance table shown in \cref{tab:lineup-anova-table} indicate a significant interaction between the curvature combination and scale. Variance due to participant and data set were estimated to be $\sigma^2_{\text{participant}} = 2.79$ (s.e. 1.67) and $\sigma^2_{\text{data}} = 0.44$ (s.e. 0.66) respectively.
 
 ```{r anova}
 read.csv("data/lineup-anova-table.csv") %>%
@@ -209,7 +209,7 @@ On both the log and linear scales, the highest accuracy occurred in lineup plots
 There is a decrease in accuracy on the linear scale when comparing a target plot with less curvature to null plots with more curvature (Easy Null - Medium Target; Medium Null - Hard Target). 
 @best_perception_2007 found that accuracy of identifying the correct curve type was higher when nonlinear trends were presented indicating that it is hard to say something is linear (i.e. something has less curvature), but easy to say that it is not linear; our results concur with this observation.
 Overall, there are no significant differences in accuracy between curvature combinations when data is presented on a log scale indicating participants were consistent in their success of identifying the target panel on the log scale.
-Figure \ref{fig:odds-ratio-plot} displays the estimated (log) odds ratio of successfully identifying the target panel on the log scale compared to the linear scale. 
+\cref{fig:odds-ratio-plot} displays the estimated (log) odds ratio of successfully identifying the target panel on the log scale compared to the linear scale. 
 The choice of scale has no impact if curvature differences are large (Hard Null - Easy Target; Easy Null - Hard Target). 
 However, presenting data on the log scale makes us more sensitive to slight changes in curvature (Medium Null - Easy Target; Medium Null - Hard Target; Easy Null - Medium Target). 
 An exception occurs when identifying a plot with curvature embedded in null plots close to a linear trend (Hard Null - Medium Target), again supporting the claim that it is easy to identify a curve in a bunch of lines but much harder to identify a line in a bunch of curves [@best_perception_2007].
