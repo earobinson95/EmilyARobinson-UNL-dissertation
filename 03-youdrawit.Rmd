@@ -2,21 +2,28 @@
 
 ## Introduction
 
-+ advocate smoothing of scatterplots to assist in detecting the shape of the point cloud in situations where the error in the data is substantial, or where the density of points changes along the abscissa @cleveland_graphical_1984
+In [Perception through lineups](#lineups), a base foundation for future exploration of the use of log scales was established by evaluating participants ability to identify differences in charts through the use of lineups. 
+This did not require that participants were able to understand exponential growth, identify log scales, or have any mathematical training; instead, it simply tested the change in perceptual sensitivity resulting from visualization choices. 
+In order to determine whether there are cognitive disadvantages to log scales, we utilize interactive graphics to test an individual's ability to make predictions for exponentially increasing data. In this study, participants are asked to draw a line using their computer mouse through the increasing exponential trend shown on both the log and linear scale. 
+
+<!-- + Early studies explored the estimation and prediction of exponential growth, finding that growth is underestimated when presented both numerically and graphically but that numerical estimation is more accurate than graphical estimation for exponential curves [@wagenaar_misperception_1975].  -->
 
 ### Past Methodology
-+ @finney_subjective_1951
-    + Big Idea: Determine the effect of stopping iterative maximum likelihood calculations after one iteration.
-    + Metod: Judge by eye the positions for a pair of parallel probit regression lines in a biological assay. Sent out by mail, asked to "rule two lines."
-    + Sample: 21 scientists
-    + Findings: One cycle of iterations was sufficient
-+ @mosteller_eye_1981 
-    + Big Idea: Sutdents fitted lines by eye to four sets of points.
-    + Method: 8.5 x 11 inche transparency with a straight line etched completely across the middle
-    + Sample: 153 graduate students and post docs in Introductory Biostatistics
-    + Experimental Deisgn: Latin square with packets stapeled in four different orders.
-    + Findings: Students tended to fit the slope of the first principal component.
-+ NYT You Draw It [@aisch_cox_quealy_2015; @buchanan_park_pearce_2017; @katz_2017]
+
+Initial studies in the 20th century explored the use of fitting lines by eye through a set of points [@finney_subjective_1951; @mosteller_eye_1981]. 
+Common methods of fitting trends by eye involve maneuvering a string, black thread, or ruler until the fit is suitable, then drawing the line. 
+In @finney_subjective_1951, it was of interest to determine the effect of stopping iterative maximum likelihood calculations after one iteration. Twenty-one scientists were recruited via postal mail and asked to "rule two lines" in order to judge by eye the positions for a pair of parallel probit regression lines in a biological assay.
+Results indicated that one cycle of iterations was sufficient based on the starting values provided by eye from the participants.
+
+Thirty years later, @mosteller_eye_1981, sought to understand the properties of least squares and other computed lines by establishing one systematic method of fitting lines by eye. 
+The authors recruited 153 graduate students and post doctoral researchers in Introductory Biostatistics. 
+Participants were asked to fit lines by eye to four sets of points using an 8.5 x 11 inch transparency with a straight line etched completely across the middle. 
+A latin square design with packets of the set of points stapled together in four different orders was used in order to determine if there is an effect of order of presentation.
+It was found that order of presentation had no effect and that participants tended to fit the slope of the first principal component over the slope of the least squares regression line. 
+
+Recently, the New York Times introduced an interactive feature, called You Draw It [@aisch_cox_quealy_2015; @buchanan_park_pearce_2017; @katz_2017]. 
+Readers are asked to input their own assumptions about various metrics and learning how these asumptions relate to reality.
+The NY Times team utilizes Data Driven Documents (D3) that allows readers to predict these metrics through the use of drawing a line on their computer screen with their computer mouse.
 
 ### Data Driven Documents
 
@@ -112,6 +119,7 @@ knitr::include_graphics("images/r2d3+shiny-inkscape.png")
 
 ## Results
 
++ advocate smoothing of scatterplots to assist in detecting the shape of the point cloud in situations where the error in the data is substantial, or where the density of points changes along the abscissa @cleveland_graphical_1984
 + Twitter/Reddit/Direct Email Pilot Study (05/03/2021): [Exponential Prediction](https://srvanderplas.github.io/Perception-of-Log-Scales/you-draw-it-development/you-draw-it-pilot-app/analyses/you-draw-it-exponential-prediction-pilot.html)
 + https://shiny.srvanderplas.com/you-draw-it/
 + Twitter/Reddit/Direct Email Pilot Study (05/03/2021): [Exponential Prediction](https://srvanderplas.github.io/Perception-of-Log-Scales/you-draw-it-development/you-draw-it-pilot-app/analyses/you-draw-it-exponential-prediction-pilot.html)

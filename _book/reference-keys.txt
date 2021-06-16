@@ -10,7 +10,7 @@ introduction-to-graphics
 perception-and-psychophysics
 graphical-experiments
 logarithmic-scales-and-mapping
-underestimation-of-exponential-growth
+underestimation
 research-objectives
 lineups
 introduction

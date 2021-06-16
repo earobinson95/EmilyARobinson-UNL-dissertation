@@ -233,14 +233,14 @@ Editing text colors: \ear{Emily's editing color.} Emily may also use mostly blac
 
 Advanced technology and computing power has promoted data visualization as a central tool in modern data science (Unwin, 2020).
 Data visualization is defined as the art of drawing graphical charts in order to display data.
-\cref{fig:graphic-flowchart} illustrates the process of creating a graphic from a dataset through the use of variable mapping, data transformations, coordinate systems, and aesthetic features (Vanderplas, Cook, \& Hofmann, 2020).
+\cref{fig:graphic-flowchart} illustrates the process of creating a graphic from a data set through the use of variable mapping, data transformations, coordinate systems, and aesthetic features (Vanderplas, Cook, \& Hofmann, 2020).
 Graphics are useful for data cleaning, exploring data structure, and have been an essential component in communicating information for the last 200 years (Lewandowsky \& Spence, 1989; Unwin, 2020; Vanderplas, Cook, \& Hofmann, 2020)
 During the 20th century, companies began utilizing graphics to understand their mechanics and support business decisions; news sources began displaying graphics of weather forecasts as a means to communicate critical information and aid in decision-making (Vanderplas, Cook, \& Hofmann, 2020).
 Today, we encounter data visualizations everywhere, researchers include graphics to communicate their results in scientific publications and mass media relies on graphics to convey news stories to the public through newspapers, TV, and the Web (Unwin, 2020).
 
-\begin{figure}
+\begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.5\linewidth]{images/graphic-flowchart} 
+{\centering \includegraphics[width=0.5\linewidth,]{images/graphic-flowchart} 
 
 }
 
@@ -283,9 +283,9 @@ With the support of changes in software defaults, future work must be done in or
 In order to develop guiding principles for generating graphics effective in communication, we must first understand the basic mechanics of the human perceptual system and the biases we are vulnerable to (Goldstein \& Brockmole, 2017).
 The perceptual process is complex and involved \pcref{fig:perceptual-process}.
 
-\begin{figure}
+\begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.75\linewidth]{images/perceptual-process-goldsein-pg5} 
+{\centering \includegraphics[width=0.75\linewidth,]{images/perceptual-process-goldsein-pg5} 
 
 }
 
@@ -357,9 +357,9 @@ During this time, we saw the usefulness of log scale transformations showing cas
 As the pandemic evolved, and the case counts were no longer spreading exponentially, graphs with linear scales seemed more effective at spotting early increases in case counts that signaled more localized outbreaks.
 This is only one recent example of a situation in which both log and linear scales are useful for showing different aspects of the same data; there are long histories of using log scales to display results in ecology, psychophysics, engineering, and physics (Heckler, Mikula, \& Rosenblatt, 2013; Menge et al., 2018). The usefulness of the log scale in science is exemplified in \cref{fig:log-scale-comic} (Munroe, 2005).
 
-\begin{figure}
+\begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.7\linewidth]{images/log-scale-comic} 
+{\centering \includegraphics[width=0.7\linewidth,]{images/log-scale-comic} 
 
 }
 
@@ -391,8 +391,8 @@ Assuming there is a direct relationship between perceptual and cognitive process
 The idea is compression enlarges the coding space, thus increasing the dynamic range of perception and firing neurons within our visual system (Nieder \& Miller, 2003).
 Similar to the training and education required to transition from logarithmic mapping to linear mapping, there is also necessary training required in the assessment of graphical displays associated with logarithmic scales. Haemer \& Kelley (1949) identify semi-logarithmic charts for temporal series as requiring a certain degree of technical training.
 
-\hypertarget{underestimation-of-exponential-growth}{%
-\section{Underestimation of Exponential Growth}\label{underestimation-of-exponential-growth}}
+\hypertarget{underestimation}{%
+\section{Underestimation of Exponential Growth}\label{underestimation}}
 
 Early studies explored the estimation and prediction of exponential growth, finding that growth is underestimated when presented both numerically and graphically but that numerical estimation is more accurate than graphical estimation for exponential curves (Wagenaar \& Sagaria, 1975).
 One way to improve estimation of increasing exponential trends is to provide immediate feedback to participants about the accuracy of their current predictions (Mackinnon \& Wearing, 1991).
@@ -444,9 +444,9 @@ The lineup plot on the right displays increasing exponential data on the log sca
 target.
 Crowd sourcing websites such as Amazon Mechanical Turk, Reddit, and Prolifc allow us to collect responses from multiple viewers.
 
-\begin{figure}
+\begin{figure}[tbp]
 
-{\centering \includegraphics[width=\linewidth]{thesis_files/figure-latex/lineup-example-1} 
+{\centering \includegraphics[width=\linewidth,]{thesis_files/figure-latex/lineup-example-1} 
 
 }
 
@@ -524,9 +524,9 @@ In \cref{fig:lof-density-curves}, we can see the densities of each of the three 
 While the LOF statistic provides us a numerical value for discriminating between the difficulty levels, we cannot directly relate this to the perceptual discriminability; it serves primarily as an approximation to ensure that we are testing parameters at several distinct levels of difficulty.
 Final parameter estimates are shown in \cref{tab:parameter-data}.
 
-\begin{figure}
+\begin{figure}[tbp]
 
-{\centering \includegraphics[width=\linewidth]{thesis_files/figure-latex/lof-density-curves-1} 
+{\centering \includegraphics[width=\linewidth,]{thesis_files/figure-latex/lof-density-curves-1} 
 
 }
 
@@ -630,9 +630,9 @@ The choice of scale has no impact if curvature differences are large (Hard Null 
 However, presenting data on the log scale makes us more sensitive to slight changes in curvature (Medium Null - Easy Target; Medium Null - Hard Target; Easy Null - Medium Target).
 An exception occurs when identifying a plot with curvature embedded in null plots close to a linear trend (Hard Null - Medium Target), again supporting the claim that it is easy to identify a curve in a bunch of lines but much harder to identify a line in a bunch of curves (Best, Smith, \& Stubbs, 2007).
 
-\begin{figure}
+\begin{figure}[tbp]
 
-{\centering \includegraphics[width=\linewidth]{thesis_files/figure-latex/odds-ratio-plot-1} 
+{\centering \includegraphics[width=\linewidth,]{thesis_files/figure-latex/odds-ratio-plot-1} 
 
 }
 
@@ -656,50 +656,27 @@ What remains to be seen is whether there are cognitive disadvantages to log scal
 \hypertarget{introduction-1}{%
 \section{Introduction}\label{introduction-1}}
 
-\begin{itemize}
-\tightlist
-\item
-  advocate smoothing of scatterplots to assist in detecting the shape of the point cloud in situations where the error in the data is substantial, or where the density of points changes along the abscissa Cleveland \& McGill (1984)
-\end{itemize}
+In \protect\hyperlink{lineups}{Perception through lineups}, a base foundation for future exploration of the use of log scales was established by evaluating participants ability to identify differences in charts through the use of lineups.
+This did not require that participants were able to understand exponential growth, identify log scales, or have any mathematical training; instead, it simply tested the change in perceptual sensitivity resulting from visualization choices.
+In order to determine whether there are cognitive disadvantages to log scales, we utilize interactive graphics to test an individual's ability to make predictions for exponentially increasing data. In this study, participants are asked to draw a line using their computer mouse through the increasing exponential trend shown on both the log and linear scale.
 
 \hypertarget{past-methodology}{%
 \subsection{Past Methodology}\label{past-methodology}}
 
-\begin{itemize}
-\tightlist
-\item
-  Finney (1951)
+Initial studies in the 20th century explored the use of fitting lines by eye through a set of points (Finney, 1951; Mosteller, Siegel, Trapido, \& Youtz, 1981).
+Common methods of fitting trends by eye involve maneuvering a string, black thread, or ruler until the fit is suitable, then drawing the line.
+In Finney (1951), it was of interest to determine the effect of stopping iterative maximum likelihood calculations after one iteration. Twenty-one scientists were recruited via postal mail and asked to ``rule two lines'' in order to judge by eye the positions for a pair of parallel probit regression lines in a biological assay.
+Results indicated that one cycle of iterations was sufficient based on the starting values provided by eye from the participants.
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Big Idea: Determine the effect of stopping iterative maximum likelihood calculations after one iteration.
-  \item
-    Metod: Judge by eye the positions for a pair of parallel probit regression lines in a biological assay. Sent out by mail, asked to ``rule two lines.''
-  \item
-    Sample: 21 scientists
-  \item
-    Findings: One cycle of iterations was sufficient
-  \end{itemize}
-\item
-  Mosteller, Siegel, Trapido, \& Youtz (1981)
+Thirty years later, Mosteller, Siegel, Trapido, \& Youtz (1981), sought to understand the properties of least squares and other computed lines by establishing one systematic method of fitting lines by eye.
+The authors recruited 153 graduate students and post doctoral researchers in Introductory Biostatistics.
+Participants were asked to fit lines by eye to four sets of points using an 8.5 x 11 inch transparency with a straight line etched completely across the middle.
+A latin square design with packets of the set of points stapled together in four different orders was used in order to determine if there is an effect of order of presentation.
+It was found that order of presentation had no effect and that participants tended to fit the slope of the first principal component over the slope of the least squares regression line.
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Big Idea: Sutdents fitted lines by eye to four sets of points.
-  \item
-    Method: 8.5 x 11 inche transparency with a straight line etched completely across the middle
-  \item
-    Sample: 153 graduate students and post docs in Introductory Biostatistics
-  \item
-    Experimental Deisgn: Latin square with packets stapeled in four different orders.
-  \item
-    Findings: Students tended to fit the slope of the first principal component.
-  \end{itemize}
-\item
-  NYT You Draw It (Aisch, Cox, \& Quealy, 2015; Buchanan, Park, \& Pearce, 2017; Katz, 2017)
-\end{itemize}
+Recently, the New York Times introduced an interactive feature, called You Draw It (Aisch, Cox, \& Quealy, 2015; Buchanan, Park, \& Pearce, 2017; Katz, 2017).
+Readers are asked to input their own assumptions about various metrics and learning how these asumptions relate to reality.
+The NY Times team utilizes Data Driven Documents (D3) that allows readers to predict these metrics through the use of drawing a line on their computer screen with their computer mouse.
 
 \hypertarget{data-driven-documents}{%
 \subsection{Data Driven Documents}\label{data-driven-documents}}
@@ -922,9 +899,9 @@ What remains to be seen is whether there are cognitive disadvantages to log scal
 
 \cref{fig:r2d3-shiny-flowchart}
 
-\begin{figure}
+\begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.8\linewidth]{images/r2d3+shiny-inkscape} 
+{\centering \includegraphics[width=0.8\linewidth,]{images/r2d3+shiny-inkscape} 
 
 }
 
@@ -949,6 +926,8 @@ What remains to be seen is whether there are cognitive disadvantages to log scal
 
 \begin{itemize}
 \tightlist
+\item
+  advocate smoothing of scatterplots to assist in detecting the shape of the point cloud in situations where the error in the data is substantial, or where the density of points changes along the abscissa Cleveland \& McGill (1984)
 \item
   Twitter/Reddit/Direct Email Pilot Study (05/03/2021): \href{https://srvanderplas.github.io/Perception-of-Log-Scales/you-draw-it-development/you-draw-it-pilot-app/analyses/you-draw-it-exponential-prediction-pilot.html}{Exponential Prediction}
 \item

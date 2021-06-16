@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.5.4)  16 JUN 2021 11:03
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.5.4)  16 JUN 2021 16:01
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1435,6 +1435,13 @@ Package cleveref Info: always capitalise cross-reference names on input line 78
 25.
 Package cleveref Info: always capitalise cross-reference names on input line 78
 52.
+) (C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count415
+\float@exts=\toks60
+\float@box=\box81
+\@float@everytoks=\toks61
+\@floatcapt=\box82
 )) (thesis.aux)
 \openout1 = `thesis.aux'.
 
@@ -1509,8 +1516,9 @@ most likely cause issues with the appearance of inserted todonotes. The issue c
 an be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to 
 loading the todonotes package. on input line 146.
 
-\c@lstlisting=\count415
+\c@lstlisting=\count416
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
 
@@ -1590,7 +1598,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ttitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count416
+\c@section@level=\count417
 )
 Redoing nameref's sectioning
 Redoing nameref's label
@@ -1672,12 +1680,10 @@ File: thesis_files/figure-latex/odds-ratio-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/odds-ratio-plot-1.pdf>
 [26] [27] [28
 
-] [29] [30] [31]
+] [29] [30] [31] [32]
 File: images/r2d3+shiny-inkscape.png Graphic file (type bmp)
 <images/r2d3+shiny-inkscape.png>
-[32] [33] [34
-
-] [35
+[33] [34] [35
 
 ] [36
 
@@ -1685,15 +1691,17 @@ File: images/r2d3+shiny-inkscape.png Graphic file (type bmp)
 
 ] [38
 
-] [39] [40] [41] [42] [43] [44]
+] [39
+
+] [40] [41] [42] [43] [44] [45]
 No file thesis.bbl.
 
 Class memoir Warning: The material used in the footer is too large
 (10.14995pt) for the given foot skip (0.0pt), it is recommended to
 either increase the foot skip or redesign the footer
-(in both cases you will find help in the memoir manual). on input line 1197.
+(in both cases you will find help in the memoir manual). on input line 1176.
 
-[45]
+[46]
 \tf@toc=\write7
 \openout7 = `thesis.toc'.
 
@@ -1708,12 +1716,12 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 8A0C0664F5B54D29F318C6E7C4926C72;1923.
  ) 
 Here is how much of TeX's memory you used:
- 36092 strings out of 411690
- 663488 string characters out of 2834884
+ 36138 strings out of 411690
+ 664024 string characters out of 2834884
  1076363 words of memory out of 3000000
- 55557 multiletter control sequences out of 15000+600000
+ 55600 multiletter control sequences out of 15000+600000
  409706 words of font info for 67 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 126i,12n,130p,2602b,528s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 126i,12n,130p,2602b,604s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (53 pages).
+Output written on thesis.pdf (54 pages).

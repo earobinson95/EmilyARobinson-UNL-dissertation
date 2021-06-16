@@ -43,9 +43,9 @@ knitr::opts_chunk$set(
   echo = F, eval = T, messages = F, warnings = F,
   fig.width = 6, fig.height = 4,  fig.align = 'center',
   out.width = "\\linewidth", dpi = 300, 
-  tidy = T, tidy.opts=list(width.cutoff=45)#,
-  # fig.pos = "h", 
-  # out.extra = ""
+  tidy = T, tidy.opts=list(width.cutoff=45),
+  fig.pos = "tbp",
+  out.extra = ""
 )
 ```
 
@@ -76,7 +76,7 @@ Editing text colors: \ear{Emily's editing color.} Emily may also use mostly blac
 
 Advanced technology and computing power has promoted data visualization as a central tool in modern data science [@unwin_why_2020]. 
 Data visualization is defined as the art of drawing graphical charts in order to display data.
-\cref{fig:graphic-flowchart} illustrates the process of creating a graphic from a dataset through the use of variable mapping, data transformations, coordinate systems, and aesthetic features [@vanderplas_testing_2020]. 
+\cref{fig:graphic-flowchart} illustrates the process of creating a graphic from a data set through the use of variable mapping, data transformations, coordinate systems, and aesthetic features [@vanderplas_testing_2020]. 
 Graphics are useful for data cleaning, exploring data structure, and have been an essential component in communicating information for the last 200 years [@lewandowsky_perception_1989; @unwin_why_2020; @vanderplas_testing_2020]
 During the 20th century, companies began utilizing graphics to understand their mechanics and support business decisions; news sources began displaying graphics of weather forecasts as a means to communicate critical information and aid in decision-making [@vanderplas_testing_2020]. 
 Today, we encounter data visualizations everywhere, researchers include graphics to communicate their results in scientific publications and mass media relies on graphics to convey news stories to the public through newspapers, TV, and the Web [@unwin_why_2020].
@@ -222,7 +222,7 @@ Assuming there is a direct relationship between perceptual and cognitive process
 The idea is compression enlarges the coding space, thus increasing the dynamic range of perception and firing neurons within our visual system [@nieder2003coding].
 Similar to the training and education required to transition from logarithmic mapping to linear mapping, there is also necessary training required in the assessment of graphical displays associated with logarithmic scales. @haemer_presentation_1949 identify semi-logarithmic charts for temporal series as requiring a certain degree of technical training.
     
-## Underestimation of Exponential Growth
+## Underestimation of Exponential Growth {#underestimation}
 
 Early studies explored the estimation and prediction of exponential growth, finding that growth is underestimated when presented both numerically and graphically but that numerical estimation is more accurate than graphical estimation for exponential curves [@wagenaar_misperception_1975]. 
 One way to improve estimation of increasing exponential trends is to provide immediate feedback to participants about the accuracy of their current predictions [@mackinnon_feedback_1991]. 
