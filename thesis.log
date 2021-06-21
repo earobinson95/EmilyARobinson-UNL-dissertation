@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.5.4)  16 JUN 2021 16:01
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.5.4)  21 JUN 2021 15:22
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1663,29 +1663,27 @@ File: images/graphic-flowchart.png Graphic file (type bmp)
 [2] [3] [4]
 File: images/perceptual-process-goldsein-pg5.png Graphic file (type bmp)
 <images/perceptual-process-goldsein-pg5.png>
-[5] [6] [7] [8] [9] [10]
+[5] [6] [7] [8] [9] [10] [11]
 File: images/log-scale-comic.png Graphic file (type bmp)
 <images/log-scale-comic.png>
-[11] [12] [13] [14] [15] [16] [17
+[12] [13] [14] [15] [16] [17] [18
 
 ]
 File: thesis_files/figure-latex/lineup-example-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/lineup-example-1.pdf>
-[18] [19] [20]
+[19] [20] [21]
 File: thesis_files/figure-latex/lof-density-curves-1.pdf Graphic file (type pdf
 )
 <use thesis_files/figure-latex/lof-density-curves-1.pdf>
-[21] [22] [23] [24] [25]
+[22] [23] [24] [25] [26]
 File: thesis_files/figure-latex/odds-ratio-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/odds-ratio-plot-1.pdf>
-[26] [27] [28
+[27] [28] [29
 
-] [29] [30] [31] [32]
+] [30] [31] [32] [33]
 File: images/r2d3+shiny-inkscape.png Graphic file (type bmp)
 <images/r2d3+shiny-inkscape.png>
-[33] [34] [35
-
-] [36
+[34] [35] [36
 
 ] [37
 
@@ -1693,15 +1691,17 @@ File: images/r2d3+shiny-inkscape.png Graphic file (type bmp)
 
 ] [39
 
-] [40] [41] [42] [43] [44] [45]
+] [40
+
+] [41] [42] [43] [44] [45] [46]
 No file thesis.bbl.
 
 Class memoir Warning: The material used in the footer is too large
 (10.14995pt) for the given foot skip (0.0pt), it is recommended to
 either increase the foot skip or redesign the footer
-(in both cases you will find help in the memoir manual). on input line 1176.
+(in both cases you will find help in the memoir manual). on input line 1190.
 
-[46]
+[47] [48]
 \tf@toc=\write7
 \openout7 = `thesis.toc'.
 
@@ -1724,4 +1724,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  126i,12n,130p,2602b,604s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (54 pages).
+Output written on thesis.pdf (56 pages).

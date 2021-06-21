@@ -232,10 +232,10 @@ Editing text colors: \ear{Emily's editing color.} Emily may also use mostly blac
 \section{Introduction to Graphics}\label{introduction-to-graphics}}
 
 Advanced technology and computing power has promoted data visualization as a central tool in modern data science (Unwin, 2020).
-Data visualization is defined as the art of drawing graphical charts in order to display data.
-\cref{fig:graphic-flowchart} illustrates the process of creating a graphic from a data set through the use of variable mapping, data transformations, coordinate systems, and aesthetic features (Vanderplas, Cook, \& Hofmann, 2020).
-Graphics are useful for data cleaning, exploring data structure, and have been an essential component in communicating information for the last 200 years (Lewandowsky \& Spence, 1989; Unwin, 2020; Vanderplas, Cook, \& Hofmann, 2020)
-During the 20th century, companies began utilizing graphics to understand their mechanics and support business decisions; news sources began displaying graphics of weather forecasts as a means to communicate critical information and aid in decision-making (Vanderplas, Cook, \& Hofmann, 2020).
+Data visualization is defined \svp{by whom?} as the art of drawing graphical charts in order to display data.
+\cref{fig:graphic-flowchart} illustrates the process of creating a graphic from a data set through the use of variable mapping, data transformations, coordinate systems, and aesthetic features (Vanderplas, Cook, \& Hofmann, 2020) \svp{This is more of a grammar of graphics flowchart, which isn't *quite* the same thing}.
+\svp{I would honestly lead with this part...} Graphics are useful for data cleaning, exploring data structure, and have been an essential component in communicating information for the last 200 years (Lewandowsky \& Spence, 1989; Unwin, 2020; Vanderplas, Cook, \& Hofmann, 2020)
+During the 20th century, companies began utilizing graphics to understand their mechanics and support business decisions; news sources began displaying graphics of weather forecasts as a means to communicate critical information and aid in decision-making (Vanderplas, Cook, \& Hofmann, 2020)\svp{, and countries began using graphics in order to better understand their population and economic interests} \svp{Might want to add a set of pictures showing the different types of graphics from this sentence - playfair's balance of trade, statistical atlas, and something from e.g. early IBM?}.
 Today, we encounter data visualizations everywhere, researchers include graphics to communicate their results in scientific publications and mass media relies on graphics to convey news stories to the public through newspapers, TV, and the Web (Unwin, 2020).
 
 \begin{figure}[tbp]
@@ -250,9 +250,9 @@ Today, we encounter data visualizations everywhere, researchers include graphics
 In general, the public holds the self perception that numbers are difficult to understand and that they did not perform well in mathematics during school (Unwin, 2020).
 In contrary, there tends to be a positive self perception when it comes to graphics as they are viewed more as illustrations and not as critical parts of an argument.
 While tables can be burdensome to readers, graphics can improve the interpretation and representation of the same data (Uri \& Haemer, 1948).
-Shah, Mayer, \& Hegarty (1999) presents an opposing argument claiming there are still difficulties interpreting and explaining quantitative information depicted in graphs.
+Shah, Mayer, \& Hegarty (1999) presents an opposing argument claiming there are still difficulties interpreting and explaining quantitative information depicted in graphs. \svp{I think Shah's argument is that some forms of graphics are too complicated, but that doesn't mean she's arguing that graphics aren't useful.}
 One explanation for the opposing views is that the general public is untrained in the ability required for the evaluation of graphic material.
-The complexity of graphic devices is directly related to the degree and formality of training necessary for understanding (Haemer \& Kelley, 1949).
+The complexity of graphic devices is directly related to the degree and formality of training necessary for understanding (Haemer \& Kelley, 1949). \svp{This is 1. a bit hard to understand, and 2. seems to be a slightly different tone than before. Probably not the ideal way to end a paragraph.}
 
 Although statistical graphics have become widely used and valued in science, business, and in many other aspects of life, as creators of graphics, we are too accepting of them as default without asking critical questions about the graphics we create or view (Unwin, 2020).
 Vanderplas, Cook, \& Hofmann (2020) poses the general question we must ask ourselves, ``how effective is this graph at communicating useful information?''
@@ -270,7 +270,7 @@ The grammar of graphics constructs visual statistics through the use of ``tidy d
 The grammar allows variables, as designated in columns, to be mapped to different elements of the graphic such as the axes, colors, shapes, or facets.
 Software, such as Hadley Wickham's ggplot2 (Hadley Wickham, 2011), aims to implement these guidelines recommended through the grammar of graphics.\\
 Later, it is illustrated how the structure of ``tidy data'' and the construction of graphics as statistics aid themselves for easy experimentation which allows researchers to compare the effectiveness and understand the perception of different types of charts (Vanderplas, Cook, \& Hofmann, 2020).
-It is important to consider the purpose and motivation behind the generation of the chart as well as the complexity and intended audience you intend to view the chart.
+It is important to consider the purpose and motivation behind the generation of the chart as well as the complexity and intended audience you intend to view the chart. \svp{This is circling around to a different paragraph -- might be a sign that you need to tighten your argument a bit?}
 A general guideline when generating graphics is to keep it familiar in order to not intimidate your audience and to encourage further interaction from the viewers (Unwin, 2020).
 Despite past attempts to improve the use of graphics in science, Gordon \& Finch (2015) evaluated 97 graphs for overall quality, based on five principles of graphical excellence, and found there is still an astonishing lack in the quality of graphics.
 More startling is the fact that the source of the graphic from an applied science or a statistics graphic had no effect on the quality of the graphic.
@@ -301,14 +301,15 @@ Signals from the receptors are then transmitted through the retina, to the brain
 After recognition, viewers take some sort of motor action - for example, move closer to the object.
 The perceptual process is not direct and instead takes on more of a cyclic nature where a person may go through many iterations of stimuli, perception, recognition, and action before the final image is identified and understood.
 
-When perception occurs, we first experience the preattentive stage in which we observe color, shape, size, and other basic information about the stimuli being perceived. Preattentive perception effects are automatically processed within the first 500 millisectonds of viewing and do not depend on sustained cognitive attention (Vanderplas, Cook, \& Hofmann, 2020).
-Following the preattentive stage, direct attention is required for additional processing to allow us to draw connections between components that assist in our interpretation of the stimuli.
+When perception occurs, we first experience the \textbf{preattentive stage} in which we observe color, shape, size, and other basic information about the stimuli being perceived. Preattentive perception effects are automatically processed within the first 500 millisectonds of viewing and do not depend on sustained cognitive attention (Vanderplas, Cook, \& Hofmann, 2020).
+Following the preattentive stage, \textbf{direct attention} is required for additional processing to allow us to draw connections between components that assist in our interpretation of the stimuli.
 When viewing a chart or graph, most insights we gain are due to the cognitive processes that occur after attention is focused on specific aspects of the graph.
-The knowledge a viewer brings to the situation influences their cognitive evaluation of the stimuli.
+The knowledge a viewer brings to the situation influences their cognitive evaluation of the stimuli. \svp{Citation? You should probably also provide a bit more context for this piece of the paragraph instead of ending with dropping this one fact...}
 
 The relationship between physiology and perception can provide us information about how graphics may be understood and interpreted.
 According to a cognitive analysis, graph interpretation involves (a) relatively simple pattern perception and association processes in which viewers can associate graphic patterns to quantitative referents and (b) more complex and error-prone inferential processes in which viewers must mentally transform data (Shah, Mayer, \& Hegarty, 1999).
-Pyschophysics, the branch of psychology that deals with the relationships between physical stimuli (e.g.~light) and mental phenomena, aims to provide explanations of this relationship and point out human perceptual biases. By examining both behavior and physiology together, we are able to understand the mechanisms responsible for perception.
+Pyschophysics, the branch of psychology that deals with the relationships between physical stimuli (e.g.~light) and mental phenomena, aims to provide explanations of this relationship and point out human perceptual biases.
+By examining both behavior and physiology together, we are able to understand the mechanisms responsible for perception.
 
 \hypertarget{graphical-experiments}{%
 \section{Graphical Experiments}\label{graphical-experiments}}
@@ -318,14 +319,14 @@ off of a chart accurately, using data to make correct real-world decisions, or p
 All of these types of tests require different levels of use and manipulation of the information presented in the chart.
 The initial push to develop classification and recommendation systems for charts was grounded on heuristics rather than on experimentation (Vanderplas, Cook, \& Hofmann, 2020).
 Request were made for the validation of the perception and utility of statistical charts through graphical experiments.
-Initial experiments struggled with methodological issues (Croxton \& Stein, 1932; Croxton \& Stryker, 1927; Eells, 1926) with most early experimentation stemming from pyschophysics research on the perception of size and shape (Teghtsoonian, 1965).
-While a typical psychophysical experiment focuses on whether an effect is detectable and whether the magnitude of the effect can be accurately estimated, these early experiments instead depended on speed and accuracy for plot evaluation (Lewandowsky \& Spence, 1989; Spence, 1990; Teghtsoonian, 1965).
+Initial experiments struggled with methodological issues (Croxton \& Stein, 1932; Croxton \& Stryker, 1927; Eells, 1926) with most early experimentation stemming from psychophysics research on the perception of size and shape (Teghtsoonian, 1965).
+While a typical psychophysics experiment focuses on whether an effect is detectable and whether the magnitude of the effect can be accurately estimated, these early experiments instead depended on speed and accuracy for plot evaluation (Lewandowsky \& Spence, 1989; Spence, 1990; Teghtsoonian, 1965).
 
 Cognitive psychologists and statisticians made progress by conducting experiments to identify perceptual errors associated with different styles of graphics and charts (Cleveland \& McGill, 1985; Spence, 1990).
-These later experiments relied on similar methodology as early studies by relying on participants directly reading information from the charts to provide a quantitative estimate or answering a predefined question; as with the early studies, accuracy and response time being evaluated (Amer, 2005; Broersma \& Molenaar, 1985; Cleveland \& McGill, 1984; Dunn, 1988; Peterson \& Schramm, 1954; Tan, 1994).
-Cleveland \& McGill (1984) provide a basis for perceptual judgment, still utilized today, by examining six basic stimuli: position along a common scale, position along nonaligned scales, length, angle, slope, and area.
+These later experiments relied on similar methodology as early studies by relying on participants directly reading information from the charts to provide a quantitative estimate or answering a predefined question; as with the early studies, accuracy and response time being evaluated (Amer, 2005; Broersma \& Molenaar, 1985; Cleveland \& McGill, 1984; Dunn, 1988; Peterson \& Schramm, 1954; Tan, 1994). \svp{Too much use of "rely/relied", provide some examples of quantitative estimation questions -- this will better support Ch4}
+Cleveland \& McGill (1984) provide a basis for perceptual judgment, still utilized today, by examining six basic stimuli\svp{Not really stimuli, so much as concepts or aesthetics if you want to go there...}: position along a common scale, position along nonaligned scales, length, angle, slope, and area.
 Other experiments established the notion that redesigning graphs can result in the improvement of the viewer's interpretation (Shah, Mayer, \& Hegarty, 1999).
-This is done by relying on gestalt principles to minimize the inferential processes and maximize the pattern association processes required to interpret relevant information.
+This is done by relying on gestalt principles to minimize the inferential processes and maximize the pattern association processes required to interpret relevant information. \svp{This next bit seems like a different paragraph that should probably come a bit earlier...}
 The viewer must first encode the visual array by identifying meaningful visual features, such as a straight light slanting downward.
 Next, the viewer must classify the quantitative measures and relationships in which those visual features illustrate, such as a decreasing linear relationship between x and y.
 The last step involves translating the quantitative measures and relationships to the variables defined in the data set, such as a population decreasing over years.
@@ -334,7 +335,7 @@ These studies establish the process in which viewers interact with charts by fir
 In recent years, there have been advancements in the methodology used to investigate the effectiveness of statistical charts (Vanderplas, Cook, \& Hofmann, 2020).
 Some of the new methods, such as the lineup protocol (Buja et al., 2009), utilize the grammar of graphics designation of a data plot as a statistic through the functional mapping of variable(s).
 This allows the data plot to be tested similar to other statistics, by comparing the actual data plot to a set of plots with the absence of any data structure we can test the likelihood of any perceived structure being significant (Vanderplas, Cook, \& Hofmann, 2020).
-While the methodology of these recent experiments differs from earlier studies, the focus is still placed on the initial perception and graph comprehension with a relatively small amount of work conducted to understand the effect of design choices on higher cognitive processes such as learning or analysis (Green \& Fisher, 2009).
+While the methodology of these recent experiments differs from earlier studies, the focus is still on initial perception and graph comprehension with a relatively small amount of work conducted to understand the effect of design choices on higher cognitive processes such as learning or analysis (Green \& Fisher, 2009).
 Most recent graphics experiments have utilized tools such as Amazon Turk, Prolific, Reddit, and other crowd sourcing websites to evaluate the psychophysics and patterns associated with design choices (VanderPlas \& Hofmann, 2017). Such studies tend to be limited by the questions asked while other methods such as Thinking aloud and Eye Tracking allow researchers to evaluate the overall perception of the graphic (Vanderplas, Cook, \& Hofmann, 2020).
 
 \hypertarget{logarithmic-scales-and-mapping}{%
@@ -949,6 +950,16 @@ The NY Times team utilizes Data Driven Documents (D3) that allows readers to pre
 \tightlist
 \item
   Such complex inferential processes involve quantitatively transforming the information in the display (e.g., mentally transforming from a linear to logarithmic scale or calculating the difference between two or more data points; Cleveland, 1984, 1985).
+\item
+  Estimation Questions: Timmers \& Wagenaar (1977)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    If nothing will stop this decreasing trend, what is your prediction for 1980? (Group 1)
+  \item
+    When will the process reach \ldots{} (a certain level)? (Group 2)
+  \end{itemize}
 \end{itemize}
 
 \hypertarget{conclusion}{%
@@ -1116,6 +1127,9 @@ Tan, J. K. (1994). Human processing of two-dimensional graphics: Information-vol
 
 \leavevmode\hypertarget{ref-teghtsoonian1965judgment}{}%
 Teghtsoonian, M. (1965). The judgment of size. \emph{The American Journal of Psychology}, \emph{78}(3), 392--402.
+
+\leavevmode\hypertarget{ref-timmers_inverse_1977}{}%
+Timmers, H., \& Wagenaar, W. A. (1977). Inverse statistics and misperception of exponential growth. \emph{Perception \& Psychophysics}, \emph{21}(6), 558--562. http://doi.org/\href{https://doi.org/10.3758/BF03198737}{10.3758/BF03198737}
 
 \leavevmode\hypertarget{ref-unwin_why_2020}{}%
 Unwin, A. (2020). Why is {Data} {Visualization} {Important}? {What} is {Important} in {Data} {Visualization}? \emph{Harvard Data Science Review}. http://doi.org/\href{https://doi.org/10.1162/99608f92.8ae4d525}{10.1162/99608f92.8ae4d525}
