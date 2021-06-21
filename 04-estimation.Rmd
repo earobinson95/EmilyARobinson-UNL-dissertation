@@ -3,3 +3,6 @@
 ## Introduction
 
 + Such complex inferential processes involve quantitatively transforming the information in the display (e.g., mentally transforming from a linear to logarithmic scale or calculating the difference between two or more data points; Cleveland, 1984, 1985).
++ Estimation Questions: @timmers_inverse_1977
+    + If nothing will stop this decreasing trend, what is your prediction for 1980? (Group 1)
+    + When will the process reach ... (a certain level)? (Group 2)
