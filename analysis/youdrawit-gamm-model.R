@@ -217,12 +217,15 @@ model_data %>%
 # ------------------------------------------------------------------------------
 
 # Fit GAMM
-gamm <- bam(residualloess ~ beta*points_end*scale + 
+library(tictoc)
+tic()
+gamm <- bam(residualdrawn ~ -1 + beta:points_end:scale + 
             s(x, by = beta:points_end:scale) +
             s(participantID, bs = "re") +
             s(x,participantID, bs = "re"),
             method = "REML",
             data = model_data)
+toc()
 summary(gamm)
 anova(gamm)
 
@@ -241,9 +244,9 @@ head(grid_data)
 # Plot Predictions
 grid_data %>%
   ggplot(aes(x = x, y = estimate, group = scale, color = scale, fill = scale)) +
-  geom_ribbon(aes(ymin = lower, ymax = upper), color = NA, alpha = 0.2) +
+  geom_ribbon(aes(ymin = lower, ymax = upper), color = NA, alpha = 0.4) +
   geom_line() +
-  geom_line(data = model_data, aes(x = x, y = residualloess, group = plotID), alpha = 0.2) +
+  geom_line(data = model_data, aes(x = x, y = residualdrawn, group = plotID), alpha = 0.2) +
   geom_hline(yintercept = 0, linetype = "dashed") +
   facet_grid(beta ~ points_end, scales = "free", labeller = labeller(beta = label_both, points_end = label_both)) +
   theme_bw() +
