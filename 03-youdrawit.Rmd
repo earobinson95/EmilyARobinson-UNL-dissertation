@@ -119,6 +119,12 @@ knitr::include_graphics("images/r2d3+shiny-inkscape.png")
 
 ## Results
 
+### Methodological Verification
+
++ https://benediktehinger.de/blog/science/scatterplots-regression-lines-and-the-first-principal-component/
+
+### Exponential Growth
+
 + advocate smoothing of scatterplots to assist in detecting the shape of the point cloud in situations where the error in the data is substantial, or where the density of points changes along the abscissa @cleveland_graphical_1984
 + Twitter/Reddit/Direct Email Pilot Study (05/03/2021): [Exponential Prediction](https://srvanderplas.github.io/Perception-of-Log-Scales/you-draw-it-development/you-draw-it-pilot-app/analyses/you-draw-it-exponential-prediction-pilot.html)
 + https://shiny.srvanderplas.com/you-draw-it/
