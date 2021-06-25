@@ -2,9 +2,9 @@
 
 ## Introduction
 
-In [Perception through lineups](#lineups), a base foundation for future exploration of the use of log scales was established by evaluating participants ability to identify differences in charts through the use of lineups. 
+In [Chapter 2](#lineups), a base foundation for future exploration of the use of log scales was established by evaluating participants ability to identify differences in charts through the use of lineups. 
 This did not require that participants were able to understand exponential growth, identify log scales, or have any mathematical training; instead, it simply tested the change in perceptual sensitivity resulting from visualization choices. 
-In order to determine whether there are cognitive disadvantages to log scales, we utilize interactive graphics to test an individual's ability to make predictions for exponentially increasing data. In this study, participants are asked to draw a line using their computer mouse through the increasing exponential trend shown on both the log and linear scale. 
+In order to determine whether there are cognitive disadvantages to log scales, we utilize interactive graphics to test an individual's ability to make predictions for exponentially increasing data. In this study, participants are asked to draw a line using their computer mouse through the exponentially increasing trend shown on both the log and linear scale. 
 
 <!-- + Early studies explored the estimation and prediction of exponential growth, finding that growth is underestimated when presented both numerically and graphically but that numerical estimation is more accurate than graphical estimation for exponential curves [@wagenaar_misperception_1975].  -->
 
@@ -21,48 +21,86 @@ Participants were asked to fit lines by eye to four sets of points using an 8.5 
 A latin square design with packets of the set of points stapled together in four different orders was used in order to determine if there is an effect of order of presentation.
 It was found that order of presentation had no effect and that participants tended to fit the slope of the first principal component over the slope of the least squares regression line. 
 
-Recently, the New York Times introduced an interactive feature, called You Draw It [@aisch_cox_quealy_2015; @buchanan_park_pearce_2017; @katz_2017]. 
+In 2015, the New York Times introduced an interactive feature, called You Draw It [@aisch_cox_quealy_2015; @buchanan_park_pearce_2017; @katz_2017]. 
 Readers are asked to input their own assumptions about various metrics and learning how these asumptions relate to reality.
 The NY Times team utilizes Data Driven Documents (D3) that allows readers to predict these metrics through the use of drawing a line on their computer screen with their computer mouse.
 
 ### Data Driven Documents
 
-+ Data Driven Documents (D3) created by Mike Bostock while working on graphics at the New York Times
-    + Open-source JavaScript-based graphing framework
-    + ggplot2 is to R as D3.js is to JavaScript
-    + Allows binding objects and layers to plotting area
-        + Scalable Vector Graphics (SVG)
-            + Scaling of vector graphics preserves the shapes rather than the pixels
-            + Extemsible Markup Language-based (XML) (Human readable + machine readable; Interactivity + animation supported)
-            + JavaScript for scripting, CSS for styling
-    + Movement and user interaction (Hovering = highlighting, clicking = turning elements on/off, brushing, linking, etc.)
-    + Highly customizable
-    + Styling (pair with CSS)
-    + Tons of visualization formats!
-    + Can integrate multiple plots together & transitions ("scrollytelling")
-    + Used by NYT, FiveThirtyEight, Washington Post, Pew Research Center
-+ @r2d3
-    + integrates D3 visual into existing formats in R
-    + RMarkdown with HTML output or Shiny applications (SUPER POWERFUL)
-    +  easy to do data processing in R then apply D3.js code to visualize that data.
-    + **How it works**:
-        + Converts data in R to JSON that can be interpreted by JavaScript 
-            + Object is named 'data'
-            + Columns can be accessed
-        + Sources D3 code library
-            + Grabs version specified in function
-        + Creates plot container (svg is default)
-            + Or different container if specified
-            + specifies width and height of plot container
-        + Renders plot object using JavaScript and CSS files called in r2d3 call
-+ Grammar of D3
-    + elements (attributes + styles)
-    + scales (not automatically assigned in D3 like they are in ggplot2)
-    + New! (animations - transitions, enters, exits; interactions - mouseover/mouseleave)
+Major news and research organizations such as the NY Times, FiveThirtyEight, Washing Post, and the Pew Research Center create and customize graphics with Data Driven Documents. 
+Data Driven Documents (D3) is an open-source JavaScript based graphing framework created by Mike Bostock during his time working on graphics at the NY Times.
+For readers familiar with R, it is notable to consider D3 in JavaScript equivalent to the ggplot2 package in R. 
+Similar to geometric objects and style choices in ggplot2, the grammar of D3 also includes elements such as circles, paths, and rectangles with choices of attributes and styles such as color and size.
+Data Driven Documents depend on Extensible Markup Langage (XML) to generate graphics and images by binding objects and layers to the plotting area as Scalable Vector Graphics (SVG) in order to preserve the shapes rather than the pixels \pcref{fig:raster-vs-vector} \ear{CITE: https://martech.zone/vecteezy-svg-editor-online/}. 
+Advantages of using D3 include animation and allowing for movement and user interaction such as hovering, clicking, and brushing. 
+
+```{r raster-vs-vector, fig.cap = "SVG vs Raster", out.width="75%"}
+knitr::include_graphics("images/raster-vs-vector.png")
+```
+
+A challenge of working with D3 is the environment necessary to display the graphics and images. 
+The r2d3 package in R provides an efficient integration of D3 visuals and R by displaying them in familiar HTML output formats such as RMarkdown or Shiny applications [@r2d3].
+The creator of the graphic applies D3.js code to visualize data which has previously been processed within an R setting. 
+
+```{r r2d3-example, echo = T, eval = F}
+r2d3(data = data,
+     script = "d3-source-code.js",
+     d3_version= "5")
+```
+
+The example R code illustrates the structure of the r2d3 function in R which includes specification of a data frame in R (converted to a JSON file), the D3.js source code file, and the D3 version that accompanies the source code.
+A default SVG container for layering elements is then generated by the r2d3 function which renders the plot using the source code. 
+Section [3.2](#r2d3-with-shiny) outlines the development of the you draw it study interactive plots through the use of r2d3 with R shiny applications. 
+
+### Study Objectives
+
+This chapter first aims to establish the you draw it method as a tool for measuring predictions of trends; then this method will be used to test an individual's ability to make predictions for exponentially increasing data on both the log and linear scales, refered to as Prediction of Exponential Trends.
+@mosteller_eye_1981 was replicated as part of the study data collection in order to validate the you draw it method, this will be refered to as Eye Fitting Straight Lines in the Modern Era. 
+Data for both the Eye Fitting Straight Lines in the Modern Era and Prediction of Exponential Trends studies were collected in conjunction with one another over the same study participant sample. 
 
 ## Interactive Plot Development
 
 ### Data Simulation
+
+#### Eye Fitting Straight Lines in the Modern Era
+
+*Algorithm: Linear Data Generation* `linearDataGen()`
+
+**In parameters:** `y_xbar, slope, sigma, N = 30, xmin, xmax, xby = 0.25`
+
+**Out:** data list of point data and line data
+
+1. Randomly select and jitter N = 30 x-values along the domain.
+2. Determine y-intercept at x = 0 from the provided slope and y-intercept at the mean of x (y_xbar).
+    + Slope-intercept form: `y - y_xbar = m(x-xbar)`
+3. Generate "good" errors based on N(0,sigma). 
+    + Set constraint of the mean of the first N/3 = 10 errors less than |2*sigma|
+4. Simulate point data based on
+    + `y = yintercept + slope*x + error`
+5. Obtain least squares regression coefficients
+    + `lm(y ~ x, data = point_data)`
+6. Simulate least squares regression line data
+    + `y = yintercepthat + slopehat*x`
+7. Output data list of point data and line data
+
++ Specific r2d3 options:
+    + aspect ratio = 1
+    + linear = "true"
+    + free_draw = TRUE
+    + points = "full",
+    + x_by = 0.25
+    + draw_start = NA
+    + show_finished = T - graphics group / F
+    + x_range = c(0,20)
+    + y_range = range(all eye fitting data)*c(1.1, 1.1)
+    
++ Parameter combinations were selected to simulate data that replicates the data sets (S, F, V, N) in [@mosteller_eye_1981]. One-way ANOVA with 4 treatments
+    + **S**: positive slope, low variance (y_xbar = 3.88, slope = 0.66, sigma = 1.3, xrange = (0,20))
+    + **F**: positive slope, high variance (y_xbar = 3.9, slope = 0.66, sigma = 1.98, xrange = (0,20))
+    + **V**: steep positive slope (y_xbar = 3.89, slope = 1.98, sigma = 1.5, xrange = (4,18))
+    + **N**: negative slope, high variance (y_xbar = 4.11, slope = -0.70, sigma = 2.5, xrange = (0,20))
+
+#### Prediction of Exponential Trends
 
 \noindent *Algorithm 3.1: Exponential Data Generation*
 
@@ -93,8 +131,6 @@ The NY Times team utilizes Data Driven Documents (D3) that allows readers to pre
     + show_finished = T - graphics group / F
     + x_range = c(0,20)
     + y_range = range(y-points)*c(0.5, 2)
-    
-### Parameter Selection
 
 + Visit [You Draw It Development - parameter selection](https://emily-robinson.shinyapps.io/you-draw-it-parameter-selection/) for examples.
 
@@ -103,7 +139,7 @@ The NY Times team utilizes Data Driven Documents (D3) that allows readers to pre
     + Points End: 0.5; 0.75
     + Scale: Linear; Log
 
-### Data Driven Document Setup
+### Data Driven Documents Setup with Shiny {r2d3-with-shiny}
 
 \cref{fig:r2d3-shiny-flowchart}
 
@@ -111,7 +147,11 @@ The NY Times team utilizes Data Driven Documents (D3) that allows readers to pre
 knitr::include_graphics("images/r2d3+shiny-inkscape.png")
 ```
 
-## Study Design
++ https://benediktehinger.de/blog/science/scatterplots-regression-lines-and-the-first-principal-component/
++ [Appendix A](#d3.js-source-code)
+
+
+### Study Design
 
 + 8 data sets were generated for each individual upon start of experiment (4 Linear + 4 Exponential)
 + 12 you draw it task plots were shown to each individual (4 Linear + (4 Exponential x 2 Scales))
@@ -119,11 +159,12 @@ knitr::include_graphics("images/r2d3+shiny-inkscape.png")
 
 ## Results
 
-### Methodological Verification
+### Eye Fitting Straight Lines in the Modern Era
 
 + https://benediktehinger.de/blog/science/scatterplots-regression-lines-and-the-first-principal-component/
 
-### Exponential Growth
+
+### Prediction of Exponential Trends
 
 + advocate smoothing of scatterplots to assist in detecting the shape of the point cloud in situations where the error in the data is substantial, or where the density of points changes along the abscissa @cleveland_graphical_1984
 + Twitter/Reddit/Direct Email Pilot Study (05/03/2021): [Exponential Prediction](https://srvanderplas.github.io/Perception-of-Log-Scales/you-draw-it-development/you-draw-it-pilot-app/analyses/you-draw-it-exponential-prediction-pilot.html)
@@ -131,6 +172,5 @@ knitr::include_graphics("images/r2d3+shiny-inkscape.png")
 + Twitter/Reddit/Direct Email Pilot Study (05/03/2021): [Exponential Prediction](https://srvanderplas.github.io/Perception-of-Log-Scales/you-draw-it-development/you-draw-it-pilot-app/analyses/you-draw-it-exponential-prediction-pilot.html)
 
 ## Discussion and Conclusion
-
 
 

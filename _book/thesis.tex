@@ -23,6 +23,46 @@
 \newtheorem{cor}{Corollary}
 
 % Syntax highlighting #22
+  \usepackage{color}
+  \usepackage{fancyvrb}
+  \newcommand{\VerbBar}{|}
+  \newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+  \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+  % Add ',fontsize=\small' for more characters per line
+  \usepackage{framed}
+  \definecolor{shadecolor}{RGB}{248,248,248}
+  \newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+  \newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+  \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+  \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+  \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+  \newcommand{\BuiltInTok}[1]{#1}
+  \newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+  \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+  \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+  \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+  \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+  \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+  \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+  \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+  \newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+  \newcommand{\ExtensionTok}[1]{#1}
+  \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+  \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+  \newcommand{\ImportTok}[1]{#1}
+  \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+  \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+  \newcommand{\NormalTok}[1]{#1}
+  \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+  \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+  \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+  \newcommand{\RegionMarkerTok}[1]{#1}
+  \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+  \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+  \newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+  \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+  \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+  \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 
 %% https://github.com/rstudio/rmarkdown/issues/1649
 \newlength{\cslhangindent}
@@ -333,30 +373,30 @@ The last step involves translating the quantitative measures and relationships t
 These studies establish the process in which viewers interact with charts by first perceptually observing the visual features and later translating to cognitive processing of the information depicted by those features (Shah \& Carpenter, 1995).
 
 In recent years, there have been advancements in the methodology used to investigate the effectiveness of statistical charts (Vanderplas, Cook, \& Hofmann, 2020).
-Some of the new methods, such as the lineup protocol (Buja et al., 2009), utilize the grammar of graphics designation of a data plot as a statistic through the functional mapping of variable(s).
+Some of the new methods\svp{Lineups have been around since 2009, they're not quite *new* so much as newer than the other options?}, such as the lineup protocol (Buja et al., 2009), utilize the grammar of graphics designation of a data plot as a statistic through the functional mapping of variable(s). \svp{Lineups don't depend on grammar of graphics, though grammar of graphics makes them exponentially more powerful.}
 This allows the data plot to be tested similar to other statistics, by comparing the actual data plot to a set of plots with the absence of any data structure we can test the likelihood of any perceived structure being significant (Vanderplas, Cook, \& Hofmann, 2020).
-While the methodology of these recent experiments differs from earlier studies, the focus is still on initial perception and graph comprehension with a relatively small amount of work conducted to understand the effect of design choices on higher cognitive processes such as learning or analysis (Green \& Fisher, 2009).
-Most recent graphics experiments have utilized tools such as Amazon Turk, Prolific, Reddit, and other crowd sourcing websites to evaluate the psychophysics and patterns associated with design choices (VanderPlas \& Hofmann, 2017). Such studies tend to be limited by the questions asked while other methods such as Thinking aloud and Eye Tracking allow researchers to evaluate the overall perception of the graphic (Vanderplas, Cook, \& Hofmann, 2020).
+While the methodology of these recent experiments differs from earlier studies, the focus is still on initial perception and graph comprehension with a relatively small amount of work conducted to understand the effect of design choices on higher cognitive processes such as learning or analysis (Green \& Fisher, 2009). \svp{This is in part because lineups only ask about perceived differences and do not test the actual ability to read information off of a graph accurately or the conclusions drawn from the graph. They are a lower-level tool, which makes them powerful because they can eliminate ambiguous questions, but also limits their real-world application in the absence of complex experimental designs (feature hierarchy, etc.).}
+Most recent graphics experiments have utilized tools such as Amazon Turk, Prolific, Reddit, and other crowd sourcing websites to evaluate the psychophysics and patterns associated with design choices (VanderPlas \& Hofmann, 2017)\svp{You need to cite more than one experiment if you want to make this claim, and they can't all be lineup experiments. Really, you'd need a very long list of experiments and would ideally be able to show which used online vs. in-person testing...}. Such studies tend to be limited by the questions asked while other methods such as Thinking aloud and Eye Tracking allow researchers to evaluate the overall perception of the graphic (Vanderplas, Cook, \& Hofmann, 2020).
 
 \hypertarget{logarithmic-scales-and-mapping}{%
 \section{Logarithmic Scales and Mapping}\label{logarithmic-scales-and-mapping}}
 
 We have recently experienced the impact graphics and charts have on a large scale through the SARSNCOV-2 pandemic (COVID-19). At the beginning of 2020, we saw an influx of dashboards being developed to display case counts, transmission rates, and outbreak regions (GmbH, 2020); mass media routinely showed charts to share information with the public about the progression of the pandemic (Romano, Sotis, Dominioni, \& Guidi, 2020).
-People began seeking out graphical displays of COVID-19 data as a direct result of these pieces of work (GmbH, 2020); providing increased and ongoing exposure to these graphics over time.
+People began seeking out graphical displays of COVID-19 data as a direct result of these pieces of work (GmbH, 2020); providing increased and ongoing exposure to these graphics over time. \svp{It would be appropriate to add some of those graphics in here, if you wanted to...}
 Many of these graphics helped guide decision makers to implement policies such as shut-downs or mandated mask wearing, as well as facilitated communication with the public to increase compliance (Bavel et al., 2020).
 As graphics began to play an important role in the communication of the pandemic, creators of graphics were faced with design choices in order to ensure their charts were effective.
 
 When faced with data which spans several orders of magnitude, we must decide whether to show the data on its original
 scale (compressing the smaller magnitudes into relatively little area) or to transform the scale and alter the contextual appearance of the data.
 One common solution is to use a log scale transformation to display data over several orders of magnitude within one graph.
-Logarithms turn multiplicative relationships additive, showing elasticities and other proportional changes, and also linearize power laws (Menge et al., 2018).
+Logarithms turn multiplicative relationships additive\svp{phrasing?}, showing elasticities and other proportional changes, and also linearize power laws (Menge et al., 2018).
 They also have practical purposes, easing the computation of small numbers such as likelihoods and transforming data to fit statistical assumptions.
-When presenting log scaled data, it is possible to use either un-transformed scale labels (for example, values of 1, 10 and 100 are equally spaced along the axis) or log transformed scale labels (for example, 0, 1, and 2, showing the corresponding powers of 10).
+When presenting log scaled data, it is possible to use either un-transformed scale labels (for example, values of 1, 10 and 100 are equally spaced along the axis) or log transformed scale labels (for example, 0, 1, and 2, showing the corresponding powers of 10).\svp{In the grammar of graphics/ggplot2 formulation, this is the difference between a scale and a transformation... it might be worth seeing if that is a hadley-ism or if that is a wider convention.}
 We have recently experienced the benefits and pitfalls of using log scales as COVID-19 dashboards displayed
 case count data on both the log and linear scale (Burn-Murdoch et al., 2020; Fagen-Ulmschneider, 2020). In spring 2020, during the early stages of the COVID-19 pandemic, there were large magnitude discrepancies in case counts at a given time point between different geographic regions (e.g.~states and provinces as well as countries and continents).
 During this time, we saw the usefulness of log scale transformations showing case count curves for areas with few cases and areas with many cases within one chart.
 As the pandemic evolved, and the case counts were no longer spreading exponentially, graphs with linear scales seemed more effective at spotting early increases in case counts that signaled more localized outbreaks.
-This is only one recent example of a situation in which both log and linear scales are useful for showing different aspects of the same data; there are long histories of using log scales to display results in ecology, psychophysics, engineering, and physics (Heckler, Mikula, \& Rosenblatt, 2013; Menge et al., 2018). The usefulness of the log scale in science is exemplified in \cref{fig:log-scale-comic} (Munroe, 2005).
+This is only one recent example of a situation in which both log and linear scales are useful for showing different aspects of the same data. There are long histories of using log scales to display results in ecology, psychophysics, engineering, and physics (Heckler, Mikula, \& Rosenblatt, 2013; Menge et al., 2018) \svp{elaborate on this a bit - when are they used, and where are they effective? Can you draw more comprehensive conclusions about the use of log scales?}. The usefulness of the log scale in science is exemplified in \cref{fig:log-scale-comic} (Munroe, 2005).
 
 \begin{figure}[tbp]
 
@@ -367,15 +407,19 @@ This is only one recent example of a situation in which both log and linear scal
 \caption{Log scale comic}\label{fig:log-scale-comic}
 \end{figure}
 
+\svp{You might start this out by pointing out that while logarithms seem unnatural at first, we learn to count by ones, tens, and hundreds -- that is, in a base10 order of magnitude system. Then you can transition to research showing one, two, 10 and log-number scales.}
+
 Research suggests our perception and mapping of numbers to a number line is logarithmic at first, but transitions
 to a linear scale later in development, with formal mathematics education (Dehaene, Izard, Spelke, \& Pica, 2008; Siegler \& Braithwaite, 2017, 2017; Varshney \& Sun, 2013).
-For example, a kindergartner asked to place numbers 1-10 along a number line would place 3 close to the middle, following the logarithmic perspective (Varshney \& Sun, 2013).
-With basic training, members of remote cultures with a basic vocabulary and minimal education understood the concept that numbers can be mapped into a spacial space (Dehaene, Izard, Spelke, \& Pica, 2008). There was a gradual transition from logarithmic to linear scale as the mapping of whole number magnitude representations transitioned from a compressed (approximately lograithmic) distribution to an approximately linear one.
+For example, a kindergartner asked to place numbers 1-10 along a number line would place 3 close to the middle, following the logarithmic perspective (Varshney \& Sun, 2013). \svp{Might be worth showing this graphically if you can reproduce pics from the paper...}
+With basic training, members of remote cultures with a basic vocabulary and minimal education understood the concept that numbers can be mapped into a spacial space (Dehaene, Izard, Spelke, \& Pica, 2008). There was a gradual transition from logarithmic to linear scale as the mapping of whole number magnitude representations transitioned from a compressed (approximately logarithmic) distribution to an approximately linear one.
 These results indicate the universal and cultural-dependent characteristics of the sense of number.
+
+\svp{Weber's law isn't quite the same thing as the numerical cognition stuff on log scales - it's a different perceptual phenomenon that is definitely related, but distinct in causal mechanism (as far as I know).}
 
 This phenomenon was first discovered by Ernst Weber, an early psychophysics researcher, by determining the relationship between the difference threshold (smallest detectable difference between two sensory stimuli; known as the ``Just Noticable Difference'') and the magnitude of a stimulus.
 This holds true for a variety of stimuli such as weight, light, and sound as well as for a range of magnitudes; larger numbers require a proportional larger difference in order to remain equally discriminate (Dehaene, Izard, Spelke, \& Pica, 2008).
-Known as Weber's law, it was established that we do not notice absolute changes in stimuli, but instead that we notice the relative change (Sun, Wang, Goyal, \& Varshney, 2012).
+Known as \textbf{Weber's law}, it was established that we do not notice absolute changes in stimuli, but instead that we notice the relative change (Sun, Wang, Goyal, \& Varshney, 2012).
 Numerically, Weber's Law is defined as
 \begin{equation}
 \frac{\Delta S}{S} = K
@@ -395,6 +439,9 @@ Similar to the training and education required to transition from logarithmic ma
 \hypertarget{underestimation}{%
 \section{Underestimation of Exponential Growth}\label{underestimation}}
 
+\svp{Start out by showing exponential growth e.g. 3 stages (early, mid, late) to explain why this is a hard problem to solve...}
+\svp{This reads like a bulleted list turned into a paragraph, which isn't bad, but it does need some work - turn it into a narrative, explain weaknesses in these studies, etc.}
+
 Early studies explored the estimation and prediction of exponential growth, finding that growth is underestimated when presented both numerically and graphically but that numerical estimation is more accurate than graphical estimation for exponential curves (Wagenaar \& Sagaria, 1975).
 One way to improve estimation of increasing exponential trends is to provide immediate feedback to participants about the accuracy of their current predictions (Mackinnon \& Wearing, 1991).
 While prior contextual knowledge or experience with exponential growth does not improve estimation, instruction on exponential growth reduces the underestimation: participants adjust their initial starting value but not their perception of growth rate (Jones, 1977; Wagenaar \& Sagaria, 1975).
@@ -406,7 +453,9 @@ The authors propose three types of misconceptions participants encountered when 
 These misconceptions are a result of linear extrapolation assuming that a line in log-log space represents a line instead of the power law in linear-linear space.
 The study found that in each of these scenarios, participants were confident in their incorrect responses, indicating incorrect knowledge rather than a lack of knowledge.
 
-The `hand-hold falacy' stems from the misconception that steeper slopes in log-log relationships are steeper slopes in linear-linear space. In fact, it is not only the slope that matters, but also the intercept and the location on the horizontal axis since a line in log-log space represents a power law in linear-linear space (i.e.~linear extraploation).
+\svp{You might take a whack at illustrating some of these fallacies}
+
+The `hand-hold fallacy' stems from the misconception that steeper slopes in log-log relationships are steeper slopes in linear-linear space. In fact, it is not only the slope that matters, but also the intercept and the location on the horizontal axis since a line in log-log space represents a power law in linear-linear space (i.e.~linear extrapolation).
 Emerging from `Zeno's zero fallacy' is the misconception that positively sloped lines in log-log space can imply a non-zero value of y when x is zero.
 This is never true as positively sloped lines in log-log space actually imply that y = 0 when x = 0. This misconception again is a result of linear extrapolation assuming that a line in log-log space represents a line instead of the power law in linear-linear space.
 The last misconception, `watch out for curves fallacies' encompasses three faults: (1) lines in log-log space are lines in linear-linear space, (2) lines in log-log space curve upward in linear-linear space, and (3) curves in log-log space have the same curvature in linear-linear space.
@@ -423,6 +472,8 @@ I conducted a graphical task similar to the New York Times ``You Draw It'' page 
 Participants were asked to draw a line using their computer mouse through the increasing exponential trend shown on both scales.
 In addition to differentiation and prediction of exponentially increasing data, an experimental task was conducted to test an individuals' ability to translate a graph of exponentially increasing data into real value quantities and extend their estimations by making comparisons.
 The results of the three experimental tasks provide guidelines for readers to actively choose which of many possible graphics to draw, according to some set of design choices, to ensure that their charts are effective.
+
+\svp{Things that seem to be missing: 1) Cleveland and McGill - hierarchy of accuracy in plot objects. You can think of e.g. exponentials as a series of tangential angles, which might help with explaining underestimation? 2) some literature explaining the different levels of complexity between perception, reading information off of a graph, predicting information, etc. - you should find this if only because it grounds the whole experiment in psychological theory (but you don't have to find it for your prelim)}
 
 \hypertarget{lineups}{%
 \chapter{Perception through lineups}\label{lineups}}
@@ -657,9 +708,9 @@ What remains to be seen is whether there are cognitive disadvantages to log scal
 \hypertarget{introduction-1}{%
 \section{Introduction}\label{introduction-1}}
 
-In \protect\hyperlink{lineups}{Perception through lineups}, a base foundation for future exploration of the use of log scales was established by evaluating participants ability to identify differences in charts through the use of lineups.
+In \protect\hyperlink{lineups}{Chapter 2}, a base foundation for future exploration of the use of log scales was established by evaluating participants ability to identify differences in charts through the use of lineups.
 This did not require that participants were able to understand exponential growth, identify log scales, or have any mathematical training; instead, it simply tested the change in perceptual sensitivity resulting from visualization choices.
-In order to determine whether there are cognitive disadvantages to log scales, we utilize interactive graphics to test an individual's ability to make predictions for exponentially increasing data. In this study, participants are asked to draw a line using their computer mouse through the increasing exponential trend shown on both the log and linear scale.
+In order to determine whether there are cognitive disadvantages to log scales, we utilize interactive graphics to test an individual's ability to make predictions for exponentially increasing data. In this study, participants are asked to draw a line using their computer mouse through the exponentially increasing trend shown on both the log and linear scale.
 
 \hypertarget{past-methodology}{%
 \subsection{Past Methodology}\label{past-methodology}}
@@ -675,122 +726,159 @@ Participants were asked to fit lines by eye to four sets of points using an 8.5 
 A latin square design with packets of the set of points stapled together in four different orders was used in order to determine if there is an effect of order of presentation.
 It was found that order of presentation had no effect and that participants tended to fit the slope of the first principal component over the slope of the least squares regression line.
 
-Recently, the New York Times introduced an interactive feature, called You Draw It (Aisch, Cox, \& Quealy, 2015; Buchanan, Park, \& Pearce, 2017; Katz, 2017).
+In 2015, the New York Times introduced an interactive feature, called You Draw It (Aisch, Cox, \& Quealy, 2015; Buchanan, Park, \& Pearce, 2017; Katz, 2017).
 Readers are asked to input their own assumptions about various metrics and learning how these asumptions relate to reality.
 The NY Times team utilizes Data Driven Documents (D3) that allows readers to predict these metrics through the use of drawing a line on their computer screen with their computer mouse.
 
 \hypertarget{data-driven-documents}{%
 \subsection{Data Driven Documents}\label{data-driven-documents}}
 
-\begin{itemize}
-\tightlist
-\item
-  Data Driven Documents (D3) created by Mike Bostock while working on graphics at the New York Times
+Major news and research organizations such as the NY Times, FiveThirtyEight, Washing Post, and the Pew Research Center create and customize graphics with Data Driven Documents.
+Data Driven Documents (D3) is an open-source JavaScript based graphing framework created by Mike Bostock during his time working on graphics at the NY Times.
+For readers familiar with R, it is notable to consider D3 in JavaScript equivalent to the ggplot2 package in R.
+Similar to geometric objects and style choices in ggplot2, the grammar of D3 also includes elements such as circles, paths, and rectangles with choices of attributes and styles such as color and size.
+Data Driven Documents depend on Extensible Markup Langage (XML) to generate graphics and images by binding objects and layers to the plotting area as Scalable Vector Graphics (SVG) in order to preserve the shapes rather than the pixels \pcref{fig:raster-vs-vector} \ear{CITE: https://martech.zone/vecteezy-svg-editor-online/}.
+Advantages of using D3 include animation and allowing for movement and user interaction such as hovering, clicking, and brushing.
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Open-source JavaScript-based graphing framework
-  \item
-    ggplot2 is to R as D3.js is to JavaScript
-  \item
-    Allows binding objects and layers to plotting area
+\begin{figure}[tbp]
 
-    \begin{itemize}
-    \tightlist
-    \item
-      Scalable Vector Graphics (SVG)
+{\centering \includegraphics[width=0.75\linewidth,]{images/raster-vs-vector} 
 
-      \begin{itemize}
-      \tightlist
-      \item
-        Scaling of vector graphics preserves the shapes rather than the pixels
-      \item
-        Extemsible Markup Language-based (XML) (Human readable + machine readable; Interactivity + animation supported)
-      \item
-        JavaScript for scripting, CSS for styling
-      \end{itemize}
-    \end{itemize}
-  \item
-    Movement and user interaction (Hovering = highlighting, clicking = turning elements on/off, brushing, linking, etc.)
-  \item
-    Highly customizable
-  \item
-    Styling (pair with CSS)
-  \item
-    Tons of visualization formats!
-  \item
-    Can integrate multiple plots together \& transitions (``scrollytelling'')
-  \item
-    Used by NYT, FiveThirtyEight, Washington Post, Pew Research Center
-  \end{itemize}
-\item
-  Luraschi \& Allaire (2018)
+}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    integrates D3 visual into existing formats in R
-  \item
-    RMarkdown with HTML output or Shiny applications (SUPER POWERFUL)
-  \item
-    easy to do data processing in R then apply D3.js code to visualize that data.
-  \item
-    \textbf{How it works}:
+\caption{SVG vs Raster}\label{fig:raster-vs-vector}
+\end{figure}
 
-    \begin{itemize}
-    \tightlist
-    \item
-      Converts data in R to JSON that can be interpreted by JavaScript
+A challenge of working with D3 is the environment necessary to display the graphics and images.
+The r2d3 package in R provides an efficient integration of D3 visuals and R by displaying them in familiar HTML output formats such as RMarkdown or Shiny applications (Luraschi \& Allaire, 2018).
+The creator of the graphic applies D3.js code to visualize data which has previously been processed within an R setting.
 
-      \begin{itemize}
-      \tightlist
-      \item
-        Object is named `data'
-      \item
-        Columns can be accessed
-      \end{itemize}
-    \item
-      Sources D3 code library
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{r2d3}\NormalTok{(}\AttributeTok{data =}\NormalTok{ data, }\AttributeTok{script =} \StringTok{"d3{-}source{-}code.js"}\NormalTok{, }
+    \AttributeTok{d3\_version =} \StringTok{"5"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
-      \begin{itemize}
-      \tightlist
-      \item
-        Grabs version specified in function
-      \end{itemize}
-    \item
-      Creates plot container (svg is default)
+The example R code illustrates the structure of the r2d3 function in R which includes specification of a data frame in R (converted to a JSON file), the D3.js source code file, and the D3 version that accompanies the source code.
+A default SVG container for layering elements is then generated by the r2d3 function which renders the plot using the source code.
+Section \protect\hyperlink{r2d3-with-shiny}{3.2} outlines the development of the you draw it study interactive plots through the use of r2d3 with R shiny applications.
 
-      \begin{itemize}
-      \tightlist
-      \item
-        Or different container if specified
-      \item
-        specifies width and height of plot container
-      \end{itemize}
-    \item
-      Renders plot object using JavaScript and CSS files called in r2d3 call
-    \end{itemize}
-  \end{itemize}
-\item
-  Grammar of D3
+\hypertarget{study-objectives}{%
+\subsection{Study Objectives}\label{study-objectives}}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    elements (attributes + styles)
-  \item
-    scales (not automatically assigned in D3 like they are in ggplot2)
-  \item
-    New! (animations - transitions, enters, exits; interactions - mouseover/mouseleave)
-  \end{itemize}
-\end{itemize}
+This chapter first aims to establish the you draw it method as a tool for measuring predictions of trends; then this method will be used to test an individual's ability to make predictions for exponentially increasing data on both the log and linear scales, refered to as Prediction of Exponential Trends.
+Mosteller, Siegel, Trapido, \& Youtz (1981) was replicated as part of the study data collection in order to validate the you draw it method, this will be refered to as Eye Fitting Straight Lines in the Modern Era.
+Data for both the Eye Fitting Straight Lines in the Modern Era and Prediction of Exponential Trends studies were collected in conjunction with one another over the same study participant sample.
 
 \hypertarget{interactive-plot-development}{%
 \section{Interactive Plot Development}\label{interactive-plot-development}}
 
 \hypertarget{data-simulation}{%
 \subsection{Data Simulation}\label{data-simulation}}
+
+\hypertarget{eye-fitting-straight-lines-in-the-modern-era}{%
+\subsubsection{Eye Fitting Straight Lines in the Modern Era}\label{eye-fitting-straight-lines-in-the-modern-era}}
+
+\emph{Algorithm: Linear Data Generation} \texttt{linearDataGen()}
+
+\textbf{In parameters:} \texttt{y\_xbar,\ slope,\ sigma,\ N\ =\ 30,\ xmin,\ xmax,\ xby\ =\ 0.25}
+
+\textbf{Out:} data list of point data and line data
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Randomly select and jitter N = 30 x-values along the domain.
+\item
+  Determine y-intercept at x = 0 from the provided slope and y-intercept at the mean of x (y\_xbar).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Slope-intercept form: \texttt{y\ -\ y\_xbar\ =\ m(x-xbar)}
+  \end{itemize}
+\item
+  Generate ``good'' errors based on N(0,sigma).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Set constraint of the mean of the first N/3 = 10 errors less than \textbar2*sigma\textbar{}
+  \end{itemize}
+\item
+  Simulate point data based on
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{y\ =\ yintercept\ +\ slope*x\ +\ error}
+  \end{itemize}
+\item
+  Obtain least squares regression coefficients
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{lm(y\ \textasciitilde{}\ x,\ data\ =\ point\_data)}
+  \end{itemize}
+\item
+  Simulate least squares regression line data
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{y\ =\ yintercepthat\ +\ slopehat*x}
+  \end{itemize}
+\item
+  Output data list of point data and line data
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Specific r2d3 options:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    aspect ratio = 1
+  \item
+    linear = ``true''
+  \item
+    free\_draw = TRUE
+  \item
+    points = ``full,''
+  \item
+    x\_by = 0.25
+  \item
+    draw\_start = NA
+  \item
+    show\_finished = T - graphics group / F
+  \item
+    x\_range = c(0,20)
+  \item
+    y\_range = range(all eye fitting data)*c(1.1, 1.1)
+  \end{itemize}
+\item
+  Parameter combinations were selected to simulate data that replicates the data sets (S, F, V, N) in (Mosteller, Siegel, Trapido, \& Youtz, 1981). One-way ANOVA with 4 treatments
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{S}: positive slope, low variance (y\_xbar = 3.88, slope = 0.66, sigma = 1.3, xrange = (0,20))
+  \item
+    \textbf{F}: positive slope, high variance (y\_xbar = 3.9, slope = 0.66, sigma = 1.98, xrange = (0,20))
+  \item
+    \textbf{V}: steep positive slope (y\_xbar = 3.89, slope = 1.98, sigma = 1.5, xrange = (4,18))
+  \item
+    \textbf{N}: negative slope, high variance (y\_xbar = 4.11, slope = -0.70, sigma = 2.5, xrange = (0,20))
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{prediction-of-exponential-trends}{%
+\subsubsection{Prediction of Exponential Trends}\label{prediction-of-exponential-trends}}
 
 \noindent *Algorithm 3.1: Exponential Data Generation*
 
@@ -848,7 +936,6 @@ The NY Times team utilizes Data Driven Documents (D3) that allows readers to pre
 \end{enumerate}
 
 \begin{itemize}
-\tightlist
 \item
   Specific r2d3 options:
 
@@ -873,12 +960,6 @@ The NY Times team utilizes Data Driven Documents (D3) that allows readers to pre
   \item
     y\_range = range(y-points)*c(0.5, 2)
   \end{itemize}
-\end{itemize}
-
-\hypertarget{parameter-selection-1}{%
-\subsection{Parameter Selection}\label{parameter-selection-1}}
-
-\begin{itemize}
 \item
   Visit \href{https://emily-robinson.shinyapps.io/you-draw-it-parameter-selection/}{You Draw It Development - parameter selection} for examples.
 \item
@@ -895,8 +976,8 @@ The NY Times team utilizes Data Driven Documents (D3) that allows readers to pre
   \end{itemize}
 \end{itemize}
 
-\hypertarget{data-driven-document-setup}{%
-\subsection{Data Driven Document Setup}\label{data-driven-document-setup}}
+\hypertarget{data-driven-documents-setup-with-shiny-r2d3-with-shiny}{%
+\subsection{Data Driven Documents Setup with Shiny \{r2d3-with-shiny\}}\label{data-driven-documents-setup-with-shiny-r2d3-with-shiny}}
 
 \cref{fig:r2d3-shiny-flowchart}
 
@@ -909,8 +990,16 @@ The NY Times team utilizes Data Driven Documents (D3) that allows readers to pre
 \caption{Interactive plot development}\label{fig:r2d3-shiny-flowchart}
 \end{figure}
 
+\begin{itemize}
+\tightlist
+\item
+  \url{https://benediktehinger.de/blog/science/scatterplots-regression-lines-and-the-first-principal-component/}
+\item
+  \protect\hyperlink{d3.js-source-code}{Appendix A}
+\end{itemize}
+
 \hypertarget{study-design-1}{%
-\section{Study Design}\label{study-design-1}}
+\subsection{Study Design}\label{study-design-1}}
 
 \begin{itemize}
 \tightlist
@@ -924,6 +1013,18 @@ The NY Times team utilizes Data Driven Documents (D3) that allows readers to pre
 
 \hypertarget{results-1}{%
 \section{Results}\label{results-1}}
+
+\hypertarget{eye-fitting-straight-lines-in-the-modern-era-1}{%
+\subsection{Eye Fitting Straight Lines in the Modern Era}\label{eye-fitting-straight-lines-in-the-modern-era-1}}
+
+\begin{itemize}
+\tightlist
+\item
+  \url{https://benediktehinger.de/blog/science/scatterplots-regression-lines-and-the-first-principal-component/}
+\end{itemize}
+
+\hypertarget{prediction-of-exponential-trends-1}{%
+\subsection{Prediction of Exponential Trends}\label{prediction-of-exponential-trends-1}}
 
 \begin{itemize}
 \tightlist
@@ -967,8 +1068,452 @@ The NY Times team utilizes Data Driven Documents (D3) that allows readers to pre
 
 \appendix
 
-\hypertarget{the-first-appendix}{%
-\chapter{The First Appendix}\label{the-first-appendix}}
+\hypertarget{d3.js-source-code}{%
+\chapter{You draw it D3.js source code}\label{d3.js-source-code}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Define variable margins}
+\NormalTok{const margin }\OtherTok{=}\NormalTok{ \{left}\SpecialCharTok{:} \DecValTok{55}\NormalTok{, }
+\NormalTok{                right}\SpecialCharTok{:} \DecValTok{10}\NormalTok{, }
+\NormalTok{                top}\SpecialCharTok{:}\NormalTok{ options.title ? }\DecValTok{40}\SpecialCharTok{:} \DecValTok{10}\NormalTok{, }
+\NormalTok{                bottom}\SpecialCharTok{:}\NormalTok{ options.title? }\DecValTok{25}\SpecialCharTok{:} \DecValTok{55}\NormalTok{\};}
+
+\CommentTok{\# Define variable default line attributes}
+\CommentTok{\# do not fill the line in (default is filled in black beneath the line)}
+\CommentTok{\# stroke provides the color of the line stroke. This is either options.data\_line\_color (not yet defined) or steelblue}
+\CommentTok{\# sets the the stroke width (how thick)}
+\CommentTok{\# sets how tojoin the lines? and end the lines? rounded.}
+\CommentTok{\# Since we are using Object.assign, we are passing the source options.line\_style into the vector of information defined. See top for options list.}
+\NormalTok{const default\_line\_attrs }\OtherTok{=} \FunctionTok{Object.assign}\NormalTok{(\{}
+\NormalTok{  fill}\SpecialCharTok{:} \StringTok{"none"}\NormalTok{,}
+\NormalTok{  stroke}\SpecialCharTok{:}\NormalTok{ options.data\_line\_color }\SpecialCharTok{||} \StringTok{\textquotesingle{}steelblue\textquotesingle{}}\NormalTok{,}
+\NormalTok{  strokeWidth}\SpecialCharTok{:} \DecValTok{4}\NormalTok{,}
+\NormalTok{  strokeLinejoin}\SpecialCharTok{:} \StringTok{"round"}\NormalTok{,}
+\NormalTok{  strokeLinecap}\SpecialCharTok{:} \StringTok{"round"}\NormalTok{,}
+\NormalTok{\}, options.line\_style);}
+
+\CommentTok{\# defines a changing variable called state??}
+\CommentTok{\# provides the data from top}
+\CommentTok{\# appends the svg group and moves it to the correct location...}
+\CommentTok{\# sets the width and height of the plot}
+\CommentTok{\# Since we are using object.assign, the options are passed in as the source, this will "overwrite" any information provided in the options???}
+\CommentTok{\# Is state like our wrapper?}
+
+\NormalTok{let state }\OtherTok{=} \FunctionTok{Object.assign}\NormalTok{(\{}
+\NormalTok{  line\_data}\SpecialCharTok{:}\NormalTok{ data.line\_data,}
+\NormalTok{  point\_data}\SpecialCharTok{:}\NormalTok{ data.point\_data,}
+\NormalTok{  svg}\SpecialCharTok{:} \FunctionTok{svg.append}\NormalTok{(}\StringTok{\textquotesingle{}g\textquotesingle{}}\NormalTok{)}\FunctionTok{.translate}\NormalTok{([margin.left, margin.top])}\FunctionTok{.attr}\NormalTok{(}\StringTok{"class"}\NormalTok{, }\StringTok{"wrapper"}\NormalTok{),}
+\NormalTok{  w}\SpecialCharTok{:}\NormalTok{ height}\SpecialCharTok{*}\NormalTok{options.aspect\_ratio }\SpecialCharTok{{-}}\NormalTok{ margin.left }\SpecialCharTok{{-}}\NormalTok{ margin.right,}
+\NormalTok{  h}\SpecialCharTok{:}\NormalTok{ height }\SpecialCharTok{{-}}\NormalTok{ margin.top }\SpecialCharTok{{-}}\NormalTok{ margin.bottom,}
+\NormalTok{\}, options);}
+
+\CommentTok{\# option variables are passed into state}
+\CommentTok{\# console.log(state.y\_range)}
+
+\CommentTok{\# To distinguish between code that runs at initialization{-}time only and}
+\CommentTok{\# code that runs when data changes, organize your code so that the code}
+\CommentTok{\# which responds to data changes is contained within the r2d3.onRender()}
+\CommentTok{\# https://rstudio.github.io/r2d3/articles/advanced\_rendering.html}
+\FunctionTok{r2d3.onRender}\NormalTok{(}\ControlFlowTok{function}\NormalTok{(data, svg, width, height, options) \{}
+  
+\NormalTok{  state.line\_data }\OtherTok{=}\NormalTok{ data.line\_data;}
+\NormalTok{  state.point\_data }\OtherTok{=}\NormalTok{ data.point\_data;}
+  
+\NormalTok{  state }\OtherTok{=} \FunctionTok{Object.assign}\NormalTok{(state, options);}
+\NormalTok{  state.options }\OtherTok{=}\NormalTok{ options;}
+\NormalTok{  state.w }\OtherTok{=}\NormalTok{ height}\SpecialCharTok{*}\NormalTok{options.aspect\_ratio;}
+
+  \FunctionTok{start\_drawer}\NormalTok{(state);}
+
+\NormalTok{\});}
+
+\CommentTok{\# An explicit resize handler}
+\CommentTok{\# is this like our bounds??? or does this have to do with scales?}
+\CommentTok{\# https://rstudio.github.io/r2d3/articles/advanced\_rendering.html}
+\CommentTok{\# redraws plot as you resize your browser window }
+\CommentTok{\# (box has changed size that we did not do on code end)}
+\FunctionTok{r2d3.onResize}\NormalTok{(}\ControlFlowTok{function}\NormalTok{(width, height, options) \{}
+\NormalTok{  state.w }\OtherTok{=}\NormalTok{ height}\SpecialCharTok{*}\NormalTok{state.options.aspect\_ratio }\SpecialCharTok{{-}}\NormalTok{ margin.left }\SpecialCharTok{{-}}\NormalTok{ margin.right;}
+\NormalTok{  state.h }\OtherTok{=}\NormalTok{ height }\SpecialCharTok{{-}}\NormalTok{ margin.top }\SpecialCharTok{{-}}\NormalTok{ margin.bottom;}
+  
+  \FunctionTok{start\_drawer}\NormalTok{(state, }\AttributeTok{reset =}\NormalTok{ false);}
+
+\NormalTok{\});}
+
+\CommentTok{\# Main function that draws current state of viz}
+\CommentTok{\# set up scales \& draw true line if we decide to do that.}
+\ControlFlowTok{function} \FunctionTok{start\_drawer}\NormalTok{(state, }\AttributeTok{reset =}\NormalTok{ true)\{}
+\NormalTok{  const scales }\OtherTok{=} \FunctionTok{setup\_scales}\NormalTok{(state);}
+  
+  \ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\NormalTok{state.free\_draw)\{}
+    \FunctionTok{draw\_true\_line}\NormalTok{(state, scales, state.draw\_start);}
+\NormalTok{  \}}
+  
+  \CommentTok{\# Cover hidden portion with a rectangle}
+  \CommentTok{\# const line\_hider = setup\_line\_hider(state.svg, state.draw\_start, scales);}
+  
+  \CommentTok{\# if we reset (these are points that can be drawn) remove what user has drawn.}
+  \ControlFlowTok{if}\NormalTok{(reset)\{}
+    \CommentTok{\# start with the svg object provided by r2d3}
+    \CommentTok{\# multiassign where setup\_drawable\_points is grabbing the parameters it needs from state: data, freedraw and draw\_start}
+\NormalTok{    state.drawable\_points }\OtherTok{=} \FunctionTok{setup\_drawable\_points}\NormalTok{(state);}
+\NormalTok{  \}}
+  
+  \CommentTok{\# if we have points, we draw user\textquotesingle{}s line.}
+  \FunctionTok{draw\_user\_line}\NormalTok{(state, scales);}
+  \FunctionTok{draw\_rectangle}\NormalTok{(state, scales);}
+  \FunctionTok{draw\_finished\_line}\NormalTok{(state, scales, state.draw\_start);}
+  
+    \CommentTok{\# draw points for initial portion}
+  \ControlFlowTok{if}\NormalTok{(state.points }\SpecialCharTok{!=} \StringTok{"none"}\NormalTok{)\{}
+    \FunctionTok{draw\_points}\NormalTok{(state, scales);}
+\NormalTok{  \}}
+  
+  \CommentTok{\# invert from pixle to data scale when they draw their points}
+\NormalTok{  const on\_drag }\OtherTok{=} \ControlFlowTok{function}\NormalTok{()\{}
+\NormalTok{    const drag\_x }\OtherTok{=} \FunctionTok{scales.x.invert}\NormalTok{(d3.event.x);}
+\NormalTok{    const drag\_y }\OtherTok{=} \FunctionTok{scales.y.invert}\NormalTok{(d3.event.y);}
+    \FunctionTok{fill\_in\_closest\_point}\NormalTok{(state, drag\_x, drag\_y);}
+    \FunctionTok{draw\_user\_line}\NormalTok{(state, scales);}
+    \FunctionTok{draw\_rectangle}\NormalTok{(state, scales);}
+\NormalTok{  \};}
+  
+  \CommentTok{\# line\_status is set by draw watcher {-} get user status line}
+  \CommentTok{\# if some points missing {-} in progress}
+  \CommentTok{\# complete line {-} done}
+  \CommentTok{\# passes drawn points to shiny when click done}
+  \CommentTok{\# as long as there are dots (missing spaces) it isn\textquotesingle{}t going to pass data back.}
+\NormalTok{  const on\_end }\OtherTok{=} \ControlFlowTok{function}\NormalTok{()\{}
+    \CommentTok{\# Check if all points are drawn so we can reveal line}
+\NormalTok{    const line\_status }\OtherTok{=} \FunctionTok{get\_user\_line\_status}\NormalTok{(state);}
+    
+    \ControlFlowTok{if}\NormalTok{(line\_status }\SpecialCharTok{==}\ErrorTok{=} \StringTok{\textquotesingle{}done\textquotesingle{}}\NormalTok{)\{}
+      \CommentTok{\# User has completed line drawing}
+      \SpecialCharTok{/}\ErrorTok{/}\ControlFlowTok{if}\NormalTok{(state.show\_finished) }\FunctionTok{line\_hider.reveal}\NormalTok{();}
+      \SpecialCharTok{/}\ErrorTok{/}\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\NormalTok{state.free\_draw)  }\FunctionTok{line\_hider.reveal}\NormalTok{();}
+      \ControlFlowTok{if}\NormalTok{(state.show\_finished)\{}
+        \FunctionTok{draw\_finished\_line}\NormalTok{(state, scales, state.draw\_start);}
+\NormalTok{      \}}
+      
+      \ControlFlowTok{if}\NormalTok{(state.shiny\_message\_loc)\{}
+        \CommentTok{\# Make sure shiny is available before sending message}
+        \ControlFlowTok{if}\NormalTok{(typeof Shiny }\SpecialCharTok{!=}\ErrorTok{=} \StringTok{\textquotesingle{}undefined\textquotesingle{}}\NormalTok{)\{}
+          \CommentTok{\# Send drawn points off to server}
+          \FunctionTok{Shiny.onInputChange}\NormalTok{(}
+\NormalTok{            state.shiny\_message\_loc,}
+            \FunctionTok{state.drawable\_points.map}\NormalTok{(}\AttributeTok{d =}\SpecialCharTok{\textgreater{}}\NormalTok{ d.y)}
+\NormalTok{          );}
+\NormalTok{        \} }\ControlFlowTok{else}\NormalTok{ \{}
+          \FunctionTok{console.log}\NormalTok{(}\StringTok{\textasciigrave{}}\AttributeTok{Sending message to $\{state.shiny\_message\_loc\}}\StringTok{\textasciigrave{}}\NormalTok{);}
+\NormalTok{        \}}
+\NormalTok{      \}}
+\NormalTok{    \}}
+\NormalTok{  \};}
+  
+  \FunctionTok{setup\_draw\_watcher}\NormalTok{(state.svg, scales, on\_drag, on\_end);}
+  
+  \CommentTok{\# Do we have a title?}
+    \ControlFlowTok{if}\NormalTok{(state.title)\{}
+      \FunctionTok{state.svg.append}\NormalTok{(}\StringTok{\textquotesingle{}text\textquotesingle{}}\NormalTok{)}
+      \FunctionTok{.at}\NormalTok{(\{}
+\NormalTok{        y}\SpecialCharTok{:} \SpecialCharTok{{-}}\NormalTok{margin.top}\SpecialCharTok{/}\DecValTok{2}\NormalTok{,}
+\NormalTok{        dominantBaseline}\SpecialCharTok{:} \StringTok{\textquotesingle{}middle\textquotesingle{}}\NormalTok{,}
+\NormalTok{        fontSize}\SpecialCharTok{:} \StringTok{\textquotesingle{}1.5rem\textquotesingle{}}\NormalTok{,}
+\NormalTok{      \})}
+      \FunctionTok{.style}\NormalTok{(}\StringTok{\textquotesingle{}font{-}family\textquotesingle{}}\NormalTok{, system\_font)}
+      \FunctionTok{.text}\NormalTok{(state.title);}
+\NormalTok{    \}}
+\NormalTok{\}}
+
+\ControlFlowTok{function} \FunctionTok{setup\_drawable\_points}\NormalTok{(\{line\_data, free\_draw, draw\_start\})\{}
+  \ControlFlowTok{if}\NormalTok{(free\_draw)\{}
+\NormalTok{    return }\FunctionTok{line\_data.map}\NormalTok{(}\AttributeTok{d =}\SpecialCharTok{\textgreater{}}\NormalTok{ (\{x}\SpecialCharTok{:}\NormalTok{ d.x, y}\SpecialCharTok{:}\NormalTok{ null\}));}
+\NormalTok{  \} }\ControlFlowTok{else}\NormalTok{ \{}
+\NormalTok{    return line\_data}
+    \FunctionTok{.filter}\NormalTok{(}\AttributeTok{d =}\SpecialCharTok{\textgreater{}}\NormalTok{ d.x }\SpecialCharTok{\textgreater{}=}\NormalTok{ draw\_start)}
+    \FunctionTok{.map}\NormalTok{((d,i) }\OtherTok{=}\ErrorTok{\textgreater{}}\NormalTok{ (\{}
+\NormalTok{      x}\SpecialCharTok{:}\NormalTok{ d.x,}
+\NormalTok{      y}\SpecialCharTok{:}\NormalTok{ i }\SpecialCharTok{==}\ErrorTok{=} \DecValTok{0}\NormalTok{ ? d.y}\SpecialCharTok{:}\NormalTok{ null}
+\NormalTok{    \}));}
+\NormalTok{  \}}
+  
+\NormalTok{\}}
+
+\ControlFlowTok{function} \FunctionTok{get\_user\_line\_status}\NormalTok{(\{drawable\_points, free\_draw\})\{}
+\NormalTok{  const num\_points }\OtherTok{=}\NormalTok{ drawable\_points.length;}
+\NormalTok{  const num\_filled }\OtherTok{=} \FunctionTok{d3.sum}\NormalTok{(}\FunctionTok{drawable\_points.map}\NormalTok{(}\AttributeTok{d =}\SpecialCharTok{\textgreater{}}\NormalTok{ d.y }\SpecialCharTok{==}\ErrorTok{=}\NormalTok{ null ? }\DecValTok{0}\SpecialCharTok{:} \DecValTok{1}\NormalTok{));}
+\NormalTok{  const num\_starting\_filled }\OtherTok{=}\NormalTok{ free\_draw ? }\DecValTok{0}\SpecialCharTok{:} \DecValTok{1}\NormalTok{;}
+  
+  \ControlFlowTok{if}\NormalTok{(num\_filled }\SpecialCharTok{==}\ErrorTok{=}\NormalTok{ num\_starting\_filled)\{}
+\NormalTok{    return }\StringTok{\textquotesingle{}unstarted\textquotesingle{}}\NormalTok{;}
+\NormalTok{  \} }\ControlFlowTok{else} \ControlFlowTok{if}\NormalTok{(num\_points }\SpecialCharTok{==}\ErrorTok{=}\NormalTok{ num\_filled)\{}
+\NormalTok{    return }\StringTok{\textquotesingle{}done\textquotesingle{}}\NormalTok{;}
+\NormalTok{  \} }\ControlFlowTok{else}\NormalTok{ \{}
+\NormalTok{    return }\StringTok{\textquotesingle{}in\_progress\textquotesingle{}}\NormalTok{;}
+\NormalTok{  \}}
+\NormalTok{\}}
+
+\CommentTok{\# Draw visable portion of line}
+\ControlFlowTok{function} \FunctionTok{draw\_true\_line}\NormalTok{(\{svg, line\_data, draw\_start\}, scales)\{}
+\NormalTok{  var df }\OtherTok{=} \FunctionTok{line\_data.filter}\NormalTok{(}\ControlFlowTok{function}\NormalTok{(d)\{ return d.x}\SpecialCharTok{\textless{}=}\NormalTok{draw\_start\})}
+  \FunctionTok{state.svg.selectAppend}\NormalTok{(}\StringTok{"path.shown\_line"}\NormalTok{)}
+  \FunctionTok{.datum}\NormalTok{(df)}
+  \FunctionTok{.at}\NormalTok{(default\_line\_attrs)}
+  \FunctionTok{.attr}\NormalTok{(}\StringTok{"d"}\NormalTok{, scales.line\_drawer);}
+\NormalTok{\}}
+
+\ControlFlowTok{function} \FunctionTok{draw\_points}\NormalTok{(\{svg, point\_data, points\_end, points\}, scales)\{}
+  
+    \ControlFlowTok{if}\NormalTok{(points }\SpecialCharTok{==} \StringTok{"partial"}\NormalTok{)\{}
+\NormalTok{      var df }\OtherTok{=} \FunctionTok{point\_data.filter}\NormalTok{(}\ControlFlowTok{function}\NormalTok{(d)\{}\FunctionTok{return}\NormalTok{ (d.x}\SpecialCharTok{\textless{}=}\NormalTok{points\_end)\});}
+\NormalTok{    \} }\ControlFlowTok{else}\NormalTok{ \{}
+\NormalTok{      var df }\OtherTok{=}\NormalTok{ point\_data;}
+\NormalTok{    \}}
+    
+\NormalTok{  const dots }\OtherTok{=} \FunctionTok{state.svg.selectAll}\NormalTok{(}\StringTok{"circle"}\NormalTok{)}\FunctionTok{.data}\NormalTok{(df)}
+  
+\NormalTok{  dots}
+    \FunctionTok{.enter}\NormalTok{()}\FunctionTok{.append}\NormalTok{(}\StringTok{"circle"}\NormalTok{)}
+    \FunctionTok{.merge}\NormalTok{(dots)}
+    \FunctionTok{.attr}\NormalTok{(}\StringTok{"cx"}\NormalTok{, }\AttributeTok{d =}\SpecialCharTok{\textgreater{}} \FunctionTok{scales.x}\NormalTok{(d.x))}
+    \FunctionTok{.attr}\NormalTok{(}\StringTok{"cy"}\NormalTok{, }\AttributeTok{d =}\SpecialCharTok{\textgreater{}} \FunctionTok{scales.y}\NormalTok{(d.y))}
+    \FunctionTok{.attr}\NormalTok{(}\StringTok{"r"}\NormalTok{, }\DecValTok{2}\NormalTok{)}
+    \FunctionTok{.style}\NormalTok{(}\StringTok{"fill"}\NormalTok{, }\StringTok{"black"}\NormalTok{)}
+    \FunctionTok{.style}\NormalTok{(}\StringTok{"opacity"}\NormalTok{, }\FloatTok{0.8}\NormalTok{)}
+    \FunctionTok{.style}\NormalTok{(}\StringTok{"stroke"}\NormalTok{, }\StringTok{"black"}\NormalTok{)}
+    
+\NormalTok{\}}
+
+\ControlFlowTok{function} \FunctionTok{draw\_rectangle}\NormalTok{(\{svg, drawable\_points, line\_data, draw\_start, width, height, free\_draw, x\_by\}, scales)\{}
+
+    \ControlFlowTok{if}\NormalTok{(}\FunctionTok{get\_user\_line\_status}\NormalTok{(state) }\SpecialCharTok{==}\ErrorTok{=} \StringTok{\textquotesingle{}unstarted\textquotesingle{}}\NormalTok{)\{}
+      \ControlFlowTok{if}\NormalTok{(free\_draw)\{}
+\NormalTok{         var xmin }\OtherTok{=}\NormalTok{ line\_data[}\DecValTok{0}\NormalTok{].x}
+\NormalTok{         var len  }\OtherTok{=}\NormalTok{ line\_data.length }\SpecialCharTok{{-}} \DecValTok{1}
+\NormalTok{         var xmax }\OtherTok{=}\NormalTok{ line\_data[len].x}
+\NormalTok{         var drawSpace\_start }\OtherTok{=} \FunctionTok{scales.x}\NormalTok{(xmin)}
+\NormalTok{         var drawSpace\_end   }\OtherTok{=} \FunctionTok{scales.x}\NormalTok{(xmax)}
+\NormalTok{       \} }\ControlFlowTok{else}\NormalTok{ \{}
+\NormalTok{         var drawSpace\_start }\OtherTok{=} \FunctionTok{scales.x}\NormalTok{(draw\_start)}
+\NormalTok{         var drawSpace\_end   }\OtherTok{=}\NormalTok{ state.w}
+\NormalTok{       \}}
+\NormalTok{    \} }\ControlFlowTok{else}\NormalTok{ \{}
+      \ControlFlowTok{if}\NormalTok{(}\FunctionTok{get\_user\_line\_status}\NormalTok{(state) }\SpecialCharTok{==}\ErrorTok{=} \StringTok{\textquotesingle{}done\textquotesingle{}}\NormalTok{)\{}
+\NormalTok{        var drawSpace\_start }\OtherTok{=} \FunctionTok{scales.x}\NormalTok{(}\DecValTok{100}\NormalTok{)}
+\NormalTok{        var drawSpace\_end }\OtherTok{=} \FunctionTok{scales.x}\NormalTok{(}\DecValTok{110}\NormalTok{)}
+\NormalTok{      \} }\ControlFlowTok{else}\NormalTok{ \{}
+\NormalTok{        var df }\OtherTok{=} \FunctionTok{drawable\_points.filter}\NormalTok{(}\ControlFlowTok{function}\NormalTok{(d)\{}\FunctionTok{return}\NormalTok{ (d.y }\SpecialCharTok{==}\ErrorTok{=}\NormalTok{ null)\});}
+\NormalTok{        var xmin }\OtherTok{=}\NormalTok{ df[}\DecValTok{0}\NormalTok{].x }\SpecialCharTok{{-}}\NormalTok{ x\_by;}
+\NormalTok{        var len  }\OtherTok{=}\NormalTok{ line\_data.length }\SpecialCharTok{{-}} \DecValTok{1}
+\NormalTok{        var xmax }\OtherTok{=}\NormalTok{ line\_data[len].x}
+\NormalTok{        var drawSpace\_start }\OtherTok{=} \FunctionTok{scales.x}\NormalTok{(xmin)}
+\NormalTok{        var drawSpace\_end   }\OtherTok{=} \FunctionTok{scales.x}\NormalTok{(xmax)}
+\NormalTok{      \}}
+\NormalTok{    \}}
+
+\NormalTok{    const draw\_region }\OtherTok{=} \FunctionTok{state.svg.selectAppend}\NormalTok{(}\StringTok{"rect"}\NormalTok{);}
+
+\NormalTok{    draw\_region}
+      \FunctionTok{.attr}\NormalTok{(}\StringTok{"x"}\NormalTok{, drawSpace\_start)}
+      \FunctionTok{.attr}\NormalTok{(}\StringTok{"width"}\NormalTok{,drawSpace\_end }\SpecialCharTok{{-}}\NormalTok{ drawSpace\_start)}
+      \FunctionTok{.attr}\NormalTok{(}\StringTok{"y"}\NormalTok{, }\DecValTok{0}\NormalTok{)}
+      \FunctionTok{.attr}\NormalTok{(}\StringTok{"height"}\NormalTok{, state.h)}
+      \SpecialCharTok{/}\ErrorTok{/}\FunctionTok{.style}\NormalTok{(}\StringTok{"fill"}\NormalTok{, }\StringTok{"\#e0f3f3"}\NormalTok{)}
+      \FunctionTok{.style}\NormalTok{(}\StringTok{"fill{-}opacity"}\NormalTok{, }\FloatTok{0.4}\NormalTok{)}
+      \FunctionTok{.style}\NormalTok{(}\StringTok{"fill"}\NormalTok{, }\StringTok{"rgba(255,255,0,.8)"}\NormalTok{)}
+  
+\NormalTok{\}}
+
+\ControlFlowTok{function} \FunctionTok{draw\_user\_line}\NormalTok{(state, scales)\{}
+\NormalTok{  const \{svg, drawable\_points, drawn\_line\_color\} }\OtherTok{=}\NormalTok{ state;}
+  
+\NormalTok{  const user\_line }\OtherTok{=} \FunctionTok{state.svg.selectAppend}\NormalTok{(}\StringTok{"path.user\_line"}\NormalTok{);}
+  
+  \CommentTok{\# Only draw line if there\textquotesingle{}s something to draw.}
+  \ControlFlowTok{if}\NormalTok{(}\FunctionTok{get\_user\_line\_status}\NormalTok{(state) }\SpecialCharTok{==}\ErrorTok{=} \StringTok{\textquotesingle{}unstarted\textquotesingle{}}\NormalTok{)\{}
+    \FunctionTok{user\_line.remove}\NormalTok{();}
+\NormalTok{    return;}
+\NormalTok{  \}}
+
+  \CommentTok{\# Draws the points the user is drawing with their mouse}
+\NormalTok{  user\_line}
+      \FunctionTok{.datum}\NormalTok{(drawable\_points)}
+      \FunctionTok{.at}\NormalTok{(default\_line\_attrs)}
+      \FunctionTok{.attr}\NormalTok{(}\StringTok{\textquotesingle{}stroke\textquotesingle{}}\NormalTok{, drawn\_line\_color)}
+      \FunctionTok{.attr}\NormalTok{(}\StringTok{"d"}\NormalTok{, scales.line\_drawer)}
+      \FunctionTok{.style}\NormalTok{(}\StringTok{"stroke{-}dasharray"}\NormalTok{, (}\StringTok{"1, 7"}\NormalTok{));}
+\NormalTok{\}}
+
+\ControlFlowTok{function} \FunctionTok{draw\_finished\_line}\NormalTok{(\{svg, line\_data, draw\_start, free\_draw\}, scales)\{}
+  
+  
+  \ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\NormalTok{free\_draw)\{}
+\NormalTok{    var df }\OtherTok{=} \FunctionTok{line\_data.filter}\NormalTok{(}\ControlFlowTok{function}\NormalTok{(d)\{ return d.x }\SpecialCharTok{\textgreater{}=}\NormalTok{ draw\_start\})}
+\NormalTok{  \} }\ControlFlowTok{else}\NormalTok{ \{}
+\NormalTok{    var df }\OtherTok{=}\NormalTok{ line\_data}
+\NormalTok{  \}}
+  
+\NormalTok{  const finished\_line }\OtherTok{=} \FunctionTok{state.svg.selectAppend}\NormalTok{(}\StringTok{"path.finished\_line"}\NormalTok{)}
+  
+    \CommentTok{\# Only draw line if there\textquotesingle{}s something to draw.}
+  \ControlFlowTok{if}\NormalTok{(}\FunctionTok{get\_user\_line\_status}\NormalTok{(state) }\SpecialCharTok{==}\ErrorTok{=} \StringTok{\textquotesingle{}unstarted\textquotesingle{}}\NormalTok{)\{}
+    \FunctionTok{finished\_line.remove}\NormalTok{();}
+\NormalTok{    return;}
+\NormalTok{  \}}
+  
+\NormalTok{  finished\_line}
+  \FunctionTok{.datum}\NormalTok{(df)}
+  \FunctionTok{.at}\NormalTok{(default\_line\_attrs)}
+  \FunctionTok{.attr}\NormalTok{(}\StringTok{"d"}\NormalTok{, scales.line\_drawer)}
+  \FunctionTok{.attr}\NormalTok{(}\StringTok{"opacity"}\NormalTok{, }\FloatTok{0.5}\NormalTok{)}
+  
+\NormalTok{\}}
+
+\CommentTok{\# from state we need drawable\_points {-} from setup\_drawable\_points() function that modifies state (get all x points bigger than or equal to draw\_start and set up with a null), pin\_start, and free\_draw parameters}
+\CommentTok{\# drag\_x, drag\_y come from on\_drag() function}
+\ControlFlowTok{function} \FunctionTok{fill\_in\_closest\_point}\NormalTok{(\{drawable\_points, pin\_start, free\_draw\}, drag\_x, drag\_y)\{}
+  \CommentTok{\# find closest point on data to draw}
+\NormalTok{  let last\_dist }\OtherTok{=}\NormalTok{ Infinity;}
+\NormalTok{  let current\_dist;}
+  \CommentTok{\# If nothing triggers break statement than closest point is last point}
+\NormalTok{  let closest\_index }\OtherTok{=}\NormalTok{ drawable\_points.length }\SpecialCharTok{{-}} \DecValTok{1}\NormalTok{;}
+\NormalTok{  const starting\_index }\OtherTok{=}\NormalTok{ free\_draw ? }\DecValTok{0} \SpecialCharTok{:}\NormalTok{ (pin\_start ? }\DecValTok{1}\SpecialCharTok{:} \DecValTok{0}\NormalTok{);}
+  \CommentTok{\# for loop to check where closest point to where I am}
+  \ControlFlowTok{for}\NormalTok{(}\AttributeTok{i =}\NormalTok{ starting\_index; i }\SpecialCharTok{\textless{}}\NormalTok{ drawable\_points.length; i}\SpecialCharTok{++}\NormalTok{)\{}
+\NormalTok{    current\_dist }\OtherTok{=} \FunctionTok{Math.abs}\NormalTok{(drawable\_points[i].x }\SpecialCharTok{{-}}\NormalTok{ drag\_x);}
+    \CommentTok{\# If distances start going up we\textquotesingle{}ve passed the closest point}
+\ControlFlowTok{if}\NormalTok{(last\_dist }\SpecialCharTok{{-}}\NormalTok{ current\_dist }\SpecialCharTok{\textless{}} \DecValTok{0}\NormalTok{) \{}
+\NormalTok{  closest\_index }\OtherTok{=}\NormalTok{ i }\SpecialCharTok{{-}} \DecValTok{1}\NormalTok{;}
+  \ControlFlowTok{break}\NormalTok{;}
+\NormalTok{\}}
+\NormalTok{last\_dist }\OtherTok{=}\NormalTok{ current\_dist;}
+\NormalTok{\}}
+
+\NormalTok{drawable\_points[closest\_index].y }\OtherTok{=}\NormalTok{ drag\_y;}
+\NormalTok{\}}
+
+\ControlFlowTok{function} \FunctionTok{setup\_draw\_watcher}\NormalTok{(svg, scales, on\_drag, on\_end)\{}
+  
+  \CommentTok{\# could have called drag\_watcher whatever we wanted}
+  \CommentTok{\# .at is space it begins watching}
+  \CommentTok{\# .call is "do something" d3.drag() is the mouse action puts listeners to react to user input.}
+  \FunctionTok{svg.selectAppend}\NormalTok{(}\StringTok{\textquotesingle{}rect.drag\_watcher\textquotesingle{}}\NormalTok{)}
+  \FunctionTok{.at}\NormalTok{(\{}
+\NormalTok{    height}\SpecialCharTok{:} \FunctionTok{scales.y.range}\NormalTok{()[}\DecValTok{0}\NormalTok{],}
+\NormalTok{    width}\SpecialCharTok{:} \FunctionTok{scales.x.range}\NormalTok{()[}\DecValTok{1}\NormalTok{],}
+\NormalTok{    fill}\SpecialCharTok{:} \StringTok{\textquotesingle{}grey\textquotesingle{}}\NormalTok{,}
+\NormalTok{    fillOpacity}\SpecialCharTok{:} \DecValTok{0}\NormalTok{,}
+\NormalTok{  \})}
+  \FunctionTok{.call}\NormalTok{(}
+    \FunctionTok{d3.drag}\NormalTok{()}
+    \FunctionTok{.on}\NormalTok{(}\StringTok{"drag"}\NormalTok{, on\_drag)}
+    \FunctionTok{.on}\NormalTok{(}\StringTok{"end"}\NormalTok{, on\_end)}
+\NormalTok{  );}
+\NormalTok{\}}
+
+\ControlFlowTok{function} \FunctionTok{add\_axis\_label}\NormalTok{(label, }\AttributeTok{y\_axis =}\NormalTok{ true)\{}
+  
+\NormalTok{  const bump\_axis }\OtherTok{=}\NormalTok{ y\_axis ? }\StringTok{\textquotesingle{}x\textquotesingle{}}\SpecialCharTok{:} \StringTok{\textquotesingle{}y\textquotesingle{}}\NormalTok{;}
+  
+\NormalTok{  const axis\_label\_style }\OtherTok{=}\NormalTok{ \{}
+\NormalTok{    [bump\_axis]}\SpecialCharTok{:}\NormalTok{ bump\_axis }\SpecialCharTok{==} \StringTok{\textquotesingle{}y\textquotesingle{}}\NormalTok{ ? }\DecValTok{3}\SpecialCharTok{:} \SpecialCharTok{{-}}\DecValTok{2}\NormalTok{,}
+\NormalTok{    textAnchor}\SpecialCharTok{:} \StringTok{\textquotesingle{}end\textquotesingle{}}\NormalTok{,}
+\NormalTok{    fontWeight}\SpecialCharTok{:} \StringTok{\textquotesingle{}500\textquotesingle{}}\NormalTok{,}
+\NormalTok{    fontSize}\SpecialCharTok{:} \StringTok{\textquotesingle{}0.9rem\textquotesingle{}}\NormalTok{,}
+\NormalTok{  \};}
+  
+\NormalTok{  return g }\OtherTok{=}\ErrorTok{\textgreater{}}\NormalTok{ \{}
+\NormalTok{    let last\_tick }\OtherTok{=} \FunctionTok{g.select}\NormalTok{(}\StringTok{".tick:last{-}of{-}type"}\NormalTok{);}
+\NormalTok{    const no\_ticks }\OtherTok{=} \FunctionTok{last\_tick.empty}\NormalTok{();}
+    
+    \ControlFlowTok{if}\NormalTok{(no\_ticks)\{}
+\NormalTok{      last\_tick }\OtherTok{=} \FunctionTok{g.append}\NormalTok{(}\StringTok{\textquotesingle{}g\textquotesingle{}}\NormalTok{)}
+      \FunctionTok{.attr}\NormalTok{(}\StringTok{\textquotesingle{}class\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}tick\textquotesingle{}}\NormalTok{);}
+\NormalTok{    \}}
+    
+    \FunctionTok{last\_tick.select}\NormalTok{(}\StringTok{"line"}\NormalTok{)}\FunctionTok{.remove}\NormalTok{();}
+    
+    \FunctionTok{last\_tick.selectAppend}\NormalTok{(}\StringTok{"text"}\NormalTok{)}
+    \FunctionTok{.at}\NormalTok{(axis\_label\_style)}
+    \FunctionTok{.html}\NormalTok{(label);}
+\NormalTok{  \};}
+\NormalTok{\}}
+
+\CommentTok{\# Setup scales for visualization}
+\ControlFlowTok{function} \FunctionTok{setup\_scales}\NormalTok{(state)\{}
+  \CommentTok{\# multi{-}assign: x\_range, etc. coming from options}
+\NormalTok{  const \{w, h, line\_data, x\_range, y\_range, x\_name, y\_name, linear\} }\OtherTok{=}\NormalTok{ state;}
+  
+  \CommentTok{\# convert x from data scale to pixle scale}
+\NormalTok{  const x }\OtherTok{=} \FunctionTok{d3.scaleLinear}\NormalTok{()}
+  \FunctionTok{.domain}\NormalTok{(x\_range }\SpecialCharTok{||} \FunctionTok{d3.extent}\NormalTok{(line\_data, }\AttributeTok{d =}\SpecialCharTok{\textgreater{}}\NormalTok{ d.x))}
+  \FunctionTok{.range}\NormalTok{([}\DecValTok{0}\NormalTok{, w]);}
+  
+  \SpecialCharTok{/}\ErrorTok{/}\FunctionTok{console.log}\NormalTok{(linear);}
+  \ControlFlowTok{if}\NormalTok{ (linear }\SpecialCharTok{==} \StringTok{\textquotesingle{}true\textquotesingle{}}\NormalTok{) \{}
+    \SpecialCharTok{/}\ErrorTok{/}\FunctionTok{console.log}\NormalTok{(}\StringTok{\textquotesingle{}in linear block\textquotesingle{}}\NormalTok{);}
+    \CommentTok{\# converts from data linear scale to pixle scale}
+\NormalTok{    var y }\OtherTok{=} \FunctionTok{d3.scaleLinear}\NormalTok{()}
+    \FunctionTok{.domain}\NormalTok{(y\_range }\SpecialCharTok{||} \FunctionTok{d3.extent}\NormalTok{(line\_data, }\AttributeTok{d =}\SpecialCharTok{\textgreater{}}\NormalTok{ d.y))}
+    \FunctionTok{.range}\NormalTok{([h, }\DecValTok{0}\NormalTok{]);}
+\NormalTok{  \} }\ControlFlowTok{else}\NormalTok{ \{}
+    \SpecialCharTok{/}\ErrorTok{/}\FunctionTok{console.log}\NormalTok{(}\StringTok{\textquotesingle{}in log block\textquotesingle{}}\NormalTok{);}
+    \CommentTok{\# converts from data log scale to pixle scale}
+\NormalTok{    var y }\OtherTok{=} \FunctionTok{d3.scaleLog}\NormalTok{()}
+    \FunctionTok{.domain}\NormalTok{(y\_range }\SpecialCharTok{||} \FunctionTok{d3.extent}\NormalTok{(line\_data, }\AttributeTok{d =}\SpecialCharTok{\textgreater{}}\NormalTok{ d.y))}
+    \FunctionTok{.range}\NormalTok{([h, }\DecValTok{0}\NormalTok{])}\FunctionTok{.base}\NormalTok{(}\DecValTok{10}\NormalTok{);}
+\NormalTok{  \}}
+  
+\NormalTok{  const xAxis }\OtherTok{=} \FunctionTok{d3.axisBottom}\NormalTok{()}\FunctionTok{.scale}\NormalTok{(x)}\FunctionTok{.tickSizeOuter}\NormalTok{(}\DecValTok{0}\NormalTok{);}
+\NormalTok{  const yAxis }\OtherTok{=} \FunctionTok{d3.axisLeft}\NormalTok{()}\FunctionTok{.scale}\NormalTok{(y)}\FunctionTok{.tickFormat}\NormalTok{(}\FunctionTok{d3.format}\NormalTok{(}\StringTok{".4"}\NormalTok{))}\FunctionTok{.tickSizeOuter}\NormalTok{(}\DecValTok{0}\NormalTok{);}
+\NormalTok{  const xAxisGrid }\OtherTok{=} \FunctionTok{d3.axisBottom}\NormalTok{()}\FunctionTok{.scale}\NormalTok{(x)}\FunctionTok{.tickSize}\NormalTok{(}\SpecialCharTok{{-}}\NormalTok{h)}\FunctionTok{.tickFormat}\NormalTok{(}\StringTok{\textquotesingle{}\textquotesingle{}}\NormalTok{);}
+\NormalTok{  const yAxisGrid }\OtherTok{=} \FunctionTok{d3.axisLeft}\NormalTok{()}\FunctionTok{.scale}\NormalTok{(y)}\FunctionTok{.tickSize}\NormalTok{(}\SpecialCharTok{{-}}\NormalTok{w)}\FunctionTok{.tickFormat}\NormalTok{(}\StringTok{\textquotesingle{}\textquotesingle{}}\NormalTok{);}
+  
+  \CommentTok{\# Remove all grid related things first}
+  \CommentTok{\# remove everything when you convert from linear and log and vise versa.}
+  \CommentTok{\# want html element \textless{}g\textgreater{} that has class axis{-}grid}
+  \FunctionTok{state.svg.selectAll}\NormalTok{(}\StringTok{"g.x\_grid"}\NormalTok{)}\FunctionTok{.remove}\NormalTok{()}
+  \FunctionTok{state.svg.selectAll}\NormalTok{(}\StringTok{"g.y\_grid"}\NormalTok{)}\FunctionTok{.remove}\NormalTok{()}
+  \CommentTok{\# could call axis{-}grid "fred"}
+  \FunctionTok{state.svg.selectAll}\NormalTok{(}\StringTok{"g.axis{-}grid"}\NormalTok{)}\FunctionTok{.remove}\NormalTok{()}
+  
+  \FunctionTok{state.svg.selectAll}\NormalTok{(}\StringTok{"path.shown\_line"}\NormalTok{)}\FunctionTok{.remove}\NormalTok{()}
+  \FunctionTok{state.svg.selectAll}\NormalTok{(}\StringTok{"circle"}\NormalTok{)}\FunctionTok{.remove}\NormalTok{()}
+  
+  \FunctionTok{state.svg.selectAppend}\NormalTok{(}\StringTok{"g.x\_grid"}\NormalTok{)}
+  \FunctionTok{.attr}\NormalTok{(}\StringTok{\textquotesingle{}class\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}x axis{-}grid\textquotesingle{}}\NormalTok{)}
+  \FunctionTok{.translate}\NormalTok{([}\DecValTok{0}\NormalTok{,h])}
+  \FunctionTok{.call}\NormalTok{(xAxisGrid);}
+  
+  \FunctionTok{state.svg.selectAppend}\NormalTok{(}\StringTok{"g.y\_grid"}\NormalTok{)}
+  \FunctionTok{.attr}\NormalTok{(}\StringTok{\textquotesingle{}class\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}y axis{-}grid\textquotesingle{}}\NormalTok{)}
+  \FunctionTok{.call}\NormalTok{(yAxisGrid);}
+  
+  \FunctionTok{state.svg.selectAll}\NormalTok{(}\StringTok{".axis{-}grid .tick"}\NormalTok{)}
+  \FunctionTok{.style}\NormalTok{(}\StringTok{"stroke"}\NormalTok{, }\StringTok{"light{-}grey"}\NormalTok{)}
+  \FunctionTok{.style}\NormalTok{(}\StringTok{"opacity"}\NormalTok{, }\StringTok{".3"}\NormalTok{);}
+  
+  \FunctionTok{state.svg.selectAppend}\NormalTok{(}\StringTok{"g.x\_axis"}\NormalTok{)}
+  \FunctionTok{.translate}\NormalTok{([}\DecValTok{0}\NormalTok{,h])}
+  \FunctionTok{.call}\NormalTok{(xAxis);}
+  
+  \FunctionTok{state.svg.selectAppend}\NormalTok{(}\StringTok{"g.y\_axis"}\NormalTok{)}
+  \FunctionTok{.call}\NormalTok{(yAxis);}
+  
+\NormalTok{  const line\_drawer }\OtherTok{=} \FunctionTok{d3.line}\NormalTok{()}
+  \FunctionTok{.defined}\NormalTok{(}\AttributeTok{d =}\SpecialCharTok{\textgreater{}}\NormalTok{ d.y }\SpecialCharTok{!=}\ErrorTok{=}\NormalTok{ null)}
+  \FunctionTok{.x}\NormalTok{(}\AttributeTok{d =}\SpecialCharTok{\textgreater{}} \FunctionTok{x}\NormalTok{(d.x))}
+  \FunctionTok{.y}\NormalTok{(}\AttributeTok{d =}\SpecialCharTok{\textgreater{}} \FunctionTok{y}\NormalTok{(d.y));}
+  
+\NormalTok{  return \{}
+\NormalTok{    x,}
+\NormalTok{    y,}
+\NormalTok{    line\_drawer,}
+\NormalTok{  \};}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
 
 \hypertarget{the-second-appendix}{%
 \chapter{The Second Appendix}\label{the-second-appendix}}

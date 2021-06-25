@@ -16,12 +16,12 @@
 %  --- Code chunk font size -----------------------------------------------
 % https://stackoverflow.com/questions/38323331/code-chunk-font-size-in-beamer-with-knitr-and-latexhttps://stackoverflow.com/questions/38323331/code-chunk-font-size-in-beamer-with-knitr-and-latex
 
-%% change fontsize of R code
-% \let\oldShaded\Shaded
-% \let\endoldShaded\endShaded
-% \renewenvironment{Shaded}{\footnotesize\oldShaded}{\endoldShaded}
-% 
-% %% change fontsize of output
-% \let\oldverbatim\verbatim
-% \let\endoldverbatim\endverbatim
-% \renewenvironment{verbatim}{\footnotesize\oldverbatim}{\endoldverbatim}
+% change fontsize of R code
+\let\oldShaded\Shaded
+\let\endoldShaded\endShaded
+\renewenvironment{Shaded}{\footnotesize\oldShaded}{\endoldShaded}
+
+%% change fontsize of output
+\let\oldverbatim\verbatim
+\let\endoldverbatim\endverbatim
+\renewenvironment{verbatim}{\footnotesize\oldverbatim}{\endoldverbatim}
