@@ -6,6 +6,9 @@ fig:lof-density-curves
 fig:odds-ratio-plot
 fig:raster-vs-vector
 fig:r2d3-shiny-flowchart
+fig:eyefitting-example-plot
+fig:eyefitting-gammpred-plots
+fig:eyefitting-lmer-preds
 literature-review
 introduction-to-graphics
 perception-and-psychophysics
@@ -40,4 +43,3 @@ estimation
 introduction-2
 conclusion
 d3.js-source-code
-the-second-appendix

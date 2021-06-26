@@ -767,20 +767,28 @@ Section \protect\hyperlink{r2d3-with-shiny}{3.2} outlines the development of the
 \hypertarget{study-objectives}{%
 \subsection{Study Objectives}\label{study-objectives}}
 
-This chapter first aims to establish the you draw it method as a tool for measuring predictions of trends; then this method will be used to test an individual's ability to make predictions for exponentially increasing data on both the log and linear scales, refered to as Prediction of Exponential Trends.
-Mosteller, Siegel, Trapido, \& Youtz (1981) was replicated as part of the study data collection in order to validate the you draw it method, this will be refered to as Eye Fitting Straight Lines in the Modern Era.
+This chapter first aims to establish the you draw it method as a tool for measuring predictions of trends; then this method will be used to test an individual's ability to make predictions for exponentially increasing data on both the log and linear scales, referred to as Prediction of Exponential Trends.
+Mosteller, Siegel, Trapido, \& Youtz (1981) was replicated as part of the study data collection in order to validate the you draw it method, this will be referred to as Eye Fitting Straight Lines in the Modern Era.
 Data for both the Eye Fitting Straight Lines in the Modern Era and Prediction of Exponential Trends studies were collected in conjunction with one another over the same study participant sample.
 
 \hypertarget{interactive-plot-development}{%
 \section{Interactive Plot Development}\label{interactive-plot-development}}
 
+Interactive plots for the study were created using the r2d3 package and integrating D3 source code with an R shiny application.
+In this section I outline the data simulation process conducted in R, constructing interactive plots with D3.js code and R shiny, and the experiment design used to collect participant responses.
+
 \hypertarget{data-simulation}{%
 \subsection{Data Simulation}\label{data-simulation}}
+
+All data processing was conducted in R before being passed to the D3.js code.
+Both studies, Eye Fitting Straight Lines in the Modern Era and Prediction of Exponential Trends, generate 30 points for \(x\in [0, 20]\) based on a specific model (linear regression and exponential regression respectively) and selected coefficient and variance parameters.
+The corresponding model is then fit to the simulated points the obtain the best fit line and estimated values every 0.25 increments across the domain.
+Each function then outputs a list of point data and line data both indicating the parameter identification, x value, and y value.
 
 \hypertarget{eye-fitting-straight-lines-in-the-modern-era}{%
 \subsubsection{Eye Fitting Straight Lines in the Modern Era}\label{eye-fitting-straight-lines-in-the-modern-era}}
 
-\emph{Algorithm: Linear Data Generation} \texttt{linearDataGen()}
+\noindent *Algorithm: Eye Fitting Straight Lines in the Modern Era Data Generation*
 
 \textbf{In parameters:} \texttt{y\_xbar,\ slope,\ sigma,\ N\ =\ 30,\ xmin,\ xmax,\ xby\ =\ 0.25}
 
@@ -880,9 +888,9 @@ Data for both the Eye Fitting Straight Lines in the Modern Era and Prediction of
 \hypertarget{prediction-of-exponential-trends}{%
 \subsubsection{Prediction of Exponential Trends}\label{prediction-of-exponential-trends}}
 
-\noindent *Algorithm 3.1: Exponential Data Generation*
+\noindent *Algorithm 3.2: Exponential Data Generation*
 
-\textbf{In parameters:} \texttt{beta,\ sd,\ points\_choice\ =\ "partial",\ points\_end\_scale,\ N\ =\ 30,\ xmin\ =\ 20,\ xmax\ =\ 20,\ xby\ =\ 0.25}
+\textbf{In parameters:} \texttt{beta,\ sd,\ points\_choice\ =\ "partial",\ points\_end\_scale,\ N\ =\ 30,\ xmin\ =\ 0,\ xmax\ =\ 20,\ xby\ =\ 0.25}
 
 \textbf{Out:} data list of point data and line data
 
@@ -1001,15 +1009,10 @@ Data for both the Eye Fitting Straight Lines in the Modern Era and Prediction of
 \hypertarget{study-design-1}{%
 \subsection{Study Design}\label{study-design-1}}
 
-\begin{itemize}
-\tightlist
-\item
-  8 data sets were generated for each individual upon start of experiment (4 Linear + 4 Exponential)
-\item
-  12 you draw it task plots were shown to each individual (4 Linear + (4 Exponential x 2 Scales))
-\item
-  The order of each of the 12 plots was randomly assigned for each individual in a CRD.
-\end{itemize}
+For each individual, a total of 6 data sets - 4 Eye Fitting Straight Lines in the Modern Era and 2 Prediction of Exponential Trends - are generated for each individual the start of the experiment.
+The 2 data sets corresponding to to the data used in the Prediction of Exponential Trends are then plotted a total of 4 times each by truncating the points at both 50\% and 75\% of the domain as well as on both the log and linear scales for a total of 8 task plots.
+Participants in the study are first shown 2 you draw it plot practice plots followed by 12 you draw it task plots.
+The order of all 12 task plots were randomly assigned for each individual in a completely randomized design where users saw the 4 task plots from the Eye Fitting Straight Lines in the Modern Era simulated data interspersed with the 8 task plots from the Prediction of Exponential Trends simulated data.
 
 \hypertarget{results-1}{%
 \section{Results}\label{results-1}}
@@ -1017,11 +1020,112 @@ Data for both the Eye Fitting Straight Lines in the Modern Era and Prediction of
 \hypertarget{eye-fitting-straight-lines-in-the-modern-era-1}{%
 \subsection{Eye Fitting Straight Lines in the Modern Era}\label{eye-fitting-straight-lines-in-the-modern-era-1}}
 
+To calculate the first principal component fit: \url{https://benediktehinger.de/blog/science/scatterplots-regression-lines-and-the-first-principal-component/}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Subset the simulated point data for a particular participant and parameter (S, F, V, N).
+\item
+  Fit a principal component over the x and y vectors from the point data (note these are the points show in the plot below). Use prcomp. Call this \texttt{pca.mod}
+\item
+  Obtain the slope and intercept:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Using the pca.mod rotations we obatin the slope as: \(\text{pca.slope} = \frac{\text{pca.mod rotation}[y,PC1]}{\text{pca.mod rotation}[x,PC1]}\)
+  \item
+    Using point-slope form we obtain the intercept as:
+  \end{itemize}
+\item
+  Obtain ypca values by: \(y_{pca} = \text{pca.slope} \cdot x_{\text{feedback data}} + \text{pca.intercept}\)
+\end{enumerate}
+
+\begin{figure}[tbp]
+
+{\centering \includegraphics[width=0.25\linewidth,]{thesis_files/figure-latex/eyefitting-example-plot-1} 
+
+}
+
+\caption{Eye Fitting Straight Lines in the Modern Era Example}\label{fig:eyefitting-example-plot}
+\end{figure}
+
+\textbf{Treatments:}
+
 \begin{itemize}
 \tightlist
 \item
-  \url{https://benediktehinger.de/blog/science/scatterplots-regression-lines-and-the-first-principal-component/}
+  parm\_ID (S, F, V, N)
+\item
+  x (0, 20)
 \end{itemize}
+
+\textbf{Response:} raw residuals
++ residualols = ydrawn - yols, denoted \(e_{ols}\)
++ residualpca = ydrawn - ypca, denoted \(e_{pca}\)
+
+\textbf{Experimental Design:}\\
++ Each participant saw each of the 4 plots (new simulated data for each)
+
+\textbf{OLS GAMM Model:}
+
+\[y_{drawn} - y_{ols} = e_{ij,ols} = \left[\gamma_0 + \alpha_i\right] + \left[s_1(x_{ij}) + s_{2i}(x_{ij}) \right] + p_{j} + \epsilon_{ij}\]
+
+\begin{itemize}
+\tightlist
+\item
+  \(\gamma_0\) is the overall intercept
+\item
+  \(\alpha_i\) is the effect of the parameter combination on the intercept (i.e.~how much the intercept adjusts for each parameter combo)
+\item
+  \(s_1\) is the overall spline equation for x
+\item
+  \(s_{2i}\) is the adjustment to the spline equation for each parameter combination (think unequal slopes)
+\item
+  \(p_{j} \sim N(0, \sigma^2_{participant})\) is the participant error due to participant variation
+\item
+  \(\epsilon_{ij} \sim N(0, \sigma^2)\) is the residual error.
+\end{itemize}
+
+\textbf{PCA GAMM Model:}
+
+\[y_{drawn} - y_{pca} = e_{ij,pca} = \left[\gamma_0 + \alpha_i\right] + \left[s_1(x_{ij}) + s_{2i}(x_{ij}) \right] + p_{j} + \epsilon_{ij}\]
+
+\begin{itemize}
+\tightlist
+\item
+  \(\gamma_0\) is the overall intercept
+\item
+  \(\alpha_i\) is the effect of the parameter combination on the intercept (i.e.~how much the intercept adjusts for each parameter combo)
+\item
+  \(s_1\) is the overall spline equation for x
+\item
+  \(s_{2i}\) is the adjustment to the spline equation for each parameter combination (think unequal slopes)
+\item
+  \(p_{j} \sim N(0, \sigma^2_{participant})\) is the participant error due to participant variation
+\item
+  \(\epsilon_{ij} \sim N(0, \sigma^2)\) is the residual error.
+\end{itemize}
+
+\begin{figure}[tbp]
+
+{\centering \includegraphics[width=0.5\linewidth,]{thesis_files/figure-latex/eyefitting-gammpred-plots-1} 
+
+}
+
+\caption{Eye Fitting Straight Lines in the Modern Era GAMM}\label{fig:eyefitting-gammpred-plots}
+\end{figure}
+
+\begin{figure}[tbp]
+
+{\centering \includegraphics[width=0.5\linewidth,]{thesis_files/figure-latex/eyefitting-lmer-preds-1} 
+
+}
+
+\caption{Eye Fitting Straight Lines in the Modern Era LMER}\label{fig:eyefitting-lmer-preds}
+\end{figure}
 
 \hypertarget{prediction-of-exponential-trends-1}{%
 \subsection{Prediction of Exponential Trends}\label{prediction-of-exponential-trends-1}}
@@ -1080,11 +1184,6 @@ Data for both the Eye Fitting Straight Lines in the Modern Era and Prediction of
 \NormalTok{                bottom}\SpecialCharTok{:}\NormalTok{ options.title? }\DecValTok{25}\SpecialCharTok{:} \DecValTok{55}\NormalTok{\};}
 
 \CommentTok{\# Define variable default line attributes}
-\CommentTok{\# do not fill the line in (default is filled in black beneath the line)}
-\CommentTok{\# stroke provides the color of the line stroke. This is either options.data\_line\_color (not yet defined) or steelblue}
-\CommentTok{\# sets the the stroke width (how thick)}
-\CommentTok{\# sets how tojoin the lines? and end the lines? rounded.}
-\CommentTok{\# Since we are using Object.assign, we are passing the source options.line\_style into the vector of information defined. See top for options list.}
 \NormalTok{const default\_line\_attrs }\OtherTok{=} \FunctionTok{Object.assign}\NormalTok{(\{}
 \NormalTok{  fill}\SpecialCharTok{:} \StringTok{"none"}\NormalTok{,}
 \NormalTok{  stroke}\SpecialCharTok{:}\NormalTok{ options.data\_line\_color }\SpecialCharTok{||} \StringTok{\textquotesingle{}steelblue\textquotesingle{}}\NormalTok{,}
@@ -1093,13 +1192,7 @@ Data for both the Eye Fitting Straight Lines in the Modern Era and Prediction of
 \NormalTok{  strokeLinecap}\SpecialCharTok{:} \StringTok{"round"}\NormalTok{,}
 \NormalTok{\}, options.line\_style);}
 
-\CommentTok{\# defines a changing variable called state??}
-\CommentTok{\# provides the data from top}
-\CommentTok{\# appends the svg group and moves it to the correct location...}
-\CommentTok{\# sets the width and height of the plot}
-\CommentTok{\# Since we are using object.assign, the options are passed in as the source, this will "overwrite" any information provided in the options???}
-\CommentTok{\# Is state like our wrapper?}
-
+\CommentTok{\# defines a changing variable called state}
 \NormalTok{let state }\OtherTok{=} \FunctionTok{Object.assign}\NormalTok{(\{}
 \NormalTok{  line\_data}\SpecialCharTok{:}\NormalTok{ data.line\_data,}
 \NormalTok{  point\_data}\SpecialCharTok{:}\NormalTok{ data.point\_data,}
@@ -1108,13 +1201,9 @@ Data for both the Eye Fitting Straight Lines in the Modern Era and Prediction of
 \NormalTok{  h}\SpecialCharTok{:}\NormalTok{ height }\SpecialCharTok{{-}}\NormalTok{ margin.top }\SpecialCharTok{{-}}\NormalTok{ margin.bottom,}
 \NormalTok{\}, options);}
 
-\CommentTok{\# option variables are passed into state}
-\CommentTok{\# console.log(state.y\_range)}
-
 \CommentTok{\# To distinguish between code that runs at initialization{-}time only and}
 \CommentTok{\# code that runs when data changes, organize your code so that the code}
 \CommentTok{\# which responds to data changes is contained within the r2d3.onRender()}
-\CommentTok{\# https://rstudio.github.io/r2d3/articles/advanced\_rendering.html}
 \FunctionTok{r2d3.onRender}\NormalTok{(}\ControlFlowTok{function}\NormalTok{(data, svg, width, height, options) \{}
   
 \NormalTok{  state.line\_data }\OtherTok{=}\NormalTok{ data.line\_data;}
@@ -1129,10 +1218,6 @@ Data for both the Eye Fitting Straight Lines in the Modern Era and Prediction of
 \NormalTok{\});}
 
 \CommentTok{\# An explicit resize handler}
-\CommentTok{\# is this like our bounds??? or does this have to do with scales?}
-\CommentTok{\# https://rstudio.github.io/r2d3/articles/advanced\_rendering.html}
-\CommentTok{\# redraws plot as you resize your browser window }
-\CommentTok{\# (box has changed size that we did not do on code end)}
 \FunctionTok{r2d3.onResize}\NormalTok{(}\ControlFlowTok{function}\NormalTok{(width, height, options) \{}
 \NormalTok{  state.w }\OtherTok{=}\NormalTok{ height}\SpecialCharTok{*}\NormalTok{state.options.aspect\_ratio }\SpecialCharTok{{-}}\NormalTok{ margin.left }\SpecialCharTok{{-}}\NormalTok{ margin.right;}
 \NormalTok{  state.h }\OtherTok{=}\NormalTok{ height }\SpecialCharTok{{-}}\NormalTok{ margin.top }\SpecialCharTok{{-}}\NormalTok{ margin.bottom;}
@@ -1142,7 +1227,6 @@ Data for both the Eye Fitting Straight Lines in the Modern Era and Prediction of
 \NormalTok{\});}
 
 \CommentTok{\# Main function that draws current state of viz}
-\CommentTok{\# set up scales \& draw true line if we decide to do that.}
 \ControlFlowTok{function} \FunctionTok{start\_drawer}\NormalTok{(state, }\AttributeTok{reset =}\NormalTok{ true)\{}
 \NormalTok{  const scales }\OtherTok{=} \FunctionTok{setup\_scales}\NormalTok{(state);}
   
@@ -1150,13 +1234,11 @@ Data for both the Eye Fitting Straight Lines in the Modern Era and Prediction of
     \FunctionTok{draw\_true\_line}\NormalTok{(state, scales, state.draw\_start);}
 \NormalTok{  \}}
   
-  \CommentTok{\# Cover hidden portion with a rectangle}
+  \CommentTok{\# Cover hidden portion with a rectangle (disabled)}
   \CommentTok{\# const line\_hider = setup\_line\_hider(state.svg, state.draw\_start, scales);}
   
   \CommentTok{\# if we reset (these are points that can be drawn) remove what user has drawn.}
   \ControlFlowTok{if}\NormalTok{(reset)\{}
-    \CommentTok{\# start with the svg object provided by r2d3}
-    \CommentTok{\# multiassign where setup\_drawable\_points is grabbing the parameters it needs from state: data, freedraw and draw\_start}
 \NormalTok{    state.drawable\_points }\OtherTok{=} \FunctionTok{setup\_drawable\_points}\NormalTok{(state);}
 \NormalTok{  \}}
   
@@ -1182,20 +1264,16 @@ Data for both the Eye Fitting Straight Lines in the Modern Era and Prediction of
   \CommentTok{\# line\_status is set by draw watcher {-} get user status line}
   \CommentTok{\# if some points missing {-} in progress}
   \CommentTok{\# complete line {-} done}
-  \CommentTok{\# passes drawn points to shiny when click done}
-  \CommentTok{\# as long as there are dots (missing spaces) it isn\textquotesingle{}t going to pass data back.}
 \NormalTok{  const on\_end }\OtherTok{=} \ControlFlowTok{function}\NormalTok{()\{}
     \CommentTok{\# Check if all points are drawn so we can reveal line}
 \NormalTok{    const line\_status }\OtherTok{=} \FunctionTok{get\_user\_line\_status}\NormalTok{(state);}
-    
     \ControlFlowTok{if}\NormalTok{(line\_status }\SpecialCharTok{==}\ErrorTok{=} \StringTok{\textquotesingle{}done\textquotesingle{}}\NormalTok{)\{}
       \CommentTok{\# User has completed line drawing}
-      \SpecialCharTok{/}\ErrorTok{/}\ControlFlowTok{if}\NormalTok{(state.show\_finished) }\FunctionTok{line\_hider.reveal}\NormalTok{();}
-      \SpecialCharTok{/}\ErrorTok{/}\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\NormalTok{state.free\_draw)  }\FunctionTok{line\_hider.reveal}\NormalTok{();}
+      \CommentTok{\# if(state.show\_finished) line\_hider.reveal();}
+      \CommentTok{\# if(!state.free\_draw)  line\_hider.reveal();}
       \ControlFlowTok{if}\NormalTok{(state.show\_finished)\{}
         \FunctionTok{draw\_finished\_line}\NormalTok{(state, scales, state.draw\_start);}
 \NormalTok{      \}}
-      
       \ControlFlowTok{if}\NormalTok{(state.shiny\_message\_loc)\{}
         \CommentTok{\# Make sure shiny is available before sending message}
         \ControlFlowTok{if}\NormalTok{(typeof Shiny }\SpecialCharTok{!=}\ErrorTok{=} \StringTok{\textquotesingle{}undefined\textquotesingle{}}\NormalTok{)\{}
@@ -1237,14 +1315,12 @@ Data for both the Eye Fitting Straight Lines in the Modern Era and Prediction of
 \NormalTok{      y}\SpecialCharTok{:}\NormalTok{ i }\SpecialCharTok{==}\ErrorTok{=} \DecValTok{0}\NormalTok{ ? d.y}\SpecialCharTok{:}\NormalTok{ null}
 \NormalTok{    \}));}
 \NormalTok{  \}}
-  
 \NormalTok{\}}
 
 \ControlFlowTok{function} \FunctionTok{get\_user\_line\_status}\NormalTok{(\{drawable\_points, free\_draw\})\{}
 \NormalTok{  const num\_points }\OtherTok{=}\NormalTok{ drawable\_points.length;}
 \NormalTok{  const num\_filled }\OtherTok{=} \FunctionTok{d3.sum}\NormalTok{(}\FunctionTok{drawable\_points.map}\NormalTok{(}\AttributeTok{d =}\SpecialCharTok{\textgreater{}}\NormalTok{ d.y }\SpecialCharTok{==}\ErrorTok{=}\NormalTok{ null ? }\DecValTok{0}\SpecialCharTok{:} \DecValTok{1}\NormalTok{));}
 \NormalTok{  const num\_starting\_filled }\OtherTok{=}\NormalTok{ free\_draw ? }\DecValTok{0}\SpecialCharTok{:} \DecValTok{1}\NormalTok{;}
-  
   \ControlFlowTok{if}\NormalTok{(num\_filled }\SpecialCharTok{==}\ErrorTok{=}\NormalTok{ num\_starting\_filled)\{}
 \NormalTok{    return }\StringTok{\textquotesingle{}unstarted\textquotesingle{}}\NormalTok{;}
 \NormalTok{  \} }\ControlFlowTok{else} \ControlFlowTok{if}\NormalTok{(num\_points }\SpecialCharTok{==}\ErrorTok{=}\NormalTok{ num\_filled)\{}
@@ -1264,15 +1340,12 @@ Data for both the Eye Fitting Straight Lines in the Modern Era and Prediction of
 \NormalTok{\}}
 
 \ControlFlowTok{function} \FunctionTok{draw\_points}\NormalTok{(\{svg, point\_data, points\_end, points\}, scales)\{}
-  
     \ControlFlowTok{if}\NormalTok{(points }\SpecialCharTok{==} \StringTok{"partial"}\NormalTok{)\{}
 \NormalTok{      var df }\OtherTok{=} \FunctionTok{point\_data.filter}\NormalTok{(}\ControlFlowTok{function}\NormalTok{(d)\{}\FunctionTok{return}\NormalTok{ (d.x}\SpecialCharTok{\textless{}=}\NormalTok{points\_end)\});}
 \NormalTok{    \} }\ControlFlowTok{else}\NormalTok{ \{}
 \NormalTok{      var df }\OtherTok{=}\NormalTok{ point\_data;}
 \NormalTok{    \}}
-    
 \NormalTok{  const dots }\OtherTok{=} \FunctionTok{state.svg.selectAll}\NormalTok{(}\StringTok{"circle"}\NormalTok{)}\FunctionTok{.data}\NormalTok{(df)}
-  
 \NormalTok{  dots}
     \FunctionTok{.enter}\NormalTok{()}\FunctionTok{.append}\NormalTok{(}\StringTok{"circle"}\NormalTok{)}
     \FunctionTok{.merge}\NormalTok{(dots)}
@@ -1282,11 +1355,9 @@ Data for both the Eye Fitting Straight Lines in the Modern Era and Prediction of
     \FunctionTok{.style}\NormalTok{(}\StringTok{"fill"}\NormalTok{, }\StringTok{"black"}\NormalTok{)}
     \FunctionTok{.style}\NormalTok{(}\StringTok{"opacity"}\NormalTok{, }\FloatTok{0.8}\NormalTok{)}
     \FunctionTok{.style}\NormalTok{(}\StringTok{"stroke"}\NormalTok{, }\StringTok{"black"}\NormalTok{)}
-    
 \NormalTok{\}}
 
 \ControlFlowTok{function} \FunctionTok{draw\_rectangle}\NormalTok{(\{svg, drawable\_points, line\_data, draw\_start, width, height, free\_draw, x\_by\}, scales)\{}
-
     \ControlFlowTok{if}\NormalTok{(}\FunctionTok{get\_user\_line\_status}\NormalTok{(state) }\SpecialCharTok{==}\ErrorTok{=} \StringTok{\textquotesingle{}unstarted\textquotesingle{}}\NormalTok{)\{}
       \ControlFlowTok{if}\NormalTok{(free\_draw)\{}
 \NormalTok{         var xmin }\OtherTok{=}\NormalTok{ line\_data[}\DecValTok{0}\NormalTok{].x}
@@ -1311,9 +1382,7 @@ Data for both the Eye Fitting Straight Lines in the Modern Era and Prediction of
 \NormalTok{        var drawSpace\_end   }\OtherTok{=} \FunctionTok{scales.x}\NormalTok{(xmax)}
 \NormalTok{      \}}
 \NormalTok{    \}}
-
 \NormalTok{    const draw\_region }\OtherTok{=} \FunctionTok{state.svg.selectAppend}\NormalTok{(}\StringTok{"rect"}\NormalTok{);}
-
 \NormalTok{    draw\_region}
       \FunctionTok{.attr}\NormalTok{(}\StringTok{"x"}\NormalTok{, drawSpace\_start)}
       \FunctionTok{.attr}\NormalTok{(}\StringTok{"width"}\NormalTok{,drawSpace\_end }\SpecialCharTok{{-}}\NormalTok{ drawSpace\_start)}
@@ -1322,20 +1391,16 @@ Data for both the Eye Fitting Straight Lines in the Modern Era and Prediction of
       \SpecialCharTok{/}\ErrorTok{/}\FunctionTok{.style}\NormalTok{(}\StringTok{"fill"}\NormalTok{, }\StringTok{"\#e0f3f3"}\NormalTok{)}
       \FunctionTok{.style}\NormalTok{(}\StringTok{"fill{-}opacity"}\NormalTok{, }\FloatTok{0.4}\NormalTok{)}
       \FunctionTok{.style}\NormalTok{(}\StringTok{"fill"}\NormalTok{, }\StringTok{"rgba(255,255,0,.8)"}\NormalTok{)}
-  
 \NormalTok{\}}
 
 \ControlFlowTok{function} \FunctionTok{draw\_user\_line}\NormalTok{(state, scales)\{}
 \NormalTok{  const \{svg, drawable\_points, drawn\_line\_color\} }\OtherTok{=}\NormalTok{ state;}
-  
 \NormalTok{  const user\_line }\OtherTok{=} \FunctionTok{state.svg.selectAppend}\NormalTok{(}\StringTok{"path.user\_line"}\NormalTok{);}
-  
   \CommentTok{\# Only draw line if there\textquotesingle{}s something to draw.}
   \ControlFlowTok{if}\NormalTok{(}\FunctionTok{get\_user\_line\_status}\NormalTok{(state) }\SpecialCharTok{==}\ErrorTok{=} \StringTok{\textquotesingle{}unstarted\textquotesingle{}}\NormalTok{)\{}
     \FunctionTok{user\_line.remove}\NormalTok{();}
 \NormalTok{    return;}
 \NormalTok{  \}}
-
   \CommentTok{\# Draws the points the user is drawing with their mouse}
 \NormalTok{  user\_line}
       \FunctionTok{.datum}\NormalTok{(drawable\_points)}
@@ -1346,32 +1411,25 @@ Data for both the Eye Fitting Straight Lines in the Modern Era and Prediction of
 \NormalTok{\}}
 
 \ControlFlowTok{function} \FunctionTok{draw\_finished\_line}\NormalTok{(\{svg, line\_data, draw\_start, free\_draw\}, scales)\{}
-  
-  
   \ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\NormalTok{free\_draw)\{}
 \NormalTok{    var df }\OtherTok{=} \FunctionTok{line\_data.filter}\NormalTok{(}\ControlFlowTok{function}\NormalTok{(d)\{ return d.x }\SpecialCharTok{\textgreater{}=}\NormalTok{ draw\_start\})}
 \NormalTok{  \} }\ControlFlowTok{else}\NormalTok{ \{}
 \NormalTok{    var df }\OtherTok{=}\NormalTok{ line\_data}
 \NormalTok{  \}}
-  
 \NormalTok{  const finished\_line }\OtherTok{=} \FunctionTok{state.svg.selectAppend}\NormalTok{(}\StringTok{"path.finished\_line"}\NormalTok{)}
-  
     \CommentTok{\# Only draw line if there\textquotesingle{}s something to draw.}
   \ControlFlowTok{if}\NormalTok{(}\FunctionTok{get\_user\_line\_status}\NormalTok{(state) }\SpecialCharTok{==}\ErrorTok{=} \StringTok{\textquotesingle{}unstarted\textquotesingle{}}\NormalTok{)\{}
     \FunctionTok{finished\_line.remove}\NormalTok{();}
 \NormalTok{    return;}
 \NormalTok{  \}}
-  
 \NormalTok{  finished\_line}
   \FunctionTok{.datum}\NormalTok{(df)}
   \FunctionTok{.at}\NormalTok{(default\_line\_attrs)}
   \FunctionTok{.attr}\NormalTok{(}\StringTok{"d"}\NormalTok{, scales.line\_drawer)}
   \FunctionTok{.attr}\NormalTok{(}\StringTok{"opacity"}\NormalTok{, }\FloatTok{0.5}\NormalTok{)}
-  
 \NormalTok{\}}
 
-\CommentTok{\# from state we need drawable\_points {-} from setup\_drawable\_points() function that modifies state (get all x points bigger than or equal to draw\_start and set up with a null), pin\_start, and free\_draw parameters}
-\CommentTok{\# drag\_x, drag\_y come from on\_drag() function}
+\CommentTok{\# from state we need drawable\_points}
 \ControlFlowTok{function} \FunctionTok{fill\_in\_closest\_point}\NormalTok{(\{drawable\_points, pin\_start, free\_draw\}, drag\_x, drag\_y)\{}
   \CommentTok{\# find closest point on data to draw}
 \NormalTok{  let last\_dist }\OtherTok{=}\NormalTok{ Infinity;}
@@ -1394,10 +1452,6 @@ Data for both the Eye Fitting Straight Lines in the Modern Era and Prediction of
 \NormalTok{\}}
 
 \ControlFlowTok{function} \FunctionTok{setup\_draw\_watcher}\NormalTok{(svg, scales, on\_drag, on\_end)\{}
-  
-  \CommentTok{\# could have called drag\_watcher whatever we wanted}
-  \CommentTok{\# .at is space it begins watching}
-  \CommentTok{\# .call is "do something" d3.drag() is the mouse action puts listeners to react to user input.}
   \FunctionTok{svg.selectAppend}\NormalTok{(}\StringTok{\textquotesingle{}rect.drag\_watcher\textquotesingle{}}\NormalTok{)}
   \FunctionTok{.at}\NormalTok{(\{}
 \NormalTok{    height}\SpecialCharTok{:} \FunctionTok{scales.y.range}\NormalTok{()[}\DecValTok{0}\NormalTok{],}
@@ -1413,27 +1467,21 @@ Data for both the Eye Fitting Straight Lines in the Modern Era and Prediction of
 \NormalTok{\}}
 
 \ControlFlowTok{function} \FunctionTok{add\_axis\_label}\NormalTok{(label, }\AttributeTok{y\_axis =}\NormalTok{ true)\{}
-  
 \NormalTok{  const bump\_axis }\OtherTok{=}\NormalTok{ y\_axis ? }\StringTok{\textquotesingle{}x\textquotesingle{}}\SpecialCharTok{:} \StringTok{\textquotesingle{}y\textquotesingle{}}\NormalTok{;}
-  
 \NormalTok{  const axis\_label\_style }\OtherTok{=}\NormalTok{ \{}
 \NormalTok{    [bump\_axis]}\SpecialCharTok{:}\NormalTok{ bump\_axis }\SpecialCharTok{==} \StringTok{\textquotesingle{}y\textquotesingle{}}\NormalTok{ ? }\DecValTok{3}\SpecialCharTok{:} \SpecialCharTok{{-}}\DecValTok{2}\NormalTok{,}
 \NormalTok{    textAnchor}\SpecialCharTok{:} \StringTok{\textquotesingle{}end\textquotesingle{}}\NormalTok{,}
 \NormalTok{    fontWeight}\SpecialCharTok{:} \StringTok{\textquotesingle{}500\textquotesingle{}}\NormalTok{,}
 \NormalTok{    fontSize}\SpecialCharTok{:} \StringTok{\textquotesingle{}0.9rem\textquotesingle{}}\NormalTok{,}
 \NormalTok{  \};}
-  
 \NormalTok{  return g }\OtherTok{=}\ErrorTok{\textgreater{}}\NormalTok{ \{}
 \NormalTok{    let last\_tick }\OtherTok{=} \FunctionTok{g.select}\NormalTok{(}\StringTok{".tick:last{-}of{-}type"}\NormalTok{);}
 \NormalTok{    const no\_ticks }\OtherTok{=} \FunctionTok{last\_tick.empty}\NormalTok{();}
-    
     \ControlFlowTok{if}\NormalTok{(no\_ticks)\{}
 \NormalTok{      last\_tick }\OtherTok{=} \FunctionTok{g.append}\NormalTok{(}\StringTok{\textquotesingle{}g\textquotesingle{}}\NormalTok{)}
       \FunctionTok{.attr}\NormalTok{(}\StringTok{\textquotesingle{}class\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}tick\textquotesingle{}}\NormalTok{);}
 \NormalTok{    \}}
-    
     \FunctionTok{last\_tick.select}\NormalTok{(}\StringTok{"line"}\NormalTok{)}\FunctionTok{.remove}\NormalTok{();}
-    
     \FunctionTok{last\_tick.selectAppend}\NormalTok{(}\StringTok{"text"}\NormalTok{)}
     \FunctionTok{.at}\NormalTok{(axis\_label\_style)}
     \FunctionTok{.html}\NormalTok{(label);}
@@ -1444,12 +1492,10 @@ Data for both the Eye Fitting Straight Lines in the Modern Era and Prediction of
 \ControlFlowTok{function} \FunctionTok{setup\_scales}\NormalTok{(state)\{}
   \CommentTok{\# multi{-}assign: x\_range, etc. coming from options}
 \NormalTok{  const \{w, h, line\_data, x\_range, y\_range, x\_name, y\_name, linear\} }\OtherTok{=}\NormalTok{ state;}
-  
   \CommentTok{\# convert x from data scale to pixle scale}
 \NormalTok{  const x }\OtherTok{=} \FunctionTok{d3.scaleLinear}\NormalTok{()}
   \FunctionTok{.domain}\NormalTok{(x\_range }\SpecialCharTok{||} \FunctionTok{d3.extent}\NormalTok{(line\_data, }\AttributeTok{d =}\SpecialCharTok{\textgreater{}}\NormalTok{ d.x))}
   \FunctionTok{.range}\NormalTok{([}\DecValTok{0}\NormalTok{, w]);}
-  
   \SpecialCharTok{/}\ErrorTok{/}\FunctionTok{console.log}\NormalTok{(linear);}
   \ControlFlowTok{if}\NormalTok{ (linear }\SpecialCharTok{==} \StringTok{\textquotesingle{}true\textquotesingle{}}\NormalTok{) \{}
     \SpecialCharTok{/}\ErrorTok{/}\FunctionTok{console.log}\NormalTok{(}\StringTok{\textquotesingle{}in linear block\textquotesingle{}}\NormalTok{);}
@@ -1470,9 +1516,6 @@ Data for both the Eye Fitting Straight Lines in the Modern Era and Prediction of
 \NormalTok{  const xAxisGrid }\OtherTok{=} \FunctionTok{d3.axisBottom}\NormalTok{()}\FunctionTok{.scale}\NormalTok{(x)}\FunctionTok{.tickSize}\NormalTok{(}\SpecialCharTok{{-}}\NormalTok{h)}\FunctionTok{.tickFormat}\NormalTok{(}\StringTok{\textquotesingle{}\textquotesingle{}}\NormalTok{);}
 \NormalTok{  const yAxisGrid }\OtherTok{=} \FunctionTok{d3.axisLeft}\NormalTok{()}\FunctionTok{.scale}\NormalTok{(y)}\FunctionTok{.tickSize}\NormalTok{(}\SpecialCharTok{{-}}\NormalTok{w)}\FunctionTok{.tickFormat}\NormalTok{(}\StringTok{\textquotesingle{}\textquotesingle{}}\NormalTok{);}
   
-  \CommentTok{\# Remove all grid related things first}
-  \CommentTok{\# remove everything when you convert from linear and log and vise versa.}
-  \CommentTok{\# want html element \textless{}g\textgreater{} that has class axis{-}grid}
   \FunctionTok{state.svg.selectAll}\NormalTok{(}\StringTok{"g.x\_grid"}\NormalTok{)}\FunctionTok{.remove}\NormalTok{()}
   \FunctionTok{state.svg.selectAll}\NormalTok{(}\StringTok{"g.y\_grid"}\NormalTok{)}\FunctionTok{.remove}\NormalTok{()}
   \CommentTok{\# could call axis{-}grid "fred"}
@@ -1514,9 +1557,6 @@ Data for both the Eye Fitting Straight Lines in the Modern Era and Prediction of
 \NormalTok{\}}
 \end{Highlighting}
 \end{Shaded}
-
-\hypertarget{the-second-appendix}{%
-\chapter{The Second Appendix}\label{the-second-appendix}}
 
 \backmatter
 

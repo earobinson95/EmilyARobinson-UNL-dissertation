@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.5.4)  25 JUN 2021 16:09
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.5.4)  26 JUN 2021 11:12
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1692,132 +1692,125 @@ File: images/raster-vs-vector.png Graphic file (type bmp)
 [32] [33] [34] [35] [36]
 File: images/r2d3+shiny-inkscape.png Graphic file (type bmp)
 <images/r2d3+shiny-inkscape.png>
-[37] [38] [39
+[37] [38]
+File: thesis_files/figure-latex/eyefitting-example-plot-1.pdf Graphic file (typ
+e pdf)
+<use thesis_files/figure-latex/eyefitting-example-plot-1.pdf>
+[39] [40]
+File: thesis_files/figure-latex/eyefitting-gammpred-plots-1.pdf Graphic file (t
+ype pdf)
+<use thesis_files/figure-latex/eyefitting-gammpred-plots-1.pdf>
+File: thesis_files/figure-latex/eyefitting-lmer-preds-1.pdf Graphic file (type 
+pdf)
+<use thesis_files/figure-latex/eyefitting-lmer-preds-1.pdf>
+[41] [42] [43
 
-] [40
+] [44
 
 ]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1118.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1207.
 
-Underfull \vbox (badness 1152) detected at line 1516
+Underfull \vbox (badness 1152) detected at line 1559
  []
 
-[41
+[45
 
 ]
-Underfull \vbox (badness 10000) detected at line 1516
+Underfull \vbox (badness 10000) detected at line 1559
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1516
- []
-
-[42]
-Underfull \vbox (badness 10000) detected at line 1516
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1516
- []
-
-[43]
-Underfull \vbox (badness 10000) detected at line 1516
- []
-
-
-Overfull \vbox (0.24333pt too high) detected at line 1516
- []
-
-[44]
-Underfull \vbox (badness 10000) detected at line 1516
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1516
- []
-
-[45]
-Underfull \vbox (badness 10000) detected at line 1516
- []
-
-
-Overfull \vbox (0.90334pt too high) detected at line 1516
+Underfull \vbox (badness 10000) detected at line 1559
  []
 
 [46]
-Underfull \vbox (badness 10000) detected at line 1516
+Underfull \vbox (badness 10000) detected at line 1559
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1516
+Overfull \vbox (0.97333pt too high) detected at line 1559
  []
 
 [47]
-Underfull \vbox (badness 10000) detected at line 1516
+Underfull \vbox (badness 10000) detected at line 1559
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1516
+Overfull \vbox (0.97333pt too high) detected at line 1559
  []
 
 [48]
-Underfull \vbox (badness 10000) detected at line 1516
+Underfull \vbox (badness 10000) detected at line 1559
  []
 
 
-Overfull \vbox (0.35333pt too high) detected at line 1516
+Underfull \vbox (badness 10000) detected at line 1559
  []
 
 [49]
-Underfull \vbox (badness 10000) detected at line 1516
- []
-
-
-Overfull \vbox (0.96333pt too high) detected at line 1516
+Underfull \vbox (badness 10000) detected at line 1559
  []
 
 [50]
-Underfull \vbox (badness 10000) detected at line 1516
+Underfull \vbox (badness 10000) detected at line 1559
  []
 
 
-Overfull \vbox (0.97333pt too high) detected at line 1516
+Overfull \vbox (0.97333pt too high) detected at line 1559
  []
 
 [51]
-Underfull \vbox (badness 10000) detected at line 1516
+Underfull \vbox (badness 10000) detected at line 1559
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1516
+Underfull \vbox (badness 10000) detected at line 1559
  []
 
 [52]
-Underfull \vbox (badness 10000) detected at line 1516
+Underfull \vbox (badness 10000) detected at line 1559
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1516
+Underfull \vbox (badness 10000) detected at line 1559
  []
 
 [53]
-Underfull \vbox (badness 10000) detected at line 1516
+Underfull \vbox (badness 10000) detected at line 1559
  []
 
-[54] [55] [56
 
-] [57
+Overfull \vbox (0.14333pt too high) detected at line 1559
+ []
 
-] [58] [59] [60] [61] [62] [63]
+[54]
+Underfull \vbox (badness 10000) detected at line 1559
+ []
+
+
+Overfull \vbox (0.97333pt too high) detected at line 1559
+ []
+
+[55]
+Underfull \vbox (badness 10000) detected at line 1559
+ []
+
+
+Overfull \vbox (0.97333pt too high) detected at line 1559
+ []
+
+[56] [57] [58
+
+] [59] [60] [61] [62] [63] [64]
 No file thesis.bbl.
 
 Class memoir Warning: The material used in the footer is too large
 (10.14995pt) for the given foot skip (0.0pt), it is recommended to
 either increase the foot skip or redesign the footer
-(in both cases you will find help in the memoir manual). on input line 1735.
+(in both cases you will find help in the memoir manual). on input line 1775.
 
-[64] [65]
+[65] [66]
 \tf@toc=\write7
 \openout7 = `thesis.toc'.
 
@@ -1829,15 +1822,15 @@ either increase the foot skip or redesign the footer
 
 (thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: C29E3B13E3619182441B7B62F73AAAAD;1881.
+(rerunfilecheck)             Checksum: 7121842F52C08D1ADE665BA1E0B3601C;1819.
  ) 
 Here is how much of TeX's memory you used:
- 36238 strings out of 411690
- 665793 string characters out of 2834884
- 1112080 words of memory out of 3000000
- 55691 multiletter control sequences out of 15000+600000
+ 36263 strings out of 411690
+ 667084 string characters out of 2834884
+ 1106080 words of memory out of 3000000
+ 55713 multiletter control sequences out of 15000+600000
  409730 words of font info for 70 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 126i,12n,130p,2602b,522s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 126i,12n,130p,2602b,548s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (73 pages).
+Output written on thesis.pdf (74 pages).

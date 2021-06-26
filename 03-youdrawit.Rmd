@@ -54,17 +54,25 @@ Section [3.2](#r2d3-with-shiny) outlines the development of the you draw it stud
 
 ### Study Objectives
 
-This chapter first aims to establish the you draw it method as a tool for measuring predictions of trends; then this method will be used to test an individual's ability to make predictions for exponentially increasing data on both the log and linear scales, refered to as Prediction of Exponential Trends.
-@mosteller_eye_1981 was replicated as part of the study data collection in order to validate the you draw it method, this will be refered to as Eye Fitting Straight Lines in the Modern Era. 
+This chapter first aims to establish the you draw it method as a tool for measuring predictions of trends; then this method will be used to test an individual's ability to make predictions for exponentially increasing data on both the log and linear scales, referred to as Prediction of Exponential Trends.
+@mosteller_eye_1981 was replicated as part of the study data collection in order to validate the you draw it method, this will be referred to as Eye Fitting Straight Lines in the Modern Era. 
 Data for both the Eye Fitting Straight Lines in the Modern Era and Prediction of Exponential Trends studies were collected in conjunction with one another over the same study participant sample. 
 
 ## Interactive Plot Development
 
+Interactive plots for the study were created using the r2d3 package and integrating D3 source code with an R shiny application. 
+In this section I outline the data simulation process conducted in R, constructing interactive plots with D3.js code and R shiny, and the experiment design used to collect participant responses.
+
 ### Data Simulation
+
+All data processing was conducted in R before being passed to the D3.js code. 
+Both studies, Eye Fitting Straight Lines in the Modern Era and Prediction of Exponential Trends, generate 30 points for $x\in [0, 20]$ based on a specific model (linear regression and exponential regression respectively) and selected coefficient and variance parameters. 
+The corresponding model is then fit to the simulated points the obtain the best fit line and estimated values every 0.25 increments across the domain.
+Each function then outputs a list of point data and line data both indicating the parameter identification, x value, and y value.
 
 #### Eye Fitting Straight Lines in the Modern Era
 
-*Algorithm: Linear Data Generation* `linearDataGen()`
+\noindent *Algorithm: Eye Fitting Straight Lines in the Modern Era Data Generation*
 
 **In parameters:** `y_xbar, slope, sigma, N = 30, xmin, xmax, xby = 0.25`
 
@@ -102,9 +110,9 @@ Data for both the Eye Fitting Straight Lines in the Modern Era and Prediction of
 
 #### Prediction of Exponential Trends
 
-\noindent *Algorithm 3.1: Exponential Data Generation*
+\noindent *Algorithm 3.2: Exponential Data Generation*
 
-**In parameters:** `beta, sd, points_choice = "partial", points_end_scale, N = 30, xmin = 20, xmax = 20, xby = 0.25`
+**In parameters:** `beta, sd, points_choice = "partial", points_end_scale, N = 30, xmin = 0, xmax = 20, xby = 0.25`
 
 **Out:** data list of point data and line data
 
@@ -153,16 +161,151 @@ knitr::include_graphics("images/r2d3+shiny-inkscape.png")
 
 ### Study Design
 
-+ 8 data sets were generated for each individual upon start of experiment (4 Linear + 4 Exponential)
-+ 12 you draw it task plots were shown to each individual (4 Linear + (4 Exponential x 2 Scales))
-+ The order of each of the 12 plots was randomly assigned for each individual in a CRD.
+For each individual, a total of 6 data sets - 4 Eye Fitting Straight Lines in the Modern Era and 2 Prediction of Exponential Trends - are generated for each individual the start of the experiment. 
+The 2 data sets corresponding to to the data used in the Prediction of Exponential Trends are then plotted a total of 4 times each by truncating the points at both 50% and 75% of the domain as well as on both the log and linear scales for a total of 8 task plots. 
+Participants in the study are first shown 2 you draw it plot practice plots followed by 12 you draw it task plots. 
+The order of all 12 task plots were randomly assigned for each individual in a completely randomized design where users saw the 4 task plots from the Eye Fitting Straight Lines in the Modern Era simulated data interspersed with the 8 task plots from the Prediction of Exponential Trends simulated data. 
 
 ## Results
 
 ### Eye Fitting Straight Lines in the Modern Era
 
-+ https://benediktehinger.de/blog/science/scatterplots-regression-lines-and-the-first-principal-component/
+To calculate the first principal component fit: https://benediktehinger.de/blog/science/scatterplots-regression-lines-and-the-first-principal-component/
 
+1. Subset the simulated point data for a particular participant and parameter (S, F, V, N).
+2. Fit a principal component over the x and y vectors from the point data (note these are the points show in the plot below). Use prcomp. Call this `pca.mod` 
+3. Obtain the slope and intercept:
+    + Using the pca.mod rotations we obatin the slope as: $\text{pca.slope} = \frac{\text{pca.mod rotation}[y,PC1]}{\text{pca.mod rotation}[x,PC1]}$
+    + Using point-slope form we obtain the intercept as:
+4. Obtain ypca values by: $y_{pca} = \text{pca.slope} \cdot x_{\text{feedback data}} + \text{pca.intercept}$
+
+```{r eyefitting-example-plot, fig.cap = "Eye Fitting Straight Lines in the Modern Era Example", out.width="25%"}
+trial.feedback <- read.csv("data/youdrawit/youdrawit-eyefitting-example-feedback.csv") %>%
+    mutate(`Parameter Choice` = "F")
+trial.sim <- read.csv("data/youdrawit/youdrawit-eyefitting-example-simulated.csv") %>%
+    mutate(`Parameter Choice` = "F")
+    
+trial.feedback %>%
+  ggplot(aes(x = x)) +
+  geom_line(aes(y = y, color = "OLS", linetype = "OLS")) +
+  geom_line(aes(y = ypca, color = "PCA", linetype = "PCA")) +
+  geom_line(aes(y = yloess, color = "Drawn (loess)", linetype = "Drawn (loess)")) +
+  geom_point(data = trial.sim, aes(y = y), size = .05) +
+  facet_wrap(~`Parameter Choice`, labeller = labeller(`Parameter Choice` = label_both)) +
+  theme_bw(base_size = 14) +
+  theme(aspect.ratio = 1,
+        legend.position = "bottom",
+        axis.text    = element_text(size = 6),
+        axis.title   = element_text(size = 8),
+        legend.title = element_text(size = 8),
+        legend.text  = element_text(size = 6),
+        strip.text = element_text(size = 5, margin = margin(0.05,0,0.05,0, "cm")),
+        strip.background = element_rect(size = 0.5),
+        legend.key.size = unit(0.5, "line")
+        ) +
+  scale_x_continuous(limits = c(0,20)) +
+  scale_color_manual("", values = c("steelblue", "black", "black")) +
+  scale_linetype_manual("", values = c("solid", "solid", "dashed"))
+```
+**Treatments:**
+
++ parm_ID (S, F, V, N)
++ x (0, 20)
+
+**Response:** raw residuals
++ residualols = ydrawn - yols, denoted $e_{ols}$
++ residualpca = ydrawn - ypca, denoted $e_{pca}$
+
+**Experimental Design:**    
++ Each participant saw each of the 4 plots (new simulated data for each)
+
+**OLS GAMM Model:**
+
+$$y_{drawn} - y_{ols} = e_{ij,ols} = \left[\gamma_0 + \alpha_i\right] + \left[s_1(x_{ij}) + s_{2i}(x_{ij}) \right] + p_{j} + \epsilon_{ij}$$
+
++ $\gamma_0$ is the overall intercept
++ $\alpha_i$ is the effect of the parameter combination on the intercept (i.e. how much the intercept adjusts for each parameter combo)
++ $s_1$ is the overall spline equation for x
++ $s_{2i}$ is the adjustment to the spline equation for each parameter combination (think unequal slopes)
++ $p_{j} \sim N(0, \sigma^2_{participant})$ is the participant error due to participant variation
++ $\epsilon_{ij} \sim N(0, \sigma^2)$ is the residual error.
+
+**PCA GAMM Model:**
+
+$$y_{drawn} - y_{pca} = e_{ij,pca} = \left[\gamma_0 + \alpha_i\right] + \left[s_1(x_{ij}) + s_{2i}(x_{ij}) \right] + p_{j} + \epsilon_{ij}$$
+
++ $\gamma_0$ is the overall intercept
++ $\alpha_i$ is the effect of the parameter combination on the intercept (i.e. how much the intercept adjusts for each parameter combo)
++ $s_1$ is the overall spline equation for x
++ $s_{2i}$ is the adjustment to the spline equation for each parameter combination (think unequal slopes)
++ $p_{j} \sim N(0, \sigma^2_{participant})$ is the participant error due to participant variation
++ $\epsilon_{ij} \sim N(0, \sigma^2)$ is the residual error.
+
+```{r eyefitting-gammpred-plots, fig.cap = "Eye Fitting Straight Lines in the Modern Era GAMM", out.width="50%"}
+eyefitting.grid.gamm <- read.csv("data/youdrawit/youdrawit-eyefitting-gammpred-data.csv")
+eyefitting_model_data <- read.csv("data/youdrawit/youdrawit-eyefitting-model-data.csv")
+eyefitting.grid.gamm %>%
+  filter((parm_id %in% c("F", "N", "S") | (x <= 16 & x >= 4))) %>%
+  rename(`Parameter Choice` = parm_id) %>%
+  ggplot(aes(x = x)) +
+  geom_line(data = eyefitting_model_data, aes(x = x, y = residualols, group = plotID, color = "OLS"), alpha = 0.05) +
+  geom_line(data = eyefitting_model_data, aes(x = x, y = residualpca, group = plotID, color = "PCA"), alpha = 0.05) +
+  geom_ribbon(aes(ymin = ols.lower, ymax = ols.upper, fill = "OLS"), color = NA, alpha = 0.5) +
+  geom_line(aes(y = ols.pred, color = "OLS")) +
+  geom_ribbon(aes(ymin = pca.lower, ymax = pca.upper, fill = "PCA"), color = NA, alpha = 0.5) +
+  geom_line(aes(y = pca.pred, color = "PCA")) +
+  geom_hline(yintercept = 0, linetype = "dashed", alpha = 0.5) +
+  facet_wrap(~`Parameter Choice`, labeller = labeller(`Parameter Choice` = label_both)) +
+  theme_bw(base_size = 14) +
+  theme(aspect.ratio = 1,
+        legend.position = "bottom",
+        axis.text    = element_text(size = 6),
+        axis.title   = element_text(size = 8),
+        legend.title = element_text(size = 8),
+        legend.text  = element_text(size = 6),
+        strip.text = element_text(size = 5, margin = margin(0.05,0,0.05,0, "cm")),
+        strip.background = element_rect(size = 0.5),
+        legend.key.size = unit(0.5, "line")
+        ) +
+  scale_y_continuous("Residual") +
+  scale_color_manual("Estimates", values = c("steelblue", "orange")) +
+  scale_fill_manual("Estimates", values = c("steelblue", "orange"))
+```
+
+```{r eyefitting-lmer-preds, fig.cap = "Eye Fitting Straight Lines in the Modern Era LMER", out.width="50%"}
+eyefitting.preds.lmer <- read.csv("data/youdrawit/youdrawit-eyefitting-lmerpred-data.csv")
+# Plot Predictions
+eyefitting.preds.lmer %>%
+  filter((parm_id %in% c("F", "N", "S") | (x <= 16 & x >= 4))) %>%
+  rename(`Parameter Choice` = parm_id) %>%
+  ggplot(aes(x = x)) +
+  geom_line(data = eyefitting_model_data, aes(x = x, y = residualols, group = plotID, color = "OLS"), alpha = 0.05) +
+  geom_line(data = eyefitting_model_data, aes(x = x, y = residualpca, group = plotID, color = "PCA"), alpha = 0.05) +
+  geom_ribbon(aes(ymin = asymp.LCL.ols, ymax = asymp.UCL.ols, fill = "OLS"), color = NA, alpha = 0.7) +
+  geom_line(aes(y = emmean.ols, color = "OLS")) +
+  geom_ribbon(aes(ymin = asymp.LCL.pca, ymax = asymp.UCL.pca, fill = "PCA"), color = NA, alpha = 0.7) +
+  geom_line(aes(y = emmean.pca, color = "PCA")) +
+  geom_hline(yintercept = 0, linetype = "dashed", alpha = 0.5) +
+  facet_wrap(~`Parameter Choice`, labeller = labeller(`Parameter Choice` = label_both)) +
+  theme_bw(base_size = 14) +
+  theme(aspect.ratio = 1,
+        legend.position = "bottom",
+        axis.text    = element_text(size = 6),
+        axis.title   = element_text(size = 8),
+        legend.title = element_text(size = 8),
+        legend.text  = element_text(size = 6),
+        strip.text = element_text(size = 5, margin = margin(0.05,0,0.05,0, "cm")),
+        strip.background = element_rect(size = 0.5),
+        legend.key.size = unit(0.5, "line")
+        ) +
+  scale_y_continuous("Residual") +
+  scale_color_manual("Estimates", values = c("steelblue", "orange")) +
+  scale_fill_manual("Estimates", values = c("steelblue", "orange"))
+```
+
+```{r eyefitting-ss-oddsratio}
+
+```
 
 ### Prediction of Exponential Trends
 
