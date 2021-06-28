@@ -66,6 +66,7 @@ library(tidyverse)
 library(scales)
 library(knitr)
 library(gridExtra)
+library(patchwork)
 ```
 
 # Literature Review

@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>A You Draw It Setup with Shiny | HUMAN PERCEPTION OF EXPONENTIALLY INCREASING DATA DISPLAYED ON A LOG SCALE</title>
+  <meta name="description" content="A You Draw It Setup with Shiny | HUMAN PERCEPTION OF EXPONENTIALLY INCREASING DATA DISPLAYED ON A LOG SCALE" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="A You Draw It Setup with Shiny | HUMAN PERCEPTION OF EXPONENTIALLY INCREASING DATA DISPLAYED ON A LOG SCALE" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="A You Draw It Setup with Shiny | HUMAN PERCEPTION OF EXPONENTIALLY INCREASING DATA DISPLAYED ON A LOG SCALE" />
+  
+  
+  
+
+<meta name="author" content="Emily Anna Robinson" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="5-conclusion.html"/>
+<link rel="next" href="references.html"/>
+<style type="text/css">
+p.abstract{
+  text-align: center;
+  font-weight: bold;
+}
+div.abstract{
+  margin: auto;
+  width: 90%;
+}
+</style>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"></a></li>
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Literature Review</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#introduction-to-graphics"><i class="fa fa-check"></i><b>1.1</b> Introduction to Graphics</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#perception-and-psychophysics"><i class="fa fa-check"></i><b>1.2</b> Perception and Psychophysics</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#graphical-experiments"><i class="fa fa-check"></i><b>1.3</b> Graphical Experiments</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#logarithmic-scales-and-mapping"><i class="fa fa-check"></i><b>1.4</b> Logarithmic Scales and Mapping</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#underestimation"><i class="fa fa-check"></i><b>1.5</b> Underestimation of Exponential Growth</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#research-objectives"><i class="fa fa-check"></i><b>1.6</b> Research Objectives</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-lineups.html"><a href="2-lineups.html"><i class="fa fa-check"></i><b>2</b> Perception through lineups</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="2-lineups.html"><a href="2-lineups.html#introduction"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="2-lineups.html"><a href="2-lineups.html#data-generation"><i class="fa fa-check"></i><b>2.2</b> Data Generation</a></li>
+<li class="chapter" data-level="2.3" data-path="2-lineups.html"><a href="2-lineups.html#parameter-selection"><i class="fa fa-check"></i><b>2.3</b> Parameter Selection</a></li>
+<li class="chapter" data-level="2.4" data-path="2-lineups.html"><a href="2-lineups.html#lineup-setup"><i class="fa fa-check"></i><b>2.4</b> Lineup Setup</a></li>
+<li class="chapter" data-level="2.5" data-path="2-lineups.html"><a href="2-lineups.html#study-design"><i class="fa fa-check"></i><b>2.5</b> Study Design</a></li>
+<li class="chapter" data-level="2.6" data-path="2-lineups.html"><a href="2-lineups.html#results"><i class="fa fa-check"></i><b>2.6</b> Results</a></li>
+<li class="chapter" data-level="2.7" data-path="2-lineups.html"><a href="2-lineups.html#discussion-and-conclusion"><i class="fa fa-check"></i><b>2.7</b> Discussion and Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-youdrawit.html"><a href="3-youdrawit.html"><i class="fa fa-check"></i><b>3</b> Prediction with you draw it</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="3-youdrawit.html"><a href="3-youdrawit.html#introduction-1"><i class="fa fa-check"></i><b>3.1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="3-youdrawit.html"><a href="3-youdrawit.html#past-methodology"><i class="fa fa-check"></i><b>3.1.1</b> Past Methodology</a></li>
+<li class="chapter" data-level="3.1.2" data-path="3-youdrawit.html"><a href="3-youdrawit.html#data-driven-documents"><i class="fa fa-check"></i><b>3.1.2</b> Data Driven Documents</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="3-youdrawit.html"><a href="3-youdrawit.html#study-design-1"><i class="fa fa-check"></i><b>3.2</b> Study Design</a></li>
+<li class="chapter" data-level="3.3" data-path="3-youdrawit.html"><a href="3-youdrawit.html#eye-fitting-straight-lines-in-the-modern-era"><i class="fa fa-check"></i><b>3.3</b> Eye Fitting Straight Lines in the Modern Era</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="3-youdrawit.html"><a href="3-youdrawit.html#data-simulation"><i class="fa fa-check"></i><b>3.3.1</b> Data Simulation</a></li>
+<li class="chapter" data-level="3.3.2" data-path="3-youdrawit.html"><a href="3-youdrawit.html#parameter-selection-1"><i class="fa fa-check"></i><b>3.3.2</b> Parameter Selection</a></li>
+<li class="chapter" data-level="3.3.3" data-path="3-youdrawit.html"><a href="3-youdrawit.html#results-1"><i class="fa fa-check"></i><b>3.3.3</b> Results</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="3-youdrawit.html"><a href="3-youdrawit.html#prediction-of-exponential-trends"><i class="fa fa-check"></i><b>3.4</b> Prediction of Exponential Trends</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="3-youdrawit.html"><a href="3-youdrawit.html#data-simulation-1"><i class="fa fa-check"></i><b>3.4.1</b> Data Simulation</a></li>
+<li class="chapter" data-level="3.4.2" data-path="3-youdrawit.html"><a href="3-youdrawit.html#parameter-selection-2"><i class="fa fa-check"></i><b>3.4.2</b> Parameter Selection</a></li>
+<li class="chapter" data-level="3.4.3" data-path="3-youdrawit.html"><a href="3-youdrawit.html#results-2"><i class="fa fa-check"></i><b>3.4.3</b> Results</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="3-youdrawit.html"><a href="3-youdrawit.html#discussion-and-conclusion-1"><i class="fa fa-check"></i><b>3.5</b> Discussion and Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-estimation.html"><a href="4-estimation.html"><i class="fa fa-check"></i><b>4</b> Numerical Translation and Estimation</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="4-estimation.html"><a href="4-estimation.html#introduction-2"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-conclusion.html"><a href="5-conclusion.html"><i class="fa fa-check"></i><b>5</b> Conclusion</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="A-youdrawit-with-shiny.html"><a href="A-youdrawit-with-shiny.html"><i class="fa fa-check"></i><b>A</b> You Draw It Setup with Shiny</a>
+<ul>
+<li class="chapter" data-level="A.1" data-path="A-youdrawit-with-shiny.html"><a href="A-youdrawit-with-shiny.html#d3.js-source-code"><i class="fa fa-check"></i><b>A.1</b> You draw it D3.js source code</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">HUMAN PERCEPTION OF EXPONENTIALLY INCREASING DATA DISPLAYED ON A LOG SCALE</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="youdrawit-with-shiny" class="section level1" number="6">
+<h1><span class="header-section-number">A</span> You Draw It Setup with Shiny</h1>
+<p>Interactive plots for the study were created using the r2d3 package and integrating D3 source code with an R shiny application.
+In this section I outline the data simulation process conducted in R, constructing interactive plots with D3.js code and R shiny</p>
+<p></p>
+<div id="d3.js-source-code" class="section level2" number="6.1">
+<h2><span class="header-section-number">A.1</span> You draw it D3.js source code</h2>
+<div class="figure" style="text-align: center"><span id="fig:r2d3-shiny-flowchart"></span>
+<img src="images/r2d3+shiny-inkscape.png" alt="Interactive plot development" width="80%"  />
+<p class="caption">
+Figure A.1: Interactive plot development
+</p>
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="A-youdrawit-with-shiny.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define variable margins</span></span>
+<span id="cb2-2"><a href="A-youdrawit-with-shiny.html#cb2-2" aria-hidden="true" tabindex="-1"></a>const margin <span class="ot">=</span> {left<span class="sc">:</span> <span class="dv">55</span>, </span>
+<span id="cb2-3"><a href="A-youdrawit-with-shiny.html#cb2-3" aria-hidden="true" tabindex="-1"></a>                right<span class="sc">:</span> <span class="dv">10</span>, </span>
+<span id="cb2-4"><a href="A-youdrawit-with-shiny.html#cb2-4" aria-hidden="true" tabindex="-1"></a>                top<span class="sc">:</span> options.title ? <span class="dv">40</span><span class="sc">:</span> <span class="dv">10</span>, </span>
+<span id="cb2-5"><a href="A-youdrawit-with-shiny.html#cb2-5" aria-hidden="true" tabindex="-1"></a>                bottom<span class="sc">:</span> options.title? <span class="dv">25</span><span class="sc">:</span> <span class="dv">55</span>};</span>
+<span id="cb2-6"><a href="A-youdrawit-with-shiny.html#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="A-youdrawit-with-shiny.html#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Define variable default line attributes</span></span>
+<span id="cb2-8"><a href="A-youdrawit-with-shiny.html#cb2-8" aria-hidden="true" tabindex="-1"></a>const default_line_attrs <span class="ot">=</span> <span class="fu">Object.assign</span>({</span>
+<span id="cb2-9"><a href="A-youdrawit-with-shiny.html#cb2-9" aria-hidden="true" tabindex="-1"></a>  fill<span class="sc">:</span> <span class="st">&quot;none&quot;</span>,</span>
+<span id="cb2-10"><a href="A-youdrawit-with-shiny.html#cb2-10" aria-hidden="true" tabindex="-1"></a>  stroke<span class="sc">:</span> options.data_line_color <span class="sc">||</span> <span class="st">&#39;steelblue&#39;</span>,</span>
+<span id="cb2-11"><a href="A-youdrawit-with-shiny.html#cb2-11" aria-hidden="true" tabindex="-1"></a>  strokeWidth<span class="sc">:</span> <span class="dv">4</span>,</span>
+<span id="cb2-12"><a href="A-youdrawit-with-shiny.html#cb2-12" aria-hidden="true" tabindex="-1"></a>  strokeLinejoin<span class="sc">:</span> <span class="st">&quot;round&quot;</span>,</span>
+<span id="cb2-13"><a href="A-youdrawit-with-shiny.html#cb2-13" aria-hidden="true" tabindex="-1"></a>  strokeLinecap<span class="sc">:</span> <span class="st">&quot;round&quot;</span>,</span>
+<span id="cb2-14"><a href="A-youdrawit-with-shiny.html#cb2-14" aria-hidden="true" tabindex="-1"></a>}, options.line_style);</span>
+<span id="cb2-15"><a href="A-youdrawit-with-shiny.html#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="A-youdrawit-with-shiny.html#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># defines a changing variable called state</span></span>
+<span id="cb2-17"><a href="A-youdrawit-with-shiny.html#cb2-17" aria-hidden="true" tabindex="-1"></a>let state <span class="ot">=</span> <span class="fu">Object.assign</span>({</span>
+<span id="cb2-18"><a href="A-youdrawit-with-shiny.html#cb2-18" aria-hidden="true" tabindex="-1"></a>  line_data<span class="sc">:</span> data.line_data,</span>
+<span id="cb2-19"><a href="A-youdrawit-with-shiny.html#cb2-19" aria-hidden="true" tabindex="-1"></a>  point_data<span class="sc">:</span> data.point_data,</span>
+<span id="cb2-20"><a href="A-youdrawit-with-shiny.html#cb2-20" aria-hidden="true" tabindex="-1"></a>  svg<span class="sc">:</span> <span class="fu">svg.append</span>(<span class="st">&#39;g&#39;</span>)<span class="fu">.translate</span>([margin.left, margin.top])<span class="fu">.attr</span>(<span class="st">&quot;class&quot;</span>, <span class="st">&quot;wrapper&quot;</span>),</span>
+<span id="cb2-21"><a href="A-youdrawit-with-shiny.html#cb2-21" aria-hidden="true" tabindex="-1"></a>  w<span class="sc">:</span> height<span class="sc">*</span>options.aspect_ratio <span class="sc">-</span> margin.left <span class="sc">-</span> margin.right,</span>
+<span id="cb2-22"><a href="A-youdrawit-with-shiny.html#cb2-22" aria-hidden="true" tabindex="-1"></a>  h<span class="sc">:</span> height <span class="sc">-</span> margin.top <span class="sc">-</span> margin.bottom,</span>
+<span id="cb2-23"><a href="A-youdrawit-with-shiny.html#cb2-23" aria-hidden="true" tabindex="-1"></a>}, options);</span>
+<span id="cb2-24"><a href="A-youdrawit-with-shiny.html#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="A-youdrawit-with-shiny.html#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="co"># To distinguish between code that runs at initialization-time only and</span></span>
+<span id="cb2-26"><a href="A-youdrawit-with-shiny.html#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="co"># code that runs when data changes, organize your code so that the code</span></span>
+<span id="cb2-27"><a href="A-youdrawit-with-shiny.html#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="co"># which responds to data changes is contained within the r2d3.onRender()</span></span>
+<span id="cb2-28"><a href="A-youdrawit-with-shiny.html#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="fu">r2d3.onRender</span>(<span class="cf">function</span>(data, svg, width, height, options) {</span>
+<span id="cb2-29"><a href="A-youdrawit-with-shiny.html#cb2-29" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-30"><a href="A-youdrawit-with-shiny.html#cb2-30" aria-hidden="true" tabindex="-1"></a>  state.line_data <span class="ot">=</span> data.line_data;</span>
+<span id="cb2-31"><a href="A-youdrawit-with-shiny.html#cb2-31" aria-hidden="true" tabindex="-1"></a>  state.point_data <span class="ot">=</span> data.point_data;</span>
+<span id="cb2-32"><a href="A-youdrawit-with-shiny.html#cb2-32" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-33"><a href="A-youdrawit-with-shiny.html#cb2-33" aria-hidden="true" tabindex="-1"></a>  state <span class="ot">=</span> <span class="fu">Object.assign</span>(state, options);</span>
+<span id="cb2-34"><a href="A-youdrawit-with-shiny.html#cb2-34" aria-hidden="true" tabindex="-1"></a>  state.options <span class="ot">=</span> options;</span>
+<span id="cb2-35"><a href="A-youdrawit-with-shiny.html#cb2-35" aria-hidden="true" tabindex="-1"></a>  state.w <span class="ot">=</span> height<span class="sc">*</span>options.aspect_ratio;</span>
+<span id="cb2-36"><a href="A-youdrawit-with-shiny.html#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-37"><a href="A-youdrawit-with-shiny.html#cb2-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">start_drawer</span>(state);</span>
+<span id="cb2-38"><a href="A-youdrawit-with-shiny.html#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-39"><a href="A-youdrawit-with-shiny.html#cb2-39" aria-hidden="true" tabindex="-1"></a>});</span>
+<span id="cb2-40"><a href="A-youdrawit-with-shiny.html#cb2-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-41"><a href="A-youdrawit-with-shiny.html#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="co"># An explicit resize handler</span></span>
+<span id="cb2-42"><a href="A-youdrawit-with-shiny.html#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="fu">r2d3.onResize</span>(<span class="cf">function</span>(width, height, options) {</span>
+<span id="cb2-43"><a href="A-youdrawit-with-shiny.html#cb2-43" aria-hidden="true" tabindex="-1"></a>  state.w <span class="ot">=</span> height<span class="sc">*</span>state.options.aspect_ratio <span class="sc">-</span> margin.left <span class="sc">-</span> margin.right;</span>
+<span id="cb2-44"><a href="A-youdrawit-with-shiny.html#cb2-44" aria-hidden="true" tabindex="-1"></a>  state.h <span class="ot">=</span> height <span class="sc">-</span> margin.top <span class="sc">-</span> margin.bottom;</span>
+<span id="cb2-45"><a href="A-youdrawit-with-shiny.html#cb2-45" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-46"><a href="A-youdrawit-with-shiny.html#cb2-46" aria-hidden="true" tabindex="-1"></a>  <span class="fu">start_drawer</span>(state, <span class="at">reset =</span> false);</span>
+<span id="cb2-47"><a href="A-youdrawit-with-shiny.html#cb2-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-48"><a href="A-youdrawit-with-shiny.html#cb2-48" aria-hidden="true" tabindex="-1"></a>});</span>
+<span id="cb2-49"><a href="A-youdrawit-with-shiny.html#cb2-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-50"><a href="A-youdrawit-with-shiny.html#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="co"># Main function that draws current state of viz</span></span>
+<span id="cb2-51"><a href="A-youdrawit-with-shiny.html#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="cf">function</span> <span class="fu">start_drawer</span>(state, <span class="at">reset =</span> true){</span>
+<span id="cb2-52"><a href="A-youdrawit-with-shiny.html#cb2-52" aria-hidden="true" tabindex="-1"></a>  const scales <span class="ot">=</span> <span class="fu">setup_scales</span>(state);</span>
+<span id="cb2-53"><a href="A-youdrawit-with-shiny.html#cb2-53" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-54"><a href="A-youdrawit-with-shiny.html#cb2-54" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="sc">!</span>state.free_draw){</span>
+<span id="cb2-55"><a href="A-youdrawit-with-shiny.html#cb2-55" aria-hidden="true" tabindex="-1"></a>    <span class="fu">draw_true_line</span>(state, scales, state.draw_start);</span>
+<span id="cb2-56"><a href="A-youdrawit-with-shiny.html#cb2-56" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-57"><a href="A-youdrawit-with-shiny.html#cb2-57" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-58"><a href="A-youdrawit-with-shiny.html#cb2-58" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Cover hidden portion with a rectangle (disabled)</span></span>
+<span id="cb2-59"><a href="A-youdrawit-with-shiny.html#cb2-59" aria-hidden="true" tabindex="-1"></a>  <span class="co"># const line_hider = setup_line_hider(state.svg, state.draw_start, scales);</span></span>
+<span id="cb2-60"><a href="A-youdrawit-with-shiny.html#cb2-60" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-61"><a href="A-youdrawit-with-shiny.html#cb2-61" aria-hidden="true" tabindex="-1"></a>  <span class="co"># if we reset (these are points that can be drawn) remove what user has drawn.</span></span>
+<span id="cb2-62"><a href="A-youdrawit-with-shiny.html#cb2-62" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(reset){</span>
+<span id="cb2-63"><a href="A-youdrawit-with-shiny.html#cb2-63" aria-hidden="true" tabindex="-1"></a>    state.drawable_points <span class="ot">=</span> <span class="fu">setup_drawable_points</span>(state);</span>
+<span id="cb2-64"><a href="A-youdrawit-with-shiny.html#cb2-64" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-65"><a href="A-youdrawit-with-shiny.html#cb2-65" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-66"><a href="A-youdrawit-with-shiny.html#cb2-66" aria-hidden="true" tabindex="-1"></a>  <span class="co"># if we have points, we draw user&#39;s line.</span></span>
+<span id="cb2-67"><a href="A-youdrawit-with-shiny.html#cb2-67" aria-hidden="true" tabindex="-1"></a>  <span class="fu">draw_user_line</span>(state, scales);</span>
+<span id="cb2-68"><a href="A-youdrawit-with-shiny.html#cb2-68" aria-hidden="true" tabindex="-1"></a>  <span class="fu">draw_rectangle</span>(state, scales);</span>
+<span id="cb2-69"><a href="A-youdrawit-with-shiny.html#cb2-69" aria-hidden="true" tabindex="-1"></a>  <span class="fu">draw_finished_line</span>(state, scales, state.draw_start);</span>
+<span id="cb2-70"><a href="A-youdrawit-with-shiny.html#cb2-70" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-71"><a href="A-youdrawit-with-shiny.html#cb2-71" aria-hidden="true" tabindex="-1"></a>    <span class="co"># draw points for initial portion</span></span>
+<span id="cb2-72"><a href="A-youdrawit-with-shiny.html#cb2-72" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(state.points <span class="sc">!=</span> <span class="st">&quot;none&quot;</span>){</span>
+<span id="cb2-73"><a href="A-youdrawit-with-shiny.html#cb2-73" aria-hidden="true" tabindex="-1"></a>    <span class="fu">draw_points</span>(state, scales);</span>
+<span id="cb2-74"><a href="A-youdrawit-with-shiny.html#cb2-74" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-75"><a href="A-youdrawit-with-shiny.html#cb2-75" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-76"><a href="A-youdrawit-with-shiny.html#cb2-76" aria-hidden="true" tabindex="-1"></a>  <span class="co"># invert from pixle to data scale when they draw their points</span></span>
+<span id="cb2-77"><a href="A-youdrawit-with-shiny.html#cb2-77" aria-hidden="true" tabindex="-1"></a>  const on_drag <span class="ot">=</span> <span class="cf">function</span>(){</span>
+<span id="cb2-78"><a href="A-youdrawit-with-shiny.html#cb2-78" aria-hidden="true" tabindex="-1"></a>    const drag_x <span class="ot">=</span> <span class="fu">scales.x.invert</span>(d3.event.x);</span>
+<span id="cb2-79"><a href="A-youdrawit-with-shiny.html#cb2-79" aria-hidden="true" tabindex="-1"></a>    const drag_y <span class="ot">=</span> <span class="fu">scales.y.invert</span>(d3.event.y);</span>
+<span id="cb2-80"><a href="A-youdrawit-with-shiny.html#cb2-80" aria-hidden="true" tabindex="-1"></a>    <span class="fu">fill_in_closest_point</span>(state, drag_x, drag_y);</span>
+<span id="cb2-81"><a href="A-youdrawit-with-shiny.html#cb2-81" aria-hidden="true" tabindex="-1"></a>    <span class="fu">draw_user_line</span>(state, scales);</span>
+<span id="cb2-82"><a href="A-youdrawit-with-shiny.html#cb2-82" aria-hidden="true" tabindex="-1"></a>    <span class="fu">draw_rectangle</span>(state, scales);</span>
+<span id="cb2-83"><a href="A-youdrawit-with-shiny.html#cb2-83" aria-hidden="true" tabindex="-1"></a>  };</span>
+<span id="cb2-84"><a href="A-youdrawit-with-shiny.html#cb2-84" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-85"><a href="A-youdrawit-with-shiny.html#cb2-85" aria-hidden="true" tabindex="-1"></a>  <span class="co"># line_status is set by draw watcher - get user status line</span></span>
+<span id="cb2-86"><a href="A-youdrawit-with-shiny.html#cb2-86" aria-hidden="true" tabindex="-1"></a>  <span class="co"># if some points missing - in progress</span></span>
+<span id="cb2-87"><a href="A-youdrawit-with-shiny.html#cb2-87" aria-hidden="true" tabindex="-1"></a>  <span class="co"># complete line - done</span></span>
+<span id="cb2-88"><a href="A-youdrawit-with-shiny.html#cb2-88" aria-hidden="true" tabindex="-1"></a>  const on_end <span class="ot">=</span> <span class="cf">function</span>(){</span>
+<span id="cb2-89"><a href="A-youdrawit-with-shiny.html#cb2-89" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Check if all points are drawn so we can reveal line</span></span>
+<span id="cb2-90"><a href="A-youdrawit-with-shiny.html#cb2-90" aria-hidden="true" tabindex="-1"></a>    const line_status <span class="ot">=</span> <span class="fu">get_user_line_status</span>(state);</span>
+<span id="cb2-91"><a href="A-youdrawit-with-shiny.html#cb2-91" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(line_status <span class="sc">==</span><span class="er">=</span> <span class="st">&#39;done&#39;</span>){</span>
+<span id="cb2-92"><a href="A-youdrawit-with-shiny.html#cb2-92" aria-hidden="true" tabindex="-1"></a>      <span class="co"># User has completed line drawing</span></span>
+<span id="cb2-93"><a href="A-youdrawit-with-shiny.html#cb2-93" aria-hidden="true" tabindex="-1"></a>      <span class="co"># if(state.show_finished) line_hider.reveal();</span></span>
+<span id="cb2-94"><a href="A-youdrawit-with-shiny.html#cb2-94" aria-hidden="true" tabindex="-1"></a>      <span class="co"># if(!state.free_draw)  line_hider.reveal();</span></span>
+<span id="cb2-95"><a href="A-youdrawit-with-shiny.html#cb2-95" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span>(state.show_finished){</span>
+<span id="cb2-96"><a href="A-youdrawit-with-shiny.html#cb2-96" aria-hidden="true" tabindex="-1"></a>        <span class="fu">draw_finished_line</span>(state, scales, state.draw_start);</span>
+<span id="cb2-97"><a href="A-youdrawit-with-shiny.html#cb2-97" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb2-98"><a href="A-youdrawit-with-shiny.html#cb2-98" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span>(state.shiny_message_loc){</span>
+<span id="cb2-99"><a href="A-youdrawit-with-shiny.html#cb2-99" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Make sure shiny is available before sending message</span></span>
+<span id="cb2-100"><a href="A-youdrawit-with-shiny.html#cb2-100" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span>(typeof Shiny <span class="sc">!=</span><span class="er">=</span> <span class="st">&#39;undefined&#39;</span>){</span>
+<span id="cb2-101"><a href="A-youdrawit-with-shiny.html#cb2-101" aria-hidden="true" tabindex="-1"></a>          <span class="co"># Send drawn points off to server</span></span>
+<span id="cb2-102"><a href="A-youdrawit-with-shiny.html#cb2-102" aria-hidden="true" tabindex="-1"></a>          <span class="fu">Shiny.onInputChange</span>(</span>
+<span id="cb2-103"><a href="A-youdrawit-with-shiny.html#cb2-103" aria-hidden="true" tabindex="-1"></a>            state.shiny_message_loc,</span>
+<span id="cb2-104"><a href="A-youdrawit-with-shiny.html#cb2-104" aria-hidden="true" tabindex="-1"></a>            <span class="fu">state.drawable_points.map</span>(<span class="at">d =</span><span class="sc">&gt;</span> d.y)</span>
+<span id="cb2-105"><a href="A-youdrawit-with-shiny.html#cb2-105" aria-hidden="true" tabindex="-1"></a>          );</span>
+<span id="cb2-106"><a href="A-youdrawit-with-shiny.html#cb2-106" aria-hidden="true" tabindex="-1"></a>        } <span class="cf">else</span> {</span>
+<span id="cb2-107"><a href="A-youdrawit-with-shiny.html#cb2-107" aria-hidden="true" tabindex="-1"></a>          <span class="fu">console.log</span>(<span class="st">`</span><span class="at">Sending message to ${state.shiny_message_loc}</span><span class="st">`</span>);</span>
+<span id="cb2-108"><a href="A-youdrawit-with-shiny.html#cb2-108" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb2-109"><a href="A-youdrawit-with-shiny.html#cb2-109" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb2-110"><a href="A-youdrawit-with-shiny.html#cb2-110" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb2-111"><a href="A-youdrawit-with-shiny.html#cb2-111" aria-hidden="true" tabindex="-1"></a>  };</span>
+<span id="cb2-112"><a href="A-youdrawit-with-shiny.html#cb2-112" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-113"><a href="A-youdrawit-with-shiny.html#cb2-113" aria-hidden="true" tabindex="-1"></a>  <span class="fu">setup_draw_watcher</span>(state.svg, scales, on_drag, on_end);</span>
+<span id="cb2-114"><a href="A-youdrawit-with-shiny.html#cb2-114" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-115"><a href="A-youdrawit-with-shiny.html#cb2-115" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Do we have a title?</span></span>
+<span id="cb2-116"><a href="A-youdrawit-with-shiny.html#cb2-116" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(state.title){</span>
+<span id="cb2-117"><a href="A-youdrawit-with-shiny.html#cb2-117" aria-hidden="true" tabindex="-1"></a>      <span class="fu">state.svg.append</span>(<span class="st">&#39;text&#39;</span>)</span>
+<span id="cb2-118"><a href="A-youdrawit-with-shiny.html#cb2-118" aria-hidden="true" tabindex="-1"></a>      <span class="fu">.at</span>({</span>
+<span id="cb2-119"><a href="A-youdrawit-with-shiny.html#cb2-119" aria-hidden="true" tabindex="-1"></a>        y<span class="sc">:</span> <span class="sc">-</span>margin.top<span class="sc">/</span><span class="dv">2</span>,</span>
+<span id="cb2-120"><a href="A-youdrawit-with-shiny.html#cb2-120" aria-hidden="true" tabindex="-1"></a>        dominantBaseline<span class="sc">:</span> <span class="st">&#39;middle&#39;</span>,</span>
+<span id="cb2-121"><a href="A-youdrawit-with-shiny.html#cb2-121" aria-hidden="true" tabindex="-1"></a>        fontSize<span class="sc">:</span> <span class="st">&#39;1.5rem&#39;</span>,</span>
+<span id="cb2-122"><a href="A-youdrawit-with-shiny.html#cb2-122" aria-hidden="true" tabindex="-1"></a>      })</span>
+<span id="cb2-123"><a href="A-youdrawit-with-shiny.html#cb2-123" aria-hidden="true" tabindex="-1"></a>      <span class="fu">.style</span>(<span class="st">&#39;font-family&#39;</span>, system_font)</span>
+<span id="cb2-124"><a href="A-youdrawit-with-shiny.html#cb2-124" aria-hidden="true" tabindex="-1"></a>      <span class="fu">.text</span>(state.title);</span>
+<span id="cb2-125"><a href="A-youdrawit-with-shiny.html#cb2-125" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb2-126"><a href="A-youdrawit-with-shiny.html#cb2-126" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-127"><a href="A-youdrawit-with-shiny.html#cb2-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-128"><a href="A-youdrawit-with-shiny.html#cb2-128" aria-hidden="true" tabindex="-1"></a><span class="cf">function</span> <span class="fu">setup_drawable_points</span>({line_data, free_draw, draw_start}){</span>
+<span id="cb2-129"><a href="A-youdrawit-with-shiny.html#cb2-129" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(free_draw){</span>
+<span id="cb2-130"><a href="A-youdrawit-with-shiny.html#cb2-130" aria-hidden="true" tabindex="-1"></a>    return <span class="fu">line_data.map</span>(<span class="at">d =</span><span class="sc">&gt;</span> ({x<span class="sc">:</span> d.x, y<span class="sc">:</span> null}));</span>
+<span id="cb2-131"><a href="A-youdrawit-with-shiny.html#cb2-131" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb2-132"><a href="A-youdrawit-with-shiny.html#cb2-132" aria-hidden="true" tabindex="-1"></a>    return line_data</span>
+<span id="cb2-133"><a href="A-youdrawit-with-shiny.html#cb2-133" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.filter</span>(<span class="at">d =</span><span class="sc">&gt;</span> d.x <span class="sc">&gt;=</span> draw_start)</span>
+<span id="cb2-134"><a href="A-youdrawit-with-shiny.html#cb2-134" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.map</span>((d,i) <span class="ot">=</span><span class="er">&gt;</span> ({</span>
+<span id="cb2-135"><a href="A-youdrawit-with-shiny.html#cb2-135" aria-hidden="true" tabindex="-1"></a>      x<span class="sc">:</span> d.x,</span>
+<span id="cb2-136"><a href="A-youdrawit-with-shiny.html#cb2-136" aria-hidden="true" tabindex="-1"></a>      y<span class="sc">:</span> i <span class="sc">==</span><span class="er">=</span> <span class="dv">0</span> ? d.y<span class="sc">:</span> null</span>
+<span id="cb2-137"><a href="A-youdrawit-with-shiny.html#cb2-137" aria-hidden="true" tabindex="-1"></a>    }));</span>
+<span id="cb2-138"><a href="A-youdrawit-with-shiny.html#cb2-138" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-139"><a href="A-youdrawit-with-shiny.html#cb2-139" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-140"><a href="A-youdrawit-with-shiny.html#cb2-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-141"><a href="A-youdrawit-with-shiny.html#cb2-141" aria-hidden="true" tabindex="-1"></a><span class="cf">function</span> <span class="fu">get_user_line_status</span>({drawable_points, free_draw}){</span>
+<span id="cb2-142"><a href="A-youdrawit-with-shiny.html#cb2-142" aria-hidden="true" tabindex="-1"></a>  const num_points <span class="ot">=</span> drawable_points.length;</span>
+<span id="cb2-143"><a href="A-youdrawit-with-shiny.html#cb2-143" aria-hidden="true" tabindex="-1"></a>  const num_filled <span class="ot">=</span> <span class="fu">d3.sum</span>(<span class="fu">drawable_points.map</span>(<span class="at">d =</span><span class="sc">&gt;</span> d.y <span class="sc">==</span><span class="er">=</span> null ? <span class="dv">0</span><span class="sc">:</span> <span class="dv">1</span>));</span>
+<span id="cb2-144"><a href="A-youdrawit-with-shiny.html#cb2-144" aria-hidden="true" tabindex="-1"></a>  const num_starting_filled <span class="ot">=</span> free_draw ? <span class="dv">0</span><span class="sc">:</span> <span class="dv">1</span>;</span>
+<span id="cb2-145"><a href="A-youdrawit-with-shiny.html#cb2-145" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(num_filled <span class="sc">==</span><span class="er">=</span> num_starting_filled){</span>
+<span id="cb2-146"><a href="A-youdrawit-with-shiny.html#cb2-146" aria-hidden="true" tabindex="-1"></a>    return <span class="st">&#39;unstarted&#39;</span>;</span>
+<span id="cb2-147"><a href="A-youdrawit-with-shiny.html#cb2-147" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span>(num_points <span class="sc">==</span><span class="er">=</span> num_filled){</span>
+<span id="cb2-148"><a href="A-youdrawit-with-shiny.html#cb2-148" aria-hidden="true" tabindex="-1"></a>    return <span class="st">&#39;done&#39;</span>;</span>
+<span id="cb2-149"><a href="A-youdrawit-with-shiny.html#cb2-149" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb2-150"><a href="A-youdrawit-with-shiny.html#cb2-150" aria-hidden="true" tabindex="-1"></a>    return <span class="st">&#39;in_progress&#39;</span>;</span>
+<span id="cb2-151"><a href="A-youdrawit-with-shiny.html#cb2-151" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-152"><a href="A-youdrawit-with-shiny.html#cb2-152" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-153"><a href="A-youdrawit-with-shiny.html#cb2-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-154"><a href="A-youdrawit-with-shiny.html#cb2-154" aria-hidden="true" tabindex="-1"></a><span class="co"># Draw visable portion of line</span></span>
+<span id="cb2-155"><a href="A-youdrawit-with-shiny.html#cb2-155" aria-hidden="true" tabindex="-1"></a><span class="cf">function</span> <span class="fu">draw_true_line</span>({svg, line_data, draw_start}, scales){</span>
+<span id="cb2-156"><a href="A-youdrawit-with-shiny.html#cb2-156" aria-hidden="true" tabindex="-1"></a>  var df <span class="ot">=</span> <span class="fu">line_data.filter</span>(<span class="cf">function</span>(d){ return d.x<span class="sc">&lt;=</span>draw_start})</span>
+<span id="cb2-157"><a href="A-youdrawit-with-shiny.html#cb2-157" aria-hidden="true" tabindex="-1"></a>  <span class="fu">state.svg.selectAppend</span>(<span class="st">&quot;path.shown_line&quot;</span>)</span>
+<span id="cb2-158"><a href="A-youdrawit-with-shiny.html#cb2-158" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.datum</span>(df)</span>
+<span id="cb2-159"><a href="A-youdrawit-with-shiny.html#cb2-159" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.at</span>(default_line_attrs)</span>
+<span id="cb2-160"><a href="A-youdrawit-with-shiny.html#cb2-160" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.attr</span>(<span class="st">&quot;d&quot;</span>, scales.line_drawer);</span>
+<span id="cb2-161"><a href="A-youdrawit-with-shiny.html#cb2-161" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-162"><a href="A-youdrawit-with-shiny.html#cb2-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-163"><a href="A-youdrawit-with-shiny.html#cb2-163" aria-hidden="true" tabindex="-1"></a><span class="cf">function</span> <span class="fu">draw_points</span>({svg, point_data, points_end, points}, scales){</span>
+<span id="cb2-164"><a href="A-youdrawit-with-shiny.html#cb2-164" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(points <span class="sc">==</span> <span class="st">&quot;partial&quot;</span>){</span>
+<span id="cb2-165"><a href="A-youdrawit-with-shiny.html#cb2-165" aria-hidden="true" tabindex="-1"></a>      var df <span class="ot">=</span> <span class="fu">point_data.filter</span>(<span class="cf">function</span>(d){<span class="fu">return</span> (d.x<span class="sc">&lt;=</span>points_end)});</span>
+<span id="cb2-166"><a href="A-youdrawit-with-shiny.html#cb2-166" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb2-167"><a href="A-youdrawit-with-shiny.html#cb2-167" aria-hidden="true" tabindex="-1"></a>      var df <span class="ot">=</span> point_data;</span>
+<span id="cb2-168"><a href="A-youdrawit-with-shiny.html#cb2-168" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb2-169"><a href="A-youdrawit-with-shiny.html#cb2-169" aria-hidden="true" tabindex="-1"></a>  const dots <span class="ot">=</span> <span class="fu">state.svg.selectAll</span>(<span class="st">&quot;circle&quot;</span>)<span class="fu">.data</span>(df)</span>
+<span id="cb2-170"><a href="A-youdrawit-with-shiny.html#cb2-170" aria-hidden="true" tabindex="-1"></a>  dots</span>
+<span id="cb2-171"><a href="A-youdrawit-with-shiny.html#cb2-171" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.enter</span>()<span class="fu">.append</span>(<span class="st">&quot;circle&quot;</span>)</span>
+<span id="cb2-172"><a href="A-youdrawit-with-shiny.html#cb2-172" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.merge</span>(dots)</span>
+<span id="cb2-173"><a href="A-youdrawit-with-shiny.html#cb2-173" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.attr</span>(<span class="st">&quot;cx&quot;</span>, <span class="at">d =</span><span class="sc">&gt;</span> <span class="fu">scales.x</span>(d.x))</span>
+<span id="cb2-174"><a href="A-youdrawit-with-shiny.html#cb2-174" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.attr</span>(<span class="st">&quot;cy&quot;</span>, <span class="at">d =</span><span class="sc">&gt;</span> <span class="fu">scales.y</span>(d.y))</span>
+<span id="cb2-175"><a href="A-youdrawit-with-shiny.html#cb2-175" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.attr</span>(<span class="st">&quot;r&quot;</span>, <span class="dv">2</span>)</span>
+<span id="cb2-176"><a href="A-youdrawit-with-shiny.html#cb2-176" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.style</span>(<span class="st">&quot;fill&quot;</span>, <span class="st">&quot;black&quot;</span>)</span>
+<span id="cb2-177"><a href="A-youdrawit-with-shiny.html#cb2-177" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.style</span>(<span class="st">&quot;opacity&quot;</span>, <span class="fl">0.8</span>)</span>
+<span id="cb2-178"><a href="A-youdrawit-with-shiny.html#cb2-178" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.style</span>(<span class="st">&quot;stroke&quot;</span>, <span class="st">&quot;black&quot;</span>)</span>
+<span id="cb2-179"><a href="A-youdrawit-with-shiny.html#cb2-179" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-180"><a href="A-youdrawit-with-shiny.html#cb2-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-181"><a href="A-youdrawit-with-shiny.html#cb2-181" aria-hidden="true" tabindex="-1"></a><span class="cf">function</span> <span class="fu">draw_rectangle</span>({svg, drawable_points, line_data, draw_start, width, height, free_draw, x_by}, scales){</span>
+<span id="cb2-182"><a href="A-youdrawit-with-shiny.html#cb2-182" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="fu">get_user_line_status</span>(state) <span class="sc">==</span><span class="er">=</span> <span class="st">&#39;unstarted&#39;</span>){</span>
+<span id="cb2-183"><a href="A-youdrawit-with-shiny.html#cb2-183" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span>(free_draw){</span>
+<span id="cb2-184"><a href="A-youdrawit-with-shiny.html#cb2-184" aria-hidden="true" tabindex="-1"></a>         var xmin <span class="ot">=</span> line_data[<span class="dv">0</span>].x</span>
+<span id="cb2-185"><a href="A-youdrawit-with-shiny.html#cb2-185" aria-hidden="true" tabindex="-1"></a>         var len  <span class="ot">=</span> line_data.length <span class="sc">-</span> <span class="dv">1</span></span>
+<span id="cb2-186"><a href="A-youdrawit-with-shiny.html#cb2-186" aria-hidden="true" tabindex="-1"></a>         var xmax <span class="ot">=</span> line_data[len].x</span>
+<span id="cb2-187"><a href="A-youdrawit-with-shiny.html#cb2-187" aria-hidden="true" tabindex="-1"></a>         var drawSpace_start <span class="ot">=</span> <span class="fu">scales.x</span>(xmin)</span>
+<span id="cb2-188"><a href="A-youdrawit-with-shiny.html#cb2-188" aria-hidden="true" tabindex="-1"></a>         var drawSpace_end   <span class="ot">=</span> <span class="fu">scales.x</span>(xmax)</span>
+<span id="cb2-189"><a href="A-youdrawit-with-shiny.html#cb2-189" aria-hidden="true" tabindex="-1"></a>       } <span class="cf">else</span> {</span>
+<span id="cb2-190"><a href="A-youdrawit-with-shiny.html#cb2-190" aria-hidden="true" tabindex="-1"></a>         var drawSpace_start <span class="ot">=</span> <span class="fu">scales.x</span>(draw_start)</span>
+<span id="cb2-191"><a href="A-youdrawit-with-shiny.html#cb2-191" aria-hidden="true" tabindex="-1"></a>         var drawSpace_end   <span class="ot">=</span> state.w</span>
+<span id="cb2-192"><a href="A-youdrawit-with-shiny.html#cb2-192" aria-hidden="true" tabindex="-1"></a>       }</span>
+<span id="cb2-193"><a href="A-youdrawit-with-shiny.html#cb2-193" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb2-194"><a href="A-youdrawit-with-shiny.html#cb2-194" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span>(<span class="fu">get_user_line_status</span>(state) <span class="sc">==</span><span class="er">=</span> <span class="st">&#39;done&#39;</span>){</span>
+<span id="cb2-195"><a href="A-youdrawit-with-shiny.html#cb2-195" aria-hidden="true" tabindex="-1"></a>        var drawSpace_start <span class="ot">=</span> <span class="fu">scales.x</span>(<span class="dv">100</span>)</span>
+<span id="cb2-196"><a href="A-youdrawit-with-shiny.html#cb2-196" aria-hidden="true" tabindex="-1"></a>        var drawSpace_end <span class="ot">=</span> <span class="fu">scales.x</span>(<span class="dv">110</span>)</span>
+<span id="cb2-197"><a href="A-youdrawit-with-shiny.html#cb2-197" aria-hidden="true" tabindex="-1"></a>      } <span class="cf">else</span> {</span>
+<span id="cb2-198"><a href="A-youdrawit-with-shiny.html#cb2-198" aria-hidden="true" tabindex="-1"></a>        var df <span class="ot">=</span> <span class="fu">drawable_points.filter</span>(<span class="cf">function</span>(d){<span class="fu">return</span> (d.y <span class="sc">==</span><span class="er">=</span> null)});</span>
+<span id="cb2-199"><a href="A-youdrawit-with-shiny.html#cb2-199" aria-hidden="true" tabindex="-1"></a>        var xmin <span class="ot">=</span> df[<span class="dv">0</span>].x <span class="sc">-</span> x_by;</span>
+<span id="cb2-200"><a href="A-youdrawit-with-shiny.html#cb2-200" aria-hidden="true" tabindex="-1"></a>        var len  <span class="ot">=</span> line_data.length <span class="sc">-</span> <span class="dv">1</span></span>
+<span id="cb2-201"><a href="A-youdrawit-with-shiny.html#cb2-201" aria-hidden="true" tabindex="-1"></a>        var xmax <span class="ot">=</span> line_data[len].x</span>
+<span id="cb2-202"><a href="A-youdrawit-with-shiny.html#cb2-202" aria-hidden="true" tabindex="-1"></a>        var drawSpace_start <span class="ot">=</span> <span class="fu">scales.x</span>(xmin)</span>
+<span id="cb2-203"><a href="A-youdrawit-with-shiny.html#cb2-203" aria-hidden="true" tabindex="-1"></a>        var drawSpace_end   <span class="ot">=</span> <span class="fu">scales.x</span>(xmax)</span>
+<span id="cb2-204"><a href="A-youdrawit-with-shiny.html#cb2-204" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb2-205"><a href="A-youdrawit-with-shiny.html#cb2-205" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb2-206"><a href="A-youdrawit-with-shiny.html#cb2-206" aria-hidden="true" tabindex="-1"></a>    const draw_region <span class="ot">=</span> <span class="fu">state.svg.selectAppend</span>(<span class="st">&quot;rect&quot;</span>);</span>
+<span id="cb2-207"><a href="A-youdrawit-with-shiny.html#cb2-207" aria-hidden="true" tabindex="-1"></a>    draw_region</span>
+<span id="cb2-208"><a href="A-youdrawit-with-shiny.html#cb2-208" aria-hidden="true" tabindex="-1"></a>      <span class="fu">.attr</span>(<span class="st">&quot;x&quot;</span>, drawSpace_start)</span>
+<span id="cb2-209"><a href="A-youdrawit-with-shiny.html#cb2-209" aria-hidden="true" tabindex="-1"></a>      <span class="fu">.attr</span>(<span class="st">&quot;width&quot;</span>,drawSpace_end <span class="sc">-</span> drawSpace_start)</span>
+<span id="cb2-210"><a href="A-youdrawit-with-shiny.html#cb2-210" aria-hidden="true" tabindex="-1"></a>      <span class="fu">.attr</span>(<span class="st">&quot;y&quot;</span>, <span class="dv">0</span>)</span>
+<span id="cb2-211"><a href="A-youdrawit-with-shiny.html#cb2-211" aria-hidden="true" tabindex="-1"></a>      <span class="fu">.attr</span>(<span class="st">&quot;height&quot;</span>, state.h)</span>
+<span id="cb2-212"><a href="A-youdrawit-with-shiny.html#cb2-212" aria-hidden="true" tabindex="-1"></a>      <span class="sc">/</span><span class="er">/</span><span class="fu">.style</span>(<span class="st">&quot;fill&quot;</span>, <span class="st">&quot;#e0f3f3&quot;</span>)</span>
+<span id="cb2-213"><a href="A-youdrawit-with-shiny.html#cb2-213" aria-hidden="true" tabindex="-1"></a>      <span class="fu">.style</span>(<span class="st">&quot;fill-opacity&quot;</span>, <span class="fl">0.4</span>)</span>
+<span id="cb2-214"><a href="A-youdrawit-with-shiny.html#cb2-214" aria-hidden="true" tabindex="-1"></a>      <span class="fu">.style</span>(<span class="st">&quot;fill&quot;</span>, <span class="st">&quot;rgba(255,255,0,.8)&quot;</span>)</span>
+<span id="cb2-215"><a href="A-youdrawit-with-shiny.html#cb2-215" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-216"><a href="A-youdrawit-with-shiny.html#cb2-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-217"><a href="A-youdrawit-with-shiny.html#cb2-217" aria-hidden="true" tabindex="-1"></a><span class="cf">function</span> <span class="fu">draw_user_line</span>(state, scales){</span>
+<span id="cb2-218"><a href="A-youdrawit-with-shiny.html#cb2-218" aria-hidden="true" tabindex="-1"></a>  const {svg, drawable_points, drawn_line_color} <span class="ot">=</span> state;</span>
+<span id="cb2-219"><a href="A-youdrawit-with-shiny.html#cb2-219" aria-hidden="true" tabindex="-1"></a>  const user_line <span class="ot">=</span> <span class="fu">state.svg.selectAppend</span>(<span class="st">&quot;path.user_line&quot;</span>);</span>
+<span id="cb2-220"><a href="A-youdrawit-with-shiny.html#cb2-220" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Only draw line if there&#39;s something to draw.</span></span>
+<span id="cb2-221"><a href="A-youdrawit-with-shiny.html#cb2-221" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">get_user_line_status</span>(state) <span class="sc">==</span><span class="er">=</span> <span class="st">&#39;unstarted&#39;</span>){</span>
+<span id="cb2-222"><a href="A-youdrawit-with-shiny.html#cb2-222" aria-hidden="true" tabindex="-1"></a>    <span class="fu">user_line.remove</span>();</span>
+<span id="cb2-223"><a href="A-youdrawit-with-shiny.html#cb2-223" aria-hidden="true" tabindex="-1"></a>    return;</span>
+<span id="cb2-224"><a href="A-youdrawit-with-shiny.html#cb2-224" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-225"><a href="A-youdrawit-with-shiny.html#cb2-225" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Draws the points the user is drawing with their mouse</span></span>
+<span id="cb2-226"><a href="A-youdrawit-with-shiny.html#cb2-226" aria-hidden="true" tabindex="-1"></a>  user_line</span>
+<span id="cb2-227"><a href="A-youdrawit-with-shiny.html#cb2-227" aria-hidden="true" tabindex="-1"></a>      <span class="fu">.datum</span>(drawable_points)</span>
+<span id="cb2-228"><a href="A-youdrawit-with-shiny.html#cb2-228" aria-hidden="true" tabindex="-1"></a>      <span class="fu">.at</span>(default_line_attrs)</span>
+<span id="cb2-229"><a href="A-youdrawit-with-shiny.html#cb2-229" aria-hidden="true" tabindex="-1"></a>      <span class="fu">.attr</span>(<span class="st">&#39;stroke&#39;</span>, drawn_line_color)</span>
+<span id="cb2-230"><a href="A-youdrawit-with-shiny.html#cb2-230" aria-hidden="true" tabindex="-1"></a>      <span class="fu">.attr</span>(<span class="st">&quot;d&quot;</span>, scales.line_drawer)</span>
+<span id="cb2-231"><a href="A-youdrawit-with-shiny.html#cb2-231" aria-hidden="true" tabindex="-1"></a>      <span class="fu">.style</span>(<span class="st">&quot;stroke-dasharray&quot;</span>, (<span class="st">&quot;1, 7&quot;</span>));</span>
+<span id="cb2-232"><a href="A-youdrawit-with-shiny.html#cb2-232" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-233"><a href="A-youdrawit-with-shiny.html#cb2-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-234"><a href="A-youdrawit-with-shiny.html#cb2-234" aria-hidden="true" tabindex="-1"></a><span class="cf">function</span> <span class="fu">draw_finished_line</span>({svg, line_data, draw_start, free_draw}, scales){</span>
+<span id="cb2-235"><a href="A-youdrawit-with-shiny.html#cb2-235" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="sc">!</span>free_draw){</span>
+<span id="cb2-236"><a href="A-youdrawit-with-shiny.html#cb2-236" aria-hidden="true" tabindex="-1"></a>    var df <span class="ot">=</span> <span class="fu">line_data.filter</span>(<span class="cf">function</span>(d){ return d.x <span class="sc">&gt;=</span> draw_start})</span>
+<span id="cb2-237"><a href="A-youdrawit-with-shiny.html#cb2-237" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb2-238"><a href="A-youdrawit-with-shiny.html#cb2-238" aria-hidden="true" tabindex="-1"></a>    var df <span class="ot">=</span> line_data</span>
+<span id="cb2-239"><a href="A-youdrawit-with-shiny.html#cb2-239" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-240"><a href="A-youdrawit-with-shiny.html#cb2-240" aria-hidden="true" tabindex="-1"></a>  const finished_line <span class="ot">=</span> <span class="fu">state.svg.selectAppend</span>(<span class="st">&quot;path.finished_line&quot;</span>)</span>
+<span id="cb2-241"><a href="A-youdrawit-with-shiny.html#cb2-241" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Only draw line if there&#39;s something to draw.</span></span>
+<span id="cb2-242"><a href="A-youdrawit-with-shiny.html#cb2-242" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">get_user_line_status</span>(state) <span class="sc">==</span><span class="er">=</span> <span class="st">&#39;unstarted&#39;</span>){</span>
+<span id="cb2-243"><a href="A-youdrawit-with-shiny.html#cb2-243" aria-hidden="true" tabindex="-1"></a>    <span class="fu">finished_line.remove</span>();</span>
+<span id="cb2-244"><a href="A-youdrawit-with-shiny.html#cb2-244" aria-hidden="true" tabindex="-1"></a>    return;</span>
+<span id="cb2-245"><a href="A-youdrawit-with-shiny.html#cb2-245" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-246"><a href="A-youdrawit-with-shiny.html#cb2-246" aria-hidden="true" tabindex="-1"></a>  finished_line</span>
+<span id="cb2-247"><a href="A-youdrawit-with-shiny.html#cb2-247" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.datum</span>(df)</span>
+<span id="cb2-248"><a href="A-youdrawit-with-shiny.html#cb2-248" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.at</span>(default_line_attrs)</span>
+<span id="cb2-249"><a href="A-youdrawit-with-shiny.html#cb2-249" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.attr</span>(<span class="st">&quot;d&quot;</span>, scales.line_drawer)</span>
+<span id="cb2-250"><a href="A-youdrawit-with-shiny.html#cb2-250" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.attr</span>(<span class="st">&quot;opacity&quot;</span>, <span class="fl">0.5</span>)</span>
+<span id="cb2-251"><a href="A-youdrawit-with-shiny.html#cb2-251" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-252"><a href="A-youdrawit-with-shiny.html#cb2-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-253"><a href="A-youdrawit-with-shiny.html#cb2-253" aria-hidden="true" tabindex="-1"></a><span class="co"># from state we need drawable_points</span></span>
+<span id="cb2-254"><a href="A-youdrawit-with-shiny.html#cb2-254" aria-hidden="true" tabindex="-1"></a><span class="cf">function</span> <span class="fu">fill_in_closest_point</span>({drawable_points, pin_start, free_draw}, drag_x, drag_y){</span>
+<span id="cb2-255"><a href="A-youdrawit-with-shiny.html#cb2-255" aria-hidden="true" tabindex="-1"></a>  <span class="co"># find closest point on data to draw</span></span>
+<span id="cb2-256"><a href="A-youdrawit-with-shiny.html#cb2-256" aria-hidden="true" tabindex="-1"></a>  let last_dist <span class="ot">=</span> Infinity;</span>
+<span id="cb2-257"><a href="A-youdrawit-with-shiny.html#cb2-257" aria-hidden="true" tabindex="-1"></a>  let current_dist;</span>
+<span id="cb2-258"><a href="A-youdrawit-with-shiny.html#cb2-258" aria-hidden="true" tabindex="-1"></a>  <span class="co"># If nothing triggers break statement than closest point is last point</span></span>
+<span id="cb2-259"><a href="A-youdrawit-with-shiny.html#cb2-259" aria-hidden="true" tabindex="-1"></a>  let closest_index <span class="ot">=</span> drawable_points.length <span class="sc">-</span> <span class="dv">1</span>;</span>
+<span id="cb2-260"><a href="A-youdrawit-with-shiny.html#cb2-260" aria-hidden="true" tabindex="-1"></a>  const starting_index <span class="ot">=</span> free_draw ? <span class="dv">0</span> <span class="sc">:</span> (pin_start ? <span class="dv">1</span><span class="sc">:</span> <span class="dv">0</span>);</span>
+<span id="cb2-261"><a href="A-youdrawit-with-shiny.html#cb2-261" aria-hidden="true" tabindex="-1"></a>  <span class="co"># for loop to check where closest point to where I am</span></span>
+<span id="cb2-262"><a href="A-youdrawit-with-shiny.html#cb2-262" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span>(<span class="at">i =</span> starting_index; i <span class="sc">&lt;</span> drawable_points.length; i<span class="sc">++</span>){</span>
+<span id="cb2-263"><a href="A-youdrawit-with-shiny.html#cb2-263" aria-hidden="true" tabindex="-1"></a>    current_dist <span class="ot">=</span> <span class="fu">Math.abs</span>(drawable_points[i].x <span class="sc">-</span> drag_x);</span>
+<span id="cb2-264"><a href="A-youdrawit-with-shiny.html#cb2-264" aria-hidden="true" tabindex="-1"></a>    <span class="co"># If distances start going up we&#39;ve passed the closest point</span></span>
+<span id="cb2-265"><a href="A-youdrawit-with-shiny.html#cb2-265" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(last_dist <span class="sc">-</span> current_dist <span class="sc">&lt;</span> <span class="dv">0</span>) {</span>
+<span id="cb2-266"><a href="A-youdrawit-with-shiny.html#cb2-266" aria-hidden="true" tabindex="-1"></a>  closest_index <span class="ot">=</span> i <span class="sc">-</span> <span class="dv">1</span>;</span>
+<span id="cb2-267"><a href="A-youdrawit-with-shiny.html#cb2-267" aria-hidden="true" tabindex="-1"></a>  <span class="cf">break</span>;</span>
+<span id="cb2-268"><a href="A-youdrawit-with-shiny.html#cb2-268" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-269"><a href="A-youdrawit-with-shiny.html#cb2-269" aria-hidden="true" tabindex="-1"></a>last_dist <span class="ot">=</span> current_dist;</span>
+<span id="cb2-270"><a href="A-youdrawit-with-shiny.html#cb2-270" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-271"><a href="A-youdrawit-with-shiny.html#cb2-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-272"><a href="A-youdrawit-with-shiny.html#cb2-272" aria-hidden="true" tabindex="-1"></a>drawable_points[closest_index].y <span class="ot">=</span> drag_y;</span>
+<span id="cb2-273"><a href="A-youdrawit-with-shiny.html#cb2-273" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-274"><a href="A-youdrawit-with-shiny.html#cb2-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-275"><a href="A-youdrawit-with-shiny.html#cb2-275" aria-hidden="true" tabindex="-1"></a><span class="cf">function</span> <span class="fu">setup_draw_watcher</span>(svg, scales, on_drag, on_end){</span>
+<span id="cb2-276"><a href="A-youdrawit-with-shiny.html#cb2-276" aria-hidden="true" tabindex="-1"></a>  <span class="fu">svg.selectAppend</span>(<span class="st">&#39;rect.drag_watcher&#39;</span>)</span>
+<span id="cb2-277"><a href="A-youdrawit-with-shiny.html#cb2-277" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.at</span>({</span>
+<span id="cb2-278"><a href="A-youdrawit-with-shiny.html#cb2-278" aria-hidden="true" tabindex="-1"></a>    height<span class="sc">:</span> <span class="fu">scales.y.range</span>()[<span class="dv">0</span>],</span>
+<span id="cb2-279"><a href="A-youdrawit-with-shiny.html#cb2-279" aria-hidden="true" tabindex="-1"></a>    width<span class="sc">:</span> <span class="fu">scales.x.range</span>()[<span class="dv">1</span>],</span>
+<span id="cb2-280"><a href="A-youdrawit-with-shiny.html#cb2-280" aria-hidden="true" tabindex="-1"></a>    fill<span class="sc">:</span> <span class="st">&#39;grey&#39;</span>,</span>
+<span id="cb2-281"><a href="A-youdrawit-with-shiny.html#cb2-281" aria-hidden="true" tabindex="-1"></a>    fillOpacity<span class="sc">:</span> <span class="dv">0</span>,</span>
+<span id="cb2-282"><a href="A-youdrawit-with-shiny.html#cb2-282" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb2-283"><a href="A-youdrawit-with-shiny.html#cb2-283" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.call</span>(</span>
+<span id="cb2-284"><a href="A-youdrawit-with-shiny.html#cb2-284" aria-hidden="true" tabindex="-1"></a>    <span class="fu">d3.drag</span>()</span>
+<span id="cb2-285"><a href="A-youdrawit-with-shiny.html#cb2-285" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.on</span>(<span class="st">&quot;drag&quot;</span>, on_drag)</span>
+<span id="cb2-286"><a href="A-youdrawit-with-shiny.html#cb2-286" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.on</span>(<span class="st">&quot;end&quot;</span>, on_end)</span>
+<span id="cb2-287"><a href="A-youdrawit-with-shiny.html#cb2-287" aria-hidden="true" tabindex="-1"></a>  );</span>
+<span id="cb2-288"><a href="A-youdrawit-with-shiny.html#cb2-288" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-289"><a href="A-youdrawit-with-shiny.html#cb2-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-290"><a href="A-youdrawit-with-shiny.html#cb2-290" aria-hidden="true" tabindex="-1"></a><span class="cf">function</span> <span class="fu">add_axis_label</span>(label, <span class="at">y_axis =</span> true){</span>
+<span id="cb2-291"><a href="A-youdrawit-with-shiny.html#cb2-291" aria-hidden="true" tabindex="-1"></a>  const bump_axis <span class="ot">=</span> y_axis ? <span class="st">&#39;x&#39;</span><span class="sc">:</span> <span class="st">&#39;y&#39;</span>;</span>
+<span id="cb2-292"><a href="A-youdrawit-with-shiny.html#cb2-292" aria-hidden="true" tabindex="-1"></a>  const axis_label_style <span class="ot">=</span> {</span>
+<span id="cb2-293"><a href="A-youdrawit-with-shiny.html#cb2-293" aria-hidden="true" tabindex="-1"></a>    [bump_axis]<span class="sc">:</span> bump_axis <span class="sc">==</span> <span class="st">&#39;y&#39;</span> ? <span class="dv">3</span><span class="sc">:</span> <span class="sc">-</span><span class="dv">2</span>,</span>
+<span id="cb2-294"><a href="A-youdrawit-with-shiny.html#cb2-294" aria-hidden="true" tabindex="-1"></a>    textAnchor<span class="sc">:</span> <span class="st">&#39;end&#39;</span>,</span>
+<span id="cb2-295"><a href="A-youdrawit-with-shiny.html#cb2-295" aria-hidden="true" tabindex="-1"></a>    fontWeight<span class="sc">:</span> <span class="st">&#39;500&#39;</span>,</span>
+<span id="cb2-296"><a href="A-youdrawit-with-shiny.html#cb2-296" aria-hidden="true" tabindex="-1"></a>    fontSize<span class="sc">:</span> <span class="st">&#39;0.9rem&#39;</span>,</span>
+<span id="cb2-297"><a href="A-youdrawit-with-shiny.html#cb2-297" aria-hidden="true" tabindex="-1"></a>  };</span>
+<span id="cb2-298"><a href="A-youdrawit-with-shiny.html#cb2-298" aria-hidden="true" tabindex="-1"></a>  return g <span class="ot">=</span><span class="er">&gt;</span> {</span>
+<span id="cb2-299"><a href="A-youdrawit-with-shiny.html#cb2-299" aria-hidden="true" tabindex="-1"></a>    let last_tick <span class="ot">=</span> <span class="fu">g.select</span>(<span class="st">&quot;.tick:last-of-type&quot;</span>);</span>
+<span id="cb2-300"><a href="A-youdrawit-with-shiny.html#cb2-300" aria-hidden="true" tabindex="-1"></a>    const no_ticks <span class="ot">=</span> <span class="fu">last_tick.empty</span>();</span>
+<span id="cb2-301"><a href="A-youdrawit-with-shiny.html#cb2-301" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(no_ticks){</span>
+<span id="cb2-302"><a href="A-youdrawit-with-shiny.html#cb2-302" aria-hidden="true" tabindex="-1"></a>      last_tick <span class="ot">=</span> <span class="fu">g.append</span>(<span class="st">&#39;g&#39;</span>)</span>
+<span id="cb2-303"><a href="A-youdrawit-with-shiny.html#cb2-303" aria-hidden="true" tabindex="-1"></a>      <span class="fu">.attr</span>(<span class="st">&#39;class&#39;</span>, <span class="st">&#39;tick&#39;</span>);</span>
+<span id="cb2-304"><a href="A-youdrawit-with-shiny.html#cb2-304" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb2-305"><a href="A-youdrawit-with-shiny.html#cb2-305" aria-hidden="true" tabindex="-1"></a>    <span class="fu">last_tick.select</span>(<span class="st">&quot;line&quot;</span>)<span class="fu">.remove</span>();</span>
+<span id="cb2-306"><a href="A-youdrawit-with-shiny.html#cb2-306" aria-hidden="true" tabindex="-1"></a>    <span class="fu">last_tick.selectAppend</span>(<span class="st">&quot;text&quot;</span>)</span>
+<span id="cb2-307"><a href="A-youdrawit-with-shiny.html#cb2-307" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.at</span>(axis_label_style)</span>
+<span id="cb2-308"><a href="A-youdrawit-with-shiny.html#cb2-308" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.html</span>(label);</span>
+<span id="cb2-309"><a href="A-youdrawit-with-shiny.html#cb2-309" aria-hidden="true" tabindex="-1"></a>  };</span>
+<span id="cb2-310"><a href="A-youdrawit-with-shiny.html#cb2-310" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-311"><a href="A-youdrawit-with-shiny.html#cb2-311" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-312"><a href="A-youdrawit-with-shiny.html#cb2-312" aria-hidden="true" tabindex="-1"></a><span class="co"># Setup scales for visualization</span></span>
+<span id="cb2-313"><a href="A-youdrawit-with-shiny.html#cb2-313" aria-hidden="true" tabindex="-1"></a><span class="cf">function</span> <span class="fu">setup_scales</span>(state){</span>
+<span id="cb2-314"><a href="A-youdrawit-with-shiny.html#cb2-314" aria-hidden="true" tabindex="-1"></a>  <span class="co"># multi-assign: x_range, etc. coming from options</span></span>
+<span id="cb2-315"><a href="A-youdrawit-with-shiny.html#cb2-315" aria-hidden="true" tabindex="-1"></a>  const {w, h, line_data, x_range, y_range, x_name, y_name, linear} <span class="ot">=</span> state;</span>
+<span id="cb2-316"><a href="A-youdrawit-with-shiny.html#cb2-316" aria-hidden="true" tabindex="-1"></a>  <span class="co"># convert x from data scale to pixle scale</span></span>
+<span id="cb2-317"><a href="A-youdrawit-with-shiny.html#cb2-317" aria-hidden="true" tabindex="-1"></a>  const x <span class="ot">=</span> <span class="fu">d3.scaleLinear</span>()</span>
+<span id="cb2-318"><a href="A-youdrawit-with-shiny.html#cb2-318" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.domain</span>(x_range <span class="sc">||</span> <span class="fu">d3.extent</span>(line_data, <span class="at">d =</span><span class="sc">&gt;</span> d.x))</span>
+<span id="cb2-319"><a href="A-youdrawit-with-shiny.html#cb2-319" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.range</span>([<span class="dv">0</span>, w]);</span>
+<span id="cb2-320"><a href="A-youdrawit-with-shiny.html#cb2-320" aria-hidden="true" tabindex="-1"></a>  <span class="sc">/</span><span class="er">/</span><span class="fu">console.log</span>(linear);</span>
+<span id="cb2-321"><a href="A-youdrawit-with-shiny.html#cb2-321" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (linear <span class="sc">==</span> <span class="st">&#39;true&#39;</span>) {</span>
+<span id="cb2-322"><a href="A-youdrawit-with-shiny.html#cb2-322" aria-hidden="true" tabindex="-1"></a>    <span class="sc">/</span><span class="er">/</span><span class="fu">console.log</span>(<span class="st">&#39;in linear block&#39;</span>);</span>
+<span id="cb2-323"><a href="A-youdrawit-with-shiny.html#cb2-323" aria-hidden="true" tabindex="-1"></a>    <span class="co"># converts from data linear scale to pixle scale</span></span>
+<span id="cb2-324"><a href="A-youdrawit-with-shiny.html#cb2-324" aria-hidden="true" tabindex="-1"></a>    var y <span class="ot">=</span> <span class="fu">d3.scaleLinear</span>()</span>
+<span id="cb2-325"><a href="A-youdrawit-with-shiny.html#cb2-325" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.domain</span>(y_range <span class="sc">||</span> <span class="fu">d3.extent</span>(line_data, <span class="at">d =</span><span class="sc">&gt;</span> d.y))</span>
+<span id="cb2-326"><a href="A-youdrawit-with-shiny.html#cb2-326" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.range</span>([h, <span class="dv">0</span>]);</span>
+<span id="cb2-327"><a href="A-youdrawit-with-shiny.html#cb2-327" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb2-328"><a href="A-youdrawit-with-shiny.html#cb2-328" aria-hidden="true" tabindex="-1"></a>    <span class="sc">/</span><span class="er">/</span><span class="fu">console.log</span>(<span class="st">&#39;in log block&#39;</span>);</span>
+<span id="cb2-329"><a href="A-youdrawit-with-shiny.html#cb2-329" aria-hidden="true" tabindex="-1"></a>    <span class="co"># converts from data log scale to pixle scale</span></span>
+<span id="cb2-330"><a href="A-youdrawit-with-shiny.html#cb2-330" aria-hidden="true" tabindex="-1"></a>    var y <span class="ot">=</span> <span class="fu">d3.scaleLog</span>()</span>
+<span id="cb2-331"><a href="A-youdrawit-with-shiny.html#cb2-331" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.domain</span>(y_range <span class="sc">||</span> <span class="fu">d3.extent</span>(line_data, <span class="at">d =</span><span class="sc">&gt;</span> d.y))</span>
+<span id="cb2-332"><a href="A-youdrawit-with-shiny.html#cb2-332" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.range</span>([h, <span class="dv">0</span>])<span class="fu">.base</span>(<span class="dv">10</span>);</span>
+<span id="cb2-333"><a href="A-youdrawit-with-shiny.html#cb2-333" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-334"><a href="A-youdrawit-with-shiny.html#cb2-334" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-335"><a href="A-youdrawit-with-shiny.html#cb2-335" aria-hidden="true" tabindex="-1"></a>  const xAxis <span class="ot">=</span> <span class="fu">d3.axisBottom</span>()<span class="fu">.scale</span>(x)<span class="fu">.tickSizeOuter</span>(<span class="dv">0</span>);</span>
+<span id="cb2-336"><a href="A-youdrawit-with-shiny.html#cb2-336" aria-hidden="true" tabindex="-1"></a>  const yAxis <span class="ot">=</span> <span class="fu">d3.axisLeft</span>()<span class="fu">.scale</span>(y)<span class="fu">.tickFormat</span>(<span class="fu">d3.format</span>(<span class="st">&quot;.4&quot;</span>))<span class="fu">.tickSizeOuter</span>(<span class="dv">0</span>);</span>
+<span id="cb2-337"><a href="A-youdrawit-with-shiny.html#cb2-337" aria-hidden="true" tabindex="-1"></a>  const xAxisGrid <span class="ot">=</span> <span class="fu">d3.axisBottom</span>()<span class="fu">.scale</span>(x)<span class="fu">.tickSize</span>(<span class="sc">-</span>h)<span class="fu">.tickFormat</span>(<span class="st">&#39;&#39;</span>);</span>
+<span id="cb2-338"><a href="A-youdrawit-with-shiny.html#cb2-338" aria-hidden="true" tabindex="-1"></a>  const yAxisGrid <span class="ot">=</span> <span class="fu">d3.axisLeft</span>()<span class="fu">.scale</span>(y)<span class="fu">.tickSize</span>(<span class="sc">-</span>w)<span class="fu">.tickFormat</span>(<span class="st">&#39;&#39;</span>);</span>
+<span id="cb2-339"><a href="A-youdrawit-with-shiny.html#cb2-339" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-340"><a href="A-youdrawit-with-shiny.html#cb2-340" aria-hidden="true" tabindex="-1"></a>  <span class="fu">state.svg.selectAll</span>(<span class="st">&quot;g.x_grid&quot;</span>)<span class="fu">.remove</span>()</span>
+<span id="cb2-341"><a href="A-youdrawit-with-shiny.html#cb2-341" aria-hidden="true" tabindex="-1"></a>  <span class="fu">state.svg.selectAll</span>(<span class="st">&quot;g.y_grid&quot;</span>)<span class="fu">.remove</span>()</span>
+<span id="cb2-342"><a href="A-youdrawit-with-shiny.html#cb2-342" aria-hidden="true" tabindex="-1"></a>  <span class="co"># could call axis-grid &quot;fred&quot;</span></span>
+<span id="cb2-343"><a href="A-youdrawit-with-shiny.html#cb2-343" aria-hidden="true" tabindex="-1"></a>  <span class="fu">state.svg.selectAll</span>(<span class="st">&quot;g.axis-grid&quot;</span>)<span class="fu">.remove</span>()</span>
+<span id="cb2-344"><a href="A-youdrawit-with-shiny.html#cb2-344" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-345"><a href="A-youdrawit-with-shiny.html#cb2-345" aria-hidden="true" tabindex="-1"></a>  <span class="fu">state.svg.selectAll</span>(<span class="st">&quot;path.shown_line&quot;</span>)<span class="fu">.remove</span>()</span>
+<span id="cb2-346"><a href="A-youdrawit-with-shiny.html#cb2-346" aria-hidden="true" tabindex="-1"></a>  <span class="fu">state.svg.selectAll</span>(<span class="st">&quot;circle&quot;</span>)<span class="fu">.remove</span>()</span>
+<span id="cb2-347"><a href="A-youdrawit-with-shiny.html#cb2-347" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-348"><a href="A-youdrawit-with-shiny.html#cb2-348" aria-hidden="true" tabindex="-1"></a>  <span class="fu">state.svg.selectAppend</span>(<span class="st">&quot;g.x_grid&quot;</span>)</span>
+<span id="cb2-349"><a href="A-youdrawit-with-shiny.html#cb2-349" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.attr</span>(<span class="st">&#39;class&#39;</span>, <span class="st">&#39;x axis-grid&#39;</span>)</span>
+<span id="cb2-350"><a href="A-youdrawit-with-shiny.html#cb2-350" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.translate</span>([<span class="dv">0</span>,h])</span>
+<span id="cb2-351"><a href="A-youdrawit-with-shiny.html#cb2-351" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.call</span>(xAxisGrid);</span>
+<span id="cb2-352"><a href="A-youdrawit-with-shiny.html#cb2-352" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-353"><a href="A-youdrawit-with-shiny.html#cb2-353" aria-hidden="true" tabindex="-1"></a>  <span class="fu">state.svg.selectAppend</span>(<span class="st">&quot;g.y_grid&quot;</span>)</span>
+<span id="cb2-354"><a href="A-youdrawit-with-shiny.html#cb2-354" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.attr</span>(<span class="st">&#39;class&#39;</span>, <span class="st">&#39;y axis-grid&#39;</span>)</span>
+<span id="cb2-355"><a href="A-youdrawit-with-shiny.html#cb2-355" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.call</span>(yAxisGrid);</span>
+<span id="cb2-356"><a href="A-youdrawit-with-shiny.html#cb2-356" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-357"><a href="A-youdrawit-with-shiny.html#cb2-357" aria-hidden="true" tabindex="-1"></a>  <span class="fu">state.svg.selectAll</span>(<span class="st">&quot;.axis-grid .tick&quot;</span>)</span>
+<span id="cb2-358"><a href="A-youdrawit-with-shiny.html#cb2-358" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.style</span>(<span class="st">&quot;stroke&quot;</span>, <span class="st">&quot;light-grey&quot;</span>)</span>
+<span id="cb2-359"><a href="A-youdrawit-with-shiny.html#cb2-359" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.style</span>(<span class="st">&quot;opacity&quot;</span>, <span class="st">&quot;.3&quot;</span>);</span>
+<span id="cb2-360"><a href="A-youdrawit-with-shiny.html#cb2-360" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-361"><a href="A-youdrawit-with-shiny.html#cb2-361" aria-hidden="true" tabindex="-1"></a>  <span class="fu">state.svg.selectAppend</span>(<span class="st">&quot;g.x_axis&quot;</span>)</span>
+<span id="cb2-362"><a href="A-youdrawit-with-shiny.html#cb2-362" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.translate</span>([<span class="dv">0</span>,h])</span>
+<span id="cb2-363"><a href="A-youdrawit-with-shiny.html#cb2-363" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.call</span>(xAxis);</span>
+<span id="cb2-364"><a href="A-youdrawit-with-shiny.html#cb2-364" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-365"><a href="A-youdrawit-with-shiny.html#cb2-365" aria-hidden="true" tabindex="-1"></a>  <span class="fu">state.svg.selectAppend</span>(<span class="st">&quot;g.y_axis&quot;</span>)</span>
+<span id="cb2-366"><a href="A-youdrawit-with-shiny.html#cb2-366" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.call</span>(yAxis);</span>
+<span id="cb2-367"><a href="A-youdrawit-with-shiny.html#cb2-367" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-368"><a href="A-youdrawit-with-shiny.html#cb2-368" aria-hidden="true" tabindex="-1"></a>  const line_drawer <span class="ot">=</span> <span class="fu">d3.line</span>()</span>
+<span id="cb2-369"><a href="A-youdrawit-with-shiny.html#cb2-369" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.defined</span>(<span class="at">d =</span><span class="sc">&gt;</span> d.y <span class="sc">!=</span><span class="er">=</span> null)</span>
+<span id="cb2-370"><a href="A-youdrawit-with-shiny.html#cb2-370" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.x</span>(<span class="at">d =</span><span class="sc">&gt;</span> <span class="fu">x</span>(d.x))</span>
+<span id="cb2-371"><a href="A-youdrawit-with-shiny.html#cb2-371" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.y</span>(<span class="at">d =</span><span class="sc">&gt;</span> <span class="fu">y</span>(d.y));</span>
+<span id="cb2-372"><a href="A-youdrawit-with-shiny.html#cb2-372" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-373"><a href="A-youdrawit-with-shiny.html#cb2-373" aria-hidden="true" tabindex="-1"></a>  return {</span>
+<span id="cb2-374"><a href="A-youdrawit-with-shiny.html#cb2-374" aria-hidden="true" tabindex="-1"></a>    x,</span>
+<span id="cb2-375"><a href="A-youdrawit-with-shiny.html#cb2-375" aria-hidden="true" tabindex="-1"></a>    y,</span>
+<span id="cb2-376"><a href="A-youdrawit-with-shiny.html#cb2-376" aria-hidden="true" tabindex="-1"></a>    line_drawer,</span>
+<span id="cb2-377"><a href="A-youdrawit-with-shiny.html#cb2-377" aria-hidden="true" tabindex="-1"></a>  };</span>
+<span id="cb2-378"><a href="A-youdrawit-with-shiny.html#cb2-378" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+
+<!--
+The bib chunk below must go last in this document according to how R Markdown renders.  More info is at http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html
+-->
+<!-- 
+If you'd like to change the name of the bibliography to something else,
+delete "References" and replace it.
+-->
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="5-conclusion.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["thesis.pdf", "PDF"], ["thesis.epub", "EPUB"], ["thesis.docx", "Word"]],
+"toc": {
+"collapse": "section",
+"style": "style.css"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

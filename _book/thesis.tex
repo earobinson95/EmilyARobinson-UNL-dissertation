@@ -218,9 +218,9 @@
 \maketitle
 
 
-\begin{abstract}
-    Log scales are often used to display data over several orders of magnitude within one graph. During the COVID-19 pandemic, we have seen both the benefits and the pitfalls of using log scales to display case counts. Three graphical experimental tasks were conducted to evaluate the impact our choice of scale has on human perception of exponentially increasing trends. The first experiment evaluates whether our ability to perceptually notice differences in exponentially increasing trends is impacted by the choice of scale. We conducted a visual inference experiment in which participants were shown a series of lineup plots (consisting of 19 null panels and 1 target panel) and asked to identify the panel that was most different from the others. Our results indicated that when there was a large difference in curvature between the target plot and null plots, the choice of scale had no impact and participants accurately differentiated between the two curves on both the linear and log scale. However, displaying exponentially increasing data on a log scale improved the accuracy of differentiating between models with slight curvature differences. An exception occurred when identifying a plot with curvature embedded in surrounding plots closely relating to a linear trend, indicating that it is easy to identify a curve in a group of lines but much harder to identify a line in a group of curves. The use of visual inference to identify these guidelines suggests that there are \emph{perceptual} advantages to log scales when differences are subtle. Our other experimental tasks focus on determining whether there are cognitive disadvantages to log scales: do log scales make it harder to make use of graphical information? We conducted a graphical task similar to the New York Times ``You Draw It'' page to test an individual's ability to use and make predictions for exponentially increasing data. We asked participants to draw a line using their computer mouse through the increasing exponential trend shown on both scales. In addition to differentiation and prediction of exponentially increasing data, we conduct an experimental task to test an individuals' ability to translate a graph of exponentially increasing data into real value quantities and extend their estimations by making comparisons. The results of our experimental tasks allow us to provide guidelines for readers to actively choose which of many possible graphics to draw, according to some set of design choices, to ensure that our charts are effective. \emph{(399 words; 350 word limit)}
-\end{abstract}
+% \begin{abstract}
+%     Log scales are often used to display data over several orders of magnitude within one graph. During the COVID-19 pandemic, we have seen both the benefits and the pitfalls of using log scales to display case counts. Three graphical experimental tasks were conducted to evaluate the impact our choice of scale has on human perception of exponentially increasing trends. The first experiment evaluates whether our ability to perceptually notice differences in exponentially increasing trends is impacted by the choice of scale. We conducted a visual inference experiment in which participants were shown a series of lineup plots (consisting of 19 null panels and 1 target panel) and asked to identify the panel that was most different from the others. Our results indicated that when there was a large difference in curvature between the target plot and null plots, the choice of scale had no impact and participants accurately differentiated between the two curves on both the linear and log scale. However, displaying exponentially increasing data on a log scale improved the accuracy of differentiating between models with slight curvature differences. An exception occurred when identifying a plot with curvature embedded in surrounding plots closely relating to a linear trend, indicating that it is easy to identify a curve in a group of lines but much harder to identify a line in a group of curves. The use of visual inference to identify these guidelines suggests that there are \emph{perceptual} advantages to log scales when differences are subtle. Our other experimental tasks focus on determining whether there are cognitive disadvantages to log scales: do log scales make it harder to make use of graphical information? We conducted a graphical task similar to the New York Times ``You Draw It'' page to test an individual's ability to use and make predictions for exponentially increasing data. We asked participants to draw a line using their computer mouse through the increasing exponential trend shown on both scales. In addition to differentiation and prediction of exponentially increasing data, we conduct an experimental task to test an individuals' ability to translate a graph of exponentially increasing data into real value quantities and extend their estimations by making comparisons. The results of our experimental tasks allow us to provide guidelines for readers to actively choose which of many possible graphics to draw, according to some set of design choices, to ensure that our charts are effective. \emph{(399 words; 350 word limit)}
+% \end{abstract}
 
 %% Optional
 %% \begin{copyrightpage}
@@ -234,9 +234,9 @@
 %%%%%%%%%%%%%%%%%%%
 % Acknowledgments
 %%%%%%%%%%%%%%%%%%%
-\begin{acknowledgments}
-Thank you to all my people!
-\end{acknowledgments}
+% \begin{acknowledgments}
+% Thank you to all my people!
+% \end{acknowledgments}
 %%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%
@@ -762,20 +762,22 @@ The creator of the graphic applies D3.js code to visualize data which has previo
 
 The example R code illustrates the structure of the r2d3 function in R which includes specification of a data frame in R (converted to a JSON file), the D3.js source code file, and the D3 version that accompanies the source code.
 A default SVG container for layering elements is then generated by the r2d3 function which renders the plot using the source code.
-Section \protect\hyperlink{r2d3-with-shiny}{3.2} outlines the development of the you draw it study interactive plots through the use of r2d3 with R shiny applications.
+\protect\hyperlink{youdrawit-with-shiny}{Appendix A} outlines the development of the you draw it study interactive plots through the use of r2d3 with R shiny applications.
 
-\hypertarget{study-objectives}{%
-\subsection{Study Objectives}\label{study-objectives}}
+\hypertarget{study-design-1}{%
+\section{Study Design}\label{study-design-1}}
 
 This chapter first aims to establish the you draw it method as a tool for measuring predictions of trends; then this method will be used to test an individual's ability to make predictions for exponentially increasing data on both the log and linear scales, referred to as Prediction of Exponential Trends.
 Mosteller, Siegel, Trapido, \& Youtz (1981) was replicated as part of the study data collection in order to validate the you draw it method, this will be referred to as Eye Fitting Straight Lines in the Modern Era.
 Data for both the Eye Fitting Straight Lines in the Modern Era and Prediction of Exponential Trends studies were collected in conjunction with one another over the same study participant sample.
 
-\hypertarget{interactive-plot-development}{%
-\section{Interactive Plot Development}\label{interactive-plot-development}}
+For each individual, a total of 6 data sets - 4 Eye Fitting Straight Lines in the Modern Era and 2 Prediction of Exponential Trends - are generated for each individual the start of the experiment.
+The 2 data sets corresponding to to the data used in the Prediction of Exponential Trends are then plotted a total of 4 times each by truncating the points at both 50\% and 75\% of the domain as well as on both the log and linear scales for a total of 8 task plots.
+Participants in the study are first shown 2 you draw it plot practice plots followed by 12 you draw it task plots.
+The order of all 12 task plots were randomly assigned for each individual in a completely randomized design where users saw the 4 task plots from the Eye Fitting Straight Lines in the Modern Era simulated data interspersed with the 8 task plots from the Prediction of Exponential Trends simulated data.
 
-Interactive plots for the study were created using the r2d3 package and integrating D3 source code with an R shiny application.
-In this section I outline the data simulation process conducted in R, constructing interactive plots with D3.js code and R shiny, and the experiment design used to collect participant responses.
+\hypertarget{eye-fitting-straight-lines-in-the-modern-era}{%
+\section{Eye Fitting Straight Lines in the Modern Era}\label{eye-fitting-straight-lines-in-the-modern-era}}
 
 \hypertarget{data-simulation}{%
 \subsection{Data Simulation}\label{data-simulation}}
@@ -785,8 +787,11 @@ Both studies, Eye Fitting Straight Lines in the Modern Era and Prediction of Exp
 The corresponding model is then fit to the simulated points the obtain the best fit line and estimated values every 0.25 increments across the domain.
 Each function then outputs a list of point data and line data both indicating the parameter identification, x value, and y value.
 
-\hypertarget{eye-fitting-straight-lines-in-the-modern-era}{%
-\subsubsection{Eye Fitting Straight Lines in the Modern Era}\label{eye-fitting-straight-lines-in-the-modern-era}}
+\begin{itemize}
+\tightlist
+\item
+  Aspect ratio = 1; yrange = range(all eye fitting data) range(1.1, 1.1)
+\end{itemize}
 
 \noindent *Algorithm: Eye Fitting Straight Lines in the Modern Era Data Generation*
 
@@ -800,75 +805,24 @@ Each function then outputs a list of point data and line data both indicating th
 \item
   Randomly select and jitter N = 30 x-values along the domain.
 \item
-  Determine y-intercept at x = 0 from the provided slope and y-intercept at the mean of x (y\_xbar).
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Slope-intercept form: \texttt{y\ -\ y\_xbar\ =\ m(x-xbar)}
-  \end{itemize}
+  Determine y-intercept at x = 0 from the provided slope and y-intercept at the mean of x (y\_xbar) using point-slope form: \texttt{y\ -\ y\_xbar\ =\ m(x-xbar)}
 \item
-  Generate ``good'' errors based on N(0,sigma).
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Set constraint of the mean of the first N/3 = 10 errors less than \textbar2*sigma\textbar{}
-  \end{itemize}
+  Generate ``good'' errors based on N(0,sigma). Set constraint of the mean of the first N/3 = 10 errors less than \textbar2*sigma\textbar{}
 \item
-  Simulate point data based on
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \texttt{y\ =\ yintercept\ +\ slope*x\ +\ error}
-  \end{itemize}
+  Simulate point data based on \(y = yintercept + slope*x + error\)
 \item
-  Obtain least squares regression coefficients
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \texttt{lm(y\ \textasciitilde{}\ x,\ data\ =\ point\_data)}
-  \end{itemize}
+  Obtain ordinary least squares regression coefficients: \texttt{lm(y\ \textasciitilde{}\ x,\ data\ =\ point\_data)}
 \item
-  Simulate least squares regression line data
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \texttt{y\ =\ yintercepthat\ +\ slopehat*x}
-  \end{itemize}
+  Simulate least squares regression line data: \texttt{y\ =\ yintercepthat\ +\ slopehat*x}
 \item
   Output data list of point data and line data
 \end{enumerate}
 
+\hypertarget{parameter-selection-1}{%
+\subsection{Parameter Selection}\label{parameter-selection-1}}
+
 \begin{itemize}
 \tightlist
-\item
-  Specific r2d3 options:
-
-  \begin{itemize}
-  \tightlist
-  \item
-    aspect ratio = 1
-  \item
-    linear = ``true''
-  \item
-    free\_draw = TRUE
-  \item
-    points = ``full,''
-  \item
-    x\_by = 0.25
-  \item
-    draw\_start = NA
-  \item
-    show\_finished = T - graphics group / F
-  \item
-    x\_range = c(0,20)
-  \item
-    y\_range = range(all eye fitting data)*c(1.1, 1.1)
-  \end{itemize}
 \item
   Parameter combinations were selected to simulate data that replicates the data sets (S, F, V, N) in (Mosteller, Siegel, Trapido, \& Youtz, 1981). One-way ANOVA with 4 treatments
 
@@ -885,140 +839,8 @@ Each function then outputs a list of point data and line data both indicating th
   \end{itemize}
 \end{itemize}
 
-\hypertarget{prediction-of-exponential-trends}{%
-\subsubsection{Prediction of Exponential Trends}\label{prediction-of-exponential-trends}}
-
-\noindent *Algorithm 3.2: Exponential Data Generation*
-
-\textbf{In parameters:} \texttt{beta,\ sd,\ points\_choice\ =\ "partial",\ points\_end\_scale,\ N\ =\ 30,\ xmin\ =\ 0,\ xmax\ =\ 20,\ xby\ =\ 0.25}
-
-\textbf{Out:} data list of point data and line data
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  Randomly select and jitter N = 30 x-values along the domain.
-\item
-  Generate ``good'' errors based on N(0,sd).
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Set constraint of the mean of the first N/3 = 10 errors less than \textbar2*sd\textbar{}
-  \end{itemize}
-\item
-  Simulate point data based on
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \texttt{y\ =\ exp(x*beta\ +\ errorVals)}
-  \end{itemize}
-\item
-  Obtain starting value for beta
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \texttt{lm(log(y)\ \textasciitilde{}\ x,\ data\ =\ point\_data)}
-  \end{itemize}
-\item
-  Use NLS to fit a better line to the point data
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \texttt{nls(y\ \textasciitilde{}\ exp(x*beta),\ data\ =\ point\_data,\ ...)}
-  \end{itemize}
-\item
-  Simulate nonlinear least squares line data
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \texttt{y\ =\ exp(x*betahat)}
-  \end{itemize}
-\item
-  Output data list of point data and line data
-\end{enumerate}
-
-\begin{itemize}
-\item
-  Specific r2d3 options:
-
-  \begin{itemize}
-  \tightlist
-  \item
-    aspect ratio = 1
-  \item
-    \textbf{linear =}
-  \item
-    free\_draw = FALSE
-  \item
-    points = ``partial,''
-  \item
-    x\_by = 0.25
-  \item
-    draw\_start\_scale = 0.5 (start drawing at x = 10)
-  \item
-    show\_finished = T - graphics group / F
-  \item
-    x\_range = c(0,20)
-  \item
-    y\_range = range(y-points)*c(0.5, 2)
-  \end{itemize}
-\item
-  Visit \href{https://emily-robinson.shinyapps.io/you-draw-it-parameter-selection/}{You Draw It Development - parameter selection} for examples.
-\item
-  Exponential (Linear/Log): 2 x 2 x 2 Factorial
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Beta: 0.1 (sd. 0.09); 0.23 (0.25)
-  \item
-    Points End: 0.5; 0.75
-  \item
-    Scale: Linear; Log
-  \end{itemize}
-\end{itemize}
-
-\hypertarget{data-driven-documents-setup-with-shiny-r2d3-with-shiny}{%
-\subsection{Data Driven Documents Setup with Shiny \{r2d3-with-shiny\}}\label{data-driven-documents-setup-with-shiny-r2d3-with-shiny}}
-
-\cref{fig:r2d3-shiny-flowchart}
-
-\begin{figure}[tbp]
-
-{\centering \includegraphics[width=0.8\linewidth,]{images/r2d3+shiny-inkscape} 
-
-}
-
-\caption{Interactive plot development}\label{fig:r2d3-shiny-flowchart}
-\end{figure}
-
-\begin{itemize}
-\tightlist
-\item
-  \url{https://benediktehinger.de/blog/science/scatterplots-regression-lines-and-the-first-principal-component/}
-\item
-  \protect\hyperlink{d3.js-source-code}{Appendix A}
-\end{itemize}
-
-\hypertarget{study-design-1}{%
-\subsection{Study Design}\label{study-design-1}}
-
-For each individual, a total of 6 data sets - 4 Eye Fitting Straight Lines in the Modern Era and 2 Prediction of Exponential Trends - are generated for each individual the start of the experiment.
-The 2 data sets corresponding to to the data used in the Prediction of Exponential Trends are then plotted a total of 4 times each by truncating the points at both 50\% and 75\% of the domain as well as on both the log and linear scales for a total of 8 task plots.
-Participants in the study are first shown 2 you draw it plot practice plots followed by 12 you draw it task plots.
-The order of all 12 task plots were randomly assigned for each individual in a completely randomized design where users saw the 4 task plots from the Eye Fitting Straight Lines in the Modern Era simulated data interspersed with the 8 task plots from the Prediction of Exponential Trends simulated data.
-
 \hypertarget{results-1}{%
-\section{Results}\label{results-1}}
-
-\hypertarget{eye-fitting-straight-lines-in-the-modern-era-1}{%
-\subsection{Eye Fitting Straight Lines in the Modern Era}\label{eye-fitting-straight-lines-in-the-modern-era-1}}
+\subsection{Results}\label{results-1}}
 
 To calculate the first principal component fit: \url{https://benediktehinger.de/blog/science/scatterplots-regression-lines-and-the-first-principal-component/}
 
@@ -1045,7 +867,7 @@ To calculate the first principal component fit: \url{https://benediktehinger.de/
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.25\linewidth,]{thesis_files/figure-latex/eyefitting-example-plot-1} 
+{\centering \includegraphics[width=1\linewidth,]{thesis_files/figure-latex/eyefitting-example-plot-1} 
 
 }
 
@@ -1063,11 +885,22 @@ To calculate the first principal component fit: \url{https://benediktehinger.de/
 \end{itemize}
 
 \textbf{Response:} raw residuals
-+ residualols = ydrawn - yols, denoted \(e_{ols}\)
-+ residualpca = ydrawn - ypca, denoted \(e_{pca}\)
 
-\textbf{Experimental Design:}\\
-+ Each participant saw each of the 4 plots (new simulated data for each)
+\begin{itemize}
+\tightlist
+\item
+  residualols = ydrawn - yols, denoted \(e_{ols}\)
+\item
+  residualpca = ydrawn - ypca, denoted \(e_{pca}\)
+\end{itemize}
+
+\textbf{Experimental Design:}
+
+\begin{itemize}
+\tightlist
+\item
+  Each participant saw each of the 4 plots (new simulated data for each)
+\end{itemize}
 
 \textbf{OLS GAMM Model:}
 
@@ -1111,24 +944,90 @@ To calculate the first principal component fit: \url{https://benediktehinger.de/
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.5\linewidth,]{thesis_files/figure-latex/eyefitting-gammpred-plots-1} 
+{\centering \includegraphics[width=1\linewidth,]{thesis_files/figure-latex/eyefitting-simplot-1} 
 
 }
 
-\caption{Eye Fitting Straight Lines in the Modern Era GAMM}\label{fig:eyefitting-gammpred-plots}
+\caption{Eye Fitting Straight Lines in the Modern Era Simulated Data Example}\label{fig:eyefitting-simplot}
 \end{figure}
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.5\linewidth,]{thesis_files/figure-latex/eyefitting-lmer-preds-1} 
+{\centering \includegraphics[width=1\linewidth,]{thesis_files/figure-latex/eyefitting-residualplots-1} 
 
 }
 
-\caption{Eye Fitting Straight Lines in the Modern Era LMER}\label{fig:eyefitting-lmer-preds}
+\caption{Eye Fitting Straight Lines in the Modern Era Residual Models}\label{fig:eyefitting-residualplots}
 \end{figure}
 
-\hypertarget{prediction-of-exponential-trends-1}{%
-\subsection{Prediction of Exponential Trends}\label{prediction-of-exponential-trends-1}}
+\begin{figure}[tbp]
+
+{\centering \includegraphics[width=0.6\linewidth,]{thesis_files/figure-latex/eyefitting-ss-oddsratio-1} 
+
+}
+
+\caption{Eye Fitting Straight Lines in the Modern Era Sum of Squares Results}\label{fig:eyefitting-ss-oddsratio}
+\end{figure}
+
+\hypertarget{prediction-of-exponential-trends}{%
+\section{Prediction of Exponential Trends}\label{prediction-of-exponential-trends}}
+
+\hypertarget{data-simulation-1}{%
+\subsection{Data Simulation}\label{data-simulation-1}}
+
+\begin{itemize}
+\tightlist
+\item
+  aspect ratio = 1; linear = T/F; start drawing at x = 10; xrange = (0,20), yrange = range(points)*c(0.5,2)
+\end{itemize}
+
+\noindent *Algorithm 3.2: Exponential Data Generation*
+
+\textbf{In parameters:} \texttt{beta,\ sd,\ points\_choice\ =\ "partial",\ points\_end\_scale,\ N\ =\ 30,\ xmin\ =\ 0,\ xmax\ =\ 20,\ xby\ =\ 0.25}
+
+\textbf{Out:} data list of point data and line data
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Randomly select and jitter N = 30 x-values along the domain.
+\item
+  Generate ``good'' errors based on N(0,sd). Set constraint of the mean of the first N/3 = 10 errors less than \textbar2*sd\textbar{}
+\item
+  Simulate point data based on: \texttt{y\ =\ exp(x*beta\ +\ errorVals)}
+\item
+  Obtain starting value for beta: \texttt{lm(log(y)\ \textasciitilde{}\ x,\ data\ =\ point\_data)}
+\item
+  Use NLS to fit a better line to the point data: \texttt{nls(y\ \textasciitilde{}\ exp(x*beta),\ data\ =\ point\_data,\ ...)}
+\item
+  Simulate nonlinear least squares line data: \texttt{y\ =\ exp(x*betahat)}
+\item
+  Output data list of point data and line data
+\end{enumerate}
+
+\hypertarget{parameter-selection-2}{%
+\subsection{Parameter Selection}\label{parameter-selection-2}}
+
+\begin{itemize}
+\item
+  Visit \href{https://emily-robinson.shinyapps.io/you-draw-it-parameter-selection/}{You Draw It Development - parameter selection} for examples.
+\item
+  Exponential (Linear/Log): 2 x 2 x 2 Factorial
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Beta: 0.1 (sd. 0.09); 0.23 (0.25)
+  \item
+    Points End: 0.5; 0.75
+  \item
+    Scale: Linear; Log
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{results-2}{%
+\subsection{Results}\label{results-2}}
 
 \begin{itemize}
 \tightlist
@@ -1172,8 +1071,25 @@ To calculate the first principal component fit: \url{https://benediktehinger.de/
 
 \appendix
 
+\hypertarget{youdrawit-with-shiny}{%
+\chapter{You Draw It Setup with Shiny}\label{youdrawit-with-shiny}}
+
+Interactive plots for the study were created using the r2d3 package and integrating D3 source code with an R shiny application.
+In this section I outline the data simulation process conducted in R, constructing interactive plots with D3.js code and R shiny
+
+\cref{fig:r2d3-shiny-flowchart}
+
 \hypertarget{d3.js-source-code}{%
-\chapter{You draw it D3.js source code}\label{d3.js-source-code}}
+\section{You draw it D3.js source code}\label{d3.js-source-code}}
+
+\begin{figure}[tbp]
+
+{\centering \includegraphics[width=0.8\linewidth,]{images/r2d3+shiny-inkscape} 
+
+}
+
+\caption{Interactive plot development}\label{fig:r2d3-shiny-flowchart}
+\end{figure}
 
 \begin{Shaded}
 \begin{Highlighting}[]

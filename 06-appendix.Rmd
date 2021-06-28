@@ -20,7 +20,18 @@ If you feel it necessary to include an appendix, it goes here.
 <!-- ```{r ref.label='include_packages_2', results='hide', echo = TRUE} -->
 <!-- ``` -->
 
-# You draw it D3.js source code {#d3.js-source-code}
+# You Draw It Setup with Shiny {#youdrawit-with-shiny}
+
+Interactive plots for the study were created using the r2d3 package and integrating D3 source code with an R shiny application. 
+In this section I outline the data simulation process conducted in R, constructing interactive plots with D3.js code and R shiny
+
+\cref{fig:r2d3-shiny-flowchart}
+
+## You draw it D3.js source code {#d3.js-source-code}
+
+```{r r2d3-shiny-flowchart, fig.cap = "Interactive plot development", out.width="80%"}
+knitr::include_graphics("images/r2d3+shiny-inkscape.png")
+```
 
 ```{r d3.js-source-code, eval = F, echo = T}
 # Define variable margins

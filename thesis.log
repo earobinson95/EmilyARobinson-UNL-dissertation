@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.5.4)  26 JUN 2021 11:12
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.5.4)  28 JUN 2021 12:07
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1624,17 +1624,6 @@ File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 ) [1
 
 
-] [2
-
-] [3]
-
-Class memoir Warning: The material used in the footer is too large
-(10.14995pt) for the given foot skip (0.0pt), it is recommended to
-either increase the foot skip or redesign the footer
-(in both cases you will find help in the memoir manual). on input line 239.
-
-[4
-
 ] (thesis.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
 (C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd
@@ -1653,12 +1642,19 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 1.
 
 (C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) [5
+)
+
+Class memoir Warning: The material used in the footer is too large
+(10.14995pt) for the given foot skip (0.0pt), it is recommended to
+either increase the foot skip or redesign the footer
+(in both cases you will find help in the memoir manual). on input line 19.
+
+[2
 
 
-]) [6] (thesis.lof) [7
+]) [3] (thesis.lof) [4
 
-] (thesis.lot) [8
+] (thesis.lot) [5
 
 ] [1
 
@@ -1689,115 +1685,121 @@ File: thesis_files/figure-latex/odds-ratio-plot-1.pdf Graphic file (type pdf)
 ] [31]
 File: images/raster-vs-vector.png Graphic file (type bmp)
 <images/raster-vs-vector.png>
-[32] [33] [34] [35] [36]
-File: images/r2d3+shiny-inkscape.png Graphic file (type bmp)
-<images/r2d3+shiny-inkscape.png>
-[37] [38]
+[32] [33] [34] [35]
 File: thesis_files/figure-latex/eyefitting-example-plot-1.pdf Graphic file (typ
 e pdf)
 <use thesis_files/figure-latex/eyefitting-example-plot-1.pdf>
-[39] [40]
-File: thesis_files/figure-latex/eyefitting-gammpred-plots-1.pdf Graphic file (t
-ype pdf)
-<use thesis_files/figure-latex/eyefitting-gammpred-plots-1.pdf>
-File: thesis_files/figure-latex/eyefitting-lmer-preds-1.pdf Graphic file (type 
-pdf)
-<use thesis_files/figure-latex/eyefitting-lmer-preds-1.pdf>
-[41] [42] [43
+[36] [37]
+File: thesis_files/figure-latex/eyefitting-simplot-1.pdf Graphic file (type pdf
+)
+<use thesis_files/figure-latex/eyefitting-simplot-1.pdf>
+File: thesis_files/figure-latex/eyefitting-residualplots-1.pdf Graphic file (ty
+pe pdf)
+<use thesis_files/figure-latex/eyefitting-residualplots-1.pdf>
+File: thesis_files/figure-latex/eyefitting-ss-oddsratio-1.pdf Graphic file (typ
+e pdf)
+<use thesis_files/figure-latex/eyefitting-ss-oddsratio-1.pdf>
+[38] [39] [40] [41] [42
 
-] [44
+] [43
 
 ]
+File: images/r2d3+shiny-inkscape.png Graphic file (type bmp)
+<images/r2d3+shiny-inkscape.png>
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1207.
-
-Underfull \vbox (badness 1152) detected at line 1559
- []
-
-[45
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1123.
+[44
 
 ]
-Underfull \vbox (badness 10000) detected at line 1559
+Underfull \vbox (badness 10000) detected at line 1475
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1559
+Underfull \vbox (badness 10000) detected at line 1475
+ []
+
+[45]
+Underfull \vbox (badness 10000) detected at line 1475
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1475
  []
 
 [46]
-Underfull \vbox (badness 10000) detected at line 1559
+Underfull \vbox (badness 10000) detected at line 1475
  []
 
 
-Overfull \vbox (0.97333pt too high) detected at line 1559
+Underfull \vbox (badness 10000) detected at line 1475
  []
 
 [47]
-Underfull \vbox (badness 10000) detected at line 1559
- []
-
-
-Overfull \vbox (0.97333pt too high) detected at line 1559
+Underfull \vbox (badness 10000) detected at line 1475
  []
 
 [48]
-Underfull \vbox (badness 10000) detected at line 1559
+Underfull \vbox (badness 10000) detected at line 1475
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1559
+Underfull \vbox (badness 10000) detected at line 1475
  []
 
 [49]
-Underfull \vbox (badness 10000) detected at line 1559
+Underfull \vbox (badness 10000) detected at line 1475
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1475
  []
 
 [50]
-Underfull \vbox (badness 10000) detected at line 1559
+Underfull \vbox (badness 10000) detected at line 1475
  []
 
 
-Overfull \vbox (0.97333pt too high) detected at line 1559
+Overfull \vbox (0.97333pt too high) detected at line 1475
  []
 
 [51]
-Underfull \vbox (badness 10000) detected at line 1559
+Underfull \vbox (badness 10000) detected at line 1475
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1559
+Underfull \vbox (badness 10000) detected at line 1475
  []
 
 [52]
-Underfull \vbox (badness 10000) detected at line 1559
+Underfull \vbox (badness 10000) detected at line 1475
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1559
+Overfull \vbox (0.20332pt too high) detected at line 1475
  []
 
 [53]
-Underfull \vbox (badness 10000) detected at line 1559
+Underfull \vbox (badness 10000) detected at line 1475
  []
 
 
-Overfull \vbox (0.14333pt too high) detected at line 1559
+Overfull \vbox (0.96333pt too high) detected at line 1475
  []
 
 [54]
-Underfull \vbox (badness 10000) detected at line 1559
+Underfull \vbox (badness 10000) detected at line 1475
  []
 
 
-Overfull \vbox (0.97333pt too high) detected at line 1559
+Overfull \vbox (0.96333pt too high) detected at line 1475
  []
 
 [55]
-Underfull \vbox (badness 10000) detected at line 1559
+Underfull \vbox (badness 10000) detected at line 1475
  []
 
 
-Overfull \vbox (0.97333pt too high) detected at line 1559
+Underfull \vbox (badness 10000) detected at line 1475
  []
 
 [56] [57] [58
@@ -1808,7 +1810,7 @@ No file thesis.bbl.
 Class memoir Warning: The material used in the footer is too large
 (10.14995pt) for the given foot skip (0.0pt), it is recommended to
 either increase the foot skip or redesign the footer
-(in both cases you will find help in the memoir manual). on input line 1775.
+(in both cases you will find help in the memoir manual). on input line 1691.
 
 [65] [66]
 \tf@toc=\write7
@@ -1822,15 +1824,15 @@ either increase the foot skip or redesign the footer
 
 (thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 7121842F52C08D1ADE665BA1E0B3601C;1819.
+(rerunfilecheck)             Checksum: DE7598C6A8E598A08FDD9769C462753F;2037.
  ) 
 Here is how much of TeX's memory you used:
- 36263 strings out of 411690
- 667084 string characters out of 2834884
- 1106080 words of memory out of 3000000
- 55713 multiletter control sequences out of 15000+600000
+ 36271 strings out of 411690
+ 667292 string characters out of 2834884
+ 1107080 words of memory out of 3000000
+ 55720 multiletter control sequences out of 15000+600000
  409730 words of font info for 70 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 126i,12n,130p,2602b,548s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 126i,12n,130p,2589b,526s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (74 pages).
+Output written on thesis.pdf (71 pages).
