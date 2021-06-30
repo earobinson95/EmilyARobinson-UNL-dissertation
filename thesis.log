@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.5.4)  29 JUN 2021 20:52
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.5.4)  30 JUN 2021 09:19
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1448,6 +1448,35 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box81
 \@float@everytoks=\toks61
 \@floatcapt=\box82
+)
+(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/algorithms\algorith
+m.sty
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+\@float@every@algorithm=\toks62
+\c@algorithm=\count416
+)
+(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/algorithmicx\algpse
+udocode.sty
+Package: algpseudocode 
+
+(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/algorithmicx\algori
+thmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count417
+\c@ALG@rem=\count418
+\c@ALG@nested=\count419
+\ALG@tlm=\skip268
+\ALG@thistlm=\skip269
+\c@ALG@Lnr=\count420
+\c@ALG@blocknr=\count421
+\c@ALG@storecount=\count422
+\c@ALG@tmpcounter=\count423
+\ALG@tmplength=\skip270
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
 )) (thesis.aux)
 \openout1 = `thesis.aux'.
 
@@ -1522,7 +1551,7 @@ most likely cause issues with the appearance of inserted todonotes. The issue c
 an be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to 
 loading the todonotes package. on input line 186.
 
-\c@lstlisting=\count416
+\c@lstlisting=\count424
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
@@ -1604,7 +1633,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ttitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count417
+\c@section@level=\count425
 )
 Redoing nameref's sectioning
 Redoing nameref's label
@@ -1673,14 +1702,17 @@ File: images/log-scale-comic.png Graphic file (type bmp)
 ]
 File: thesis_files/figure-latex/lineup-example-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/lineup-example-1.pdf>
-[20] [21] [22]
+[20] [21]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 532.
+[22]
 File: thesis_files/figure-latex/lof-density-curves-1.pdf Graphic file (type pdf
 )
 <use thesis_files/figure-latex/lof-density-curves-1.pdf>
-[23] [24] [25] [26] [27]
+[23] [24] [25] [26]
 File: thesis_files/figure-latex/odds-ratio-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/odds-ratio-plot-1.pdf>
-[28] [29] [30
+[27] [28] [29] [30
 
 ]
 File: images/subjective-judgement-plot.png Graphic file (type bmp)
@@ -1698,14 +1730,14 @@ File: images/raster-vs-vector.png Graphic file (type bmp)
 File: images/ydiExample-0.10-10-linear.png Graphic file (type bmp)
 <images/ydiExample-0.10-10-linear.png>
 
-Overfull \hbox (43.36464pt too wide) in paragraph at lines 805--806
+Overfull \hbox (43.36464pt too wide) in paragraph at lines 791--792
  [][] 
  []
 
 [35] [36] [37]
 
 LaTeX Warning: Reference `tab:eyefitting-parameters' on page 1 undefined on inp
-ut line 887.
+ut line 873.
 
 [38]
 File: thesis_files/figure-latex/eyefitting-simplot-1.pdf Graphic file (type pdf
@@ -1717,7 +1749,7 @@ File: thesis_files/figure-latex/ols-vs-pca-example-1.pdf Graphic file (type pdf
 <use thesis_files/figure-latex/ols-vs-pca-example-1.pdf>
 
 LaTeX Warning: Reference `fig: eyefitting-example-plot' on page 1 undefined on 
-input line 927.
+input line 913.
 
 File: thesis_files/figure-latex/eyefitting-example-plot-1.pdf Graphic file (typ
 e pdf)
@@ -1741,99 +1773,99 @@ e pdf)
 File: images/r2d3+shiny-inkscape.png Graphic file (type bmp)
 <images/r2d3+shiny-inkscape.png>
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1189.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1175.
 [49
 
 ]
-Underfull \vbox (badness 10000) detected at line 1541
+Underfull \vbox (badness 10000) detected at line 1527
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1541
+Underfull \vbox (badness 10000) detected at line 1527
  []
 
 [50]
-Underfull \vbox (badness 10000) detected at line 1541
+Underfull \vbox (badness 10000) detected at line 1527
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1541
+Underfull \vbox (badness 10000) detected at line 1527
  []
 
 [51]
-Underfull \vbox (badness 10000) detected at line 1541
+Underfull \vbox (badness 10000) detected at line 1527
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1541
+Underfull \vbox (badness 10000) detected at line 1527
  []
 
 [52]
-Underfull \vbox (badness 10000) detected at line 1541
+Underfull \vbox (badness 10000) detected at line 1527
  []
 
 [53]
-Underfull \vbox (badness 10000) detected at line 1541
+Underfull \vbox (badness 10000) detected at line 1527
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1541
+Underfull \vbox (badness 10000) detected at line 1527
  []
 
 [54]
-Underfull \vbox (badness 10000) detected at line 1541
+Underfull \vbox (badness 10000) detected at line 1527
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1541
+Underfull \vbox (badness 10000) detected at line 1527
  []
 
 [55]
-Underfull \vbox (badness 10000) detected at line 1541
+Underfull \vbox (badness 10000) detected at line 1527
  []
 
 
-Overfull \vbox (0.97333pt too high) detected at line 1541
+Overfull \vbox (0.97333pt too high) detected at line 1527
  []
 
 [56]
-Underfull \vbox (badness 10000) detected at line 1541
+Underfull \vbox (badness 10000) detected at line 1527
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1541
+Underfull \vbox (badness 10000) detected at line 1527
  []
 
 [57]
-Underfull \vbox (badness 10000) detected at line 1541
+Underfull \vbox (badness 10000) detected at line 1527
  []
 
 
-Overfull \vbox (0.20332pt too high) detected at line 1541
+Overfull \vbox (0.20332pt too high) detected at line 1527
  []
 
 [58]
-Underfull \vbox (badness 10000) detected at line 1541
+Underfull \vbox (badness 10000) detected at line 1527
  []
 
 
-Overfull \vbox (0.96333pt too high) detected at line 1541
+Overfull \vbox (0.96333pt too high) detected at line 1527
  []
 
 [59]
-Underfull \vbox (badness 10000) detected at line 1541
+Underfull \vbox (badness 10000) detected at line 1527
  []
 
 
-Overfull \vbox (0.96333pt too high) detected at line 1541
+Overfull \vbox (0.96333pt too high) detected at line 1527
  []
 
 [60]
-Underfull \vbox (badness 10000) detected at line 1541
+Underfull \vbox (badness 10000) detected at line 1527
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1541
+Underfull \vbox (badness 10000) detected at line 1527
  []
 
 [61] [62] [63
@@ -1844,7 +1876,7 @@ No file thesis.bbl.
 Class memoir Warning: The material used in the footer is too large
 (10.14995pt) for the given foot skip (0.0pt), it is recommended to
 either increase the foot skip or redesign the footer
-(in both cases you will find help in the memoir manual). on input line 1778.
+(in both cases you will find help in the memoir manual). on input line 1764.
 
 [71]
 \tf@toc=\write7
@@ -1864,12 +1896,12 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: BE68AE744A310196B198E38807F7BB66;2037.
  ) 
 Here is how much of TeX's memory you used:
- 36345 strings out of 411690
- 670184 string characters out of 2834884
+ 36864 strings out of 411690
+ 677761 string characters out of 2834884
  1107080 words of memory out of 3000000
- 55786 multiletter control sequences out of 15000+600000
+ 56296 multiletter control sequences out of 15000+600000
  409730 words of font info for 70 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 126i,12n,130p,2589b,463s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 126i,12n,130p,2589b,490s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on thesis.pdf (76 pages).

@@ -23,6 +23,7 @@ model_data <- lineup_results_data %>%
 
 xMid_vals  <- c(14.5, 13, 11.5)
 sigma_vals <- c(0.25, 0.12, 0.05)
+sigma_vals <- c(0, 0, 0)
 yRange_vals = c(10,100)
 
 # Obtain alphahat, betahat, and thetahat for different midpoints.
@@ -73,9 +74,9 @@ expSim <- function(alphahat, betahat, thetahat, sigma, nReps = 1, N = 50, xRange
   beta  = betahat
   theta = thetahat
   
-  vals <- seq(xRange[1], xRange[2], length.out = N*3/4)
-  xvals <- sample(vals, N, replace = T)
-  xvals <- jitter(xvals)
+  xvals <- seq(xRange[1], xRange[2], length.out = N)
+  # xvals <- sample(vals, N, replace = T)
+  # xvals <- jitter(xvals)
   
   expData <- tibble(x = rep(xvals, nReps),
                     y = alpha*exp(beta*x + rnorm(N*nReps,0,sigma)) + theta)
@@ -97,21 +98,21 @@ simData <- tibble(diff.num    = seq(1,3,1),
   unnest(data)
 
 simData  %>%
-  mutate(curvature = factor(curvature, levels = c("E", "M", "H"))) %>%
+  mutate(curvature = factor(curvature, levels = c("E", "M", "H"), labels = c("High Curvature", "Medium Curvature", "Low Curvature"))) %>%
   ggplot(aes(x = x, y = y, color = curvature)) +
-  geom_point() +
+  geom_line() +
   theme_bw() +
   theme(aspect.ratio = 1) +
   theme(axis.text = element_blank(),
         axis.title = element_blank(),
-        legend.position = "none") +
-  scale_color_manual(values = c("#004400", "#116611", "#55aa55"))
+        legend.position = "bottom") +
+  scale_color_manual("Difficulty", values = c("#004400", "#116611", "#55aa55"))
 
 tE_nM <- simData  %>%
   filter(curvature %in% c("E", "M")) %>%
   mutate(curvature = factor(curvature, levels = c("E", "M", "H"))) %>%
   ggplot(aes(x = x, y = y, color = curvature)) +
-  geom_point(size = 0.5) +
+  geom_line() +
   theme_test() +
   theme(aspect.ratio = 1) +
   theme(axis.text = element_blank(),
@@ -126,7 +127,7 @@ tE_nH <- simData  %>%
   filter(curvature %in% c("E", "H")) %>%
   mutate(curvature = factor(curvature, levels = c("E", "M", "H"))) %>%
   ggplot(aes(x = x, y = y, color = curvature)) +
-  geom_point() +
+  geom_line() +
   theme_test() +
   theme(aspect.ratio = 1) +
   theme(axis.text = element_blank(),
@@ -141,7 +142,7 @@ tM_nE <- simData  %>%
   filter(curvature %in% c("E", "M")) %>%
   mutate(curvature = factor(curvature, levels = c("E", "M", "H"))) %>%
   ggplot(aes(x = x, y = y, color = curvature)) +
-  geom_point() +
+  geom_line() +
   theme_test() +
   theme(aspect.ratio = 1) +
   theme(axis.text = element_blank(),
@@ -156,7 +157,7 @@ tM_nH <- simData  %>%
   filter(curvature %in% c("H", "M")) %>%
   mutate(curvature = factor(curvature, levels = c("E", "M", "H"))) %>%
   ggplot(aes(x = x, y = y, color = curvature)) +
-  geom_point() +
+  geom_line() +
   theme_test() +
   theme(aspect.ratio = 1) +
   theme(axis.text = element_blank(),
@@ -171,7 +172,7 @@ tH_nE <- simData  %>%
   filter(curvature %in% c("E", "H")) %>%
   mutate(curvature = factor(curvature, levels = c("E", "M", "H"))) %>%
   ggplot(aes(x = x, y = y, color = curvature)) +
-  geom_point() +
+  geom_line() +
   theme_test() +
   theme(aspect.ratio = 1) +
   theme(axis.text = element_blank(),
@@ -186,7 +187,7 @@ tH_nM <- simData  %>%
   filter(curvature %in% c("H", "M")) %>%
   mutate(curvature = factor(curvature, levels = c("E", "M", "H"))) %>%
   ggplot(aes(x = x, y = y, color = curvature)) +
-  geom_point() +
+  geom_line() +
   theme_test() +
   theme(aspect.ratio = 1) +
   theme(axis.text = element_blank(),
@@ -252,17 +253,17 @@ odds_ratio_plot <- odds_ratios %>%
   geom_errorbar(aes(xmin = asymp.LCL, xmax = asymp.UCL), position = dodge, width = .1) +
   geom_vline(xintercept = 1) +
   theme_bw()  +
-  theme(axis.title = element_text(size = 8),
-        axis.text = element_text(size = 8),
-        legend.title = element_text(size = 8),
-        legend.text  = element_text(size = 8),
-        legend.key.size = unit(0.7, "line"),
+  theme(axis.title = element_text(size = 12),
+        axis.text = element_text(size = 12),
+        legend.title = element_text(size = 12),
+        legend.text  = element_text(size = 12),
+        legend.key.size = unit(1, "line"),
         legend.position = "bottom"
   ) +
-  scale_y_discrete("Null plot type", position = "left") +
+  scale_y_discrete("Null Panel Difficulty", position = "left", labels = c("High Curvature", "Medium Curvature", "Low Curvature")) +
   scale_x_continuous("Odds ratio (on log scale) \n (Log vs Linear)", trans = "log10") + 
-  scale_color_manual("Target Plot Type", values = c("#004400", "#116611", "#55aa55")) + 
-  scale_shape_discrete("Target Plot Type")
+  scale_color_manual("Target Panel Difficulty", values = c("#004400", "#116611", "#55aa55"), labels = c("High Curvature", "Medium Curvature", "Low Curvature")) + 
+  scale_shape_discrete("Target Panel Difficulty", labels = c("High Curvature", "Medium Curvature", "Low Curvature"))
 odds_ratio_plot
 
 picsList <- c("images/tM_nH.png", "images/tE_nH.png", 
