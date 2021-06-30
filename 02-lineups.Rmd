@@ -78,11 +78,8 @@ The heuristic data generation procedure is described below:
 \noindent \textbf{Output:} estimated model parameters $\hat\alpha, \hat\beta, \hat\theta$
 
 1. Determine the $y=-x$ line scaled to fit the assigned domain and range.
-
 2. Map the values $x_{mid} - 0.1$ and $x_{mid} + 0.1$ to the $y=-x$ line for two additional points.
-
 3. From the set points $(x_k, y_k)$ for $k = 1,2,3,4$, obtain the coefficients from the linear model $\ln(y_k) = b_0 +b_1x_k$ to obtain starting values - $\alpha_0 = e^{b_0}, \beta_0 =  b_1, \theta_0 = 0.5\cdot \min(y)$
-
 4. Using the `nls()` function from the `stats` package in Rstudio and the starting parameter values - $\alpha_0, \beta_0, \theta_0$ - fit the nonlinear model, $y_k = \alpha\cdot e^{\beta\cdot x_k}+\theta$ to obtain estimated parameter values - $\hat\alpha, \hat\beta, \hat\theta.$
 
 \noindent\textit{Algorithm 2.1.2: Exponential Simulation}
@@ -92,13 +89,9 @@ The heuristic data generation procedure is described below:
 \noindent \textbf{Output Parameters:} $N$ points, in the form of vectors $\mathbf{x}$ and $\mathbf{y}$.
 
 1. Generate $\tilde x_j, j = 1,..., N\cdot \frac{3}{4}$ as a sequence of evenly spaced points in $[0,20]$. This ensures the full domain of $x$ is used, fulfilling the constraints of spanning the same domain and range for each parameter combination.
-
 2. Obtain $\tilde x_i, i = 1,...N$ by sampling $N = 50$ values from the set of $\tilde x_j$ values. This gaurantees some variability and potential clustring in the exponential growth curve disrupting the perception due to continuity of points.
-
 3. Obtain the final $x_i$ values by jittering $\tilde x_i$.
-
 4. Calculate $\tilde\alpha = \frac{\hat\alpha}{e^{\sigma^2/2}}.$ This ensures that the range of simulated values for different standard devaition parameters has an equal expected value for a given rate of change due to the non-constant variance across the domain.
-
 5. Generate $y_i = \tilde\alpha\cdot e^{\hat\beta x_i + e_i}+\hat\theta$ where $e_i\sim N(0,\sigma^2).$
 
 ## Parameter Selection
@@ -184,7 +177,7 @@ The binary response was analyzed using generalized linear mixed model following 
 \begin{equation}
 \text{logit }P(Y_{ijk}) = \eta + \delta_i + \gamma_j + \delta \gamma_{ij} + s_l + d_k
 \end{equation}
-where
+\noindent where
 \begin{itemize}
 \item $\eta$ is the baseline average probability of selecting the target plot
 \item $\delta_i$ is the effect of the log/linear scale

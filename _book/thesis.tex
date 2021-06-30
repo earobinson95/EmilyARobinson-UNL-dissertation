@@ -535,6 +535,7 @@ The heuristic data generation procedure is described below:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
+\tightlist
 \item
   Determine the \(y=-x\) line scaled to fit the assigned domain and range.
 \item
@@ -553,6 +554,7 @@ The heuristic data generation procedure is described below:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
+\tightlist
 \item
   Generate \(\tilde x_j, j = 1,..., N\cdot \frac{3}{4}\) as a sequence of evenly spaced points in \([0,20]\). This ensures the full domain of \(x\) is used, fulfilling the constraints of spanning the same domain and range for each parameter combination.
 \item
@@ -643,7 +645,7 @@ The binary response was analyzed using generalized linear mixed model following 
 \begin{equation}
 \text{logit }P(Y_{ijk}) = \eta + \delta_i + \gamma_j + \delta \gamma_{ij} + s_l + d_k
 \end{equation}
-where
+\noindent where
 
 \begin{itemize}
 \item $\eta$ is the baseline average probability of selecting the target plot
@@ -717,23 +719,54 @@ In order to determine whether there are cognitive disadvantages to log scales, w
 
 Initial studies in the 20th century explored the use of fitting lines by eye through a set of points (Finney, 1951; Mosteller, Siegel, Trapido, \& Youtz, 1981).
 Common methods of fitting trends by eye involve maneuvering a string, black thread, or ruler until the fit is suitable, then drawing the line.
-In Finney (1951), it was of interest to determine the effect of stopping iterative maximum likelihood calculations after one iteration. Twenty-one scientists were recruited via postal mail and asked to ``rule two lines'' in order to judge by eye the positions for a pair of parallel probit regression lines in a biological assay.
+In Finney (1951), it was of interest to determine the effect of stopping iterative maximum likelihood calculations after one iteration. Twenty-one scientists were recruited via postal mail and asked to ``rule two lines'' in order to judge by eye the positions for a pair of parallel probit regression lines in a biological assay \cref{fig:subjective-judgement}.
 Results indicated that one cycle of iterations was sufficient based on the starting values provided by eye from the participants.
+
+\begin{figure}[tbp]
+
+{\centering \includegraphics[width=0.5\linewidth,]{images/subjective-judgement-plot} 
+
+}
+
+\caption{Subjective Judgement in Statistical Analysis (1951) Parallel Probits}\label{fig:subjective-judgement}
+\end{figure}
 
 Thirty years later, Mosteller, Siegel, Trapido, \& Youtz (1981), sought to understand the properties of least squares and other computed lines by establishing one systematic method of fitting lines by eye.
 The authors recruited 153 graduate students and post doctoral researchers in Introductory Biostatistics.
-Participants were asked to fit lines by eye to four sets of points using an 8.5 x 11 inch transparency with a straight line etched completely across the middle.
+Participants were asked to fit lines by eye to four sets of points \cref{fig:mosteller-eyefitting-plot} using an 8.5 x 11 inch transparency with a straight line etched completely across the middle.
 A latin square design with packets of the set of points stapled together in four different orders was used in order to determine if there is an effect of order of presentation.
 It was found that order of presentation had no effect and that participants tended to fit the slope of the first principal component over the slope of the least squares regression line.
 
-In 2015, the New York Times introduced an interactive feature, called You Draw It (Aisch, Cox, \& Quealy, 2015; Buchanan, Park, \& Pearce, 2017; Katz, 2017).
-Readers are asked to input their own assumptions about various metrics and learning how these asumptions relate to reality.
+\begin{figure}[tbp]
+
+{\centering \includegraphics[width=0.75\linewidth,]{images/eyefitting-straight-lines-plots} 
+
+}
+
+\caption{Eye Fitting Straight Lines (1981) Data Sets}\label{fig:mosteller-eyefitting-plot}
+\end{figure}
+
+In 2015, the New York Times introduced an interactive feature, called You Draw It (Aisch, Cox, \& Quealy, 2015; Buchanan, Park, \& Pearce, 2017; Katz, 2017)
+Readers are asked to input their own assumptions about various metrics and learning how these assumptions relate to reality.
 The NY Times team utilizes Data Driven Documents (D3) that allows readers to predict these metrics through the use of drawing a line on their computer screen with their computer mouse.
+\cref{fig:nyt-caraccidents} is one such example in which readers are asked to draw the line for the missing years providing what they estimate to be the number of Americans who have died every year from car accidents, since 1990.
+After the reader has completed drawing the line, the actual observed values are revealed and the reader may check their estimated knowledge against the actual reported data (Katz, 2017).
+
+\begin{figure}[tbp]
+
+{\centering \includegraphics[width=0.75\linewidth,]{images/nyt-caraccidents-frame1} 
+
+}
+
+\caption{New York Times You Draw It Feature}\label{fig:nyt-caraccidents}
+\end{figure}
 
 \hypertarget{data-driven-documents}{%
 \subsection{Data Driven Documents}\label{data-driven-documents}}
 
 Major news and research organizations such as the NY Times, FiveThirtyEight, Washing Post, and the Pew Research Center create and customize graphics with Data Driven Documents.
+In June 2020, the NY Times released an front page displaying figures that represent each of the 100,000 lives lost from the coronavirus pandemic at this point in time (Barry et al., 2020).
+During 2021 March Maddness, FiveThirtyEight created a roster-shuffling machine which allowed readers to build their own NBA contender through interactivity (Ryanabest, 2021).
 Data Driven Documents (D3) is an open-source JavaScript based graphing framework created by Mike Bostock during his time working on graphics at the NY Times.
 For readers familiar with R, it is notable to consider D3 in JavaScript equivalent to the ggplot2 package in R.
 Similar to geometric objects and style choices in ggplot2, the grammar of D3 also includes elements such as circles, paths, and rectangles with choices of attributes and styles such as color and size.
@@ -762,16 +795,29 @@ The creator of the graphic applies D3.js code to visualize data which has previo
 
 The example R code illustrates the structure of the r2d3 function in R which includes specification of a data frame in R (converted to a JSON file), the D3.js source code file, and the D3 version that accompanies the source code.
 A default SVG container for layering elements is then generated by the r2d3 function which renders the plot using the source code.
-\protect\hyperlink{youdrawit-with-shiny}{Appendix A} outlines the development of the you draw it study interactive plots through the use of r2d3 with R shiny applications.
+\protect\hyperlink{youdrawit-with-shiny}{Appendix A} outlines the development of the you draw it study interactive plots through the use of r2d3 and R shiny applications.
+\cref{fig:youdrawit-example} provides an example of a you draw it interactive plot.
+The first frame shows what the participant sees along with the following prompt: \textit{Use your mouse to fill in the trend in the yellow box region}.
+Next, the yellow box region moves along as the participant draws their trend-line until the yellow region disappears indicating the participant has filled in the entire domain.
+
+\begin{figure}[tbp]
+
+{\centering \includegraphics[width=1.1\linewidth,]{images/ydiExample-0.10-10-linear} 
+
+}
+
+\caption{You Draw It Example}\label{fig:youdrawit-example}
+\end{figure}
 
 \hypertarget{study-design-1}{%
 \section{Study Design}\label{study-design-1}}
 
-This chapter first aims to establish the you draw it method as a tool for measuring predictions of trends; then this method will be used to test an individual's ability to make predictions for exponentially increasing data on both the log and linear scales, referred to as Prediction of Exponential Trends.
-Mosteller, Siegel, Trapido, \& Youtz (1981) was replicated as part of the study data collection in order to validate the you draw it method, this will be referred to as Eye Fitting Straight Lines in the Modern Era.
-Data for both the Eye Fitting Straight Lines in the Modern Era and Prediction of Exponential Trends studies were collected in conjunction with one another over the same study participant sample.
+This chapter contains two sub studies which aim to establish you draw it as a tool for measuring predictions of trends and then apply this as a method of testing graphics.
+Mosteller, Siegel, Trapido, \& Youtz (1981) was replicated as part of the study data collection in order to validate you draw it as a method for testing graphics, referred to as Eye Fitting Straight Lines in the Modern Era.
+This method is then used to test an individual's ability to make predictions for exponentially increasing data on both the log and linear scales, referred to as Prediction of Exponential Trends.
+Data for both sub-studies were collected in conjunction with one another over the same study participant sample.
 
-For each individual, a total of 6 data sets - 4 Eye Fitting Straight Lines in the Modern Era and 2 Prediction of Exponential Trends - are generated for each individual the start of the experiment.
+A total of 6 data sets - 4 Eye Fitting Straight Lines in the Modern Era and 2 Prediction of Exponential Trends - are generated for each individual the start of the experiment.
 The 2 data sets corresponding to to the data used in the Prediction of Exponential Trends are then plotted a total of 4 times each by truncating the points at both 50\% and 75\% of the domain as well as on both the log and linear scales for a total of 8 task plots.
 Participants in the study are first shown 2 you draw it plot practice plots followed by 12 you draw it task plots.
 The order of all 12 task plots were randomly assigned for each individual in a completely randomized design where users saw the 4 task plots from the Eye Fitting Straight Lines in the Modern Era simulated data interspersed with the 8 task plots from the Prediction of Exponential Trends simulated data.
@@ -779,168 +825,71 @@ The order of all 12 task plots were randomly assigned for each individual in a c
 \hypertarget{eye-fitting-straight-lines-in-the-modern-era}{%
 \section{Eye Fitting Straight Lines in the Modern Era}\label{eye-fitting-straight-lines-in-the-modern-era}}
 
+Finney (1951) and Mosteller, Siegel, Trapido, \& Youtz (1981) use methods such as using a ruler, string, or transparency sheet to fit straight lines through a set of points.
+This section replicates the study found in Mosteller, Siegel, Trapido, \& Youtz (1981) in order to establish you draw it as a tool and method for testing graphics.
+
 \hypertarget{data-simulation}{%
 \subsection{Data Simulation}\label{data-simulation}}
 
 All data processing was conducted in R before being passed to the D3.js code.
-Both studies, Eye Fitting Straight Lines in the Modern Era and Prediction of Exponential Trends, generate 30 points for \(x\in [0, 20]\) based on a specific model (linear regression and exponential regression respectively) and selected coefficient and variance parameters.
-The corresponding model is then fit to the simulated points the obtain the best fit line and estimated values every 0.25 increments across the domain.
-Each function then outputs a list of point data and line data both indicating the parameter identification, x value, and y value.
+A total of \(N = 30\) points \((x_i, y_i), i = 1,...N\) were generated for \(x\in [x_{min}, x_{max}]\) where \(x\) and \(y\) have a linear relationship.
+Data was simulated based on linear model with additive errors:
+\begin{align}
+y_i & = \beta_0 + \beta_1 \cdot x_i + e_i \\
+\text{with } e_i & \sim N(0, \sigma^2). \nonumber
+\end{align}
+The parameters \(\beta_0\) and \(\beta_1\) are selected to replicate (Mosteller, Siegel, Trapido, \& Youtz, 1981) with \(e_i\) generated by rejection sampling in order to guarantee the points shown align with that of the fitted line.
+An ordinary least squares regression is then fit to the simulated points in order to obtain the best fit line and fitted values in 0.25 increments across the domain, \((x_k, \hat y_{k,OLS}), k = 1, ..., 4\cdot x_{max} +1\).
+The function then outputs a list of point data and line data both indicating the parameter identification, x value, and corresponding simulated or fitted y value.
+The data simulation procedure is described below:
 
-\begin{itemize}
-\tightlist
-\item
-  Aspect ratio = 1; yrange = range(all eye fitting data) range(1.1, 1.1)
-\end{itemize}
+\noindent \textit{Algorithm: Eye Fitting Straight Lines in the Modern Era Data Generation}
 
-\noindent *Algorithm: Eye Fitting Straight Lines in the Modern Era Data Generation*
+\noindent \textbf{In parameters:} \(y_{\bar{x}}\) for calculating the y-intercept, \(\beta_0\); slope \(\beta_1\); standard deviation from line \(\sigma\); sample size \(N = 30\); domain \(x_{min}\) and \(x_{max}\); fitted value increment \(x_{by} = 0.25\).
 
-\textbf{In parameters:} \texttt{y\_xbar,\ slope,\ sigma,\ N\ =\ 30,\ xmin,\ xmax,\ xby\ =\ 0.25}
-
-\textbf{Out:} data list of point data and line data
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  Randomly select and jitter N = 30 x-values along the domain.
-\item
-  Determine y-intercept at x = 0 from the provided slope and y-intercept at the mean of x (y\_xbar) using point-slope form: \texttt{y\ -\ y\_xbar\ =\ m(x-xbar)}
-\item
-  Generate ``good'' errors based on N(0,sigma). Set constraint of the mean of the first N/3 = 10 errors less than \textbar2*sigma\textbar{}
-\item
-  Simulate point data based on \(y = yintercept + slope*x + error\)
-\item
-  Obtain ordinary least squares regression coefficients: \texttt{lm(y\ \textasciitilde{}\ x,\ data\ =\ point\_data)}
-\item
-  Simulate least squares regression line data: \texttt{y\ =\ yintercepthat\ +\ slopehat*x}
-\item
-  Output data list of point data and line data
-\end{enumerate}
-
-\hypertarget{parameter-selection-1}{%
-\subsection{Parameter Selection}\label{parameter-selection-1}}
-
-\begin{itemize}
-\tightlist
-\item
-  Parameter combinations were selected to simulate data that replicates the data sets (S, F, V, N) in (Mosteller, Siegel, Trapido, \& Youtz, 1981). One-way ANOVA with 4 treatments
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \textbf{S}: positive slope, low variance (y\_xbar = 3.88, slope = 0.66, sigma = 1.3, xrange = (0,20))
-  \item
-    \textbf{F}: positive slope, high variance (y\_xbar = 3.9, slope = 0.66, sigma = 1.98, xrange = (0,20))
-  \item
-    \textbf{V}: steep positive slope (y\_xbar = 3.89, slope = 1.98, sigma = 1.5, xrange = (4,18))
-  \item
-    \textbf{N}: negative slope, high variance (y\_xbar = 4.11, slope = -0.70, sigma = 2.5, xrange = (0,20))
-  \end{itemize}
-\end{itemize}
-
-\hypertarget{results-1}{%
-\subsection{Results}\label{results-1}}
-
-To calculate the first principal component fit: \url{https://benediktehinger.de/blog/science/scatterplots-regression-lines-and-the-first-principal-component/}
+\noindent \textbf{Out:} List of point data and line data each indicating the parameter identification, x value, and corresponding simulated or fitted y value.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Subset the simulated point data for a particular participant and parameter (S, F, V, N).
+  Randomly select and jitter N = 30 x-values along the domain, \(x_{i=1:N}\in [x_{min}, x_{max}]\).
 \item
-  Fit a principal component over the x and y vectors from the point data (note these are the points show in the plot below). Use prcomp. Call this \texttt{pca.mod}
+  Determine the y-intercept, \(\beta_0\), at x = 0 from the provided slope (\(\beta_1\)) and y-value at the mean of x (\(y_{\bar{x}}\)) using point-slope equation of a line.
 \item
-  Obtain the slope and intercept:
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Using the pca.mod rotations we obatin the slope as: \(\text{pca.slope} = \frac{\text{pca.mod rotation}[y,PC1]}{\text{pca.mod rotation}[x,PC1]}\)
-  \item
-    Using point-slope form we obtain the intercept as:
-  \end{itemize}
+  Generate ``good'' errors, \(e_{i = 1:n}\) based on \(N(0,\sigma)\) by setting a constraint requiring the mean of the first N/3 errors \(< |2\sigma|.\)
 \item
-  Obtain ypca values by: \(y_{pca} = \text{pca.slope} \cdot x_{\text{feedback data}} + \text{pca.intercept}\)
+  Simulate point data based on \(y_i = \beta_0 + \beta_1 x_i + e_i\)
+\item
+  Obtain ordinary least squares regression coefficients, \(\hat\beta_0\) and \(\hat\beta_1\), for the simulated point data using the \texttt{lm} function in the base stats R package.
+\item
+  Obtain fitted values every 0.25 increment across the domain from the ordinary least squares regression \(\hat y_{k,OLS} = \hat\beta_{0,OLS} + \hat\beta_{1,OLS} x_k\).
+\item
+  Output data list of point data and line data each indicating the parameter identification, x value, and corresponding simulated or fitted y value.
 \end{enumerate}
 
-\begin{figure}[tbp]
+\begin{table}
 
-{\centering \includegraphics[width=1\linewidth,]{thesis_files/figure-latex/eyefitting-example-plot-1} 
+\caption{\label{tab:eyefiting-parameters}Eye Fitting Straight Lines in the Modern Era simulation model parameters}
+\centering
+\begin{tabular}[t]{cccc}
+\toprule
+Parameter Choice & $y_{\bar{x}}$ & $\beta_1$ & $\sigma$\\
+\midrule
+F & 3.90 & 0.66 & 1.98\\
+N & 4.11 & -0.70 & 2.50\\
+S & 3.88 & 0.66 & 1.30\\
+V & 3.89 & 1.98 & 1.50\\
+\bottomrule
+\end{tabular}
+\end{table}
 
-}
-
-\caption{Eye Fitting Straight Lines in the Modern Era Example}\label{fig:eyefitting-example-plot}
-\end{figure}
-
-\textbf{Treatments:}
-
-\begin{itemize}
-\tightlist
-\item
-  parm\_ID (S, F, V, N)
-\item
-  x (0, 20)
-\end{itemize}
-
-\textbf{Response:} raw residuals
-
-\begin{itemize}
-\tightlist
-\item
-  residualols = ydrawn - yols, denoted \(e_{ols}\)
-\item
-  residualpca = ydrawn - ypca, denoted \(e_{pca}\)
-\end{itemize}
-
-\textbf{Experimental Design:}
-
-\begin{itemize}
-\tightlist
-\item
-  Each participant saw each of the 4 plots (new simulated data for each)
-\end{itemize}
-
-\textbf{OLS GAMM Model:}
-
-\[y_{drawn} - y_{ols} = e_{ij,ols} = \left[\gamma_0 + \alpha_i\right] + \left[s_1(x_{ij}) + s_{2i}(x_{ij}) \right] + p_{j} + \epsilon_{ij}\]
-
-\begin{itemize}
-\tightlist
-\item
-  \(\gamma_0\) is the overall intercept
-\item
-  \(\alpha_i\) is the effect of the parameter combination on the intercept (i.e.~how much the intercept adjusts for each parameter combo)
-\item
-  \(s_1\) is the overall spline equation for x
-\item
-  \(s_{2i}\) is the adjustment to the spline equation for each parameter combination (think unequal slopes)
-\item
-  \(p_{j} \sim N(0, \sigma^2_{participant})\) is the participant error due to participant variation
-\item
-  \(\epsilon_{ij} \sim N(0, \sigma^2)\) is the residual error.
-\end{itemize}
-
-\textbf{PCA GAMM Model:}
-
-\[y_{drawn} - y_{pca} = e_{ij,pca} = \left[\gamma_0 + \alpha_i\right] + \left[s_1(x_{ij}) + s_{2i}(x_{ij}) \right] + p_{j} + \epsilon_{ij}\]
-
-\begin{itemize}
-\tightlist
-\item
-  \(\gamma_0\) is the overall intercept
-\item
-  \(\alpha_i\) is the effect of the parameter combination on the intercept (i.e.~how much the intercept adjusts for each parameter combo)
-\item
-  \(s_1\) is the overall spline equation for x
-\item
-  \(s_{2i}\) is the adjustment to the spline equation for each parameter combination (think unequal slopes)
-\item
-  \(p_{j} \sim N(0, \sigma^2_{participant})\) is the participant error due to participant variation
-\item
-  \(\epsilon_{ij} \sim N(0, \sigma^2)\) is the residual error.
-\end{itemize}
+Simulated model equation parameters were selected to reflect the four data sets (F, N, S, and V) used in Mosteller, Siegel, Trapido, \& Youtz (1981) \cref{tab:eyefitting-parameters}.
+Parameter choices F, N, and S simulated data across a domain of 0 to 20.
+Parameter choice F produces a trend with a positive slope and a large variance while N has a negative slope and a large variance.
+In comparison, S shows trend with a postie slope but a small variance and V yields a steep positive slope over the domain of 4 to 16.
+\cref{fig:eyefitting-simplot} illustrates an example of simulated data for all four parameter choices.
+Within the interactive plot code, the aspect ratio defining the x to y axis ratio was set to 1 with a consistent y range buffer of 10\% to allow for users to draw outside of the provided range.
 
 \begin{figure}[tbp]
 
@@ -951,18 +900,135 @@ To calculate the first principal component fit: \url{https://benediktehinger.de/
 \caption{Eye Fitting Straight Lines in the Modern Era Simulated Data Example}\label{fig:eyefitting-simplot}
 \end{figure}
 
+\hypertarget{results-1}{%
+\subsection{Results}\label{results-1}}
+
+Participants were recruited through Twitter, Reddit, and direct email during May 2021.
+A total of \ear{X} individuals completed \ear{Y} unique you draw it task plots.
+All completed you draw it task plots were included in the analysis.
+
+In addition to the participant drawn points, \((x_k, y_{drawn})\), and the ordinary least squares (OLS) regression fitted values, \((x_k, y_{k,OLS})\), a regression equation based on the first principal component (PCA) was used to calculate fitted values, \(x_k, y_{k,PCA}\).
+For each set of simulated data and parameter combination, the PCA regression equation was determined by using the princomp function in the base R stats package to obtain the rotations of the first principal component for x and y.
+The estimated slope, \(\hat\beta_{1,PCA}\), is determined by the ratio of the y rotation and x rotation of the first principal component with the y-intercept, \(\hat\beta_{0,PCA}\) calculated by the point-slope equation of the line using the mean of of the simulated points, \((\bar x_i, \bar y_i)\).
+Fitted values, \(y_{k,PCA}\) are then obtained every 0.25 increment across the domain from the PCA regression equation, \(\hat y_{k,PCA} = \hat\beta_{0,PCA} + \hat\beta_{1,PCA} x_k\).
+\cref{fig:ols-vs-pca-example} illustrates the difference between an OLS regression equation which minimizes the vertical distance and a regression equation with a slope calculated by the first principal component which minimizes the smallest distance (both horizontal and vertical direction).
+
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=1\linewidth,]{thesis_files/figure-latex/eyefitting-residualplots-1} 
+{\centering \includegraphics[width=1\linewidth,]{thesis_files/figure-latex/ols-vs-pca-example-1} 
 
 }
 
-\caption{Eye Fitting Straight Lines in the Modern Era Residual Models}\label{fig:eyefitting-residualplots}
+\caption{OLS vs PCA Regression Lines}\label{fig:ols-vs-pca-example}
+\end{figure}
+
+For each participant, the final data set used for analysis contains \(x_{ijk}, y_{ijk,drawn}, \hat y_{ijk,OLS}\), and \(\hat y_{ijk,PCA}\) for parameter combination \(i = S, V, F, N\), j = \(1,...N_{participant}\), and \(x_{k}\) value \(k = 1, ...,4\cdot x_{max} +1\).
+Using both a linear mixed model and a generalized additive mixed model, comparisons of vertical residuals in relation to the OLS fitted values (\(e_{k,ols} = y_{k,drawn} - \hat y_{k,ols}\)) and PCA fitted values (\(e_{k,pca} = y_{k,drawn} - \hat y_{k,pca}\)) were made across the domain of x.
+\cref{fig: eyefitting-example-plot} displays an example of all three fitted trend lines for parameter choice F.
+
+\begin{figure}[tbp]
+
+{\centering \includegraphics[width=0.75\linewidth,]{thesis_files/figure-latex/eyefitting-example-plot-1} 
+
+}
+
+\caption{Eye Fitting Straight Lines in the Modern Era Example}\label{fig:eyefitting-example-plot}
+\end{figure}
+
+Using the lmer function in the lme5 package (Bates, Mächler, Bolker, \& Walker, 2015), a linear mixed model (LMM) is fit separately to the OLS and PCA residuals, constraining the fit to a linear trend.
+Parameter choice, \(x\), and the interaction between \(x\) and parameter choice were treated as fixed effects with a random participant effect accounting for variation due to participant.
+The LMM equation for each fit (OLS and PCA) residuals is given by:
+\begin{equation}
+y_{ijk,drawn} - y_{ijk,fit} = e_{ijk,fit} = \left[\gamma_0 + \alpha_i\right] + \left[\gamma_{1} x_{ijk} + \gamma_{2i} x_{ijk}\right] + p_{j} + \epsilon_{ijk}
+\end{equation}
+\noindent where
+
+\begin{itemize}
+\tightlist
+\item
+  \(\gamma_0\) is the overall intercept
+\item
+  \(\alpha_i\) is the effect of the parameter combination on the intercept
+\item
+  \(\gamma_1\) is the overall slope for x
+\item
+  \(\gamma_{2i}\) is the effect of the parameter combination on the slope
+\item
+  \(p_{j} \sim N(0, \sigma^2_{participant})\) is the participant error due to participant variation
+\item
+  \(\epsilon_{ij} \sim N(0, \sigma^2)\) is the residual error.
+\end{itemize}
+
+Eliminating the linear trend constraint, the bam function in the mgcv package (S. N. Wood, 2003, 2004, 2011; S. N. Wood, 2017; S. N. Wood, N., Pya, \& S"afken, 2016), a generalized additive mixed model (GAMM) is fit separately to the OLS and PCA residuals to allow for estimation of smoothing splines.
+Parameter choice was treated as a fixed effect with no extimated intercept and a separate smoothing spline for \(x\) was estimated for each parameter choice. A random participant effect accounting for variation due to participant and a random spline for each participant accounted for variation in spline for each participant.
+The GAMM equation for the each fit (OLS and PCA) residuals is given by:
+\begin{equation}
+y_{ijk, drawn} - y_{ijk, fit} = e_{ijk,fit} = \alpha_i + s_{i}(x_{ijk}) + p_{j} + s_{j}(x_{ijk})
+\end{equation}
+\noindent where
+
+\begin{itemize}
+\tightlist
+\item
+  \(\alpha_i\) is the intercept for the parameter choice \(i\)
+\item
+  \(s_{i}\) is the smoothing spline for the \(i^{th}\) parameter combination
+\item
+  \(p_{j} \sim N(0, \sigma^2_{participant})\) is the error due to participant variation
+\item
+  \(s_{j}\) is the random smoothing spline for each participant.
+\end{itemize}
+
+\cref{fig:eyefitting-lmer-residualplots} and \cref{fig:eyefitting-gamm-residualplots} show the estimated trend from both the LMM and GAMM.
+These results indicate participants provided a trend line closer in relation to the estimated PCA regression line than the estimated OLS regression line. These results are consistent to those found in (Mosteller, Siegel, Trapido, \& Youtz, 1981).
+
+\begin{figure}[tbp]
+
+{\centering \includegraphics[width=1\linewidth,]{thesis_files/figure-latex/eyefitting-lmer-residualplots-1} 
+
+}
+
+\caption{Eye Fitting Straight Lines in the Modern Era LMM results}\label{fig:eyefitting-lmer-residualplots}
 \end{figure}
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.6\linewidth,]{thesis_files/figure-latex/eyefitting-ss-oddsratio-1} 
+{\centering \includegraphics[width=1\linewidth,]{thesis_files/figure-latex/eyefitting-gamm-residualplots-1} 
+
+}
+
+\caption{Eye Fitting Straight Lines in the Modern Era GAMM results}\label{fig:eyefitting-gamm-residualplots}
+\end{figure}
+
+In addition to fitting trend lines over the residuals between the drawn values and fitted values, a OLS sum of squares and PCA sums of squares measure was calculated for each you draw it plot.
+Sums of squares between fits were compared using lmer (Bates, Mächler, Bolker, \& Walker, 2015) to run a linear mixed model (LMM) with a log transformation.
+Parameter combination, fit, and the interaction between parameter combination and fit were treated as fixed effects with a random participant effect.
+Define \(SS_{ijk}\) as the sums of squares for parameter choice \(i = 1,2,3,4\), fit \(j=1,2\), and participant \(k = 1,...,N_{participant}\).
+The LMM equation is given by:
+\begin{equation}
+\log\left(SS_{ijk}\right) = \alpha_i + \beta_j + \alpha\beta_{ij} + p_{j} + \epsilon_{ij}
+\end{equation}
+
+\begin{itemize}
+\tightlist
+\item
+  \(\alpha_i\) denotes the effect of the \(i^{th}\) parameter (S, F, V, N)
+\item
+  \(\beta_j\) denotes the effect of the \(j^{th}\) fit (OLS, PCA)
+\item
+  \(\alpha\beta_{ij}\) denotes the interaction between the parameter combination and fit
+\item
+  \(p_{j} \sim N(0, \sigma^2_{participant})\) is the error due to participant variation
+\item
+  \(\epsilon_{ij} \sim N(0, \sigma^2)\) is the residual error.
+\end{itemize}
+
+\cref{fig:eyefitting-ss-oddsratio} displays estimated odds ratios between the OLS fit and PCA fit for each parameter choice.
+While there is no significant effect of fit for any parameter choices, there is indication of the trend found above.
+
+\begin{figure}[tbp]
+
+{\centering \includegraphics[width=0.75\linewidth,]{thesis_files/figure-latex/eyefitting-ss-oddsratio-1} 
 
 }
 
@@ -1006,8 +1072,8 @@ To calculate the first principal component fit: \url{https://benediktehinger.de/
   Output data list of point data and line data
 \end{enumerate}
 
-\hypertarget{parameter-selection-2}{%
-\subsection{Parameter Selection}\label{parameter-selection-2}}
+\hypertarget{parameter-selection-1}{%
+\subsection{Parameter Selection}\label{parameter-selection-1}}
 
 \begin{itemize}
 \item
@@ -1494,6 +1560,9 @@ Aisch, G., Cox, A., \& Quealy, K. (2015, May). You draw it: How family income pr
 \leavevmode\hypertarget{ref-amer2005bias}{}%
 Amer, T. (2005). Bias due to visual illusion in the graphical presentation of accounting information. \emph{Journal of Information Systems}, \emph{19}(1), 1--18.
 
+\leavevmode\hypertarget{ref-NYTrememberinglives}{}%
+Barry, D., Buchanan, L., Cargill, C., Daniel, A., Delaquérière, A., Gamio, L., \ldots{} al., et. (2020, May). Remembering the 100,000 lives lost to coronavirus in america. \emph{The New York Times}. The New York Times. Retrieved from \url{https://www.nytimes.com/interactive/2020/05/24/us/us-coronavirus-deaths-100000.html}
+
 \leavevmode\hypertarget{ref-lme4}{}%
 Bates, D., Mächler, M., Bolker, B., \& Walker, S. (2015). Fitting linear mixed-effects models using {lme4}. \emph{Journal of Statistical Software}, \emph{67}(1), 1--48. http://doi.org/\href{https://doi.org/10.18637/jss.v067.i01}{10.18637/jss.v067.i01}
 
@@ -1608,6 +1677,9 @@ Peterson, L. V., \& Schramm, W. (1954). How accurately are different kinds of gr
 \leavevmode\hypertarget{ref-romano_scale_2020}{}%
 Romano, A., Sotis, C., Dominioni, G., \& Guidi, S. (2020). \emph{The {Scale} of {COVID}-19 {Graphs} {Affects} {Understanding}, {Attitudes}, and {Policy} {Preferences}} (\{SSRN\} \{Scholarly\} \{Paper\} No. ID 3588511). Rochester, NY: Social Science Research Network. Retrieved from \url{https://papers.ssrn.com/abstract=3588511}
 
+\leavevmode\hypertarget{ref-ryanabest_2021}{}%
+Ryanabest. (2021, June). Build an NBA contender with our roster-shuffling machine. \emph{FiveThirtyEight}. Retrieved from \url{https://projects.fivethirtyeight.com/nba-trades-2021/}
+
 \leavevmode\hypertarget{ref-shah1995conceptual}{}%
 Shah, P., \& Carpenter, P. A. (1995). Conceptual limitations in comprehending line graphs. \emph{Journal of Experimental Psychology: General}, \emph{124}(1), 43.
 
@@ -1664,6 +1736,21 @@ Wickham, Hadley, \& Grolemund, G. (2016). \emph{R for data science: Import, tidy
 
 \leavevmode\hypertarget{ref-wilkinson2012grammar}{}%
 Wilkinson, L. (2012). The grammar of graphics. In \emph{Handbook of computational statistics} (pp. 375--414). Springer.
+
+\leavevmode\hypertarget{ref-mgcv5}{}%
+Wood, S. N. (2003). Thin-plate regression splines. \emph{Journal of the Royal Statistical Society (B)}, \emph{65}(1), 95--114.
+
+\leavevmode\hypertarget{ref-mgcv3}{}%
+Wood, S. N. (2004). Stable and efficient multiple smoothing parameter estimation for generalized additive models. \emph{Journal of the American Statistical Association}, \emph{99}(467), 673--686.
+
+\leavevmode\hypertarget{ref-mgcv1}{}%
+Wood, S. N. (2011). Fast stable restricted maximum likelihood and marginal likelihood estimation of semiparametric generalized linear models. \emph{Journal of the Royal Statistical Society (B)}, \emph{73}(1), 3--36.
+
+\leavevmode\hypertarget{ref-mgcv4}{}%
+Wood, S. N. (2017). \emph{Generalized additive models: An introduction with r} (2nd ed.). Chapman; Hall/CRC.
+
+\leavevmode\hypertarget{ref-mgcv2}{}%
+Wood, S. N., N., Pya, \& S"afken, B. (2016). Smoothing parameter and model selection for general smooth models (with discussion). \emph{Journal of the American Statistical Association}, \emph{111}, 1548--1575.
 
 \end{CSLReferences}
 

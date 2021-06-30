@@ -196,13 +196,12 @@ div.csl-indent {
 <li class="chapter" data-level="3.3" data-path="3-youdrawit.html"><a href="3-youdrawit.html#eye-fitting-straight-lines-in-the-modern-era"><i class="fa fa-check"></i><b>3.3</b> Eye Fitting Straight Lines in the Modern Era</a>
 <ul>
 <li class="chapter" data-level="3.3.1" data-path="3-youdrawit.html"><a href="3-youdrawit.html#data-simulation"><i class="fa fa-check"></i><b>3.3.1</b> Data Simulation</a></li>
-<li class="chapter" data-level="3.3.2" data-path="3-youdrawit.html"><a href="3-youdrawit.html#parameter-selection-1"><i class="fa fa-check"></i><b>3.3.2</b> Parameter Selection</a></li>
-<li class="chapter" data-level="3.3.3" data-path="3-youdrawit.html"><a href="3-youdrawit.html#results-1"><i class="fa fa-check"></i><b>3.3.3</b> Results</a></li>
+<li class="chapter" data-level="3.3.2" data-path="3-youdrawit.html"><a href="3-youdrawit.html#results-1"><i class="fa fa-check"></i><b>3.3.2</b> Results</a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="3-youdrawit.html"><a href="3-youdrawit.html#prediction-of-exponential-trends"><i class="fa fa-check"></i><b>3.4</b> Prediction of Exponential Trends</a>
 <ul>
 <li class="chapter" data-level="3.4.1" data-path="3-youdrawit.html"><a href="3-youdrawit.html#data-simulation-1"><i class="fa fa-check"></i><b>3.4.1</b> Data Simulation</a></li>
-<li class="chapter" data-level="3.4.2" data-path="3-youdrawit.html"><a href="3-youdrawit.html#parameter-selection-2"><i class="fa fa-check"></i><b>3.4.2</b> Parameter Selection</a></li>
+<li class="chapter" data-level="3.4.2" data-path="3-youdrawit.html"><a href="3-youdrawit.html#parameter-selection-1"><i class="fa fa-check"></i><b>3.4.2</b> Parameter Selection</a></li>
 <li class="chapter" data-level="3.4.3" data-path="3-youdrawit.html"><a href="3-youdrawit.html#results-2"><i class="fa fa-check"></i><b>3.4.3</b> Results</a></li>
 </ul></li>
 <li class="chapter" data-level="3.5" data-path="3-youdrawit.html"><a href="3-youdrawit.html#discussion-and-conclusion-1"><i class="fa fa-check"></i><b>3.5</b> Discussion and Conclusion</a></li>
@@ -284,20 +283,20 @@ The heuristic data generation procedure is described below:</p>
 <p> domain <span class="math inline">\(x\in[0,20]\)</span>, range <span class="math inline">\(y\in[10,100]\)</span>, midpoint <span class="math inline">\(x_{mid}\)</span>.</p>
 <p> estimated model parameters <span class="math inline">\(\hat\alpha, \hat\beta, \hat\theta\)</span></p>
 <ol style="list-style-type: decimal">
-<li><p>Determine the <span class="math inline">\(y=-x\)</span> line scaled to fit the assigned domain and range.</p></li>
-<li><p>Map the values <span class="math inline">\(x_{mid} - 0.1\)</span> and <span class="math inline">\(x_{mid} + 0.1\)</span> to the <span class="math inline">\(y=-x\)</span> line for two additional points.</p></li>
-<li><p>From the set points <span class="math inline">\((x_k, y_k)\)</span> for <span class="math inline">\(k = 1,2,3,4\)</span>, obtain the coefficients from the linear model <span class="math inline">\(\ln(y_k) = b_0 +b_1x_k\)</span> to obtain starting values - <span class="math inline">\(\alpha_0 = e^{b_0}, \beta_0 = b_1, \theta_0 = 0.5\cdot \min(y)\)</span></p></li>
-<li><p>Using the <code>nls()</code> function from the <code>stats</code> package in Rstudio and the starting parameter values - <span class="math inline">\(\alpha_0, \beta_0, \theta_0\)</span> - fit the nonlinear model, <span class="math inline">\(y_k = \alpha\cdot e^{\beta\cdot x_k}+\theta\)</span> to obtain estimated parameter values - <span class="math inline">\(\hat\alpha, \hat\beta, \hat\theta.\)</span></p></li>
+<li>Determine the <span class="math inline">\(y=-x\)</span> line scaled to fit the assigned domain and range.</li>
+<li>Map the values <span class="math inline">\(x_{mid} - 0.1\)</span> and <span class="math inline">\(x_{mid} + 0.1\)</span> to the <span class="math inline">\(y=-x\)</span> line for two additional points.</li>
+<li>From the set points <span class="math inline">\((x_k, y_k)\)</span> for <span class="math inline">\(k = 1,2,3,4\)</span>, obtain the coefficients from the linear model <span class="math inline">\(\ln(y_k) = b_0 +b_1x_k\)</span> to obtain starting values - <span class="math inline">\(\alpha_0 = e^{b_0}, \beta_0 = b_1, \theta_0 = 0.5\cdot \min(y)\)</span></li>
+<li>Using the <code>nls()</code> function from the <code>stats</code> package in Rstudio and the starting parameter values - <span class="math inline">\(\alpha_0, \beta_0, \theta_0\)</span> - fit the nonlinear model, <span class="math inline">\(y_k = \alpha\cdot e^{\beta\cdot x_k}+\theta\)</span> to obtain estimated parameter values - <span class="math inline">\(\hat\alpha, \hat\beta, \hat\theta.\)</span></li>
 </ol>
 <p></p>
 <p> sample size <span class="math inline">\(N = 50\)</span>, estimated parameters <span class="math inline">\(\hat\alpha\)</span>, <span class="math inline">\(\hat\beta\)</span>, and <span class="math inline">\(\hat\theta\)</span>, <span class="math inline">\(\sigma\)</span> standard deviation from the exponential curve.</p>
 <p> <span class="math inline">\(N\)</span> points, in the form of vectors <span class="math inline">\(\mathbf{x}\)</span> and <span class="math inline">\(\mathbf{y}\)</span>.</p>
 <ol style="list-style-type: decimal">
-<li><p>Generate <span class="math inline">\(\tilde x_j, j = 1,..., N\cdot \frac{3}{4}\)</span> as a sequence of evenly spaced points in <span class="math inline">\([0,20]\)</span>. This ensures the full domain of <span class="math inline">\(x\)</span> is used, fulfilling the constraints of spanning the same domain and range for each parameter combination.</p></li>
-<li><p>Obtain <span class="math inline">\(\tilde x_i, i = 1,...N\)</span> by sampling <span class="math inline">\(N = 50\)</span> values from the set of <span class="math inline">\(\tilde x_j\)</span> values. This gaurantees some variability and potential clustring in the exponential growth curve disrupting the perception due to continuity of points.</p></li>
-<li><p>Obtain the final <span class="math inline">\(x_i\)</span> values by jittering <span class="math inline">\(\tilde x_i\)</span>.</p></li>
-<li><p>Calculate <span class="math inline">\(\tilde\alpha = \frac{\hat\alpha}{e^{\sigma^2/2}}.\)</span> This ensures that the range of simulated values for different standard devaition parameters has an equal expected value for a given rate of change due to the non-constant variance across the domain.</p></li>
-<li><p>Generate <span class="math inline">\(y_i = \tilde\alpha\cdot e^{\hat\beta x_i + e_i}+\hat\theta\)</span> where <span class="math inline">\(e_i\sim N(0,\sigma^2).\)</span></p></li>
+<li>Generate <span class="math inline">\(\tilde x_j, j = 1,..., N\cdot \frac{3}{4}\)</span> as a sequence of evenly spaced points in <span class="math inline">\([0,20]\)</span>. This ensures the full domain of <span class="math inline">\(x\)</span> is used, fulfilling the constraints of spanning the same domain and range for each parameter combination.</li>
+<li>Obtain <span class="math inline">\(\tilde x_i, i = 1,...N\)</span> by sampling <span class="math inline">\(N = 50\)</span> values from the set of <span class="math inline">\(\tilde x_j\)</span> values. This gaurantees some variability and potential clustring in the exponential growth curve disrupting the perception due to continuity of points.</li>
+<li>Obtain the final <span class="math inline">\(x_i\)</span> values by jittering <span class="math inline">\(\tilde x_i\)</span>.</li>
+<li>Calculate <span class="math inline">\(\tilde\alpha = \frac{\hat\alpha}{e^{\sigma^2/2}}.\)</span> This ensures that the range of simulated values for different standard devaition parameters has an equal expected value for a given rate of change due to the non-constant variance across the domain.</li>
+<li>Generate <span class="math inline">\(y_i = \tilde\alpha\cdot e^{\hat\beta x_i + e_i}+\hat\theta\)</span> where <span class="math inline">\(e_i\sim N(0,\sigma^2).\)</span></li>
 </ol>
 </div>
 <div id="parameter-selection" class="section level2" number="2.3">
