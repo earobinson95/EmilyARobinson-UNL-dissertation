@@ -84,7 +84,7 @@ The heuristic data generation procedure is described below:
 \end{algorithm}
 
 \begin{algorithm}
-  \caption{Exponential Simulation}
+  \caption{Lineup Exponential Data Simulation}
   \begin{algorithmic}[1]
     \Statex \textbullet~\textbf{Input Parameters:} sample size $N = 50$, estimated parameters $\hat\alpha$, $\hat\beta$, and $\hat\theta$, $\sigma$ standard deviation from the exponential curve.
     \Statex \textbullet~\textbf{Output Parameters:} $N$ points, in the form of vectors $\mathbf{x}$ and $\mathbf{y}$.
@@ -106,7 +106,7 @@ In \cref{fig:lof-density-curves}, we can see the densities of each of the three 
 While the LOF statistic provides us a numerical value for discriminating between the difficulty levels, we cannot directly relate this to the perceptual discriminability; it serves primarily as an approximation to ensure that we are testing parameters at several distinct levels of difficulty. 
 Final parameter estimates are shown in \cref{tab:parameter-data}.
 
-```{r lof-density-curves, fig.height = 2.5, fig.width = 5, fig.cap = "Lack of fit statistic density curves", out.width = 100%}
+```{r lof-density-curves, fig.height = 2.5, fig.width = 5, fig.cap = "Lack of fit statistic density curves", out.width = "100%"}
 lofData <- read.csv(file = "data/lineup-lof-data.csv")
 lofPlot_curvature <- lofData %>%
   mutate(Curvature = factor(Curvature, levels = c("Obvious Curvature", "Noticeable Curvature", "Almost Linear"), labels = c("High Curvature", "Medium Curvature", "Low Curvature"))) %>%
@@ -150,7 +150,129 @@ There are a total of 6 (i.e. $3!\cdot 2!$) lineup curvature combinations.
 Two sets of each lineup curvature combination were simulated (total of 12 test data sets) and plotted on both the linear scale and the log scale (total of 24 test lineup plots).
 In addition, there are three curvature combinations which generate homogeneous "Rorschach" lineups, where all panels are from the same distribution. 
 Each participant evaluated one of these lineups, but for simplicity, these evaluations are not described in this chapter.
-```{r curvature-combination-example, fig.cap = "Lineup curvature combinations, out.width = 100%}
+```{r curvature-combination-example, fig.height = 6, fig.width = 9, fig.cap = "Lineup curvature combinations", out.width="100%"}
+simData <- read.csv("data/lineups/difficulty-comparison-data.csv")
+
+# simData  %>%
+#   mutate(curvature = factor(curvature, levels = c("E", "M", "H"), labels = c("High Curvature", "Medium Curvature", "Low Curvature"))) %>%
+#   ggplot(aes(x = x, y = y, color = curvature)) +
+#   geom_line() +
+#   theme_bw() +
+#   theme(aspect.ratio = 1) +
+#   theme(axis.text = element_blank(),
+#         axis.title = element_blank(),
+#         legend.position = "bottom") +
+#   scale_color_manual("Difficulty", values = c("#004400", "#116611", "#55aa55"))
+
+tE_nM <- simData  %>%
+  mutate(Target = "High Curvature",
+         Null = "Medium Curvature") %>%
+  filter(curvature %in% c("E", "M")) %>%
+  mutate(curvature = factor(curvature, levels = c("E", "M", "H"))) %>%
+  ggplot(aes(x = x, y = y, color = curvature)) +
+  geom_line() +
+  facet_grid(~ Target + Null, labeller = labeller(Target = label_both, Null = label_both)) +
+  theme_test() +
+  theme(aspect.ratio = 1) +
+  theme(axis.text = element_blank(),
+        axis.title = element_blank(),
+        legend.position = "none") +
+  scale_x_continuous(limits = c(0,20)) +
+  scale_y_continuous(limits = c(10,100)) +
+  # scale_color_manual(values = c("#004400", "#116611", "#55aa55")) +
+  scale_color_manual(values = c("green3", "black"))
+
+tE_nH <- simData  %>%
+  mutate(Target = "High Curvature",
+         Null = "Low Curvature") %>%
+  filter(curvature %in% c("E", "H")) %>%
+  mutate(curvature = factor(curvature, levels = c("E", "M", "H"))) %>%
+  ggplot(aes(x = x, y = y, color = curvature)) +
+  geom_line() +
+  facet_grid(~ Target + Null, labeller = labeller(Target = label_both, Null = label_both)) +
+  theme_test() +
+  theme(aspect.ratio = 1) +
+  theme(axis.text = element_blank(),
+        axis.title = element_blank(),
+        legend.position = "none") +
+  scale_x_continuous(limits = c(0,20)) +
+  scale_y_continuous(limits = c(10,100)) +
+  # scale_color_manual(values = c("#004400", "#116611", "#55aa55")) +
+  scale_color_manual(values = c("green3", "black"))
+
+tM_nE <- simData  %>%
+  mutate(Target = "Medium Curvature",
+         Null = "High Curvature") %>%
+  filter(curvature %in% c("E", "M")) %>%
+  mutate(curvature = factor(curvature, levels = c("E", "M", "H"))) %>%
+  ggplot(aes(x = x, y = y, color = curvature)) +
+  geom_line() +
+  facet_grid(~ Target + Null, labeller = labeller(Target = label_both, Null = label_both)) +
+  theme_test() +
+  theme(aspect.ratio = 1) +
+  theme(axis.text = element_blank(),
+        axis.title = element_blank(),
+        legend.position = "none") +
+  scale_x_continuous(limits = c(0,20)) +
+  scale_y_continuous(limits = c(10,100)) +
+  # scale_color_manual(values = c("#004400", "#116611", "#55aa55")) +
+  scale_color_manual(values = c("black", "green3"))
+
+tM_nH <- simData  %>%
+  mutate(Target = "Medium Curvature",
+         Null = "Low Curvature") %>%
+  filter(curvature %in% c("H", "M")) %>%
+  mutate(curvature = factor(curvature, levels = c("E", "M", "H"))) %>%
+  ggplot(aes(x = x, y = y, color = curvature)) +
+  geom_line() +
+  facet_grid(~ Target + Null, labeller = labeller(Target = label_both, Null = label_both)) +
+  theme_test() +
+  theme(aspect.ratio = 1) +
+  theme(axis.text = element_blank(),
+        axis.title = element_blank(),
+        legend.position = "none") +
+  scale_x_continuous(limits = c(0,20)) +
+  scale_y_continuous(limits = c(10,100)) +
+  # scale_color_manual(values = c("#004400", "#116611", "#55aa55")) +
+  scale_color_manual(values = c("green3", "black"))
+
+tH_nE <- simData  %>%
+  mutate(Target = "Low Curvature",
+         Null = "High Curvature") %>%
+  filter(curvature %in% c("E", "H")) %>%
+  mutate(curvature = factor(curvature, levels = c("E", "M", "H"))) %>%
+  ggplot(aes(x = x, y = y, color = curvature)) +
+  geom_line() +
+  facet_grid(~ Target + Null, labeller = labeller(Target = label_both, Null = label_both)) +
+  theme_test() +
+  theme(aspect.ratio = 1) +
+  theme(axis.text = element_blank(),
+        axis.title = element_blank(),
+        legend.position = "none") +
+  scale_x_continuous(limits = c(0,20)) +
+  scale_y_continuous(limits = c(10,100)) +
+  # scale_color_manual(values = c("#004400", "#116611", "#55aa55")) +
+  scale_color_manual(values = c("black", "green3"))
+
+tH_nM <- simData  %>%
+  mutate(Target = "Low Curvature",
+         Null = "Medium Curvature") %>%
+  filter(curvature %in% c("H", "M")) %>%
+  mutate(curvature = factor(curvature, levels = c("E", "M", "H"))) %>%
+  ggplot(aes(x = x, y = y, color = curvature)) +
+  geom_line() +
+  facet_grid(~ Target + Null, labeller = labeller(Target = label_both, Null = label_both)) +
+  theme_test() +
+  theme(aspect.ratio = 1) +
+  theme(axis.text = element_blank(),
+        axis.title = element_blank(),
+        legend.position = "none") +
+  scale_x_continuous(limits = c(0,20)) +
+  scale_y_continuous(limits = c(10,100)) +
+  # scale_color_manual(values = c("#004400", "#116611", "#55aa55")) +
+  scale_color_manual(values = c("black", "green3"))
+
+(tE_nM + tE_nH + tM_nH) / (tM_nE + tH_nE + tH_nM)
 
 ```
 
@@ -219,38 +341,37 @@ An exception occurs when identifying a plot with curvature embedded in null plot
 odds_ratios <- read.csv("data/lineup-odds-ratios.csv")
 dodge <- position_dodge(width=0.9)
 odds_ratio_plot <- odds_ratios %>%
-  mutate(target = factor(target, levels = c("Easy", "Medium", "Hard")),
-         null = factor(null, levels = c("Easy", "Medium", "Hard"))) %>%
+  mutate(null = factor(null, levels = c("Easy", "Medium", "Hard"), labels = c("High Curvature", "Medium Curvature", "High Curvature")),
+         target = factor(target, levels = c("Easy", "Medium", "Hard"), labels = c("High Curvature", "Medium Curvature", "Low Curvature"))) %>%
   ggplot(aes(x = odds.ratio, y = null, color = target, shape = target)) + 
   geom_point(position = dodge, size = 3) + 
   geom_errorbar(aes(xmin = asymp.LCL, xmax = asymp.UCL), position = dodge, width = .1) +
   geom_vline(xintercept = 1) +
   theme_bw()  +
-  theme(axis.title = element_text(size = 8),
-        axis.text = element_text(size = 8),
-        legend.title = element_text(size = 8),
-        legend.text  = element_text(size = 8),
-        legend.key.size = unit(0.7, "line"),
+  theme(axis.title = element_text(size = 12),
+        axis.text = element_text(size = 12),
+        legend.title = element_text(size = 12),
+        legend.text  = element_text(size = 12),
+        legend.key.size = unit(1, "line"),
         legend.position = "bottom"
   ) +
-  scale_y_discrete("Null plot type") +
+  scale_y_discrete("Null Panel Difficulty", position = "left") +
   scale_x_continuous("Odds ratio (on log scale) \n (Log vs Linear)", trans = "log10") + 
-  scale_color_manual("Target Plot Type", values = c("#004400", "#116611", "#55aa55")) + 
-  scale_shape_discrete("Target Plot Type")
+  scale_color_manual("Target Panel Difficulty", values = c("#004400", "#116611", "#55aa55")) + 
+  scale_shape_discrete("Target Panel Difficulty")
 
 picsList <- c("images/tM_nH.png", "images/tE_nH.png", 
               "images/tH_nM.png", "images/tE_nM.png", 
               "images/tH_nE.png", "images/tM_nE.png"
 )
 
-library(cowplot)
 pimage <- axis_canvas(odds_ratio_plot, axis = 'y') + 
-  draw_image(picsList[1], y = 2.75, scale = 0.6) +
-  draw_image(picsList[2], y = 2.25, scale = 0.6) +
-  draw_image(picsList[3], y = 1.75, scale = 0.6) +
-  draw_image(picsList[4], y = 1.25, scale = 0.6) +
-  draw_image(picsList[5], y = 0.75, scale = 0.6) +
-  draw_image(picsList[6], y = 0.25, scale = 0.6)
+  draw_image(picsList[1], y = 2.75, scale = 0.7) +
+  draw_image(picsList[2], y = 2.25, scale = 0.7) +
+  draw_image(picsList[3], y = 1.75, scale = 0.7) +
+  draw_image(picsList[4], y = 1.25, scale = 0.7) +
+  draw_image(picsList[5], y = 0.75, scale = 0.7) +
+  draw_image(picsList[6], y = 0.25, scale = 0.7)
 
 # insert the image strip into the plot
 ggdraw(insert_yaxis_grob(odds_ratio_plot, pimage, position = "right", clip = "on"))

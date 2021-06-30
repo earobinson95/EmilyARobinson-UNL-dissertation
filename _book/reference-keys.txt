@@ -3,6 +3,7 @@ fig:perceptual-process
 fig:log-scale-comic
 fig:lineup-example
 fig:lof-density-curves
+fig:curvature-combination-example
 fig:odds-ratio-plot
 fig:subjective-judgement
 fig:mosteller-eyefitting-plot

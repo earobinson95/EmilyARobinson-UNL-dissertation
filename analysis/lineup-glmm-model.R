@@ -108,6 +108,8 @@ simData  %>%
         legend.position = "bottom") +
   scale_color_manual("Difficulty", values = c("#004400", "#116611", "#55aa55"))
 
+write.csv(simData, file = "data/lineups/difficulty-comparison-data.csv", row.names = F, na = "")
+
 tE_nM <- simData  %>%
   filter(curvature %in% c("E", "M")) %>%
   mutate(curvature = factor(curvature, levels = c("E", "M", "H"))) %>%
