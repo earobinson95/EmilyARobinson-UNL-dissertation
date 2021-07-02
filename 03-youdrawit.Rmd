@@ -531,9 +531,9 @@ grid_data.exp.reduced %>%
   mutate(`Growth Rate` = ifelse(beta == 0.1, "Low", "High")) %>%
   mutate(`Growth Rate` = factor(`Growth Rate`, levels = c("Low", "High"))) %>%
   ggplot(aes(x = x, y = estimate, group = scale, color = scale, fill = scale)) +
-  geom_ribbon(aes(ymin = lower, ymax = upper), color = NA, alpha = 0.4) +
+  geom_line(data = exp_data, aes(x = x, y = residualdrawn, group = plotID), alpha = 0.05) +
+  geom_ribbon(aes(ymin = lower, ymax = upper), color = NA, alpha = 0.5) +
   geom_line() +
-  geom_line(data = exp_data, aes(x = x, y = residualdrawn, group = plotID), alpha = 0.2) +
   geom_hline(yintercept = 0, linetype = "dashed") +
   facet_grid(`Growth Rate` ~ `Points Truncated`, scales = "free", labeller = labeller(`Growth Rate` = label_both, `Points Truncated` = label_both)) +
   theme_bw() +

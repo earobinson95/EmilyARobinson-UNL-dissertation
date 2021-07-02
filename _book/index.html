@@ -247,18 +247,42 @@ div.csl-indent {
 <div id="literature-review" class="section level1" number="1">
 <h1><span class="header-section-number">CHAPTER 1</span> Literature Review</h1>
 <!-- Editing text colors: \ear{Emily's editing color.} Emily may also use mostly black text as well. \svp{Susan's editing color.} \rh{Reka's editing color.} -->
+<!-- \rh{references should include other than Susan, Di, \& Heike :) Also, more references should be listed for the usefulness of graphics.} -->
+<!-- \rh{Also, maybe a small section could be included about bad graphics, and how people can mislead with bad graphics.} -->
+<!-- \cref{fig:graphic-flowchart} illustrates the process of creating a graphic from a data set through the use of variable mapping, data transformations, coordinate systems, and aesthetic features [@vanderplas_testing_2020] \svp{This is more of a grammar of graphics flowchart, which isn't *quite* the same thing}. -->
+<!-- \svp{I would honestly lead with this part...} -->
 <div id="introduction-to-graphics" class="section level2" number="1.1">
 <h2><span class="header-section-number">1.1</span> Introduction to Graphics</h2>
-<p>Advanced technology and computing power has promoted data visualization as a central tool in modern data science <span class="citation">(Unwin, 2020)</span>.
-Data visualization is defined  as the art of drawing graphical charts in order to display data.
- illustrates the process of creating a graphic from a data set through the use of variable mapping, data transformations, coordinate systems, and aesthetic features <span class="citation">(Vanderplas, Cook, &amp; Hofmann, 2020)</span> .
- Graphics are useful for data cleaning, exploring data structure, and have been an essential component in communicating information for the last 200 years <span class="citation">(Lewandowsky &amp; Spence, 1989; Unwin, 2020; Vanderplas, Cook, &amp; Hofmann, 2020)</span>
-During the 20th century, companies began utilizing graphics to understand their mechanics and support business decisions; news sources began displaying graphics of weather forecasts as a means to communicate critical information and aid in decision-making <span class="citation">(Vanderplas, Cook, &amp; Hofmann, 2020)</span> .
+<p>Advanced technology and computing power have promoted data visualization as a central tool in modern data science. <span class="citation">Unwin (2020)</span> defines data visualization as the art of drawing graphical charts in order to display data.
+Graphics are useful for data cleaning, exploring data structure, and have been an essential component in communicating information for the last 200 years <span class="citation">(Lewandowsky &amp; Spence, 1989)</span>
+During the <span class="math inline">\(\text{18}^{\text{th}}\)</span> and <span class="math inline">\(\text{19}^{\text{th}}\)</span> centuries, governments began using graphics in order to better understand their population and economic interests<span class="citation">(Harms, 1991; Playfair, 1801; Walker &amp; others, 2013)</span>.
+In , <span class="citation">Playfair (1801)</span>, visually represents the power and economic status of each European Nation in the early <span class="math inline">\(\text{19}^{\text{th}}\)</span> centruy.
+Circle size and numeric annotation within the circle indicate the number of square miles in each country with the number of people per square mile indicated above the circle.
+The vertical bar to the left side represents the number of inhabitants (millions), and the line to the right side represents the revenue (million pounds).
+Coloration in the original figure, not shown, identifies countries as maritime powers or powerful by land only.
+ displays the population of each state as compiled from the 1870 US census <span class="citation">(Walker &amp; others, 2013)</span>.
+Square size represents the proportion of the states population separated into three regions representing the foreign, native colored, and native white populations.
+The rectangle shown to the right represents the proportion of residents born in the state who have become residents of other states.
+In the <span class="math inline">\(\text{20}^{\text{th}}\)</span> century, companies began utilizing graphics to understand their mechanics and support business decisions and news sources began displaying graphics of weather forecasts as a means to communicate critical information and aid in decision-making <span class="citation">(Chandar, Collier, &amp; Miranti, 2012; Yates, 1985)</span>.
+<span class="citation">Chandar, Collier, &amp; Miranti (2012)</span> illustrates how AT&amp;T used graphics to demonstrate management’s ability to optimize utilization of assets by making comparisons between their annual net telephone revenues and their returns on total assets .
+<!-- \svp{Might want to add a set of pictures showing the different types of graphics from this sentence - playfair's balance of trade, statistical atlas, and something from e.g. early IBM?}.  -->
 Today, we encounter data visualizations everywhere, researchers include graphics to communicate their results in scientific publications and mass media relies on graphics to convey news stories to the public through newspapers, TV, and the Web <span class="citation">(Unwin, 2020)</span>.</p>
-<div class="figure" style="text-align: center"><span id="fig:graphic-flowchart"></span>
-<img src="images/graphic-flowchart.png" alt="Graphic flowchart" width="50%"  />
+<div class="figure" style="text-align: center"><span id="fig:william-playfair-trade"></span>
+<img src="images/william-playfair-balance-trade.png" alt="William Playfair's balance of trate" width="75%"  />
 <p class="caption">
-Figure 1.1: Graphic flowchart
+Figure 1.1: William Playfair’s balance of trate
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:statistical-atlas-state-population"></span>
+<img src="images/statistical-atlas-state-population.jpg" alt="Statistical Atlas 1870 state population" width="75%"  />
+<p class="caption">
+Figure 1.2: Statistical Atlas 1870 state population
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:ATandT-revenue"></span>
+<img src="images/ATandT-revenue.png" alt="AT\&amp;T utilization of assets" width="75%"  />
+<p class="caption">
+Figure 1.3: AT&amp;T utilization of assets
 </p>
 </div>
 <p>In general, the public holds the self perception that numbers are difficult to understand and that they did not perform well in mathematics during school <span class="citation">(Unwin, 2020)</span>.
@@ -301,7 +325,7 @@ The perceptual process is complex and involved .</p>
 <div class="figure" style="text-align: center"><span id="fig:perceptual-process"></span>
 <img src="images/perceptual-process-goldsein-pg5.png" alt="Perceptual process" width="75%"  />
 <p class="caption">
-Figure 1.2: Perceptual process
+Figure 1.4: Perceptual process
 </p>
 </div>
 <p>This process is broken down into sensation - involving simple processes that occur right at the beginning of a sensory system - and perception - involving higher-order mechanisms and identified with more complex processes.
@@ -379,7 +403,7 @@ This is only one recent example of a situation in which both log and linear scal
 <div class="figure" style="text-align: center"><span id="fig:log-scale-comic"></span>
 <img src="images/log-scale-comic.png" alt="Log scale comic" width="70%"  />
 <p class="caption">
-Figure 1.3: Log scale comic
+Figure 1.5: Log scale comic
 </p>
 </div>
 <p>Research suggests our perception and mapping of numbers to a number line is logarithmic at first, but transitions
@@ -411,14 +435,14 @@ Similar to the training and education required to transition from logarithmic ma
 <div class="figure" style="text-align: center"><span id="fig:exponential-stages"></span>
 <img src="thesis_files/figure-html/exponential-stages-1.png" alt="Stages of exponential growth" width="75%"  />
 <p class="caption">
-Figure 1.4: Stages of exponential growth
+Figure 1.6: Stages of exponential growth
 </p>
 </div>
 <p> <a href="https://twitter.com/MDrelichman/status/1402054093284143104">CITE</a></p>
 <div class="figure" style="text-align: center"><span id="fig:exponential-stages-comic"></span>
 <img src="images/exponential-stages-comic.jpg" alt="Log scale comic" width="70%"  />
 <p class="caption">
-Figure 1.5: Log scale comic
+Figure 1.7: Log scale comic
 </p>
 </div>
 <p>Early studies explored the estimation and prediction of exponential growth, finding that growth is underestimated when presented both numerically and graphically but that numerical estimation is more accurate than graphical estimation for exponential curves <span class="citation">(Wagenaar &amp; Sagaria, 1975)</span>.

@@ -75,21 +75,51 @@ library(ggforce)
 
 <!-- Editing text colors: \ear{Emily's editing color.} Emily may also use mostly black text as well. \svp{Susan's editing color.} \rh{Reka's editing color.} -->
 
-\rh{references should include other than Susan, Di, \& Heike :) Also, more references should be listed for the usefulness of graphics.}
+<!-- \rh{references should include other than Susan, Di, \& Heike :) Also, more references should be listed for the usefulness of graphics.} -->
 
-\rh{Also, maybe a small section could be included about bad graphics, and how people can mislead with bad graphics.}
+<!-- \rh{Also, maybe a small section could be included about bad graphics, and how people can mislead with bad graphics.} -->
+
+<!-- \cref{fig:graphic-flowchart} illustrates the process of creating a graphic from a data set through the use of variable mapping, data transformations, coordinate systems, and aesthetic features [@vanderplas_testing_2020] \svp{This is more of a grammar of graphics flowchart, which isn't *quite* the same thing}. -->
+<!-- \svp{I would honestly lead with this part...} -->
+
+```{r graphic-flowchart, include = F, fig.cap = "Graphic flowchart", out.width="50%"}
+knitr::include_graphics("images/graphic-flowchart.png")
+```
 
 ## Introduction to Graphics
 
-Advanced technology and computing power has promoted data visualization as a central tool in modern data science [@unwin_why_2020]. 
-Data visualization is defined \svp{by whom?} as the art of drawing graphical charts in order to display data. 
-\cref{fig:graphic-flowchart} illustrates the process of creating a graphic from a data set through the use of variable mapping, data transformations, coordinate systems, and aesthetic features [@vanderplas_testing_2020] \svp{This is more of a grammar of graphics flowchart, which isn't *quite* the same thing}.
-\svp{I would honestly lead with this part...} Graphics are useful for data cleaning, exploring data structure, and have been an essential component in communicating information for the last 200 years [@lewandowsky_perception_1989; @unwin_why_2020; @vanderplas_testing_2020]
-During the 20th century, companies began utilizing graphics to understand their mechanics and support business decisions; news sources began displaying graphics of weather forecasts as a means to communicate critical information and aid in decision-making [@vanderplas_testing_2020]\svp{, and countries began using graphics in order to better understand their population and economic interests} \svp{Might want to add a set of pictures showing the different types of graphics from this sentence - playfair's balance of trade, statistical atlas, and something from e.g. early IBM?}. 
+Advanced technology and computing power have promoted data visualization as a central tool in modern data science. @unwin_why_2020 defines data visualization as the art of drawing graphical charts in order to display data. 
+Graphics are useful for data cleaning, exploring data structure, and have been an essential component in communicating information for the last 200 years [@lewandowsky_perception_1989]
+During the $\text{18}^{\text{th}}$ and $\text{19}^{\text{th}}$ centuries, governments began using graphics in order to better understand their population and economic interests[@playfair1801statistical; @harms1991august; @walker2013statistical].
+In \cref{fig:william-playfair-trade}, @playfair1801statistical visually represent the power and economic status of each European Nation in the early $\text{19}^{\text{th}}$ century. 
+Circle size and numeric annotation within the circle indicate the number of square miles in each country with the number of people per square mile indicated above the circle. 
+The vertical bar to the left side represents the number of inhabitants (millions), and the line to the right side represents the revenue (million pounds). 
+Coloration in the original figure, not shown, identifies countries as maritime powers or powerful by land only. 
+\cref{fig:statistical-atlas-state-population} displays the population of each state as compiled from the 1870 US census [@walker2013statistical]. 
+Square size represents the proportion of the states population separated into three regions representing the foreign, native colored, and native white populations.
+The rectangle shown to the right represents the proportion of residents born in the state who have become residents of other states.
+In the $\text{20}^{\text{th}}$ century, companies began utilizing graphics to understand their mechanics and support business decisions and news sources began displaying graphics of weather forecasts as a means to communicate critical information and aid in decision-making [@chandar2012graph; @yates1985graphs].
+@chandar2012graph illustrates how AT\&T used graphics to demonstrate management's ability to optimize utilization of assets by making comparisons between their annual net telephone revenues and their returns on total assets \pcref{fig:ATandT-revenue}.
+<!-- \svp{Might want to add a set of pictures showing the different types of graphics from this sentence - playfair's balance of trade, statistical atlas, and something from e.g. early IBM?}.  -->
 Today, we encounter data visualizations everywhere, researchers include graphics to communicate their results in scientific publications and mass media relies on graphics to convey news stories to the public through newspapers, TV, and the Web [@unwin_why_2020].
 
-```{r graphic-flowchart, fig.cap = "Graphic flowchart", out.width="50%"}
-knitr::include_graphics("images/graphic-flowchart.png")
+```{r william-playfair-trade, fig.cap = "William Playfair's balance of trate", out.width="75%"}
+knitr::include_graphics("images/william-playfair-balance-trade.png")
+
+# https://repository.tku.ac.jp/dspace/bitstream/11150/6149/1/LAUD_085-03.pdf
+```
+
+```{r statistical-atlas-state-population, fig.cap = "Statistical Atlas 1870 state population", out.width="75%"}
+knitr::include_graphics("images/statistical-atlas-state-population.jpg")
+
+# https://www.loc.gov/item/05019329/
+# PERMISSION: The Library of Congress is providing access to these materials for educational and research purposes and is not aware of any U.S. copyright protection (see Title 17 of the United States Code) or any other restrictions in the Map Collection materials.
+```
+
+```{r ATandT-revenue, fig.cap = "AT\\&T utilization of assets", out.width="75%"}
+knitr::include_graphics("images/ATandT-revenue.png")
+# https://us.sagepub.com/en-us/nam/journal-author-archiving-policies-and-re-use
+# PERMISSION: You may use the Final Published PDF (or Original Submission or Accepted Manuscript, if preferred) in the following ways: in your dissertation or thesis, including where the dissertation or thesis will be posted in any electronic Institutional Repository or database
 ```
 
 In general, the public holds the self perception that numbers are difficult to understand and that they did not perform well in mathematics during school [@unwin_why_2020]. 

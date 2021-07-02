@@ -266,27 +266,48 @@
 \hypertarget{literature-review}{%
 \chapter{Literature Review}\label{literature-review}}
 
-\rh{references should include other than Susan, Di, \& Heike :) Also, more references should be listed for the usefulness of graphics.}
-
-\rh{Also, maybe a small section could be included about bad graphics, and how people can mislead with bad graphics.}
-
 \hypertarget{introduction-to-graphics}{%
 \section{Introduction to Graphics}\label{introduction-to-graphics}}
 
-Advanced technology and computing power has promoted data visualization as a central tool in modern data science (Unwin, 2020).
-Data visualization is defined \svp{by whom?} as the art of drawing graphical charts in order to display data.
-\cref{fig:graphic-flowchart} illustrates the process of creating a graphic from a data set through the use of variable mapping, data transformations, coordinate systems, and aesthetic features (Vanderplas, Cook, \& Hofmann, 2020) \svp{This is more of a grammar of graphics flowchart, which isn't *quite* the same thing}.
-\svp{I would honestly lead with this part...} Graphics are useful for data cleaning, exploring data structure, and have been an essential component in communicating information for the last 200 years (Lewandowsky \& Spence, 1989; Unwin, 2020; Vanderplas, Cook, \& Hofmann, 2020)
-During the 20th century, companies began utilizing graphics to understand their mechanics and support business decisions; news sources began displaying graphics of weather forecasts as a means to communicate critical information and aid in decision-making (Vanderplas, Cook, \& Hofmann, 2020)\svp{, and countries began using graphics in order to better understand their population and economic interests} \svp{Might want to add a set of pictures showing the different types of graphics from this sentence - playfair's balance of trade, statistical atlas, and something from e.g. early IBM?}.
+Advanced technology and computing power have promoted data visualization as a central tool in modern data science. Unwin (2020) defines data visualization as the art of drawing graphical charts in order to display data.
+Graphics are useful for data cleaning, exploring data structure, and have been an essential component in communicating information for the last 200 years (Lewandowsky \& Spence, 1989)
+During the \(\text{18}^{\text{th}}\) and \(\text{19}^{\text{th}}\) centuries, governments began using graphics in order to better understand their population and economic interests(Harms, 1991; Playfair, 1801; Walker \& others, 2013).
+In \cref{fig:william-playfair-trade}, Playfair (1801), visually represents the power and economic status of each European Nation in the early \(\text{19}^{\text{th}}\) centruy.
+Circle size and numeric annotation within the circle indicate the number of square miles in each country with the number of people per square mile indicated above the circle.
+The vertical bar to the left side represents the number of inhabitants (millions), and the line to the right side represents the revenue (million pounds).
+Coloration in the original figure, not shown, identifies countries as maritime powers or powerful by land only.
+\cref{fig:statistical-atlas-state-population} displays the population of each state as compiled from the 1870 US census (Walker \& others, 2013).
+Square size represents the proportion of the states population separated into three regions representing the foreign, native colored, and native white populations.
+The rectangle shown to the right represents the proportion of residents born in the state who have become residents of other states.
+In the \(\text{20}^{\text{th}}\) century, companies began utilizing graphics to understand their mechanics and support business decisions and news sources began displaying graphics of weather forecasts as a means to communicate critical information and aid in decision-making (Chandar, Collier, \& Miranti, 2012; Yates, 1985).
+Chandar, Collier, \& Miranti (2012) illustrates how AT\&T used graphics to demonstrate management's ability to optimize utilization of assets by making comparisons between their annual net telephone revenues and their returns on total assets \pcref{fig:ATandT-revenue}.
 Today, we encounter data visualizations everywhere, researchers include graphics to communicate their results in scientific publications and mass media relies on graphics to convey news stories to the public through newspapers, TV, and the Web (Unwin, 2020).
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.5\linewidth,]{images/graphic-flowchart} 
+{\centering \includegraphics[width=0.75\linewidth,]{images/william-playfair-balance-trade} 
 
 }
 
-\caption{Graphic flowchart}\label{fig:graphic-flowchart}
+\caption{William Playfair's balance of trate}\label{fig:william-playfair-trade}
+\end{figure}
+
+\begin{figure}[tbp]
+
+{\centering \includegraphics[width=0.75\linewidth,]{images/statistical-atlas-state-population} 
+
+}
+
+\caption{Statistical Atlas 1870 state population}\label{fig:statistical-atlas-state-population}
+\end{figure}
+
+\begin{figure}[tbp]
+
+{\centering \includegraphics[width=0.75\linewidth,]{images/ATandT-revenue} 
+
+}
+
+\caption{AT\&T utilization of assets}\label{fig:ATandT-revenue}
 \end{figure}
 
 In general, the public holds the self perception that numbers are difficult to understand and that they did not perform well in mathematics during school (Unwin, 2020).
@@ -1731,6 +1752,9 @@ Buja, A., Cook, D., Hofmann, H., Lawrence, M., Lee, E.-K., Swayne, D. F., \& Wic
 \leavevmode\hypertarget{ref-burnmurdoch_2020}{}%
 Burn-Murdoch, J., Nevitt, C., Tilford, C., Rininsland, A., Kao, J. S., Elliott, O., \ldots{} Stabe, M. (2020). Coronavirus tracked: Has the epidemic peaked near you? \emph{Coronavirus chart: see how your country compares}. Financial Times. Retrieved from \url{https://ig.ft.com/coronavirus-chart/?areas=eur}
 
+\leavevmode\hypertarget{ref-chandar2012graph}{}%
+Chandar, N., Collier, D., \& Miranti, P. (2012). Graph standardization and management accounting at AT\&t during the 1920s. \emph{Accounting History}, \emph{17}(1), 35--62.
+
 \leavevmode\hypertarget{ref-cleveland_graphical_1984}{}%
 Cleveland, W. S., \& McGill, R. (1984). Graphical {Perception}: {Theory}, {Experimentation}, and {Application} to the {Development} of {Graphical} {Methods}. Retrieved from \url{http://euclid.psych.yorku.ca/www/psy6135/papers/ClevelandMcGill1984.pdf}
 
@@ -1772,6 +1796,9 @@ Green, T. M., \& Fisher, B. (2009). The personal equation of complex individual 
 
 \leavevmode\hypertarget{ref-haemer_presentation_1949}{}%
 Haemer, K. W., \& Kelley, T. L. (1949). Presentation {Problems}: {Suiting} the {Chart} to the {Audience}: {Common} {Graphic} {Devices} {Classified} {According} to {Ease} of {Reading}. \emph{The American Statistician}, \emph{3}(5), 11--11. http://doi.org/\href{https://doi.org/10.1080/00031305.1949.10501608}{10.1080/00031305.1949.10501608}
+
+\leavevmode\hypertarget{ref-harms1991august}{}%
+Harms, H. (1991). August friedrich wilhelm crome (1753-1833) autor begehrter wirtschaftskarten. \emph{Cartographica Helvetica}, \emph{3}, 33--38.
 
 \leavevmode\hypertarget{ref-heckler_student_2013}{}%
 Heckler, A. F., Mikula, B., \& Rosenblatt, R. (2013). Student accuracy in reading logarithmic plots: {The} problem and how to fix it. In \emph{2013 {IEEE} {Frontiers} in {Education} {Conference} ({FIE})} (pp. 1066--1071). http://doi.org/\href{https://doi.org/10.1109/FIE.2013.6684990}{10.1109/FIE.2013.6684990}
@@ -1820,6 +1847,9 @@ Nieder, A., \& Miller, E. K. (2003). Coding of cognitive magnitude: Compressed s
 
 \leavevmode\hypertarget{ref-peterson1954accurately}{}%
 Peterson, L. V., \& Schramm, W. (1954). How accurately are different kinds of graphs read? \emph{Audio Visual Communication Review}, 178--189.
+
+\leavevmode\hypertarget{ref-playfair1801statistical}{}%
+Playfair, W. (1801). The statistical breviary; shewing, on a principle entirely new, the resources of every state and kingdom in europe, wallis, londres. \emph{Press, Chicago}.
 
 \leavevmode\hypertarget{ref-romano_scale_2020}{}%
 Romano, A., Sotis, C., Dominioni, G., \& Guidi, S. (2020). \emph{The {Scale} of {COVID}-19 {Graphs} {Affects} {Understanding}, {Attitudes}, and {Policy} {Preferences}} (\{SSRN\} \{Scholarly\} \{Paper\} No. ID 3588511). Rochester, NY: Social Science Research Network. Retrieved from \url{https://papers.ssrn.com/abstract=3588511}
@@ -1872,6 +1902,9 @@ Varshney, L. R., \& Sun, J. Z. (2013). Why do we perceive logarithmically? \emph
 \leavevmode\hypertarget{ref-wagenaar_misperception_1975}{}%
 Wagenaar, W. A., \& Sagaria, S. D. (1975). Misperception of exponential growth. \emph{Perception \& Psychophysics}, \emph{18}(6), 416--422. http://doi.org/\href{https://doi.org/10.3758/BF03204114}{10.3758/BF03204114}
 
+\leavevmode\hypertarget{ref-walker2013statistical}{}%
+Walker, F. A., \& others. (2013). Statistical atlas of the united states based on the results of the ninth census 1870 with contributions from many eminent men of science and several departments of the government.
+
 \leavevmode\hypertarget{ref-wickham2011ggplot2}{}%
 Wickham, Hadley. (2011). ggplot2. \emph{Wiley Interdisciplinary Reviews: Computational Statistics}, \emph{3}(2), 180--185.
 
@@ -1898,6 +1931,9 @@ Wood, S. N. (2017). \emph{Generalized additive models: An introduction with r} (
 
 \leavevmode\hypertarget{ref-mgcv2}{}%
 Wood, S. N., N., Pya, \& Saefken, B. (2016). Smoothing parameter and model selection for general smooth models (with discussion). \emph{Journal of the American Statistical Association}, \emph{111}, 1548--1575.
+
+\leavevmode\hypertarget{ref-yates1985graphs}{}%
+Yates, J. (1985). Graphs as a managerial tool: A case study of du pont's use of graphs in the early twentieth century. \emph{The Journal of Business Communication (1973)}, \emph{22}(1), 5--33.
 
 \end{CSLReferences}
 

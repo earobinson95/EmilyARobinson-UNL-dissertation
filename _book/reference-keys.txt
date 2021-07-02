@@ -1,4 +1,6 @@
-fig:graphic-flowchart
+fig:william-playfair-trade
+fig:statistical-atlas-state-population
+fig:ATandT-revenue
 fig:perceptual-process
 fig:log-scale-comic
 fig:exponential-stages
