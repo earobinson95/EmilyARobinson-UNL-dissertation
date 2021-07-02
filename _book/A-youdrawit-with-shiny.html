@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="5-conclusion.html"/>
-<link rel="next" href="references.html"/>
+<link rel="next" href="B-exponential-prediction-plots.html"/>
 <style type="text/css">
 p.abstract{
   text-align: center;
@@ -179,7 +179,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="2.1" data-path="2-lineups.html"><a href="2-lineups.html#introduction"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
 <li class="chapter" data-level="2.2" data-path="2-lineups.html"><a href="2-lineups.html#data-generation"><i class="fa fa-check"></i><b>2.2</b> Data Generation</a></li>
-<li class="chapter" data-level="2.3" data-path="2-lineups.html"><a href="2-lineups.html#parameter-selection"><i class="fa fa-check"></i><b>2.3</b> Parameter Selection</a></li>
+<li class="chapter" data-level="2.3" data-path="2-lineups.html"><a href="2-lineups.html#lineups-parameter-selection"><i class="fa fa-check"></i><b>2.3</b> Parameter Selection</a></li>
 <li class="chapter" data-level="2.4" data-path="2-lineups.html"><a href="2-lineups.html#lineup-setup"><i class="fa fa-check"></i><b>2.4</b> Lineup Setup</a></li>
 <li class="chapter" data-level="2.5" data-path="2-lineups.html"><a href="2-lineups.html#study-design"><i class="fa fa-check"></i><b>2.5</b> Study Design</a></li>
 <li class="chapter" data-level="2.6" data-path="2-lineups.html"><a href="2-lineups.html#results"><i class="fa fa-check"></i><b>2.6</b> Results</a></li>
@@ -195,14 +195,13 @@ div.csl-indent {
 <li class="chapter" data-level="3.2" data-path="3-youdrawit.html"><a href="3-youdrawit.html#study-design-1"><i class="fa fa-check"></i><b>3.2</b> Study Design</a></li>
 <li class="chapter" data-level="3.3" data-path="3-youdrawit.html"><a href="3-youdrawit.html#eye-fitting-straight-lines-in-the-modern-era"><i class="fa fa-check"></i><b>3.3</b> Eye Fitting Straight Lines in the Modern Era</a>
 <ul>
-<li class="chapter" data-level="3.3.1" data-path="3-youdrawit.html"><a href="3-youdrawit.html#data-simulation"><i class="fa fa-check"></i><b>3.3.1</b> Data Simulation</a></li>
+<li class="chapter" data-level="3.3.1" data-path="3-youdrawit.html"><a href="3-youdrawit.html#data-generation-1"><i class="fa fa-check"></i><b>3.3.1</b> Data Generation</a></li>
 <li class="chapter" data-level="3.3.2" data-path="3-youdrawit.html"><a href="3-youdrawit.html#results-1"><i class="fa fa-check"></i><b>3.3.2</b> Results</a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="3-youdrawit.html"><a href="3-youdrawit.html#prediction-of-exponential-trends"><i class="fa fa-check"></i><b>3.4</b> Prediction of Exponential Trends</a>
 <ul>
-<li class="chapter" data-level="3.4.1" data-path="3-youdrawit.html"><a href="3-youdrawit.html#data-simulation-1"><i class="fa fa-check"></i><b>3.4.1</b> Data Simulation</a></li>
-<li class="chapter" data-level="3.4.2" data-path="3-youdrawit.html"><a href="3-youdrawit.html#parameter-selection-1"><i class="fa fa-check"></i><b>3.4.2</b> Parameter Selection</a></li>
-<li class="chapter" data-level="3.4.3" data-path="3-youdrawit.html"><a href="3-youdrawit.html#results-2"><i class="fa fa-check"></i><b>3.4.3</b> Results</a></li>
+<li class="chapter" data-level="3.4.1" data-path="3-youdrawit.html"><a href="3-youdrawit.html#data-generation-2"><i class="fa fa-check"></i><b>3.4.1</b> Data Generation</a></li>
+<li class="chapter" data-level="3.4.2" data-path="3-youdrawit.html"><a href="3-youdrawit.html#results-2"><i class="fa fa-check"></i><b>3.4.2</b> Results</a></li>
 </ul></li>
 <li class="chapter" data-level="3.5" data-path="3-youdrawit.html"><a href="3-youdrawit.html#discussion-and-conclusion-1"><i class="fa fa-check"></i><b>3.5</b> Discussion and Conclusion</a></li>
 </ul></li>
@@ -216,6 +215,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="A.1" data-path="A-youdrawit-with-shiny.html"><a href="A-youdrawit-with-shiny.html#d3.js-source-code"><i class="fa fa-check"></i><b>A.1</b> You draw it D3.js source code</a></li>
 </ul></li>
+<li class="chapter" data-level="B" data-path="B-exponential-prediction-plots.html"><a href="B-exponential-prediction-plots.html"><i class="fa fa-check"></i><b>B</b> Exponential Prediction Interactive Plots</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -627,14 +627,6 @@ Figure A.1: Interactive plot development
 <span id="cb2-376"><a href="A-youdrawit-with-shiny.html#cb2-376" aria-hidden="true" tabindex="-1"></a>    line_drawer,</span>
 <span id="cb2-377"><a href="A-youdrawit-with-shiny.html#cb2-377" aria-hidden="true" tabindex="-1"></a>  };</span>
 <span id="cb2-378"><a href="A-youdrawit-with-shiny.html#cb2-378" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-
-<!--
-The bib chunk below must go last in this document according to how R Markdown renders.  More info is at http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html
--->
-<!-- 
-If you'd like to change the name of the bibliography to something else,
-delete "References" and replace it.
--->
 </div>
 </div>
             </section>
@@ -643,7 +635,7 @@ delete "References" and replace it.
         </div>
       </div>
 <a href="5-conclusion.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="B-exponential-prediction-plots.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

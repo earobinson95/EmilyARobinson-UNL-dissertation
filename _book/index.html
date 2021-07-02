@@ -179,7 +179,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="2.1" data-path="2-lineups.html"><a href="2-lineups.html#introduction"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
 <li class="chapter" data-level="2.2" data-path="2-lineups.html"><a href="2-lineups.html#data-generation"><i class="fa fa-check"></i><b>2.2</b> Data Generation</a></li>
-<li class="chapter" data-level="2.3" data-path="2-lineups.html"><a href="2-lineups.html#parameter-selection"><i class="fa fa-check"></i><b>2.3</b> Parameter Selection</a></li>
+<li class="chapter" data-level="2.3" data-path="2-lineups.html"><a href="2-lineups.html#lineups-parameter-selection"><i class="fa fa-check"></i><b>2.3</b> Parameter Selection</a></li>
 <li class="chapter" data-level="2.4" data-path="2-lineups.html"><a href="2-lineups.html#lineup-setup"><i class="fa fa-check"></i><b>2.4</b> Lineup Setup</a></li>
 <li class="chapter" data-level="2.5" data-path="2-lineups.html"><a href="2-lineups.html#study-design"><i class="fa fa-check"></i><b>2.5</b> Study Design</a></li>
 <li class="chapter" data-level="2.6" data-path="2-lineups.html"><a href="2-lineups.html#results"><i class="fa fa-check"></i><b>2.6</b> Results</a></li>
@@ -195,14 +195,13 @@ div.csl-indent {
 <li class="chapter" data-level="3.2" data-path="3-youdrawit.html"><a href="3-youdrawit.html#study-design-1"><i class="fa fa-check"></i><b>3.2</b> Study Design</a></li>
 <li class="chapter" data-level="3.3" data-path="3-youdrawit.html"><a href="3-youdrawit.html#eye-fitting-straight-lines-in-the-modern-era"><i class="fa fa-check"></i><b>3.3</b> Eye Fitting Straight Lines in the Modern Era</a>
 <ul>
-<li class="chapter" data-level="3.3.1" data-path="3-youdrawit.html"><a href="3-youdrawit.html#data-simulation"><i class="fa fa-check"></i><b>3.3.1</b> Data Simulation</a></li>
+<li class="chapter" data-level="3.3.1" data-path="3-youdrawit.html"><a href="3-youdrawit.html#data-generation-1"><i class="fa fa-check"></i><b>3.3.1</b> Data Generation</a></li>
 <li class="chapter" data-level="3.3.2" data-path="3-youdrawit.html"><a href="3-youdrawit.html#results-1"><i class="fa fa-check"></i><b>3.3.2</b> Results</a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="3-youdrawit.html"><a href="3-youdrawit.html#prediction-of-exponential-trends"><i class="fa fa-check"></i><b>3.4</b> Prediction of Exponential Trends</a>
 <ul>
-<li class="chapter" data-level="3.4.1" data-path="3-youdrawit.html"><a href="3-youdrawit.html#data-simulation-1"><i class="fa fa-check"></i><b>3.4.1</b> Data Simulation</a></li>
-<li class="chapter" data-level="3.4.2" data-path="3-youdrawit.html"><a href="3-youdrawit.html#parameter-selection-1"><i class="fa fa-check"></i><b>3.4.2</b> Parameter Selection</a></li>
-<li class="chapter" data-level="3.4.3" data-path="3-youdrawit.html"><a href="3-youdrawit.html#results-2"><i class="fa fa-check"></i><b>3.4.3</b> Results</a></li>
+<li class="chapter" data-level="3.4.1" data-path="3-youdrawit.html"><a href="3-youdrawit.html#data-generation-2"><i class="fa fa-check"></i><b>3.4.1</b> Data Generation</a></li>
+<li class="chapter" data-level="3.4.2" data-path="3-youdrawit.html"><a href="3-youdrawit.html#results-2"><i class="fa fa-check"></i><b>3.4.2</b> Results</a></li>
 </ul></li>
 <li class="chapter" data-level="3.5" data-path="3-youdrawit.html"><a href="3-youdrawit.html#discussion-and-conclusion-1"><i class="fa fa-check"></i><b>3.5</b> Discussion and Conclusion</a></li>
 </ul></li>
@@ -216,6 +215,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="A.1" data-path="A-youdrawit-with-shiny.html"><a href="A-youdrawit-with-shiny.html#d3.js-source-code"><i class="fa fa-check"></i><b>A.1</b> You draw it D3.js source code</a></li>
 </ul></li>
+<li class="chapter" data-level="B" data-path="B-exponential-prediction-plots.html"><a href="B-exponential-prediction-plots.html"><i class="fa fa-check"></i><b>B</b> Exponential Prediction Interactive Plots</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -408,6 +408,19 @@ Similar to the training and education required to transition from logarithmic ma
 </div>
 <div id="underestimation" class="section level2" number="1.5">
 <h2><span class="header-section-number">1.5</span> Underestimation of Exponential Growth</h2>
+<div class="figure" style="text-align: center"><span id="fig:exponential-stages"></span>
+<img src="thesis_files/figure-html/exponential-stages-1.png" alt="Stages of exponential growth" width="75%"  />
+<p class="caption">
+Figure 1.4: Stages of exponential growth
+</p>
+</div>
+<p> <a href="https://twitter.com/MDrelichman/status/1402054093284143104">CITE</a></p>
+<div class="figure" style="text-align: center"><span id="fig:exponential-stages-comic"></span>
+<img src="images/exponential-stages-comic.jpg" alt="Log scale comic" width="70%"  />
+<p class="caption">
+Figure 1.5: Log scale comic
+</p>
+</div>
 <p>Early studies explored the estimation and prediction of exponential growth, finding that growth is underestimated when presented both numerically and graphically but that numerical estimation is more accurate than graphical estimation for exponential curves <span class="citation">(Wagenaar &amp; Sagaria, 1975)</span>.
 One way to improve estimation of increasing exponential trends is to provide immediate feedback to participants about the accuracy of their current predictions <span class="citation">(Mackinnon &amp; Wearing, 1991)</span>.
 While prior contextual knowledge or experience with exponential growth does not improve estimation, instruction on exponential growth reduces the underestimation: participants adjust their initial starting value but not their perception of growth rate <span class="citation">(Jones, 1977; Wagenaar &amp; Sagaria, 1975)</span>.

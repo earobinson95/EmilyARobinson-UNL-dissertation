@@ -1,6 +1,8 @@
 fig:graphic-flowchart
 fig:perceptual-process
 fig:log-scale-comic
+fig:exponential-stages
+fig:exponential-stages-comic
 fig:lineup-example
 fig:lof-density-curves
 fig:curvature-combination-example
@@ -16,7 +18,17 @@ fig:eyefitting-example-plot
 fig:eyefitting-lmer-residualplots
 fig:eyefitting-gamm-residualplots
 fig:eyefitting-ss-oddsratio
+fig:exponential-yloess-spaghetti-plot
+fig:exponential-prediction-gamm-preds
 fig:r2d3-shiny-flowchart
+fig:low-10-linear
+fig:low-10-log
+fig:low-15-linear
+fig:low-15-log
+fig:high-10-linear
+fig:high-10-log
+fig:high-15-linear
+fig:high-15-log
 literature-review
 introduction-to-graphics
 perception-and-psychophysics
@@ -27,7 +39,7 @@ research-objectives
 lineups
 introduction
 data-generation
-parameter-selection
+lineups-parameter-selection
 lineup-setup
 study-design
 results
@@ -38,11 +50,10 @@ past-methodology
 data-driven-documents
 study-design-1
 eye-fitting-straight-lines-in-the-modern-era
-data-simulation
+data-generation-1
 results-1
 prediction-of-exponential-trends
-data-simulation-1
-parameter-selection-1
+data-generation-2
 results-2
 discussion-and-conclusion-1
 estimation
@@ -50,3 +61,4 @@ introduction-2
 conclusion
 youdrawit-with-shiny
 d3.js-source-code
+exponential-prediction-plots

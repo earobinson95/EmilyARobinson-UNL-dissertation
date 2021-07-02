@@ -413,3 +413,38 @@ function setup_scales(state){
   };
 }
 ```
+
+# Exponential Prediction Interactive Plots {#exponential-prediction-plots}
+
+```{r low-10-linear, fig.height = 4, fig.width = 4, out.width = "75%", fig.cap = "Exponential Prediction Treatment Combination 1"}
+knitr::include_graphics("images/low-10-linear.png")
+```
+
+```{r low-10-log, fig.cap = "Exponential Prediction Treatment Combination 2", fig.height = 4, fig.width = 4, out.width = "75%",}
+knitr::include_graphics("images/low-10-log.png")
+```
+
+```{r low-15-linear, fig.cap = "Exponential Prediction Treatment Combination 3", fig.height = 4, fig.width = 4, out.width = "75%",}
+knitr::include_graphics("images/low-15-linear.png")
+```
+
+```{r low-15-log, fig.cap = "Exponential Prediction Treatment Combination 4", fig.height = 4, fig.width = 4, out.width = "75%",}
+knitr::include_graphics("images/low-15-log.png")
+```
+
+```{r high-10-linear, fig.cap = "Exponential Prediction Treatment Combination 5", fig.height = 4, fig.width = 4, out.width = "75%",}
+knitr::include_graphics("images/high-10-linear.png")
+```
+
+```{r high-10-log, fig.cap = "Exponential Prediction Treatment Combination 6", fig.height = 4, fig.width = 4, out.width = "75%",}
+knitr::include_graphics("images/high-10-log.png")
+```
+
+```{r high-15-linear, fig.cap = "Exponential Prediction Treatment Combination 7", fig.height = 4, fig.width = 4, out.width = "75%",}
+knitr::include_graphics("images/high-15-linear.png")
+```
+
+```{r high-15-log, fig.cap = "Exponential Prediction Treatment Combination 8", fig.height = 4, fig.width = 4, out.width = "75%",}
+knitr::include_graphics("images/high-15-log.png")
+```
+
