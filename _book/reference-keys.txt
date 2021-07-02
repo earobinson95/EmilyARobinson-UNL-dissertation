@@ -1,6 +1,7 @@
 fig:william-playfair-trade
 fig:statistical-atlas-state-population
 fig:ATandT-revenue
+fig:graphic-flowchart
 fig:perceptual-process
 fig:log-scale-comic
 fig:exponential-stages
@@ -33,6 +34,7 @@ fig:high-15-linear
 fig:high-15-log
 literature-review
 introduction-to-graphics
+misleading-graphics
 perception-and-psychophysics
 graphical-experiments
 logarithmic-scales-and-mapping
