@@ -106,7 +106,7 @@ In \cref{fig:lof-density-curves}, we can see the densities of each of the three 
 While the LOF statistic provides us a numerical value for discriminating between the difficulty levels, we cannot directly relate this to the perceptual discriminability; it serves primarily as an approximation to ensure that we are testing parameters at several distinct levels of difficulty. 
 Final parameter estimates are shown in \cref{tab:parameter-data}.
 
-```{r lof-density-curves, fig.height = 2.5, fig.width = 5, fig.cap = "Lack of fit statistic density curves", out.width = "100%"}
+```{r lof-density-curves, fig.height = 2.5, fig.width = 5, fig.cap = "Lack of fit statistic density curves", out.width = "75%"}
 lofData <- read.csv(file = "data/lineup-lof-data.csv")
 lofPlot_curvature <- lofData %>%
   mutate(Curvature = factor(Curvature, levels = c("Obvious Curvature", "Noticeable Curvature", "Almost Linear"), labels = c("High Curvature", "Medium Curvature", "Low Curvature"))) %>%
@@ -117,11 +117,11 @@ lofPlot_curvature <- lofData %>%
   scale_color_manual("Difficulty", values = c("#004400", "#116611", "#55aa55")) +
   theme_bw(base_size = 14) +
   theme(legend.position = "bottom",
-        axis.text    = element_text(size = 12),
-        axis.title   = element_text(size = 12),
-        legend.title = element_text(size = 12),
-        legend.text  = element_text(size = 12),
-        legend.key.size = unit(1, "line")
+        axis.text    = element_text(size = 10),
+        axis.title   = element_text(size = 10),
+        legend.title = element_text(size = 10),
+        legend.text  = element_text(size = 10),
+        legend.key.size = unit(0.5, "line")
         ) +
   scale_x_continuous("Lack of Fit Statistic") +
   scale_y_continuous("Density")

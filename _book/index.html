@@ -260,13 +260,13 @@ Circle size and numeric annotation within the circle indicate the number of squa
 The vertical bar to the left side represents the number of inhabitants (millions), and the line to the right side represents the revenue (million pounds).
 Coloration in the original figure, not shown, identifies countries as maritime powers or powerful by land only.
  displays the population of each state as compiled from the 1870 US census <span class="citation">(Walker &amp; others, 2013)</span>.
-Square size represents the proportion of the states population separated into three regions representing the foreign, native colored, and native white populations.
+Square size represents the proportion of the states population separated into three regions representing the origin and race of the population.
 The rectangle shown to the right represents the proportion of residents born in the state who have become residents of other states.
 In the <span class="math inline">\(\text{20}^{\text{th}}\)</span> century, companies began utilizing graphics to understand their mechanics and support business decisions and news sources began displaying graphics of weather forecasts as a means to communicate critical information and aid in decision-making <span class="citation">(Chandar, Collier, &amp; Miranti, 2012; Yates, 1985)</span>.
 <span class="citation">Chandar, Collier, &amp; Miranti (2012)</span> illustrates how AT&amp;T used graphics to demonstrate management’s ability to optimize utilization of assets by making comparisons between their annual net telephone revenues and their returns on total assets .
 <!-- \svp{Might want to add a set of pictures showing the different types of graphics from this sentence - playfair's balance of trade, statistical atlas, and something from e.g. early IBM?}.  -->
-Today, we encounter data visualizations everywhere, researchers include graphics to communicate their results in scientific publications and mass media present graphics in order to convey news stories to the public through newspapers, TV, and the Web <span class="citation">(Gouretski &amp; Koltermann, 2007; <span>“Live presidential forecast,”</span> n.d.)</span>.
-<span class="citation">NateSilver538 (2020)</span> tracked the 2020 US presidential election by communicating results of their forecast model to the public through a variety of interactive visualizations including a bar chart, snake chart, and electoral college maps.</p>
+Today, we encounter data visualizations everywhere; researchers include graphics to communicate their results in scientific publications and mass media present graphics in order to convey news stories to the public through newspapers, TV, and the Web <span class="citation">(Aisch et al., 2016; Gouretski &amp; Koltermann, 2007)</span>.
+<span class="citation">Silver (2020)</span> tracked the 2020 US presidential election by communicating results of their forecast model to the public through a variety of interactive visualizations including a bar chart, snake chart, and electoral college maps.</p>
 <div class="figure" style="text-align: center"><span id="fig:william-playfair-trade"></span>
 <img src="images/william-playfair-balance-trade.png" alt="William Playfair's balance of trate" width="75%"  />
 <p class="caption">
@@ -294,13 +294,16 @@ Figure 1.3: AT&amp;T utilization of assets
 <!-- Complex graphics tend to be more complicated to understand and require a certain degree and formality of training necessary to evaluate the graphic material [@haemer_presentation_1949]; the general public is untrained in the ability required for the evaluation of graphic material. -->
 <!-- The complexity of graphic devices is directly related to the degree and formality of training necessary for understanding [@haemer_presentation_1949].  -->
 <!-- \svp{This is 1. a bit hard to understand, and 2. seems to be a slightly different tone than before. Probably not the ideal way to end a paragraph.} -->
+<!-- It is important to consider the purpose and motivation behind the generation of the chart as well as the complexity and intended audience you intend to view the chart.  -->
+<!-- \svp{This is circling around to a different paragraph -- might be a sign that you need to tighten your argument a bit?} -->
+<!-- A general guideline when generating graphics is to keep it familiar in order to not intimidate your audience and to encourage further interaction from the viewers [@unwin_why_2020]. -->
 <p>Although statistical graphics have become widely used and valued in science, business, and in many other aspects of life, as creators of graphics, we are too accepting of them as default without asking critical questions about the graphics we create or view <span class="citation">(Unwin, 2020)</span>.
 <span class="citation">Vanderplas, Cook, &amp; Hofmann (2020)</span> poses the general question we must ask ourselves, “how effective is this graph at communicating useful information?”
 <!-- \rh{what do you/they mean by effective? you use "effective" later too so it is imortant to define or provide some examples/counter examples.} -->
 An effective graphic accurately shows the data through the appropriate chart selection, axes and scales, and aesthetic design choices in order to successfully communicate the intended result.
 <a href="index.html#misleading-graphics">Section 1.2</a> illustrates how graphics can be misleading and ineffective at communicating the intended result by inaccurately displaying the data.
 Higher quality of technology has influenced the creation, replication, and complexity of graphics as there are an infinitely many number of graphical displays and design choices that can be implemented at faster speeds with more flexibility.
-The creator of a graphic makes decisions about the variables displayed, the type of graphic, the size of the graphic and the aspect ratio, the colors and symbols used, the scales and limits, the ordering of categorical variables, and the ordering of variables in multivariate displays.
+The creator of a graphic makes decisions about the variables displayed, the type of graphic, the size of the graphic and the aspect ratio, the colors and symbols used, the scales and limits, and the ordering of categorical variables.
 In response to the increasing number of design choices, consistent themes and higher standards are being placed on graphics.
 Selecting from an extensive list of styles and choices of graphics in order to effectively communicate insights into the data is a challenging task.
 A consistent concern is the lack of theory of graphics available to build on; better theory should result in better graphics.
@@ -317,17 +320,23 @@ Software, such as Hadley Wickham’s ggplot2 <span class="citation">(Hadley Wick
 Figure 1.4: Graphic flowchart
 </p>
 </div>
-<p>These established guidelines provide the ground work necessary for data plots to be depicted and interpreted as statistics <span class="citation">(Buja et al., 2009; Majumder, Hofmann, &amp; Cook, 2013)</span>.
-<span class="citation">Vanderplas, Cook, &amp; Hofmann (2020)</span> define a statistic as, “a functional mapping of a variable or set of variables.”
-Later, it is illustrated how the construction of graphics as statistics aid themselves for easy experimentation which allows researchers to compare the effectiveness and understand the perception of different types of charts <span class="citation">(Vanderplas, Cook, &amp; Hofmann, 2020)</span>.</p>
-<p>It is important to consider the purpose and motivation behind the generation of the chart as well as the complexity and intended audience you intend to view the chart. 
-A general guideline when generating graphics is to keep it familiar in order to not intimidate your audience and to encourage further interaction from the viewers <span class="citation">(Unwin, 2020)</span>.
-Despite past attempts to improve the use of graphics in science, <span class="citation">Gordon &amp; Finch (2015)</span> evaluated 97 graphs for overall quality, based on five principles of graphical excellence, and found there is still an astonishing lack in the quality of graphics.
-
+<!-- \ear{Maybe move this to a testing graphics section} -->
+<!-- These established guidelines provide the ground work necessary for data plots to be depicted and interpreted as statistics [@buja_statistical_2009; @majumder_validation_2013].  -->
+<!-- @vanderplas_testing_2020 define a statistic as, "a functional mapping of a variable or set of variables". -->
+<!-- Later, it is illustrated how the construction of graphics as statistics aid themselves for easy experimentation which allows researchers to compare the effectiveness and understand the perception of different types of charts [@vanderplas_testing_2020]. -->
+<p>Despite past attempts to improve the use of graphics in science, <span class="citation">Gordon &amp; Finch (2015)</span> evaluated 97 graphs for overall quality, based on five principles of graphical excellence including: (1) show the data clearly (2) use simplicity in design (3) use good alignment on a common scale for quantities to be compared (4) keep the visual encoding transparent (5) use graphical forms consistent with principles 1 and 4.
+This study randomly sampled 97 graphs published in A* (top 5%) journals with work in statistics and applied science disciplines.
+There were 50 graphs sampled from the most recently available issues of A* journals in applied sciences such as environmental sciences, agricultural and veterinary sciences, medical and health sciences, education, economics, psychology.
+The additional 47 graphs were randomly sampled from statistics A* journals.
+Each graph was scored based on 60 features related to the five principles, such as proper axes labels.
+Both authors assigned an overall quality rating (poor, adequate, good, or exemplary) to each of the graphs sampled; discrepancies in ratings were settled with discussion.
+The authors rated 39% of the 97 graphs sampled as poor indicating there is still an astonishing lack in the quality of graphics.
+<!-- \rh{what type of graphs? how did they evaluate them?} -->
 More startling is the fact that the source of the graphic from an applied science or a statistics graphic had no effect on the quality of the graphic.
-The improvement in graphics depends on both a better definition of variables, units of measurements, scales, and other graphical elements as well as a typical use of grid lines on an accepted set of graphical forms.
-With the support of changes in software defaults, future work must be done in order to implement the academic research being conducted in graphics into practice for both academics and non-academics in order to achieve a higher standard of the graphics being presented <span class="citation">(Vanderplas, Cook, &amp; Hofmann, 2020)</span>.
-</p>
+In order to achieve a higher standard of the graphics being presented, future work must be done in order to implement the academic research being conducted in graphics into practice.
+<!-- \rh{Last sentence - I am not sure what you really want to say here.} -->
+<!-- Better definitions of variables, units of measurements, scales, and other graphical elements is necessary in order to improve the overall quality of graphics.  -->
+<!-- Changes in software defaults such as the originally set number of bins in a bar chart can help support the improvement of graphs in both statistics and the applied science.  --></p>
 </div>
 <div id="misleading-graphics" class="section level2" number="1.2">
 <h2><span class="header-section-number">1.2</span> Misleading Graphics</h2>

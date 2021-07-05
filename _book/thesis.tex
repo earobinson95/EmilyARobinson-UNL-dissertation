@@ -277,12 +277,12 @@ Circle size and numeric annotation within the circle indicate the number of squa
 The vertical bar to the left side represents the number of inhabitants (millions), and the line to the right side represents the revenue (million pounds).
 Coloration in the original figure, not shown, identifies countries as maritime powers or powerful by land only.
 \cref{fig:statistical-atlas-state-population} displays the population of each state as compiled from the 1870 US census (Walker \& others, 2013).
-Square size represents the proportion of the states population separated into three regions representing the foreign, native colored, and native white populations.
+Square size represents the proportion of the states population separated into three regions representing the origin and race of the population.
 The rectangle shown to the right represents the proportion of residents born in the state who have become residents of other states.
 In the \(\text{20}^{\text{th}}\) century, companies began utilizing graphics to understand their mechanics and support business decisions and news sources began displaying graphics of weather forecasts as a means to communicate critical information and aid in decision-making (Chandar, Collier, \& Miranti, 2012; Yates, 1985).
 Chandar, Collier, \& Miranti (2012) illustrates how AT\&T used graphics to demonstrate management's ability to optimize utilization of assets by making comparisons between their annual net telephone revenues and their returns on total assets \pcref{fig:ATandT-revenue}.
-Today, we encounter data visualizations everywhere, researchers include graphics to communicate their results in scientific publications and mass media present graphics in order to convey news stories to the public through newspapers, TV, and the Web (Gouretski \& Koltermann, 2007; {``Live presidential forecast,''} n.d.).
-NateSilver538 (2020) tracked the 2020 US presidential election by communicating results of their forecast model to the public through a variety of interactive visualizations including a bar chart, snake chart, and electoral college maps.
+Today, we encounter data visualizations everywhere; researchers include graphics to communicate their results in scientific publications and mass media present graphics in order to convey news stories to the public through newspapers, TV, and the Web (Aisch et al., 2016; Gouretski \& Koltermann, 2007).
+Silver (2020) tracked the 2020 US presidential election by communicating results of their forecast model to the public through a variety of interactive visualizations including a bar chart, snake chart, and electoral college maps.
 
 \begin{figure}[tbp]
 
@@ -316,7 +316,7 @@ Vanderplas, Cook, \& Hofmann (2020) poses the general question we must ask ourse
 An effective graphic accurately shows the data through the appropriate chart selection, axes and scales, and aesthetic design choices in order to successfully communicate the intended result.
 \protect\hyperlink{misleading-graphics}{Section 1.2} illustrates how graphics can be misleading and ineffective at communicating the intended result by inaccurately displaying the data.
 Higher quality of technology has influenced the creation, replication, and complexity of graphics as there are an infinitely many number of graphical displays and design choices that can be implemented at faster speeds with more flexibility.
-The creator of a graphic makes decisions about the variables displayed, the type of graphic, the size of the graphic and the aspect ratio, the colors and symbols used, the scales and limits, the ordering of categorical variables, and the ordering of variables in multivariate displays.
+The creator of a graphic makes decisions about the variables displayed, the type of graphic, the size of the graphic and the aspect ratio, the colors and symbols used, the scales and limits, and the ordering of categorical variables.
 In response to the increasing number of design choices, consistent themes and higher standards are being placed on graphics.
 Selecting from an extensive list of styles and choices of graphics in order to effectively communicate insights into the data is a challenging task.
 A consistent concern is the lack of theory of graphics available to build on; better theory should result in better graphics.
@@ -338,18 +338,15 @@ Software, such as Hadley Wickham's ggplot2 (Hadley Wickham, 2011), aims to imple
 \caption{Graphic flowchart}\label{fig:graphic-flowchart}
 \end{figure}
 
-These established guidelines provide the ground work necessary for data plots to be depicted and interpreted as statistics (Buja et al., 2009; Majumder, Hofmann, \& Cook, 2013).
-Vanderplas, Cook, \& Hofmann (2020) define a statistic as, ``a functional mapping of a variable or set of variables.''
-Later, it is illustrated how the construction of graphics as statistics aid themselves for easy experimentation which allows researchers to compare the effectiveness and understand the perception of different types of charts (Vanderplas, Cook, \& Hofmann, 2020).
-
-It is important to consider the purpose and motivation behind the generation of the chart as well as the complexity and intended audience you intend to view the chart. \svp{This is circling around to a different paragraph -- might be a sign that you need to tighten your argument a bit?}
-A general guideline when generating graphics is to keep it familiar in order to not intimidate your audience and to encourage further interaction from the viewers (Unwin, 2020).
-Despite past attempts to improve the use of graphics in science, Gordon \& Finch (2015) evaluated 97 graphs for overall quality, based on five principles of graphical excellence, and found there is still an astonishing lack in the quality of graphics.
-\rh{what type of graphs? how did they evaluate them?}
+Despite past attempts to improve the use of graphics in science, Gordon \& Finch (2015) evaluated 97 graphs for overall quality, based on five principles of graphical excellence including: (1) show the data clearly (2) use simplicity in design (3) use good alignment on a common scale for quantities to be compared (4) keep the visual encoding transparent (5) use graphical forms consistent with principles 1 and 4.
+This study randomly sampled 97 graphs published in A* (top 5\%) journals with work in statistics and applied science disciplines.
+There were 50 graphs sampled from the most recently available issues of A* journals in applied sciences such as environmental sciences, agricultural and veterinary sciences, medical and health sciences, education, economics, psychology.
+The additional 47 graphs were randomly sampled from statistics A* journals.
+Each graph was scored based on 60 features related to the five principles, such as proper axes labels.
+Both authors assigned an overall quality rating (poor, adequate, good, or exemplary) to each of the graphs sampled; discrepancies in ratings were settled with discussion.
+The authors rated 39\% of the 97 graphs sampled as poor indicating there is still an astonishing lack in the quality of graphics.
 More startling is the fact that the source of the graphic from an applied science or a statistics graphic had no effect on the quality of the graphic.
-The improvement in graphics depends on both a better definition of variables, units of measurements, scales, and other graphical elements as well as a typical use of grid lines on an accepted set of graphical forms.
-With the support of changes in software defaults, future work must be done in order to implement the academic research being conducted in graphics into practice for both academics and non-academics in order to achieve a higher standard of the graphics being presented (Vanderplas, Cook, \& Hofmann, 2020).
-\rh{Last sentence - I am not sure what you really want to say here.}
+In order to achieve a higher standard of the graphics being presented, future work must be done in order to implement the academic research being conducted in graphics into practice.
 
 \hypertarget{misleading-graphics}{%
 \section{Misleading Graphics}\label{misleading-graphics}}
@@ -1731,6 +1728,9 @@ In this section I outline the data simulation process conducted in R, constructi
 
 \hypertarget{refs}{}
 \begin{CSLReferences}{1}{0}
+\leavevmode\hypertarget{ref-NYTimes_presidential_forecast}{}%
+Aisch, G., Cohn, N., Cox, A., Katz, J., Pearce, A., \& Quealy, K. (2016). Live presidential forecast. \emph{The New York Times}. The New York Times. Retrieved from \url{https://www.nytimes.com/elections/2016/forecast/president}
+
 \leavevmode\hypertarget{ref-aisch_cox_quealy_2015}{}%
 Aisch, G., Cox, A., \& Quealy, K. (2015, May). You draw it: How family income predicts children's college chances. \emph{The New York Times}. The New York Times. Retrieved from \url{https://www.nytimes.com/interactive/2015/05/28/upshot/you-draw-it-how-family-income-affects-childrens-college-chances.html}
 
@@ -1830,9 +1830,6 @@ Lenth, R. V. (2021). \emph{Emmeans: Estimated marginal means, aka least-squares 
 \leavevmode\hypertarget{ref-lewandowsky_perception_1989}{}%
 Lewandowsky, S., \& Spence, I. (1989). The {Perception} of {Statistical} {Graphs}. \emph{Sociological Methods \& Research}, \emph{18}(2-3), 200--242. http://doi.org/\href{https://doi.org/10.1177/0049124189018002002}{10.1177/0049124189018002002}
 
-\leavevmode\hypertarget{ref-NYTimes_presidential_forecast}{}%
-Live presidential forecast. (n.d.). \emph{The New York Times}. The New York Times. Retrieved from \url{https://www.nytimes.com/elections/2016/forecast/president}
-
 \leavevmode\hypertarget{ref-loy_variations_2016}{}%
 Loy, A., Follett, L., \& Hofmann, H. (2016). Variations of \emph{q} -- \emph{q} {Plots}: {The} {Power} of {Our} {Eyes}! \emph{The American Statistician}, \emph{70}(2), 202--214. http://doi.org/\href{https://doi.org/10.1080/00031305.2015.1077728}{10.1080/00031305.2015.1077728}
 
@@ -1857,9 +1854,6 @@ Mosteller, F., Siegel, A. F., Trapido, E., \& Youtz, C. (1981). Eye {Fitting} {S
 \leavevmode\hypertarget{ref-munroe_2005}{}%
 Munroe, R. (2005). Log scale. \emph{xkcd: A webcomic of romance, sarcasm, math, and language}. Creative Commons. Retrieved from \url{https://xkcd.com/1162/}
 
-\leavevmode\hypertarget{ref-natesilver538_2020}{}%
-NateSilver538. (2020, November). 2020 election forecast. \emph{FiveThirtyEight}. Retrieved from \url{https://projects.fivethirtyeight.com/2020-election-forecast/}
-
 \leavevmode\hypertarget{ref-nieder2003coding}{}%
 Nieder, A., \& Miller, E. K. (2003). Coding of cognitive magnitude: Compressed scaling of numerical information in the primate prefrontal cortex. \emph{Neuron}, \emph{37}(1), 149--157.
 
@@ -1883,6 +1877,9 @@ Shah, P., Mayer, R. E., \& Hegarty, M. (1999). Graphs as aids to knowledge const
 
 \leavevmode\hypertarget{ref-siegler_numerical_2017}{}%
 Siegler, R. S., \& Braithwaite, D. W. (2017). Numerical {Development}. \emph{Annual Review of Psychology}, \emph{68}(1), 187--213. http://doi.org/\href{https://doi.org/10.1146/annurev-psych-010416-044101}{10.1146/annurev-psych-010416-044101}
+
+\leavevmode\hypertarget{ref-natesilver538_2020}{}%
+Silver, N. (2020, November). 2020 election forecast. \emph{FiveThirtyEight}. Retrieved from \url{https://projects.fivethirtyeight.com/2020-election-forecast/}
 
 \leavevmode\hypertarget{ref-spence_visual_1990}{}%
 Spence, I. (1990). Visual psychophysics of simple graphical elements. \emph{Journal of Experimental Psychology: Human Perception and Performance}, \emph{16}(4), 683--692. http://doi.org/\href{https://doi.org/10.1037/0096-1523.16.4.683}{10.1037/0096-1523.16.4.683}
