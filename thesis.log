@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.5.4)  3 JUL 2021 17:11
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.5.4)  5 JUL 2021 14:04
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1701,190 +1701,205 @@ File: images/graphic-flowchart.png Graphic file (type bmp)
 [5] [6]
 File: images/perceptual-process-goldsein-pg5.png Graphic file (type bmp)
 <images/perceptual-process-goldsein-pg5.png>
-[7] [8] [9] [10] [11] [12] [13]
+[7] [8] [9] [10]
+File: images/eells-component-parts.png Graphic file (type bmp)
+<images/eells-component-parts.png>
+File: images/spence-1990-proportion.png Graphic file (type bmp)
+<images/spence-1990-proportion.png>
+[11]
+
+LaTeX Warning: Reference `amer-poggendorff-illusion' on page 1 undefined on inp
+ut line 444.
+
+[12] [13]
+File: images/amer-poggendorff-illusion.png Graphic file (type bmp)
+<images/amer-poggendorff-illusion.png>
+File: images/framed-murder-rate-map.png Graphic file (type bmp)
+<images/framed-murder-rate-map.png>
+[14] [15] [16]
 File: images/log-scale-comic.png Graphic file (type bmp)
 <images/log-scale-comic.png>
-[14] [15] [16]
+[17] [18] [19]
 File: thesis_files/figure-latex/exponential-stages-1.pdf Graphic file (type pdf
 )
 <use thesis_files/figure-latex/exponential-stages-1.pdf>
 File: images/exponential-stages-comic.jpg Graphic file (type bmp)
 <images/exponential-stages-comic.jpg>
-[17] [18] [19] [20] [21] [22
+[20] [21] [22] [23] [24] [25
 
 ]
 File: thesis_files/figure-latex/lineup-example-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/lineup-example-1.pdf>
-[23] [24]
+[26] [27]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 600.
-[25]
+put line 657.
+[28]
 File: thesis_files/figure-latex/lof-density-curves-1.pdf Graphic file (type pdf
 )
 <use thesis_files/figure-latex/lof-density-curves-1.pdf>
-[26]
+[29]
 File: thesis_files/figure-latex/curvature-combination-example-1.pdf Graphic fil
 e (type pdf)
 <use thesis_files/figure-latex/curvature-combination-example-1.pdf>
-[27] [28] [29] [30]
+[30] [31] [32] [33]
 File: thesis_files/figure-latex/odds-ratio-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/odds-ratio-plot-1.pdf>
-[31] [32] [33] [34
+[34] [35] [36] [37
 
 ]
 File: images/subjective-judgement-plot.png Graphic file (type bmp)
 <images/subjective-judgement-plot.png>
-[35]
+[38]
 File: images/eyefitting-straight-lines-plots.png Graphic file (type bmp)
 <images/eyefitting-straight-lines-plots.png>
-[36]
+[39]
 File: images/nyt-caraccidents-frame4.png Graphic file (type bmp)
 <images/nyt-caraccidents-frame4.png>
-[37]
+[40]
 File: images/raster-vs-vector.png Graphic file (type bmp)
 <images/raster-vs-vector.png>
-[38]
+[41]
 File: images/ydiExample-0.10-10-linear.png Graphic file (type bmp)
 <images/ydiExample-0.10-10-linear.png>
-[39] [40] [41]
+[42] [43] [44]
 File: thesis_files/figure-latex/eyefitting-simplot-1.pdf Graphic file (type pdf
 )
 <use thesis_files/figure-latex/eyefitting-simplot-1.pdf>
-[42] [43]
+[45] [46]
 File: thesis_files/figure-latex/ols-vs-pca-example-1.pdf Graphic file (type pdf
 )
 <use thesis_files/figure-latex/ols-vs-pca-example-1.pdf>
 File: thesis_files/figure-latex/eyefitting-example-plot-1.pdf Graphic file (typ
 e pdf)
 <use thesis_files/figure-latex/eyefitting-example-plot-1.pdf>
-[44] [45] [46]
+[47] [48] [49]
 File: thesis_files/figure-latex/eyefitting-lmer-residualplots-1.pdf Graphic fil
 e (type pdf)
 <use thesis_files/figure-latex/eyefitting-lmer-residualplots-1.pdf>
 File: thesis_files/figure-latex/eyefitting-gamm-residualplots-1.pdf Graphic fil
 e (type pdf)
 <use thesis_files/figure-latex/eyefitting-gamm-residualplots-1.pdf>
-[47] [48]
+[50] [51]
 File: thesis_files/figure-latex/eyefitting-ss-oddsratio-1.pdf Graphic file (typ
 e pdf)
 <use thesis_files/figure-latex/eyefitting-ss-oddsratio-1.pdf>
-[49]
+[52]
 
 LaTeX Warning: Reference `alg:exponential-prediction-algorithm' on page 1 undef
-ined on input line 1117.
+ined on input line 1174.
 
-[50] [51]
+[53] [54]
 File: thesis_files/figure-latex/exponential-yloess-spaghetti-plot-1.pdf Graphic
  file (type pdf)
 <use thesis_files/figure-latex/exponential-yloess-spaghetti-plot-1.pdf>
-[52]
+[55]
 File: thesis_files/figure-latex/exponential-prediction-gamm-preds-1.pdf Graphic
  file (type pdf)
 <use thesis_files/figure-latex/exponential-prediction-gamm-preds-1.pdf>
-[53] [54] [55] [56
+[56] [57] [58] [59
 
-] [57
+] [60
 
 ]
 File: images/r2d3+shiny-inkscape.png Graphic file (type bmp)
 <images/r2d3+shiny-inkscape.png>
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1288.
-[58
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1345.
+[61
 
 ]
-Underfull \vbox (badness 10000) detected at line 1640
+Underfull \vbox (badness 10000) detected at line 1697
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1640
- []
-
-[59]
-Underfull \vbox (badness 10000) detected at line 1640
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1640
- []
-
-[60]
-Underfull \vbox (badness 10000) detected at line 1640
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1640
- []
-
-[61]
-Underfull \vbox (badness 10000) detected at line 1640
+Underfull \vbox (badness 10000) detected at line 1697
  []
 
 [62]
-Underfull \vbox (badness 10000) detected at line 1640
+Underfull \vbox (badness 10000) detected at line 1697
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1640
+Underfull \vbox (badness 10000) detected at line 1697
  []
 
 [63]
-Underfull \vbox (badness 10000) detected at line 1640
+Underfull \vbox (badness 10000) detected at line 1697
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1640
+Underfull \vbox (badness 10000) detected at line 1697
  []
 
 [64]
-Underfull \vbox (badness 10000) detected at line 1640
- []
-
-
-Overfull \vbox (0.97333pt too high) detected at line 1640
+Underfull \vbox (badness 10000) detected at line 1697
  []
 
 [65]
-Underfull \vbox (badness 10000) detected at line 1640
+Underfull \vbox (badness 10000) detected at line 1697
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1640
+Underfull \vbox (badness 10000) detected at line 1697
  []
 
 [66]
-Underfull \vbox (badness 10000) detected at line 1640
+Underfull \vbox (badness 10000) detected at line 1697
  []
 
 
-Overfull \vbox (0.20332pt too high) detected at line 1640
+Underfull \vbox (badness 10000) detected at line 1697
  []
 
 [67]
-Underfull \vbox (badness 10000) detected at line 1640
+Underfull \vbox (badness 10000) detected at line 1697
  []
 
 
-Overfull \vbox (0.96333pt too high) detected at line 1640
+Overfull \vbox (0.97333pt too high) detected at line 1697
  []
 
 [68]
-Underfull \vbox (badness 10000) detected at line 1640
+Underfull \vbox (badness 10000) detected at line 1697
  []
 
 
-Overfull \vbox (0.96333pt too high) detected at line 1640
+Underfull \vbox (badness 10000) detected at line 1697
  []
 
 [69]
-Underfull \vbox (badness 10000) detected at line 1640
+Underfull \vbox (badness 10000) detected at line 1697
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1640
+Overfull \vbox (0.20332pt too high) detected at line 1697
  []
 
-[70] [71]
+[70]
+Underfull \vbox (badness 10000) detected at line 1697
+ []
+
+
+Overfull \vbox (0.96333pt too high) detected at line 1697
+ []
+
+[71]
+Underfull \vbox (badness 10000) detected at line 1697
+ []
+
+
+Overfull \vbox (0.96333pt too high) detected at line 1697
+ []
+
+[72]
+Underfull \vbox (badness 10000) detected at line 1697
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1697
+ []
+
+[73] [74]
 File: images/low-10-linear.png Graphic file (type bmp)
 <images/low-10-linear.png>
 File: images/low-10-log.png Graphic file (type bmp)
@@ -1901,19 +1916,19 @@ File: images/high-15-linear.png Graphic file (type bmp)
 <images/high-15-linear.png>
 File: images/high-15-log.png Graphic file (type bmp)
 <images/high-15-log.png>
-[72
+[75
 
-] [73] [74] [75] [76] [77
+] [76] [77] [78] [79] [80
 
-] [78] [79] [80] [81] [82] [83] [84] [85]
+] [81] [82] [83] [84] [85] [86] [87] [88] [89]
 No file thesis.bbl.
 
 Class memoir Warning: The material used in the footer is too large
 (10.14995pt) for the given foot skip (0.0pt), it is recommended to
 either increase the foot skip or redesign the footer
-(in both cases you will find help in the memoir manual). on input line 1973.
+(in both cases you will find help in the memoir manual). on input line 2048.
 
-[86]
+[90]
 \tf@toc=\write7
 \openout7 = `thesis.toc'.
 
@@ -1928,15 +1943,15 @@ either increase the foot skip or redesign the footer
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: AD2DBD270CB2AABF903383DF88FFE919;2192.
+(rerunfilecheck)             Checksum: C3B1C44806A14A1F41779661EDF6CDBA;2192.
  ) 
 Here is how much of TeX's memory you used:
- 37064 strings out of 411690
- 684242 string characters out of 2834884
- 1109645 words of memory out of 3000000
- 56478 multiletter control sequences out of 15000+600000
+ 37117 strings out of 411690
+ 685992 string characters out of 2834884
+ 1110390 words of memory out of 3000000
+ 56527 multiletter control sequences out of 15000+600000
  409730 words of font info for 70 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  126i,12n,130p,2589b,490s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (92 pages).
+Output written on thesis.pdf (96 pages).

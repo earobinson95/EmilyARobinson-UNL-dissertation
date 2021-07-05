@@ -271,8 +271,8 @@
 
 Advanced technology and computing power have promoted data visualization as a central tool in modern data science. Unwin (2020) defines data visualization as the art of drawing graphical charts in order to display data.
 Graphics are useful for data cleaning, exploring data structure, and have been an essential component in communicating information for the last 200 years (Lewandowsky \& Spence, 1989)
-During the \(\text{18}^{\text{th}}\) and \(\text{19}^{\text{th}}\) centuries, governments began using graphics in order to better understand their population and economic interests(Harms, 1991; Playfair, 1801; Walker \& others, 2013).
-In \cref{fig:william-playfair-trade}, Playfair (1801) visually represent the power and economic status of each European Nation in the early \(\text{19}^{\text{th}}\) century.
+During the \(\text{18}^{\text{th}}\) and \(\text{19}^{\text{th}}\) centuries, governments began using graphics in order to better understand their population and economic interests (Harms, 1991; Playfair, 1801; Walker \& others, 2013).
+In \cref{fig:william-playfair-trade}, Playfair (1801) visually represents the power and economic status of each European Nation in the early \(\text{19}^{\text{th}}\) century.
 Circle size and numeric annotation within the circle indicate the number of square miles in each country with the number of people per square mile indicated above the circle.
 The vertical bar to the left side represents the number of inhabitants (millions), and the line to the right side represents the revenue (million pounds).
 Coloration in the original figure, not shown, identifies countries as maritime powers or powerful by land only.
@@ -281,8 +281,7 @@ Square size represents the proportion of the states population separated into th
 The rectangle shown to the right represents the proportion of residents born in the state who have become residents of other states.
 In the \(\text{20}^{\text{th}}\) century, companies began utilizing graphics to understand their mechanics and support business decisions and news sources began displaying graphics of weather forecasts as a means to communicate critical information and aid in decision-making (Chandar, Collier, \& Miranti, 2012; Yates, 1985).
 Chandar, Collier, \& Miranti (2012) illustrates how AT\&T used graphics to demonstrate management's ability to optimize utilization of assets by making comparisons between their annual net telephone revenues and their returns on total assets \pcref{fig:ATandT-revenue}.
-Today, we encounter data visualizations everywhere; researchers include graphics to communicate their results in scientific publications and mass media present graphics in order to convey news stories to the public through newspapers, TV, and the Web (Aisch et al., 2016; Gouretski \& Koltermann, 2007).
-Silver (2020) tracked the 2020 US presidential election by communicating results of their forecast model to the public through a variety of interactive visualizations including a bar chart, snake chart, and electoral college maps.
+Today, we encounter data visualizations everywhere; researchers include graphics to communicate their results in scientific publications and mass media present graphics in order to convey news stories to the public through newspapers, TV, and the Web (Aisch et al., 2016; Gouretski \& Koltermann, 2007; Silver, 2020).
 
 \begin{figure}[tbp]
 
@@ -315,6 +314,7 @@ Although statistical graphics have become widely used and valued in science, bus
 Vanderplas, Cook, \& Hofmann (2020) poses the general question we must ask ourselves, ``how effective is this graph at communicating useful information?''
 An effective graphic accurately shows the data through the appropriate chart selection, axes and scales, and aesthetic design choices in order to successfully communicate the intended result.
 \protect\hyperlink{misleading-graphics}{Section 1.2} illustrates how graphics can be misleading and ineffective at communicating the intended result by inaccurately displaying the data.
+
 Higher quality of technology has influenced the creation, replication, and complexity of graphics as there are an infinitely many number of graphical displays and design choices that can be implemented at faster speeds with more flexibility.
 The creator of a graphic makes decisions about the variables displayed, the type of graphic, the size of the graphic and the aspect ratio, the colors and symbols used, the scales and limits, and the ordering of categorical variables.
 In response to the increasing number of design choices, consistent themes and higher standards are being placed on graphics.
@@ -338,7 +338,7 @@ Software, such as Hadley Wickham's ggplot2 (Hadley Wickham, 2011), aims to imple
 \caption{Graphic flowchart}\label{fig:graphic-flowchart}
 \end{figure}
 
-Despite past attempts to improve the use of graphics in science, Gordon \& Finch (2015) evaluated 97 graphs for overall quality, based on five principles of graphical excellence including: (1) show the data clearly (2) use simplicity in design (3) use good alignment on a common scale for quantities to be compared (4) keep the visual encoding transparent (5) use graphical forms consistent with principles 1 and 4.
+Despite past attempts to improve the use of graphics in science, graphics displayed in academic research are still falling short of the standards. Gordon \& Finch (2015) evaluated 97 graphs for overall quality, based on five principles of graphical excellence including: (1) show the data clearly (2) use simplicity in design (3) use good alignment on a common scale for quantities to be compared (4) keep the visual encoding transparent (5) use graphical forms consistent with principles 1 and 4.
 This study randomly sampled 97 graphs published in A* (top 5\%) journals with work in statistics and applied science disciplines.
 There were 50 graphs sampled from the most recently available issues of A* journals in applied sciences such as environmental sciences, agricultural and veterinary sciences, medical and health sciences, education, economics, psychology.
 The additional 47 graphs were randomly sampled from statistics A* journals.
@@ -346,7 +346,7 @@ Each graph was scored based on 60 features related to the five principles, such 
 Both authors assigned an overall quality rating (poor, adequate, good, or exemplary) to each of the graphs sampled; discrepancies in ratings were settled with discussion.
 The authors rated 39\% of the 97 graphs sampled as poor indicating there is still an astonishing lack in the quality of graphics.
 More startling is the fact that the source of the graphic from an applied science or a statistics graphic had no effect on the quality of the graphic.
-In order to achieve a higher standard of the graphics being presented, future work must be done in order to implement the academic research being conducted in graphics into practice.
+In order to achieve a higher standard of the graphics being presented, future work must be done to implement the academic research being conducted in graphics into practice.
 
 \hypertarget{misleading-graphics}{%
 \section{Misleading Graphics}\label{misleading-graphics}}
@@ -354,10 +354,17 @@ In order to achieve a higher standard of the graphics being presented, future wo
 \hypertarget{perception-and-psychophysics}{%
 \section{Perception and Psychophysics}\label{perception-and-psychophysics}}
 
-\rh{Can you provide other references about the "perceptual process"?}
-
 In order to develop guiding principles for generating graphics effective in communication, we must first understand the basic mechanics of the human perceptual system and the biases we are vulnerable to (Goldstein \& Brockmole, 2017).
-The perceptual process is complex and involved \pcref{fig:perceptual-process}.
+The perceptual process is a sequence of steps used to describe a how a stimulus in the environment leads to our perception of the stimulus and action in response to the stimulus \pcref{fig:perceptual-process}.
+This process is broken down into sensation (Carlson, 2010) - involving simple processes that occur right at the beginning of a sensory system - and perception (Myers \& DeWall, 2021) - involving higher-order mechanisms and identified with more complex processes.
+
+The perceptual process begins when there is a stimulus in the environment and light is reflected and focused back into the viewer's eyes.
+Within the eye, the light reflected is transformed and focused by the eye's optical system and an image is formed on the receptors of the viewer's retina.
+It is important to note that everything a person perceives is based not on direct contact with stimuli but on representations of stimuli that are formed on the receptors and the resulting activity in the person's nervous system.
+Once light is reflected and focused, our visual receptors respond to the light and transform the light energy into electrical energy through a process called transduction.
+Signals from the receptors are then transmitted through the retina, to the brain, and then within the brain where perception - what do you see? - and recognition - what is it called? - occur.
+After recognition, viewers take some sort of motor action - for example, move closer to the object.
+The perceptual process is not direct and instead takes on more of a cyclic nature where a person may go through many iterations of stimuli, perception, recognition, and action before the final image is identified and understood (M. A. Peterson, 1994).
 
 \begin{figure}[tbp]
 
@@ -368,55 +375,105 @@ The perceptual process is complex and involved \pcref{fig:perceptual-process}.
 \caption{Perceptual process}\label{fig:perceptual-process}
 \end{figure}
 
-This process is broken down into sensation - involving simple processes that occur right at the beginning of a sensory system - and perception - involving higher-order mechanisms and identified with more complex processes.
-The perceptual process begins when there is a stimulus in the environment and light is reflected and focused back into the viewer's eyes.
-Within the eye, the light reflected is transformed and focused by the eye's optical system and an image is formed on the receptors of the viewer's retina.
-It is important to note that everything a person perceives is based not on direct contact with stimuli but on representations of stimuli that are formed on the receptors and the resulting activity in the person's nervous system.
-Once light is reflected and focused, our visual receptors respond to the light and transform the light energy into electrical energy through a process called transduction.
-Signals from the receptors are then transmitted through the retina, to the brain, and then within the brain where perception - what do you see? - and recognition - what is it called? - occur.
-After recognition, viewers take some sort of motor action - for example, move closer to the object.
-The perceptual process is not direct and instead takes on more of a cyclic nature where a person may go through many iterations of stimuli, perception, recognition, and action before the final image is identified and understood.
-
-When perception occurs, we first experience the \textbf{preattentive stage} in which we observe color, shape, size, and other basic information about the stimuli being perceived. Preattentive perception effects are automatically processed within the first 500 millisectonds of viewing and do not depend on sustained cognitive attention (Vanderplas, Cook, \& Hofmann, 2020).
+When perception occurs, we first experience the \textbf{preattentive stage} in which we observe color, shape, size, and other basic information about the stimuli being perceived. Preattentive perception effects are automatically processed within the first 500 milliseconds of viewing and do not depend on sustained cognitive attention (Vanderplas, Cook, \& Hofmann, 2020).
 Following the preattentive stage, \textbf{direct attention} is required for additional processing to allow us to draw connections between components that assist in our interpretation of the stimuli.
 When viewing a chart or graph, most insights we gain are due to the cognitive processes that occur after attention is focused on specific aspects of the graph.
-The knowledge a viewer brings to the situation influences their cognitive evaluation of the stimuli. \svp{Citation? You should probably also provide a bit more context for this piece of the paragraph instead of ending with dropping this one fact...} \rh{Agreed.}
 
-The relationship between physiology and perception can provide us information about how graphics may be understood and interpreted. \rh{How?}
+The relationship between physiology and perception can provide us information about how graphics may be understood and interpreted.
+Through experimentation, the physiological response (automatic reaction) is related to the behavioral response (perception, recognition, and action).
+Furmanski \& Engel (2000) tested behavioral responses with functional magnetic resonance imaging (fMRI) techniques to show that the the human visual system is more sensitive to horizontal and vertical stimuli than to stimuli at other orientations.
 According to a cognitive analysis, graph interpretation involves (a) relatively simple pattern perception and association processes in which viewers can associate graphic patterns to quantitative referents and (b) more complex and error-prone inferential processes in which viewers must mentally transform data (Shah, Mayer, \& Hegarty, 1999).
-Pyschophysics, the branch of psychology that deals with the relationships between physical stimuli (e.g.~light) and mental phenomena, aims to provide explanations of this relationship and point out human perceptual biases.
+Shah \& Carpenter (1995) establish the process in which viewers interact with charts by first perceptually observing the visual features and later translating to cognitive processing of the information depicted by those features.
+A viewer must first encode the visual array by identifying meaningful visual features (e.g.~a straight light slanting downward).
+Next, the viewer must classify the quantitative measures and relationships in which those visual features illustrate (e.g.~a decreasing linear relationship between x and y).
+The last step involves translating the quantitative measures and relationships to the variables defined in the data set (e.g.~a population decreasing over years).
+Pyschophysics, the branch of psychology that deals with the relationships between physical stimuli (e.g.~light) and mental phenomena, aims to provide explanations of the relationship between physiology and perception and point out human perceptual biases.
 By examining both behavior and physiology together, we are able to understand the mechanisms responsible for perception.
 
 \hypertarget{graphical-experiments}{%
 \section{Graphical Experiments}\label{graphical-experiments}}
 
-One way in which we determine the relationship between behavior and physiology is through the use of graphical tests.
-\rh{can you provide references? Especially for the examples?}
-These tests may take many forms: identifying differences in graphs, reading information
-off of a chart accurately, using data to make correct real-world decisions, or predicting the next few observations.
+One way in which we determine the relationship between behavior and physiology is through the use of graphical tests (Cleveland \& McGill, 1984; Lewandowsky \& Spence, 1989; Spence, 1990; VanderPlas \& Hofmann, 2015).
+These tests may take many forms: identifying differences in graphs, reading information off of a chart accurately, using data to make correct real-world decisions, or predicting the next few observations.
 All of these types of tests require different levels of use and manipulation of the information presented in the chart.
-The initial push to develop classification and recommendation systems for charts was grounded on heuristics rather than on experimentation (Vanderplas, Cook, \& Hofmann, 2020).
+
+The initial push to develop classification and recommendation systems for charts was grounded on heuristics rather than on experimentation (Kruskal, 1975; Macdonald-Ross, 1977).
 Request were made for the validation of the perception and utility of statistical charts through graphical experiments.
 Initial experiments struggled with methodological issues (Croxton \& Stein, 1932; Croxton \& Stryker, 1927; Eells, 1926) with most early experimentation stemming from psychophysics research on the perception of size and shape (Teghtsoonian, 1965).
-\rh{"struggled with methodological issues" - examples?}
-While a typical psychophysics experiment focuses on whether an effect is detectable and whether the magnitude of the effect can be accurately estimated, these early experiments instead depended on speed and accuracy for plot evaluation (Lewandowsky \& Spence, 1989; Spence, 1990; Teghtsoonian, 1965). \rh{Examples?}
+Eells (1926) instructed students to think of each circle as representing 100\% and write their best estimate of the percentage of the whole in each sector \pcref{fig:eells-compoment-parts}.
+Participants were told not to hurry, but to work steadily in order to determine efficiency of judgment.
+Students were then asked to analyze their mental processes used to make their estimates and indicate the method that best matches: by areas of sectors, by central angles, by arcs on the circumference, by subtending chords.
+This process was repeated three days later by presenting students the same data represented in bar diagrams.
+Results of the study lead the authors to argue for the use of circle diagrams to show component parts based on both accuracy and speed.
+In response, Croxton \& Stryker (1927) evaluated the accuracy of judgment of two types of charts (bars and circles) in efforts to reach a consistent conclusion.
+During class, students were individually presented pairs of diagrams (without scales) on cards and asked to estimate the percentages displayed in the diagram.
+It was found that the bar was preferable to the circle when shown percentages that deviate from quarters, but that the circle is strongly preferred when shown percentages separating the diagrams into 25\% or 50\%.
 
-Cognitive psychologists and statisticians made progress by conducting experiments to identify perceptual errors \rh{Examples?} associated with different styles of graphics and charts (Cleveland \& McGill, 1985; Spence, 1990).
-These later experiments relied on similar methodology as early studies by relying on participants directly reading information from the charts to provide a quantitative estimate or answering a predefined question; as with the early studies, accuracy and response time being evaluated (Amer, 2005; Broersma \& Molenaar, 1985; Cleveland \& McGill, 1984; Dunn, 1988; Peterson \& Schramm, 1954; Tan, 1994). \svp{Too much use of "rely/relied", provide some examples of quantitative estimation questions -- this will better support Ch4}
-Cleveland \& McGill (1984) provide a basis for perceptual judgment, still utilized today, by examining six basic stimuli\svp{Not really stimuli, so much as concepts or aesthetics if you want to go there...}: position along a common scale, position along nonaligned scales, length, angle, slope, and area.
-Other experiments established the notion that redesigning graphs can result in the improvement of the viewer's interpretation (Shah, Mayer, \& Hegarty, 1999).
-This is done by relying on gestalt principles to minimize the inferential processes and maximize the pattern association processes required to interpret relevant information. \svp{This next bit seems like a different paragraph that should probably come a bit earlier...}
-The viewer must first encode the visual array by identifying meaningful visual features, such as a straight light slanting downward.
-Next, the viewer must classify the quantitative measures and relationships in which those visual features illustrate, such as a decreasing linear relationship between x and y.
-The last step involves translating the quantitative measures and relationships to the variables defined in the data set, such as a population decreasing over years. \rh{Are we talking about a specific example?}
-These studies establish the process in which viewers interact with charts by first perceptually observing the visual features and later translating to cognitive processing of the information depicted by those features (Shah \& Carpenter, 1995).
-\rh{I am a little confused with this paragraph...what are we talking about? And why here?}
+\begin{figure}[tbp]
 
-In recent years, there have been advancements in the methodology used to investigate the effectiveness of statistical charts (Vanderplas, Cook, \& Hofmann, 2020).
-Some of the new methods\svp{Lineups have been around since 2009, they're not quite *new* so much as newer than the other options?}, such as the lineup protocol (Buja et al., 2009), utilize the grammar of graphics designation of a data plot as a statistic through the functional mapping of variable(s). \svp{Lineups don't depend on grammar of graphics, though grammar of graphics makes them exponentially more powerful.}
+{\centering \includegraphics[width=0.75\linewidth,]{images/eells-component-parts} 
+
+}
+
+\caption{Eells (1926) component parts diagrams}\label{fig:eells-compoment-parts}
+\end{figure}
+
+While a typical psychophysics experiment focuses on whether an effect is detectable and whether the magnitude of the effect can be accurately estimated, these early experiments instead depended on speed and accuracy for plot evaluation (Lewandowsky \& Spence, 1989; Spence, 1990; Teghtsoonian, 1965).
+In Spence (1990), stimuli (tables, lines - horizontal and vertical, bars, boxes, cylinders, pie charts, and disk charts) were presented to participants on a monitor screen in a computer lab.
+Participants were asked to use their cursor to position the marker to indicate the proportion to the apparent sizes of the elements \pcref{fig:spence-1990-proportion}.
+Results found that the table elements (numbers), pie elements, and bar elements led to the most accurate proportion estimates; boxes and disk elements resulted in the least accurate estimates.
+Measuring the speed at which participants made their judgments, it was found that two- and three- dimentional stimuli (e.g.~pie or box) assisted in faster judgment than zero- or one- dimensional stimuli (e.g.~lines).
+
+\begin{figure}[tbp]
+
+{\centering \includegraphics[width=0.75\linewidth,]{images/spence-1990-proportion} 
+
+}
+
+\caption{Spence (1990) task display}\label{fig:spence-1990-proportion}
+\end{figure}
+
+Cognitive psychologists and statisticians made progress by conducting experiments to identify perceptual errors associated with different styles of graphics and charts (Cleveland \& McGill, 1984, 1985; Shah, Mayer, \& Hegarty, 1999).
+Cleveland \& McGill (1984) provide a basis for perceptual judgment, still utilized today, by examining six basic aesthetic design choices: position along a common scale, position along nonaligned scales, length, angle, slope, and area.
+Shah, Mayer, \& Hegarty (1999) established the notion that redesigning graphs can result in the improvement of the viewer's interpretation.
+For example, the use of gestalt principles (Goldstein \& Brockmole, 2017) such as proximity, similarity, and good continuation can help minimize the inferential processes and maximize the pattern association processes required to interpret relevant information.
+
+These later experiments followed similar methodology as early studies by asking participants to read information directly from the charts and provide a quantitative estimate or answer a predefined question; as with the early studies, accuracy and response time being evaluated (Amer, 2005; Broersma \& Molenaar, 1985; Dunn, 1988; L. V. Peterson \& Schramm, 1954; Tan, 1994).
+Spence (1990) presents four example questions for comparing the sizes of individual graphical elements: (1) How much greater was the rainfall in September than May? (2) Is the price of oil in constant dollars increasing or decreasing from year to year? (3) Do more people subscribe to Time than Newsweek? and (4) Did the ABC Corporation pay the largest dividends last year, or did XYZ?
+Amer (2005) demonstrates that visual illusion may bias decision making and graph comprehension, even if the graphs are constructed according to best practice.
+Participants were presented a cost volume profit graph \pcref{amer-poggendorff-illusion} with two crossing lines (revenue and cost) and asked to view three values: (1) the amount of total revenues on the ordinate corresponding to the endpoint of the total-revenue line plotted on the graph (2) the amount of total costs on the ordinate corresponding to the endpoint of the total-cost line plotted on the graph and (3) the amount of costs/revenues on the ordinate at the break even point---the point where the two lines cross.
+Results indicate that decision makers may consistentily underestimate or overestimate the values displayed on line graphs due to what is called the ``Poggendorff illusion.''
+In Dunn (1988) participants were shown two maps, an unclassed choropleth map and a framed rectrangle chart, indicating the murder rate of each US state \pcref{fig:framed-murder-rate-map}.
+The goal of the study was to assess the relative accuracy with which quantitative information is extracted from both types of charts.
+Participants were strictly informed that the experiment was designed to test the ability of individuals to ``read'' or ``decode'' statistical maps and asked to write down their estimate of the murder rate as accurately as possible along- side the 24 named states.
+Results indicate that subjects found it easier to extract quantitative information from the framed rectangle chart than from the unclassed choropleth map and that the between individual variability in the choropleth map was related to the area of the state.
+
+\begin{figure}[tbp]
+
+{\centering \includegraphics[width=0.75\linewidth,]{images/amer-poggendorff-illusion} 
+
+}
+
+\caption{Amer (2005) cost volume profit graph}\label{fig:amer-poggendorff-illusion}
+\end{figure}
+
+\begin{figure}[tbp]
+
+{\centering \includegraphics[width=0.75\linewidth,]{images/framed-murder-rate-map} 
+
+}
+
+\caption{Dunn (1988) maps}\label{fig:framed-murder-rate-map}
+\end{figure}
+
+During the \(\text{21}^{\text{st}}\) century, there have been advancements in the methodology used to investigate the effectiveness of statistical charts (Majumder, Hofmann, \& Cook, 2013).
+Buja et al. (2009) introduced the lineup protocol in which data plots are depicted and interpreted as statistics.
+Supported by the grammar of graphics, a data plots can be characterized as a statistic defined as, ``a functional mapping of a variable or set of variables'' (Vanderplas, Cook, \& Hofmann, 2020).
 This allows the data plot to be tested similar to other statistics, by comparing the actual data plot to a set of plots with the absence of any data structure we can test the likelihood of any perceived structure being significant (Vanderplas, Cook, \& Hofmann, 2020).
-While the methodology of these recent experiments differs from earlier studies, the focus is still on initial perception and graph comprehension with a relatively small amount of work conducted to understand the effect of design choices on higher cognitive processes such as learning or analysis (Green \& Fisher, 2009). \svp{This is in part because lineups only ask about perceived differences and do not test the actual ability to read information off of a graph accurately or the conclusions drawn from the graph. They are a lower-level tool, which makes them powerful because they can eliminate ambiguous questions, but also limits their real-world application in the absence of complex experimental designs (feature hierarchy, etc.).}
-Most recent graphics experiments have utilized tools such as Amazon Turk, Prolific, Reddit, and other crowd sourcing websites to evaluate the psychophysics and patterns associated with design choices (VanderPlas \& Hofmann, 2017)\svp{You need to cite more than one experiment if you want to make this claim, and they can't all be lineup experiments. Really, you'd need a very long list of experiments and would ideally be able to show which used online vs. in-person testing...}. Such studies tend to be limited by the questions asked while other methods such as Thinking aloud and Eye Tracking allow researchers to evaluate the overall perception of the graphic (Vanderplas, Cook, \& Hofmann, 2020).
+The construction of data plots as statistics allow for easy experimentation, granting researchers the ability to compare the effectiveness of and understand the perception of different types of charts.
+While the lineup protocol differs from methodology used in earlier studies, the focus is still on initial perception and graph comprehension with a relatively small amount of work conducted to understand the effect of design choices on higher cognitive processes such as learning or analysis (Green \& Fisher, 2009).
+Lineups serve as a powerful tool for testing \emph{perceived} differences by eliminated ambiguous questions.
+However, the lineup protocol is constrained by the inability to test higher order cognitive skills such as accurately reading information off of a graph or drawing conclusions from the graph; limiting their ability to be used for testing real-world applications.
 
 \hypertarget{logarithmic-scales-and-mapping}{%
 \section{Logarithmic Scales and Mapping}\label{logarithmic-scales-and-mapping}}
@@ -634,7 +691,7 @@ Final parameter estimates are shown in \cref{tab:parameter-data}.
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=1\linewidth,]{thesis_files/figure-latex/lof-density-curves-1} 
+{\centering \includegraphics[width=0.75\linewidth,]{thesis_files/figure-latex/lof-density-curves-1} 
 
 }
 
@@ -1761,6 +1818,9 @@ Buja, A., Cook, D., Hofmann, H., Lawrence, M., Lee, E.-K., Swayne, D. F., \& Wic
 \leavevmode\hypertarget{ref-burnmurdoch_2020}{}%
 Burn-Murdoch, J., Nevitt, C., Tilford, C., Rininsland, A., Kao, J. S., Elliott, O., \ldots{} Stabe, M. (2020). Coronavirus tracked: Has the epidemic peaked near you? \emph{Coronavirus chart: see how your country compares}. Financial Times. Retrieved from \url{https://ig.ft.com/coronavirus-chart/?areas=eur}
 
+\leavevmode\hypertarget{ref-carlson2010psychology}{}%
+Carlson, N. R. (2010). \emph{Psychology: The science of behaviour}. Pearson Education.
+
 \leavevmode\hypertarget{ref-chandar2012graph}{}%
 Chandar, N., Collier, D., \& Miranti, P. (2012). Graph standardization and management accounting at AT\&t during the 1920s. \emph{Accounting History}, \emph{17}(1), 35--62.
 
@@ -1790,6 +1850,9 @@ Fagen-Ulmschneider, W. (2020). 91-DIVOC. \emph{An interactive visualization of C
 
 \leavevmode\hypertarget{ref-finney_subjective_1951}{}%
 Finney, D. J. (1951). Subjective {Judgment} in {Statistical} {Analysis}: {An} {Experimental} {Study}. \emph{Journal of the Royal Statistical Society. Series B (Methodological)}, \emph{13}(2), 284--297. Retrieved from \url{https://www.jstor.org/stable/2984070}
+
+\leavevmode\hypertarget{ref-furmanski2000oblique}{}%
+Furmanski, C. S., \& Engel, S. A. (2000). An oblique effect in human primary visual cortex. \emph{Nature Neuroscience}, \emph{3}(6), 535--536.
 
 \leavevmode\hypertarget{ref-gmbh_youve_2020}{}%
 GmbH, D. (2020, July). You've informed the public with visualizations about the coronavirus. {Thank} you. \emph{Chartable}. Retrieved from \url{https://blog.datawrapper.de/datawrapper-effect-corona/index.html}
@@ -1824,6 +1887,9 @@ Jones, G. V. (1977). Polynomial perception of exponential growth. \emph{Percepti
 \leavevmode\hypertarget{ref-katz_2017}{}%
 Katz, J. (2017, April). You draw it: Just how bad is the drug overdose epidemic? \emph{The New York Times}. The New York Times. Retrieved from \url{https://www.nytimes.com/interactive/2017/04/14/upshot/drug-overdose-epidemic-you-draw-it.html}
 
+\leavevmode\hypertarget{ref-kruskal1975visions}{}%
+Kruskal, W. (1975). Visions of maps and graphs. In \emph{Proceedings of the international symposium on computer-assisted cartography, auto-carto II} (pp. 27--36). Citeseer.
+
 \leavevmode\hypertarget{ref-emmeans}{}%
 Lenth, R. V. (2021). \emph{Emmeans: Estimated marginal means, aka least-squares means}. Retrieved from \url{https://CRAN.R-project.org/package=emmeans}
 
@@ -1838,6 +1904,9 @@ Loy, A., Hofmann, H., \& Cook, D. (2017). Model {Choice} and {Diagnostics} for {
 
 \leavevmode\hypertarget{ref-r2d3}{}%
 Luraschi, J., \& Allaire, J. (2018). \emph{r2d3: Interface to 'D3' visualizations}. Retrieved from \url{https://CRAN.R-project.org/package=r2d3}
+
+\leavevmode\hypertarget{ref-macdonald1977numbers}{}%
+Macdonald-Ross, M. (1977). How numbers are shown. \emph{AV Communication Review}, \emph{25}(4), 359--409.
 
 \leavevmode\hypertarget{ref-mackinnon_feedback_1991}{}%
 Mackinnon, A. J., \& Wearing, A. J. (1991). Feedback and the forecasting of exponential change. \emph{Acta Psychologica}, \emph{76}(2), 177--191. http://doi.org/\href{https://doi.org/10.1016/0001-6918(91)90045-2}{10.1016/0001-6918(91)90045-2}
@@ -1854,11 +1923,17 @@ Mosteller, F., Siegel, A. F., Trapido, E., \& Youtz, C. (1981). Eye {Fitting} {S
 \leavevmode\hypertarget{ref-munroe_2005}{}%
 Munroe, R. (2005). Log scale. \emph{xkcd: A webcomic of romance, sarcasm, math, and language}. Creative Commons. Retrieved from \url{https://xkcd.com/1162/}
 
+\leavevmode\hypertarget{ref-myers_dewall_2021}{}%
+Myers, D. G., \& DeWall, C. N. (2021). \emph{Psychology}. Worth Publishers.
+
 \leavevmode\hypertarget{ref-nieder2003coding}{}%
 Nieder, A., \& Miller, E. K. (2003). Coding of cognitive magnitude: Compressed scaling of numerical information in the primate prefrontal cortex. \emph{Neuron}, \emph{37}(1), 149--157.
 
 \leavevmode\hypertarget{ref-peterson1954accurately}{}%
 Peterson, L. V., \& Schramm, W. (1954). How accurately are different kinds of graphs read? \emph{Audio Visual Communication Review}, 178--189.
+
+\leavevmode\hypertarget{ref-peterson1994object}{}%
+Peterson, M. A. (1994). Object recognition processes can and do operate before figure--ground organization. \emph{Current Directions in Psychological Science}, \emph{3}(4), 105--111.
 
 \leavevmode\hypertarget{ref-playfair1801statistical}{}%
 Playfair, W. (1801). The statistical breviary; shewing, on a principle entirely new, the resources of every state and kingdom in europe, wallis, londres. \emph{Press, Chicago}.
