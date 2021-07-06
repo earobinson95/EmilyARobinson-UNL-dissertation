@@ -22,18 +22,18 @@ If you feel it necessary to include an appendix, it goes here.
 
 # You Draw It Setup with Shiny {#youdrawit-with-shiny}
 
-Interactive plots for the study were created using the r2d3 package and integrating D3 source code with an R shiny application. 
-In this section I outline the data simulation process conducted in R, constructing interactive plots with D3.js code and R shiny
+Interactive plots for the you draw it study were created using the r2d3 package and integrating D3 source code with an R shiny application. 
+In this section I outline the process of constructing interactive plots with D3.js code and R shiny.
 
 \cref{fig:r2d3-shiny-flowchart}
 
-## You draw it D3.js source code {#d3.js-source-code}
+<!-- ## You draw it D3.js source code {#d3.js-source-code} -->
 
 ```{r r2d3-shiny-flowchart, fig.cap = "Interactive plot development", out.width="80%"}
 knitr::include_graphics("images/r2d3+shiny-inkscape.png")
 ```
 
-```{r d3.js-source-code, eval = F, echo = T}
+```{r d3.js-source-code, include = F, eval = F, echo = T}
 # Define variable margins
 const margin = {left: 55, 
                 right: 10, 
@@ -416,35 +416,38 @@ function setup_scales(state){
 
 # Exponential Prediction Interactive Plots {#exponential-prediction-plots}
 
-```{r low-10-linear, fig.height = 4, fig.width = 4, out.width = "75%", fig.cap = "Exponential Prediction Treatment Combination 1"}
+The figures below illustrate the 8 interactive plots used to test exponential prediction.
+Two data sets were simulated with low and high exponential growth rates and shown four times each by truncating the points shown at both 50\% and 75\% of the domain as well as on both the log and linear scales following a 2 x 2 x 2 factorial treatment design. 
+
+```{r low-10-linear, fig.height = 4, fig.width = 4, out.width = "65%", fig.cap = "Exponential Prediction: low growth rate, points truncated at 50\\%, linear scale"}
 knitr::include_graphics("images/low-10-linear.png")
 ```
 
-```{r low-10-log, fig.cap = "Exponential Prediction Treatment Combination 2", fig.height = 4, fig.width = 4, out.width = "75%",}
+```{r low-10-log, fig.cap = "Exponential Prediction: low growth rate, points truncated at 50\\%, log scale", fig.height = 4, fig.width = 4, out.width = "65%"}
 knitr::include_graphics("images/low-10-log.png")
 ```
 
-```{r low-15-linear, fig.cap = "Exponential Prediction Treatment Combination 3", fig.height = 4, fig.width = 4, out.width = "75%",}
+```{r low-15-linear, fig.cap = "Exponential Prediction: low growth rate, points truncated at 75\\%, linear scale", fig.height = 4, fig.width = 4, out.width = "65%"}
 knitr::include_graphics("images/low-15-linear.png")
 ```
 
-```{r low-15-log, fig.cap = "Exponential Prediction Treatment Combination 4", fig.height = 4, fig.width = 4, out.width = "75%",}
+```{r low-15-log, fig.cap = "Exponential Prediction: low growth rate, points truncated at 75\\%, log scale", fig.height = 4, fig.width = 4, out.width = "65%"}
 knitr::include_graphics("images/low-15-log.png")
 ```
 
-```{r high-10-linear, fig.cap = "Exponential Prediction Treatment Combination 5", fig.height = 4, fig.width = 4, out.width = "75%",}
+```{r high-10-linear, fig.cap = "Exponential Prediction: high growth rate, points truncated at 50\\%, linear scale", fig.height = 4, fig.width = 4, out.width = "65%"}
 knitr::include_graphics("images/high-10-linear.png")
 ```
 
-```{r high-10-log, fig.cap = "Exponential Prediction Treatment Combination 6", fig.height = 4, fig.width = 4, out.width = "75%",}
+```{r high-10-log, fig.cap = "Exponential Prediction: high growth rate, points truncated at 50\\%, log scale", fig.height = 4, fig.width = 4, out.width = "65%"}
 knitr::include_graphics("images/high-10-log.png")
 ```
 
-```{r high-15-linear, fig.cap = "Exponential Prediction Treatment Combination 7", fig.height = 4, fig.width = 4, out.width = "75%",}
+```{r high-15-linear, fig.cap = "Exponential Prediction: high growth rate, points truncated at 75\\%, linear scale", fig.height = 4, fig.width = 4, out.width = "65%"}
 knitr::include_graphics("images/high-15-linear.png")
 ```
 
-```{r high-15-log, fig.cap = "Exponential Prediction Treatment Combination 8", fig.height = 4, fig.width = 4, out.width = "75%",}
+```{r high-15-log, fig.cap = "Exponential Prediction: high growth rate, points truncated at 75\\%, log scale", fig.height = 4, fig.width = 4, out.width = "65%"}
 knitr::include_graphics("images/high-15-log.png")
 ```
 

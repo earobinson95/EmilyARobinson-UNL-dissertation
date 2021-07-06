@@ -18,7 +18,7 @@ The lineup plot on the right displays increasing exponential data on the log sca
 target.
 Crowd sourcing websites such as Amazon Mechanical Turk, Reddit, and Prolifc allow us to collect responses from multiple viewers. 
 
-```{r lineup-example, fig.height = 2.75, fig.width = 5.75, fig.cap = "Lineup example"}
+```{r lineup-example, fig.height = 2.75, fig.width = 5.75, fig.cap = "Example Lineups"}
 lineupData_linear <- read.csv(file = "data/lineup-example-data-linear.csv")
 linearPlot <- ggplot(lineupData_linear, aes(x=x, y=y)) +
   facet_wrap(~.sample, ncol=5) +

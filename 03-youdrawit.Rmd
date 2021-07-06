@@ -52,12 +52,13 @@ During 2021 March Maddness, FiveThirtyEight created a roster-shuffling machine w
 Data Driven Documents (D3) is an open-source JavaScript based graphing framework created by Mike Bostock during his time working on graphics at the NY Times.
 For readers familiar with R, it is notable to consider D3 in JavaScript equivalent to the ggplot2 package in R. 
 Similar to geometric objects and style choices in ggplot2, the grammar of D3 also includes elements such as circles, paths, and rectangles with choices of attributes and styles such as color and size.
-Data Driven Documents depend on Extensible Markup Langage (XML) to generate graphics and images by binding objects and layers to the plotting area as Scalable Vector Graphics (SVG) in order to preserve the shapes rather than the pixels \pcref{fig:raster-vs-vector} \ear{CITE}.
-<!-- https://martech.zone/vecteezy-svg-editor-online/ -->
+Data Driven Documents depend on Extensible Markup Langage (XML) to generate graphics and images by binding objects and layers to the plotting area as Scalable Vector Graphics (SVG) in order to preserve the shapes rather than the pixels \pcref{fig:raster-vs-vector} [@raster_vs_svg]
 Advantages of using D3 include animation and allowing for movement and user interaction such as hovering, clicking, and brushing. 
 
 ```{r raster-vs-vector, fig.cap = "SVG vs Raster", out.width="70%"}
 knitr::include_graphics("images/raster-vs-vector.png")
+# https://commons.wikimedia.org/wiki/File:Bitmap_VS_SVG.svg
+# https://creativecommons.org/licenses/by-sa/2.5/legalcode
 ```
 
 A challenge of working with D3 is the environment necessary to display the graphics and images. 
@@ -96,9 +97,8 @@ The order of all 12 task plots was randomly assigned for each individual in a co
 
 Participants completed the experiment using a RShiny application found [here](https://shiny.srvanderplas.com/you-draw-it/).
 Participants were recruited through Twitter, Reddit, and direct email during May 2021.
-A total of \ear{X} individuals completed \ear{Y} unique you draw it task plots. 
+A total of 39 individuals completed 256 unique you draw it task plots. 
 All completed you draw it task plots were included in the analysis.
-
 
 ## Eye Fitting Straight Lines in the Modern Era
 
@@ -195,7 +195,7 @@ The estimated slope, $\hat\beta_{1,PCA}$, is determined by the ratio of the y ro
 Fitted values, $\hat y_{k,PCA}$ are then obtained every 0.25 increment across the domain from the PCA regression equation, $\hat y_{k,PCA} = \hat\beta_{0,PCA} + \hat\beta_{1,PCA} x_k$.
 \cref{fig:ols-vs-pca-example} illustrates the difference between an OLS regression equation which minimizes the vertical distance of points from the line and a regression equation with a slope calculated by the first principal component which minimizes the smallest distance of points from the line.
 
-```{r ols-vs-pca-example, fig.height = 4, fig.width = 4, fig.cap="OLS vs PCA Regression Lines", message=FALSE, warning=FALSE, out.width="65%"}
+```{r ols-vs-pca-example, fig.height = 6, fig.width = 8, fig.cap="OLS vs PCA Regression Lines", message=FALSE, warning=FALSE, out.width="90%"}
 library(ggplot2)
 library(magrittr)
 library(plyr)
@@ -242,19 +242,19 @@ segmeData = rbind(data.frame(x=dat[,1],y=dat[,2],xend=points[1,],yend=points[2,]
 dat %>%
 ggplot(aes(x1,x2))+
   geom_point()+
-  geom_abline(data=slopeData,aes(slope = slope,intercept=0,color=type, linetype=type))+
+  geom_abline(data=slopeData,aes(slope = slope,intercept=0,color=type, linetype=type), size = 1.2)+
   geom_segment(data=segmeData,aes(x=x,y=y,xend=xend,yend=yend,color=type, linetype=type))+
-  # facet_grid(.~type)+
+  facet_grid(.~type)+
   coord_equal()+
   scale_x_continuous("x") +
   scale_y_continuous("y") +
   theme_bw(base_size = 14) +
   theme(aspect.ratio = 1,
-        legend.position = "bottom",
+        legend.position = "none",
         axis.text    = element_text(size = 12),
         axis.title   = element_text(size = 12),
         legend.title = element_blank(),
-        legend.text  = element_text(size = 10),
+        # legend.text  = element_text(size = 10),
         # strip.text = element_text(size = 8, margin = margin(0.1,0,0.1,0, "cm")),
         # strip.background = element_rect(size = 0.8),
         legend.key.size = unit(1, "line")
@@ -331,7 +331,7 @@ Examining the plots, the estimated trends of PCA residuals (orange) appear to al
 In particular, this trend is more prominent in parameter choices with large variances (F and N).
 These results are consistent to those found in @mosteller_eye_1981 indicating participants fit a trend line closer to the estimated regression line with the slope of the first principal component than the estimated OLS regression line.
 
-```{r eyefitting-lmer-residualplots, fig.height = 6, fig.width = 6, fig.cap = "Eye Fitting Straight Lines in the Modern Era LMM results", out.width="80%"}
+```{r eyefitting-lmer-residualplots, fig.height = 8, fig.width = 12, out.width = "90%", fig.cap = "Eye Fitting Straight Lines in the Modern Era LMM results"}
 eyefitting.preds.lmer <- read.csv("data/youdrawit/youdrawit-eyefitting-lmerpred-data.csv")
 # Plot Predictions
 eyefitting.lmer.plot <- eyefitting.preds.lmer %>%
@@ -349,7 +349,7 @@ eyefitting.lmer.plot <- eyefitting.preds.lmer %>%
   facet_wrap(~`Parameter Choice`, labeller = labeller(`Parameter Choice` = label_both), scales = "free") +
   theme_bw(base_size = 14) +
   theme(aspect.ratio = 1,
-        legend.position = "bottom",
+        legend.position = "right",
         plot.title   = element_text(size = 12, hjust = 0),
         axis.text    = element_text(size = 12),
         axis.title   = element_text(size = 12),
@@ -360,13 +360,13 @@ eyefitting.lmer.plot <- eyefitting.preds.lmer %>%
         legend.key.size = unit(1, "line")
         ) +
   scale_y_continuous("Residual") +
-  scale_color_manual("", values = c("steelblue", "orange")) +
-  scale_fill_manual("", values = c("steelblue", "orange")) 
+  scale_color_manual("Individual participant \nresiduals", values = c("steelblue", "orange"), labels = c("OLS", "PCA")) +
+  scale_fill_manual("LMER fitted trend", values = c("steelblue", "orange"), labels = c("OLS", "PCA")) 
 
 eyefitting.lmer.plot
 ```
 
-```{r eyefitting-gamm-residualplots, fig.height = 6, fig.width = 6, fig.cap = "Eye Fitting Straight Lines in the Modern Era GAMM results", out.width="80%"}
+```{r eyefitting-gamm-residualplots, fig.height = 8, fig.width = 12, out.width = "90%", fig.cap = "Eye Fitting Straight Lines in the Modern Era GAMM results"}
 eyefitting.grid.gamm <- read.csv("data/youdrawit/youdrawit-eyefitting-gammpred-data.csv")
 eyefitting.gamm.plot <- eyefitting.grid.gamm %>%
   filter((parm_id %in% c("F", "N", "S") | (x <= 16 & x >= 4))) %>%
@@ -383,7 +383,7 @@ eyefitting.gamm.plot <- eyefitting.grid.gamm %>%
   facet_wrap(~`Parameter Choice`, labeller = labeller(`Parameter Choice` = label_both), scales = "free") +
   theme_bw(base_size = 14) +
   theme(aspect.ratio = 1,
-        legend.position = "bottom",
+        legend.position = "right",
         plot.title   = element_text(size = 12, hjust = 0),
         axis.text    = element_text(size = 12),
         axis.title   = element_text(size = 12),
@@ -394,8 +394,8 @@ eyefitting.gamm.plot <- eyefitting.grid.gamm %>%
         legend.key.size = unit(1, "line")
         ) +
   scale_y_continuous("Residual") +
-  scale_color_manual("Estimates", values = c("steelblue", "orange")) +
-  scale_fill_manual("Estimates", values = c("steelblue", "orange"))
+  scale_color_manual("Individual participant \nresiduals", values = c("steelblue", "orange"), labels = c("OLS", "PCA")) +
+  scale_fill_manual("GAMM fitted trend", values = c("steelblue", "orange"), labels = c("OLS", "PCA")) 
 eyefitting.gamm.plot
 ```
 
@@ -458,7 +458,7 @@ The data simulation procedure is described in \cref{alg:exponential-prediction-a
 \begin{algorithm}
   \caption{Prediction of Exponential Trends Data Simulation}\label{exponential-prediction-algorithm}
   \begin{algorithmic}[1]
-    \Statex \textbullet~\textbf{Input Parameters:} $\beta$; $\sigma$; $pointsendscale$; $N = 30$; $x_{min} = 0$ and $x_{max} = 20$; $x_{by} = 0.25$
+    \Statex \textbullet~\textbf{Input Parameters:} $\beta$ growth rate; standard deviation from exponential curve $\sigma$; sample size $N = 30$; domain $x_{min}$ and $x_{max}$; fitted value increment $x_{by} = 0.25$.
     \Statex \textbullet~\textbf{Output Parameters:} List of point data and line data each indicating the parameter identification, x value, and corresponding simulated or fitted y value.
     \State Randomly select and jitter N = 30 x-values along the domain, $x_{i=1:N}\in [0, 20]$.
     \State Generate "good" errors, $e_{i = 1:n}$ based on $N(0,\sigma)$ by setting a constraint requiring the mean of the first N/3 errors $< |2\sigma|.$
@@ -480,13 +480,13 @@ The linear scale option was set to true or false reflecting the linear and log s
 
 ### Results
 
-Loess smoothers were fit to each user line to allow for visual inspection.
+A Loess smoother was fit to each user line to allow for visual inspection.
 For each participant $l = 1,...N_{participant}$, the final data set used for analysis contains $x_{ijkm}, y_{ijkm,drawn}, \hat y_{ijkm,loess}$, and $\hat y_{ijkm,NLS}$ for growth rate $i = 1,2$, points truncated $j = 1,2$, scale $k = 1,2$ and $x_{m}$ value $m = 1, ...,81$. 
 \cref{fig:exponential-yloess-spaghetti-plot} displays spaghetti plots for each of the 8 treatment combinations.
 The spaghetti plot with a high growth rate suggests participants underestimated the exponential trend when asked to draw a trend line on the linear scale compared to when asked to draw a trend line on the log scale.
-In particular, this suggestion is most noticable when points are truncated at 50\% with the underestimation begining at a later $x$ value when points are truncated at 75\%. 
+In particular, this suggestion is most noticeable when points are truncated at 50\% with the underestimation begining at a later $x$ value when points are truncated at 75\%. 
 
-```{r exponential-yloess-spaghetti-plot, fig.height = 6, fig.width = 6, out.width = "75%", fig.cap = "Exponential Prediction Spaghetti Plot"}
+```{r exponential-yloess-spaghetti-plot, fig.height = 8, fig.width = 12, out.width = "90%", fig.cap = "Exponential Prediction Spaghetti Plot"}
 exp_data <- read.csv("data/youdrawit/youdrawit-exponential-prediction-model-data.csv")
 exp_data %>%
   mutate(`Points Truncated` = ifelse(points_end == 10, "50%", "75%")) %>%
@@ -523,7 +523,7 @@ Examining the plots, the estimated trends of residuals of trends drawn on the li
 In comparisons, the estimated trends of trends residuals drawn on the log scale (orange) follow closely to the $y=0$ horizontal (dashed) line implying exponential trends predicted on the log scale are more accurate than those predicted on the linear scale.
 In particular, this trend is more prominent in high exponential growth rates where underestimation becomes prominent after the aid of points is removed.
 
-```{r exponential-prediction-gamm-preds, fig.height = 6, fig.width = 6, out.width = "75%", fig.cap = "Exponential Prediction GAMM Results"}
+```{r exponential-prediction-gamm-preds, fig.height = 8, fig.width = 12, out.width = "90%", fig.cap = "Exponential Prediction GAMM Results"}
 grid_data.exp.reduced <- read.csv(file = "data/youdrawit/youdrawit-exponential-prediction-gamm-preds.csv")
 
 grid_data.exp.reduced %>%
@@ -539,8 +539,8 @@ grid_data.exp.reduced %>%
   theme_bw() +
   theme(aspect.ratio = 1) +
   scale_y_continuous("Residual \n (ydrawn - ynls)") +
-  scale_color_manual("Scale", values = c("steelblue", "orange")) +
-  scale_fill_manual("Scale", values = c("steelblue", "orange"))
+  scale_color_manual("Individual participant \nresiduals", values = c("steelblue", "orange"), labels = c("Linear scale", "Log scale")) +
+  scale_fill_manual("GAMM fitted trend", values = c("steelblue", "orange"), labels = c("Linear scale", "Log scale"))
 ```
 
 <!-- + advocate smoothing of scatterplots to assist in detecting the shape of the point cloud in situations where the error in the data is substantial, or where the density of points changes along the abscissa @cleveland_graphical_1984 -->

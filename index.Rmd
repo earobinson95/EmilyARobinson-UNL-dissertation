@@ -69,6 +69,7 @@ library(gridExtra)
 library(patchwork)
 library(cowplot)
 library(ggforce)
+library(scales)
 ```
 
 # Literature Review
@@ -172,6 +173,8 @@ In order to achieve a higher standard of the graphics being presented, future wo
 ## Perception and Psychophysics
 <!-- \rh{Can you provide other references about the "perceptual process"?} -->
 
+### Perceptual Process
+
 In order to develop guiding principles for generating graphics effective in communication, we must first understand the basic mechanics of the human perceptual system and the biases we are vulnerable to [@goldstein_sensation_2017]. 
 The perceptual process is a sequence of steps used to describe a how a stimulus in the environment leads to our perception of the stimulus and action in response to the stimulus \pcref{fig:perceptual-process}. 
 This process is broken down into sensation [@carlson2010psychology] - involving simple processes that occur right at the beginning of a sensory system - and perception [@myers_dewall_2021] - involving higher-order mechanisms and identified with more complex processes. 
@@ -205,6 +208,24 @@ Next, the viewer must classify the quantitative measures and relationships in wh
 The last step involves translating the quantitative measures and relationships to the variables defined in the data set (e.g. a population decreasing over years). 
 Pyschophysics, the branch of psychology that deals with the relationships between physical stimuli (e.g. light) and mental phenomena, aims to provide explanations of the relationship between physiology and perception and point out human perceptual biases. 
 By examining both behavior and physiology together, we are able to understand the mechanisms responsible for perception.
+
+### Logarithmic Perception
+<!-- \svp{Weber's law isn't quite the same thing as the numerical cognition stuff on log scales - it's a different perceptual phenomenon that is definitely related, but distinct in causal mechanism (as far as I know).} -->
+<!-- \rh{Is there a reference for the actual "Weber's Law"? Please provide more connection between your text and the "Weber's Law".} -->
+Ernst Weber, an early psychophysics researcher, discovered a phenomenon known as Weber's law, by determining the relationship between the difference threshold (smallest detectable difference between two sensory stimuli; known as the "Just Noticable Difference") and the magnitude of a stimulus [@fechner1860elemente]. 
+This holds true for a variety of stimuli such as weight, light, and sound as well as for a range of magnitudes; larger numbers require a proportional larger difference in order to remain equally discriminate [@dehaene2008log]. 
+Known as **Weber's law**, it was established that we do not notice absolute changes in stimuli, but instead that we notice the relative change [@sun_framework_2012]. 
+Numerically, Weber's Law is defined as 
+\begin{equation}
+\frac{\Delta S}{S} = K
+\end{equation}
+where $\Delta S$ represents the difference threshold, S represents the initial stimulus intensity, and K is called Weber's contrast which remains constant as the magnitude of S changes. 
+Gustav Fechner, a founder of psychophysics, provided further extension to Weber's law by discovering the relationship between the perceived intensity is logarithmic to the stimulus intensity when observed above a minimal threshold of perception [@sun_framework_2012]. 
+Formally known as the Weber-Fechner law is derived from Weber's law as
+\begin{equation}
+P = K\ln \frac{S}{S_0}
+\end{equation}
+where P represents the perceived stimulus, K represents Weber's contrast, S represents the initial stimulus intensity, and $S_0$ represents the minimal threshold of perception.
 
 ## Graphical Experiments
 
@@ -249,6 +270,7 @@ For example, the use of gestalt principles [@goldstein_sensation_2017] such as p
 
 These later experiments followed similar methodology as early studies by asking participants to read information directly from the charts and provide a quantitative estimate or answer a predefined question; as with the early studies, accuracy and response time were evaluated [@peterson1954accurately; @broersma1985graphical; @dunn1988framed; @tan1994human; @amer2005bias]. 
 <!-- \svp{provide some examples of quantitative estimation questions -- this will better support Ch4} -->
+\svp{relate these examples to their implications - i.e. quantitative translation}
 @spence_visual_1990 presents four example questions for comparing the sizes of individual graphical elements: (1) How much greater was the rainfall in September than May? (2) Is the price of oil in constant dollars increasing or decreasing from year to year? (3) Do more people subscribe to Time than Newsweek? and (4) Did the ABC Corporation pay the largest dividends last year, or did XYZ?
 @amer2005bias demonstrates that visual illusion may bias decision making and graph comprehension, even if the graphs are constructed according to best practice.
 Participants were presented a cost volume profit graph \pcref{fig:amer-poggendorff-illusion} with two crossing lines (revenue and cost) and asked to view three values: (1) the amount of total revenues on the ordinate corresponding to the endpoint of the total-revenue line plotted on the graph (2) the amount of total costs on the ordinate corresponding to the endpoint of the total-cost line plotted on the graph and (3) the amount of costs/revenues on the ordinate at the break even point—the point where the two lines cross.
@@ -292,8 +314,8 @@ However, the lineup protocol is constrained by the inability to test higher orde
 We have recently experienced the impact graphics and charts have on a large scale through the SARSNCOV-2 pandemic (COVID-19). 
 <!-- \rh{please provide a LOT of examples here for sentence 1 (and actual examples describing why they are good/bad)} -->
 At the beginning of 2020, we saw an influx of dashboards being developed to display case counts, transmission rates, and outbreak regions [@rost_2020]; mass media routinely showed charts to share information with the public about the progression of the pandemic [@romano_scale_2020]. 
-@fagen-ulmschneider_2020 began the 91-DOVIC project to explore the global growth of COVID-19 through interactive graphics updated daily. 
-The interactive graphics allowed viewers to explore the current status of COVID-19 by selecting their desired regions, axes, axis scale, and measure of interest (e.g. case count, death count, vaccine count); \cref{fig:91dovic-cases-july2021} shows the new confirmed COVID-19 cases per day, normalized by population, as of July 2021. 
+@fagen-ulmschneider_2020 began the 91-DIVOC project to explore the global growth of COVID-19 through interactive graphics updated daily. 
+The interactive graphics allowed viewers to explore the current status of COVID-19 by selecting their desired regions, axes, axis scale, and measure of interest (e.g. case count, death count, vaccine count); \cref{fig:91divoc-cases-july2021} shows the new confirmed COVID-19 cases per day, normalized by population, as of July 2021. 
 Other graphics displayed COVID-19 data as maps \pcref{fig:covid19-summer2020-risk-map} with color indicating the severity and risk in each US county [@global_epidemics_2021].
 People began seeking out graphical displays of COVID-19 data as a direct result of these pieces of work [@rost_2020]; providing increased and ongoing exposure to these graphics over time. 
 \cref{fig:covid19-datawrapper-views-july2020} illustrates the increased views Datawrapper, a user-friendly web tool used to create basic interactive charts, had during the COVID-19 pandemic [@rost_2020].
@@ -301,7 +323,7 @@ People began seeking out graphical displays of COVID-19 data as a direct result 
 Many of these graphics helped guide decision makers to implement policies such as shut-downs or mandated mask wearing, as well as facilitated communication with the public to increase compliance [@bavel_using_2020]. 
 As graphics began to play an important role in the communication of the pandemic, creators of graphics were faced with design choices in order to ensure their charts were effective. 
 
-```{r 91dovic-cases-july2021, fig.cap = "91-DOVIC New Daily Case Counts as of July 2021", out.width="90%"}
+```{r 91divoc-cases-july2021, fig.cap = "91-DOVIC New Daily Case Counts as of July 2021", out.width="90%"}
 knitr::include_graphics("images/91dovic-cases-july2021.png")
 ```
 
@@ -315,17 +337,69 @@ knitr::include_graphics("images/covid19-datawrapper-views-july2020.png")
 
 When faced with data which spans several orders of magnitude, we must decide whether to show the data on its original
 scale (compressing the smaller magnitudes into relatively little area) or to transform the scale and alter the contextual appearance of the data.
-The usefulness of the log scale in science is illustrated in \cref{fig:log-scale-comic} [@munroe_2005].
-\rh{Maybe more explanation is needed for this. And it is not really connected to the text.}
+The usefulness of the log scale in science is illustrated in \cref{fig:log-scale-comic} [@munroe_2005] showing the challenge of displaying the fuel energy density of Uranium along side other sources of fuel due to differences in magnitude.
+<!-- \rh{Maybe more explanation is needed for this. And it is not really connected to the text.} -->
 One common solution is to use a log scale transformation to display data over several orders of magnitude within one graph.
-\rh{I think more details are needed for the use of log scale. Providing examples would be useful}
-Logarithms turn multiplicative relationships additive \svp{phrasing?}, showing elasticities and other proportional changes, and also linearize power laws [@menge_logarithmic_2018].
+<!-- \rh{I think more details are needed for the use of log scale. Providing examples would be useful} -->
+\cref{fig:log-scales} presents an exponential curve displayed on both the linear and log scale illustrating the use of the log scale when displaying data which spans several magnitudes. 
+Logarithms convert multiplicative relationships (for example, 1 \& 10 displayed 10 units apart and 10 \& 100 displayed 90 units apart) to additive relationships (for example, 1 \& 10 and 10 \& 100 both equally spaced along the axis), showing proportional relationships and linearizing power functions [@menge_logarithmic_2018].
 They also have practical purposes, easing the computation of small numbers such as likelihoods and transforming data to fit statistical assumptions.
 When presenting log scaled data, it is possible to use either un-transformed scale labels (for example, values of 1, 10 and 100 are equally spaced along the axis) or log transformed scale labels (for example, 0, 1, and 2, showing the corresponding powers of 10).
-\svp{In the grammar of graphics/ggplot2 formulation, this is the difference between a scale and a transformation... it might be worth seeing if that is a hadley-ism or if that is a wider convention.}
+<!-- \svp{In the grammar of graphics/ggplot2 formulation, this is the difference between a scale and a transformation... it might be worth seeing if that is a hadley-ism or if that is a wider convention.} -->
 
-```{r log-scale-comic, include = T, fig.cap = "Log scale comic", out.width="70%"}
+```{r log-scale-comic, include = T, fig.cap = "Usefulness of the log scale in science", out.width="70%"}
 knitr::include_graphics("images/log-scale-comic.png")
+```
+
+```{r log-scales, fig.cap = "Linear scale verses log scale", out.width="100%"}
+data <- tibble(x = seq(0,10, by = 0.1), y = exp(x))
+
+linear_scale <- data %>%
+  ggplot(aes(x = x, y = y)) +
+  geom_line() +
+  theme_bw() +
+  theme(aspect.ratio = 1) +
+  ggtitle("Linear Scale")
+
+log_scale <- data %>%
+  ggplot(aes(x = x, y = y)) +
+  geom_line() +
+  theme_bw() +
+  theme(aspect.ratio = 1) +
+  scale_y_log10(breaks = trans_breaks("log10", function(x) 10^x)) +
+  ggtitle("Log Scale")
+
+grid.arrange(linear_scale,log_scale, ncol = 2)
+
+
+# linear_scale <- data %>%
+#   ggplot(aes(x = y, y = x)) +
+#   # geom_line() +
+#    theme_classic() +
+#   theme(aspect.ratio = 0.01,
+#         axis.line.y = element_blank(),
+#         axis.ticks.y = element_blank(),
+#         axis.text.y = element_blank()
+#         ) +
+#   labs(x = NULL,
+#        y = NULL
+#        )
+# 
+# log_scale <- data %>%
+#   ggplot(aes(x = y, y = x)) +
+#   # geom_line() +
+#    theme_classic() +
+#   theme(aspect.ratio = 0.01,
+#         axis.line.y = element_blank(),
+#         axis.ticks.y = element_blank(),
+#         axis.text.y = element_blank()
+#         ) +
+#   labs(x = NULL,
+#        y = NULL
+#        ) +
+#   scale_x_log10(breaks = trans_breaks("log10", function(x) 10^x))
+# 
+# grid.arrange(linear_scale,log_scale, ncol = 1)
 ```
 
 We have recently experienced the benefits and pitfalls of using log scales as COVID-19 dashboards displayed
@@ -336,8 +410,12 @@ During this time, we saw the usefulness of log scale transformations showing cas
 \cref{fig:covid19-FT-deaths-march2020-log} illustrates the usefulness of log scales in comparing deaths attributed to Coronavirus between countries as of March 2020; the diagonal reference lines provide a visual aid useful for interpretation [@burnmurdoch_2020]. 
 As the pandemic evolved, and the case counts were no longer spreading exponentially, graphs with linear scales seemed more effective at spotting early increases in case counts that signaled more localized outbreaks. In \cref{fig:covid19-FT-june2020-case-counts-linear} and \cref{fig:covid19-FT-june2020-case-counts-log}, the case counts as of June 30, 2020 are displayed on both the linear and log scale respectively [@burnmurdoch_2020]. 
 The effect of the linear scale \pcref{fig:covid19-FT-june2020-case-counts-linear} appears to evoke a stronger reaction from the public than the log scale \pcref{fig:covid19-FT-june2020-case-counts-log} as case counts are clearly rising rapidly during the summer wave. 
-This is only one recent example of a situation in which both log and linear scales are useful for showing different aspects of the same data. There are long histories of using log scales to display results in ecology, psychophysics, engineering, and physics [@menge_logarithmic_2018; @heckler_student_2013] 
-\svp{elaborate on this a bit - when are they used, and where are they effective? Can you draw more comprehensive conclusions about the use of log scales?}. 
+This is only one recent example of a situation in which both log and linear scales are useful for showing different aspects of the same data. 
+There are long histories of using log scales to display results in ecology, psychophysics, engineering, and physics [@menge_logarithmic_2018; @heckler_student_2013]
+In @waddell2005comparisons, comparisons were made between the linear and logarithmic scales for dosage verses carcinogenicity in rodents.
+Results favored the use of logarithmic scales for doses in order to put the relative doses into perspective whereas using a linear scale to administer doses to animals with doses of those same chemicals to which humans are exposed does not provide useful, comparative information.
+Given the widespread use of logarithmic scales, it is important to understand the implications of their use in order to provide guidelines for best use.
+<!-- \svp{elaborate on this a bit - when are they used, and where are they effective? Can you draw more comprehensive conclusions about the use of log scales?}. -->
 
 ```{r covid19-FT-deaths-march2020-log, fig.cap = "Covid 19 Deaths (log scale) as of March 23, 2020", out.width="90%"}
 knitr::include_graphics("images/covid19-FT-03.23.2020-log.png")
@@ -351,42 +429,55 @@ knitr::include_graphics("images/covid19-FT-case-count-06.30.2020-linear.png")
 ```{r covid19-FT-june2020-case-counts-log, fig.cap = "Covid 19 Case Counts (log scale) as of June 30, 2020", out.width="90%"}
 knitr::include_graphics("images/covid19-FT-case-count-06.30.2020-log.png")
 ```
+<!-- \svp{You might start this out by pointing out that while logarithms seem unnatural at first, we learn to count by ones, tens, and hundreds -- that is, in a base10 order of magnitude system. Then you can transition to research showing one, two, 10 and log-number scales.} -->
 
-\svp{You might start this out by pointing out that while logarithms seem unnatural at first, we learn to count by ones, tens, and hundreds -- that is, in a base10 order of magnitude system. Then you can transition to research showing one, two, 10 and log-number scales.}
-Research suggests our perception and mapping of numbers to a number line is logarithmic at first, but transitions
-to a linear scale later in development, with formal mathematics education [@siegler_numerical_2017; @siegler_numerical_2017; @varshney_why_2013; @dehaene2008log].
-For example, a kindergartner asked to place numbers 1-10 along a number line would place 3 close to the middle, following the logarithmic perspective [@varshney_why_2013]. \svp{Might be worth showing this graphically if you can reproduce pics from the paper...}
-With basic training, members of remote cultures with a basic vocabulary and minimal education understood the concept that numbers can be mapped into a spacial space [@dehaene2008log]. \rh{Please explain.}
+When we first learn to count, we begin counting by ones (for example, 1, 2, 3, etc.), then by tens (for example, 10, 20, 30, etc.), and advancing to hundreds (for example, 100, 200, 300, etc.), following the base10 order of magnitude system (for example, 1, 10, 100, etc.).
+Research suggests our perception and mapping of numbers to a number line is logarithmic at first, but transitions to a linear scale later in development, with formal mathematics education [@siegler_numerical_2017; @siegler_numerical_2017; @varshney_why_2013; @dehaene2008log].
+For example, a kindergartner asked to place numbers 1-10 along a number line would place 3 close to the middle, following the logarithmic perspective [@varshney_why_2013]; \cref{fig:log-number-line} demonstrates how a kindergartner might map numbers along a number line. 
+<!-- \svp{Might be worth showing this graphically if you can reproduce pics from the paper...} -->
+@dehaene2008log found that with basic training, members of remote cultures with a basic vocabulary and minimal education understood the concept that numbers can be mapped into a spacial space; for example, numbers can be mapped to a number line or numbers can be mapped onto a clock. 
+<!-- \rh{Please explain.} -->
 There was a gradual transition from logarithmic to linear scale as the mapping of whole number magnitude representations transitioned from a compressed (approximately logarithmic) distribution to an approximately linear one. 
 These results indicate the universal and cultural-dependent characteristics of the sense of number. 
 
-\svp{Weber's law isn't quite the same thing as the numerical cognition stuff on log scales - it's a different perceptual phenomenon that is definitely related, but distinct in causal mechanism (as far as I know).}
-\rh{Is there a reference for the actual "Weber's Law"? Please provide more connection between your text and the "Weber's Law".}
-This phenomenon was first discovered by Ernst Weber, an early psychophysics researcher, by determining the relationship between the difference threshold (smallest detectable difference between two sensory stimuli; known as the "Just Noticable Difference") and the magnitude of a stimulus. 
-This holds true for a variety of stimuli such as weight, light, and sound as well as for a range of magnitudes; larger numbers require a proportional larger difference in order to remain equally discriminate [@dehaene2008log]. 
-Known as **Weber's law**, it was established that we do not notice absolute changes in stimuli, but instead that we notice the relative change [@sun_framework_2012]. 
-Numerically, Weber's Law is defined as 
-\begin{equation}
-\frac{\Delta S}{S} = K
-\end{equation}
-where $\Delta S$ represents the difference threshold, S represents the initial stimulus intensity, and K is called Weber's contrast which remains constant as the magnitude of S changes. 
-Gustav Fechner, a founder of psychophysics, provided further extension to Weber's law by discovering the relationship between the perceived intensity is logarithmic to the stimulus intensity when observed above a minimal threshold of perception [@sun_framework_2012]. 
-Formally known as the Weber-Fechner law is derived from Weber's law as
-\begin{equation}
-P = K\ln \frac{S}{S_0}
-\end{equation}
-where P represents the perceived stimulus, K represents Weber's contrast, S represents the initial stimulus intensity, and $S_0$ represents the minimal threshold of perception.
+```{r log-number-line, fig.cap= "Kindergarten example of mapping numbers 1-10 along a number line", fig.height=1, fig.width=4.5, message=FALSE, warning=FALSE}
+tibble(x = seq(1,10, 0.25),
+       y = 1,
+       text = c("1", NA, NA, NA, 
+                NA, NA, NA, NA,
+                NA, NA, NA, "2",
+                NA, NA, NA, NA,
+                NA, "3", NA, NA, 
+                NA, "4", NA, NA,
+                NA, "5", NA, NA,
+                "6", NA, NA, NA,
+                "7", NA, "8", "9",
+                "10")
+       ) %>%
+  ggplot(aes(x = x, y = y, label = text)) +
+  # geom_line() +
+  geom_text() + 
+  theme_classic() +
+  theme(aspect.ratio = 0.1,
+        axis.line.y = element_blank(),
+        axis.ticks.y = element_blank(),
+        axis.text.y = element_blank()
+        ) +
+  labs(x = NULL,
+       y = NULL
+       ) +
+  scale_x_continuous(breaks = c(1,10))
+```
     
 Assuming there is a direct relationship between perceptual and cognitive processes, it is reasonable to assume numerical representations should also be displayed on a nonlinear, compressed number scale. Therefore, if we perceive logarithmically by default, it is a natural (and presumably low effort) way to display information and should be easy to read and understand/use.
 The idea is compression enlarges the coding space, thus increasing the dynamic range of perception and firing neurons within our visual system [@nieder2003coding].
 Similar to the training and education required to transition from logarithmic mapping to linear mapping, there is also necessary training required in the assessment of graphical displays associated with logarithmic scales. @haemer_presentation_1949 identify semi-logarithmic charts for temporal series as requiring a certain degree of technical training.
     
 ## Underestimation of Exponential Growth {#underestimation}
+<!-- \svp{Start out by showing exponential growth e.g. 3 stages (early, mid, late) to explain why this is a hard problem to solve...} -->
+<!-- \svp{This reads like a bulleted list turned into a paragraph, which isn't bad, but it does need some work - turn it into a narrative, explain weaknesses in these studies, etc.} -->
 
-\svp{Start out by showing exponential growth e.g. 3 stages (early, mid, late) to explain why this is a hard problem to solve...}
-\svp{This reads like a bulleted list turned into a paragraph, which isn't bad, but it does need some work - turn it into a narrative, explain weaknesses in these studies, etc.}
-
-```{r exponential-stages, fig.cap = "Stages of exponential growth", out.width = "75%"}
+```{r exponential-stages, include = F, fig.cap = "Stages of exponential growth", out.width = "75%"}
 data <- tibble(x = seq(0,6,0.001),
                y = exp(x)) %>%
   mutate(group = ifelse(x <= 2, "G1", 
@@ -402,29 +493,39 @@ data %>%
   geom_mark_rect(show.legend = T) +
   scale_color_brewer("Stage", palette = "Dark2", labels = c("Early", "Mid", "Late"))
 ```
-\cref{fig:exponential-stages} [CITE](https://twitter.com/MDrelichman/status/1402054093284143104)
 
-```{r exponential-stages-comic, fig.cap = "Log scale comic", out.width="70%"}
+The same data can be interpreted differently by people with differing backgrounds; \cref{fig:exponential-stages-comic} [@vonbergmann_2021] illustrates how exponential growth is interpreted by individuals in public health vastly different than scientists.
+Exponential growth is often misjudged in early stages appearing to have a small growth rate.
+As exponential growth continues, the middle stage appears to be growing, but not at an astounding rate, appearing more quadratic.
+It is not until late stages of exponential growth when it is quite apparent that there is exponential growth occurring.
+This can lead to decisions made under inaccurate understanding causing future consequences.
+Early studies explored the estimation and prediction of exponential growth and found that growth is underestimated when presented both numerically and graphically [@wagenaar_misperception_1975].
+Results indicated that numerical estimation is more accurate than graphical estimation for exponential curves, 
+Experimental studies were conducted in order to determine strategies to improve estimation of exponential growth [@wagenaar_misperception_1975; @jones_polynomial_1977; @mackinnon_feedback_1991]
+There was no improvement in estimation found when participants had contextual knowledge or experience with exponential growth, but instruction on exponential growth reduced the underestimation; participants adjusted their initial starting value but not their perception of the growth rate [@wagenaar_misperception_1975; @jones_polynomial_1977].
+@mackinnon_feedback_1991 found that estimation was improved by providing immediate feedback to participants about the accuracy of their current predictions.  
+Our inability to accurately predict exponential growth might also be addressed by log transforming the data, however, this transformation introduces new complexities; most readers are not mathematically sophisticated enough to intuitively understand logarithmic math and translate that back into real-world effects.
+
+```{r exponential-stages-comic, fig.cap = "Log scale comic", out.width="100%"}
 knitr::include_graphics("images/exponential-stages-comic.jpg")
 ```
 
-Early studies explored the estimation and prediction of exponential growth, finding that growth is underestimated when presented both numerically and graphically but that numerical estimation is more accurate than graphical estimation for exponential curves [@wagenaar_misperception_1975]. 
-One way to improve estimation of increasing exponential trends is to provide immediate feedback to participants about the accuracy of their current predictions [@mackinnon_feedback_1991]. 
-While prior contextual knowledge or experience with exponential growth does not improve estimation, instruction on exponential growth reduces the underestimation: participants adjust their initial starting value but not their perception of growth rate [@wagenaar_misperception_1975; @jones_polynomial_1977].
-Our inability to accurately predict exponential growth might also be addressed by log transforming the data, however, this transformation introduces new complexities; most readers are not mathematically sophisticated enough to intuitively understand logarithmic math and translate that back into real-world effects.
-
 In @menge_logarithmic_2018, ecologists were surveyed to determine how often ecologists encounter log scaled data and how well ecologists understand log scaled data when they see it in the literature. 
-Participants were presented two relationships displayed on linear-linear scales, log-log scales with untransformed values, or log–log scales with log transformed values. 
+Participants were presented three relationships displayed on linear-linear scales, log-log scales with untransformed values, or log–log scales with log transformed values \pcref{fig:menge-plots}. 
 The authors propose three types of misconceptions participants encountered when presented data on log-log scales: 'hand-hold fallacy', 'Zeno's zero fallacy', and 'watch out for curves fallacies'. 
 These misconceptions are a result of linear extrapolation assuming that a line in log-log space represents a line instead of the power law in linear-linear space. 
 The study found that in each of these scenarios, participants were confident in their incorrect responses, indicating incorrect knowledge rather than a lack of knowledge. 
 
-\svp{You might take a whack at illustrating some of these fallacies}
-\rh{Menge's example should be visually illustrated.}
-The 'hand-hold fallacy' stems from the misconception that steeper slopes in log-log relationships are steeper slopes in linear-linear space. In fact, it is not only the slope that matters, but also the intercept and the location on the horizontal axis since a line in log-log space represents a power law in linear-linear space (i.e. linear extrapolation). 
-Emerging from 'Zeno's zero fallacy' is the misconception that positively sloped lines in log-log space can imply a non-zero value of y when x is zero. 
+```{r menge-plots, fig.cap = "Graphs viewed in Menge (2018) survey", out.width="75%"}
+knitr::include_graphics("images/menge-plots.png")
+```
+<!-- \svp{You might take a whack at illustrating some of these fallacies} -->
+<!-- \rh{Menge's example should be visually illustrated.} -->
+The 'hand-hold fallacy' stems from the misconception that steeper slopes in log-log relationships are steeper slopes in linear-linear space, illustrated in \cref{fig:menge-plots} d-f. 
+In fact, it is not only the slope that matters, but also the intercept and the location on the horizontal axis since a line in log-log space represents a power law in linear-linear space (i.e. linear extrapolation). 
+Emerging from 'Zeno's zero fallacy' is the misconception that positively sloped lines in log-log space can imply a non-zero value of y when x is zero, illustrated in \cref{fig:menge-plots} a-c and d-f.
 This is never true as positively sloped lines in log-log space actually imply that y = 0 when x = 0. This misconception again is a result of linear extrapolation assuming that a line in log-log space represents a line instead of the power law in linear-linear space. 
-The last misconception, 'watch out for curves fallacies' encompasses three faults: (1) lines in log-log space are lines in linear-linear space, (2) lines in log-log space curve upward in linear-linear space, and (3) curves in log-log space have the same curvature in linear-linear space. 
+The last misconception, 'watch out for curves fallacies' encompasses three faults: (1) lines in log-log space are lines in linear-linear space (illustrated in \cref{fig:menge-plots} d-f), (2) lines in log-log space curve upward in linear-linear space (illustrated in \cref{fig:menge-plots} d-f), and (3) curves in log-log space have the same curvature in linear-linear space (illustrated in \cref{fig:menge-plots} g-i). 
 Linear extrapolation is again responsible for the first and third faults while the second fault is a result of error in thinking that log-log lines represent power laws (which are exponential relationships), and all exponential relationships curve upward; this is only true when the log-log slope is greater than 1. 
 @menge_logarithmic_2018 found that in each of these scenarios, participants were confident in their incorrect responses, indicating incorrect knowledge rather than a lack of knowledge.
 
@@ -439,5 +540,4 @@ Participants were asked to draw a line using their computer mouse through the in
 In addition to differentiation and prediction of exponentially increasing data, an experimental task was conducted to test an individuals' ability to translate a graph of exponentially increasing data into real value quantities and extend their estimations by making comparisons. 
 The results of the three experimental tasks provide guidelines for readers to actively choose which of many possible graphics to draw, according to some set of design choices, to ensure that their charts are effective.
 
-
-\svp{Things that seem to be missing: 1) Cleveland and McGill - hierarchy of accuracy in plot objects. You can think of e.g. exponentials as a series of tangential angles, which might help with explaining underestimation? 2) some literature explaining the different levels of complexity between perception, reading information off of a graph, predicting information, etc. - you should find this if only because it grounds the whole experiment in psychological theory (but you don't have to find it for your prelim)}
+<!-- \svp{Things that seem to be missing: 1) Cleveland and McGill - hierarchy of accuracy in plot objects. You can think of e.g. exponentials as a series of tangential angles, which might help with explaining underestimation? 2) some literature explaining the different levels of complexity between perception, reading information off of a graph, predicting information, etc. - you should find this if only because it grounds the whole experiment in psychological theory (but you don't have to find it for your prelim)} -->
