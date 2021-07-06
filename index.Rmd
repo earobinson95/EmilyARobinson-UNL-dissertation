@@ -87,9 +87,9 @@ During the $\text{18}^{\text{th}}$ and $\text{19}^{\text{th}}$ centuries, govern
 In \cref{fig:william-playfair-trade}, @playfair1801statistical visually represents the power and economic status of each European Nation in the early $\text{19}^{\text{th}}$ century. 
 Circle size and numeric annotation within the circle indicate the number of square miles in each country with the number of people per square mile indicated above the circle. 
 The vertical bar to the left side represents the number of inhabitants (millions), and the line to the right side represents the revenue (million pounds). 
-Coloration in the original figure, not shown, identifies countries as maritime powers or powerful by land only. 
-\cref{fig:statistical-atlas-state-population} displays the population of each state as compiled from the 1870 US census [@walker2013statistical]. 
-Square size represents the proportion of the states population separated into three regions representing the origin and race of the population.
+Color in the original figure, not shown, identifies countries as maritime powers or powerful by land only. 
+The Statistical atlas of the United States [@walker2013statistical] used charts and graphics to display data compiled from the 1870 US census. 
+\cref{fig:statistical-atlas-state-population} displays the population of each state where square size represents the proportion of the states population separated into three regions representing the origin and race of the population.
 The rectangle shown to the right represents the proportion of residents born in the state who have become residents of other states.
 In the $\text{20}^{\text{th}}$ century, companies began utilizing graphics to understand their mechanics and support business decisions and news sources began displaying graphics of weather forecasts as a means to communicate critical information and aid in decision-making [@chandar2012graph; @yates1985graphs].
 @chandar2012graph illustrates how AT\&T used graphics to demonstrate management's ability to optimize utilization of assets by making comparisons between their annual net telephone revenues and their returns on total assets \pcref{fig:ATandT-revenue}.
@@ -154,12 +154,12 @@ knitr::include_graphics("images/graphic-flowchart.png")
 ```
 
 Despite past attempts to improve the use of graphics in science, graphics displayed in academic research are still falling short of the standards. @gordon_statistician_2015 evaluated 97 graphs for overall quality, based on five principles of graphical excellence including: (1) show the data clearly (2) use simplicity in design (3) use good alignment on a common scale for quantities to be compared (4) keep the visual encoding transparent (5) use graphical forms consistent with principles 1 and 4.
-This study randomly sampled 97 graphs published in A\* (top 5%) journals with work in statistics and applied science disciplines.
-There were 50 graphs sampled from the most recently available issues of A\* journals in applied sciences such as environmental sciences, agricultural and veterinary sciences, medical and health sciences, education, economics, psychology.
-The additional 47 graphs were randomly sampled from statistics A\* journals.
+The authors randomly sampled 97 graphs published in A\* (top 5%) journals with work in statistics and applied science disciplines.
+There were 50 graphs sampled from the most recently available issues of A\* journals in applied sciences such as environmental sciences, agricultural and veterinary sciences, medical and health sciences, education, economics, and psychology.
+The additional 47 graphs were randomly sampled from A\* statistics journals.
 Each graph was scored based on 60 features related to the five principles, such as proper axes labels.
 Both authors assigned an overall quality rating (poor, adequate, good, or exemplary) to each of the graphs sampled; discrepancies in ratings were settled with discussion.
-The authors rated 39% of the 97 graphs sampled as poor indicating there is still an astonishing lack in the quality of graphics. 
+The authors rated 39% of the 97 graphs sampled as poor, indicating there is still an astonishing lack in the quality of graphics. 
 <!-- \rh{what type of graphs? how did they evaluate them?} -->
 More startling is the fact that the source of the graphic from an applied science or a statistics graphic had no effect on the quality of the graphic. 
 In order to achieve a higher standard of the graphics being presented, future work must be done to implement the academic research being conducted in graphics into practice.
@@ -180,8 +180,8 @@ The perceptual process begins when there is a stimulus in the environment and li
 Within the eye, the light reflected is transformed and focused by the eye's optical system and an image is formed on the receptors of the viewer's retina. 
 It is important to note that everything a person perceives is based not on direct contact with stimuli but on representations of stimuli that are formed on the receptors and the resulting activity in the person's nervous system.
 Once light is reflected and focused, our visual receptors respond to the light and transform the light energy into electrical energy through a process called transduction. 
-Signals from the receptors are then transmitted through the retina, to the brain, and then within the brain where perception - what do you see? - and recognition - what is it called? - occur.
-After recognition, viewers take some sort of motor action - for example, move closer to the object.
+Signals from the receptors are then transmitted through the retina, to the brain, and then within the brain where perception (what do you see?) and recognition (what is it called?) occur.
+After recognition, viewers take some sort of motor action; for example, move closer to the object.
 The perceptual process is not direct and instead takes on more of a cyclic nature where a person may go through many iterations of stimuli, perception, recognition, and action before the final image is identified and understood [@peterson1994object]. 
 
 ```{r perceptual-process, fig.cap = "Perceptual process", out.width="75%"}
@@ -221,7 +221,7 @@ Initial experiments struggled with methodological issues [@eells1926relative; @c
 Participants were told not to hurry, but to work steadily in order to determine efficiency of judgment. 
 Students were then asked to analyze their mental processes used to make their estimates and indicate the method that best matches: by areas of sectors, by central angles, by arcs on the circumference, by subtending chords.
 This process was repeated three days later by presenting students the same data represented in bar diagrams. 
-Results of the study lead the authors to argue for the use of circle diagrams to show component parts based on both accuracy and speed.
+Results of the study led the authors to argue for the use of circle diagrams to show component parts based on both accuracy and speed.
 In response, @croxton1927bar evaluated the accuracy of judgment of two types of charts (bars and circles) in efforts to reach a consistent conclusion. 
 During class, students were individually presented pairs of diagrams (without scales) on cards and asked to estimate the percentages displayed in the diagram.
 It was found that the bar was preferable to the circle when shown percentages that deviate from quarters, but that the circle is strongly preferred when shown percentages separating the diagrams into 25\% or 50\%. 
@@ -247,29 +247,29 @@ Cognitive psychologists and statisticians made progress by conducting experiment
 @shah1999graphs established the notion that redesigning graphs can result in the improvement of the viewer's interpretation.
 For example, the use of gestalt principles [@goldstein_sensation_2017] such as proximity, similarity, and good continuation can help minimize the inferential processes and maximize the pattern association processes required to interpret relevant information.
 
-These later experiments followed similar methodology as early studies by asking participants to read information directly from the charts and provide a quantitative estimate or answer a predefined question; as with the early studies, accuracy and response time being evaluated [@peterson1954accurately; @broersma1985graphical; @dunn1988framed; @tan1994human; @amer2005bias]. 
+These later experiments followed similar methodology as early studies by asking participants to read information directly from the charts and provide a quantitative estimate or answer a predefined question; as with the early studies, accuracy and response time were evaluated [@peterson1954accurately; @broersma1985graphical; @dunn1988framed; @tan1994human; @amer2005bias]. 
 <!-- \svp{provide some examples of quantitative estimation questions -- this will better support Ch4} -->
 @spence_visual_1990 presents four example questions for comparing the sizes of individual graphical elements: (1) How much greater was the rainfall in September than May? (2) Is the price of oil in constant dollars increasing or decreasing from year to year? (3) Do more people subscribe to Time than Newsweek? and (4) Did the ABC Corporation pay the largest dividends last year, or did XYZ?
 @amer2005bias demonstrates that visual illusion may bias decision making and graph comprehension, even if the graphs are constructed according to best practice.
-Participants were presented a cost volume profit graph \pcref{amer-poggendorff-illusion} with two crossing lines (revenue and cost) and asked to view three values: (1) the amount of total revenues on the ordinate corresponding to the endpoint of the total-revenue line plotted on the graph (2) the amount of total costs on the ordinate corresponding to the endpoint of the total-cost line plotted on the graph and (3) the amount of costs/revenues on the ordinate at the break even point—the point where the two lines cross.
+Participants were presented a cost volume profit graph \pcref{fig:amer-poggendorff-illusion} with two crossing lines (revenue and cost) and asked to view three values: (1) the amount of total revenues on the ordinate corresponding to the endpoint of the total-revenue line plotted on the graph (2) the amount of total costs on the ordinate corresponding to the endpoint of the total-cost line plotted on the graph and (3) the amount of costs/revenues on the ordinate at the break even point—the point where the two lines cross.
 Results indicate that decision makers may consistentily underestimate or overestimate the values displayed on line graphs due to what is called the "Poggendorff illusion."
-In @dunn1988framed participants were shown two maps, an unclassed choropleth map and a framed rectrangle chart, indicating the murder rate of each US state \pcref{fig:framed-murder-rate-map}.
+In @dunn1988framed, participants were shown two maps, an unclassed choropleth map and a framed rectrangle chart, indicating the murder rate of each US state \pcref{fig:framed-murder-rate-map}.
 The goal of the study was to assess the relative accuracy with which quantitative information is extracted from both types of charts.
-Participants were strictly informed that the experiment was designed to test the ability of individuals to "read" or "decode" statistical maps and asked to write down their estimate of the murder rate as accurately as possible along- side the 24 named states. 
+Participants were strictly informed that the experiment was designed to test the ability of individuals to "read" or "decode" statistical maps and asked to write down their estimate of the murder rate as accurately as possible beside the 24 named states. 
 Results indicate that subjects found it easier to extract quantitative information from the framed rectangle chart than from the unclassed choropleth map and that the between individual variability in the choropleth map was related to the area of the state. 
 
-```{r amer-poggendorff-illusion, fig.cap = "Amer (2005) cost volume profit graph", out.width="75%"}
+```{r amer-poggendorff-illusion, fig.cap = "Amer (2005) cost volume profit graph", out.width="90%"}
 knitr::include_graphics("images/amer-poggendorff-illusion.png")
 ```
 
-```{r framed-murder-rate-map, fig.cap = "Dunn (1988) maps", out.width="75%"}
+```{r framed-murder-rate-map, fig.cap = "Dunn (1988) maps", out.width="90%"}
 knitr::include_graphics("images/framed-murder-rate-map.png")
 ```
 
 During the $\text{21}^{\text{st}}$ century, there have been advancements in the methodology used to investigate the effectiveness of statistical charts [@majumder_validation_2013]. 
 @buja_statistical_2009 introduced the lineup protocol in which data plots are depicted and interpreted as statistics. 
-Supported by the grammar of graphics, a data plots can be characterized as a statistic defined as, "a functional mapping of a variable or set of variables" [@vanderplas_testing_2020].
-This allows the data plot to be tested similar to other statistics, by comparing the actual data plot to a set of plots with the absence of any data structure we can test the likelihood of any perceived structure being significant [@vanderplas_testing_2020].
+Supported by the grammar of graphics, a data plot can be characterized as a statistic defined as, "a functional mapping of a variable or set of variables" [@vanderplas_testing_2020].
+This allows the data plot to be tested similar to other statistics, by comparing the actual data plot to a set of plots with the absence of any data structure we can test the likelihood of any perceived structure being significant.
 The construction of data plots as statistics allow for easy experimentation, granting researchers the ability to compare the effectiveness of and understand the perception of different types of charts.
 While the lineup protocol differs from methodology used in earlier studies, the focus is still on initial perception and graph comprehension with a relatively small amount of work conducted to understand the effect of design choices on higher cognitive processes such as learning or analysis [@green2009personal]. 
 <!-- \svp{This is in part because lineups only ask about perceived differences and do not test the actual ability to read information off of a graph accurately or the conclusions drawn from the graph. They are a lower-level tool, which makes them powerful because they can eliminate ambiguous questions, but also limits their real-world application in the absence of complex experimental designs (feature hierarchy, etc.).} -->
@@ -290,29 +290,66 @@ However, the lineup protocol is constrained by the inability to test higher orde
 ## Logarithmic Scales and Mapping
 
 We have recently experienced the impact graphics and charts have on a large scale through the SARSNCOV-2 pandemic (COVID-19). 
-\rh{please provide a LOT of examples here for sentence 1 (and actual examples describing why they are good/bad)}
-At the beginning of 2020, we saw an influx of dashboards being developed to display case counts, transmission rates, and outbreak regions [@gmbh_youve_2020]; mass media routinely showed charts to share information with the public about the progression of the pandemic [@romano_scale_2020]. 
-People began seeking out graphical displays of COVID-19 data as a direct result of these pieces of work [@gmbh_youve_2020]; providing increased and ongoing exposure to these graphics over time. \svp{It would be appropriate to add some of those graphics in here, if you wanted to...}
+<!-- \rh{please provide a LOT of examples here for sentence 1 (and actual examples describing why they are good/bad)} -->
+At the beginning of 2020, we saw an influx of dashboards being developed to display case counts, transmission rates, and outbreak regions [@rost_2020]; mass media routinely showed charts to share information with the public about the progression of the pandemic [@romano_scale_2020]. 
+@fagen-ulmschneider_2020 began the 91-DOVIC project to explore the global growth of COVID-19 through interactive graphics updated daily. 
+The interactive graphics allowed viewers to explore the current status of COVID-19 by selecting their desired regions, axes, axis scale, and measure of interest (e.g. case count, death count, vaccine count); \cref{fig:91dovic-cases-july2021} shows the new confirmed COVID-19 cases per day, normalized by population, as of July 2021. 
+Other graphics displayed COVID-19 data as maps \pcref{fig:covid19-summer2020-risk-map} with color indicating the severity and risk in each US county [@global_epidemics_2021].
+People began seeking out graphical displays of COVID-19 data as a direct result of these pieces of work [@rost_2020]; providing increased and ongoing exposure to these graphics over time. 
+\cref{fig:covid19-datawrapper-views-july2020} illustrates the increased views Datawrapper, a user-friendly web tool used to create basic interactive charts, had during the COVID-19 pandemic [@rost_2020].
+<!-- \svp{It would be appropriate to add some of those graphics in here, if you wanted to...} -->
 Many of these graphics helped guide decision makers to implement policies such as shut-downs or mandated mask wearing, as well as facilitated communication with the public to increase compliance [@bavel_using_2020]. 
 As graphics began to play an important role in the communication of the pandemic, creators of graphics were faced with design choices in order to ensure their charts were effective. 
 
+```{r 91dovic-cases-july2021, fig.cap = "91-DOVIC New Daily Case Counts as of July 2021", out.width="90%"}
+knitr::include_graphics("images/91dovic-cases-july2021.png")
+```
+
+```{r covid19-summer2020-risk-map, fig.cap = "COVID-19 Risk Level Map as of July 2020", out.width="90%"}
+knitr::include_graphics("images/covid19-summer2020-risk-map.png")
+```
+
+```{r covid19-datawrapper-views-july2020, fig.cap = "Datawrapper daily chart views during COVID-19", out.width="90%"}
+knitr::include_graphics("images/covid19-datawrapper-views-july2020.png")
+```
+
 When faced with data which spans several orders of magnitude, we must decide whether to show the data on its original
 scale (compressing the smaller magnitudes into relatively little area) or to transform the scale and alter the contextual appearance of the data.
-One common solution is to use a log scale transformation to display data over several orders of magnitude within one graph. 
+The usefulness of the log scale in science is illustrated in \cref{fig:log-scale-comic} [@munroe_2005].
+\rh{Maybe more explanation is needed for this. And it is not really connected to the text.}
+One common solution is to use a log scale transformation to display data over several orders of magnitude within one graph.
 \rh{I think more details are needed for the use of log scale. Providing examples would be useful}
-Logarithms turn multiplicative relationships additive\svp{phrasing?}, showing elasticities and other proportional changes, and also linearize power laws [@menge_logarithmic_2018].
+Logarithms turn multiplicative relationships additive \svp{phrasing?}, showing elasticities and other proportional changes, and also linearize power laws [@menge_logarithmic_2018].
 They also have practical purposes, easing the computation of small numbers such as likelihoods and transforming data to fit statistical assumptions.
-When presenting log scaled data, it is possible to use either un-transformed scale labels (for example, values of 1, 10 and 100 are equally spaced along the axis) or log transformed scale labels (for example, 0, 1, and 2, showing the corresponding powers of 10).\svp{In the grammar of graphics/ggplot2 formulation, this is the difference between a scale and a transformation... it might be worth seeing if that is a hadley-ism or if that is a wider convention.}
+When presenting log scaled data, it is possible to use either un-transformed scale labels (for example, values of 1, 10 and 100 are equally spaced along the axis) or log transformed scale labels (for example, 0, 1, and 2, showing the corresponding powers of 10).
+\svp{In the grammar of graphics/ggplot2 formulation, this is the difference between a scale and a transformation... it might be worth seeing if that is a hadley-ism or if that is a wider convention.}
+
+```{r log-scale-comic, include = T, fig.cap = "Log scale comic", out.width="70%"}
+knitr::include_graphics("images/log-scale-comic.png")
+```
+
 We have recently experienced the benefits and pitfalls of using log scales as COVID-19 dashboards displayed
 case count data on both the log and linear scale [@fagen-ulmschneider_2020; @burnmurdoch_2020]. 
-\rh{I think providing examples (specific examples) is necessary. Also when to use log vs linear? Please provide references \& examples!}
-In spring 2020, during the early stages of the COVID-19 pandemic, there were large magnitude discrepancies in case counts at a given time point between different geographic regions (e.g. states and provinces as well as countries and continents). 
+<!-- \rh{I think providing examples (specific examples) is necessary. Also when to use log vs linear? Please provide references \& examples!} -->
+In spring 2020, during the early stages of the COVID-19 pandemic, there were large magnitude discrepancies in case counts at a given time point between different geographic regions (e.g. states and provinces as well as countries and continents).
 During this time, we saw the usefulness of log scale transformations showing case count curves for areas with few cases and areas with many cases within one chart. 
-As the pandemic evolved, and the case counts were no longer spreading exponentially, graphs with linear scales seemed more effective at spotting early increases in case counts that signaled more localized outbreaks.
-This is only one recent example of a situation in which both log and linear scales are useful for showing different aspects of the same data. There are long histories of using log scales to display results in ecology, psychophysics, engineering, and physics [@menge_logarithmic_2018; @heckler_student_2013] \svp{elaborate on this a bit - when are they used, and where are they effective? Can you draw more comprehensive conclusions about the use of log scales?}. The usefulness of the log scale in science is exemplified in \cref{fig:log-scale-comic} [@munroe_2005]. \rh{Maybe more explanation is needed for this. And it is not really connected to the text.}
+\cref{fig:covid19-FT-deaths-march2020-log} illustrates the usefulness of log scales in comparing deaths attributed to Coronavirus between countries as of March 2020; the diagonal reference lines provide a visual aid useful for interpretation [@burnmurdoch_2020]. 
+As the pandemic evolved, and the case counts were no longer spreading exponentially, graphs with linear scales seemed more effective at spotting early increases in case counts that signaled more localized outbreaks. In \cref{fig:covid19-FT-june2020-case-counts-linear} and \cref{fig:covid19-FT-june2020-case-counts-log}, the case counts as of June 30, 2020 are displayed on both the linear and log scale respectively [@burnmurdoch_2020]. 
+The effect of the linear scale \pcref{fig:covid19-FT-june2020-case-counts-linear} appears to evoke a stronger reaction from the public than the log scale \pcref{fig:covid19-FT-june2020-case-counts-log} as case counts are clearly rising rapidly during the summer wave. 
+This is only one recent example of a situation in which both log and linear scales are useful for showing different aspects of the same data. There are long histories of using log scales to display results in ecology, psychophysics, engineering, and physics [@menge_logarithmic_2018; @heckler_student_2013] 
+\svp{elaborate on this a bit - when are they used, and where are they effective? Can you draw more comprehensive conclusions about the use of log scales?}. 
 
-```{r log-scale-comic, fig.cap = "Log scale comic", out.width="70%"}
-knitr::include_graphics("images/log-scale-comic.png")
+```{r covid19-FT-deaths-march2020-log, fig.cap = "Covid 19 Deaths (log scale) as of March 23, 2020", out.width="90%"}
+knitr::include_graphics("images/covid19-FT-03.23.2020-log.png")
+# https://eagereyes.org/blog/2020/in-praise-of-the-diagonal-reference-line
+```
+
+```{r covid19-FT-june2020-case-counts-linear, fig.cap = "Covid 19 Case Counts (linear scale) as of June 30, 2020", out.width="90%"}
+knitr::include_graphics("images/covid19-FT-case-count-06.30.2020-linear.png")
+```
+
+```{r covid19-FT-june2020-case-counts-log, fig.cap = "Covid 19 Case Counts (log scale) as of June 30, 2020", out.width="90%"}
+knitr::include_graphics("images/covid19-FT-case-count-06.30.2020-log.png")
 ```
 
 \svp{You might start this out by pointing out that while logarithms seem unnatural at first, we learn to count by ones, tens, and hundreds -- that is, in a base10 order of magnitude system. Then you can transition to research showing one, two, 10 and log-number scales.}

@@ -7,7 +7,13 @@ fig:eells-compoment-parts
 fig:spence-1990-proportion
 fig:amer-poggendorff-illusion
 fig:framed-murder-rate-map
+fig:91dovic-cases-july2021
+fig:covid19-summer2020-risk-map
+fig:covid19-datawrapper-views-july2020
 fig:log-scale-comic
+fig:covid19-FT-deaths-march2020-log
+fig:covid19-FT-june2020-case-counts-linear
+fig:covid19-FT-june2020-case-counts-log
 fig:exponential-stages
 fig:exponential-stages-comic
 fig:lineup-example
