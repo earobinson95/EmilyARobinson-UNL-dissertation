@@ -190,7 +190,7 @@
 \frontmatter
 %% from thesisdown
 % To pass between YAML and LaTeX the dollar signs are added by CII
-\title{HUMAN PERCEPTION OF EXPONENTIALLY INCREASING DATA DISPLAYED ON A LOG SCALE}
+\title{HUMAN PERCEPTION OF EXPONENTIALLY INCREASING DATA DISPLAYED ON A LOG SCALE EVALUATED THROUGH EXPERIMENTAL GRAPHICS TASKS}
 \author{Emily Anna Robinson}
 \adviser{Susan VanderPlas and Reka Howard}
 \adviserAbstract{}
@@ -218,9 +218,9 @@
 \maketitle
 
 
-% \begin{abstract}
-%     Log scales are often used to display data over several orders of magnitude within one graph. During the COVID-19 pandemic, we have seen both the benefits and the pitfalls of using log scales to display case counts. Three graphical experimental tasks were conducted to evaluate the impact our choice of scale has on human perception of exponentially increasing trends. The first experiment evaluates whether our ability to perceptually notice differences in exponentially increasing trends is impacted by the choice of scale. We conducted a visual inference experiment in which participants were shown a series of lineup plots (consisting of 19 null panels and 1 target panel) and asked to identify the panel that was most different from the others. Our results indicated that when there was a large difference in curvature between the target plot and null plots, the choice of scale had no impact and participants accurately differentiated between the two curves on both the linear and log scale. However, displaying exponentially increasing data on a log scale improved the accuracy of differentiating between models with slight curvature differences. An exception occurred when identifying a plot with curvature embedded in surrounding plots closely relating to a linear trend, indicating that it is easy to identify a curve in a group of lines but much harder to identify a line in a group of curves. The use of visual inference to identify these guidelines suggests that there are \emph{perceptual} advantages to log scales when differences are subtle. Our other experimental tasks focus on determining whether there are cognitive disadvantages to log scales: do log scales make it harder to make use of graphical information? We conducted a graphical task similar to the New York Times ``You Draw It'' page to test an individual's ability to use and make predictions for exponentially increasing data. We asked participants to draw a line using their computer mouse through the increasing exponential trend shown on both scales. In addition to differentiation and prediction of exponentially increasing data, we conduct an experimental task to test an individuals' ability to translate a graph of exponentially increasing data into real value quantities and extend their estimations by making comparisons. The results of our experimental tasks allow us to provide guidelines for readers to actively choose which of many possible graphics to draw, according to some set of design choices, to ensure that our charts are effective. \emph{(399 words; 350 word limit)}
-% \end{abstract}
+\begin{abstract}
+    Log scales are often used to display data over several orders of magnitude within one graph. Three graphical experimental tasks were conducted to evaluate the impact of displaying data on the log scale in comparison to being displayed on the linear scale has on human perception of exponentially increasing trends. The first experiment evaluates whether our ability to perceptually notice differences in exponentially increasing trends is impacted by the choice of scale. Participants were shown a set of plots and asked to identify which plot appeared to differ most from the other plots. Results indicated that when there was a large difference in exponential curves, the choice of scale had no impact and participants accurately differentiated between the two curves on both the linear and log scale. However, displaying exponentially increasing data on a log scale improved the accuracy of differentiating between exponential curves with slight differences. An exception occurred when identifying an exponential curve from curves closely relating to a linear trend, indicating it is easy to identify a curve in a group of lines but much harder to identify a line in a group of curves. The other experimental tasks focus on determining whether there are cognitive disadvantages to log scales: do log scales make it harder to make use of graphical information? To test an individual's ability to make predictions for exponentially increasing data, participants were asked to draw a line using their computer mouse through an exponentially increasing trend shown on both the linear and log scale. Results showed that when exponential growth rate is large, underestimation of exponential growth occurs when making predictions on a linear scale and there is an improvement in accuracy when making predictions on the log scale. The last experimental task is designed to test an individuals' ability to translate a graph of exponentially increasing data into real value quantities and make comparisons of estimates. The results of the three experimental tasks provide guidelines for readers to actively choose which of many possible graphics to draw in order to ensure their charts are effective at communicating the intended result.
+\end{abstract}
 
 %% Optional
 %% \begin{copyrightpage}
@@ -313,7 +313,6 @@ Today, we encounter data visualizations everywhere; researchers include graphics
 Although statistical graphics have become widely used and valued in science, business, and in many other aspects of life, as creators of graphics, we are too accepting of them as default without asking critical questions about the graphics we create or view (Unwin, 2020).
 Vanderplas, Cook, \& Hofmann (2020) poses the general question we must ask ourselves, ``how effective is this graph at communicating useful information?''
 An effective graphic accurately shows the data through the appropriate chart selection, axes and scales, and aesthetic design choices in order to successfully communicate the intended result.
-\protect\hyperlink{misleading-graphics}{Section 1.2} illustrates how graphics can be misleading and ineffective at communicating the intended result by inaccurately displaying the data.
 
 Higher quality of technology has influenced the creation, replication, and complexity of graphics as there are an infinitely many number of graphical displays and design choices that can be implemented at faster speeds with more flexibility.
 The creator of a graphic makes decisions about the variables displayed, the type of graphic, the size of the graphic and the aspect ratio, the colors and symbols used, the scales and limits, and the ordering of categorical variables.
@@ -347,9 +346,6 @@ Both authors assigned an overall quality rating (poor, adequate, good, or exempl
 The authors rated 39\% of the 97 graphs sampled as poor, indicating there is still an astonishing lack in the quality of graphics.
 More startling is the fact that the source of the graphic from an applied science or a statistics graphic had no effect on the quality of the graphic.
 In order to achieve a higher standard of the graphics being presented, future work must be done to implement the academic research being conducted in graphics into practice.
-
-\hypertarget{misleading-graphics}{%
-\section{Misleading Graphics}\label{misleading-graphics}}
 
 \hypertarget{perception-and-psychophysics}{%
 \section{Perception and Psychophysics}\label{perception-and-psychophysics}}
@@ -539,8 +535,8 @@ As graphics began to play an important role in the communication of the pandemic
 
 When faced with data which spans several orders of magnitude, we must decide whether to show the data on its original
 scale (compressing the smaller magnitudes into relatively little area) or to transform the scale and alter the contextual appearance of the data.
-The usefulness of the log scale in science is illustrated in \cref{fig:log-scale-comic} (Munroe, 2005) showing the challenge of displaying the fuel energy density of Uranium along side other sources of fuel due to differences in magnitude.
 One common solution is to use a log scale transformation to display data over several orders of magnitude within one graph.
+The usefulness of the log scale in science is illustrated in \cref{fig:log-scale-comic} (Munroe, 2005) showing the challenge of displaying the fuel energy density of Uranium along side other sources of fuel due to differences in magnitude.
 \cref{fig:log-scales} presents an exponential curve displayed on both the linear and log scale illustrating the use of the log scale when displaying data which spans several magnitudes.
 Logarithms convert multiplicative relationships (for example, 1 \& 10 displayed 10 units apart and 10 \& 100 displayed 90 units apart) to additive relationships (for example, 1 \& 10 and 10 \& 100 both equally spaced along the axis), showing proportional relationships and linearizing power functions (Menge et al., 2018).
 They also have practical purposes, easing the computation of small numbers such as likelihoods and transforming data to fit statistical assumptions.
@@ -613,7 +609,7 @@ These results indicate the universal and cultural-dependent characteristics of t
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=\linewidth,]{thesis_files/figure-latex/log-number-line-1} 
+{\centering \includegraphics[width=0.65\linewidth,]{thesis_files/figure-latex/log-number-line-1} 
 
 }
 
@@ -656,7 +652,7 @@ The study found that in each of these scenarios, participants were confident in 
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.75\linewidth,]{images/menge-plots} 
+{\centering \includegraphics[width=1\linewidth,]{images/menge-plots} 
 
 }
 
@@ -917,16 +913,24 @@ What remains to be seen is whether there are cognitive disadvantages to log scal
 
 In \protect\hyperlink{lineups}{Chapter 2}, a base foundation for future exploration of the use of log scales was established by evaluating participants ability to identify differences in charts through the use of lineups.
 This did not require that participants were able to understand exponential growth, identify log scales, or have any mathematical training; instead, it simply tested the change in perceptual sensitivity resulting from visualization choices.
-In order to determine whether there are cognitive disadvantages to log scales, we utilize interactive graphics to test an individual's ability to make predictions for exponentially increasing data. In this study, participants are asked to draw a line using their computer mouse through the exponentially increasing trend shown on both the log and linear scale.
+In order to determine whether there are cognitive disadvantages to log scales, we utilize interactive graphics to test an individual's ability to make predictions for exponentially increasing data. In this study, participants are asked to draw a line using their computer mouse through the exponentially increasing trend shown on both the log and linear scales.
 
 \hypertarget{past-methodology}{%
 \subsection{Past Methodology}\label{past-methodology}}
 
-Initial studies in the 20th century explored the use of fitting lines by eye through a set of points (Finney, 1951; Mosteller, Siegel, Trapido, \& Youtz, 1981).
+Initial studies in the 20th century explored the use of fitting lines by eye through a set of points (D. J. Finney, 1951; Mosteller, Siegel, Trapido, \& Youtz, 1981).
 Common methods of fitting trends by eye involve maneuvering a string, black thread, or ruler until the fit is suitable, then drawing the line.
-In Finney (1951), it was of interest to determine the effect of stopping iterative maximum likelihood calculations after one iteration. Twenty-one scientists were recruited via postal mail and asked to ``rule two lines'' in order to judge by eye the positions for a pair of parallel probit regression lines in a biological assay \pcref{fig:subjective-judgement}.
-\rh{I think more explanation is needed for Figure 3.1 and the corresponding experiment.}
-Results indicated that one cycle of iterations was sufficient based on the starting values provided by eye from the participants.
+In D. J. Finney (1951), it was of interest to determine the effect of stopping iterative maximum likelihood calculations after one iteration.
+Many techniques in statistical analysis are performed with the aid of iterative calculations such as Newton's method or Fisher's scoring.
+Guesses are made at the best estimates of certain parameters and these guesses are then used as the basis of a computation which yields a new set of approximation to the parameter estimates; this same procedure is the performed on the new parameter estimates and the computing cycle is repeated until convergence, as determined by the statistician, is reached.
+The author was interested in whether one iteration of calculations was sufficient in the estimation of parameters connected with dose-response relationships.
+One measure of interest is the relative potency between a test preparation of doses and standard preparation of does; relative potency is calculated as the ratio of two equally effective doses between the two preparation methods.
+\pcref{fig:subjective-judgement} shows a pair of parallel probit regression lines in a biological assay.
+The x-axis is the \(\log_{1.5}\) dose level for four dose levels (for example, doses 4, 6, 9, and 13 correspond correspond to equally spaced values on a logarithmic scale - 0, 1, 2, and 3) and the y-axis is the corresponding probit response as caluclated in David John Finney \& Stevens (1948); circles correspond to the test preparation method while the crosses correspond to the standard preparation method .
+For these sort of assays, the does-response relationship follows a linear regression of the probit response on the logarithm of the dose levels; the two preparation methods can be constrained to be parallel (Jerne \& Wood, 1949) limiting the relative potency to one consistent value.
+In this study, twenty-one scientists were recruited via postal mail and asked to ``rule two lines'' in order to judge by eye the positions for a pair of parallel probit regression lines in a biological assay \pcref{fig:subjective-judgement}.
+The author then computed one iterative calculation of the relative potency based on starting values as indicated by each participant lines and compared these relative potency estimates to that which was estimated by the full probit techinque (reaching convergence through multiple iterations).
+Results indicated that one cycle of iterations for calculating the relative potency was sufficient based on the starting values provided by eye from the participants.
 
 \begin{figure}[tbp]
 
@@ -940,10 +944,8 @@ Results indicated that one cycle of iterations was sufficient based on the start
 Thirty years later, Mosteller et al.~(1981), sought to understand the properties of least squares and other computed lines by establishing one systematic method of fitting lines by eye.
 The authors recruited 153 graduate students and post doctoral researchers in Introductory Biostatistics.
 Participants were asked to fit lines by eye to four sets of points \pcref{fig:mosteller-eyefitting-plot} using an 8.5 x 11 inch transparency with a straight line etched completely across the middle.
-A latin square design with packets of the set of points stapled together in four different sequences was used to determine if there is an effect of order of presentation.
-\rh{Maybe a reference would be nice for the latin square desing. THere might be people not being familiar with experimental design.}
-It was found that order of presentation had no effect and that participants tended to fit the slope of the first principal component over the slope of the least squares regression line.
-\rh{maybe some explanation would be nice for this.}
+A latin square design (Giesbrecht \& Gumpertz, 2004) with packets of the set of points stapled together in four different sequences was used to determine if there is an effect of order of presentation.
+It was found that order of presentation had no effect and that participants tended to fit the slope of the first principal component (error minimized orthogonally, both horizontal and vertical, to the regression line) over the slope of the least squares regression line (error minimized vertically to the regression line).
 
 \begin{figure}[tbp]
 
@@ -999,7 +1001,7 @@ A default SVG container for layering elements is then generated by the r2d3 func
 \protect\hyperlink{youdrawit-with-shiny}{Appendix A} outlines the development of the you draw interactive plots used in this study through the use of r2d3 and R shiny applications.
 \cref{fig:youdrawit-example} provides an example of a you draw it interactive plot as seen by participants during the study.
 The first frame shows what the participant sees along with the prompt, ``Use your mouse to fill in the trend in the yellow box region.''
-Next, the yellow box region moves along as the participant draws their trend-line until the yellow region disappears indicating the participant has filled in the entire domain.
+Next, the yellow box region moves along as the participant draws their trend-line until the yellow region disappears indicating the participant has filled in the entire x-range.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1021,11 +1023,9 @@ Next, the yellow box region moves along as the participant draws their trend-lin
 \section{Study Design}\label{study-design-1}}
 
 This chapter contains two sub-studies; the first aims to establish you draw it as a tool for measuring predictions of trends fitted by eye and the second then applies you draw it as a method for testing graphics.
-Mosteller et al.~(1981) was replicated as part of the study data collection in order to validate you draw it as a method for testing graphics, referred to as Eye Fitting Straight Lines in the Modern Era.
-\rh{Please explain first sentence in more detail.}
-This method is then used to test an individual's ability to make predictions for exponentially increasing data on both the log and linear scales, referred to as Prediction of Exponential Trends.
-Data for both sub-studies were collected in conjunction with one another over the same study participant sample.
-\rh{"... over the same study participant sample?"}
+In order to validate you draw it as a method for testing graphics, the first sub-study, referred to as Eye Fitting Straight Lines in the Modern Era, replicated the experiment and results found in Mosteller et al.~(1981).
+The second sub-study, referred to as Prediction of Exponential Trends, uses the established you draw it method is to test an individual's ability to make predictions for exponentially increasing data on both the log and linear scales.
+All subject's participated in both sub-studies at the same time in conjunction with one another.
 
 A total of six data sets - four Eye Fitting Straight Lines in the Modern Era and two Prediction of Exponential Trends - are generated for each individual at the start of the experiment.
 The two simulated data sets corresponding to the simulated data models used in the Prediction of Exponential Trends sub-study are then plotted a total of four times each with different aesthetic and scale choices for a total of eight task plots.
@@ -1040,7 +1040,7 @@ All completed you draw it task plots were included in the analysis.
 \hypertarget{eye-fitting-straight-lines-in-the-modern-era}{%
 \section{Eye Fitting Straight Lines in the Modern Era}\label{eye-fitting-straight-lines-in-the-modern-era}}
 
-Finney (1951) and Mosteller et al.~(1981) use methods such as using a ruler, string, or transparency sheet to fit straight lines through a set of points.
+D. J. Finney (1951) and Mosteller et al.~(1981) use methods such as using a ruler, string, or transparency sheet to fit straight lines through a set of points.
 This section replicates the study found in Mosteller et al.~(1981) in order to establish you draw it as a tool and method for testing graphics.
 
 \hypertarget{data-generation-1}{%
@@ -1054,32 +1054,31 @@ y_i & = \beta_0 + \beta_1 x_i + e_i \\
 \text{with } e_i & \sim N(0, \sigma^2). \nonumber
 \end{align}
 The parameters \(\beta_0\) and \(\beta_1\) are selected to replicate Mosteller, Siegel, Trapido, \& Youtz (1981) with \(e_i\) generated by rejection sampling in order to guarantee the points shown align with that of the fitted line.
-An ordinary least squares regression is then fit to the simulated points in order to obtain the best fit line and fitted values in 0.25 increments across the domain, \((x_k, \hat y_{k,OLS}), k = 1, ..., 4 x_{max} +1\).
+An ordinary least squares regression is then fit to the simulated points in order to obtain the best fit line and fitted values in 0.25 increments across the x-range, \((x_k, \hat y_{k,OLS}), k = 1, ..., 4 x_{max} +1\).
 The data simulation function then outputs a list of point data and line data both indicating the parameter identification, x value, and corresponding simulated or fitted y value.
 The data simulation procedure is described in \cref{alg:eyefitting-algorithm}.
 
 \begin{algorithm}
   \caption{Eye Fitting Straight Lines in the Modern Era Data Simulation}\label{alg:eyefitting-algorithm}
   \begin{algorithmic}[1]
-    \Statex \textbullet~\textbf{Input Parameters:} $y_{\bar{x}}$ for calculating the y-intercept, $\beta_0$; slope $\beta_1$; standard deviation from line $\sigma$; sample size $N = 30$; domain $x_{min}$ and $x_{max}$; fitted value increment $x_{by} = 0.25$.
+    \Statex \textbullet~\textbf{Input Parameters:} $y_{\bar{x}}$ for calculating the y-intercept, $\beta_0$; slope $\beta_1$; standard deviation from line $\sigma$; sample size $N = 30$; x-range $x_{min}$ and $x_{max}$; fitted value increment $x_{by} = 0.25$.
     \Statex \textbullet~\textbf{Output Parameters:} List of point data and line data each indicating the parameter identification, x value, and corresponding simulated or fitted y value.
-    \State Randomly select and jitter N = 30 x-values along the domain, $x_{i=1:N}\in [x_{min}, x_{max}]$.
+    \State Randomly select and jitter N = 30 x-values along the x-range, $x_{i=1:N}\in [x_{min}, x_{max}]$.
     \State Determine the y-intercept, $\beta_0$, at x = 0 from the provided slope ($\beta_1$) and y-value at the mean of x ($y_{\bar{x}}$) using point-slope equation of a line.
     \State Generate "good" errors, $e_{i = 1:n}$ based on $N(0,\sigma)$ by setting a constraint requiring the mean of the first N/3 errors $< |2\sigma|.$
     \State Simulate point data based on $y_i = \beta_0 + \beta_1 x_i + e_i$
     \State Obtain ordinary least squares regression coefficients, $\hat\beta_0$ and $\hat\beta_1$, for the simulated point data using the `lm` function in the base stats R package.
-    \State Obtain fitted values every 0.25 increment across the domain from the ordinary least squares regression $\hat y_{k,OLS} = \hat\beta_{0,OLS} + \hat\beta_{1,OLS} x_k$.
+    \State Obtain fitted values every 0.25 increment across the x-range from the ordinary least squares regression $\hat y_{k,OLS} = \hat\beta_{0,OLS} + \hat\beta_{1,OLS} x_k$.
     \State Output data list of point data and line data each indicating the parameter identification, x value, and corresponding simulated or fitted y value.
   \end{algorithmic}
 \end{algorithm}
 
 Simulated model equation parameters were selected to reflect the four data sets (F, N, S, and V) used in Mosteller, Siegel, Trapido, \& Youtz (1981) \pcref{tab:eyefitting-parameters}.
-Parameter choices F, N, and S simulated data across a domain of 0 to 20.
+Parameter choices F, N, and S simulated data across an x-range of 0 to 20.
 Parameter choice F produces a trend with a positive slope and a large variance while N has a negative slope and a large variance.
-In comparison, S shows a trend with a positive slope with a small variance and V yields a steep positive slope with a small variance over the domain of 4 to 16.
+In comparison, S shows a trend with a positive slope with a small variance and V yields a steep positive slope with a small variance over the x-range of 4 to 16.
 \cref{fig:eyefitting-simplot} illustrates an example of simulated data for all four parameter choices intended to reflect the trends seen in \cref{fig:mosteller-eyefitting-plot}.
-Within the interactive plot code, the aspect ratio defining the x to y axis ratio was set to 1 with a consistent y range buffer of 10\% to allow for users to draw outside the data set range.
-\rh{I am not sure if readers wll understand "buffer of 50\% on the lower limit", "linear scale option", "start draw point set to 50\%.}
+Aesthetic design choices were made consistent across each of the interactive you draw it plots; the aspect ratio, defining the \(x\) to \(y\) axis ratio was set to one and the y-axis range extended 10\% beyond the range of the data to allow for users to draw outside the data set range.
 
 \begin{table}
 
@@ -1113,9 +1112,9 @@ In addition to the participant drawn points, \((x_k, y_{drawn})\), and the ordin
 For each set of simulated data and parameter combination, the PCA regression equation was determined by using the princomp function in the base R stats package to obtain the rotations of the first principal component for vectors x and y.
 The estimated slope, \(\hat\beta_{1,PCA}\), is determined by the ratio of the y-rotation and x-rotation of the first principal component with the y-intercept, \(\hat\beta_{0,PCA}\) calculated by the point-slope equation of a line using the mean of of the simulated points, \((\bar x_i, \bar y_i)\).
 \rh{Please explain x-rotation and y-rtation of PC1. Maybe the first paragraph of section 3.3.2 could be extended.}
-Fitted values, \(\hat y_{k,PCA}\) are then obtained every 0.25 increment across the domain from the PCA regression equation, \(\hat y_{k,PCA} = \hat\beta_{0,PCA} + \hat\beta_{1,PCA} x_k\).
+Fitted values, \(\hat y_{k,PCA}\) are then obtained every 0.25 increment across the x-range from the PCA regression equation, \(\hat y_{k,PCA} = \hat\beta_{0,PCA} + \hat\beta_{1,PCA} x_k\).
 \cref{fig:ols-vs-pca-example} illustrates the difference between an OLS regression equation which minimizes the vertical distance of points from the line and a regression equation with a slope calculated by the first principal component which minimizes the smallest distance of points from the line.
-\rh{you have xijk and xk -> a little confusing. you mention "domain of "x". what do you mean by that?}
+\rh{you have xijk and xk -> a little confusing.}
 
 \begin{figure}[tbp]
 
@@ -1127,7 +1126,7 @@ Fitted values, \(\hat y_{k,PCA}\) are then obtained every 0.25 increment across 
 \end{figure}
 
 For each participant, the final data set used for analysis contains \(x_{ijk}, y_{ijk,drawn}, \hat y_{ijk,OLS}\), and \(\hat y_{ijk,PCA}\) for parameter choice \(i = 1,2,3,4\), j = \(1,...N_{participant}\), and \(x_{k}\) value \(k = 1, ...,4 x_{max} + 1\).
-Using both a linear mixed model and a generalized additive mixed model, comparisons of vertical residuals in relation to the OLS fitted values (\(e_{k,OLS} = y_{k,drawn} - \hat y_{k,OLS}\)) and PCA fitted values (\(e_{k,PCA} = y_{k,drawn} - \hat y_{k,PCA}\)) were made across the domain of x.
+Using both a linear mixed model and a generalized additive mixed model, comparisons of vertical residuals in relation to the OLS fitted values (\(e_{k,OLS} = y_{k,drawn} - \hat y_{k,OLS}\)) and PCA fitted values (\(e_{k,PCA} = y_{k,drawn} - \hat y_{k,PCA}\)) were made across the x-range.
 \cref{fig:eyefitting-example-plot} displays an example of all three fitted trend lines for parameter choice F.
 
 \begin{figure}[tbp]
@@ -1192,7 +1191,7 @@ These results are consistent to those found in Mosteller, Siegel, Trapido, \& Yo
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=1\linewidth,]{thesis_files/figure-latex/eyefitting-lmer-residualplots-1} 
+{\centering \includegraphics[width=0.9\linewidth,]{thesis_files/figure-latex/eyefitting-lmer-residualplots-1} 
 
 }
 
@@ -1201,7 +1200,7 @@ These results are consistent to those found in Mosteller, Siegel, Trapido, \& Yo
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=1\linewidth,]{thesis_files/figure-latex/eyefitting-gamm-residualplots-1} 
+{\centering \includegraphics[width=0.9\linewidth,]{thesis_files/figure-latex/eyefitting-gamm-residualplots-1} 
 
 }
 
@@ -1262,31 +1261,31 @@ y_i & = e^{\beta x + e_i} \\
 \text{with } e_i & \sim N(0, \sigma^2). \nonumber
 \end{align}
 The parameter, \(\beta\), was selected to reflect the rate of exponential growth with \(e_i\) generated by rejection sampling in order to guarantee the points shown align with that of the fitted line displayed in the initial plot frame.
-A nonlinear least squares regression is then fit to the simulated points in order to obtain the best fit line and fitted values in 0.25 increments across the domain, \((x_k, \hat y_{k,NLS}), k = 1, ..., 4 x_{max} +1\).
+A nonlinear least squares regression is then fit to the simulated points in order to obtain the best fit line and fitted values in 0.25 increments across the x-range, \((x_k, \hat y_{k,NLS}), k = 1, ..., 4 x_{max} +1\).
 The data simulation function then outputs a list of point data and line data both indicating the parameter identification, x value, and corresponding simulated or fitted y value.
 The data simulation procedure is described in \cref{alg:exponential-prediction-algorithm}.
 
 \begin{algorithm}
   \caption{Prediction of Exponential Trends Data Simulation}\label{exponential-prediction-algorithm}
   \begin{algorithmic}[1]
-    \Statex \textbullet~\textbf{Input Parameters:} $\beta$ growth rate; standard deviation from exponential curve $\sigma$; sample size $N = 30$; domain $x_{min}$ and $x_{max}$; fitted value increment $x_{by} = 0.25$.
+    \Statex \textbullet~\textbf{Input Parameters:} $\beta$ growth rate; standard deviation from exponential curve $\sigma$; sample size $N = 30$; x-range $x_{min}$ and $x_{max}$; fitted value increment $x_{by} = 0.25$.
     \Statex \textbullet~\textbf{Output Parameters:} List of point data and line data each indicating the parameter identification, x value, and corresponding simulated or fitted y value.
-    \State Randomly select and jitter N = 30 x-values along the domain, $x_{i=1:N}\in [0, 20]$.
+    \State Randomly select and jitter N = 30 x-values along the x-range, $x_{i=1:N}\in [0, 20]$.
     \State Generate "good" errors, $e_{i = 1:n}$ based on $N(0,\sigma)$ by setting a constraint requiring the mean of the first N/3 errors $< |2\sigma|.$
     \State Simulate point data based on $y_i = e^{\beta x + e_i}$.
     \State Fit the equation $\log(y) = \beta x$ to obtain an estimated starting value for $\beta$. 
     \State Obtain nonlinear least squares regression coefficient, $\hat\beta$, for the simulated point data using the `nls` function in the base stats R package.
-    \State Obtain fitted values every 0.25 increment across the domain from the nonlinear least squares regression $\hat y_{m,NLS} = e^{\hat\beta_{NLS} x_m}$.
+    \State Obtain fitted values every 0.25 increment across the x-range from the nonlinear least squares regression $\hat y_{m,NLS} = e^{\hat\beta_{NLS} x_m}$.
     \State Output data list of point data and line data each indicating the parameter identification, x value, and corresponding simulated or fitted y value.
   \end{algorithmic}
 \end{algorithm}
 
 Model equation parameter, \(\beta\), was selected to reflect two exponential growth rates (low: \(\beta = 0.10, \sigma = 0.09\) and high: \(\beta = 0.23, \sigma = 0.25\)) as determined by visual inspection with growth rate parameter selection from the lineup study in \protect\hyperlink{lineups-parameter-selection}{Chapter 2} used as a starting point.
-Each growth rate parameter was used to simulate data across a domain of 0 to 20.
-The 2 simulated data sets (low and high exponential growth rates) were then shown 4 times each by truncating the points shown at both 50\% and 75\% of the domain as well as on both the log and linear scales for a total of 8 interactive plots reflecting a 2 x 2 x 2 factorial treatment design.
+Each growth rate parameter was used to simulate data across an x-range of 0 to 20.
+The 2 simulated data sets (low and high exponential growth rates) were then shown 4 times each by truncating the points shown at both 50\% and 75\% of the x-range as well as on both the log and linear scales for a total of 8 interactive plots reflecting a 2 x 2 x 2 factorial treatment design.
 \protect\hyperlink{exponential-prediction-plots}{Appendix B} displays visual examples of all 8 interactive plots.
-Within the interactive plot code, the aspect ratio defining the x to y axis ratio was set to 1 with a y range buffer of 50\% on the lower limit and 200\% on the upper limit to allow for users to draw outside the data set range.
-The linear scale option was set to true or false reflecting the linear and log scale display choices respectively with the user line start draw point set to 50\% of the domain at \(x = 10\).
+Aesthetic design choices were made consistent across each of the interactive you draw it plots; the aspect ratio, defining the \(x\) to \(y\) axis ratio was set to one, the y-axis extended 50\% below the lower limit of the simulated data range and 200\% beyond the upper limit of the simulated data range to allow for users to draw outside the data set range, and participants were asked to start drawing at 50\% of the x-range (for example, at \(x = 10\)).
+Reflecting the treatment design for each plot, the y-axis was assigned to be displayed on either the linear scale or log scale.
 
 \hypertarget{results-2}{%
 \subsection{Results}\label{results-2}}
@@ -1301,18 +1300,17 @@ In particular, this suggestion is most noticeable when points are truncated at 5
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=1\linewidth,]{thesis_files/figure-latex/exponential-yloess-spaghetti-plot-1} 
+{\centering \includegraphics[width=0.9\linewidth,]{thesis_files/figure-latex/exponential-yloess-spaghetti-plot-1} 
 
 }
 
 \caption{Exponential Prediction Spaghetti Plot}\label{fig:exponential-yloess-spaghetti-plot}
 \end{figure}
 
-Allowing for flexibility, the bam function in the mgcv package (S. N. Wood, 2003, 2004, 2011; S. N. Wood, 2017; S. N. Wood, N., Pya, \& Saefken, 2016) is used to fit a GAMM to estimate trends of vertical residuals from the participant drawn line in relation to the NLS fitted values (\(e_{ijklm,NLS} = y_{ijklm,drawn} - \hat y_{ijklm,NLS}\)) across the domain of \(x\).
+Allowing for flexibility, the bam function in the mgcv package (S. N. Wood, 2003, 2004, 2011; S. N. Wood, 2017; S. N. Wood, N., Pya, \& Saefken, 2016) is used to fit a GAMM to estimate trends of vertical residuals from the participant drawn line in relation to the NLS fitted values (\(e_{ijklm,NLS} = y_{ijklm,drawn} - \hat y_{ijklm,NLS}\)) across the range of \(x\).
 The combination between growth rate, point truncation, and scale was treated as a fixed effect with no estimated intercept and a separate smoothing spline for \(x\) was estimated for each treatment combination.
 A random participant effect accounting for variation due to participant and a random spline for each participant accounted for variation in spline for each participant.
 The GAMM equation for residuals is given by:
-\rh{What is xijkm? Now you have index l, but sometimes you don't.}
 \begin{equation}
 y_{ijklm,drawn} - y_{ijklm,NLS} = e_{ijklm,nls} = \tau_{ijk} + s_{ijk}(x_{ijklm}) + p_{l} + s_{m}(x_{ijklm})
 \end{equation}
@@ -1337,7 +1335,7 @@ In particular, this trend is more prominent in high exponential growth rates whe
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=1\linewidth,]{thesis_files/figure-latex/exponential-prediction-gamm-preds-1} 
+{\centering \includegraphics[width=0.9\linewidth,]{thesis_files/figure-latex/exponential-prediction-gamm-preds-1} 
 
 }
 
@@ -1356,7 +1354,7 @@ The reproducibility of these results serve as evidence of the reliability of the
 In Prediction of Exponential Trends, the you draw it method was used to test an individual's ability to make predictions for exponentially increasing data.
 Results indicate that underestimation of exponential growth occurs when participants were asked to draw trend lines on the linear scale and that there was an improvement in accuracy when trends were drawn on the log scale.
 This phenomena is strongly supported for high exponential growth rates.
-Improvement in predictions are made when points along the exponential trend are shown as indicated by the discrepancy in results for treatments with points truncated at 50\% compared to 75\% of the domain.
+Improvement in predictions are made when points along the exponential trend are shown as indicated by the discrepancy in results for treatments with points truncated at 50\% compared to 75\% of the x-range.
 
 The results of this study suggest that there are cognitive advantages to log scales when making predictions of exponential trends.
 Improvement in predictions were made for trends with high exponential growth rates when participants were asked to draw a trend line on the log scale compared to the linear scale.
@@ -1545,8 +1543,14 @@ Fechner, G. T. (1860). \emph{Elemente der psychophysik} (Vol. 2). Breitkopf u. H
 \leavevmode\hypertarget{ref-finney_subjective_1951}{}%
 Finney, D. J. (1951). Subjective {Judgment} in {Statistical} {Analysis}: {An} {Experimental} {Study}. \emph{Journal of the Royal Statistical Society. Series B (Methodological)}, \emph{13}(2), 284--297. Retrieved from \url{https://www.jstor.org/stable/2984070}
 
+\leavevmode\hypertarget{ref-finney1948table}{}%
+Finney, David John, \& Stevens, W. (1948). A table for the calculation of working probits and weights in probit analysis. \emph{Biometrika}, \emph{35}(1/2), 191--201.
+
 \leavevmode\hypertarget{ref-furmanski2000oblique}{}%
 Furmanski, C. S., \& Engel, S. A. (2000). An oblique effect in human primary visual cortex. \emph{Nature Neuroscience}, \emph{3}(6), 535--536.
+
+\leavevmode\hypertarget{ref-giesbrecht2004planning}{}%
+Giesbrecht, F. G., \& Gumpertz, M. L. (2004). \emph{Planning, construction, and statistical analysis of comparative experiments} (Vol. 405, pp. 118--157). John Wiley \& Sons.
 
 \leavevmode\hypertarget{ref-goldstein_sensation_2017}{}%
 Goldstein, E. B., \& Brockmole, J. R. (2017). Sensation and {Perception}, 480.
@@ -1571,6 +1575,9 @@ Heckler, A. F., Mikula, B., \& Rosenblatt, R. (2013). Student accuracy in readin
 
 \leavevmode\hypertarget{ref-hofmann_graphical_2012}{}%
 Hofmann, H., Follett, L., Majumder, M., \& Cook, D. (2012). Graphical {Tests} for {Power} {Comparison} of {Competing} {Designs}. \emph{IEEE Transactions on Visualization and Computer Graphics}, \emph{18}(12), 2441--2448. http://doi.org/\href{https://doi.org/10.1109/TVCG.2012.230}{10.1109/TVCG.2012.230}
+
+\leavevmode\hypertarget{ref-jerne1949validity}{}%
+Jerne, N. K., \& Wood, E. C. (1949). The validity and meaning of the results of biological assays. \emph{Biometrics}, \emph{5}(4), 273--299.
 
 \leavevmode\hypertarget{ref-jones_polynomial_1977}{}%
 Jones, G. V. (1977). Polynomial perception of exponential growth. \emph{Perception \& Psychophysics}, \emph{21}(2), 197--198. http://doi.org/\href{https://doi.org/10.3758/BF03198726}{10.3758/BF03198726}
@@ -1609,7 +1616,7 @@ Majumder, M., Hofmann, H., \& Cook, D. (2013). Validation of {Visual} {Statistic
 Menge, D. N. L., MacPherson, A. C., Bytnerowicz, T. A., Quebbeman, A. W., Schwartz, N. B., Taylor, B. N., \& Wolf, A. A. (2018). Logarithmic scales in ecological data presentation may cause misinterpretation. \emph{Nature Ecology \& Evolution}, \emph{2}(9), 1393--1402. http://doi.org/\href{https://doi.org/10.1038/s41559-018-0610-7}{10.1038/s41559-018-0610-7}
 
 \leavevmode\hypertarget{ref-mosteller_eye_1981}{}%
-Mosteller, F., Siegel, A. F., Trapido, E., \& Youtz, C. (1981). Eye {Fitting} {Straight} {Lines}. \emph{The American Statistician}, \emph{35}(3), 150--152. http://doi.org/\href{https://doi.org/10.1080/00031305.1981.10479335}{10.1080/00031305.1981.10479335}
+Mosteller, F., Siegel, A. F., Trapido, E., \& Youtz, C. (1981). Eye fitting straight lines. \emph{The American Statistician}, \emph{35}(3), 150--152.
 
 \leavevmode\hypertarget{ref-munroe_2005}{}%
 Munroe, R. (2005). Log scale. \emph{xkcd: A webcomic of romance, sarcasm, math, and language}. Creative Commons. Retrieved from \url{https://xkcd.com/1162/}

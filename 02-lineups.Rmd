@@ -150,7 +150,7 @@ There are a total of 6 (i.e. $3!\cdot 2!$) lineup curvature combinations.
 Two sets of each lineup curvature combination were simulated (total of 12 test data sets) and plotted on both the linear scale and the log scale (total of 24 test lineup plots).
 In addition, there are three curvature combinations which generate homogeneous "Rorschach" lineups, where all panels are from the same distribution. 
 Each participant evaluated one of these lineups, but for simplicity, these evaluations are not described in this chapter.
-```{r curvature-combination-example, fig.height = 6, fig.width = 9, fig.cap = "Lineup curvature combinations", out.width="100%"}
+```{r curvature-combination-example, fig.height = 6, fig.width = 6, fig.cap = "Lineup curvature combinations", out.width="100%"}
 simData <- read.csv("data/lineups/difficulty-comparison-data.csv")
 
 # simData  %>%

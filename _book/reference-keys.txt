@@ -46,7 +46,6 @@ fig:high-15-linear
 fig:high-15-log
 literature-review
 introduction-to-graphics
-misleading-graphics
 perception-and-psychophysics
 perceptual-process
 logarithmic-perception
