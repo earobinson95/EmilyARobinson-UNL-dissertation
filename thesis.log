@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.5.4)  6 JUL 2021 17:39
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.5.4)  7 JUL 2021 12:12
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1788,34 +1788,34 @@ File: thesis_files/figure-latex/ols-vs-pca-example-1.pdf Graphic file (type pdf
 File: thesis_files/figure-latex/eyefitting-example-plot-1.pdf Graphic file (typ
 e pdf)
 <use thesis_files/figure-latex/eyefitting-example-plot-1.pdf>
-[52] [53] [54]
+[52] [53] [54] [55]
 File: thesis_files/figure-latex/eyefitting-lmer-residualplots-1.pdf Graphic fil
 e (type pdf)
 <use thesis_files/figure-latex/eyefitting-lmer-residualplots-1.pdf>
 File: thesis_files/figure-latex/eyefitting-gamm-residualplots-1.pdf Graphic fil
 e (type pdf)
 <use thesis_files/figure-latex/eyefitting-gamm-residualplots-1.pdf>
-[55]
+[56] [57] [58]
 File: thesis_files/figure-latex/eyefitting-ss-oddsratio-1.pdf Graphic file (typ
 e pdf)
 <use thesis_files/figure-latex/eyefitting-ss-oddsratio-1.pdf>
-[56] [57]
+[59]
 
 LaTeX Warning: Reference `alg:exponential-prediction-algorithm' on page 1 undef
-ined on input line 1256.
+ined on input line 1267.
 
-[58]
+[60] [61]
 File: thesis_files/figure-latex/exponential-yloess-spaghetti-plot-1.pdf Graphic
  file (type pdf)
 <use thesis_files/figure-latex/exponential-yloess-spaghetti-plot-1.pdf>
-[59] [60]
+[62] [63]
 File: thesis_files/figure-latex/exponential-prediction-gamm-preds-1.pdf Graphic
  file (type pdf)
 <use thesis_files/figure-latex/exponential-prediction-gamm-preds-1.pdf>
-[61] [62] [63]
+[64] [65]
 File: images/r2d3+shiny-inkscape.png Graphic file (type bmp)
 <images/r2d3+shiny-inkscape.png>
-[64
+[66
 
 ]
 File: images/low-10-linear.png Graphic file (type bmp)
@@ -1834,19 +1834,19 @@ File: images/high-15-linear.png Graphic file (type bmp)
 <images/high-15-linear.png>
 File: images/high-15-log.png Graphic file (type bmp)
 <images/high-15-log.png>
-[65
+[67
 
-] [66] [67] [68] [69] [70
+] [68] [69] [70] [71] [72
 
-] [71] [72] [73] [74] [75] [76] [77] [78] [79]
+] [73] [74] [75] [76] [77] [78] [79] [80] [81]
 No file thesis.bbl.
 
 Class memoir Warning: The material used in the footer is too large
 (10.14995pt) for the given foot skip (0.0pt), it is recommended to
 either increase the foot skip or redesign the footer
-(in both cases you will find help in the memoir manual). on input line 1734.
+(in both cases you will find help in the memoir manual). on input line 1748.
 
-[80]
+[82]
 \tf@toc=\write7
 \openout7 = `thesis.toc'.
 
@@ -1866,10 +1866,10 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 Here is how much of TeX's memory you used:
  37207 strings out of 411690
  689636 string characters out of 2834884
- 1081080 words of memory out of 3000000
+ 1083080 words of memory out of 3000000
  56609 multiletter control sequences out of 15000+600000
  409714 words of font info for 68 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  126i,12n,130p,2589b,490s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (87 pages).
+Output written on thesis.pdf (89 pages).
