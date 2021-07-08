@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.5.4)  7 JUL 2021 15:48
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.5.4)  8 JUL 2021 16:38
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1678,7 +1678,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 Class memoir Warning: The material used in the footer is too large
 (10.14995pt) for the given foot skip (0.0pt), it is recommended to
 either increase the foot skip or redesign the footer
-(in both cases you will find help in the memoir manual). on input line 21.
+(in both cases you will find help in the memoir manual). on input line 22.
 
 [4
 
@@ -1713,16 +1713,17 @@ File: images/amer-poggendorff-illusion.png Graphic file (type bmp)
 <images/amer-poggendorff-illusion.png>
 File: images/framed-murder-rate-map.png Graphic file (type bmp)
 <images/framed-murder-rate-map.png>
-[15] [16]
+[15]
 File: images/91dovic-cases-july2021.png Graphic file (type bmp)
 <images/91dovic-cases-july2021.png>
 File: images/covid19-summer2020-risk-map.png Graphic file (type bmp)
 <images/covid19-summer2020-risk-map.png>
+[16] [17]
 File: images/covid19-datawrapper-views-july2020.png Graphic file (type bmp)
 <images/covid19-datawrapper-views-july2020.png>
-[17] [18] [19]
 File: images/log-scale-comic.png Graphic file (type bmp)
 <images/log-scale-comic.png>
+[18] [19]
 File: thesis_files/figure-latex/log-scales-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/log-scales-1.pdf>
 [20] [21]
@@ -1739,17 +1740,17 @@ File: thesis_files/figure-latex/log-number-line-1.pdf Graphic file (type pdf)
 [24]
 File: images/exponential-stages-comic.jpg Graphic file (type bmp)
 <images/exponential-stages-comic.jpg>
-[25]
+[25] [26]
 File: images/menge-plots.png Graphic file (type bmp)
 <images/menge-plots.png>
-[26] [27] [28] [29] [30
+[27] [28] [29] [30
 
 ]
 File: thesis_files/figure-latex/lineup-example-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/lineup-example-1.pdf>
 [31] [32]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 735.
+put line 734.
 [33]
 File: thesis_files/figure-latex/lof-density-curves-1.pdf Graphic file (type pdf
 )
@@ -1778,45 +1779,41 @@ File: images/raster-vs-vector.png Graphic file (type bmp)
 [47]
 File: images/ydiExample-0.10-10-linear.png Graphic file (type bmp)
 <images/ydiExample-0.10-10-linear.png>
-[48] [49] [50]
+[48] [49] [50] [51]
 File: thesis_files/figure-latex/eyefitting-simplot-1.pdf Graphic file (type pdf
 )
 <use thesis_files/figure-latex/eyefitting-simplot-1.pdf>
-[51] [52]
+[52]
 File: thesis_files/figure-latex/ols-vs-pca-example-1.pdf Graphic file (type pdf
 )
 <use thesis_files/figure-latex/ols-vs-pca-example-1.pdf>
+[53]
 File: thesis_files/figure-latex/eyefitting-example-plot-1.pdf Graphic file (typ
 e pdf)
 <use thesis_files/figure-latex/eyefitting-example-plot-1.pdf>
-[53] [54] [55]
+[54] [55] [56]
 File: thesis_files/figure-latex/eyefitting-lmer-residualplots-1.pdf Graphic fil
 e (type pdf)
 <use thesis_files/figure-latex/eyefitting-lmer-residualplots-1.pdf>
 File: thesis_files/figure-latex/eyefitting-gamm-residualplots-1.pdf Graphic fil
 e (type pdf)
 <use thesis_files/figure-latex/eyefitting-gamm-residualplots-1.pdf>
-[56] [57]
+[57] [58]
 File: thesis_files/figure-latex/eyefitting-ss-oddsratio-1.pdf Graphic file (typ
 e pdf)
 <use thesis_files/figure-latex/eyefitting-ss-oddsratio-1.pdf>
-[58] [59]
-
-LaTeX Warning: Reference `alg:exponential-prediction-algorithm' on page 1 undef
-ined on input line 1266.
-
-[60] [61]
+[59] [60] [61]
 File: thesis_files/figure-latex/exponential-yloess-spaghetti-plot-1.pdf Graphic
  file (type pdf)
 <use thesis_files/figure-latex/exponential-yloess-spaghetti-plot-1.pdf>
-[62]
+[62] [63]
 File: thesis_files/figure-latex/exponential-prediction-gamm-preds-1.pdf Graphic
  file (type pdf)
 <use thesis_files/figure-latex/exponential-prediction-gamm-preds-1.pdf>
-[63] [64] [65]
+[64] [65] [66]
 File: images/r2d3+shiny-inkscape.png Graphic file (type bmp)
 <images/r2d3+shiny-inkscape.png>
-[66
+[67
 
 ]
 File: images/low-10-linear.png Graphic file (type bmp)
@@ -1835,19 +1832,19 @@ File: images/high-15-linear.png Graphic file (type bmp)
 <images/high-15-linear.png>
 File: images/high-15-log.png Graphic file (type bmp)
 <images/high-15-log.png>
-[67
+[68
 
-] [68] [69] [70] [71] [72
+] [69] [70] [71] [72] [73
 
-] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82]
+] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83]
 No file thesis.bbl.
 
 Class memoir Warning: The material used in the footer is too large
 (10.14995pt) for the given foot skip (0.0pt), it is recommended to
 either increase the foot skip or redesign the footer
-(in both cases you will find help in the memoir manual). on input line 1755.
+(in both cases you will find help in the memoir manual). on input line 1760.
 
-[83]
+[84]
 \tf@toc=\write7
 \openout7 = `thesis.toc'.
 
@@ -1858,19 +1855,16 @@ either increase the foot skip or redesign the footer
 \openout9 = `thesis.lot'.
 
 (thesis.aux)
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: A08764C7289E6194794A0EF661E0179D;1845.
+(rerunfilecheck)             Checksum: F6765A13DE49FAEF5DCE6840D0AFEB28;1916.
  ) 
 Here is how much of TeX's memory you used:
- 37206 strings out of 411690
- 689605 string characters out of 2834884
- 1082080 words of memory out of 3000000
- 56608 multiletter control sequences out of 15000+600000
+ 37209 strings out of 411690
+ 689752 string characters out of 2834884
+ 1081080 words of memory out of 3000000
+ 56611 multiletter control sequences out of 15000+600000
  409714 words of font info for 68 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  126i,12n,130p,2249b,490s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (92 pages).
+Output written on thesis.pdf (93 pages).

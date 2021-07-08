@@ -23,9 +23,7 @@ If you feel it necessary to include an appendix, it goes here.
 # You Draw It Setup with Shiny {#youdrawit-with-shiny}
 
 Interactive plots for the you draw it study were created using the r2d3 package and integrating D3 source code with an R shiny application. 
-In this section I outline the process of constructing interactive plots with D3.js code and R shiny.
-
-\cref{fig:r2d3-shiny-flowchart}
+\cref{fig:r2d3-shiny-flowchart} provides a visual aid of the process of creating the you draw it experimental study in [Chapter 3](#youdrawit).
 
 <!-- ## You draw it D3.js source code {#d3.js-source-code} -->
 

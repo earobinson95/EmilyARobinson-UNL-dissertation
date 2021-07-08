@@ -55,6 +55,7 @@ underestimation
 research-objectives
 lineups
 introduction
+statistical-inference
 data-generation
 lineups-parameter-selection
 lineup-setup
