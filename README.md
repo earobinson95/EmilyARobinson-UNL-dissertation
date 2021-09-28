@@ -1,5 +1,7 @@
 # Human perception of exponentially increasing data displayed on a log scale
-## Emily Anna Robinson | University of Nebraska | Expected August 2022
+## Emily Anna Robinson
+## University of Nebraska - Lincoln 
+## Expected Graduation August 2022
 
 This repository contains the blogdown files for my dissertation titled, *Human perception of exponentially increasing data displayed on a log scale*. 
 
