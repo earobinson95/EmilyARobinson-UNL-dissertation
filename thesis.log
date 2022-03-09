@@ -1,146 +1,53 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.5.4)  8 JUL 2021 16:38
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2022.3.9)  9 MAR 2022 11:44
 entering extended mode
-**./thesis.tex
-(thesis.tex
-LaTeX2e <2020-10-01> patch level 4
-L3 programming layer <2021-02-18> (nuthesis.cls
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**thesis.tex
+(./thesis.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24> (./nuthesis.cls
 Document Class: nuthesis 2017/10/12 v0.7.2 University of Nebraska Thesis class
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.sty
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks15
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/setspace\setspace.s
-ty
+\KV@toks@=\toks16
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrtime
-.sty
-Package: scrtime 2021/03/17 v3.33 KOMA-Script package (time of LaTeX run)
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrkbas
-e.sty
-Package: scrkbase 2021/03/17 v3.33 KOMA-Script package (KOMA-Script-dependent b
-asics and keyval usage)
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrbase
-.sty
-Package: scrbase 2021/03/17 v3.33 KOMA-Script package (KOMA-Script-independent 
-basics and keyval usage)
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrlfil
-e.sty
-Package: scrlfile 2021/03/17 v3.33 KOMA-Script package (file load hooks)
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrlfil
-e-hook.sty
-Package: scrlfile-hook 2021/03/17 v3.33 KOMA-Script package (using LaTeX hooks)
-
-
-LaTeX3 Info: Defining command \BeforeFile with sig. 'm' on line 61.
-
-
-LaTeX3 Info: Defining command \AfterFile with sig. 'm' on line 65.
-
-
-LaTeX3 Info: Defining command \BeforeClass with sig. 'm' on line 69.
-
-
-LaTeX3 Info: Defining command \BeforePackage with sig. 'm' on line 73.
-
-
-LaTeX3 Info: Defining command \AfterAtEndOfClass with sig. 'smo+m' on line 83.
-
-
-LaTeX3 Info: Defining command \AfterAtEndOfPackage with sig. 'smo+m' on line
-(LaTeX3)     93.
-
-
-LaTeX3 Info: Defining command \scrlfile@AfterClass with sig. 'smo+m' on line
-(LaTeX3)     173.
-
-
-LaTeX3 Info: Defining command \AfterClass with sig. '' on line 174.
-
-
-LaTeX3 Info: Defining command \scrlfile@AfterPackage with sig. 'smo+m' on line
-(LaTeX3)     191.
-
-
-LaTeX3 Info: Defining command \AfterPackage with sig. '' on line 192.
-
-
-LaTeX3 Info: Defining command \ReplaceInput with sig. '' on line 193.
-
-
-LaTeX3 Info: Defining command \ReplaceClass with sig. 'mm' on line 196.
-
-
-LaTeX3 Info: Defining command \ReplacePackage with sig. 'mm' on line 199.
-
-
-LaTeX3 Info: Defining command \UnReplaceInput with sig. '' on line 200.
-
-
-LaTeX3 Info: Defining command \UnReplaceClass with sig. 'm' on line 203.
-
-
-LaTeX3 Info: Defining command \UnReplacePackage with sig. 'mm' on line 206.
-
-
-LaTeX3 Info: Defining command \PreventPackageFromLoading with sig. 's+om' on
-(LaTeX3)     line 234.
-
-
-LaTeX3 Info: Defining command \StorePreventPackageFromLoading with sig. 'm' on
-(LaTeX3)     line 242.
-
-
-LaTeX3 Info: Defining command \ResetPreventPackageFromLoading with sig. '' on
-(LaTeX3)     line 247.
-
-
-LaTeX3 Info: Defining command \UnPreventPackageFromLoading with sig. 'sm' on
-(LaTeX3)     line 261.
-
-
-LaTeX3 Info: Defining command \BeforeClosingMainAux with sig. 'om' on line
-(LaTeX3)     274.
-
-
-LaTeX3 Info: Defining command \AfterReadingMainAux with sig. 'om' on line 287.
-
-
-LaTeX3 Info: Defining command \protected@immediate@write with sig. 'm+m+m' on
-(LaTeX3)     line 298.
-
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrlogo
-.sty
-Package: scrlogo 2021/03/17 v3.33 KOMA-Script package (logo)
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/koma-script/scrtime.sty
+Package: scrtime 2021/11/13 v3.35 KOMA-Script package (time of LaTeX run)
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2021/11/13 v3.35 KOMA-Script package (KOMA-Script-dependent basics and keyval usage)
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2021/11/13 v3.35 KOMA-Script package (KOMA-Script-independent basics and keyval usage)
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2021/11/13 v3.35 KOMA-Script package (file load hooks)
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+Package: scrlfile-hook 2021/11/13 v3.35 KOMA-Script package (using LaTeX hooks)
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/koma-script/scrlogo.sty
+Package: scrlogo 2021/11/13 v3.35 KOMA-Script package (logo)
 )))
-Skipping: [2021/05/01] Usage of raw option list on input line 252.
-Applying: [0000/00/00] compatibility for LaTeX before 2021/05/01 on input line 
-337.
-))) (C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/memoir\memoir.c
-ls
-Document Class: memoir 2021/03/23 v3.7o configurable book, report, article docu
-ment class
+Applying: [2021/05/01] Usage of raw or classic option list on input line 252.
+Already applied: [0000/00/00] Usage of raw or classic option list on input line 368.
+))) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/memoir/memoir.cls
+Document Class: memoir 2022/02/20 v3.7q configurable book, report, article document class
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count181
+)
 \onelineskip=\skip47
 \lxvchars=\skip48
 \xlvchars=\skip49
-\@memcnta=\count175
-\c@@memmarkcntra=\count176
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\iftex.sty
-Package: iftex 2020/03/06 v1.0d TeX engine tests
+\@memcnta=\count182
+\c@@memmarkcntra=\count183
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
 )
 \stockheight=\skip50
 \stockwidth=\skip51
 \trimtop=\skip52
 \trimedge=\skip53
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/memoir\mem12.clo
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/memoir/mem12.clo
 File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 )
 \binding=\skip54
@@ -153,20 +60,20 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \mem@maxheadheight=\skip61
 \mem@maxfootheight=\skip62
 \headwidth=\skip63
-\c@storedpagenumber=\count177
+\c@storedpagenumber=\count184
 \memPD=\dimen138
 \m@mabparskip=\skip64
 \thanksmarkwidth=\skip65
 \thanksmarksep=\skip66
 \droptitle=\skip67
-\c@book=\count178
-\c@part=\count179
-\c@chapter=\count180
-\c@section=\count181
-\c@subsection=\count182
-\c@subsubsection=\count183
-\c@paragraph=\count184
-\c@subparagraph=\count185
+\c@book=\count185
+\c@part=\count186
+\c@chapter=\count187
+\c@section=\count188
+\c@subsection=\count189
+\c@subsubsection=\count190
+\c@paragraph=\count191
+\c@subparagraph=\count192
 \beforechapskip=\skip68
 \midchapskip=\skip69
 \afterchapskip=\skip70
@@ -188,8 +95,8 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \beforesubparaskip=\skip86
 \aftersubparaskip=\skip87
 \pfbreakskip=\skip88
-\c@@ppsavesec=\count186
-\c@@ppsaveapp=\count187
+\c@@ppsavesec=\count193
+\c@@ppsaveapp=\count194
 \ragrparindent=\dimen139
 \everylistparindent=\dimen140
 \parsepi=\skip89
@@ -204,17 +111,17 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \partopsepiii=\skip98
 \m@msavetopsep=\skip99
 \m@msavepartopsep=\skip100
-\@enLab=\toks16
+\@enLab=\toks17
 \abstitleskip=\skip101
 \absleftindent=\skip102
 \abs@leftindent=\dimen141
 \absrightindent=\skip103
 \absparindent=\skip104
 \absparsep=\skip105
-\c@vslineno=\count188
-\c@poemline=\count189
-\c@modulo@vs=\count190
-\c@memfvsline=\count191
+\c@vslineno=\count195
+\c@poemline=\count196
+\c@modulo@vs=\count197
+\c@memfvsline=\count198
 \vleftskip=\skip106
 \vrightskip=\skip107
 \stanzaskip=\skip108
@@ -222,44 +129,36 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \vgap=\skip110
 \vindent=\skip111
 \vleftmargin=\dimen142
-\c@verse=\count192
-\c@chrsinstr=\count193
+\c@verse=\count199
+\c@chrsinstr=\count266
 \beforepoemtitleskip=\skip112
 \afterpoemtitleskip=\skip113
-\c@poem=\count194
+\c@poem=\count267
 \beforePoemTitleskip=\skip114
 \midPoemTitleskip=\skip115
 \afterPoemTitleskip=\skip116
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/latex-tools\array.s
-ty
-Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/array.sty
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 \col@sep=\dimen143
-\ar@mcellbox=\box47
+\ar@mcellbox=\box50
 \extrarowheight=\dimen144
-\NC@list=\toks17
+\NC@list=\toks18
 \extratabsurround=\skip117
 \backup@length=\skip118
-\ar@cellbox=\box48
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/latex-tools\dcolumn
-.sty
+\ar@cellbox=\box51
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/dcolumn.sty
 Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/latex-tools\delarra
-y.sty
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/delarray.sty
 Package: delarray 2014/10/28 v1.01 array delimiter package (DPC)
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/latex-tools\tabular
-x.sty
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \TX@col@width=\dimen145
 \TX@old@table=\dimen146
 \TX@old@col=\dimen147
 \TX@target=\dimen148
 \TX@delta=\dimen149
-\TX@cols=\count195
-\TX@ftn=\toks18
+\TX@cols=\count268
+\TX@ftn=\toks19
 )
 \heavyrulewidth=\dimen150
 \lightrulewidth=\dimen151
@@ -271,23 +170,23 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \cmidrulesep=\dimen157
 \cmidrulekern=\dimen158
 \defaultaddspace=\dimen159
-\@cmidla=\count196
-\@cmidlb=\count197
+\@cmidla=\count269
+\@cmidlb=\count270
 \@aboverulesep=\dimen160
 \@belowrulesep=\dimen161
-\@thisruleclass=\count198
-\@lastruleclass=\count199
+\@thisruleclass=\count271
+\@lastruleclass=\count272
 \@thisrulewidth=\dimen162
 \ctableftskip=\skip119
 \ctabrightskip=\skip120
-\abovecolumnspenalty=\count266
-\@linestogo=\count267
-\@cellstogo=\count268
-\@cellsincolumn=\count269
-\crtok=\toks19
+\abovecolumnspenalty=\count273
+\@linestogo=\count274
+\@cellstogo=\count275
+\@cellsincolumn=\count276
+\crtok=\toks20
 \@mincolumnwidth=\dimen163
-\c@newflo@tctr=\count270
-\mem@margin@floatbox=\box49
+\c@newflo@tctr=\count277
+\mem@margin@floatbox=\box52
 \@contcwidth=\skip121
 \@contindw=\skip122
 \abovecaptionskip=\skip123
@@ -298,9 +197,9 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \subfloatbottomskip=\skip128
 \subfloatlabelskip=\skip129
 \subfloatcapmargin=\dimen164
-\c@@contsubnum=\count271
-\m@mscap@capbox=\box50
-\m@mscap@fbox=\box51
+\c@@contsubnum=\count278
+\m@mscap@capbox=\box53
+\m@mscap@fbox=\box54
 \sidecapsep=\dimen165
 \sidecapwidth=\dimen166
 \m@m@tempdima=\dimen167
@@ -312,8 +211,8 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \afterepigraphskip=\skip131
 \epigraphwidth=\skip132
 \epigraphrule=\skip133
-LaTeX Info: Redefining \em on input line 7650.
-LaTeX Info: Redefining \emph on input line 7658.
+LaTeX Info: Redefining \em on input line 7655.
+LaTeX Info: Redefining \emph on input line 7663.
 \tocentryskip=\skip134
 \tocbaseline=\skip135
 \cftparskip=\skip136
@@ -342,12 +241,12 @@ LaTeX Info: Redefining \emph on input line 7658.
 \cftsubparagraphindent=\skip157
 \cftsubparagraphnumwidth=\skip158
 \prechapterprecisshift=\dimen174
-\c@maxsecnumdepth=\count272
+\c@maxsecnumdepth=\count279
 \bibindent=\dimen175
 \bibitemsep=\skip159
 \indexcolsep=\skip160
 \indexrule=\skip161
-\indexmarkstyle=\toks20
+\indexmarkstyle=\toks21
 \@indexbox=\insert252
 \glossarycolsep=\dimen176
 \glossaryrule=\dimen177
@@ -363,7 +262,7 @@ LaTeX Info: Redefining \emph on input line 7658.
 \footinsdim=\skip170
 \footinsv@r=\insert250
 \@mpfootinsv@r=\insert249
-\m@m@k=\count273
+\m@m@k=\count280
 \m@m@h=\dimen178
 \m@mipn@skip=\skip171
 \sidefootins=\insert248
@@ -373,55 +272,55 @@ LaTeX Info: Redefining \emph on input line 7658.
 \sidefootvsep=\skip175
 \sidefootwidth=\skip176
 \m@mdownsf=\skip177
-\c@sidefootnote=\count274
+\c@sidefootnote=\count281
 \sidefootmarkwidth=\skip178
 \sidefootmarksep=\skip179
 \sidefootparindent=\skip180
-\c@pagenote=\count275
-\c@pagenoteshadow=\count276
+\c@pagenote=\count282
+\c@pagenoteshadow=\count283
 \mem@pn@lastkern=\skip181
-\every@verbatim=\toks21
-\afterevery@verbatim=\toks22
-\verbatim@line=\toks23
-\tab@position=\count277
+\every@verbatim=\toks22
+\afterevery@verbatim=\toks23
+\verbatim@line=\toks24
+\tab@position=\count284
 \verbatim@in@stream=\read2
 \verbatimindent=\skip182
 \verbatim@out=\write3
 \bvboxsep=\skip183
-\c@memfbvline=\count278
-\c@bvlinectr=\count279
+\c@memfbvline=\count285
+\c@bvlinectr=\count286
 \bvnumlength=\skip184
 \fb@frw=\dimen179
 \fb@frh=\dimen180
 \FrameRule=\dimen181
 \FrameSep=\dimen182
-\c@cp@cntr=\count280
-\c@ism@mctr=\count281
-\c@xsm@mctr=\count282
-\c@csm@mctr=\count283
-\c@ksm@mctr=\count284
-\c@xksm@mctr=\count285
-\c@cksm@mctr=\count286
-\c@msm@mctr=\count287
-\c@xmsm@mctr=\count288
-\c@cmsm@mctr=\count289
-\c@bsm@mctr=\count290
-\c@workm@mctr=\count291
-\c@sheetsequence=\count292
-\c@lastsheet=\count293
-\c@lastpage=\count294
+\c@cp@cntr=\count287
+\c@ism@mctr=\count288
+\c@xsm@mctr=\count289
+\c@csm@mctr=\count290
+\c@ksm@mctr=\count291
+\c@xksm@mctr=\count292
+\c@cksm@mctr=\count293
+\c@msm@mctr=\count294
+\c@xmsm@mctr=\count295
+\c@cmsm@mctr=\count296
+\c@bsm@mctr=\count297
+\c@workm@mctr=\count298
+\c@sheetsequence=\count299
+\c@lastsheet=\count300
+\c@lastpage=\count301
 
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/textcase\textcase.s
-ty
-Package: textcase 2019/09/14 v1.00 Text only upper/lower case changing (DPC)
-)
-\c@figure=\count295
-\c@lofdepth=\count296
+Class memoir Warning: Haven't found the textcase package,
+(memoir)              resorting to embedded copy of v0.07 (2004/10/07),
+(memoir)              consider installing the textcase package on input line 13005.
+
+\c@figure=\count302
+\c@lofdepth=\count303
 \cftbeforefigureskip=\skip185
 \cftfigureindent=\skip186
 \cftfigurenumwidth=\skip187
-\c@table=\count297
-\c@lotdepth=\count298
+\c@table=\count304
+\c@lotdepth=\count305
 \cftbeforetableskip=\skip188
 \cfttableindent=\skip189
 \cfttablenumwidth=\skip190
@@ -455,16 +354,14 @@ Package tocloft [2008/07/23] emulated by memoir.
 Package tocvsec2 [2008/07/23] emulated by memoir.
 Package verbatim [2008/07/23] emulated by memoir.
 Package verse [2008/07/23] emulated by memoir.
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.s
-ty
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifvtex.sty
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count299
-\Gm@cntv=\count300
-\c@Gm@tempcnt=\count301
+\Gm@cnth=\count306
+\Gm@cntv=\count307
+\c@Gm@tempcnt=\count308
 \Gm@bindingoffset=\dimen183
 \Gm@wd@mp=\dimen184
 \Gm@odd@mp=\dimen185
@@ -473,227 +370,167 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutheight=\dimen188
 \Gm@layouthoffset=\dimen189
 \Gm@layoutvoffset=\dimen190
-\Gm@dimlist=\toks24
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/xelatex/xetexconfig\geome
-try.cfg)) (C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xc
-olor.sty
-Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\color.
-cfg
+\Gm@dimlist=\toks25
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: xetex.def on input line 225.
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\xetex.
-def
+Package xcolor Info: Driver file: xetex.def on input line 227.
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-def/xetex.def
 File: xetex.def 2021/03/18 v5.0k Graphics/color driver for xetex
 )
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
-Package xcolor Info: Model `RGB' extended on input line 1364.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\dvipsnam.d
-ef
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
-)))
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amssymb.st
-y
+))) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.s
-ty
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks25
+\@emptytoks=\toks26
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amscls\amsthm.st
-y
+)) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks26
-\thm@bodyfont=\toks27
-\thm@headfont=\toks28
-\thm@notefont=\toks29
-\thm@headpunct=\toks30
+\thm@style=\toks27
+\thm@bodyfont=\toks28
+\thm@headfont=\toks29
+\thm@notefont=\toks30
+\thm@headpunct=\toks31
 \thm@preskip=\skip191
 \thm@postskip=\skip192
 \thm@headsep=\skip193
-\dth@everypar=\toks31
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty
-Package: amsmath 2020/09/23 v2.17i AMS math features
+\dth@everypar=\toks32
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2021/10/15 v2.17l AMS math features
 \@mathmargin=\skip194
 For additional information on amsmath, use the `?' option.
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.sty
-Package: amstext 2000/06/29 v2.01 AMS text
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks32
+\@emptytoks=\toks33
 \ex@=\dimen191
-)) (C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.s
-ty
+)) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen192
-) (C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.st
-y
-Package: amsopn 2016/03/08 v2.02 operator names
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2021/08/26 v2.02 operator names
 )
-\inf@bad=\count302
+\inf@bad=\count309
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count303
-\leftroot@=\count304
+\uproot@=\count310
+\leftroot@=\count311
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count305
-\DOTSCASE@=\count306
+\classnum@=\count312
+\DOTSCASE@=\count313
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box52
-\strutbox@=\box53
+\Mathstrutbox@=\box55
+\strutbox@=\box56
 \big@size=\dimen193
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count307
-\c@MaxMatrixCols=\count308
+\macc@depth=\count314
+\c@MaxMatrixCols=\count315
 \dotsspace@=\muskip16
-\c@parentequation=\count309
-\dspbrk@lvl=\count310
-\tag@help=\toks33
-\row@=\count311
-\column@=\count312
-\maxfields@=\count313
-\andhelp@=\toks34
+\c@parentequation=\count316
+\dspbrk@lvl=\count317
+\tag@help=\toks34
+\row@=\count318
+\column@=\count319
+\maxfields@=\count320
+\andhelp@=\toks35
 \eqnshift@=\dimen194
 \alignsep@=\dimen195
 \tagshift@=\dimen196
 \tagwidth@=\dimen197
 \totwidth@=\dimen198
 \lineht@=\dimen199
-\@envbody=\toks35
+\@envbody=\toks36
 \multlinegap=\skip195
 \multlinetaggap=\skip196
-\mathdisplay@stack=\toks36
-LaTeX Info: Redefining \[ on input line 2923.
-LaTeX Info: Redefining \] on input line 2924.
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/wasysym\wasysym.sty
+\mathdisplay@stack=\toks37
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/wasysym/wasysym.sty
 Package: wasysym 2020/01/19 v2.4 Wasy-2 symbol support package
 \symwasy=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
 (Font)                  U/wasy/m/n --> U/wasy/b/n on input line 93.
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/jknappen\mathrsfs.s
-ty
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup7
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.s
-ty
-Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.s
-ty
-Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graphi
-cs.cfg
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: xetex.def on input line 105.
+Package graphics Info: Driver file: xetex.def on input line 107.
 )
 \Gin@req@height=\dimen256
 \Gin@req@width=\dimen257
-) (C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lineno\lineno.sty
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 Invalid UTF-8 byte or sequence at line 296 replaced by U+FFFD.
-\linenopenalty=\count314
-\output=\toks37
-\linenoprevgraf=\count315
+\linenopenalty=\count321
+\output=\toks38
+\linenoprevgraf=\count322
 \linenumbersep=\dimen258
 \linenumberwidth=\dimen259
-\c@linenumber=\count316
-\c@pagewiselinenumber=\count317
-\c@LN@truepage=\count318
-\c@internallinenumber=\count319
-\c@internallinenumbers=\count320
+\c@linenumber=\count323
+\c@pagewiselinenumber=\count324
+\c@LN@truepage=\count325
+\c@internallinenumber=\count326
+\c@internallinenumbers=\count327
 \quotelinenumbersep=\dimen260
 \bframerule=\dimen261
 \bframesep=\dimen262
-\bframebox=\box54
+\bframebox=\box57
 LaTeX Info: Redefining \\ on input line 3056.
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/todonotes\todonotes
-.sty
-Package: todonotes 2021/04/26 v1.1.4 Todonotes source and documentation.
-Package: todonotes 2018/11/22
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xkeyval\xkeyval.sty
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/todonotes/todonotes.sty
+Package: todonotes 2021/06/04 v1.1.5 Todonotes source and documentation.
+Package: todonotes 2021/06/04
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval\xkeyval.t
-ex
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval\xkvutils.
-tex
-\XKV@toks=\toks38
-\XKV@tempa@toks=\toks39
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/xkeyval/xkeyval.tex (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks39
+\XKV@tempa@toks=\toks40
 )
-\XKV@depth=\count321
+\XKV@depth=\count328
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-))
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/frontendlayer\t
-ikz.sty
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/basiclayer\pgf.
-sty
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utilities\pgfrc
-s.sty
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgf
-util-common.tex
-\pgfutil@everybye=\toks40
+)) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks41
 \pgfutil@tempdima=\dimen263
 \pgfutil@tempdimb=\dimen264
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgf
-util-common-lists.tex))
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgf
-util-latex.def
-\pgfutil@abb=\box55
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgf
-rcs.code.tex
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf\pgf.revision.
-tex)
-Package: pgfrcs 2020/12/27 v3.1.8b (3.1.8b)
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box58
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
 ))
-Package: pgf 2020/12/27 v3.1.8b (3.1.8b)
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/basiclayer\pgfc
-ore.sty
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/systemlayer\pgf
-sys.sty
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\p
-gfsys.code.tex
-Package: pgfsys 2020/12/27 v3.1.8b (3.1.8b)
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgf
-keys.code.tex
-\pgfkeys@pathtoks=\toks41
-\pgfkeys@temptoks=\toks42
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgf
-keysfiltered.code.tex
-\pgfkeys@tmptoks=\toks43
+Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks42
+\pgfkeys@temptoks=\toks43
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks44
 ))
 \pgf@x=\dimen265
 \pgf@y=\dimen266
@@ -707,91 +544,45 @@ keysfiltered.code.tex
 \pgf@yd=\dimen274
 \w@pgf@writea=\write4
 \r@pgf@reada=\read3
-\c@pgf@counta=\count322
-\c@pgf@countb=\count323
-\c@pgf@countc=\count324
-\c@pgf@countd=\count325
-\t@pgf@toka=\toks44
-\t@pgf@tokb=\toks45
-\t@pgf@tokc=\toks46
-\pgf@sys@id@count=\count326
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\p
-gf.cfg
-File: pgf.cfg 2020/12/27 v3.1.8b (3.1.8b)
+\c@pgf@counta=\count329
+\c@pgf@countb=\count330
+\c@pgf@countc=\count331
+\c@pgf@countd=\count332
+\t@pgf@toka=\toks45
+\t@pgf@tokb=\toks46
+\t@pgf@tokc=\toks47
+\pgf@sys@id@count=\count333
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
 )
 Driver file for pgf: pgfsys-xetex.def
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\p
-gfsys-xetex.def
-File: pgfsys-xetex.def 2020/12/27 v3.1.8b (3.1.8b)
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\p
-gfsys-dvipdfmx.def
-File: pgfsys-dvipdfmx.def 2020/12/27 v3.1.8b (3.1.8b)
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\p
-gfsys-common-pdf.def
-File: pgfsys-common-pdf.def 2020/12/27 v3.1.8b (3.1.8b)
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.def
+File: pgfsys-xetex.def 2021/05/15 v3.1.9a (3.1.9a)
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx.def
+File: pgfsys-dvipdfmx.def 2021/05/15 v3.1.9a (3.1.9a)
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
 )
-\pgfsys@objnum=\count327
-)))
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\p
-gfsyssoftpath.code.tex
-File: pgfsyssoftpath.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfsyssoftpath@smallbuffer@items=\count328
-\pgfsyssoftpath@bigbuffer@items=\count329
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\p
-gfsysprotocol.code.tex
-File: pgfsysprotocol.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-))
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
-fcore.code.tex
-Package: pgfcore 2020/12/27 v3.1.8b (3.1.8b)
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.
-code.tex
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathc
-alc.code.tex
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathu
-til.code.tex)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathp
-arser.code.tex
+\pgfsys@objnum=\count334
+))) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfsyssoftpath@smallbuffer@items=\count335
+\pgfsyssoftpath@bigbuffer@items=\count336
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen275
-\pgfmath@count=\count330
-\pgfmath@box=\box56
-\pgfmath@toks=\toks47
-\pgfmath@stack@operand=\toks48
-\pgfmath@stack@operation=\toks49
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathf
-unctions.code.tex
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathf
-unctions.basic.code.tex)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathf
-unctions.trigonometric.code.tex)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathf
-unctions.random.code.tex)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathf
-unctions.comparison.code.tex)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathf
-unctions.base.code.tex)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathf
-unctions.round.code.tex)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathf
-unctions.misc.code.tex)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathf
-unctions.integerarithmetics.code.tex)))
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathf
-loat.code.tex
-\c@pgfmathroundto@lastzeros=\count331
-))
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfint.c
-ode.tex)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
-fcorepoints.code.tex
-File: pgfcorepoints.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfmath@count=\count337
+\pgfmath@box=\box59
+\pgfmath@toks=\toks48
+\pgfmath@stack@operand=\toks49
+\pgfmath@stack@operation=\toks50
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count338
+)) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@picminx=\dimen276
 \pgf@picmaxx=\dimen277
 \pgf@picminy=\dimen278
@@ -806,136 +597,78 @@ File: pgfcorepoints.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@yy=\dimen287
 \pgf@zx=\dimen288
 \pgf@zy=\dimen289
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
-fcorepathconstruct.code.tex
-File: pgfcorepathconstruct.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@path@lastx=\dimen290
 \pgf@path@lasty=\dimen291
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
-fcorepathusage.code.tex
-File: pgfcorepathusage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@shorten@end@additional=\dimen292
 \pgf@shorten@start@additional=\dimen293
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
-fcorescopes.code.tex
-File: pgfcorescopes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfpic=\box57
-\pgf@hbox=\box58
-\pgf@layerbox@main=\box59
-\pgf@picture@serial@count=\count332
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
-fcoregraphicstate.code.tex
-File: pgfcoregraphicstate.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfpic=\box60
+\pgf@hbox=\box61
+\pgf@layerbox@main=\box62
+\pgf@picture@serial@count=\count339
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgflinewidth=\dimen294
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
-fcoretransformations.code.tex
-File: pgfcoretransformations.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@pt@x=\dimen295
 \pgf@pt@y=\dimen296
 \pgf@pt@temp=\dimen297
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
-fcorequick.code.tex
-File: pgfcorequick.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
-fcoreobjects.code.tex
-File: pgfcoreobjects.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
-fcorepathprocessing.code.tex
-File: pgfcorepathprocessing.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
-fcorearrows.code.tex
-File: pgfcorearrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfarrowsep=\dimen298
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
-fcoreshade.code.tex
-File: pgfcoreshade.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@max=\dimen299
-\pgf@sys@shading@range@num=\count333
-\pgf@shadingcount=\count334
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
-fcoreimage.code.tex
-File: pgfcoreimage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
-fcoreexternal.code.tex
-File: pgfcoreexternal.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfexternal@startupbox=\box60
-))
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
-fcorelayers.code.tex
-File: pgfcorelayers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
-fcoretransparency.code.tex
-File: pgfcoretransparency.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
-fcorepatterns.code.tex
-File: pgfcorepatterns.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pg
-fcorerdf.code.tex
-File: pgfcorerdf.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-)))
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfmo
-duleshapes.code.tex
-File: pgfmoduleshapes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfnodeparttextbox=\box61
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfmo
-duleplot.code.tex
-File: pgfmoduleplot.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/compatibility\p
-gfcomp-version-0-65.sty
-Package: pgfcomp-version-0-65 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@sys@shading@range@num=\count340
+\pgf@shadingcount=\count341
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfexternal@startupbox=\box63
+)) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfnodeparttextbox=\box64
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@nodesepstart=\dimen300
 \pgf@nodesepend=\dimen301
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/compatibility\p
-gfcomp-version-1-18.sty
-Package: pgfcomp-version-1-18 2020/12/27 v3.1.8b (3.1.8b)
-))
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utilities\pgffo
-r.sty
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utilities\pgfke
-ys.sty
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgf
-keys.code.tex))
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/math\pgfmath.st
-y
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.
-code.tex))
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgf
-for.code.tex
-Package: pgffor 2020/12/27 v3.1.8b (3.1.8b)
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.
-code.tex)
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
+)) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/math/pgfmath.sty (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
 \pgffor@iter=\dimen302
 \pgffor@skip=\dimen303
-\pgffor@stack=\toks50
-\pgffor@toks=\toks51
-))
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlayer
-/tikz\tikz.code.tex
-Package: tikz 2020/12/27 v3.1.8b (3.1.8b)
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries\pgf
-libraryplothandlers.code.tex
-File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@plot@mark@count=\count335
+\pgffor@stack=\toks51
+\pgffor@toks=\toks52
+)) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@plot@mark@count=\count342
 \pgfplotmarksize=\dimen304
 )
 \tikz@lastx=\dimen305
@@ -946,482 +679,357 @@ File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \tikz@lastmovetoy=\dimen310
 \tikzleveldistance=\dimen311
 \tikzsiblingdistance=\dimen312
-\tikz@figbox=\box62
-\tikz@figbox@bg=\box63
-\tikz@tempbox=\box64
-\tikz@tempbox@bg=\box65
-\tikztreelevel=\count336
-\tikznumberofchildren=\count337
-\tikznumberofcurrentchild=\count338
-\tikz@fig@count=\count339
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfmo
-dulematrix.code.tex
-File: pgfmodulematrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfmatrixcurrentrow=\count340
-\pgfmatrixcurrentcolumn=\count341
-\pgf@matrix@numberofcolumns=\count342
+\tikz@figbox=\box65
+\tikz@figbox@bg=\box66
+\tikz@tempbox=\box67
+\tikz@tempbox@bg=\box68
+\tikztreelevel=\count343
+\tikznumberofchildren=\count344
+\tikznumberofcurrentchild=\count345
+\tikz@fig@count=\count346
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfmatrixcurrentrow=\count347
+\pgfmatrixcurrentcolumn=\count348
+\pgf@matrix@numberofcolumns=\count349
 )
-\tikz@expandcount=\count343
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlayer
-/tikz/libraries\tikzlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-)))
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlayer
-/tikz/libraries\tikzlibrarypositioning.code.tex
-File: tikzlibrarypositioning.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/latex-tools\calc.st
-y
+\tikz@expandcount=\count350
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count344
-\calc@Bcount=\count345
+\calc@Acount=\count351
+\calc@Bcount=\count352
 \calc@Adimen=\dimen313
 \calc@Bdimen=\dimen314
 \calc@Askip=\skip197
 \calc@Bskip=\skip198
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count346
+\calc@Ccount=\count353
 \calc@Cskip=\skip199
 )
-\c@@todonotes@numberoftodonotes=\count347
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.s
-ty
-\lst@mode=\count348
-\lst@gtempboxa=\box66
-\lst@token=\toks52
-\lst@length=\count349
+\c@@todonotes@numberoftodonotes=\count354
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count355
+\lst@gtempboxa=\box69
+\lst@token=\toks53
+\lst@length=\count356
 \lst@currlwidth=\dimen315
-\lst@column=\count350
-\lst@pos=\count351
+\lst@column=\count357
+\lst@pos=\count358
 \lst@lostspace=\dimen316
 \lst@width=\dimen317
-\lst@newlines=\count352
-\lst@lineno=\count353
+\lst@newlines=\count359
+\lst@lineno=\count360
 \lst@maxwidth=\dimen318
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.st
-y
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count354
-\lst@skipnumbers=\count355
-\lst@framebox=\box67
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.c
-fg
+\c@lstnumber=\count361
+\lst@skipnumbers=\count362
+\lst@framebox=\box70
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/cancel\cancel.sty
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/cancel/cancel.sty
 Package: cancel 2013/04/12 v2.2 Cancel math terms
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\rotating.s
-ty
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
-\c@r@tfl@t=\count356
+\c@r@tfl@t=\count363
 \rotFPtop=\skip256
 \rotFPbot=\skip257
-\rot@float@box=\box68
-\rot@mess@toks=\toks53
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/environ\environ.sty
+\rot@float@box=\box71
+\rot@mess@toks=\toks54
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/trimspaces\trimspac
-es.sty
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
-))
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption.sty
-Package: caption 2020/10/26 v3.5g Customizing captions (AR)
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption3.st
-y
-Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
-\captionmargin=\dimen319
-\captionmargin@=\dimen320
-\captionwidth=\dimen321
-\caption@tempdima=\dimen322
-\caption@indent=\dimen323
-\caption@parindent=\dimen324
-\caption@hangindent=\dimen325
+)) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2022/02/28 v3.6a Customizing captions (AR)
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2022/02/28 v2.3a caption3 kernel (AR)
+\caption@tempdima=\dimen319
+\captionmargin=\dimen320
+\caption@leftmargin=\dimen321
+\caption@rightmargin=\dimen322
+\caption@width=\dimen323
+\caption@indent=\dimen324
+\caption@parindent=\dimen325
+\caption@hangindent=\dimen326
 Package caption Info: memoir document class detected.
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption-mem
-oir.sto
-File: caption-memoir.sto 2020/10/10 v2.1 Adaption of the caption package to the
- memoir document class (AR)
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/caption-memoir.sto
+File: caption-memoir.sto 2022/02/28 v2.2a Adaption of the caption package to the memoir document class (AR)
 ))
-\c@caption@flags=\count357
-\c@continuedfloat=\count358
+\c@caption@flags=\count364
+\c@continuedfloat=\count365
 Package caption Info: changepage package is loaded.
-\caption@adjustwidth@hsize=\dimen326
-\caption@adjustwidth@linewidth=\dimen327
+\caption@adjustwidth@hsize=\dimen327
+\caption@adjustwidth@linewidth=\dimen328
 Package caption Info: listings package is loaded.
 Package caption Info: rotating package is loaded.
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\subcaption.
-sty
-Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
-\c@subfigure=\count359
-\c@subtable=\count360
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/enumitem\enumitem.s
-ty
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
+\c@subfigure=\count366
+\c@subtable=\count367
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip258
-\enit@outerparindent=\dimen328
-\enit@toks=\toks54
-\enit@inbox=\box69
-\enit@count@id=\count361
-\enitdp@description=\count362
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/dirtree\dirtree.sty
+\enit@outerparindent=\dimen329
+\enit@toks=\toks55
+\enit@inbox=\box72
+\enit@count@id=\count368
+\enitdp@description=\count369
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/dirtree/dirtree.sty
 Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/dirtree\dirtree.t
-ex `dirtree' v0.32, 2012/12/11 (jcc)
-\DT@offset=\dimen329
-\DT@width=\dimen330
-\DT@sep=\dimen331
-\DT@all=\dimen332
-\DT@rulewidth=\dimen333
-\DT@dotwidth=\dimen334
-\DTbaselineskip=\dimen335
-\DT@counti=\count363
-\DT@countii=\count364
-\DT@countiii=\count365
-\DT@countiv=\count366
-\DT@indent=\dimen336
-\DT@parskip=\dimen337
-\DT@baselineskip=\dimen338
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/dirtree/dirtree.tex `dirtree' v0.32, 2012/12/11 (jcc)
+\DT@offset=\dimen330
+\DT@width=\dimen331
+\DT@sep=\dimen332
+\DT@all=\dimen333
+\DT@rulewidth=\dimen334
+\DT@dotwidth=\dimen335
+\DTbaselineskip=\dimen336
+\DT@counti=\count370
+\DT@countii=\count371
+\DT@countiii=\count372
+\DT@countiv=\count373
+\DT@indent=\dimen337
+\DT@parskip=\dimen338
+\DT@baselineskip=\dimen339
 )
 File: dirtree.tex 2012/12/11 v0.32 `dirtree' (jcc)
 )
-\c@thm=\count367
-\c@defn=\count368
-\c@prop=\count369
-\c@lemma=\count370
-\c@cor=\count371
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyvrb\fancyvrb.s
-ty
-Package: fancyvrb 2021/01/20 v3.7 verbatim text (tvz,hv)
-\FV@CodeLineNo=\count372
+\c@thm=\count374
+\c@defn=\count375
+\c@prop=\count376
+\c@lemma=\count377
+\c@cor=\count378
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2021/12/21 4.1b verbatim text (tvz,hv)
+\FV@CodeLineNo=\count379
 \FV@InFile=\read4
-\FV@TabBox=\box70
-\c@FancyVerbLine=\count373
-\FV@StepNumber=\count374
+\FV@TabBox=\box73
+\c@FancyVerbLine=\count380
+\FV@StepNumber=\count381
 \FV@OutFile=\write5
-) (C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/framed\framed.sty
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip259
-\fb@frw=\dimen339
-\fb@frh=\dimen340
+\fb@frw=\dimen340
+\fb@frh=\dimen341
 )
 \cslhangindent=\skip260
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\textcomp.sty
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\lscape.sty
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.s
-ty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count375
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/latex-tools\longtab
-le.sty
-Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
 \LTleft=\skip261
 \LTright=\skip262
 \LTpre=\skip263
 \LTpost=\skip264
-\LTchunksize=\count376
-\LTcapwidth=\dimen341
-\LT@head=\box71
-\LT@firsthead=\box72
-\LT@foot=\box73
-\LT@lastfoot=\box74
-\LT@cols=\count377
-\LT@rows=\count378
-\c@LT@tables=\count379
-\c@LT@chunks=\count380
-\LT@p@ftn=\toks55
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/latex-tools\indentf
-irst.sty
+\LTchunksize=\count382
+\LTcapwidth=\dimen342
+\LT@head=\box74
+\LT@firsthead=\box75
+\LT@foot=\box76
+\LT@lastfoot=\box77
+\LT@gbox=\box78
+\LT@cols=\count383
+\LT@rows=\count384
+\c@LT@tables=\count385
+\c@LT@chunks=\count386
+\LT@p@ftn=\toks56
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
-) (C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/natbib\natbib.sty
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip265
 \bibsep=\skip266
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count381
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifxetex.sty
+\c@NAT@ctr=\count387
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifxetex.sty
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifluatex.st
-y
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fontspec\fontspec.s
-ty
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3packages/xparse\x
-parse.sty (C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3kernel\
-expl3.sty
-Package: expl3 2021-02-18 L3 programming layer (loader) 
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backend
--xetex.def
-File: l3backend-xetex.def 2021-03-18 L3 backend support: XeTeX
-()
-\c__kernel_sys_dvipdfmx_version_int=\count382
-\l__color_backend_stack_int=\count383
-\g__color_backend_stack_int=\count384
-\g__graphics_track_int=\count385
-\l__pdf_internal_box=\box75
-\g__pdf_backend_object_int=\count386
-\g__pdf_backend_annotation_int=\count387
-\g__pdf_backend_link_int=\count388
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.sty (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2022-02-24 L3 programming layer (loader) 
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2022-02-07 L3 backend support: XeTeX
+(|extractbb --version)
+\c__kernel_sys_dvipdfmx_version_int=\count388
+\l__color_backend_stack_int=\count389
+\g__color_backend_stack_int=\count390
+\g__graphics_track_int=\count391
+\l__pdf_internal_box=\box79
+\g__pdf_backend_object_int=\count392
+\g__pdf_backend_annotation_int=\count393
+\g__pdf_backend_link_int=\count394
 ))
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3packages/xparse\x
-parse-2020-10-01.sty
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3packages/xparse\x
-parse-generic.tex)))
-Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fontspec\fontspec-x
-etex.sty
-Package: fontspec-xetex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTe
-X
-\l__fontspec_script_int=\count389
-\l__fontspec_language_int=\count390
-\l__fontspec_strnum_int=\count391
-\l__fontspec_tmp_int=\count392
-\l__fontspec_tmpa_int=\count393
-\l__fontspec_tmpb_int=\count394
-\l__fontspec_tmpc_int=\count395
-\l__fontspec_em_int=\count396
-\l__fontspec_emdef_int=\count397
-\l__fontspec_strong_int=\count398
-\l__fontspec_strongdef_int=\count399
-\l__fontspec_tmpa_dim=\dimen342
-\l__fontspec_tmpb_dim=\dimen343
-\l__fontspec_tmpc_dim=\dimen344
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.sty
-Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
+Package: xparse 2022-01-12 L3 Experimental document command parser
 )
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fontspec\fontspec.c
-fg)))
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xltxtra\xltxtra.sty
+Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+\l__fontspec_script_int=\count395
+\l__fontspec_language_int=\count396
+\l__fontspec_strnum_int=\count397
+\l__fontspec_tmp_int=\count398
+\l__fontspec_tmpa_int=\count399
+\l__fontspec_tmpb_int=\count400
+\l__fontspec_tmpc_int=\count401
+\l__fontspec_em_int=\count402
+\l__fontspec_emdef_int=\count403
+\l__fontspec_strong_int=\count404
+\l__fontspec_strongdef_int=\count405
+\l__fontspec_tmpa_dim=\dimen343
+\l__fontspec_tmpb_dim=\dimen344
+\l__fontspec_tmpc_dim=\dimen345
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/xelatex/xltxtra/xltxtra.sty
 Package: xltxtra 2018/12/31 v0.7 Improvements for the "XeLaTeX" format
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/realscripts\realscr
-ipts.sty
-Package: realscripts 2016/02/13 v0.3d Access OpenType subscripts and superscrip
-ts
-\subsupersep=\dimen345
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/metalogo\metalogo.s
-ty
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/realscripts/realscripts.sty
+Package: realscripts 2016/02/13 v0.3d Access OpenType subscripts and superscripts
+\subsupersep=\dimen346
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/metalogo/metalogo.sty
 Package: metalogo 2010/05/29 v0.12 Extended TeX logo macros
-\xl@everylogo=\toks56
-\xl@@everylogo=\toks57
+\xl@everylogo=\toks57
+\xl@@everylogo=\toks58
 LaTeX Info: Redefining \TeX on input line 193.
 LaTeX Info: Redefining \LaTeX on input line 202.
 LaTeX Info: Redefining \LaTeXe on input line 219.
 )
-\l__xetex_show_hyphens_wrapping_box=\box76
-\l__xetex_show_hyphens_temp_box=\box77
-\l__xetex_show_hyphens_final_box=\box78
-\g__xetex_show_hyphens_word_box=\box79
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/xelatex/xunicode\xunicode
-.sty
-File: xunicode.sty 2011/09/09 v0.981 provides access to latin accents and many 
-other characters in Unicode lower plane
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tipa\t3enc.def
+\l__xetex_show_hyphens_wrapping_box=\box80
+\l__xetex_show_hyphens_temp_box=\box81
+\l__xetex_show_hyphens_final_box=\box82
+\g__xetex_show_hyphens_word_box=\box83
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/xelatex/xunicode/xunicode.sty
+File: xunicode.sty 2011/09/09 v0.981 provides access to latin accents and many other characters in Unicode lower plane
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tipa/t3enc.def
 File: t3enc.def 2001/12/31 T3 encoding
 )
-\tipaTiiicode=\count400
-\tipasavetokens=\toks58
-\tipachecktokens=\toks59
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperref.s
-ty
-Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ltxcmds\ltxcmds.s
-ty
+\tipaTiiicode=\count406
+\tipasavetokens=\toks59
+\tipachecktokens=\toks60
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2022-02-21 v7.00n Hypertext links for LaTeX
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pdftexcmds\pdftex
-cmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/infwarerr\infware
-rr.sty
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode not found.
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/kvsetkeys\kvsetke
-ys.sty
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/kvdefinekeys\kvde
-finekeys.sty
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pdfescape\pdfesca
-pe.sty
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hycolor\hycolor.sty
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/letltxmacro\letltxm
-acro.sty
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/auxhook\auxhook.sty
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/kvoptions\kvoptions
-.sty
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
-\@linkdim=\dimen346
-\Hy@linkcounter=\count401
-\Hy@pagecounter=\count402
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def
-File: pd1enc.def 2021-02-27 v7.00k Hyperref: PDFDocEncoding definition (HO)
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperref-l
-angpatches.def
-File: hyperref-langpatches.def 2021-02-27 v7.00k Hyperref: patches for babel la
-nguages
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/intcalc\intcalc.s
-ty
+\@linkdim=\dimen347
+\Hy@linkcounter=\count407
+\Hy@pagecounter=\count408
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2022-02-21 v7.00n Hyperref: PDFDocEncoding definition (HO)
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/etexcmds\etexcmds
-.sty
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count403
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\puenc.def
-File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\puenc-gree
-kbasic.def
-File: puenc-greekbasic.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (
-greek block) (HO)
+\Hy@SavedSpaceFactor=\count409
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2022-02-21 v7.00n Hyperref: PDF Unicode definition (HO)
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/puenc-greekbasic.def
+File: puenc-greekbasic.def 2022-02-21 v7.00n Hyperref: PDF Unicode definition (greek block) (HO)
 ))
-Package hyperref Info: Option `setpagesize' set `false' on input line 4073.
-Package hyperref Info: Option `unicode' set `false' on input line 4073.
-Package hyperref Info: Option `colorlinks' set `true' on input line 4073.
-Package hyperref Info: Hyper figures OFF on input line 4192.
-Package hyperref Info: Link nesting OFF on input line 4197.
-Package hyperref Info: Hyper index ON on input line 4200.
-Package hyperref Info: Plain pages OFF on input line 4207.
-Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Option `setpagesize' set `false' on input line 4018.
+Package hyperref Info: Option `unicode' set `false' on input line 4018.
+Package hyperref Info: Option `colorlinks' set `true' on input line 4018.
+Package hyperref Info: Hyper figures OFF on input line 4137.
+Package hyperref Info: Link nesting OFF on input line 4142.
+Package hyperref Info: Hyper index ON on input line 4145.
+Package hyperref Info: Plain pages OFF on input line 4152.
+Package hyperref Info: Backreferencing OFF on input line 4157.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count404
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty
+Package hyperref Info: Bookmarks ON on input line 4390.
+\c@Hy@tempcnt=\count410
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4804.
-\XeTeXLinkMargin=\dimen347
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/bitset\bitset.sty
+LaTeX Info: Redefining \url on input line 4749.
+\XeTeXLinkMargin=\dimen348
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/bigintcalc\bigint
-calc.sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
-)
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count405
-\Field@Width=\dimen348
-\Fld@charsize=\dimen349
-Package hyperref Info: Hyper figures OFF on input line 6075.
-Package hyperref Info: Link nesting OFF on input line 6080.
-Package hyperref Info: Hyper index ON on input line 6083.
-Package hyperref Info: backreferencing OFF on input line 6090.
-Package hyperref Info: Link coloring ON on input line 6093.
-Package hyperref Info: Link coloring with OCG OFF on input line 6100.
-Package hyperref Info: PDF/A mode OFF on input line 6105.
-LaTeX Info: Redefining \ref on input line 6145.
-LaTeX Info: Redefining \pageref on input line 6149.
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\atbegshi-ltx.s
-ty
-Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
-ge
-with kernel methods
+\Fld@menulength=\count411
+\Field@Width=\dimen349
+\Fld@charsize=\dimen350
+Package hyperref Info: Hyper figures OFF on input line 6027.
+Package hyperref Info: Link nesting OFF on input line 6032.
+Package hyperref Info: Hyper index ON on input line 6035.
+Package hyperref Info: backreferencing OFF on input line 6042.
+Package hyperref Info: Link coloring ON on input line 6045.
+Package hyperref Info: Link coloring with OCG OFF on input line 6052.
+Package hyperref Info: PDF/A mode OFF on input line 6057.
+LaTeX Info: Redefining \ref on input line 6097.
+LaTeX Info: Redefining \pageref on input line 6101.
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
 )
-\Hy@abspage=\count406
-\c@Item=\count407
-\c@Hfootnote=\count408
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/memoir\memhfixc.sty
-Package: memhfixc 2019/10/24 v1.18 nameref/hyperref package fixes for memoir cl
-ass
-\c@memhycontfloat=\count409
-\c@Hpagenote=\count410
+\Hy@abspage=\count412
+\c@Item=\count413
+\c@Hfootnote=\count414
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/memoir/memhfixc.sty
+Package: memhfixc 2021/06/16 v1.19 nameref/hyperref package fixes for memoir class
+\c@memhycontfloat=\count415
+\c@Hpagenote=\count416
 )
 Package hyperref Info: Driver: hxetex.
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hxetex.def
-File: hxetex.def 2021-02-27 v7.00k Hyperref driver for XeTeX
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/stringenc\stringe
-nc.sty
-Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2022-02-21 v7.00n Hyperref driver for XeTeX
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-)
-\pdfm@box=\box80
-\c@Hy@AnnotLevel=\count411
-\HyField@AnnotCount=\count412
-\Fld@listcount=\count413
-\c@bookmark@seq@number=\count414
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/rerunfilecheck\reru
-nfilecheck.sty
+\pdfm@box=\box84
+\c@Hy@AnnotLevel=\count417
+\HyField@AnnotCount=\count418
+\Fld@listcount=\count419
+\c@bookmark@seq@number=\count420
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\atveryend-ltx.
-sty
-Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
-e
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
 with kernel methods
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/uniquecounter\uni
-quecounter.sty
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-86.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
 )
 \Hy@SectionHShift=\skip267
 )
 Package hyperref Info: Option `breaklinks' set `true' on input line 177.
-(preamble.tex
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/cleveref\cleveref.s
-ty
+(./preamble.tex (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/cleveref/cleveref.sty
 Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
 LaTeX Info: Redefining \Cref on input line 925.
 Package cleveref Info: `hyperref' support loaded on input line 2370.
@@ -1437,47 +1045,38 @@ LaTeX Info: Redefining \labelcref on input line 2370.
 LaTeX Info: Redefining \labelcpageref on input line 2370.
 Package cleveref Info: `amsthm' support loaded on input line 3026.
 Package cleveref Info: `listings' support loaded on input line 3131.
-Package cleveref Info: always capitalise cross-reference names on input line 78
-25.
-Package cleveref Info: always capitalise cross-reference names on input line 78
-52.
-) (C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty
+Package cleveref Info: always capitalise cross-reference names on input line 7825.
+Package cleveref Info: always capitalise cross-reference names on input line 7852.
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count415
-\float@exts=\toks60
-\float@box=\box81
-\@float@everytoks=\toks61
-\@floatcapt=\box82
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/algorithms\algorith
-m.sty
+\c@float@type=\count421
+\float@exts=\toks61
+\float@box=\box85
+\@float@everytoks=\toks62
+\@floatcapt=\box86
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/algorithms/algorithm.sty
 Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
-Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
-nment
-\@float@every@algorithm=\toks62
-\c@algorithm=\count416
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/algorithmicx\algpse
-udocode.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
+\@float@every@algorithm=\toks63
+\c@algorithm=\count422
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
 Package: algpseudocode 
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/algorithmicx\algori
-thmicx.sty
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count417
-\c@ALG@rem=\count418
-\c@ALG@nested=\count419
+\c@ALG@line=\count423
+\c@ALG@rem=\count424
+\c@ALG@nested=\count425
 \ALG@tlm=\skip268
 \ALG@thistlm=\skip269
-\c@ALG@Lnr=\count420
-\c@ALG@blocknr=\count421
-\c@ALG@storecount=\count422
-\c@ALG@tmpcounter=\count423
+\c@ALG@Lnr=\count426
+\c@ALG@blocknr=\count427
+\c@ALG@storecount=\count428
+\c@ALG@tmpcounter=\count429
 \ALG@tmplength=\skip270
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
-)) (thesis.aux)
+)) (./thesis.aux)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 186.
@@ -1489,9 +1088,8 @@ LaTeX Font Info:    ... okay on input line 186.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 186.
 LaTeX Font Info:    ... okay on input line 186.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 186.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
-86.
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1cmr.fd
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 186.
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 186.
@@ -1502,9 +1100,8 @@ LaTeX Font Info:    ... okay on input line 186.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 186.
 LaTeX Font Info:    ... okay on input line 186.
 LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 186.
-LaTeX Font Info:    Trying to load font information for T3+cmr on input line 18
-6.
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tipa\t3cmr.fd
+LaTeX Font Info:    Trying to load font information for T3+cmr on input line 186.
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
 LaTeX Font Info:    ... okay on input line 186.
@@ -1512,9 +1109,10 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 186.
 LaTeX Font Info:    ... okay on input line 186.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 186.
 LaTeX Font Info:    ... okay on input line 186.
-*geometry* detected driver: pdftex
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
+* driver: xetex
 * paper: letterpaper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -1546,20 +1144,15 @@ LaTeX Font Info:    ... okay on input line 186.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Package todonotes Warning: The length marginparwidth is less than 2cm and will 
-most likely cause issues with the appearance of inserted todonotes. The issue c
-an be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to 
-loading the todonotes package. on input line 186.
+Package todonotes Warning: The length marginparwidth is less than 2cm and will most likely cause issues with the appearance of inserted todonotes. The issue can be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to loading the todonotes package. on input line 186.
 
-\c@lstlisting=\count424
+\c@lstlisting=\count430
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\ltcaption.s
-ty
-Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
 
@@ -1594,7 +1187,6 @@ LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 186.
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 186.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
 (Font)              `operators' in the math version `normal' on input line 186.
-
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 186.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
@@ -1620,20 +1212,14 @@ LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 186.
 Package hyperref Info: Link coloring ON on input line 186.
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.st
-y
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/refcount\refcount.s
-ty
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-)
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/gettitlestring\ge
-ttitlestring.sty
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count425
+\c@section@level=\count431
 )
 Redoing nameref's sectioning
 Redoing nameref's label
@@ -1641,37 +1227,32 @@ LaTeX Info: Redefining \nameref on input line 186.
 LaTeX Info: Redefining \ref on input line 186.
 LaTeX Info: Redefining \pageref on input line 186.
 LaTeX Info: Redefining \nameref on input line 186.
-(thesis.out) (thesis.out)
+(./thesis.out) (./thesis.out)
 \@outlinefile=\write6
 \openout6 = `thesis.out'.
 
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/stringenc\se-asci
-i-print.def
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/stringenc/se-ascii-print.def
 File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
-
 ) [1
 
 
 ] [2
 
-] [3] (thesis.toc
+] [3] (./thesis.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 1.
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+wasy on input line 1.
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/wasysym\uwasy.fd
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 )
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 1.
-
-(C:\Users\ERobi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/jknappen\ursfs.fd
+(c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 
@@ -1683,9 +1264,9 @@ either increase the foot skip or redesign the footer
 [4
 
 
-]) [5] (thesis.lof [6
+]) [5] (./thesis.lof [6
 
-] [7]) [8] (thesis.lot) [9
+] [7]) [8] (./thesis.lot) [9
 
 ] [1
 
@@ -1729,8 +1310,7 @@ File: thesis_files/figure-latex/log-scales-1.pdf Graphic file (type pdf)
 [20] [21]
 File: images/covid19-FT-03.23.2020-log.png Graphic file (type bmp)
 <images/covid19-FT-03.23.2020-log.png>
-File: images/covid19-FT-case-count-06.30.2020-linear.png Graphic file (type bmp
-)
+File: images/covid19-FT-case-count-06.30.2020-linear.png Graphic file (type bmp)
 <images/covid19-FT-case-count-06.30.2020-linear.png>
 File: images/covid19-FT-case-count-06.30.2020-log.png Graphic file (type bmp)
 <images/covid19-FT-case-count-06.30.2020-log.png>
@@ -1749,15 +1329,12 @@ File: images/menge-plots.png Graphic file (type bmp)
 File: thesis_files/figure-latex/lineup-example-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/lineup-example-1.pdf>
 [31] [32]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 734.
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 734.
 [33]
-File: thesis_files/figure-latex/lof-density-curves-1.pdf Graphic file (type pdf
-)
+File: thesis_files/figure-latex/lof-density-curves-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/lof-density-curves-1.pdf>
 [34]
-File: thesis_files/figure-latex/curvature-combination-example-1.pdf Graphic fil
-e (type pdf)
+File: thesis_files/figure-latex/curvature-combination-example-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/curvature-combination-example-1.pdf>
 [35] [36] [37] [38] [39]
 File: thesis_files/figure-latex/odds-ratio-plot-1.pdf Graphic file (type pdf)
@@ -1780,35 +1357,27 @@ File: images/raster-vs-vector.png Graphic file (type bmp)
 File: images/ydiExample-0.10-10-linear.png Graphic file (type bmp)
 <images/ydiExample-0.10-10-linear.png>
 [48] [49] [50] [51]
-File: thesis_files/figure-latex/eyefitting-simplot-1.pdf Graphic file (type pdf
-)
+File: thesis_files/figure-latex/eyefitting-simplot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/eyefitting-simplot-1.pdf>
 [52]
-File: thesis_files/figure-latex/ols-vs-pca-example-1.pdf Graphic file (type pdf
-)
+File: thesis_files/figure-latex/ols-vs-pca-example-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/ols-vs-pca-example-1.pdf>
 [53]
-File: thesis_files/figure-latex/eyefitting-example-plot-1.pdf Graphic file (typ
-e pdf)
+File: thesis_files/figure-latex/eyefitting-example-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/eyefitting-example-plot-1.pdf>
 [54] [55] [56]
-File: thesis_files/figure-latex/eyefitting-lmer-residualplots-1.pdf Graphic fil
-e (type pdf)
+File: thesis_files/figure-latex/eyefitting-lmer-residualplots-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/eyefitting-lmer-residualplots-1.pdf>
-File: thesis_files/figure-latex/eyefitting-gamm-residualplots-1.pdf Graphic fil
-e (type pdf)
+File: thesis_files/figure-latex/eyefitting-gamm-residualplots-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/eyefitting-gamm-residualplots-1.pdf>
 [57] [58]
-File: thesis_files/figure-latex/eyefitting-ss-oddsratio-1.pdf Graphic file (typ
-e pdf)
+File: thesis_files/figure-latex/eyefitting-ss-oddsratio-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/eyefitting-ss-oddsratio-1.pdf>
 [59] [60] [61]
-File: thesis_files/figure-latex/exponential-yloess-spaghetti-plot-1.pdf Graphic
- file (type pdf)
+File: thesis_files/figure-latex/exponential-yloess-spaghetti-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/exponential-yloess-spaghetti-plot-1.pdf>
 [62] [63]
-File: thesis_files/figure-latex/exponential-prediction-gamm-preds-1.pdf Graphic
- file (type pdf)
+File: thesis_files/figure-latex/exponential-prediction-gamm-preds-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/exponential-prediction-gamm-preds-1.pdf>
 [64] [65] [66]
 File: images/r2d3+shiny-inkscape.png Graphic file (type bmp)
@@ -1842,7 +1411,7 @@ No file thesis.bbl.
 Class memoir Warning: The material used in the footer is too large
 (10.14995pt) for the given foot skip (0.0pt), it is recommended to
 either increase the foot skip or redesign the footer
-(in both cases you will find help in the memoir manual). on input line 1760.
+(in both cases you will find help in the memoir manual). on input line 1761.
 
 [84]
 \tf@toc=\write7
@@ -1854,17 +1423,17 @@ either increase the foot skip or redesign the footer
 \tf@lot=\write9
 \openout9 = `thesis.lot'.
 
-(thesis.aux)
+(./thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: F6765A13DE49FAEF5DCE6840D0AFEB28;1916.
  ) 
 Here is how much of TeX's memory you used:
- 37209 strings out of 411690
- 689752 string characters out of 2834884
- 1081080 words of memory out of 3000000
- 56611 multiletter control sequences out of 15000+600000
- 409714 words of font info for 68 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 126i,12n,130p,2249b,490s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38933 strings out of 478179
+ 768048 string characters out of 5852652
+ 1087327 words of memory out of 5000000
+ 58886 multiletter control sequences out of 15000+600000
+ 475543 words of font info for 69 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 123i,12n,120p,2266b,507s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on thesis.pdf (93 pages).

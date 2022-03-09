@@ -77,8 +77,6 @@ library(scales)
 
 <!-- Editing text colors: \ear{Emily's editing color.} Emily may also use mostly black text as well. \svp{Susan's editing color.} \rh{Reka's editing color.} -->
 
-<!-- \rh{references should include other than Susan, Di, \& Heike :) Also, more references should be listed for the usefulness of graphics.} -->
-
 <!-- \rh{Also, maybe a small section could be included about bad graphics, and how people can mislead with bad graphics.} -->
 
 ## Introduction to Graphics
