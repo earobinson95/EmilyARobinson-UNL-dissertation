@@ -4,3 +4,4 @@ rmd_files: ["index.Rmd", "02-lineups.Rmd", "03-youdrawit.Rmd", "06-appendix.Rmd"
 # rmd_files: ["index.Rmd", "02-lineups.Rmd", "03-youdrawit.Rmd", "04-estimation.Rmd", "05-conclusion.Rmd", "06-appendix.Rmd", "99-references.Rmd"]
 download: [["thesis.pdf", "PDF"], ["thesis.epub", "EPUB"], ["thesis.docx", "Word"]]
 delete_merged_file: true
+output_dir: docs

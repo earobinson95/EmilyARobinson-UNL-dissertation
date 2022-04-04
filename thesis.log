@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2022.3.9)  9 MAR 2022 11:44
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2022.3.25)  4 APR 2022 13:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -748,9 +748,9 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2022/02/28 v3.6a Customizing captions (AR)
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2022/02/28 v2.3a caption3 kernel (AR)
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
 \caption@tempdima=\dimen319
 \captionmargin=\dimen320
 \caption@leftmargin=\dimen321
@@ -761,7 +761,7 @@ Package: caption3 2022/02/28 v2.3a caption3 kernel (AR)
 \caption@hangindent=\dimen326
 Package caption Info: memoir document class detected.
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/caption-memoir.sto
-File: caption-memoir.sto 2022/02/28 v2.2a Adaption of the caption package to the memoir document class (AR)
+File: caption-memoir.sto 2022/03/02 v2.2b Adaption of the caption package to the memoir document class (AR)
 ))
 \c@caption@flags=\count364
 \c@continuedfloat=\count365
@@ -1336,10 +1336,10 @@ File: thesis_files/figure-latex/lof-density-curves-1.pdf Graphic file (type pdf)
 [34]
 File: thesis_files/figure-latex/curvature-combination-example-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/curvature-combination-example-1.pdf>
-[35] [36] [37] [38] [39]
+[35] [36] [37] [38]
 File: thesis_files/figure-latex/odds-ratio-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/odds-ratio-plot-1.pdf>
-[40] [41] [42
+[39] [40] [41] [42
 
 ] [43]
 File: images/subjective-judgement-plot.png Graphic file (type bmp)
@@ -1411,7 +1411,7 @@ No file thesis.bbl.
 Class memoir Warning: The material used in the footer is too large
 (10.14995pt) for the given foot skip (0.0pt), it is recommended to
 either increase the foot skip or redesign the footer
-(in both cases you will find help in the memoir manual). on input line 1761.
+(in both cases you will find help in the memoir manual). on input line 1759.
 
 [84]
 \tf@toc=\write7
@@ -1428,10 +1428,10 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: F6765A13DE49FAEF5DCE6840D0AFEB28;1916.
  ) 
 Here is how much of TeX's memory you used:
- 38933 strings out of 478179
- 768048 string characters out of 5852652
- 1087327 words of memory out of 5000000
- 58886 multiletter control sequences out of 15000+600000
+ 38929 strings out of 478179
+ 767857 string characters out of 5852894
+ 1087322 words of memory out of 5000000
+ 58884 multiletter control sequences out of 15000+600000
  475543 words of font info for 69 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  123i,12n,120p,2266b,507s stack positions out of 5000i,500n,10000p,200000b,80000s
