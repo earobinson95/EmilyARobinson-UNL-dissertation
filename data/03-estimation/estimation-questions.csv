@@ -1,0 +1,15 @@
+"q_id","creature","qtext","true_value"
+"scenario","tribble","tribble",
+"Q0","tribble","Between stardates 4530 and 4540, how does the population of Tribbles change?",
+"QE1","tribble","What is the population of Tribbles in stardate 4510?",481.615199955751
+"QE2","tribble","In what stardate does the population of Tribbles reach 4,000?",4528.449470062
+"QI1","tribble","From 4520 to 4540, the population increases by ____ Tribbles.",14363.3413479521
+"QI2","tribble","How many times more Tribbles are there in 4540 than in 4520?",10.6852435082649
+"QI3","tribble","How long does it take for the population of Tribbles in stardate 4510 to double?",6.24544794233655
+"scenario","ewok","ewok",
+"Q0","ewok","Between 30 and 40 ABY, how does the population of Ewoks change?",
+"QE1","ewok","What is the population of Ewoks in 10 ABY?",481.615199955751
+"QE2","ewok","In what ABY does the population of Ewoks reach 4,000?",28.4494700619966
+"QI1","ewok","From 20 ABY to 40 ABY, the population increases by ____ Ewoks.",14363.3413479521
+"QI2","ewok","How many times more Ewoks are there in 40 ABY than in 20 ABY?",10.6852435082649
+"QI3","ewok","How long does it take for the population of Ewoks in 10 ABY to double?",6.24544794233655

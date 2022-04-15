@@ -6,7 +6,7 @@ To lay a foundation for future exploration of the use of log scales, I begin wit
 Instead, I am simply testing the change in perceptual sensitivity resulting from visualization choices.
 The study in this chapter is conducted through visual inference and the use of statistical lineups [@buja_statistical_2009] to differentiate between exponentially increasing curves with differing levels of curvature, using linear and log scales.
 
-## Statistical Inference
+## Visual Inference
 
 Previously, I explained how a data plot can be evaluated and treated as a visual statistic, a numerical function which summarizes the data.
 To evaluate a graph, the statistic (data plot) must be run through a visual evaluation - a person.
