@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2022.3.25)  22 APR 2022 11:55
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2022.3.25)  22 APR 2022 15:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1381,15 +1381,15 @@ File: thesis_files/figure-latex/exponential-prediction-gamm-preds-1.pdf Graphic 
 <use thesis_files/figure-latex/exponential-prediction-gamm-preds-1.pdf>
 [64] [65] [66] [67
 
-] [68]
+]
 File: thesis_files/figure-latex/estimation-simulated-data-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/estimation-simulated-data-1.pdf>
-[69] [70] [71] [72] [73
+[68] [69] [70] [71] [72] [73] [74
 
 ]
 File: images/r2d3+shiny-inkscape.png Graphic file (type bmp)
 <images/r2d3+shiny-inkscape.png>
-[74
+[75
 
 ]
 File: images/low-10-linear.png Graphic file (type bmp)
@@ -1408,19 +1408,19 @@ File: images/high-15-linear.png Graphic file (type bmp)
 <images/high-15-linear.png>
 File: images/high-15-log.png Graphic file (type bmp)
 <images/high-15-log.png>
-[75
+[76
 
-] [76] [77] [78] [79] [80
+] [77] [78] [79] [80] [81
 
-] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91]
+] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92]
 No file thesis.bbl.
 
 Class memoir Warning: The material used in the footer is too large
 (10.14995pt) for the given foot skip (0.0pt), it is recommended to
 either increase the foot skip or redesign the footer
-(in both cases you will find help in the memoir manual). on input line 1934.
+(in both cases you will find help in the memoir manual). on input line 1944.
 
-[92]
+[93]
 \tf@toc=\write7
 \openout7 = `thesis.toc'.
 
@@ -1432,15 +1432,15 @@ either increase the foot skip or redesign the footer
 
 (./thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: AE9706F77B66F7F5107FCF60C87A9899;2356.
+(rerunfilecheck)             Checksum: BEEFABC52CBD41E710864AB6EFAB2F6E;2356.
  ) 
 Here is how much of TeX's memory you used:
- 38977 strings out of 478179
- 769579 string characters out of 5852894
+ 38980 strings out of 478179
+ 769674 string characters out of 5852894
  1088322 words of memory out of 5000000
- 58931 multiletter control sequences out of 15000+600000
- 475543 words of font info for 69 fonts, out of 8000000 for 9000
+ 58932 multiletter control sequences out of 15000+600000
+ 475551 words of font info for 70 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 123i,12n,120p,2266b,519s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 123i,12n,120p,2266b,529s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (101 pages).
+Output written on thesis.pdf (102 pages).

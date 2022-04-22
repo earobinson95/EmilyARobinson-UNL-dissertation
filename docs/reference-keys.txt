@@ -78,8 +78,8 @@ estimation
 introduction-2
 graph-comprehension
 rounding-estimates-anchoring
-study-design-2
 data-generation-3
+study-design-2
 results-3
 open-ended
 elementary-q1-estimation-of-population
