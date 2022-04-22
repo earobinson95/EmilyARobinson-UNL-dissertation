@@ -1,16 +1,16 @@
 # Numerical Translation and Estimation {#estimation}
 
-```{r estimation-setup, message=FALSE, warning=FALSE}
+```{r estimation-setup, message=FALSE, warning=FALSE, echo = F}
 library(tidyverse)
 library(patchwork)
 library(here)
 library(readr)
 library(knitr)
 library(kableExtra)
-library(pander)
+# library(pander)
 ```
 
-```{r estimation-data, message=FALSE, warning=FALSE}
+```{r estimation-data, message=FALSE, warning=FALSE, echo = F}
 estimation_model_data <- read.csv(here("data/03-estimation/estimation-model-data.csv"))
 estimation_simulated_data <- read.csv(here("data/03-estimation/estimation-simulated-data.csv")) %>%
   mutate(x = x - 3000)
@@ -22,19 +22,54 @@ population_estimates_data <- read.csv(here("data/03-estimation/first-level-popul
 
 ## Introduction
 
-+ Such complex inferential processes involve quantitatively transforming the information in the display (e.g., mentally transforming from a linear to logarithmic scale or calculating the difference between two or more data points; Cleveland, 1984, 1985).
+The previous two chapters explored the use of log scales through differentiation and visual prediction of trends. 
+These graphical tasks were conducted independent of scenarios or contextual applications of logarithmic scales; instead, they focused how our visual system perceives and identifies patterns in exponential growth.
+In order to understand the cognitive implications of displaying exponentially increasing data on a log scale, it is essential to evaluate graph comprehension as it relates to the contextual scenario of the data shown.
+This is a complex inferential process which requires participants to engage with the data by quantitatively transforming information in the chart [@cleveland_graphical_1984; @cleveland_graphical_1985].
+In this study, I ask participants to translate a graph of exponentially increasing data into real value quantities and extend their estimations by comparing two data points.
 
-**Graph Comprehension**
+<!-- Such complex inferential processes involve quantitatively transforming the information in the display (e.g., mentally transforming from a linear to logarithmic scale or calculating the difference between two or more data points; Cleveland, 1984, 1985). -->
 
-+ Literal reading the data (Elementary level questions)
-+ Reading between the data (Intermediate level questions)
-+ Reading beyond the data (Advanced level questions)
+### Graph Comprehension
 
-**Rounding Estimates & Anchoring**
+Graph comprehension is heavily dependent on the questions being asked of the viewer; therefore, questioning is an important aspect of comprehension and must be given deliberate consideration [@graesser2014new]. 
+Evaluation of how viewers explore a new and complex graphic requires long-term interaction with the chart displaying the data [@becker2019trackr]. 
+While it is difficult to obtain an accurate representation a viewers understanding of the graphic with a fixed set of numerical estimates, three levels of graph comprehension have emerged from literature [@wood1968objectives; @curcio1987comprehension; @jolliffe1991assessment; @friel2001making; @glazer2011challenges].
+The three behaviors related to graph comprehension involve (1) literal reading of the data (elementary level), (2) reading between the data (intermediate level), and (3) reading beyond the data (advanced level).
+
+<!-- Comprehension of information in written or symbolic form involves three kinds of behaviors (Jolliffe, 1991; Wood, 1968) that seem to be related to graph comprehension: (1) translation, (2) interpretation, and (3) extrapolation/interpolation. -->
+
+### Rounding Estimates & Anchoring
+
++ Open-ended estimation tasks elicit certain well-known biases such as the tendency to round to multiples of 5 or 10 [@becker2019trackr]
+
+## Study Design
+
+Participants in this study were asked to answer six questions related to each of two contextual scenarios for a total of twelve questions. 
+The text for each scenario is presented below; the context of both scenarios was selected to be similar.
+Each text describes a situation in which a fictional intergalactic species is exponentially increasing in population over a time measure adjusted to reflect the popular culture media depiction of that species [@star_wars1; @star_wars2; @star_trek].
+
+\begin{quote}
+\textit{Scenario 1:} Hi, we're Tribbles! We were taken from our native planet, Iota Germinorum IV, and brought abroad Starfleet in stardate 4500. A Starfleet scientist, Edward Larkin, genetically engineered us to increase our reproductive rate in an attempt to solve a planetary food shortage. The Tribble population on Starfleet over the next 50 Stardates (equivalent to 1 week universe time) is illustrated in the graph. We need your help answering a few questions regarding the population of Tribbles.
+
+\textit{Scenario 2:} Hi, we're Ewoks! We are native to the forest moon of Endor. After the Galactic Civil War, some Ewoks traveled offworld to help Rebel veterans as 'therapy Ewoks' and began to repopulate. The Ewok population After the Battle of Yavin (ABY) is illustrated in the graph. We need your help answering a few questions regarding the population of Ewoks offworld.
+\end{quote}
+
+```{r estimation-questions-table, echo = F}
+estimation_questions %>%
+  filter(q_id != "scenario") %>%
+  pivot_wider(id_cols = "q_id",
+              names_from = "creature",
+              values_from = "qtext") %>%
+  mutate(q_id = c("Open Ended", "Elementary Q1", "Elementary Q2", "Intermediate Q1", "Intermediate Q2", "Intermediate Q3")) %>%
+  kableExtra::kable("latex", booktabs = T, col.names = c("Question type", "Tribble scenario", "Ewok scenario"),
+               caption = "Estimation Questions")  %>%
+  kableExtra::column_spec(2:3, width = "10em")
+```
 
 ## Data Generation
 
-```{r estimation-simulated-data, fig.height=9, fig.width=9, message=FALSE, warning=FALSE}
+```{r estimation-simulated-data, fig.height=9, fig.width=9, echo = F, message=FALSE, warning=FALSE, out.width="90%"}
 
 # dataset 1
 simulated_plot_linear1 <- estimation_simulated_data %>%
@@ -101,35 +136,6 @@ simulated_plot_log2 <- estimation_simulated_data %>%
 (simulated_plot_linear1 + simulated_plot_log1) /
 (simulated_plot_linear2 + simulated_plot_log2)
 ```
-
-## Scenarios & Questions
-
-
-**Tribble Scenario:**
-
-*"Hi, we're Tribbles! We were taken from our native planet, Iota Germinorum IV, and brought abroad Starfleet in stardate 4500. A Starfleet scientist, Edward Larkin, genetically engineered us to increase our reproductive rate in an attempt to solve a planetary food shortage. The Tribble population on Starfleet over the next 50 Stardates (equivalent to 1 week universe time) is illustrated in the graph. We need your help answering a few questions regarding the population of Tribbles."*
-    
-**Ewok Scenario:**
-
-*"Hi, we're Ewoks! We are native to the forest moon of Endor. After the Galactic Civil War, some Ewoks traveled offworld to help Rebel veterans as 'therapy Ewoks' and began to repopulate. The Ewok population After the Battle of Yavin (ABY) is illustrated in the graph. We need your help answering a few questions regarding the population of Ewoks offworld."*
-
-```{r estimation-questions-table}
-estimation_questions %>%
-  filter(q_id != "scenario") %>%
-  pivot_wider(id_cols = "q_id",
-              names_from = "creature",
-              values_from = "qtext") %>%
-  mutate(q_id = c("Open Ended", "Elementary Q1", "Elementary Q2", "Intermediate Q1", "Intermediate Q2", "Intermediate Q3")) %>%
-  knitr::kable("latex", col.names = c("Question type", "Tribble scenario", "Ewok scenario"),
-               caption = "Estimation Questions")  %>%
-  column_spec(1, width = "10em")
-```
-
-## Study Design
-
-## Participants
-
-+ 302 Participants answered all 12 questions
 
 ## Results
 

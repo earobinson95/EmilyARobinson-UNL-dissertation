@@ -76,10 +76,10 @@ results-2
 discussion-and-conclusion-1
 estimation
 introduction-2
-data-generation-3
-scenarios-questions
+graph-comprehension
+rounding-estimates-anchoring
 study-design-2
-participants
+data-generation-3
 results-3
 open-ended
 elementary-q1-estimation-of-population

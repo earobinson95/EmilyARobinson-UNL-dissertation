@@ -901,7 +901,7 @@ What remains to be seen is whether there are cognitive disadvantages to log scal
 
 In \protect\hyperlink{lineups}{Chapter 2}, a base foundation for future exploration of the use of log scales was established by evaluating participants ability to identify differences in charts through the use of lineups.
 This did not require that participants were able to understand exponential growth, identify log scales, or have any mathematical training; instead, it simply tested the change in perceptual sensitivity resulting from visualization choices.
-In order to determine whether there are cognitive disadvantages to log scales, we utilize interactive graphics to test an individual's ability to make predictions for exponentially increasing data. In this study, participants are asked to draw a line using their computer mouse through the exponentially increasing trend shown on both the log and linear scales.
+In order to determine whether there are cognitive disadvantages to log scales, I utilize interactive graphics to test an individual's ability to make predictions for exponentially increasing data. In this study, participants are asked to draw a line using their computer mouse through the exponentially increasing trend shown on both the log and linear scales.
 
 \hypertarget{past-methodology}{%
 \subsection{Past Methodology}\label{past-methodology}}
@@ -993,9 +993,8 @@ Next, the yellow box region moves along as the participant draws their trend-lin
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{r2d3}\NormalTok{(}\AttributeTok{data =}\NormalTok{ data,}
-     \AttributeTok{script =} \StringTok{"d3{-}source{-}code.js"}\NormalTok{,}
-     \AttributeTok{d3\_version=} \StringTok{"5"}\NormalTok{)}
+\FunctionTok{r2d3}\NormalTok{(}\AttributeTok{data =}\NormalTok{ data, }\AttributeTok{script =} \StringTok{"d3{-}source{-}code.js"}\NormalTok{,}
+    \AttributeTok{d3\_version =} \StringTok{"5"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1371,76 +1370,65 @@ Further investigation is necessary to determine the implications of using log sc
 \hypertarget{introduction-2}{%
 \section{Introduction}\label{introduction-2}}
 
+The previous two chapters explored the use of log scales through differentiation and visual prediction of trends.
+These graphical tasks were conducted independent of scenarios or contextual applications of logarithmic scales; instead, they focused how our visual system perceives and identifies patterns in exponential growth.
+In order to understand the cognitive implications of displaying exponentially increasing data on a log scale, it is essential to evaluate graph comprehension as it relates to the contextual scenario of the data shown.
+This is a complex inferential process which requires participants to engage with the data by quantitatively transforming information in the chart (Cleveland \& McGill, 1984, 1985).
+In this study, I ask participants to translate a graph of exponentially increasing data into real value quantities and extend their estimations by comparing two data points.
+
+\hypertarget{graph-comprehension}{%
+\subsection{Graph Comprehension}\label{graph-comprehension}}
+
+Graph comprehension is heavily dependent on the questions being asked of the viewer; therefore, questioning is an important aspect of comprehension and must be given deliberate consideration (Graesser, Swamer, Baggett, \& Sell, 2014).
+Evaluation of how viewers explore a new and complex graphic requires long-term interaction with the chart displaying the data (Becker, Moore, \& Lawrence, 2019).
+While it is difficult to obtain an accurate representation a viewers understanding of the graphic with a fixed set of numerical estimates, three levels of graph comprehension have emerged from literature (Curcio, 1987; Friel, Curcio, \& Bright, 2001; Glazer, 2011; Jolliffe, 1991; R. Wood, 1968).
+The three behaviors related to graph comprehension involve (1) literal reading of the data (elementary level), (2) reading between the data (intermediate level), and (3) reading beyond the data (advanced level).
+
+\hypertarget{rounding-estimates-anchoring}{%
+\subsection{Rounding Estimates \& Anchoring}\label{rounding-estimates-anchoring}}
+
 \begin{itemize}
 \tightlist
 \item
-  Such complex inferential processes involve quantitatively transforming the information in the display (e.g., mentally transforming from a linear to logarithmic scale or calculating the difference between two or more data points; Cleveland, 1984, 1985).
+  Open-ended estimation tasks elicit certain well-known biases such as the tendency to round to multiples of 5 or 10 (Becker et al., 2019)
 \end{itemize}
 
-\textbf{Graph Comprehension}
+\hypertarget{study-design-2}{%
+\section{Study Design}\label{study-design-2}}
 
-\begin{itemize}
-\tightlist
-\item
-  Literal reading the data (Elementary level questions)
-\item
-  Reading between the data (Intermediate level questions)
-\item
-  Reading beyond the data (Advanced level questions)
-\end{itemize}
+Participants in this study were asked to answer six questions related to each of two contextual scenarios for a total of twelve questions.
+The text for each scenario is presented below; the context of both scenarios was selected to be similar.
+Each text describes a situation in which a fictional intergalactic species is exponentially increasing in population over a time measure adjusted to reflect the popular culture media depiction of that species (Gerrold \& Pevney, 1967; \emph{Star wars}, 1977, 1983).
 
-\textbf{Rounding Estimates \& Anchoring}
+\begin{quote}
+\textit{Scenario 1:} Hi, we're Tribbles! We were taken from our native planet, Iota Germinorum IV, and brought abroad Starfleet in stardate 4500. A Starfleet scientist, Edward Larkin, genetically engineered us to increase our reproductive rate in an attempt to solve a planetary food shortage. The Tribble population on Starfleet over the next 50 Stardates (equivalent to 1 week universe time) is illustrated in the graph. We need your help answering a few questions regarding the population of Tribbles.
 
-\hypertarget{data-generation-3}{%
-\section{Data Generation}\label{data-generation-3}}
-
-\begin{center}\includegraphics[width=\linewidth,]{thesis_files/figure-latex/estimation-simulated-data-1} \end{center}
-
-\hypertarget{scenarios-questions}{%
-\section{Scenarios \& Questions}\label{scenarios-questions}}
-
-\textbf{Tribble Scenario:}
-
-\emph{``Hi, we're Tribbles! We were taken from our native planet, Iota Germinorum IV, and brought abroad Starfleet in stardate 4500. A Starfleet scientist, Edward Larkin, genetically engineered us to increase our reproductive rate in an attempt to solve a planetary food shortage. The Tribble population on Starfleet over the next 50 Stardates (equivalent to 1 week universe time) is illustrated in the graph. We need your help answering a few questions regarding the population of Tribbles.''}
-
-\textbf{Ewok Scenario:}
-
-\emph{``Hi, we're Ewoks! We are native to the forest moon of Endor. After the Galactic Civil War, some Ewoks traveled offworld to help Rebel veterans as `therapy Ewoks' and began to repopulate. The Ewok population After the Battle of Yavin (ABY) is illustrated in the graph. We need your help answering a few questions regarding the population of Ewoks offworld.''}
+\textit{Scenario 2:} Hi, we're Ewoks! We are native to the forest moon of Endor. After the Galactic Civil War, some Ewoks traveled offworld to help Rebel veterans as 'therapy Ewoks' and began to repopulate. The Ewok population After the Battle of Yavin (ABY) is illustrated in the graph. We need your help answering a few questions regarding the population of Ewoks offworld.
+\end{quote}
 
 \begin{table}
 
 \caption{\label{tab:estimation-questions-table}Estimation Questions}
 \centering
-\begin{tabular}[t]{>{\raggedright\arraybackslash}p{10em}|l|l}
-\hline
+\begin{tabular}[t]{l>{\raggedright\arraybackslash}p{10em}>{\raggedright\arraybackslash}p{10em}}
+\toprule
 Question type & Tribble scenario & Ewok scenario\\
-\hline
+\midrule
 Open Ended & Between stardates 4530 and 4540, how does the population of Tribbles change? & Between 30 and 40 ABY, how does the population of Ewoks change?\\
-\hline
 Elementary Q1 & What is the population of Tribbles in stardate 4510? & What is the population of Ewoks in 10 ABY?\\
-\hline
 Elementary Q2 & In what stardate does the population of Tribbles reach 4,000? & In what ABY does the population of Ewoks reach 4,000?\\
-\hline
 Intermediate Q1 & From 4520 to 4540, the population increases by \_\_\_\_ Tribbles. & From 20 ABY to 40 ABY, the population increases by \_\_\_\_ Ewoks.\\
-\hline
 Intermediate Q2 & How many times more Tribbles are there in 4540 than in 4520? & How many times more Ewoks are there in 40 ABY than in 20 ABY?\\
-\hline
+\addlinespace
 Intermediate Q3 & How long does it take for the population of Tribbles in stardate 4510 to double? & How long does it take for the population of Ewoks in 10 ABY to double?\\
-\hline
+\bottomrule
 \end{tabular}
 \end{table}
 
-\hypertarget{study-design-2}{%
-\section{Study Design}\label{study-design-2}}
+\hypertarget{data-generation-3}{%
+\section{Data Generation}\label{data-generation-3}}
 
-\hypertarget{participants}{%
-\section{Participants}\label{participants}}
-
-\begin{itemize}
-\tightlist
-\item
-  302 Participants answered all 12 questions
-\end{itemize}
+\begin{center}\includegraphics[width=0.9\linewidth,]{thesis_files/figure-latex/estimation-simulated-data-1} \end{center}
 
 \hypertarget{results-3}{%
 \section{Results}\label{results-3}}
@@ -1644,6 +1632,9 @@ Bates, D., Mächler, M., Bolker, B., \& Walker, S. (2015). Fitting linear mixed-
 \leavevmode\vadjust pre{\hypertarget{ref-bavel_using_2020}{}}%
 Bavel, J. J. V., Baicker, K., Boggio, P. S., Capraro, V., Cichocka, A., Cikara, M., \ldots{} Willer, R. (2020). Using social and behavioural science to support {COVID}-19 pandemic response. \emph{Nature Human Behaviour}, \emph{4}(5), 460--471. http://doi.org/\href{https://doi.org/10.1038/s41562-020-0884-z}{10.1038/s41562-020-0884-z}
 
+\leavevmode\vadjust pre{\hypertarget{ref-becker2019trackr}{}}%
+Becker, G., Moore, S. E., \& Lawrence, M. (2019). Trackr: A framework for enhancing discoverability and reproducibility of data visualizations and other artifacts in r. \emph{Journal of Computational and Graphical Statistics}, \emph{28}(3), 644--658.
+
 \leavevmode\vadjust pre{\hypertarget{ref-best_perception_2007}{}}%
 Best, L. A., Smith, L. D., \& Stubbs, D. A. (2007). Perception of {Linear} and {Nonlinear} {Trends}: {Using} {Slope} and {Curvature} {Information} to {Make} {Trend} {Discriminations}. \emph{Perceptual and Motor Skills}, \emph{104}(3), 707--721. http://doi.org/\href{https://doi.org/10.2466/pms.104.3.707-721}{10.2466/pms.104.3.707-721}
 
@@ -1680,6 +1671,9 @@ Croxton, F. E., \& Stein, H. (1932). Graphic comparisons by bars, squares, circl
 \leavevmode\vadjust pre{\hypertarget{ref-croxton1927bar}{}}%
 Croxton, F. E., \& Stryker, R. E. (1927). Bar charts versus circle diagrams. \emph{Journal of the American Statistical Association}, \emph{22}(160), 473--482.
 
+\leavevmode\vadjust pre{\hypertarget{ref-curcio1987comprehension}{}}%
+Curcio, F. R. (1987). Comprehension of mathematical relationships expressed in graphs. \emph{Journal for Research in Mathematics Education}, \emph{18}(5), 382--393.
+
 \leavevmode\vadjust pre{\hypertarget{ref-dehaene2008log}{}}%
 Dehaene, S., Izard, V., Spelke, E., \& Pica, P. (2008). Log or linear? Distinct intuitions of the number scale in western and amazonian indigene cultures. \emph{Science}, \emph{320}(5880), 1217--1220.
 
@@ -1701,11 +1695,20 @@ Finney, D. J. (1951). Subjective {Judgment} in {Statistical} {Analysis}: {An} {E
 \leavevmode\vadjust pre{\hypertarget{ref-finney1948table}{}}%
 Finney, David John, \& Stevens, W. (1948). A table for the calculation of working probits and weights in probit analysis. \emph{Biometrika}, \emph{35}(1/2), 191--201.
 
+\leavevmode\vadjust pre{\hypertarget{ref-friel2001making}{}}%
+Friel, S. N., Curcio, F. R., \& Bright, G. W. (2001). Making sense of graphs: Critical factors influencing comprehension and instructional implications. \emph{Journal for Research in Mathematics Education}, \emph{32}(2), 124--158.
+
 \leavevmode\vadjust pre{\hypertarget{ref-furmanski2000oblique}{}}%
 Furmanski, C. S., \& Engel, S. A. (2000). An oblique effect in human primary visual cortex. \emph{Nature Neuroscience}, \emph{3}(6), 535--536.
 
+\leavevmode\vadjust pre{\hypertarget{ref-star_trek}{}}%
+Gerrold, D. (Writer)., \& Pevney, J. (Director). (1967). {"The Trouble with Tribbles"}. Broadcast on NBC: Star Trek: The Original Series.
+
 \leavevmode\vadjust pre{\hypertarget{ref-giesbrecht2004planning}{}}%
 Giesbrecht, F. G., \& Gumpertz, M. L. (2004). \emph{Planning, construction, and statistical analysis of comparative experiments} (Vol. 405, pp. 118--157). John Wiley \& Sons.
+
+\leavevmode\vadjust pre{\hypertarget{ref-glazer2011challenges}{}}%
+Glazer, N. (2011). Challenges with graph interpretation: A review of the literature. \emph{Studies in Science Education}, \emph{47}(2), 183--210.
 
 \leavevmode\vadjust pre{\hypertarget{ref-goldstein_sensation_2017}{}}%
 Goldstein, E. B., \& Brockmole, J. R. (2017). Sensation and {Perception}, 480.
@@ -1715,6 +1718,9 @@ Gordon, I., \& Finch, S. (2015). Statistician {Heal} {Thyself}: {Have} {We} {Los
 
 \leavevmode\vadjust pre{\hypertarget{ref-gouretski2007much}{}}%
 Gouretski, V., \& Koltermann, K. P. (2007). How much is the ocean really warming? \emph{Geophysical Research Letters}, \emph{34}(1).
+
+\leavevmode\vadjust pre{\hypertarget{ref-graesser2014new}{}}%
+Graesser, A. C., Swamer, S. S., Baggett, W. B., \& Sell, M. A. (2014). New models of deep comprehension. In \emph{Models of understanding text} (pp. 9--40). Psychology Press.
 
 \leavevmode\vadjust pre{\hypertarget{ref-green2009personal}{}}%
 Green, T. M., \& Fisher, B. (2009). The personal equation of complex individual cognition during visual interface interaction. In \emph{Workshop on human-computer interaction and visualization} (pp. 38--57). Springer.
@@ -1733,6 +1739,9 @@ Hofmann, H., Follett, L., Majumder, M., \& Cook, D. (2012). Graphical {Tests} fo
 
 \leavevmode\vadjust pre{\hypertarget{ref-jerne1949validity}{}}%
 Jerne, N. K., \& Wood, E. C. (1949). The validity and meaning of the results of biological assays. \emph{Biometrics}, \emph{5}(4), 273--299.
+
+\leavevmode\vadjust pre{\hypertarget{ref-jolliffe1991assessment}{}}%
+Jolliffe, F. R. (1991). Assessment of the understanding of statistical concepts. In \emph{Proceedings of the third international conference on teaching statistics} (Vol. 1, pp. 461--466).
 
 \leavevmode\vadjust pre{\hypertarget{ref-jones_polynomial_1977}{}}%
 Jones, G. V. (1977). Polynomial perception of exponential growth. \emph{Perception \& Psychophysics}, \emph{21}(2), 197--198. http://doi.org/\href{https://doi.org/10.3758/BF03198726}{10.3758/BF03198726}
@@ -1818,6 +1827,12 @@ Silver, N. (2020, November). 2020 election forecast. \emph{FiveThirtyEight}. Ret
 \leavevmode\vadjust pre{\hypertarget{ref-spence_visual_1990}{}}%
 Spence, I. (1990). Visual psychophysics of simple graphical elements. \emph{Journal of Experimental Psychology: Human Perception and Performance}, \emph{16}(4), 683--692. http://doi.org/\href{https://doi.org/10.1037/0096-1523.16.4.683}{10.1037/0096-1523.16.4.683}
 
+\leavevmode\vadjust pre{\hypertarget{ref-star_wars1}{}}%
+\emph{Star wars: Episode IV -- a new hope}. (1977). 20th Century Fox.
+
+\leavevmode\vadjust pre{\hypertarget{ref-star_wars2}{}}%
+\emph{Star wars: Episode VI - return of the jedi}. (1983). 20th Century Fox.
+
 \leavevmode\vadjust pre{\hypertarget{ref-sun_framework_2012}{}}%
 Sun, J. Z., Wang, G. I., Goyal, V. K., \& Varshney, L. R. (2012). A framework for {Bayesian} optimality of psychophysical laws. \emph{Journal of Mathematical Psychology}, \emph{56}(6), 495--501. http://doi.org/\href{https://doi.org/10.1016/j.jmp.2012.08.002}{10.1016/j.jmp.2012.08.002}
 
@@ -1871,6 +1886,9 @@ Wickham, Hadley, \& Grolemund, G. (2016). \emph{R for data science: Import, tidy
 
 \leavevmode\vadjust pre{\hypertarget{ref-wilkinson2012grammar}{}}%
 Wilkinson, L. (2012). The grammar of graphics. In \emph{Handbook of computational statistics} (pp. 375--414). Springer.
+
+\leavevmode\vadjust pre{\hypertarget{ref-wood1968objectives}{}}%
+Wood, R. (1968). Objectives in the teaching of mathematics. \emph{Educational Research}, \emph{10}(2), 83--98.
 
 \leavevmode\vadjust pre{\hypertarget{ref-mgcv5}{}}%
 Wood, S. N. (2003). Thin-plate regression splines. \emph{Journal of the Royal Statistical Society (B)}, \emph{65}(1), 95--114.
