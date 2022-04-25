@@ -1,11 +1,11 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2022.3.25)  22 APR 2022 15:34
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.4.24)  24 APR 2022 20:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **thesis.tex
 (./thesis.tex
 LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2022-02-24> (./nuthesis.cls
+L3 programming layer <2022-04-20> (./nuthesis.cls
 Document Class: nuthesis 2017/10/12 v0.7.2 University of Nebraska Thesis class
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
@@ -378,7 +378,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: xetex.def on input line 227.
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-def/xetex.def
-File: xetex.def 2021/03/18 v5.0k Graphics/color driver for xetex
+File: xetex.def 2022/04/16 v5.0m Graphics/color driver for xetex
 )
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1368.
@@ -808,7 +808,7 @@ File: dirtree.tex 2012/12/11 v0.32 `dirtree' (jcc)
 \c@lemma=\count377
 \c@cor=\count378
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
-Package: fancyvrb 2021/12/21 4.1b verbatim text (tvz,hv)
+Package: fancyvrb 2022/04/12 4.2 verbatim text (tvz,hv)
 \FV@CodeLineNo=\count379
 \FV@InFile=\read4
 \FV@TabBox=\box73
@@ -857,35 +857,31 @@ Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.sty (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2022-02-24 L3 programming layer (loader) 
+Package: expl3 2022-04-20 L3 programming layer (loader) 
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
-File: l3backend-xetex.def 2022-02-07 L3 backend support: XeTeX
-(|extractbb --version)
-\c__kernel_sys_dvipdfmx_version_int=\count388
-\l__color_backend_stack_int=\count389
-\g__color_backend_stack_int=\count390
-\g__graphics_track_int=\count391
+File: l3backend-xetex.def 2022-04-20 L3 backend support: XeTeX
+\g__graphics_track_int=\count388
 \l__pdf_internal_box=\box79
-\g__pdf_backend_object_int=\count392
-\g__pdf_backend_annotation_int=\count393
-\g__pdf_backend_link_int=\count394
+\g__pdf_backend_object_int=\count389
+\g__pdf_backend_annotation_int=\count390
+\g__pdf_backend_link_int=\count391
 ))
 Package: xparse 2022-01-12 L3 Experimental document command parser
 )
 Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
 Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
-\l__fontspec_script_int=\count395
-\l__fontspec_language_int=\count396
-\l__fontspec_strnum_int=\count397
-\l__fontspec_tmp_int=\count398
-\l__fontspec_tmpa_int=\count399
-\l__fontspec_tmpb_int=\count400
-\l__fontspec_tmpc_int=\count401
-\l__fontspec_em_int=\count402
-\l__fontspec_emdef_int=\count403
-\l__fontspec_strong_int=\count404
-\l__fontspec_strongdef_int=\count405
+\l__fontspec_script_int=\count392
+\l__fontspec_language_int=\count393
+\l__fontspec_strnum_int=\count394
+\l__fontspec_tmp_int=\count395
+\l__fontspec_tmpa_int=\count396
+\l__fontspec_tmpb_int=\count397
+\l__fontspec_tmpc_int=\count398
+\l__fontspec_em_int=\count399
+\l__fontspec_emdef_int=\count400
+\l__fontspec_strong_int=\count401
+\l__fontspec_strongdef_int=\count402
 \l__fontspec_tmpa_dim=\dimen343
 \l__fontspec_tmpb_dim=\dimen344
 \l__fontspec_tmpc_dim=\dimen345
@@ -913,7 +909,7 @@ File: xunicode.sty 2011/09/09 v0.981 provides access to latin accents and many o
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tipa/t3enc.def
 File: t3enc.def 2001/12/31 T3 encoding
 )
-\tipaTiiicode=\count406
+\tipaTiiicode=\count403
 \tipasavetokens=\toks59
 \tipachecktokens=\toks60
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
@@ -944,8 +940,8 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
 \@linkdim=\dimen347
-\Hy@linkcounter=\count407
-\Hy@pagecounter=\count408
+\Hy@linkcounter=\count404
+\Hy@pagecounter=\count405
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2022-02-21 v7.00n Hyperref: PDFDocEncoding definition (HO)
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
@@ -953,7 +949,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count409
+\Hy@SavedSpaceFactor=\count406
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2022-02-21 v7.00n Hyperref: PDF Unicode definition (HO)
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/puenc-greekbasic.def
@@ -969,7 +965,7 @@ Package hyperref Info: Plain pages OFF on input line 4152.
 Package hyperref Info: Backreferencing OFF on input line 4157.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4390.
-\c@Hy@tempcnt=\count410
+\c@Hy@tempcnt=\count407
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -981,7 +977,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count411
+\Fld@menulength=\count408
 \Field@Width=\dimen349
 \Fld@charsize=\dimen350
 Package hyperref Info: Hyper figures OFF on input line 6027.
@@ -997,13 +993,13 @@ LaTeX Info: Redefining \pageref on input line 6101.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count412
-\c@Item=\count413
-\c@Hfootnote=\count414
+\Hy@abspage=\count409
+\c@Item=\count410
+\c@Hfootnote=\count411
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/memoir/memhfixc.sty
 Package: memhfixc 2021/06/16 v1.19 nameref/hyperref package fixes for memoir class
-\c@memhycontfloat=\count415
-\c@Hpagenote=\count416
+\c@memhycontfloat=\count412
+\c@Hpagenote=\count413
 )
 Package hyperref Info: Driver: hxetex.
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hxetex.def
@@ -1012,10 +1008,10 @@ File: hxetex.def 2022-02-21 v7.00n Hyperref driver for XeTeX
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
 \pdfm@box=\box84
-\c@Hy@AnnotLevel=\count417
-\HyField@AnnotCount=\count418
-\Fld@listcount=\count419
-\c@bookmark@seq@number=\count420
+\c@Hy@AnnotLevel=\count414
+\HyField@AnnotCount=\count415
+\Fld@listcount=\count416
+\c@bookmark@seq@number=\count417
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/atveryend-ltx.sty
@@ -1049,7 +1045,7 @@ Package cleveref Info: always capitalise cross-reference names on input line 782
 Package cleveref Info: always capitalise cross-reference names on input line 7852.
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count421
+\c@float@type=\count418
 \float@exts=\toks61
 \float@box=\box85
 \@float@everytoks=\toks62
@@ -1058,21 +1054,21 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
 \@float@every@algorithm=\toks63
-\c@algorithm=\count422
+\c@algorithm=\count419
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
 Package: algpseudocode 
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count423
-\c@ALG@rem=\count424
-\c@ALG@nested=\count425
+\c@ALG@line=\count420
+\c@ALG@rem=\count421
+\c@ALG@nested=\count422
 \ALG@tlm=\skip268
 \ALG@thistlm=\skip269
-\c@ALG@Lnr=\count426
-\c@ALG@blocknr=\count427
-\c@ALG@storecount=\count428
-\c@ALG@tmpcounter=\count429
+\c@ALG@Lnr=\count423
+\c@ALG@blocknr=\count424
+\c@ALG@storecount=\count425
+\c@ALG@tmpcounter=\count426
 \ALG@tmplength=\skip270
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
@@ -1146,7 +1142,7 @@ LaTeX Font Info:    ... okay on input line 186.
 
 Package todonotes Warning: The length marginparwidth is less than 2cm and will most likely cause issues with the appearance of inserted todonotes. The issue can be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to loading the todonotes package. on input line 186.
 
-\c@lstlisting=\count430
+\c@lstlisting=\count427
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
@@ -1219,7 +1215,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count431
+\c@section@level=\count428
 )
 Redoing nameref's sectioning
 Redoing nameref's label
@@ -1381,15 +1377,21 @@ File: thesis_files/figure-latex/exponential-prediction-gamm-preds-1.pdf Graphic 
 <use thesis_files/figure-latex/exponential-prediction-gamm-preds-1.pdf>
 [64] [65] [66] [67
 
-]
+] [68] [69] [70]
 File: thesis_files/figure-latex/estimation-simulated-data-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/estimation-simulated-data-1.pdf>
-[68] [69] [70] [71] [72] [73] [74
+[71] [72] [73]
+File: thesis_files/figure-latex/estimation-word-cloud-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/estimation-word-cloud-1.pdf>
+[74] [75]
+File: thesis_files/figure-latex/qe1-density-plot-10-all-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/qe1-density-plot-10-all-1.pdf>
+[76] [77] [78
 
 ]
 File: images/r2d3+shiny-inkscape.png Graphic file (type bmp)
 <images/r2d3+shiny-inkscape.png>
-[75
+[79
 
 ]
 File: images/low-10-linear.png Graphic file (type bmp)
@@ -1408,19 +1410,19 @@ File: images/high-15-linear.png Graphic file (type bmp)
 <images/high-15-linear.png>
 File: images/high-15-log.png Graphic file (type bmp)
 <images/high-15-log.png>
-[76
+[80
 
-] [77] [78] [79] [80] [81
+] [81] [82] [83] [84] [85
 
-] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92]
+] [86] [87] [88] [89] [90] [91] [92] [93] [94] [95] [96]
 No file thesis.bbl.
 
 Class memoir Warning: The material used in the footer is too large
 (10.14995pt) for the given foot skip (0.0pt), it is recommended to
 either increase the foot skip or redesign the footer
-(in both cases you will find help in the memoir manual). on input line 1944.
+(in both cases you will find help in the memoir manual). on input line 2011.
 
-[93]
+[97]
 \tf@toc=\write7
 \openout7 = `thesis.toc'.
 
@@ -1432,15 +1434,15 @@ either increase the foot skip or redesign the footer
 
 (./thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: BEEFABC52CBD41E710864AB6EFAB2F6E;2356.
+(rerunfilecheck)             Checksum: 8C48C517D2DA43F05B6C1A6818AC8EC5;2356.
  ) 
 Here is how much of TeX's memory you used:
- 38980 strings out of 478179
- 769674 string characters out of 5852894
- 1088322 words of memory out of 5000000
- 58932 multiletter control sequences out of 15000+600000
+ 39007 strings out of 478150
+ 771206 string characters out of 5851971
+ 1091392 words of memory out of 5000000
+ 58987 multiletter control sequences out of 15000+600000
  475551 words of font info for 70 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 123i,12n,120p,2266b,529s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 123i,12n,120p,2266b,521s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on thesis.pdf (102 pages).
+Output written on thesis.pdf (106 pages).

@@ -1381,7 +1381,7 @@ In this study, I ask participants to translate a graph of exponentially increasi
 
 Graph comprehension is heavily dependent on the questions being asked of the viewer; therefore, questioning is an important aspect of comprehension and must be given deliberate consideration (Graesser, Swamer, Baggett, \& Sell, 2014).
 Evaluation of how viewers explore a new and complex graphic requires long-term interaction with the chart displaying the data (Becker, Moore, \& Lawrence, 2019).
-While it is difficult to obtain an accurate representation a viewers understanding of the graphic with a fixed set of numerical estimates, three levels of graph comprehension have emerged from literature (Curcio, 1987; Friel, Curcio, \& Bright, 2001; Glazer, 2011; Jolliffe, 1991; R. Wood, 1968).
+While it is difficult to obtain an accurate representation of a viewers understanding of the graphic with a fixed set of numerical estimates, three levels of graph comprehension have emerged from literature (Curcio, 1987; Friel, Curcio, \& Bright, 2001; Glazer, 2011; Jolliffe, 1991; R. Wood, 1968).
 The three behaviors related to graph comprehension involve (1) literal reading of the data (elementary level), (2) reading between the data (intermediate level), and (3) reading beyond the data (advanced level).
 
 \hypertarget{rounding-estimates-anchoring}{%
@@ -1393,17 +1393,12 @@ The three behaviors related to graph comprehension involve (1) literal reading o
   Open-ended estimation tasks elicit certain well-known biases such as the tendency to round to multiples of 5 or 10 (Becker et al., 2019)
 \end{itemize}
 
-\hypertarget{data-generation-3}{%
-\section{Data Generation}\label{data-generation-3}}
-
-\begin{center}\includegraphics[width=1\linewidth,]{thesis_files/figure-latex/estimation-simulated-data-1} \end{center}
-
 \hypertarget{study-design-2}{%
 \section{Study Design}\label{study-design-2}}
 
-Participants in this study were asked to answer six questions related to each of two contextual scenarios for a total of twelve questions.
+Participants in this study were asked to answer six questions related to each of two contextual scenarios and an associated scatter plot shown for a total of twelve questions.
 The text for each scenario is presented below; the context of both scenarios was selected to be similar.
-Each text describes a situation in which a fictional intergalactic species is exponentially increasing in population over a time measure adjusted to reflect the popular culture media depiction of that species (Marquand, 1983; \emph{Star trek}, 1967; \emph{Star wars}, 1977).
+Each text describes a situation in which a fictional intergalactic species is exponentially increasing in population over a time measure adjusted to reflect the popular culture media depiction of that species (Marquand, 1983; \emph{Star trek}, 1967; \emph{Star wars}, 1977). For simplicity, I will refer to this fictional time component as a year throughout.
 
 \begin{quote}
 \textbf{\textit{Tribble scenario.}} Hi, we're Tribbles! We were taken from our native planet, Iota Germinorum IV, and brought abroad Starfleet in stardate 4500. A Starfleet scientist, Edward Larkin, genetically engineered us to increase our reproductive rate in an attempt to solve a planetary food shortage. The Tribble population on Starfleet over the next 50 Stardates (equivalent to 1 week universe time) is illustrated in the graph. We need your help answering a few questions regarding the population of Tribbles.
@@ -1411,11 +1406,12 @@ Each text describes a situation in which a fictional intergalactic species is ex
 \textbf{\textit{Ewok scenario.}} Hi, we're Ewoks! We are native to the forest moon of Endor. After the Galactic Civil War, some Ewoks traveled offworld to help Rebel veterans as 'therapy Ewoks' and began to repopulate. The Ewok population After the Battle of Yavin (ABY) is illustrated in the graph. We need your help answering a few questions regarding the population of Ewoks offworld.
 \end{quote}
 
+Fictional illustrations of the figures used in context were modified from artwork by Allison Horst and included on the main page for each scenario.
 The scale of the graphic and data set displayed was randomly assigned to scenarios for each individual.
 For instance, a participant may have seen a scatter plot of data set two displayed on the linear scale paired with the Ewok scenario text and a scatter plot of data set one displayed on the log scale paired with the Tribble scenario text.
-The order of the two scenarios and its assigned data set and scale was randomly assigned to each individual.
+The order of the two scenarios and their assigned data set and scale was randomly assigned to each individual.
 
-I selected the six questions \cref{tab:estimation-questions-table} for graph comprehension based on the three defined levels of questioning.
+I selected the six questions \pcref{tab:estimation-questions-table} for graph comprehension based on the three defined levels of questioning.
 In each scenario, participants were first asked an open ended question, which required them to spend time exploring the data displayed in the graphic, followed by a random order of two elementary level questions and three intermediate level questions.
 I did not focus on advanced level questioning since extrapolation and interpolation was addressed in \protect\hyperlink{youdrawit}{Chapter 2}.
 
@@ -1438,31 +1434,90 @@ Intermediate Q3 & How long does it take for the population of Tribbles in starda
 \end{tabular}
 \end{table}
 
+The estimation study in this chapter was completed last in the series of the three graphical studies and took about fifteen minutes for participants to answer all twelve estimation questions.
+Participants completed the series of graphical tests using a R Shiny application found \href{https://shiny.srvanderplas.com/perception-of-statistical-graphics/}{here}.
+For each of the quantitative translation questions, participants were provided a basic calculator and scratchpad to aid in their estimation of values.
+I recorded the inputted and evaluated calculations and scratch work of each participant in order to understand participant strategies for estimation.
+
+\hypertarget{data-generation-3}{%
+\section{Data Generation}\label{data-generation-3}}
+
+I generated two unique data sets with the same underlying parameter coefficients, but different errors randomly generated from the same error distribution. For each data set, a total of \(N = 50\) points \((x_i, y_i), i = 1,...N\) were generated for single increments of \(x_i\in [0, 50]\) where \(x\) and \(y\) have an exponential relationship.
+Data were simulated based on a three parameter exponential model with multiplicative errors:
+\begin{align}
+y_i & = \alpha e^{\beta x_i + e_i} + \theta \\
+\text{with } e_i & \sim N(0, \sigma^2). \nonumber
+\end{align}
+The underlying parameter coefficients were selected to follow a similar growth rate and shape as the previous two studies by visual inspection while ensuring in a maximum magnitude of around 50,000.
+The resulting parameters selected for data generation were \(\alpha = 130\), \(\beta = 0.12\), \(\theta = 50\), and \(\sigma = 1.5\).
+
+\begin{figure}[tbp]
+
+{\centering \includegraphics[width=1\linewidth,]{thesis_files/figure-latex/estimation-simulated-data-1} 
+
+}
+
+\caption{Estimation simulated data}\label{fig:estimation-simulated-data}
+\end{figure}
+
+\cref{fig:estimation-simulated-data} display scatter plots of the two unique data sets on both the linear and logarithmic base two scales; a logarithm of base two was selected in order to aid in participants estimation of time until the population doubled in `Intermediate Q3' \pcref{tab:estimation-questions-table}.
+Participants were shown the graphic of both data sets on either the linear or logarithmic base two scale with labels adjusted to reflect the associated scenario context and scale.
+Grid lines for the \(y\)-axis were set to be consistent for the same scale across both data sets with the linear scale increasing by 5,000 and the logarithmic base two scale doubling, thus demonstrating the additive and multiplicative contextual appearance and interpretation of each scale respectively.
+Minor \(y\)-axis grid lines were removed to avoid participants anchoring to the midway point between grid lines; this is particularly important on the logarithmic scale since a halfway grid line spatially does not correspond to a halfway point numerically.
+Grid lines for the \(x\)-axis spanned a range of 50 with major grid lines every ten units in time apart and minor grid lines indicating every five units in time.
+The time unit labels on the \(x\)-axis reflected 0 to 50 ABY (After Battle of Yavin) for the Ewok scenario and were adjusted to 4500 to 4550 Stardates for the Tribble Scenario to align with the associated popular media depiction of each figure as well as disguise the use of the same underlying data simulation model and estimation questions across both scenarios.
+
 \hypertarget{results-3}{%
 \section{Results}\label{results-3}}
 
 Participant recruitment and study deployment was conducted via Prolific, a crowd sourcing website, on Wednesday, March 23, 2022 during which 302 individuals each completed all six estimation questions for each scenario (total of twelve questions per individual).
+The data set used for analysis contained the unique participant identification and indicated the scenario, scale, data set, and estimation question along with the participant text response or quantitative estimate, calculation input and evaluation, and associated scratch work.
+A total of 145 participants answered questions related to data set one on the linear scale and data set two on the logarithmic base two scale with 157 participants answering questions related to data set one on the logarithmic scale and data set two on the linear scale.
+An array of graphical displays allow for visual inspection of participant responses and provides suggestions about the implications of displaying exponentially increasing data on the logarithmic scale.
 
 \hypertarget{open-ended}{%
 \subsection{Open Ended}\label{open-ended}}
 
-\begin{itemize}
-\tightlist
-\item
-  Word clouds go here
-\end{itemize}
+Before participants were asked to estimate numeric quantities, they were asked to provide an open ended response and describe how the population changes over time.
+This required participants to spend time exploring the graphic and reflect upon how the data displayed relates to the contextual application.
+The \texttt{tidytext} and \texttt{corpus} packages in R (Perry, 2021; Silge \& Robinson, 2016) were used to extract and stem words from participant text responses; stop words such as `the' and `is' as well as numbers were removed from the cleaned word responses.
+The \texttt{wordcloud} package (Fellows, 2018) was used to create a cloud comparing frequencies of words across the two scales \pcref{fig:estimation-word-cloud}. The comparison word cloud is generated by defining \(p_{i,j}\) as the rate in which word \(i\) occurs when describing the data on scale \(j\) where \(p_j\) is the average rate across the scales \(\sum_i{\frac{p_{i,j}}{\text{N scales}}}\).
+The maximum deviation for each word is calculated by \(max_i(p_{i,j} - p_j)\) and mapped to the size of the word with the position of the word determined by the scale in which the maximum occurs.
+
+\begin{figure}[tbp]
+
+{\centering \includegraphics[width=0.75\linewidth,]{thesis_files/figure-latex/estimation-word-cloud-1} 
+
+}
+
+\caption{Estimation word cloud}\label{fig:estimation-word-cloud}
+\end{figure}
+
+The comparison word cloud illustrates the general terminology participants used when describing the scatter plots shown on each scale.
+Participants more frequently referred to terms such as `exponential' and `rapid' when shown the scatter plot on the linear scale while `double' and `quadruple' were often used to describe the graphic when shown on the logarithmic scale; indicating participants read the \(y\)-axis labels and noticed the doubling grid lines.
+The use of the term `linear' when participants are describing the appearance of the data displayed on the logarithmic scale suggests that a portion of participants did not recognize the data was exponentially increasing rather than linearly increasing due to the change in the visual appearance of the data between the two scales.
 
 \hypertarget{elementary-q1-estimation-of-population}{%
 \subsection{Elementary Q1: Estimation of population}\label{elementary-q1-estimation-of-population}}
 
-\hypertarget{direct-estimate-in-date-10}{%
-\subsubsection{Direct estimate in date 10}\label{direct-estimate-in-date-10}}
+In order to examine the effect of scale on literal reading of the data, participants were asked to estimate the population in year 10.
+The true estimated population in year 10 based on the underlying parameter estimates is 481.61 with simulated points of 445.48 and 466.9 for data sets one and two respectively.
+The median participant estimate across both scales and data sets was 500 with innerquartile ranges of 500 and 400 for data set one and data set two respectively when displayed on the linear scale and 48 and 12 for data set one and data set two respectively when displayed on the logarithmic scale.
+Density plots are used to illustrate the distribution of the quantitative estimates provided by participants.
+\pcref{fig:qe1-density-plot-10-all} reveals a larger variance in quantitative population estimates made on the linear scale compared to the logarithmic scale.
+There is strong support that participants were anchoring to grid lines and base ten values as highlighted by the high density of estimates at 512 and 500 on the log scale as well as local maximums near multiples of ten such as 500 and 1000.
 
-\hypertarget{first-level-estimates-for-dates-10-20-and-40}{%
-\subsubsection{First level estimates for dates 10, 20, and 40}\label{first-level-estimates-for-dates-10-20-and-40}}
+\begin{figure}[tbp]
 
-\hypertarget{elementary-q2-estimation-of-date}{%
-\subsection{Elementary Q2: Estimation of date}\label{elementary-q2-estimation-of-date}}
+{\centering \includegraphics[width=1\linewidth,]{thesis_files/figure-latex/qe1-density-plot-10-all-1} 
+
+}
+
+\caption{Elementary Q1 Density in year 10}\label{fig:qe1-density-plot-10-all}
+\end{figure}
+
+\hypertarget{elementary-q2-estimation-of-time}{%
+\subsection{Elementary Q2: Estimation of time}\label{elementary-q2-estimation-of-time}}
 
 \hypertarget{intermediate-q1-additive-increase-in-population}{%
 \subsection{Intermediate Q1: Additive increase in population}\label{intermediate-q1-additive-increase-in-population}}
@@ -1470,8 +1525,8 @@ Participant recruitment and study deployment was conducted via Prolific, a crowd
 \hypertarget{intermediate-q2-multiplicative-change-in-population}{%
 \subsection{Intermediate Q2: Multiplicative change in population}\label{intermediate-q2-multiplicative-change-in-population}}
 
-\hypertarget{intermeidate-q3-time-until-population-doubles}{%
-\subsection{Intermeidate Q3: Time until population doubles}\label{intermeidate-q3-time-until-population-doubles}}
+\hypertarget{intermediate-q3-time-until-population-doubles}{%
+\subsection{Intermediate Q3: Time until population doubles}\label{intermediate-q3-time-until-population-doubles}}
 
 \hypertarget{discussion-and-conclusion-2}{%
 \section{Discussion and Conclusion}\label{discussion-and-conclusion-2}}
@@ -1630,6 +1685,9 @@ Aisch, G., Cohn, N., Cox, A., Katz, J., Pearce, A., \& Quealy, K. (2016). Live p
 \leavevmode\vadjust pre{\hypertarget{ref-aisch_cox_quealy_2015}{}}%
 Aisch, G., Cox, A., \& Quealy, K. (2015, May). You draw it: How family income predicts children's college chances. \emph{The New York Times}. The New York Times. Retrieved from \url{https://www.nytimes.com/interactive/2015/05/28/upshot/you-draw-it-how-family-income-affects-childrens-college-chances.html}
 
+\leavevmode\vadjust pre{\hypertarget{ref-allison_horst}{}}%
+Allison Horst. Artwork by allison horst. Creative Commons. Retrieved from \url{https://github.com/allisonhorst/stats-illustrations}
+
 \leavevmode\vadjust pre{\hypertarget{ref-amer2005bias}{}}%
 Amer, T. (2005). Bias due to visual illusion in the graphical presentation of accounting information. \emph{Journal of Information Systems}, \emph{19}(1), 1--18.
 
@@ -1698,6 +1756,9 @@ Fagen-Ulmschneider, W. (2020). 91-DIVOC. \emph{An interactive visualization of C
 
 \leavevmode\vadjust pre{\hypertarget{ref-fechner1860elemente}{}}%
 Fechner, G. T. (1860). \emph{Elemente der psychophysik} (Vol. 2). Breitkopf u. H{ä}rtel.
+
+\leavevmode\vadjust pre{\hypertarget{ref-wordcloud_pkg}{}}%
+Fellows, I. (2018). \emph{Wordcloud: Word clouds}. Retrieved from \url{https://CRAN.R-project.org/package=wordcloud}
 
 \leavevmode\vadjust pre{\hypertarget{ref-finney_subjective_1951}{}}%
 Finney, D. J. (1951). Subjective {Judgment} in {Statistical} {Analysis}: {An} {Experimental} {Study}. \emph{Journal of the Royal Statistical Society. Series B (Methodological)}, \emph{13}(2), 284--297. Retrieved from \url{https://www.jstor.org/stable/2984070}
@@ -1801,6 +1862,9 @@ Myers, D. G., \& DeWall, C. N. (2021). \emph{Psychology}. Worth Publishers.
 \leavevmode\vadjust pre{\hypertarget{ref-nieder2003coding}{}}%
 Nieder, A., \& Miller, E. K. (2003). Coding of cognitive magnitude: Compressed scaling of numerical information in the primate prefrontal cortex. \emph{Neuron}, \emph{37}(1), 149--157.
 
+\leavevmode\vadjust pre{\hypertarget{ref-corpus_pkg}{}}%
+Perry, P. O. (2021). \emph{Corpus: Text corpus analysis}. Retrieved from \url{https://CRAN.R-project.org/package=corpus}
+
 \leavevmode\vadjust pre{\hypertarget{ref-peterson1954accurately}{}}%
 Peterson, L. V., \& Schramm, W. (1954). How accurately are different kinds of graphs read? \emph{Audio Visual Communication Review}, 178--189.
 
@@ -1830,6 +1894,9 @@ Shah, P., Mayer, R. E., \& Hegarty, M. (1999). Graphs as aids to knowledge const
 
 \leavevmode\vadjust pre{\hypertarget{ref-siegler_numerical_2017}{}}%
 Siegler, R. S., \& Braithwaite, D. W. (2017). Numerical {Development}. \emph{Annual Review of Psychology}, \emph{68}(1), 187--213. http://doi.org/\href{https://doi.org/10.1146/annurev-psych-010416-044101}{10.1146/annurev-psych-010416-044101}
+
+\leavevmode\vadjust pre{\hypertarget{ref-tidytext_pkg}{}}%
+Silge, J., \& Robinson, D. (2016). Tidytext: Text mining and analysis using tidy data principles in r. \emph{JOSS}, \emph{1}(3). http://doi.org/\href{https://doi.org/10.21105/joss.00037}{10.21105/joss.00037}
 
 \leavevmode\vadjust pre{\hypertarget{ref-natesilver538_2020}{}}%
 Silver, N. (2020, November). 2020 election forecast. \emph{FiveThirtyEight}. Retrieved from \url{https://projects.fivethirtyeight.com/2020-election-forecast/}
