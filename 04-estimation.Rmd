@@ -192,7 +192,7 @@ simulated_plot_linear2 <- estimation_simulated_data %>%
   facet_wrap(~scale) +
   theme_bw() +
   theme(aspect.ratio = 1) +
-  scale_x_continuous("Time") +
+  scale_x_continuous("Year") +
   scale_y_continuous("Population", 
                      limits = c(100, 55000),
                      breaks = seq(0, 55000, 5000),
@@ -209,8 +209,8 @@ simulated_plot_log2 <- estimation_simulated_data %>%
   facet_wrap(~scale) +
   theme_bw() +
   theme(aspect.ratio = 1) +
-  scale_x_continuous("Time") +
-  scale_y_continuous("Population (log2)", 
+  scale_x_continuous("Year") +
+  scale_y_continuous("Population \n(log2)", 
                      trans = "log2",
                      limits = c(100, 55000),
                      breaks = 2^seq(0,10000,1),
@@ -299,10 +299,211 @@ qe1_density10_1 / qe1_density10_2
 #   ggtitle("Data sets 1 and 2")
 ```
 
+During the study, participants were explicitly asked to estimate the population during year 10; this value corresponds to a low magnitude where the population is condensed in a small region on the linear scale as opposed to later in time when larger magnitudes in population can be seen.
+While the results provided support for less variability in the estimated population in year 10 on the logarithmic scale, it is important to evaluate the accuracy of estimates along the domain.
+In two estimation questions related to intermediate level reading between the data, participants are asked to provide an increase and change in population between years 20 and 40, thus requiring participants to make first level estimates at these locations.
+In order to understand the effect of the location along the domain, I extracted first level estimates for years 20 and 40 from participant calculations and scratch-work.
+I first compared population estimates from the explicitly asked year 10 location between participants who used the calculator and scratchpad in two or more of the questions to determine whether the there were differences or biases between those who used resources for estimation compared to those who did not utilize the resources [Appendix 3b](#estimation-comparison).
+About half of the participants fell into the category which provided scratch work and half did not. 
 
+The true population from the underlying parameters in year 20 is 1483.01 with closest simulated point values of 1529.19 and 1288.9 for data sets one and two respectively; this location still results in a relatively low magnitude of population, but is closer to the crux of the exponential curve. 
+In year 40, the true population from the underlying parameters in year 40 is 15846.35 with closest simulated point values of 17046.94 and 24186.34 for data sets one and two respectively. 
+It is important to note the discrepancy in simulated point values in year 40 between the two data sets as a result to a multiplicative error causing a larger variance in simulated points for later years and larger magnitudes.
 
+```{r estimation-spaghetti-plots}
+spaghettiPlotsTogether <- function(yearVals, scale, datasetID){
+  
+  plot <- population_estimates_data %>%
+    filter(population_est < 55000, year %in% yearVals, dataset %in% datasetID) %>%
+  ggplot() +
+    
+    # add spaghetti segments
+    geom_segment(aes(x = yearest_true, y = population_est, xend = 0, yend = population_est, color = scale), alpha = 0.3) +
+    geom_segment(aes(x = yearest_true, y = 100, xend = yearest_true, yend = population_est, color = scale), alpha = 0.3) +
+    
+    
+    # add arrows for true value and closest point value
+    geom_segment(aes(x = year, y = true_value, xend = -Inf  + 5, yend = true_value), size = 0.5, alpha = 0.9, linetype = "solid", color = "black", arrow = arrow(length=unit(0.1,"cm"), ends="last", type = "closed")) +
+    geom_segment(aes(x = year, y = closest_pt_value, xend = -Inf + 5, yend = closest_pt_value), size = 0.5, alpha = 0.9, linetype = "solid", color = "black", arrow = arrow(length=unit(0.1,"cm"), ends="last", type = "closed")) +
+    geom_segment(aes(x = year, y = 100, xend = year, yend = true_value), size = 0.5, alpha = 0.9, linetype = "solid", color = "black", arrow = arrow(length=unit(0.1,"cm"), ends="last", type = "closed")) +
+    geom_segment(aes(x = year, y = 100, xend = year, yend = closest_pt_value), size = 0.5, alpha = 0.9, linetype = "solid", color = "black", arrow = arrow(length=unit(0.1,"cm"), ends="last", type = "closed")) +
+    
+    # add points
+    geom_point(data = estimation_simulated_data %>% filter(dataset %in% datasetID), aes(x = x, y = y), alpha = 0.7, shape = 1, size = 1) +
+    
+    # extra
+    facet_grid(~year, labeller = label_both) +
+    theme_bw() +
+    theme(aspect.ratio = 1) +
+    scale_color_manual(values = c("steelblue", "orange3"), guide = guide_legend(override.aes = list(alpha = 1))) +
+    scale_fill_manual(values = c("steelblue", "orange3")) +
+    xlab("Year")
+  
+  if(scale == "linear"){
+    plot <- plot +
+      scale_y_continuous("Population", 
+                         limits = c(100, 55000),
+                       breaks = seq(0, 55000, 5000),
+                       labels = scales::comma,
+                       minor_breaks = c())
+  } 
+  
+  if(scale == "log2"){
+    plot <- plot +
+    scale_y_continuous("Population \n (log2)", 
+                       trans = "log2",
+                       limits = c(100, 55000),
+                       breaks = 2^seq(0,10000,1),
+                       labels = scales::comma,
+                       minor_breaks = c()
+                       )
+  }
+
+plot
+}
+```
+
+```{r spaghetti-dataset1, message=FALSE, warning=FALSE, fig.cap = "Estimated Population: Data set 1", fig.width = 9, fig.height = 6, out.width = "100%"}
+p1 <- spaghettiPlotsTogether(yearVals = c(10,20,40), scale = "linear", datasetID = "dataset1") + ggtitle("Data set 1")
+p2 <- spaghettiPlotsTogether(yearVals = c(10,20,40), scale = "log2", datasetID = "dataset1")
+p1/p2
+```
+
+```{r spaghetti-dataset2, message=FALSE, warning=FALSE, fig.cap = "Estimated Population: Data set 2", fig.width = 9, fig.height = 6, out.width = "100%"}
+p3 <- spaghettiPlotsTogether(yearVals = c(10,20,40), scale = "linear", datasetID = "dataset2") + ggtitle("Data set 2")
+p4 <- spaghettiPlotsTogether(yearVals = c(10,20,40), scale = "log2", datasetID = "dataset2")
+p3/p4
+```
+
+Population estimates for year 10 from participants who used the scratchpad and first level estimates for years 20 and 40 are shown with spaghetti plots in \cref{fig:spaghetti-dataset1} and \cref{fig:spaghetti-dataset2} displayed on both the linear and logarithmic base two scale.
+The scale in which the estimate was made is indicated blue for linear and orange for log with the segments mapped from the participant estimated population to the true year based on the underlying data equation.
+As the domain increases, we observe an increased accuracy in estimates made on the linear scale while estimates made on the logarithmic scale remain accurate throughout. 
+Previously noted, the simulated point corresponding to year 40 in data set 2 has a large deviation from the true underlying data equation; \cref{fig:spaghetti-dataset2} highlights that some participants were reading the data points as opposed to first detecting the underlying trend and making estimates based on the identified trend.
+This provides argument that estimates are highly subjective to the particular data set.
+
+In extracting participant first level estimates from their calculation and scratch work, I observed participants were resistant to estimating between grid lines and had a greater tendency to anchor their estimates to the grid line estimates on the logarithmic scale.
+\cref{fig:common-population-estimates} illustrates the number of participants who provided that estimate on either the linear or logarithmic base two scale. 
+True values based on underlying estimates, closest simulated point values, and grid line breaks are indicated by the horizontal line types.
+In particular, for year 40 in data set 1, the closest point (17046.94) falls close to the logarithmic grid line (16384); participants greatly anchored to the grid line of 16384 with some participants adjusting to 16500 or 17000, anchoring again to a base ten value.
+In a similar situation, for year 40 in data set 2, the closest point (24186.34) falls close to the linear grid line (25000); more participants adjusted their estimates to 24500 or 24000 rather than anchoring to the grid line.
+This suggests that participants were more likely to provide estimates which deviated from grid lines when making estimates on the linear scale, indicating they are more comfortable with interpreting values on a linear scale as opposed to the logarithmic scale.
+
+```{r qe1-first-level-info, eval=FALSE, message=FALSE, warning=FALSE}
+qe1_data %>%
+  group_by(dataset, scale, showed_work_cutoff) %>%
+  get_summary_stats(response, type = "median_iqr") %>%
+  knitr::kable(digits = 2)
+
+estimation_simulated_data %>% 
+  filter(x == 20) %>%
+  knitr::kable(digits = 2)
+
+estimation_simulated_data %>% 
+  filter(x == 40) %>%
+  knitr::kable(digits = 2)
+```
+
+```{r message=FALSE, warning=FALSE}
+qe1_popest_common_responses <- population_estimates_data %>%
+  group_by(scale, year, dataset, true_value, closest_pt_value, population_est) %>%
+  dplyr::summarize(count = n()) %>%
+  filter(count > 3) %>%
+  arrange(year, scale, -count)
+
+actual_values_data <- qe1_popest_common_responses %>%
+  # filter(scale == "linear", "log") %>%
+  select(year, scale, dataset, true_value, closest_pt_value) %>%
+  unique() %>%
+  pivot_wider(id_cols = c("year", "scale", "true_value"),
+              names_from = "dataset",
+              values_from = "closest_pt_value") %>%
+  pivot_longer(cols = c("true_value", "dataset2", "dataset1"),
+              names_to = "dataset",
+              values_to = "population_est") %>%
+  mutate(dataset = ifelse(dataset == "true_value" & scale == "linear", "dataset1",
+                          ifelse(dataset == "true_value" & scale == "log2", "dataset2", dataset))) %>%
+  mutate(scale = "linear", 
+         true_value = NA,
+         closest_pt_value = NA,
+         count = NA) %>%
+  unique() %>%
+  select(year, scale, dataset, true_value, closest_pt_value, population_est, count)
+
+qe1_popest_common_responses  <- qe1_popest_common_responses  %>%
+  rbind(actual_values_data)
+response_order <- c(unique(round(qe1_popest_common_responses$population_est,2))) %>% sort()
+
+popEstCommonPlot <- function(yearVal, datasetID){
+  
+  common_plot <- qe1_popest_common_responses %>%
+    filter(year %in% yearVal, dataset == datasetID) %>%
+    mutate(population_est = round(population_est, 2)) %>%
+    mutate(population_est = factor(population_est, response_order)) %>%
+    mutate(population_est = factor(population_est, levels = response_order)) %>%
+    ggplot(aes(x = count, xmin = 0, xmax = count, y = population_est, color = scale, shape = scale)) +
+    geom_linerange(position = position_dodge(.5), show.legend = F) +
+    geom_point(position = position_dodge(0.5)) +
+    geom_hline(aes(yintercept = as.factor(round(true_value,2)), linetype = "a")) +
+    geom_hline(aes(yintercept = as.factor(round(closest_pt_value,2)), linetype = "b")) +
+    geom_hline(data = grid_lines_data, aes(yintercept = as.factor(round(grid_lines, 2)), color = scale, linetype = "c")) +
+    facet_wrap(~ year, ncol = 3, scales = "free_y", labeller = label_both) +
+    theme_test() +
+    theme(aspect.ratio = 0.75) +
+    scale_shape_manual("Scale", values = c(16,15)) +
+    scale_color_manual("Scale", values = c("steelblue", "orange3")) +
+    scale_linetype_manual("", labels = c("True value", "Closest point", "Grid line"), values = c("solid", "dashed", "dotted")) +
+    scale_y_discrete("Estimated Population") +
+    scale_x_continuous("Number of participants")
+  common_plot
+}
+```
+
+```{r fig.height = 4, fig.width=9, message=FALSE, warning=FALSE, common-population-estimates, fig.cap="Estimated Population: Common responses", out.width="100%"}
+p5 <- popEstCommonPlot(yearVal = c(40), datasetID = "dataset1") +
+  ggtitle("Data set 1")
+
+p6 <- popEstCommonPlot(yearVal = c(40), datasetID = "dataset2") +
+  ggtitle("Data set 2")
+
+p5 + p6
+```
 
 ### Elementary Q2: Estimation of time
+
++ About the same accuracy on both scales, maybe a slight tendency to overestimate (maybe due to estimating the "visual trend" estimate on the log scale as indicated by data set 1?).
++ Not sure there is enough evidence to claim participants were more accurate on the linear scale, but would like to do more studies focusing on participants ability to read between the y-axis tick marks on the logarithmic scale. They could also be anchoring to the tick mark of 4096.
++ but... based on the density plots above, on the log scale, participants might have a tendency to be fitting a visual trend first and then estimating as indicated by the overestimation on the log scale for data set 1.
+
+```{r, eq1-data, message=FALSE, warning=FALSE}
+qe2_data <- estimation_model_data %>% 
+  filter(q_id == "QE2") %>%
+  mutate(response = as.numeric(response))
+```
+
+```{r qe1-info, eval = F}
+estimation_simulated_data %>% 
+  filter(abs(y - 4000) < 1500) %>%
+  arrange(dataset, y)
+
+qe2_data %>%
+  group_by(dataset, scale) %>%
+  get_summary_stats(response, type = "median_iqr")
+```
+
+```{r, qe2-density-plot, fig.cap = "Elementary Q2 Density", fig.width = 9, fig.height = 9, out.width = "100%", message=FALSE, warning=FALSE}
+qe2_density_1 <- densityPlot(data = qe2_data, datasetID = "dataset1", "response", xlabel = "Estimated Year", x_limits = c(0,1200), zoom = F) +
+  ggtitle("Data set 1")
+
+qe2_density_2 <- densityPlot(data = qe2_data, datasetID = "dataset2", "response", xlabel = "Estimated Population at 10", x_limits = c(0,1200), zoom = F) +
+  geom_text(aes(label = "512", y = Inf, x = 512), color = "orange3", size = 3, hjust = -0.25, vjust = 2, show.legend = F) +
+  ggtitle("Data set 2")
+
+qe1_density10_1 / qe1_density10_2
+
+# qe1_density10 <- densityPlot(data = qe1_data, datasetID = c("datast1", "dataset2"), "response", xlabel = "Estimated Population at 10", x_limits = c(0,1200), zoom = F) +
+#   geom_text(aes(label = "512", y = Inf, x = 512), color = "orange3", size = 3, hjust = -0.25, vjust = 2, show.legend = F) +
+#   ggtitle("Data sets 1 and 2")
+```
 
 ### Intermediate Q1: Additive increase in population
 

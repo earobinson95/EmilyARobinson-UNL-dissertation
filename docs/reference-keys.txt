@@ -38,6 +38,9 @@ fig:exponential-prediction-gamm-preds
 fig:estimation-simulated-data
 fig:estimation-word-cloud
 fig:qe1-density-plot-10-all
+fig:spaghetti-dataset1
+fig:spaghetti-dataset2
+fig:common-population-estimates
 fig:r2d3-shiny-flowchart
 fig:low-10-linear
 fig:low-10-log
@@ -94,3 +97,6 @@ discussion-and-conclusion-2
 conclusion
 youdrawit-with-shiny
 exponential-prediction-plots
+estimation-1
+estimation-sketches
+estimation-comparison

@@ -1516,6 +1516,57 @@ There is strong support that participants were anchoring to grid lines and base 
 \caption{Elementary Q1 Density in year 10}\label{fig:qe1-density-plot-10-all}
 \end{figure}
 
+During the study, participants were explicitly asked to estimate the population during year 10; this value corresponds to a low magnitude where the population is condensed in a small region on the linear scale as opposed to later in time when larger magnitudes in population can be seen.
+While the results provided support for less variability in the estimated population in year 10 on the logarithmic scale, it is important to evaluate the accuracy of estimates along the domain.
+In two estimation questions related to intermediate level reading between the data, participants are asked to provide an increase and change in population between years 20 and 40, thus requiring participants to make first level estimates at these locations.
+In order to understand the effect of the location along the domain, I extracted first level estimates for years 20 and 40 from participant calculations and scratch-work.
+I first compared population estimates from the explicitly asked year 10 location between participants who used the calculator and scratchpad in two or more of the questions to determine whether the there were differences or biases between those who used resources for estimation compared to those who did not utilize the resources \protect\hyperlink{estimation-comparison}{Appendix 3b}.
+About half of the participants fell into the category which provided scratch work and half did not.
+
+The true population from the underlying parameters in year 20 is 1483.01 with closest simulated point values of 1529.19 and 1288.9 for data sets one and two respectively; this location still results in a relatively low magnitude of population, but is closer to the crux of the exponential curve.
+In year 40, the true population from the underlying parameters in year 40 is 15846.35 with closest simulated point values of 17046.94 and 24186.34 for data sets one and two respectively.
+It is important to note the discrepancy in simulated point values in year 40 between the two data sets as a result to a multiplicative error causing a larger variance in simulated points for later years and larger magnitudes.
+
+\begin{figure}[tbp]
+
+{\centering \includegraphics[width=1\linewidth,]{thesis_files/figure-latex/spaghetti-dataset1-1} 
+
+}
+
+\caption{Estimated Population: Data set 1}\label{fig:spaghetti-dataset1}
+\end{figure}
+
+\begin{figure}[tbp]
+
+{\centering \includegraphics[width=1\linewidth,]{thesis_files/figure-latex/spaghetti-dataset2-1} 
+
+}
+
+\caption{Estimated Population: Data set 2}\label{fig:spaghetti-dataset2}
+\end{figure}
+
+Population estimates for year 10 from participants who used the scratchpad and first level estimates for years 20 and 40 are shown with spaghetti plots in \cref{fig:spaghetti-dataset1} and \cref{fig:spaghetti-dataset2} displayed on both the linear and logarithmic base two scale.
+The scale in which the estimate was made is indicated blue for linear and orange for log with the segments mapped from the participant estimated population to the true year based on the underlying data equation.
+As the domain increases, we observe an increased accuracy in estimates made on the linear scale while estimates made on the logarithmic scale remain accurate throughout.
+Previously noted, the simulated point corresponding to year 40 in data set 2 has a large deviation from the true underlying data equation; \cref{fig:spaghetti-dataset2} highlights that some participants were reading the data points as opposed to first detecting the underlying trend and making estimates based on the identified trend.
+This provides argument that estimates are highly subjective to the particular data set.
+
+In extracting participant first level estimates from their calculation and scratch work, I observed participants were resistant to estimating between grid lines and had a greater tendency to anchor their estimates to the grid line estimates on the logarithmic scale.
+\cref{fig:common-population-estimates} illustrates the number of participants who provided that estimate on either the linear or logarithmic base two scale.
+True values based on underlying estimates, closest simulated point values, and grid line breaks are indicated by the horizontal line types.
+In particular, for year 40 in data set 1, the closest point (17046.94) falls close to the logarithmic grid line (16384); participants greatly anchored to the grid line of 16384 with some participants adjusting to 16500 or 17000, anchoring again to a base ten value.
+In a similar situation, for year 40 in data set 2, the closest point (24186.34) falls close to the linear grid line (25000); more participants adjusted their estimates to 24500 or 24000 rather than anchoring to the grid line.
+This suggests that participants were more likely to provide estimates which deviated from grid lines when making estimates on the linear scale, indicating they are more comfortable with interpreting values on a linear scale as opposed to the logarithmic scale.
+
+\begin{figure}[tbp]
+
+{\centering \includegraphics[width=1\linewidth,]{thesis_files/figure-latex/common-population-estimates-1} 
+
+}
+
+\caption{Estimated Population: Common responses}\label{fig:common-population-estimates}
+\end{figure}
+
 \hypertarget{elementary-q2-estimation-of-time}{%
 \subsection{Elementary Q2: Estimation of time}\label{elementary-q2-estimation-of-time}}
 
@@ -1664,6 +1715,44 @@ Two data sets were simulated with low and high exponential growth rates and show
 
 \caption{Exponential Prediction: high growth rate, points truncated at 75\%, log scale}\label{fig:high-15-log}
 \end{figure}
+
+\hypertarget{estimation-1}{%
+\chapter{Estimation}\label{estimation-1}}
+
+\hypertarget{estimation-sketches}{%
+\section{Sketches}\label{estimation-sketches}}
+
+\hypertarget{estimation-comparison}{%
+\section{Scratchwork participant comparison}\label{estimation-comparison}}
+
+\begin{tabular}{l|l|l|r}
+\hline
+Data set & Scale & Showed work & N\\
+\hline
+dataset1 & linear & no & 73\\
+\hline
+dataset1 & linear & yes & 72\\
+\hline
+dataset1 & log2 & no & 79\\
+\hline
+dataset1 & log2 & yes & 78\\
+\hline
+dataset2 & linear & no & 79\\
+\hline
+dataset2 & linear & yes & 78\\
+\hline
+dataset2 & log2 & no & 73\\
+\hline
+dataset2 & log2 & yes & 72\\
+\hline
+\end{tabular}
+
+\begin{verbatim}
+## Warning: Removed 13 rows containing non-finite values
+## (stat_density).
+\end{verbatim}
+
+\begin{center}\includegraphics[width=\linewidth,]{thesis_files/figure-latex/unnamed-chunk-2-1} \end{center}
 
 \backmatter
 

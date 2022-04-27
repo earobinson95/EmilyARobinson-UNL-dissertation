@@ -20,6 +20,10 @@ If you feel it necessary to include an appendix, it goes here.
 <!-- ```{r ref.label='include_packages_2', results='hide', echo = TRUE} -->
 <!-- ``` -->
 
+```{r appendix-setup, message=FALSE, warning=FALSE, echo = F}
+library(tidyverse)
+```
+
 # You Draw It Setup with Shiny {#youdrawit-with-shiny}
 
 Interactive plots for the you draw it study were created using the r2d3 package and integrating D3 source code with an R shiny application. 
@@ -447,5 +451,75 @@ knitr::include_graphics("images/high-15-linear.png")
 
 ```{r high-15-log, fig.cap = "Exponential Prediction: high growth rate, points truncated at 75\\%, log scale", fig.height = 4, fig.width = 4, out.width = "65%"}
 knitr::include_graphics("images/high-15-log.png")
+```
+
+# Estimation
+
+## Sketches {#estimation-sketches}
+
+```{r qe1-sketch, eval = F, fig.height = 4, fig.width = 6, out.width = "100%", fig.cap = "Elementary Q1 Sketch"}
+knitr::include_graphics("images/03-estimation/qe1-sketch.png")
+```
+
+```{r qe2-sketch, eval = F, fig.height = 4, fig.width = 6, out.width = "100%", fig.cap = "Elementary Q2 Sketch"}
+knitr::include_graphics("images/03-estimation/qe2-sketch.png")
+```
+
+```{r qi1-sketch, eval = F, fig.height = 4, fig.width = 6, out.width = "100%", fig.cap = "Intermediate Q1 Sketch"}
+knitr::include_graphics("images/03-estimation/qi1-sketch.png")
+```
+
+```{r qi2-sketch, eval = F, fig.height = 4, fig.width = 6, out.width = "100%", fig.cap = "Intermediate Q2 Sketch"}
+knitr::include_graphics("images/03-estimation/qi2-sketch.png")
+```
+
+```{r qi3-sketch, eval = F, fig.height = 4, fig.width = 6, out.width = "100%", fig.cap = "Intermediate Q3 Sketch"}
+knitr::include_graphics("images/03-estimation/qi3-sketch.png")
+```
+
+## Scratchwork participant comparison {#estimation-comparison}
+
+```{r, echo = F}
+
+# estimation_model_data <- read.csv(here("data/03-estimation/estimation-model-data.csv"))
+# q0_text_summary <- read.csv(here("data/03-estimation/q0-text-summary.csv"))
+# estimation_simulated_data <- read.csv(here("data/03-estimation/estimation-simulated-data.csv")) %>%
+#   mutate(x = x - 3000)
+# estimation_scenario_text <- read.csv(here("data/03-estimation/estimation-scenario-text.csv"))
+# estimation_parameters <- read.csv(here("data/03-estimation/estimation-parameters.csv"))
+# estimation_questions <- read.csv(here("data/03-estimation/estimation-questions.csv"))
+# population_estimates_data <- read.csv(here("data/03-estimation/first-level-population-estimates.csv"))
+# 
+# grid_lines_data <- tibble(scale = c(rep("linear", 12), rep("log2", 10)),
+#                           grid_lines = c(seq(0,55000, 5000),
+#                                          2^seq(7,16))
+# ) %>%
+#   expand_grid(dataset = c("dataset1", "dataset2"))
+# 
+# qe1_data <- estimation_model_data %>%
+#   filter(q_id == "QE1") %>%
+#   mutate(response = as.numeric(response)) %>%
+#   mutate(showed_work_cutoff = ifelse(showed_work_n >= 2, "yes", "no"))
+
+qe1_data %>%
+  group_by(dataset, scale, showed_work_cutoff) %>%
+  get_summary_stats(response, type = "median_iqr") %>%
+  select(dataset,	scale,	showed_work_cutoff,	n) %>%
+  knitr::kable(digits = 2, col.names = c("Data set", "Scale", "Showed work", "N"))
+
+qe1_compare_work <- qe1_data %>%
+  ggplot(aes(x = response, fill = showed_work_cutoff)) +
+  geom_density(alpha = 0.5, color = NA) +
+  geom_vline(aes(xintercept = true_value, linetype = "True")) +
+  geom_vline(aes(xintercept = closest_pt_value, linetype = "Closest Point")) +
+  facet_grid(dataset ~ scale, scales = "free_y") +
+  theme_bw() +
+  theme(aspect.ratio = 1) +
+  scale_fill_manual(values = c("steelblue", "orange3")) +
+  scale_linetype_manual("Actual Value", values = c("dashed", "dotted")) +
+  # coord_cartesian(xlim = c(0,1000), ylim = c(0, 0.1)) +
+  scale_x_continuous("Estimated Population", limits = c(0,1000)) +
+  scale_y_continuous("Density")
+qe1_compare_work
 ```
 
