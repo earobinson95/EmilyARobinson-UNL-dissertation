@@ -39,7 +39,7 @@ grid_lines_data <- tibble(scale = c(rep("linear", 12), rep("log2", 10)),
 ```
 
 ```{r density-plot}
-densityPlot <- function(data, datasetID, estimate, xlabel = "Estimate", x_limits = c(0,70000), zoom = F, zoom_limits = c(NA,NA)){
+densityPlot <- function(data, datasetID, estimate, xlabel = "Estimate", x_limits = c(0,70000), zoom = F, zoom_limits = c(NA,NA), gridlines = T){
   
   estPlot <- data %>%
     filter(dataset %in% datasetID) %>%
@@ -47,9 +47,15 @@ densityPlot <- function(data, datasetID, estimate, xlabel = "Estimate", x_limits
     geom_density(alpha = 0.5, color = NA) +
     geom_rug(alpha = 0.8, show.legend = F) +
     geom_vline(aes(xintercept = true_value, linetype = "a")) +
-    geom_vline(aes(xintercept = closest_pt_value, linetype = "b")) +
+    geom_vline(aes(xintercept = closest_pt_value, linetype = "b"))
+  
+  if(gridlines){
+  estPlot <- estPlot + 
     geom_vline(data = grid_lines_data %>% filter(dataset == "dataset1", grid_lines >= x_limits[1], grid_lines <= x_limits[2]),
-               aes(xintercept = grid_lines, color = scale, linetype = "c")) +
+               aes(xintercept = grid_lines, color = scale, linetype = "c"))
+  }
+  
+  estPlot <- estPlot +
     theme_bw() +
     theme(aspect.ratio = 0.5) +
     scale_color_manual("Scale", values = c("steelblue", "orange3")) +
@@ -157,8 +163,8 @@ simulated_plot_linear1 <- estimation_simulated_data %>%
   facet_wrap(~scale) +
   theme_bw() +
   theme(aspect.ratio = 1) +
-  scale_x_continuous("Time") +
-  scale_y_continuous("Population", 
+  scale_x_continuous("Year") +
+  scale_y_continuous("Population \n(Linear Scale)", 
                      limits = c(100, 55000),
                      breaks = seq(0, 55000, 5000),
                      labels = scales::comma,
@@ -174,8 +180,8 @@ simulated_plot_log1 <- estimation_simulated_data %>%
   facet_wrap(~scale) +
   theme_bw() +
   theme(aspect.ratio = 1) +
-  scale_x_continuous("Time") +
-  scale_y_continuous("Population (log2)",
+  scale_x_continuous("Year") +
+  scale_y_continuous("Population \n(Log Scale)",
                      trans = "log2",
                      limits = c(100, 55000),
                      breaks = 2^seq(0,10000,1),
@@ -193,7 +199,7 @@ simulated_plot_linear2 <- estimation_simulated_data %>%
   theme_bw() +
   theme(aspect.ratio = 1) +
   scale_x_continuous("Year") +
-  scale_y_continuous("Population", 
+  scale_y_continuous("Population \n(Linear Scale)", 
                      limits = c(100, 55000),
                      breaks = seq(0, 55000, 5000),
                      labels = scales::comma,
@@ -210,7 +216,7 @@ simulated_plot_log2 <- estimation_simulated_data %>%
   theme_bw() +
   theme(aspect.ratio = 1) +
   scale_x_continuous("Year") +
-  scale_y_continuous("Population \n(log2)", 
+  scale_y_continuous("Population \n(Log Scale)", 
                      trans = "log2",
                      limits = c(100, 55000),
                      breaks = 2^seq(0,10000,1),
@@ -233,6 +239,7 @@ The time unit labels on the $x$-axis reflected 0 to 50 ABY (After Battle of Yavi
 Participant recruitment and study deployment was conducted via Prolific, a crowd sourcing website, on Wednesday, March 23, 2022 during which 302 individuals each completed all six estimation questions for each scenario (total of twelve questions per individual).
 The data set used for analysis contained the unique participant identification and indicated the scenario, scale, data set, and estimation question along with the participant text response or quantitative estimate, calculation input and evaluation, and associated scratch work.
 A total of 145 participants answered questions related to data set one on the linear scale and data set two on the logarithmic base two scale with 157 participants answering questions related to data set one on the logarithmic scale and data set two on the linear scale.
+Sketches for each question are used to demonstrate the estimation tasks participants are asked to conduct.
 An array of graphical displays allow for visual inspection of participant responses and provides suggestions about the implications of displaying exponentially increasing data on the logarithmic scale.
 
 ### Open Ended
@@ -258,9 +265,14 @@ The use of the term 'linear' when participants are describing the appearance of 
 
 ### Elementary Q1: Estimation of population
 
-In order to examine the effect of scale on literal reading of the data, participants were asked to estimate the population in year 10.
+In order to examine the effect of scale on literal reading of the data, participants were asked to estimate the population in year 10 \pcref{fig:qe1-sketch}.
 The true estimated population in year 10 based on the underlying parameter estimates is 481.61 with simulated points of 445.48 and 466.9 for data sets one and two respectively.
 The median participant estimate across both scales and data sets was 500 with innerquartile ranges of 500 and 400 for data set one and data set two respectively when displayed on the linear scale and 48 and 12 for data set one and data set two respectively when displayed on the logarithmic scale.
+
+```{r qe1-sketch, eval = T, fig.height = 8, fig.width = 8, out.width = "100%", fig.cap = "Elementary Q1 Sketch"}
+knitr::include_graphics("images/03-estimation/qe1-sketch.png")
+```
+
 Density plots are used to illustrate the distribution of the quantitative estimates provided by participants.
 \pcref{fig:qe1-density-plot-10-all} reveals a larger variance in quantitative population estimates made on the linear scale compared to the logarithmic scale.
 There is strong support that participants were anchoring to grid lines and base ten values as highlighted by the high density of estimates at 512 and 500 on the log scale as well as local maximums near multiples of ten such as 500 and 1000.
@@ -293,15 +305,11 @@ qe1_density10_2 <- densityPlot(data = qe1_data, datasetID = "dataset2", "respons
   ggtitle("Data set 2")
 
 qe1_density10_1 / qe1_density10_2
-
-# qe1_density10 <- densityPlot(data = qe1_data, datasetID = c("datast1", "dataset2"), "response", xlabel = "Estimated Population at 10", x_limits = c(0,1200), zoom = F) +
-#   geom_text(aes(label = "512", y = Inf, x = 512), color = "orange3", size = 3, hjust = -0.25, vjust = 2, show.legend = F) +
-#   ggtitle("Data sets 1 and 2")
 ```
 
 During the study, participants were explicitly asked to estimate the population during year 10; this value corresponds to a low magnitude where the population is condensed in a small region on the linear scale as opposed to later in time when larger magnitudes in population can be seen.
 While the results provided support for less variability in the estimated population in year 10 on the logarithmic scale, it is important to evaluate the accuracy of estimates along the domain.
-In two estimation questions related to intermediate level reading between the data, participants are asked to provide an increase and change in population between years 20 and 40, thus requiring participants to make first level estimates at these locations.
+In two estimation questions related to intermediate level reading between the data, participants are asked to provide an increase and change in population between years 20 and 40, thus requiring participants to make first level estimates at these locations \pcref{fig:qi1-sketch; fig:qi2-sketch}.
 In order to understand the effect of the location along the domain, I extracted first level estimates for years 20 and 40 from participant calculations and scratch-work.
 I first compared population estimates from the explicitly asked year 10 location between participants who used the calculator and scratchpad in two or more of the questions to determine whether the there were differences or biases between those who used resources for estimation compared to those who did not utilize the resources [Appendix 3b](#estimation-comparison).
 About half of the participants fell into the category which provided scratch work and half did not. 
@@ -442,7 +450,7 @@ popEstCommonPlot <- function(yearVal, datasetID){
     mutate(population_est = factor(population_est, levels = response_order)) %>%
     ggplot(aes(x = count, xmin = 0, xmax = count, y = population_est, color = scale, shape = scale)) +
     geom_linerange(position = position_dodge(.5), show.legend = F) +
-    geom_point(position = position_dodge(0.5)) +
+    geom_point(position = position_dodge(0.5) ) +
     geom_hline(aes(yintercept = as.factor(round(true_value,2)), linetype = "a")) +
     geom_hline(aes(yintercept = as.factor(round(closest_pt_value,2)), linetype = "b")) +
     geom_hline(data = grid_lines_data, aes(yintercept = as.factor(round(grid_lines, 2)), color = scale, linetype = "c")) +
@@ -470,17 +478,26 @@ p5 + p6
 
 ### Elementary Q2: Estimation of time
 
+In addition to estimating the population from a given year, participants were asked to estimate the year in which the population reaches 4000 \pcref{fig:qe2-sketch}.
+This requires literal reading of the data by mapping a value given on the $y$-axis to its corresponding value on the $x$-axis. 
+The true estimated year  in year 10 based on the underlying parameter estimates is 481.61 with simulated points of 445.48 and 466.9 for data sets one and two respectively.
+The median participant estimate across both scales and data sets was 500 with innerquartile ranges of 500 and 400 for data set one and data set two respectively when displayed on the linear scale and 48 and 12 for data set one and data set two respectively when displayed on the logarithmic scale.
+
+```{r qe2-sketch, eval = T, fig.height = 4, fig.width = 6, out.width = "100%", fig.cap = "Elementary Q2 Sketch"}
+knitr::include_graphics("images/03-estimation/qe2-sketch.png")
+```
+
 + About the same accuracy on both scales, maybe a slight tendency to overestimate (maybe due to estimating the "visual trend" estimate on the log scale as indicated by data set 1?).
 + Not sure there is enough evidence to claim participants were more accurate on the linear scale, but would like to do more studies focusing on participants ability to read between the y-axis tick marks on the logarithmic scale. They could also be anchoring to the tick mark of 4096.
 + but... based on the density plots above, on the log scale, participants might have a tendency to be fitting a visual trend first and then estimating as indicated by the overestimation on the log scale for data set 1.
 
-```{r, eq1-data, message=FALSE, warning=FALSE}
+```{r, eq2-data, message=FALSE, warning=FALSE}
 qe2_data <- estimation_model_data %>% 
   filter(q_id == "QE2") %>%
   mutate(response = as.numeric(response))
 ```
 
-```{r qe1-info, eval = F}
+```{r qe2-info, eval = F}
 estimation_simulated_data %>% 
   filter(abs(y - 4000) < 1500) %>%
   arrange(dataset, y)
@@ -491,25 +508,35 @@ qe2_data %>%
 ```
 
 ```{r, qe2-density-plot, fig.cap = "Elementary Q2 Density", fig.width = 9, fig.height = 9, out.width = "100%", message=FALSE, warning=FALSE}
-qe2_density_1 <- densityPlot(data = qe2_data, datasetID = "dataset1", "response", xlabel = "Estimated Year", x_limits = c(0,1200), zoom = F) +
+qe2_density_1 <- densityPlot(data = qe2_data, datasetID = "dataset1", "response", xlabel = "Estimated Year", x_limits = c(0,50), zoom = F, gridlines = F) +
   ggtitle("Data set 1")
 
-qe2_density_2 <- densityPlot(data = qe2_data, datasetID = "dataset2", "response", xlabel = "Estimated Population at 10", x_limits = c(0,1200), zoom = F) +
-  geom_text(aes(label = "512", y = Inf, x = 512), color = "orange3", size = 3, hjust = -0.25, vjust = 2, show.legend = F) +
+qe2_density_2 <- densityPlot(data = qe2_data, datasetID = "dataset2", "response", xlabel = "Estimated Population at 10", x_limits = c(0,50), zoom = F, gridlines = F) +
   ggtitle("Data set 2")
 
-qe1_density10_1 / qe1_density10_2
+qe2_density_1 / qe2_density_2
 
-# qe1_density10 <- densityPlot(data = qe1_data, datasetID = c("datast1", "dataset2"), "response", xlabel = "Estimated Population at 10", x_limits = c(0,1200), zoom = F) +
-#   geom_text(aes(label = "512", y = Inf, x = 512), color = "orange3", size = 3, hjust = -0.25, vjust = 2, show.legend = F) +
-#   ggtitle("Data sets 1 and 2")
 ```
 
 ### Intermediate Q1: Additive increase in population
 
+```{r qi1-sketch, eval = T, fig.height = 8, fig.width = 8, out.width = "100%", fig.cap = "Intermediate Q1 Sketch"}
+knitr::include_graphics("images/03-estimation/qi1-sketch.png")
+```
+
+
 ### Intermediate Q2: Multiplicative change in population
 
+```{r qi2-sketch, eval = T, fig.height = 8, fig.width = 8, out.width = "100%", fig.cap = "Intermediate Q2 Sketch"}
+knitr::include_graphics("images/03-estimation/qi2-sketch.png")
+```
+
+
 ### Intermediate Q3: Time until population doubles
+
+```{r qi3-sketch, eval = T, fig.height = 8, fig.width = 8, out.width = "100%", fig.cap = "Intermediate Q3 Sketch"}
+knitr::include_graphics("images/03-estimation/qi3-sketch.png")
+```
 
 ## Discussion and Conclusion
 

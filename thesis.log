@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.4.24)  27 APR 2022 14:23
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.4.24)  29 APR 2022 11:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1383,23 +1383,40 @@ File: thesis_files/figure-latex/estimation-simulated-data-1.pdf Graphic file (ty
 [71] [72] [73]
 File: thesis_files/figure-latex/estimation-word-cloud-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/estimation-word-cloud-1.pdf>
-[74] [75]
+[74]
+File: images/03-estimation/qe1-sketch.png Graphic file (type bmp)
+<images/03-estimation/qe1-sketch.png>
+[75] [76]
 File: thesis_files/figure-latex/qe1-density-plot-10-all-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qe1-density-plot-10-all-1.pdf>
-[76]
+
+LaTeX Warning: Reference `fig:qi1-sketch; fig:qi2-sketch' on page 1 undefined on input line 1532.
+
+[77]
 File: thesis_files/figure-latex/spaghetti-dataset1-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/spaghetti-dataset1-1.pdf>
 File: thesis_files/figure-latex/spaghetti-dataset2-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/spaghetti-dataset2-1.pdf>
-[77] [78] [79]
+[78] [79] [80]
 File: thesis_files/figure-latex/common-population-estimates-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/common-population-estimates-1.pdf>
-[80] [81] [82
+File: images/03-estimation/qe2-sketch.png Graphic file (type bmp)
+<images/03-estimation/qe2-sketch.png>
+[81] [82]
+File: thesis_files/figure-latex/qe2-density-plot-1.pdf Graphic file (type pdf)
+<use thesis_files/figure-latex/qe2-density-plot-1.pdf>
+File: images/03-estimation/qi1-sketch.png Graphic file (type bmp)
+<images/03-estimation/qi1-sketch.png>
+File: images/03-estimation/qi2-sketch.png Graphic file (type bmp)
+<images/03-estimation/qi2-sketch.png>
+File: images/03-estimation/qi3-sketch.png Graphic file (type bmp)
+<images/03-estimation/qi3-sketch.png>
+[83] [84] [85] [86] [87] [88
 
 ]
 File: images/r2d3+shiny-inkscape.png Graphic file (type bmp)
 <images/r2d3+shiny-inkscape.png>
-[83
+[89
 
 ]
 File: images/low-10-linear.png Graphic file (type bmp)
@@ -1418,24 +1435,24 @@ File: images/high-15-linear.png Graphic file (type bmp)
 <images/high-15-linear.png>
 File: images/high-15-log.png Graphic file (type bmp)
 <images/high-15-log.png>
-[84
+[90
 
-] [85] [86] [87] [88]
+] [91] [92] [93] [94]
 File: thesis_files/figure-latex/unnamed-chunk-2-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/unnamed-chunk-2-1.pdf>
-[89
+[95
 
-] [90] [91
+] [96] [97
 
-] [92] [93] [94] [95] [96] [97] [98] [99] [100] [101] [102]
+] [98] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108]
 No file thesis.bbl.
 
 Class memoir Warning: The material used in the footer is too large
 (10.14995pt) for the given foot skip (0.0pt), it is recommended to
 either increase the foot skip or redesign the footer
-(in both cases you will find help in the memoir manual). on input line 2100.
+(in both cases you will find help in the memoir manual). on input line 2163.
 
-[103]
+[109]
 \tf@toc=\write7
 \openout7 = `thesis.toc'.
 
@@ -1446,16 +1463,19 @@ either increase the foot skip or redesign the footer
 \openout9 = `thesis.lot'.
 
 (./thesis.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 47CB7FDA90E139CCD9E3C5867B879766;2547.
+(rerunfilecheck)             Checksum: CEE6037F001C93FC232F1D8407783088;2491.
  ) 
 Here is how much of TeX's memory you used:
- 39060 strings out of 478150
- 773702 string characters out of 5851971
+ 39172 strings out of 478150
+ 777916 string characters out of 5851971
  1091392 words of memory out of 5000000
- 59036 multiletter control sequences out of 15000+600000
+ 59141 multiletter control sequences out of 15000+600000
  475551 words of font info for 70 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 123i,12n,120p,2266b,523s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 123i,12n,120p,2266b,527s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on thesis.pdf (112 pages).
+Output written on thesis.pdf (118 pages).

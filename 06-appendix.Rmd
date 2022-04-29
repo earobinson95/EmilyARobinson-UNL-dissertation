@@ -455,28 +455,6 @@ knitr::include_graphics("images/high-15-log.png")
 
 # Estimation
 
-## Sketches {#estimation-sketches}
-
-```{r qe1-sketch, eval = F, fig.height = 4, fig.width = 6, out.width = "100%", fig.cap = "Elementary Q1 Sketch"}
-knitr::include_graphics("images/03-estimation/qe1-sketch.png")
-```
-
-```{r qe2-sketch, eval = F, fig.height = 4, fig.width = 6, out.width = "100%", fig.cap = "Elementary Q2 Sketch"}
-knitr::include_graphics("images/03-estimation/qe2-sketch.png")
-```
-
-```{r qi1-sketch, eval = F, fig.height = 4, fig.width = 6, out.width = "100%", fig.cap = "Intermediate Q1 Sketch"}
-knitr::include_graphics("images/03-estimation/qi1-sketch.png")
-```
-
-```{r qi2-sketch, eval = F, fig.height = 4, fig.width = 6, out.width = "100%", fig.cap = "Intermediate Q2 Sketch"}
-knitr::include_graphics("images/03-estimation/qi2-sketch.png")
-```
-
-```{r qi3-sketch, eval = F, fig.height = 4, fig.width = 6, out.width = "100%", fig.cap = "Intermediate Q3 Sketch"}
-knitr::include_graphics("images/03-estimation/qi3-sketch.png")
-```
-
 ## Scratchwork participant comparison {#estimation-comparison}
 
 ```{r, echo = F}
