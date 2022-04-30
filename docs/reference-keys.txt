@@ -45,6 +45,9 @@ fig:common-population-estimates
 fig:qe2-sketch
 fig:qe2-density-plot
 fig:qi1-sketch
+fig:qi1-density-1
+fig:qi1-density-2
+fig:qi1-common-responses
 fig:qi2-sketch
 fig:qi3-sketch
 fig:r2d3-shiny-flowchart

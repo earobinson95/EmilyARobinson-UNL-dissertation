@@ -39,13 +39,13 @@ grid_lines_data <- tibble(scale = c(rep("linear", 12), rep("log2", 10)),
 ```
 
 ```{r density-plot}
-densityPlot <- function(data, datasetID, estimate, xlabel = "Estimate", x_limits = c(0,70000), zoom = F, zoom_limits = c(NA,NA), gridlines = T){
+densityPlot <- function(data, datasetID, estimate, xlabel = "Estimate", x_limits = c(0,70000), zoom = F, scalesx = T, zoom_limits = c(NA,NA), gridlines = T, rugjitter = 0.25){
   
   estPlot <- data %>%
     filter(dataset %in% datasetID) %>%
     ggplot(aes_string(x = estimate, fill = "scale", color = "scale")) +
     geom_density(alpha = 0.5, color = NA) +
-    geom_rug(alpha = 0.8, show.legend = F) +
+    geom_rug(aes(y = -Inf), alpha = 0.8, show.legend = F, position = position_jitter(width = rugjitter, height = 0)) +
     geom_vline(aes(xintercept = true_value, linetype = "a")) +
     geom_vline(aes(xintercept = closest_pt_value, linetype = "b"))
   
@@ -61,15 +61,14 @@ densityPlot <- function(data, datasetID, estimate, xlabel = "Estimate", x_limits
     scale_color_manual("Scale", values = c("steelblue", "orange3")) +
     scale_fill_manual("Scale", values = c("steelblue", "orange3")) +
     scale_linetype_manual("", labels = c("True Value", "Closest Point Value", "Grid Line Breaks"), values = c("solid", "dashed", "dotted")) +
-    scale_y_continuous("Density")
+    scale_y_continuous("Density", labels = scales::comma)
   
   if(zoom){
   estPlot <- estPlot +
-    facet_zoom(xlim = zoom_limits) +
-    scale_x_continuous(xlabel)
+    facet_zoom(xlim = zoom_limits)
   }
   
-  if(!zoom){
+  if(scalesx){
     estPlot <- estPlot +
     scale_x_continuous(xlabel, limits = x_limits)
   }
@@ -265,7 +264,7 @@ The use of the term 'linear' when participants are describing the appearance of 
 
 ### Elementary Q1: Estimation of population
 
-In order to examine the effect of scale on literal reading of the data, participants were asked to estimate the population in year 10 \pcref{fig:qe1-sketch}.
+In order to examine the effect of scale on literal reading of the data, participants were asked, \textit{"What is the population in year 10?"} \pcref{fig:qe1-sketch}.
 The true estimated population in year 10 based on the underlying parameter estimates is 481.61 with simulated points of 445.48 and 466.9 for data sets one and two respectively.
 The median participant estimate across both scales and data sets was 500 with innerquartile ranges of 500 and 400 for data set one and data set two respectively when displayed on the linear scale and 48 and 12 for data set one and data set two respectively when displayed on the logarithmic scale.
 
@@ -296,11 +295,11 @@ qe1_data %>%
 ```
 
 ```{r, qe1-density-plot-10-all, fig.cap = "Elementary Q1 Density in year 10", fig.width = 9, fig.height = 9, out.width = "100%", message=FALSE, warning=FALSE}
-qe1_density10_1 <- densityPlot(data = qe1_data, datasetID = "dataset1", "response", xlabel = "Estimated Population at 10", x_limits = c(0,1200), zoom = F) +
+qe1_density10_1 <- densityPlot(data = qe1_data, datasetID = "dataset1", "response", xlabel = "Estimated Population at 10", x_limits = c(0,1200), zoom = F, rugjitter = 10) +
   geom_text(aes(label = "512", y = Inf, x = 512), color = "orange3", size = 3, hjust = -0.25, vjust = 2, show.legend = F) +
   ggtitle("Data set 1")
 
-qe1_density10_2 <- densityPlot(data = qe1_data, datasetID = "dataset2", "response", xlabel = "Estimated Population at 10", x_limits = c(0,1200), zoom = F) +
+qe1_density10_2 <- densityPlot(data = qe1_data, datasetID = "dataset2", "response", xlabel = "Estimated Population at 10", x_limits = c(0,1200), zoom = F, rugjitter = 10) +
   geom_text(aes(label = "512", y = Inf, x = 512), color = "orange3", size = 3, hjust = -0.25, vjust = 2, show.legend = F) +
   ggtitle("Data set 2")
 
@@ -395,6 +394,21 @@ True values based on underlying estimates, closest simulated point values, and g
 In particular, for year 40 in data set 1, the closest point (17046.94) falls close to the logarithmic grid line (16384); participants greatly anchored to the grid line of 16384 with some participants adjusting to 16500 or 17000, anchoring again to a base ten value.
 In a similar situation, for year 40 in data set 2, the closest point (24186.34) falls close to the linear grid line (25000); more participants adjusted their estimates to 24500 or 24000 rather than anchoring to the grid line.
 This suggests that participants were more likely to provide estimates which deviated from grid lines when making estimates on the linear scale, indicating they are more comfortable with interpreting values on a linear scale as opposed to the logarithmic scale.
+When participants made estimates between grid lines on the logarithmic scale as indicated by their scratch work, they tended to estimate "half-way" between the two values indicated by the grid line breaks.
+For example, 1536 was a common population estimate for year 20 because visually the location of estimation lands about halfway between grid lines 1024 and 2048 \pcref{fig:qi1-sketch; fig:qi2-sketch}. 
+Participant calculations and scratch-work provides support that participants equated this as half-way numerically as indicated by the selected work provided below:
+\begin{align}
+\textit{Sample work 1} \nonumber\\
+2048-1024 &= 1024 \nonumber \\
+1024/2 &= 512 \nonumber\\
+512+1024 &= 1536 \nonumber
+\nonumber \\ 
+\nonumber \\
+\textit{Sample work 2} \nonumber\\
+2048 + 1024 & =3072 \nonumber\\
+3072/2 & =1536 \nonumber
+\end{align}
+This indicates a lack of understanding of logarithmic mapping where the spatial equivalence does not correspond to numeric equivalence; in other words, spatially half-way between two grid lines does not result in a numeric value half-way between the quantitative grid line labels.
 
 ```{r qe1-first-level-info, eval=FALSE, message=FALSE, warning=FALSE}
 qe1_data %>%
@@ -456,7 +470,7 @@ popEstCommonPlot <- function(yearVal, datasetID){
     geom_hline(data = grid_lines_data, aes(yintercept = as.factor(round(grid_lines, 2)), color = scale, linetype = "c")) +
     facet_wrap(~ year, ncol = 3, scales = "free_y", labeller = label_both) +
     theme_test() +
-    theme(aspect.ratio = 0.75) +
+    theme(aspect.ratio = 0.67) +
     scale_shape_manual("Scale", values = c(16,15)) +
     scale_color_manual("Scale", values = c("steelblue", "orange3")) +
     scale_linetype_manual("", labels = c("True value", "Closest point", "Grid line"), values = c("solid", "dashed", "dotted")) +
@@ -466,30 +480,32 @@ popEstCommonPlot <- function(yearVal, datasetID){
 }
 ```
 
-```{r fig.height = 4, fig.width=9, message=FALSE, warning=FALSE, common-population-estimates, fig.cap="Estimated Population: Common responses", out.width="100%"}
+```{r fig.height = 9, fig.width=9, message=FALSE, warning=FALSE, common-population-estimates, fig.cap="Estimated Population: Common responses", out.width="100%"}
 p5 <- popEstCommonPlot(yearVal = c(40), datasetID = "dataset1") +
   ggtitle("Data set 1")
 
 p6 <- popEstCommonPlot(yearVal = c(40), datasetID = "dataset2") +
   ggtitle("Data set 2")
 
-p5 + p6
+p5 / p6
 ```
+
+In conclusion, Elementary Q1 and the first level population estimates extracted from participant calculations and scratch work indicate that accuracy for low magnitudes are more accurate with lower variance in those estimates on the logarithmic scale than on the linear scale.
+Accuracy of population estimates made on the linear scale improve as the magnitude of the population increases.
+The results also provided support that participants have a strong tendency to anchor their estimates to both grid lines and a base ten framework with resistance to estimating between grid lines on the logarithmic scale in particular.
+Participant calculations and scratch work reveal a lack of understanding of logarithm as they equated spatial distance to numerical distance.
 
 ### Elementary Q2: Estimation of time
 
-In addition to estimating the population from a given year, participants were asked to estimate the year in which the population reaches 4000 \pcref{fig:qe2-sketch}.
-This requires literal reading of the data by mapping a value given on the $y$-axis to its corresponding value on the $x$-axis. 
-The true estimated year  in year 10 based on the underlying parameter estimates is 481.61 with simulated points of 445.48 and 466.9 for data sets one and two respectively.
-The median participant estimate across both scales and data sets was 500 with innerquartile ranges of 500 and 400 for data set one and data set two respectively when displayed on the linear scale and 48 and 12 for data set one and data set two respectively when displayed on the logarithmic scale.
+In addition to estimating the population from a given year, participants were asked, \textit{"In what year does the population reach 4000?"} \pcref{fig:qe2-sketch}.
+This requires literal reading of the data by mapping a value given on the $y$-axis to its corresponding value on the $x$-axis.
+The true estimated year based on the underlying equation in which the population reaches exactly 4000 is 28.45. 
+Unlike the previous question, there is no exact simulated point that aligns with the quantity to be estimated; the closest points for data set one occur at years 24 (population 3774.9) and 30 (population 5174.12) and for data set two at years 27 (population 3859.22) and 28 (population 4099.69).
+The median year estimated by participants for data set 1 was 24 on both scales with innerquartile ranges of 1 and 3 for the linear and log scale respectively; the median for data set two occured at 27 for both data sets with innerquartile ranges of 2 and 1 for the linear and log scale respectively.
 
-```{r qe2-sketch, eval = T, fig.height = 4, fig.width = 6, out.width = "100%", fig.cap = "Elementary Q2 Sketch"}
+```{r qe2-sketch, eval = T, fig.height = 9, fig.width = 9, out.width = "100%", fig.cap = "Elementary Q2 Sketch"}
 knitr::include_graphics("images/03-estimation/qe2-sketch.png")
 ```
-
-+ About the same accuracy on both scales, maybe a slight tendency to overestimate (maybe due to estimating the "visual trend" estimate on the log scale as indicated by data set 1?).
-+ Not sure there is enough evidence to claim participants were more accurate on the linear scale, but would like to do more studies focusing on participants ability to read between the y-axis tick marks on the logarithmic scale. They could also be anchoring to the tick mark of 4096.
-+ but... based on the density plots above, on the log scale, participants might have a tendency to be fitting a visual trend first and then estimating as indicated by the overestimation on the log scale for data set 1.
 
 ```{r, eq2-data, message=FALSE, warning=FALSE}
 qe2_data <- estimation_model_data %>% 
@@ -507,30 +523,330 @@ qe2_data %>%
   get_summary_stats(response, type = "median_iqr")
 ```
 
+While a small portion of participants provided estimates of years 5, 10 and 15, the density plots in \cref{fig:qe2-density-plot} focus on reasonable participant estimates between years 20 and 35.
+A population of 4000 occurs around a medium magnitude and is thus distinguishable on the linear scale, making the estimated location more visible.
+Participant accuracy was consistent across both the linear and log scales with an larger variance for data set one when estimates were made on the log scale.
+One possible explanation for the difference in variation between data sets might be that some participants were first visually fitting a trend on on the log scale (results in a visually linear trend) while some participants were basing their estimates off the closest point (year 24).
+This is apparent by participants overestimation of the closest point, with some estimates drawing closer to the true value based on the underlying equation. 
+On the logarithmic scale, participants were able to strongly anchor their estimates to the grid line break of 4096 and provide accurate year estimates by counting between grid lines on the $x$-axis.
+However, participants still had a tendency to anchor to a base ten framework as indicated by an increase in the density of estimates occurring at year 30. 
+
 ```{r, qe2-density-plot, fig.cap = "Elementary Q2 Density", fig.width = 9, fig.height = 9, out.width = "100%", message=FALSE, warning=FALSE}
-qe2_density_1 <- densityPlot(data = qe2_data, datasetID = "dataset1", "response", xlabel = "Estimated Year", x_limits = c(0,50), zoom = F, gridlines = F) +
+
+# DATA SET 1
+qe2_density_1 <- densityPlot(data = qe2_data, datasetID = "dataset1", "response", xlabel = "Estimated Year", x_limits = c(20,35), zoom = F, scalesx = T, gridlines = F, rugjitter = 0.25) +
   ggtitle("Data set 1")
 
-qe2_density_2 <- densityPlot(data = qe2_data, datasetID = "dataset2", "response", xlabel = "Estimated Population at 10", x_limits = c(0,50), zoom = F, gridlines = F) +
+# DATA SET 2
+qe2_density_2 <- densityPlot(data = qe2_data, datasetID = "dataset2", "response", xlabel = "Estimated Year", x_limits = c(20,35), zoom = F, scalesx = T, zoom_limits = c(20,33), gridlines = F, rugjitter = 0.25) +
+  geom_vline(aes(xintercept = 28, linetype = "b")) +
   ggtitle("Data set 2")
 
-qe2_density_1 / qe2_density_2
+qe2_density_1  / qe2_density_2 
+```
 
+Results form Elementary Q2 provide support that participants accurately estimated the year in which the population reaches 4000 on both scales.
+The accuracy on the linear scale can be explained by the visibility of a medium magnitude along with participant ability to make accurate estimates between grid lines on a linear scale.
+The population given aligned closely with grid line 4096 on the logarithmic scale, allowing participants to strongly anchor to the grid line for their estimation.
+In particular, for data set one, participants were slightly more likely to base their estimates off the underlying trend line on the logarithmic scale than on the linear scale.
+
+```{r, density-grid-example, eval = F, fig.cap = "Density Grid Example", fig.width = 9, fig.height = 9, out.width = "100%", message=FALSE, warning=FALSE}
+
+# DATA SET 1
+qe2_density_1a <- densityPlot(data = qe2_data, datasetID = "dataset1", "response", xlabel = "Estimated Year", x_limits = c(0,50), zoom = T, scalesx = F, zoom_limits = c(20,33), gridlines = F, rugjitter = 0.25) +
+  ggtitle("Data set 1")
+
+qe2_density_1b <- densityPlot(data = qe2_data, datasetID = "dataset1", "response", xlabel = "Estimated Year", x_limits = c(0,50), zoom = T, scalesx = T, zoom_limits = c(20,33), gridlines = F, rugjitter = 0.25) +
+  ggtitle("Data set 1")
+
+qe2_density_1a <- ggplot_build(qe2_density_1a)
+qe2_density_1b <- ggplot_build(qe2_density_1b)
+
+# re-set zoomed facet's limits to match zoomed range
+k <- qe2_density_1b$layout$layout$SCALE_X[qe2_density_1b$layout$layout$name == "x"]
+qe2_density_1b$layout$panel_scales_x[[k]]$limits <- qe2_density_1b$layout$panel_scales_x[[k]]$range$range 
+
+# re-set zoomed facet's panel parameters based on original version p0
+k <- qe2_density_1b$layout$layout$PANEL[qe2_density_1b$layout$layout$name == "x"]
+qe2_density_1b$layout$panel_params[[k]] <- qe2_density_1a$layout$panel_params[[k]]
+
+# convert built ggplot object to gtable of grobs as usual & print result
+qe2_density_1b <- ggplot_gtable(qe2_density_1b)
+
+
+# DATA SET 2
+qe2_density_2a <- densityPlot(data = qe2_data, datasetID = "dataset2", "response", xlabel = "Estimated Year", x_limits = c(0,50), zoom = T, scalesx = F, zoom_limits = c(20,33), gridlines = F, rugjitter = 0.25) +
+  ggtitle("Data set 2")
+
+qe2_density_2b <- densityPlot(data = qe2_data, datasetID = "dataset2", "response", xlabel = "Estimated Year", x_limits = c(0,50), zoom = T, scalesx = T, zoom_limits = c(20,33), gridlines = F, rugjitter = 0.25) +
+  ggtitle("Data set 2")
+
+qe2_density_2a <- ggplot_build(qe2_density_2a)
+qe2_density_2b <- ggplot_build(qe2_density_2b)
+
+# re-set zoomed facet's limits to match zoomed range
+k <- qe2_density_2b$layout$layout$SCALE_X[qe2_density_2b$layout$layout$name == "x"]
+qe2_density_2b$layout$panel_scales_x[[k]]$limits <- qe2_density_2b$layout$panel_scales_x[[k]]$range$range 
+
+# re-set zoomed facet's panel parameters based on original version p0
+k <- qe2_density_2b$layout$layout$PANEL[qe2_density_2b$layout$layout$name == "x"]
+qe2_density_2b$layout$panel_params[[k]] <- qe2_density_2a$layout$panel_params[[k]]
+
+# convert built ggplot object to gtable of grobs as usual & print result
+qe2_density_2b <- ggplot_gtable(qe2_density_2b)
+
+# PLOT BOTH
+grid::grid.draw(qe2_density_1b)
+grid::grid.draw(qe2_density_2b)
 ```
 
 ### Intermediate Q1: Additive increase in population
+
+Intermediate level questions require participants to read between the data and make comparisons between points.
+Participants were asked, \textit{"From 20 to 40, the population increases by \_\_\_\_ [creatures]."} \pcref{fig:qi1-sketch}.
+The questioning was selected carefully to prompt participants to make an additive comparison of populations between two years.
+In order to make this comparison, participants must make accurate first level estimates in both years and subtract the two estimates.
+The true estimated increase in population from year 20 to 40 based on the underlying equation is 14363.34 (15846.35 - 1483.01) with increases based on the closest points of 15517.75 (17046.94 - 1529.18) and 22897.45 (24186.34 - 1288.91) for data sets one and two respectively.
+The median estimated increase for data set one was 15000 (IQR = 3000) for the linear scale and 14784 (IQR = 2000) for the logarithmic scale while data set two resulted in larger estimates and variability with a median increase of 17500 (IQR = 10625) and 16500 (IQR = 8952) for the linear and logarithmic scale respectively.
+The discrepancy in the summary between the two data sets provides further support that participants are inspecting the simulated data points in order to make their estimates.
 
 ```{r qi1-sketch, eval = T, fig.height = 8, fig.width = 8, out.width = "100%", fig.cap = "Intermediate Q1 Sketch"}
 knitr::include_graphics("images/03-estimation/qi1-sketch.png")
 ```
 
+```{r qi1-data, message=FALSE, warning=FALSE}
+# TRUNCATE AT 50000
+qi1_data <- estimation_model_data %>% 
+  filter(q_id == "QI1") %>%
+  mutate(response = as.numeric(response)) %>%
+  filter(response < 500000)
+```
+
+```{r qi1-summary, eval = F, message=FALSE, warning=FALSE}
+estimation_simulated_data %>% 
+  filter(x %in% c(20, 40)) %>%
+  arrange(dataset) %>%
+  pivot_wider(id_cols = c("dataset"),
+              names_from = "x",
+              values_from = "y") %>%
+  mutate(increase = `40` - `20`)
+
+qi1_data %>%
+  group_by(dataset, scale) %>%
+  get_summary_stats(response, type = "median_iqr")
+```
+
+```{r qi1-density-1, fig.cap = "Intermediate Q1 Density (Data set 1)", fig.width = 9, fig.height = 9, out.width = "100%", message=FALSE, warning=FALSE}
+
+# DATA SET 1
+vline1 = c(14750)
+vline2 = c(15000)
+qi1_density_1a <- densityPlot(data = qi1_data, datasetID = "dataset1", "response", xlabel = "Estimated Increase in Population", x_limits = c(0,50000), zoom = T, scalesx = F, zoom_limits = c(10000,20000), gridlines = F, rugjitter = 10) +
+  
+  # geom_vline(aes(xintercept = vline1), color = "gray30") +
+  # geom_text(aes(label = vline1, x = vline1, y = Inf), vjust = 2, hjust = -0.5, size = 3, color = "gray30") +  geom_vline(aes(xintercept = vline1), color = "gray30") +
+  # 
+  # geom_vline(aes(xintercept = vline2), color = "gray30") +
+  # geom_text(aes(label = vline2, x = vline2, y = Inf), vjust = 2, hjust = -0.5, size = 3, color = "gray30") +
+  
+  ggtitle("Data set 1")
+
+qi1_density_1b <- densityPlot(data = qi1_data, datasetID = "dataset1", "response", xlabel = "Estimated Increase in Population", x_limits = c(0,50000), zoom = T, scalesx = T, zoom_limits = c(10000,20000), gridlines = F, rugjitter = 10) +
+  
+  # geom_vline(aes(xintercept = vline1), color = "gray30") +
+  # geom_text(aes(label = vline1, x = vline1, y = Inf), vjust = 2, hjust = -0.5, size = 3, color = "gray30") +  geom_vline(aes(xintercept = vline1), color = "gray30") +
+  # 
+  # geom_vline(aes(xintercept = vline2), color = "gray30") +
+  # geom_text(aes(label = vline2, x = vline2, y = Inf), vjust = 2, hjust = -0.5, size = 3, color = "gray30") +
+  
+  ggtitle("Data set 1")
+
+qi1_density_1a <- ggplot_build(qi1_density_1a)
+qi1_density_1b <- ggplot_build(qi1_density_1b)
+
+# re-set zoomed facet's limits to match zoomed range
+k <- qi1_density_1b$layout$layout$SCALE_X[qi1_density_1b$layout$layout$name == "x"]
+qi1_density_1b$layout$panel_scales_x[[k]]$limits <- qi1_density_1b$layout$panel_scales_x[[k]]$range$range 
+
+# re-set zoomed facet's panel parameters based on original version p0
+k <- qi1_density_1b$layout$layout$PANEL[qi1_density_1b$layout$layout$name == "x"]
+qi1_density_1b$layout$panel_params[[k]] <- qi1_density_1a$layout$panel_params[[k]]
+
+# convert built ggplot object to gtable of grobs as usual & print result
+qi1_density_1b <- ggplot_gtable(qi1_density_1b)
+grid::grid.draw(qi1_density_1b)
+```
+
+```{r qi1-density-2, fig.cap = "Intermediate Q1 Density (Data set 2)", fig.width = 9, fig.height = 9, out.width = "100%", message=FALSE, warning=FALSE}
+
+# DATA SET 2
+qi1_density_2a <- densityPlot(data = qi1_data, datasetID = "dataset2", "response", xlabel = "Estimated Year", x_limits = c(0,50000), zoom = T, scalesx = F, zoom_limits = c(10000,30000), gridlines = F, rugjitter = 10) +
+  ggtitle("Data set 2")
+
+qi1_density_2b <- densityPlot(data = qi1_data, datasetID = "dataset2", "response", xlabel = "Estimated Year", x_limits = c(0,50000), zoom = T, scalesx = T, zoom_limits = c(10000,30000), gridlines = F, rugjitter = 10) +
+  ggtitle("Data set 2")
+
+qi1_density_2a <- ggplot_build(qi1_density_2a)
+qi1_density_2b <- ggplot_build(qi1_density_2b)
+
+# re-set zoomed facet's limits to match zoomed range
+k <- qi1_density_2b$layout$layout$SCALE_X[qi1_density_2b$layout$layout$name == "x"]
+qi1_density_2b$layout$panel_scales_x[[k]]$limits <- qi1_density_2b$layout$panel_scales_x[[k]]$range$range 
+
+# re-set zoomed facet's panel parameters based on original version p0
+k <- qi1_density_2b$layout$layout$PANEL[qi1_density_2b$layout$layout$name == "x"]
+qi1_density_2b$layout$panel_params[[k]] <- qi1_density_2a$layout$panel_params[[k]]
+
+# convert built ggplot object to gtable of grobs as usual & print result
+qi1_density_2b <- ggplot_gtable(qi1_density_2b)
+grid::grid.draw(qi1_density_2b)
+```
+
+\cref{fig:qi1-density-1} and \cref{fig:qi1-density-2} display the density for estimated increases in population as made by participants for data set one and two respectively.
+There were a considerable amount of estimated increases near zero indidcating that some participants were misinterpreting the value they were asked to estimate.
+Sample participant work below shows 
+
+<!-- Tendency to underestimate the difference (for closest point) and tendency to overestimate the difference (for true value). -->
+
+<!-- Anchoring & Reading Points -->
+<!-- + For example, 16384 - 1024 = 15360, but that 15000 is still strong. -->
+<!-- + Data set 2 has higher estimates (aka reading the points). -->
+
+
+<!-- Correct logic: Log scale-->
+
+<!-- Sample 1 estimated between grid lines but anchoed to grid lines-->
+<!-- Calculations -->
+<!-- 2048 - 1024=1024 -->
+<!-- 1024 - 512=512 -->
+<!-- 1024 + 512=1536 -->
+<!-- 16384 - 1536=14848	 -->
+
+<!-- Scratchwork -->
+<!-- 20 aby 1536 -->
+<!-- 40 16384 -->
+
+<!-- Sample 3 -->
+<!-- 16384-1024=15360 -->
+
+<!-- Correct logic: Linear scale -->
+<!-- Sample 1 - anchored to base ten -->
+<!-- 15000 - 2500=12500	 -->
+<!-- In 20 ABY the population of Ewoks was 2500, in 40 ABY the population was 15 000, i would make a substraction -->
+
+<!-- Sample 2 -->
+<!-- 1000-24000=-23000 -->
+<!-- In the 4520 the tribbles population was almost 1000, in 4540 it increases in 24000. -->
+
+<!-- Incorrect logic: Log scale-->
+
+<!-- Sample 1 -->
+<!-- 16380/1026=15.96 -->
+
+<!-- Sample 2 -->
+<!-- 16384/2000=8.19 -->
+
+<!-- Sample 3 -->
+<!-- 81cb45ebdd654b7003743767d684a6da -->
+
+<!-- 2048-1024=1024;  -->
+<!-- 1024+512=1536;  -->
+<!-- 16384-1536=14848;  -->
+<!-- 14848/1536=9.67	 -->
+
+<!-- "1536 aprox Ini -->
+<!-- 16384 -->
+
+<!-- 14848" -->
+
+<!-- Incorrect logic - linear scale -->
+<!-- 24000/2000=12 -->
+
+<!-- 20000/1750=11.43 -->
+
+<!-- 17400/2000=8.7 -->
+
+<!-- Could be due to order in which participant was shown the questions (e.g. QI2 before QI1?) -->
+
+```{r, qi1-common-responses, fig.cap = "Intermediate Q1 Common Responses", fig.width = 9, fig.height = 9, out.width = "100%", message=FALSE, warning=FALSE}
+qi1_common_responses <- qi1_data %>%
+  mutate(true_value = round(true_value, 2)) %>%
+  group_by(scale, true_value, closest_pt_value, dataset, response) %>%
+  dplyr::summarize(count = n()) %>%
+  filter(count > 4) %>%
+  arrange(response)
+
+actual_values_data <- qi1_common_responses %>%
+  # filter(scale == "linear", "log") %>%
+  select(scale, dataset, true_value, closest_pt_value) %>%
+  unique() %>%
+  pivot_wider(id_cols = c("scale", "true_value"),
+              names_from = "dataset",
+              values_from = "closest_pt_value") %>%
+  pivot_longer(cols = c("true_value", "dataset2", "dataset1"),
+              names_to = "dataset",
+              values_to = "response") %>%
+  mutate(dataset = ifelse(dataset == "true_value" & scale == "linear", "dataset1",
+                          ifelse(dataset == "true_value" & scale == "log2", "dataset2", dataset))) %>%
+  mutate(scale = "linear", 
+         true_value = NA,
+         closest_pt_value = NA,
+         count = NA) %>%
+  unique() %>%
+  # mutate(response = round(response, 2)) %>%
+  select(scale, dataset, true_value, closest_pt_value, response, count)
+
+qi1_common_responses <- qi1_common_responses %>%
+  rbind(actual_values_data)
+response_order <- c(unique(round(qi1_common_responses$response, 2))) %>% sort()
+
+qi1_common_plot_1 <- qi1_common_responses %>%
+  filter(dataset == "dataset1") %>%
+  mutate(response = round(response, 2)) %>%
+  mutate(response = factor(response, levels = response_order)) %>%
+  ggplot(aes(x = count, xmin = 0, xmax = count, y = response, color = scale, shape = scale)) +
+  geom_linerange(position = position_dodge(.5)) +
+  geom_point(position = position_dodge(0.5)) +
+  geom_hline(aes(yintercept = as.factor(round(true_value,2)), linetype = "True"), size = 0.8) +
+  geom_hline(aes(yintercept = as.factor(round(closest_pt_value,2)), linetype = "Closest Point"), size = 0.8) +
+  # facet_grid(~ dataset) +
+  theme_test() +
+  theme(aspect.ratio = 0.67) +
+  scale_shape_manual("Scale", values = c(16,15)) +
+  scale_color_manual("Scale", values = c("steelblue", "orange3")) +
+  scale_linetype_manual("Actual Value", labels =  c("Closest Point", "True Value"), values = c("dashed", "solid")) +
+  scale_y_discrete("Estimated Increase in Population") +
+  scale_x_continuous(expand = c(0,0.5)) +
+  ggtitle("Data set 1")
+
+qi1_common_plot_2 <- qi1_common_responses %>%
+  filter(dataset == "dataset1") %>%
+  mutate(response = round(response, 2)) %>%
+  mutate(response = factor(response, levels = response_order)) %>%
+  ggplot(aes(x = count, xmin = 0, xmax = count, y = response, color = scale, shape = scale)) +
+  geom_linerange(position = position_dodge(.5)) +
+  geom_point(position = position_dodge(0.5)) +
+  geom_hline(aes(yintercept = as.factor(round(true_value,2)), linetype = "True"), size = 0.8) +
+  geom_hline(aes(yintercept = as.factor(round(closest_pt_value,2)), linetype = "Closest Point"), size = 0.8) +
+  # facet_grid(~ dataset) +
+  theme_test() +
+  theme(aspect.ratio = 0.67) +
+  scale_shape_manual("Scale", values = c(16,15)) +
+  scale_color_manual("Scale", values = c("steelblue", "orange3")) +
+  scale_linetype_manual("Actual Value", labels =  c("Closest Point", "True Value"), values = c("dashed", "solid")) +
+  scale_y_discrete("Estimated Increase in Population") +
+  scale_x_continuous(expand = c(0,0.5)) +
+  ggtitle("Data set 2")
+
+qi1_common_plot_1/
+qi1_common_plot_2
+```
 
 ### Intermediate Q2: Multiplicative change in population
 
 ```{r qi2-sketch, eval = T, fig.height = 8, fig.width = 8, out.width = "100%", fig.cap = "Intermediate Q2 Sketch"}
 knitr::include_graphics("images/03-estimation/qi2-sketch.png")
 ```
-
 
 ### Intermediate Q3: Time until population doubles
 
