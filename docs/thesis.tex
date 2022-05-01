@@ -223,8 +223,8 @@
 \end{abstract}
 
 %% Optional
-%% \begin{copyrightpage}
-%% \end{copyrightpage}
+% \begin{copyrightpage}
+% \end{copyrightpage}
 
 %% Optional
 % \begin{dedication}
@@ -234,9 +234,9 @@
 %%%%%%%%%%%%%%%%%%%
 % Acknowledgments
 %%%%%%%%%%%%%%%%%%%
-% \begin{acknowledgments}
-% Thank you to all my people!
-% \end{acknowledgments}
+\begin{acknowledgments}
+Thank you to all my people!
+\end{acknowledgments}
 %%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%
@@ -863,7 +863,6 @@ Results indicate a strong interaction between the curvature combination and scal
 On both the log and linear scales, the highest accuracy occurred in lineup plots where the target model and null model had a large curvature difference and the target plot had more curvature than the null plots (high curvature target plot embedded in low curvature null plots).
 There is a decrease in accuracy on the linear scale when comparing a target plot with less curvature to null plots with more curvature (medium curvature target plot embedded in high curvature null plots; low curvature target plot embedded in medium curvature null plots; low curvature target plot embedded in high curvature null plots).
 Best, Smith, \& Stubbs (2007) found that accuracy of identifying the correct curve type was higher when nonlinear trends were presented indicating that it is hard to say something is linear (something has less curvature), but easy to say that it is not linear; our results concur with this observation.
-Overall, there are no significant differences in accuracy between curvature combinations when data is presented on a log scale indicating participants were consistent in their success of identifying the target panel on the log scale. \ear{WHERE DID YOU GET THIS CLAIM??}
 \cref{fig:odds-ratio-plot} displays the estimated (log) odds ratio of successfully identifying the target panel on the log scale compared to the linear scale. The thumbnail figures to the right of the plot illustrate the curvature combination on both the linear (left thumbnail) and log base ten (right thumbnail) scales associated with the \(y\)-axis label.
 The choice of scale has no impact if curvature differences are large and the target plot had more curvature than the null plots (high curvature target plot embedded in low curvature null plots).
 However, presenting data on the log scale makes us more sensitive to slight changes in curvature (low or high curvature target plot embedded in medium curvature null plots; medium curvature target plot embedded in high curvature null plots) and large differences in curvature when the target plot has less curvature than the null plots (low curvature target plot embedded in high curvature null plots).
@@ -1529,7 +1528,7 @@ There is strong support that participants were anchoring to grid lines and base 
 
 During the study, participants were explicitly asked to estimate the population during year 10; this value corresponds to a low magnitude where the population is condensed in a small region on the linear scale as opposed to later in time when larger magnitudes in population can be seen.
 While the results provided support for less variability in the estimated population in year 10 on the logarithmic scale, it is important to evaluate the accuracy of estimates along the domain.
-In two estimation questions related to intermediate level reading between the data, participants are asked to provide an increase and change in population between years 20 and 40, thus requiring participants to make first level estimates at these locations \pcref{fig:qi1-sketch; fig:qi2-sketch}.
+In two estimation questions related to intermediate level reading between the data, participants are asked to provide an increase and change in population between years 20 and 40, thus requiring participants to make first level estimates at these locations (\cref{fig:qi1-sketch,, qi2-sketch}).
 In order to understand the effect of the location along the domain, I extracted first level estimates for years 20 and 40 from participant calculations and scratch-work.
 I first compared population estimates from the explicitly asked year 10 location between participants who used the calculator and scratchpad in two or more of the questions to determine whether the there were differences or biases between those who used resources for estimation compared to those who did not utilize the resources \protect\hyperlink{estimation-comparison}{Appendix 3b}.
 About half of the participants fell into the category which provided scratch work and half did not.
@@ -1558,9 +1557,11 @@ It is important to note the discrepancy in simulated point values in year 40 bet
 
 Population estimates for year 10 from participants who used the scratchpad and first level estimates for years 20 and 40 are shown with spaghetti plots in \cref{fig:spaghetti-dataset1} and \cref{fig:spaghetti-dataset2} displayed on both the linear and logarithmic base two scale.
 The scale in which the estimate was made is indicated blue for linear and orange for log with the segments mapped from the participant estimated population to the true year based on the underlying data equation.
-As the domain increases, we observe an increased accuracy in estimates made on the linear scale while estimates made on the logarithmic scale remain accurate throughout.
 Previously noted, the simulated point corresponding to year 40 in data set 2 has a large deviation from the true underlying data equation; \cref{fig:spaghetti-dataset2} highlights that some participants were reading the data points as opposed to first detecting the underlying trend and making estimates based on the identified trend.
 This provides argument that estimates are highly subjective to the particular data set.
+As the domain increases, we observe an increased accuracy in estimates made on the linear scale while estimates made on the logarithmic scale suffer in accruacy due to strong anchoring to grid lines and the larger quantitative difference between grid lines as magnitudes increase.
+For instance, on the logarithmic scale, there was a tendency to overestimate the population for year 20 from data set one, underestimate the population for year 20 from data set two, and overestimate the population for year 40 from data set two.
+Inaccurate first level estimations can lead to consequences in estimations which require participants to make comparisons between two points (Intermediate Q1 and Q2).
 
 In extracting participant first level estimates from their calculation and scratch work, I observed participants were resistant to estimating between grid lines and had a greater tendency to anchor their estimates to the grid line estimates on the logarithmic scale.
 \cref{fig:common-population-estimates} illustrates the number of participants who provided that estimate on either the linear or logarithmic base two scale.
@@ -1569,7 +1570,7 @@ In particular, for year 40 in data set 1, the closest point (17046.94) falls clo
 In a similar situation, for year 40 in data set 2, the closest point (24186.34) falls close to the linear grid line (25000); more participants adjusted their estimates to 24500 or 24000 rather than anchoring to the grid line.
 This suggests that participants were more likely to provide estimates which deviated from grid lines when making estimates on the linear scale, indicating they are more comfortable with interpreting values on a linear scale as opposed to the logarithmic scale.
 When participants made estimates between grid lines on the logarithmic scale as indicated by their scratch work, they tended to estimate ``half-way'' between the two values indicated by the grid line breaks.
-For example, 1536 was a common population estimate for year 20 because visually the location of estimation lands about halfway between grid lines 1024 and 2048 \pcref{fig:qi1-sketch; fig:qi2-sketch}.
+For example, 1536 was a common population estimate for year 20 because visually the location of estimation lands about halfway between grid lines 1024 and 2048 (\cref{fig:qi1-sketch,, qi2-sketch}).
 Participant calculations and scratch-work provides support that participants equated this as half-way numerically as indicated by the selected work provided below:
 \begin{align}
 \textit{Sample work 1} \nonumber\\
@@ -1581,7 +1582,16 @@ Participant calculations and scratch-work provides support that participants equ
 \textit{Sample work 2} \nonumber\\
 2048 + 1024 & =3072 \nonumber\\
 3072/2 & =1536 \nonumber
+\nonumber \\ 
+\nonumber \\
+\textit{Sample work 3} \nonumber\\
+32768-16384&=16384  \nonumber\\
+32768-16384&=16384  \nonumber\\
+16384*2&=32768  \nonumber\\
+16384/2&=8192  \nonumber\\
+8192+16384&=24576.  \nonumber
 \end{align}
+In particular, Sample work 3 demonstrates the participant processing the logarithmic base two mapping as they repeatedly calculate the distance between two grid lines by subtraction and multiplication; they however then go on to estimate halfway between the two grid lines by equating spatial and quantitative distances.
 This indicates a lack of understanding of logarithmic mapping where the spatial equivalence does not correspond to numeric equivalence; in other words, spatially half-way between two grid lines does not result in a numeric value half-way between the quantitative grid line labels.
 
 \begin{figure}[tbp]
@@ -1595,7 +1605,7 @@ This indicates a lack of understanding of logarithmic mapping where the spatial 
 
 In conclusion, Elementary Q1 and the first level population estimates extracted from participant calculations and scratch work indicate that accuracy for low magnitudes are more accurate with lower variance in those estimates on the logarithmic scale than on the linear scale.
 Accuracy of population estimates made on the linear scale improve as the magnitude of the population increases.
-The results also provided support that participants have a strong tendency to anchor their estimates to both grid lines and a base ten framework with resistance to estimating between grid lines on the logarithmic scale in particular.
+The results also provided support that participants have a strong tendency to anchor their estimates to both grid lines and a base ten framework with resistance to estimating between grid lines on the logarithmic scale in particular, leading to a sacrifice in accuracy for larger magnitudes.
 Participant calculations and scratch work reveal a lack of understanding of logarithm as they equated spatial distance to numerical distance.
 
 \hypertarget{elementary-q2-estimation-of-time}{%
@@ -1621,7 +1631,7 @@ A population of 4000 occurs around a medium magnitude and is thus distinguishabl
 Participant accuracy was consistent across both the linear and log scales with an larger variance for data set one when estimates were made on the log scale.
 One possible explanation for the difference in variation between data sets might be that some participants were first visually fitting a trend on on the log scale (results in a visually linear trend) while some participants were basing their estimates off the closest point (year 24).
 This is apparent by participants overestimation of the closest point, with some estimates drawing closer to the true value based on the underlying equation.
-On the logarithmic scale, participants were able to strongly anchor their estimates to the grid line break of 4096 and provide accurate year estimates by counting between grid lines on the \(x\)-axis.
+On the logarithmic scale, participants were able to strongly anchor their estimates to the grid line break of 4096 and provide accurate year estimates by counting between grid lines on the \(x\)-axis with few participants making estimates between years (for example, 27.5).
 However, participants still had a tendency to anchor to a base ten framework as indicated by an increase in the density of estimates occurring at year 30.
 
 \begin{figure}[tbp]
@@ -1637,6 +1647,7 @@ Results form Elementary Q2 provide support that participants accurately estimate
 The accuracy on the linear scale can be explained by the visibility of a medium magnitude along with participant ability to make accurate estimates between grid lines on a linear scale.
 The population given aligned closely with grid line 4096 on the logarithmic scale, allowing participants to strongly anchor to the grid line for their estimation.
 In particular, for data set one, participants were slightly more likely to base their estimates off the underlying trend line on the logarithmic scale than on the linear scale.
+Estimated years were often provided in whole numbers and few participants showed an understanding that the population of interest could occur between years.
 
 \hypertarget{intermediate-q1-additive-increase-in-population}{%
 \subsection{Intermediate Q1: Additive increase in population}\label{intermediate-q1-additive-increase-in-population}}
@@ -1645,6 +1656,22 @@ Intermediate level questions require participants to read between the data and m
 Participants were asked, \textit{"From 20 to 40, the population increases by \_\_\_\_ [creatures]."} \pcref{fig:qi1-sketch}.
 The questioning was selected carefully to prompt participants to make an additive comparison of populations between two years.
 In order to make this comparison, participants must make accurate first level estimates in both years and subtract the two estimates.
+Sample participant work below shows correct logic on both the linear and logarithmic scales:
+\begin{align}
+\textit{Sample work 4: correct logic (linear)} \nonumber\\
+15000 - 2500 & = 12500\nonumber\\
+\text{Scratchpad: } &\text{In 20 ABY the population of Ewoks was 2500,}\nonumber\\
+                   &\text{in 40 ABY the population was 15 000,}\nonumber\\
+                   &\text{i would make a substraction}\nonumber \\
+\nonumber \\
+\textit{Sample work 5: correct logic (log)} \nonumber\\
+2048 - 1024  & = 1024 \nonumber\\
+1024 - 512   & = 512 \nonumber\\
+1024 + 512   & = 1536 \nonumber\\
+16384 - 1536 & = 14848 \nonumber\\
+\text{Scratchpad: }  & \text{20 aby 1536} \nonumber\\
+             & \text{40 16384.} \nonumber
+\end{align}
 The true estimated increase in population from year 20 to 40 based on the underlying equation is 14363.34 (15846.35 - 1483.01) with increases based on the closest points of 15517.75 (17046.94 - 1529.18) and 22897.45 (24186.34 - 1288.91) for data sets one and two respectively.
 The median estimated increase for data set one was 15000 (IQR = 3000) for the linear scale and 14784 (IQR = 2000) for the logarithmic scale while data set two resulted in larger estimates and variability with a median increase of 17500 (IQR = 10625) and 16500 (IQR = 8952) for the linear and logarithmic scale respectively.
 The discrepancy in the summary between the two data sets provides further support that participants are inspecting the simulated data points in order to make their estimates.
@@ -1677,8 +1704,34 @@ The discrepancy in the summary between the two data sets provides further suppor
 \end{figure}
 
 \cref{fig:qi1-density-1} and \cref{fig:qi1-density-2} display the density for estimated increases in population as made by participants for data set one and two respectively.
-There were a considerable amount of estimated increases near zero indidcating that some participants were misinterpreting the value they were asked to estimate.
-Sample participant work below shows
+There were a considerable amount of estimated increases near zero indicating that some participants were misinterpreting the value they were asked to estimate.
+Sample participant work below shows both common incorrect logic on both the linear and logarithmic scales:
+
+\begin{align}
+\textit{Sample work 6: incorrect logic (linear)} \nonumber\\
+24000/2000&=12 \nonumber\\
+\nonumber \\ 
+\textit{Sample work 7: incorrect logic (log)} \nonumber\\
+16380/1026&=15.96\nonumber\\
+\nonumber \\ 
+\textit{Sample work 8: changed logic (log)} \nonumber\\
+2048-1024&=1024\nonumber\\
+1024+512&=1536\nonumber\\
+16384-1536&=14848\nonumber\\
+14848/1536&=9.67.\nonumber
+\end{align}
+
+Sample work 5 shows how the participant first estimated halfway between the logarithmic grid lines and correctly subtracted the populations for the two given years before changing their logic to divide the two populations.
+One potential source of misinterpretation of this questions might be the particular order in which participants were asked the questions.
+For example, if participants were asked to provide an estimated increase in population after having been asked Intermediate Q2 which prompts participants to provide a multiplicative change in population, they may be more likely to misinterpret Intermediate Q1.
+However, participants answering questions on the second scenario would have seen both questioning frameworks in the previous context.
+
+Estimates for the increase in population between year 20 and year 40 is distinctly more accurate for estimates made on the linear scale as indicated by the peak density occurring near the closest point and true value vertical lines.
+The slight shifts in the density on the logarithmic scale suggest participants are .
+Variance in estimates appears to be consistent across both scales for data set two with a smaller variance on the logarithmic scale for data set one.
+One explanation might be that participants are anchoring to the grid lines much stronger on the logarithmic scale as opposed to being more likely to adjust their estimates between grid lines on the linear scale.
+Common responses \pcref{fig:qi1-common-responses} on the logarithmic scale come from anchoring to grid lines (16384 - 1024 = 15360), halfway numerically between grid lines (16384 - 1536 = 14848; 24576 - 1536 = 2340), and base ten (16384 - 2000 = 14784) while participants on the linear scale anchor to multiples of 500 and 1000.
+This is dependent on the location of simulated points in relation to the grid lines and leads to an underestimation in difference for data set one and an overestimation in difference for data set two.
 
 \begin{figure}[tbp]
 
@@ -1689,8 +1742,42 @@ Sample participant work below shows
 \caption{Intermediate Q1 Common Responses}\label{fig:qi1-common-responses}
 \end{figure}
 
+Responses from Intermediate Q1 reqiured participants to use their first level estimates in order to make an additive comparison of populations between two years.
+Some participants misinterpretted the question, making a multiplicative comparison, thus providing estimates closer to zero.
+This is supported by examining select participant calculation and scratchpad work.
+The estimated increase in population was more accurate on the linear scale with the lack of accuracy on the logarithmic scale affected by participant resistance to and misunderstanding of making estimates between logrithmic grid lines.
+
 \hypertarget{intermediate-q2-multiplicative-change-in-population}{%
 \subsection{Intermediate Q2: Multiplicative change in population}\label{intermediate-q2-multiplicative-change-in-population}}
+
+Previously, we explored how participants made an additive comparison of populations between two years.
+In addition, participants were asked, \textit{"How many times more [creatures] are there in 40 than in 20?"} \pcref{fig:qi2-sketch}.
+The questioning was selected carefully to prompt participants to make a multiplicative comparison between two years.
+Similar to Intermediate Q1, in order to make this comparison, participants must have made accurate first level estimates in both years and divide the two estimates.
+Participants may also have made this comparison on the logarithmic scale by understanding the multiplicative nature of the grid lines. Sample participant work below shows correct logic on both the linear and logarithmic scales:
+
+\begin{align}
+\textit{Sample work 9: correct logic (linear)} \nonumber\\
+17500/1400&=12.5 \nonumber\\    
+\text{Scratchpad: } & \text{same as before, but a division} \nonumber\\
+\nonumber \\
+\textit{Sample work 11: correct logic (linear)} \nonumber\\
+17000-1000&=16000 \nonumber\\
+17000/1000&=17  \nonumber\\
+\nonumber \\
+\textit{Sample work 12: correct logic (log)} \nonumber\\
+24/1.4&=17.14    \nonumber\\ 
+\text{Scratchpad: } & \text{around 24k tribbles were at 4540, and} \nonumber\\
+                   & \text{1.4k at 4520, make a division and thats}\nonumber\\
+                   & \text{how many times (without the k)}\nonumber
+\nonumber \\
+\textit{Sample work 13: correct logic (log)} \nonumber\\                   
+2048*5&=10240 \nonumber\\   
+2048*6&=12288 \nonumber\\   
+2048*7&=14336 \nonumber\\   
+2048*8&=16384  \nonumber\\   
+2048*8&=16384. \nonumber
+\end{align}
 
 \begin{figure}[tbp]
 
@@ -1700,6 +1787,59 @@ Sample participant work below shows
 
 \caption{Intermediate Q2 Sketch}\label{fig:qi2-sketch}
 \end{figure}
+
+The scratch work from participants gives insight about the process participants followed when determining the estimated change in population.
+For instance, Sample work 11 shows the participant first incorrectly calculated the additive increase in population before correcting their calculation through division while Sample work 13 shows how the participant used a trial and error method.
+The true change in population based on the underlying equation is 10.69 times as many (15846.35/1483.01) with changes based on the closest points of 11.1 (17046.94/1529.18) and 18.8 (24186.34/1288.91) for data sets one and two respectively.
+The median estimated change for data set one was 11.7 (IQR = 8.5) for the linear scale and 10.7 (IQR = 6) for the logarithmic scale while data set two resulted in larger estimates and variability with a median change of 15.3 (IQR = 14) and 16 (IQR = 8.5) for the linear and logarithmic scale respectively.
+The inconsistency between the two data sets aligns with previous evidence that participants are making estimates by reading the simulated data rather than based on the underlying trend.
+
+\begin{figure}[tbp]
+
+{\centering \includegraphics[width=1\linewidth,]{thesis_files/figure-latex/qi2-plots-1} 
+
+}
+
+\caption{Intermediate Q2 Observed Plot}\label{fig:qi2-plots}
+\end{figure}
+
+As seen in the results for Intermediate Q1, some participants struggled to understand the value they were being asked to estimate.
+Similarly, \cref{qi2-plots} illustrates a substantial number of participants provided estimates that more closely reflect that of the additive increase in population rather than the multiplicative change.
+\cref{qi2-common-responses} highlights that 15000 was still a common participant response.
+Sample work 14 and 15 below demonstrate common calculations conducted by participants:
+
+\begin{align}
+\textit{Sample work 14: incorrect logic (linear)} \nonumber\\
+23800-1100&=22700 \nonumber\\   
+\nonumber \\
+\textit{Sample work 15: incorrect logic (log)} \nonumber\\
+16384-1536&=14848. \nonumber
+\end{align}
+
+Evaluating reasonable participant responses for the change in population between 0 times as many and 35 times as many, \cref{fig:qi2-density} indicates participants tended to be make more accurate and less variable estimates on the logarithmic scale than on the linear scale.
+\cref{qi2-plots} shows common responses provided by participants.
+
+\begin{figure}[tbp]
+
+{\centering \includegraphics[width=1\linewidth,]{thesis_files/figure-latex/qi2-density-1} 
+
+}
+
+\caption{Intermediate Q2 Density}\label{fig:qi2-density}
+\end{figure}
+
+\begin{figure}[tbp]
+
+{\centering \includegraphics[width=1\linewidth,]{thesis_files/figure-latex/qi2-common-responses-1} 
+
+}
+
+\caption{Intermediate Q2 Common Responses}\label{fig:qi2-common-responses}
+\end{figure}
+
+Overall, responses for Intermediate Q2 provide further support that participants tend to misinterpret the quantity they are being asked to estimate.
+The density plots of responses suggest that the logarithmic scale has a slight advantage over the linear scale for estimating the multiplicative change in population.
+While anchoring to grid lines and base ten values for first level estimates still occurred, many participants further anchored their responses to whole values after they conducted a calculation comparison.
 
 \hypertarget{intermediate-q3-time-until-population-doubles}{%
 \subsection{Intermediate Q3: Time until population doubles}\label{intermediate-q3-time-until-population-doubles}}

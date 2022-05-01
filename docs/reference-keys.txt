@@ -49,6 +49,9 @@ fig:qi1-density-1
 fig:qi1-density-2
 fig:qi1-common-responses
 fig:qi2-sketch
+fig:qi2-plots
+fig:qi2-density
+fig:qi2-common-responses
 fig:qi3-sketch
 fig:r2d3-shiny-flowchart
 fig:low-10-linear
