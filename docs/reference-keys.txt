@@ -32,7 +32,6 @@ fig:ols-vs-pca-example
 fig:eyefitting-example-plot
 fig:eyefitting-lmer-residualplots
 fig:eyefitting-gamm-residualplots
-fig:eyefitting-ss-oddsratio
 fig:exponential-yloess-spaghetti-plot
 fig:exponential-prediction-gamm-preds
 fig:estimation-simulated-data
