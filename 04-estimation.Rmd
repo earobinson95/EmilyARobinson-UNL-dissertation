@@ -99,7 +99,7 @@ The three behaviors related to graph comprehension involve (1) literal reading o
 
 ### Rounding Estimates & Anchoring
 
-+ Open-ended estimation tasks elicit certain well-known biases such as the tendency to round to multiples of 5 or 10 [@becker2019trackr]
+Certain well-known biases such as the tendency to round to multiples of five or ten or to anchor estimates to visual cues arise from open-ended estimation tasks \ear{CITE}.
 
 ## Study Design
 
@@ -990,23 +990,95 @@ qi2_common_plot_2
 
 Overall, responses for Intermediate Q2 provide further support that participants tend to misinterpret the quantity they are being asked to estimate.
 The density plots of responses suggest that the logarithmic scale has a slight advantage over the linear scale for estimating the multiplicative change in population.
-While anchoring to grid lines and base ten values for first level estimates still occurred, many participants further anchored their responses to whole values after they conducted a calculation comparison.
+While anchoring to grid lines and base ten values for first level estimates still occurred, many participants further anchored their responses to whole values.
 
 ### Intermediate Q3: Time until population doubles
+
+An alternative multiplicative comparison between two points is to determine the amount of time it takes for a value to double.
+Participants were asked, \textit{"How long does it take for the population in year 10 to double?"} \pcref{qi3-sketch}.
+In order to accurately evaluate this comparison, participants must have made a first level estimate for the population in year 10, asked in Elementary Q1.
+Participants then must double their first level estimate in order to extract the year in which this value occurs and finally subtract year 10.
+Alternately, on the logarithmic scale, participants could have made this comparison without actually extracting the numeric values and instead relied on their spatial distance equating one increase in grid lines to a double in population.
+This requires keen understanding of the logarithmic base two scale.
+Making a judgement based on participant calculations and scratch work, most participants selected the former approach when they estimated the time it took for the population to double.
+One participant stated, "4510 has 512 Tribble Population and to double it it needs to have 1,024 so it would take approximately 5 years. In 4515 they would have double the population." while another participant indicated "10Aby near to 460.8 so double is 921.6; aprox. 5 years."
 
 ```{r qi3-sketch, eval = T, fig.height = 8, fig.width = 8, out.width = "100%", fig.cap = "Intermediate Q3 Sketch"}
 knitr::include_graphics("images/03-estimation/qi3-sketch.png")
 ```
 
+```{r, qi3-data, warning = F, message = F}
+qi3_data <- estimation_model_data %>% 
+  filter(q_id == "QI3") %>%
+  mutate(response = as.numeric(response)) %>%
+  filter(response < 50)
+```
+
+```{r, qi3-summary, eval = F, warning = F, message = F}
+doubled_data <- estimation_simulated_data %>% 
+  filter(x == 10) %>%
+  mutate(doubled = y*2)
+
+estimation_simulated_data %>% 
+  left_join(doubled_data %>% select(-c(x, y0, y)), by = c("dataset")) %>%
+  mutate(pop_diff = abs(y - doubled),
+         year_diff = x - 10) %>%
+  filter(pop_diff < 200) %>%
+  arrange(dataset, pop_diff)
+
+qi3_data %>%
+  group_by(dataset, scale) %>%
+  get_summary_stats(response, type = "median_iqr") 
+```
+
+Based on the true underlying equation, the population in year 10 (481.62) doubles to 963.24 in year 16.25, thus it takes 6.25 years for the population to double.
+Closest simulated points result in the population doubling in 4 years (445 x 2 = 890.97 in 14) for data set one and 6 years (466.90 x 2 = 933.79 in 16) for data set two.
+The median participant response for data set one was 5 (IQR = 5) and 5 (IQR = 2) for the linear and log scale respectively with a median for data set two of 8 (IQR = 6) and 6 (IQR = 2) for the linear and log scale respectively.
+\cref{qi3-density} illustrates the estimated number of years until the population in year 10 doubles.
+While there appears to be similar accuracy across both scales, the variance in estimates is considerably smaller for the log scale.
+The large variance in the linear scale may be explained by the location of reference year 10 which results in a population of low magnitude and is visually difficult to estimate.
+As indicated by peaks in density, there is strong anchoring which occurs at multiples of five.
+
+```{r qi3-density, fig.cap = "Intermediate Q3 Density", fig.width = 9, fig.height = 9, out.width = "100%", message=FALSE, warning=FALSE}
+
+# DATA SET 1
+qi3_density_1 <- densityPlot(data = qi3_data, datasetID = "dataset1", "response", xlabel = "Estimated Years to Double \nin Population", x_limits = c(0,50), zoom = F, scalesx = T, gridlines = F, rugjitter = 1) +
+  ggtitle("Data set 1")
+
+# DATA SET 2
+qi3_density_2 <- densityPlot(data = qi3_data, datasetID = "dataset2", "response", xlabel = "Estimated Years to Double \nin Population", x_limits = c(0,50), zoom = F, scalesx = T, gridlines = F, rugjitter = 1) +
+  ggtitle("Data set 2")
+
+qi3_density_1 /
+qi3_density_2
+```
+
+In summary, as indicated by participant scratch work, they tended to make a first level estimates for the reference year 10 rather than visually judging the distance between grid lines on the log scale. 
+The estimated time until the population doubles from a reference year of 10 results in lower variability on the log scale as opposed to a larger variability on the linear scale.
+One explanation might be the low magnitude of population in year ten and further exploration would be needed to justify for other reference years.
+Common responses strongly suggest participants are anchoring to multiples of 5 years.
+
 ## Discussion and Conclusion
 
-+ Understanding logarithmic logic is difficult
-  + Misunderstanding in QI1 and QI2
-+ Anchoring, anchoring, anchoring!
-  + On the log2 scale, but on base 10 is still strong
-+ Participants were reading the data points rather than the trends, with a few exceptions
-+ Log vs Linear Scale
-  + linear scale ad greater variability in general (not always)
-  + Log scale was occasionally more accurate (depends on magnitude and location of point in relation to the grid lines)
-  + Depended on the values being asked.
-  + Participants more likely to estimate between grid lines on the linear scale
+This study was intended to help inform and aid in understanding the cognitive implications of displaying exponentially increasing data on a log scale.
+I evaluated graph comprehension as it relates to two contextual scenarios by asking participants a series of six questions (one open ended, two elementary level, and three intermediate) which required them to quantitatively transform information in the chart.
+Results provided an understanding of the advantages and disadvantages of the log scale.
+
+In general, results suggest that understanding logarithmic logic is difficult as indicated by the misunderstanding in Intermediate Q1 and Q2.
+This is also supported in following participants estimation strategy for making first level estimates in Intermediate Q3 rather than relying on their spatial awareness between grid lines.
+The accuracy of estimates greatly depends on the location of the value being estimated in relation to the magnitude.
+For example, accuracy and variability of population estimates made on the linear scale improved as the year of interest increased and thus the magnitude of population increased, making the point more visible.
+Alternatively, there was a slight sacrifice in the accuracy of population estimates on the log scale as the year of interest increased.
+This is due to participant resistance to estimate between grid lines on the log scale and inaccurate representation of equating spatial distance to quantitative difference.
+As the magnitude of population increases, there is a more noticeable effect of the resistance and lack of understanding.
+Density plots showed an advantage of the linear scale on when estimating an additive increase in population and a slight advantage of the log scale when estimated a multiplicative change in population.
+
+It was also found that estimates were subjective to the simulated data set as shown by the discrepancy between data set one and data set two.
+This implies a large portion of participants were reading the actual simulated data points as opposed to basing estimates on the underlying visual trend of the data.
+Common responses revealed participants bias to anchoring their estimates to the grid lines, particularly on the log scale, as well as to base ten values.
+The strong tendency to anchor to grid lines on the log scale resulted in a sacrifice in accuracy as quantitative differences between grid lines increased.
+This also implies that accuracy strongly depends on the location of the simulated point in relation to the grid lines.
+
+Understanding graph comprehension is a complex process and requires long-term interaction with the chart and information being presented. 
+With a fixed number of estimates and assessment of participant scratch work, I outlined a variety of situations in which displaying exponentially increasing data on a log scale results in both advantages and disadvantages, thus providing a better understanding of the cognitive implications of the use of log scales.
+
