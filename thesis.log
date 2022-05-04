@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.4.30)  2 MAY 2022 11:38
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.5.4)  4 MAY 2022 05:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1264,27 +1264,27 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
 ]
 Overfull \hbox (1.66797pt too wide) detected at line 47
- \TU/lmr/bx/n/12 108
+ \TU/lmr/bx/n/12 111
  []
 
 
 Overfull \hbox (1.66797pt too wide) detected at line 48
- \TU/lmr/bx/n/12 109
+ \TU/lmr/bx/n/12 112
  []
 
 
 Overfull \hbox (1.66797pt too wide) detected at line 49
- \TU/lmr/bx/n/12 110
+ \TU/lmr/bx/n/12 113
  []
 
 
 Overfull \hbox (1.66797pt too wide) detected at line 50
- \TU/lmr/bx/n/12 115
+ \TU/lmr/bx/n/12 118
  []
 
 
 Overfull \hbox (1.66797pt too wide) detected at line 52
- \TU/lmr/bx/n/12 117
+ \TU/lmr/bx/n/12 120
  []
 
 ) [6] (./thesis.lof [7
@@ -1362,161 +1362,186 @@ File: thesis_files/figure-latex/curvature-combination-example-1.pdf Graphic file
 [36] [37] [38] [39]
 File: thesis_files/figure-latex/odds-ratio-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/odds-ratio-plot-1.pdf>
-[40] [41] [42
+[40] [41]
+Overfull \hbox (7.37999pt too wide) in paragraph at lines 909--909
+[]\TU/lmtt/m/n/10 ## i Specify the column types or set `show_col_types = FALSE` to quiet this message.[] 
+ []
 
-] [43]
-File: images/subjective-judgement-plot.png Graphic file (type bmp)
-<images/subjective-judgement-plot.png>
-[44]
-File: images/eyefitting-straight-lines-plots.png Graphic file (type bmp)
-<images/eyefitting-straight-lines-plots.png>
+
+Overfull \hbox (7.37999pt too wide) in paragraph at lines 918--918
+[]\TU/lmtt/m/n/10 ## i Specify the column types or set `show_col_types = FALSE` to quiet this message.[] 
+ []
+
+[42
+
+]
+Overfull \hbox (7.37999pt too wide) in paragraph at lines 927--927
+[]\TU/lmtt/m/n/10 ## i Specify the column types or set `show_col_types = FALSE` to quiet this message.[] 
+ []
+
+
+Overfull \hbox (7.37999pt too wide) in paragraph at lines 935--935
+[]\TU/lmtt/m/n/10 ## i Specify the column types or set `show_col_types = FALSE` to quiet this message.[] 
+ []
+
+
+Overfull \hbox (7.37999pt too wide) in paragraph at lines 943--943
+[]\TU/lmtt/m/n/10 ## i Specify the column types or set `show_col_types = FALSE` to quiet this message.[] 
+ []
+
+[43] [44]
+File: images/02-you-draw-it/subjective-judgement-plot.png Graphic file (type bmp)
+<images/02-you-draw-it/subjective-judgement-plot.png>
 [45]
-File: images/nyt-caraccidents-frame4.png Graphic file (type bmp)
-<images/nyt-caraccidents-frame4.png>
+File: images/02-you-draw-it/eyefitting-straight-lines-plots.png Graphic file (type bmp)
+<images/02-you-draw-it/eyefitting-straight-lines-plots.png>
 [46]
-File: images/raster-vs-vector.png Graphic file (type bmp)
-<images/raster-vs-vector.png>
+File: images/02-you-draw-it/nyt-caraccidents-frame4.png Graphic file (type bmp)
+<images/02-you-draw-it/nyt-caraccidents-frame4.png>
 [47]
-File: images/ydiExample-0.10-10-linear.png Graphic file (type bmp)
-<images/ydiExample-0.10-10-linear.png>
-[48] [49] [50] [51]
+File: images/02-you-draw-it/raster-vs-vector.png Graphic file (type bmp)
+<images/02-you-draw-it/raster-vs-vector.png>
+[48] [49]
+File: images/02-you-draw-it/ydiExample-0.10-10-linear.png Graphic file (type bmp)
+<images/02-you-draw-it/ydiExample-0.10-10-linear.png>
+[50] [51] [52]
 File: thesis_files/figure-latex/eyefitting-simplot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/eyefitting-simplot-1.pdf>
-[52]
+[53]
 File: thesis_files/figure-latex/ols-vs-pca-example-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/ols-vs-pca-example-1.pdf>
-[53]
+[54]
 File: thesis_files/figure-latex/eyefitting-example-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/eyefitting-example-plot-1.pdf>
-[54] [55] [56]
+[55] [56] [57] [58]
 File: thesis_files/figure-latex/eyefitting-lmer-residualplots-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/eyefitting-lmer-residualplots-1.pdf>
 File: thesis_files/figure-latex/eyefitting-gamm-residualplots-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/eyefitting-gamm-residualplots-1.pdf>
-[57] [58] [59] [60]
+[59] [60] [61] [62]
 File: thesis_files/figure-latex/exponential-yloess-spaghetti-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/exponential-yloess-spaghetti-plot-1.pdf>
-[61] [62]
+[63] [64] [65]
 File: thesis_files/figure-latex/exponential-prediction-gamm-preds-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/exponential-prediction-gamm-preds-1.pdf>
-[63] [64] [65] [66
+[66] [67] [68] [69
 
-] [67] [68] [69]
+] [70] [71] [72]
 File: thesis_files/figure-latex/estimation-simulated-data-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/estimation-simulated-data-1.pdf>
-[70] [71] [72]
+[73] [74] [75]
 File: thesis_files/figure-latex/estimation-word-cloud-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/estimation-word-cloud-1.pdf>
-[73]
+[76]
 File: images/03-estimation/qe1-sketch.png Graphic file (type bmp)
 <images/03-estimation/qe1-sketch.png>
-[74] [75]
+[77] [78]
 File: thesis_files/figure-latex/qe1-density-plot-10-all-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qe1-density-plot-10-all-1.pdf>
 
-LaTeX Warning: Reference ` qi2-sketch' on page 1 undefined on input line 1494.
+LaTeX Warning: Reference ` qi2-sketch' on page 1 undefined on input line 1550.
 
-[76]
+[79]
 File: thesis_files/figure-latex/spaghetti-dataset1-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/spaghetti-dataset1-1.pdf>
 File: thesis_files/figure-latex/spaghetti-dataset2-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/spaghetti-dataset2-1.pdf>
-[77] [78]
+[80] [81]
 
-LaTeX Warning: Reference ` qi2-sketch' on page 1 undefined on input line 1536.
+LaTeX Warning: Reference ` qi2-sketch' on page 1 undefined on input line 1592.
 
-[79] [80] [81]
+[82] [83] [84]
 File: thesis_files/figure-latex/common-population-estimates-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/common-population-estimates-1.pdf>
-[82]
+[85]
 File: images/03-estimation/qe2-sketch.png Graphic file (type bmp)
 <images/03-estimation/qe2-sketch.png>
-[83] [84]
+[86] [87]
 File: thesis_files/figure-latex/qe2-density-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qe2-density-plot-1.pdf>
-[85] [86] [87]
+[88] [89] [90]
 File: images/03-estimation/qi1-sketch.png Graphic file (type bmp)
 <images/03-estimation/qi1-sketch.png>
 File: thesis_files/figure-latex/qi1-density-1-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi1-density-1-1.pdf>
 File: thesis_files/figure-latex/qi1-density-2-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi1-density-2-1.pdf>
-[88] [89] [90] [91] [92]
+[91] [92] [93] [94] [95]
 File: thesis_files/figure-latex/qi1-common-responses-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi1-common-responses-1.pdf>
-[93] [94] [95]
+[96] [97] [98]
 File: images/03-estimation/qi2-sketch.png Graphic file (type bmp)
 <images/03-estimation/qi2-sketch.png>
-[96] [97]
+[99] [100]
 File: thesis_files/figure-latex/qi2-plots-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi2-plots-1.pdf>
 
-LaTeX Warning: Reference `qi2-plots' on page 1 undefined on input line 1770.
+LaTeX Warning: Reference `qi2-plots' on page 1 undefined on input line 1826.
 
 
-LaTeX Warning: Reference `qi2-common-responses' on page 1 undefined on input line 1771.
+LaTeX Warning: Reference `qi2-common-responses' on page 1 undefined on input line 1827.
 
-[98] [99]
+[101] [102]
 
-LaTeX Warning: Reference `qi2-plots' on page 1 undefined on input line 1783.
+LaTeX Warning: Reference `qi2-plots' on page 1 undefined on input line 1839.
 
 File: thesis_files/figure-latex/qi2-density-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi2-density-1.pdf>
 File: thesis_files/figure-latex/qi2-common-responses-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi2-common-responses-1.pdf>
 
-LaTeX Warning: Reference `qi3-sketch' on page 1 undefined on input line 1811.
+LaTeX Warning: Reference `qi3-sketch' on page 1 undefined on input line 1867.
 
-[100] [101] [102]
+[103] [104] [105]
 File: images/03-estimation/qi3-sketch.png Graphic file (type bmp)
 <images/03-estimation/qi3-sketch.png>
 
-LaTeX Warning: Reference `qi3-density' on page 1 undefined on input line 1831.
+LaTeX Warning: Reference `qi3-density' on page 1 undefined on input line 1887.
 
 File: thesis_files/figure-latex/qi3-density-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi3-density-1.pdf>
-[103] [104] [105] [106] [107] [108
+[106] [107] [108] [109] [110] [111
 
 ]
-File: images/r2d3+shiny-inkscape.png Graphic file (type bmp)
-<images/r2d3+shiny-inkscape.png>
-[109
+File: images/02-you-draw-it/r2d3+shiny-inkscape.png Graphic file (type bmp)
+<images/02-you-draw-it/r2d3+shiny-inkscape.png>
+[112
 
 ]
-File: images/low-10-linear.png Graphic file (type bmp)
-<images/low-10-linear.png>
-File: images/low-10-log.png Graphic file (type bmp)
-<images/low-10-log.png>
-File: images/low-15-linear.png Graphic file (type bmp)
-<images/low-15-linear.png>
-File: images/low-15-log.png Graphic file (type bmp)
-<images/low-15-log.png>
-File: images/high-10-linear.png Graphic file (type bmp)
-<images/high-10-linear.png>
-File: images/high-10-log.png Graphic file (type bmp)
-<images/high-10-log.png>
-File: images/high-15-linear.png Graphic file (type bmp)
-<images/high-15-linear.png>
-File: images/high-15-log.png Graphic file (type bmp)
-<images/high-15-log.png>
-[110
+File: images/02-you-draw-it/low-10-linear.png Graphic file (type bmp)
+<images/02-you-draw-it/low-10-linear.png>
+File: images/02-you-draw-it/low-10-log.png Graphic file (type bmp)
+<images/02-you-draw-it/low-10-log.png>
+File: images/02-you-draw-it/low-15-linear.png Graphic file (type bmp)
+<images/02-you-draw-it/low-15-linear.png>
+File: images/02-you-draw-it/low-15-log.png Graphic file (type bmp)
+<images/02-you-draw-it/low-15-log.png>
+File: images/02-you-draw-it/high-10-linear.png Graphic file (type bmp)
+<images/02-you-draw-it/high-10-linear.png>
+File: images/02-you-draw-it/high-10-log.png Graphic file (type bmp)
+<images/02-you-draw-it/high-10-log.png>
+File: images/02-you-draw-it/high-15-linear.png Graphic file (type bmp)
+<images/02-you-draw-it/high-15-linear.png>
+File: images/02-you-draw-it/high-15-log.png Graphic file (type bmp)
+<images/02-you-draw-it/high-15-log.png>
+[113
 
-] [111] [112] [113] [114]
+] [114] [115] [116] [117]
 File: thesis_files/figure-latex/unnamed-chunk-2-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/unnamed-chunk-2-1.pdf>
-[115
+[118
 
-] [116] [117
+] [119] [120
 
-] [118] [119] [120] [121] [122] [123] [124] [125] [126] [127] [128]
+] [121] [122] [123] [124] [125] [126] [127] [128] [129] [130] [131]
 No file thesis.bbl.
 
 Class memoir Warning: The material used in the footer is too large
 (10.14995pt) for the given foot skip (0.0pt), it is recommended to
 either increase the foot skip or redesign the footer
-(in both cases you will find help in the memoir manual). on input line 2351.
+(in both cases you will find help in the memoir manual). on input line 2407.
 
-[129]
+[132]
 \tf@toc=\write7
 \openout7 = `thesis.toc'.
 
@@ -1534,12 +1559,12 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 7A1F57D7DD99A357889FE2715DE3AE6B;2493.
  ) 
 Here is how much of TeX's memory you used:
- 39252 strings out of 478142
- 781091 string characters out of 5852108
- 1091738 words of memory out of 5000000
+ 39253 strings out of 478142
+ 784683 string characters out of 5852109
+ 1091737 words of memory out of 5000000
  59221 multiletter control sequences out of 15000+600000
  475567 words of font info for 72 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 123i,12n,120p,2266b,507s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 123i,12n,120p,2266b,526s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on thesis.pdf (139 pages).
+Output written on thesis.pdf (142 pages).

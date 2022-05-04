@@ -895,6 +895,54 @@ What remains to be seen is whether there are cognitive disadvantages to log scal
 \hypertarget{youdrawit}{%
 \chapter{Prediction with `You Draw It'}\label{youdrawit}}
 
+\ear{Fix Hadley Whickham and S.N. Wood in text citations.}
+
+\begin{verbatim}
+## Rows: 91289 Columns: 21
+## -- Column specification ------------------------------------
+## Delimiter: ","
+## chr (10): nick_name, prolific_id, age, gender, academic_...
+## dbl (10): study_starttime, x, yols, ypca, ydrawn, yloess...
+## lgl  (1): ip_address
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 135548 Columns: 15
+## -- Column specification ------------------------------------
+## Delimiter: ","
+## chr (11): nick_name, prolific_id, age, gender, academic_...
+## dbl  (3): study_starttime, x, y
+## lgl  (1): ip_address
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 91289 Columns: 21
+## -- Column specification ------------------------------------
+## Delimiter: ","
+## chr (10): nick_name, prolific_id, age, gender, academic_...
+## dbl (10): study_starttime, x, yols, ypca, ydrawn, yloess...
+## lgl  (1): ip_address
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 156 Columns: 12
+## -- Column specification ------------------------------------
+## Delimiter: ","
+## chr  (1): parm_id
+## dbl (11): x, emmean.ols, SE.ols, df.ols, asymp.LCL.ols, ...
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## Rows: 164 Columns: 9
+## -- Column specification ------------------------------------
+## Delimiter: ","
+## chr (2): parm_id, participant_id
+## dbl (7): x, ols.pred, ols.lower, ols.upper, pca.pred, pc...
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+\end{verbatim}
+
 \hypertarget{introduction-1}{%
 \section{Introduction}\label{introduction-1}}
 
@@ -921,7 +969,7 @@ Results indicated that one cycle of iterations for calculating the relative pote
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.5\linewidth,]{images/subjective-judgement-plot} 
+{\centering \includegraphics[width=0.5\linewidth,]{images/02-you-draw-it/subjective-judgement-plot} 
 
 }
 
@@ -936,7 +984,7 @@ It was found that order of presentation had no effect and that participants tend
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.7\linewidth,]{images/eyefitting-straight-lines-plots} 
+{\centering \includegraphics[width=0.7\linewidth,]{images/02-you-draw-it/eyefitting-straight-lines-plots} 
 
 }
 
@@ -951,7 +999,7 @@ After the reader has completed drawing the line, the actual observed values are 
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.75\linewidth,]{images/nyt-caraccidents-frame4} 
+{\centering \includegraphics[width=0.75\linewidth,]{images/02-you-draw-it/nyt-caraccidents-frame4} 
 
 }
 
@@ -965,14 +1013,14 @@ Major news and research organizations such as the New York Times, FiveThirtyEigh
 In June 2020, the New York Times released a front page displaying figures that represent each of the 100,000 lives lost from the COVID-19 pandemic until this point in time (Barry et al., 2020); this visualization was meant to bring about a visceral reaction and resonate with readers.
 During 2021 March Madness, FiveThirtyEight created a roster-shuffling machine which allowed readers to build their own NBA contender through interactivity (Ryanabest, 2021).
 Data Driven Documents (D3) is an open-source JavaScript based graphing framework created by Mike Bostock during his time working on graphics at the New York Times.
-For readers familiar with R, it is notable to consider D3 in JavaScript equivalent to the \texttt{ggplot2} package in R (H. Wickham, 2016).
+For readers familiar with R, it is notable to consider D3 in JavaScript equivalent to the \texttt{ggplot2} package in R (Hadley Wickham, 2016).
 Similar to geometric objects and style choices in \texttt{ggplot2}, the grammar of D3 also includes elements such as circles, paths, and rectangles with choices of attributes and styles such as color and size.
 Data Driven Documents depend on Extensible Markup Language (XML) to generate graphics and images by binding objects and layers to the plotting area as Scalable Vector Graphics (SVG) in order to preserve the shapes rather than the pixels \pcref{fig:raster-vs-vector} (Tol, 2021).
 Advantages of using D3 include animation and allowing for movement and user interaction such as hovering, clicking, and brushing.
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.7\linewidth,]{images/raster-vs-vector} 
+{\centering \includegraphics[width=0.7\linewidth,]{images/02-you-draw-it/raster-vs-vector} 
 
 }
 
@@ -999,7 +1047,7 @@ Next, the yellow box region moves along as the participant draws their trend-lin
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=1\linewidth,]{images/ydiExample-0.10-10-linear} 
+{\centering \includegraphics[width=1\linewidth,]{images/02-you-draw-it/ydiExample-0.10-10-linear} 
 
 }
 
@@ -1115,7 +1163,7 @@ Using both a linear mixed model and a generalized additive mixed model, comparis
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.65\linewidth,]{thesis_files/figure-latex/eyefitting-example-plot-1} 
+{\centering \includegraphics[width=1\linewidth,]{thesis_files/figure-latex/eyefitting-example-plot-1} 
 
 }
 
@@ -1189,7 +1237,7 @@ These results are consistent to those found in Mosteller et al. (1981) indicatin
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.9\linewidth,]{thesis_files/figure-latex/eyefitting-lmer-residualplots-1} 
+{\centering \includegraphics[width=1\linewidth,]{thesis_files/figure-latex/eyefitting-lmer-residualplots-1} 
 
 }
 
@@ -1198,14 +1246,12 @@ These results are consistent to those found in Mosteller et al. (1981) indicatin
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.9\linewidth,]{thesis_files/figure-latex/eyefitting-gamm-residualplots-1} 
+{\centering \includegraphics[width=1\linewidth,]{thesis_files/figure-latex/eyefitting-gamm-residualplots-1} 
 
 }
 
 \caption{Eye Fitting Straight Lines in the Modern Era GAMM results}\label{fig:eyefitting-gamm-residualplots}
 \end{figure}
-
---\textgreater{}
 
 \hypertarget{prediction-of-exponential-trends}{%
 \section{Prediction of Exponential Trends}\label{prediction-of-exponential-trends}}
@@ -1262,7 +1308,7 @@ In particular, this suggestion is most noticeable when points are truncated at 5
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.9\linewidth,]{thesis_files/figure-latex/exponential-yloess-spaghetti-plot-1} 
+{\centering \includegraphics[width=1\linewidth,]{thesis_files/figure-latex/exponential-yloess-spaghetti-plot-1} 
 
 }
 
@@ -1303,9 +1349,19 @@ Examining the plots, the estimated trends of residuals for predictions made on t
 In comparisons, the estimated trends of residuals for predictions made on the log scale (orange) follow closely to the \(y=0\) horizontal (dashed) line, implying exponential trends predicted on the log scale are more accurate than those predicted on the linear scale.
 In particular, this trend is more prominent in high exponential growth rates where underestimation becomes prominent after the aid of points is removed.
 
+\begin{verbatim}
+## Warning: Removed 26 row(s) containing missing values
+## (geom_path).
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: Removed 8 row(s) containing missing values
+## (geom_path).
+\end{verbatim}
+
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.9\linewidth,]{thesis_files/figure-latex/exponential-prediction-gamm-preds-1} 
+{\centering \includegraphics[width=1\linewidth,]{thesis_files/figure-latex/exponential-prediction-gamm-preds-1} 
 
 }
 
@@ -1885,7 +1941,7 @@ Interactive plots for the you draw it study were created using the \texttt{r2d3}
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.8\linewidth,]{images/r2d3+shiny-inkscape} 
+{\centering \includegraphics[width=0.8\linewidth,]{images/02-you-draw-it/r2d3+shiny-inkscape} 
 
 }
 
@@ -1900,7 +1956,7 @@ Two data sets were simulated with low and high exponential growth rates and show
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.65\linewidth,]{images/low-10-linear} 
+{\centering \includegraphics[width=0.65\linewidth,]{images/02-you-draw-it/low-10-linear} 
 
 }
 
@@ -1909,7 +1965,7 @@ Two data sets were simulated with low and high exponential growth rates and show
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.65\linewidth,]{images/low-10-log} 
+{\centering \includegraphics[width=0.65\linewidth,]{images/02-you-draw-it/low-10-log} 
 
 }
 
@@ -1918,7 +1974,7 @@ Two data sets were simulated with low and high exponential growth rates and show
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.65\linewidth,]{images/low-15-linear} 
+{\centering \includegraphics[width=0.65\linewidth,]{images/02-you-draw-it/low-15-linear} 
 
 }
 
@@ -1927,7 +1983,7 @@ Two data sets were simulated with low and high exponential growth rates and show
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.65\linewidth,]{images/low-15-log} 
+{\centering \includegraphics[width=0.65\linewidth,]{images/02-you-draw-it/low-15-log} 
 
 }
 
@@ -1936,7 +1992,7 @@ Two data sets were simulated with low and high exponential growth rates and show
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.65\linewidth,]{images/high-10-linear} 
+{\centering \includegraphics[width=0.65\linewidth,]{images/02-you-draw-it/high-10-linear} 
 
 }
 
@@ -1945,7 +2001,7 @@ Two data sets were simulated with low and high exponential growth rates and show
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.65\linewidth,]{images/high-10-log} 
+{\centering \includegraphics[width=0.65\linewidth,]{images/02-you-draw-it/high-10-log} 
 
 }
 
@@ -1954,7 +2010,7 @@ Two data sets were simulated with low and high exponential growth rates and show
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.65\linewidth,]{images/high-15-linear} 
+{\centering \includegraphics[width=0.65\linewidth,]{images/02-you-draw-it/high-15-linear} 
 
 }
 
@@ -1963,7 +2019,7 @@ Two data sets were simulated with low and high exponential growth rates and show
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.65\linewidth,]{images/high-15-log} 
+{\centering \includegraphics[width=0.65\linewidth,]{images/02-you-draw-it/high-15-log} 
 
 }
 
@@ -2293,7 +2349,7 @@ Walker, F. A.others. (2013). Statistical atlas of the united states based on the
 Wickham, Hadley. (2011). ggplot2. \emph{Wiley Interdisciplinary Reviews: Computational Statistics}, \emph{3}(2), 180--185.
 
 \leavevmode\vadjust pre{\hypertarget{ref-ggplot2}{}}%
-Wickham, H. (2016). \emph{ggplot2: Elegant graphics for data analysis}. Springer-Verlag New York. Retrieved from \url{https://ggplot2.tidyverse.org}
+Wickham, Hadley. (2016). \emph{ggplot2: Elegant graphics for data analysis}. springer.
 
 \leavevmode\vadjust pre{\hypertarget{ref-wickham_graphical_2010}{}}%
 Wickham, H., Cook, D., Hofmann, H., \& Buja, A. (2010). Graphical inference for infovis. \emph{IEEE Transactions on Visualization and Computer Graphics}, \emph{16}(6), 973--979. http://doi.org/\href{https://doi.org/10.1109/TVCG.2010.161}{10.1109/TVCG.2010.161}

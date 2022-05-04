@@ -10,7 +10,7 @@ library(readr)
 library(knitr)
 ```
 
-```{r eyefitting-data}
+```{r eyefitting-data, message=FALSE, warning=FALSE}
 eyefitting_model_data <- read_csv(here("data/02b-eyefitting/eyefitting-model-data.csv")) %>%
   dplyr::rename(`Parameter Choice` = parm_id)
 
@@ -27,7 +27,7 @@ eyefitting_gamm_preds <- read_csv(here("data/02b-eyefitting/eyefitting-gamm-pred
   dplyr::rename(`Parameter Choice` = parm_id)
 ```
 
-```{r exponential-data}
+```{r exponential-data, message=FALSE, warning=FALSE}
 youdrawit_model_data      <- read_csv(file = here("data/02a-youdrawit/youdrawit-model-data.csv"))  %>%
   mutate(`Points Truncated` = ifelse(points_truncated == 10, "50%", "75%"),
          `Growth Rate` = ifelse(beta == "beta0.1", "Low", "High")) %>%
@@ -255,7 +255,7 @@ The estimated slope, $\hat\beta_{1,PCA}$, is determined by the ratio of the axis
 Fitted values, $\hat y_{k,PCA}$ are then obtained every 0.25 increment across the domain from the PCA regression equation, $\hat y_{k,PCA} = \hat\beta_{0,PCA} + \hat\beta_{1,PCA} x_k$.
 \cref{fig:ols-vs-pca-example} illustrates the difference between an OLS regression equation which minimizes the vertical distance of points from the line and a regression equation with a slope calculated by the first principal component which minimizes the smallest distance of points from the line.
 
-```{r ols-vs-pca-example, fig.height = 6, fig.width = 8, fig.cap="OLS vs PCA Regression Lines", message=FALSE, warning=FALSE, out.width="100%"}
+```{r ols-vs-pca-example, fig.height = 6, fig.width = 8, warning = F, message = F, fig.cap="OLS vs PCA Regression Lines", message=FALSE, warning=FALSE, out.width="100%"}
 library(ggplot2)
 library(magrittr)
 library(plyr)
@@ -332,21 +332,17 @@ For each participant, the final data set used for analysis contains $x_{ijk}, y_
 Using both a linear mixed model and a generalized additive mixed model, comparisons of vertical residuals in relation to the OLS fitted values ($e_{ijk,OLS} = y_{ijk,drawn} - \hat y_{ijk,OLS}$) and PCA fitted values ($e_{ijk,PCA} = y_{ijk,drawn} - \hat y_{ijk,PCA}$) were made across the domain.
 \cref{fig:eyefitting-example-plot} displays an example of all three fitted trend lines for parameter choice F.
 
-```{r eyefitting-example-plot, fig.height = 6, fig.width = 6, fig.cap = "Eye Fitting Straight Lines in the Modern Era Example", out.width="100%"}
-trial_feedback <- read_csv(here("data/02b-eyefitting/eyefitting-example-feedback.csv")) %>%
-    mutate(`Parameter Choice` = "F")
-trial_sim <- read_csv(here("data/02b-eyefitting/eyefitting-example-simulated.csv")) %>%
-    mutate(`Parameter Choice` = "F")
-    
+```{r eyefitting-example-plot, fig.height = 6, fig.width = 6, warning = F, message = F, fig.cap = "Eye Fitting Straight Lines in the Modern Era Example", out.width="100%"}
+
 eyefitting_example <- eyefitting_model_data %>%
   # filter(participant_id == "65c10d498eae365e108efcd3dcb75287", parm_id == "N") %>%
-  filter(participant_id == "60b16b9bd5a122c1457d31055df51a45", parm_id == "F") %>%
+  filter(participant_id == "60b16b9bd5a122c1457d31055df51a45", `Parameter Choice` == "F") %>%
   ggplot(aes(x = x)) +
-  geom_line(aes(y = y, color = "OLS", linetype = "OLS")) +
+  geom_line(aes(y = yols, color = "OLS", linetype = "OLS")) +
   geom_line(aes(y = ypca, color = "PCA", linetype = "PCA")) +
   geom_line(aes(y = ydrawn, color = "Drawn", linetype = "Drawn")) +
   geom_point(data = eyefitting_simulated_data %>%
-               filter(dataset == "point_data", participant_id == "60b16b9bd5a122c1457d31055df51a45", parm_id == "F"),
+               filter(dataset == "point_data", participant_id == "60b16b9bd5a122c1457d31055df51a45", `Parameter Choice` == "F"),
              aes(x = x, y = y)) +
   facet_wrap(~`Parameter Choice`, labeller = labeller(`Parameter Choice` = label_both)) +
   theme_bw(base_size = 14) +
@@ -409,18 +405,17 @@ Examining the plots, the estimated trends of PCA residuals (orange) appear to al
 In particular, this trend is more prominent in parameter choices with large variances (F and N).
 These results are consistent to those found in @mosteller_eye_1981 indicating participants fit a trend line closer to the estimated regression line with the slope of the first principal component than the estimated OLS regression line.
 
-```{r eyefitting-lmer-residualplots, fig.height = 9, fig.width = 9, out.width = "100%", fig.cap = "Eye Fitting Straight Lines in the Modern Era LMM results"}
+```{r eyefitting-lmer-residualplots, warning = F, message = F, fig.height = 9, fig.width = 9, out.width = "100%", fig.cap = "Eye Fitting Straight Lines in the Modern Era LMM results"}
 # Plot Predictions
-eyefitting_lmer_plot <- eyefitting_preds_lmer %>%
-  filter((parm_id %in% c("F", "N", "S") | (x <= 16 & x >= 4))) %>%
-  mutate(parm_id = factor(parm_id, levels = c("S", "F", "V", "N"))) %>%
-  dplyr::rename(`Parameter Choice` = parm_id) %>%
+eyefitting_lmer_plot <- eyefitting_lmer_preds %>%
+  filter((`Parameter Choice` %in% c("F", "N", "S") | (x <= 16 & x >= 4))) %>%
+  mutate(`Parameter Choice` = factor(`Parameter Choice`, levels = c("S", "F", "V", "N"))) %>%
   ggplot(aes(x = x)) +
-  geom_line(data = eyefitting_model_data, aes(x = x, y = residual_ols_drawn, group = plot_id, color = "OLS"), alpha = 0.1) +
-  geom_line(data = eyefitting_model_data, aes(x = x, y = residual_pca_drawn, group = plot_id, color = "PCA"), alpha = 0.1) +
-  geom_ribbon(aes(ymin = asymp.LCL.ols, ymax = asymp.UCL.ols, fill = "OLS"), color = NA, alpha = 0.7) +
+  geom_line(data = eyefitting_model_data, aes(x = x, y = residual_ols_drawn, group = plot_id, color = "OLS"), alpha = 0.01) +
+  geom_line(data = eyefitting_model_data, aes(x = x, y = residual_pca_drawn, group = plot_id, color = "PCA"), alpha = 0.01) +
+  geom_ribbon(aes(ymin = asymp.LCL.ols, ymax = asymp.UCL.ols, fill = "OLS"), color = NA, alpha = 0.4) +
   geom_line(aes(y = emmean.ols, color = "OLS")) +
-  geom_ribbon(aes(ymin = asymp.LCL.pca, ymax = asymp.UCL.pca, fill = "PCA"), color = NA, alpha = 0.7) +
+  geom_ribbon(aes(ymin = asymp.LCL.pca, ymax = asymp.UCL.pca, fill = "PCA"), color = NA, alpha = 0.4) +
   geom_line(aes(y = emmean.pca, color = "PCA")) +
   geom_hline(yintercept = 0, linetype = "dashed", alpha = 0.5) +
   facet_wrap(~`Parameter Choice`, labeller = labeller(`Parameter Choice` = label_both), scales = "free") +
@@ -436,24 +431,26 @@ eyefitting_lmer_plot <- eyefitting_preds_lmer %>%
         # strip.background = element_rect(size = 0.5),
         legend.key.size = unit(1, "line")
         ) +
-  scale_y_continuous("Residual") +
+  scale_y_continuous("Residual", limits = c(-5,5), breaks = seq(-5,5,2.5)) +
   scale_color_manual("Individual participant \nresiduals", values = c("steelblue", "orange"), labels = c("OLS", "PCA")) +
-  scale_fill_manual("LMER fitted trend", values = c("steelblue", "orange"), labels = c("OLS", "PCA")) 
+  scale_fill_manual("LMER fitted trend", values = c("steelblue", "orange"), labels = c("OLS", "PCA"))  +
+  guides(color = guide_legend(override.aes = list(alpha = 1)),
+         fill = guide_legend(override.aes = list(alpha = 1)))
 
 eyefitting_lmer_plot
 ```
 
-```{r eyefitting-gamm-residualplots, fig.height = 9, fig.width = 9, out.width = "100%", fig.cap = "Eye Fitting Straight Lines in the Modern Era GAMM results"}
-eyefitting_gamm_plot <- eyefitting_grid_gamm %>%
-  filter((parm_id %in% c("F", "N", "S") | (x <= 16 & x >= 4))) %>%
-  mutate(parm_id = factor(parm_id, levels = c("S", "F", "V", "N"))) %>%
-  dplyr::rename(`Parameter Choice` = parm_id) %>%
+```{r eyefitting-gamm-residualplots, warning = F, message = F, fig.height = 9, fig.width = 9, out.width = "100%", fig.cap = "Eye Fitting Straight Lines in the Modern Era GAMM results"}
+
+eyefitting_gamm_plot <- eyefitting_gamm_preds %>%
+  filter((`Parameter Choice` %in% c("F", "N", "S") | (x <= 16 & x >= 4))) %>%
+  mutate(`Parameter Choice` = factor(`Parameter Choice`, levels = c("S", "F", "V", "N"))) %>%
   ggplot(aes(x = x)) +
-  geom_line(data = eyefitting_model_data, aes(x = x, y = residual_ols_drawn, group = plot_id, color = "OLS"), alpha = 0.1) +
-  geom_line(data = eyefitting_model_data, aes(x = x, y = residual_pca_drawn, group = plot_id, color = "PCA"), alpha = 0.1) +
-  geom_ribbon(aes(ymin = ols.lower, ymax = ols.upper, fill = "OLS"), color = NA, alpha = 0.5) +
+  geom_line(data = eyefitting_model_data, aes(x = x, y = residual_ols_drawn, group = plot_id, color = "OLS"), alpha = 0.01) +
+  geom_line(data = eyefitting_model_data, aes(x = x, y = residual_pca_drawn, group = plot_id, color = "PCA"), alpha = 0.01) +
+  geom_ribbon(aes(ymin = ols.lower, ymax = ols.upper, fill = "OLS"), color = NA, alpha = 0.4) +
   geom_line(aes(y = ols.pred, color = "OLS")) +
-  geom_ribbon(aes(ymin = pca.lower, ymax = pca.upper, fill = "PCA"), color = NA, alpha = 0.5) +
+  geom_ribbon(aes(ymin = pca.lower, ymax = pca.upper, fill = "PCA"), color = NA, alpha = 0.4) +
   geom_line(aes(y = pca.pred, color = "PCA")) +
   geom_hline(yintercept = 0, linetype = "dashed", alpha = 0.5) +
   facet_wrap(~`Parameter Choice`, labeller = labeller(`Parameter Choice` = label_both), scales = "free") +
@@ -469,9 +466,12 @@ eyefitting_gamm_plot <- eyefitting_grid_gamm %>%
         # strip.background = element_rect(size = 0.5),
         legend.key.size = unit(1, "line")
         ) +
-  scale_y_continuous("Residual") +
+  scale_y_continuous("Residual", limits = c(-5,5), breaks = seq(-5,5,2.5)) +
   scale_color_manual("Individual participant \nresiduals", values = c("steelblue", "orange"), labels = c("OLS", "PCA")) +
-  scale_fill_manual("GAMM fitted trend", values = c("steelblue", "orange"), labels = c("OLS", "PCA")) 
+  scale_fill_manual("GAMM fitted trend", values = c("steelblue", "orange"), labels = c("OLS", "PCA"))   +
+  guides(color = guide_legend(override.aes = list(alpha = 1)),
+         fill = guide_legend(override.aes = list(alpha = 1)))
+
 eyefitting_gamm_plot
 ```
 
@@ -528,7 +528,7 @@ For each participant $l = 1,...N_{participant}$, the final data set used for ana
 The spaghetti plot with a high growth rate suggests participants underestimated the exponential trend when asked to draw a trend line on the linear scale compared to when asked to draw a trend line on the log scale.
 In particular, this suggestion is most noticeable when points are truncated at 50\% with the underestimation beginning at a later $x$ value when points are truncated at 75\%. 
 
-```{r exponential-yloess-spaghetti-plot, fig.height = 9, fig.width = 9, out.width = "100%", fig.cap = "Exponential Prediction Spaghetti Plot"}
+```{r exponential-yloess-spaghetti-plot, message=FALSE, warning=FALSE, fig.height = 9, fig.width = 9, out.width = "100%", fig.cap = "Exponential Prediction Spaghetti Plot"}
 
 spaghetti_plot <- youdrawit_model_data %>%
   # filter(beta == "beta0.1") %>%
@@ -572,7 +572,7 @@ Examining the plots, the estimated trends of residuals for predictions made on t
 In comparisons, the estimated trends of residuals for predictions made on the log scale (orange) follow closely to the $y=0$ horizontal (dashed) line, implying exponential trends predicted on the log scale are more accurate than those predicted on the linear scale.
 In particular, this trend is more prominent in high exponential growth rates where underestimation becomes prominent after the aid of points is removed.
 
-```{r exponential-prediction-gamm-preds, fig.height = 9, fig.width = 9, out.width = "100%", fig.cap = "Exponential Prediction GAMM Results"}
+```{r exponential-prediction-gamm-preds, message=FALSE, warning=FALSE, fig.height = 9, fig.width = 9, out.width = "100%", fig.cap = "Exponential Prediction GAMM Results"}
 
 gamm_plot_0.1 <- youdrawit_preds_gamm_0.1 %>%
   ggplot(aes(x = x, y = estimate, group = scale, color = scale, fill = scale)) +
