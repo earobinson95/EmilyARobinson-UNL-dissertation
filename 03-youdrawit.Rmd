@@ -2,9 +2,52 @@
 
 \ear{Fix Hadley Whickham and S.N. Wood in text citations.}
 
-```{r eyefitting-plots}
-eyefitting_model_data <- read.csv("data/youdrawit/youdrawit-eyefitting-model-data.csv") %>%
+```{r youdrawit-setup, message=FALSE, warning=FALSE, echo = F}
+library(tidyverse)
+library(patchwork)
+library(here)
+library(readr)
+library(knitr)
+```
+
+```{r eyefitting-data}
+eyefitting_model_data <- read_csv(here("data/02b-eyefitting/eyefitting-model-data.csv")) %>%
   dplyr::rename(`Parameter Choice` = parm_id)
+
+eyefitting_simulated_data <- read_csv(here("data/02b-eyefitting/eyefitting-simulated-data.csv")) %>%
+  dplyr::rename(`Parameter Choice` = parm_id)
+
+eyefitting_parameters <- read_csv(here("data/02b-eyefitting/eyefitting-parameters.csv")) %>%
+  dplyr::rename(`Parameter Choice` = parm_id)
+
+eyefitting_lmer_preds <- read_csv(here("data/02b-eyefitting/eyefitting-lmer-preds.csv")) %>%
+  dplyr::rename(`Parameter Choice` = parm_id)
+
+eyefitting_gamm_preds <- read_csv(here("data/02b-eyefitting/eyefitting-gamm-preds.csv")) %>%
+  dplyr::rename(`Parameter Choice` = parm_id)
+```
+
+```{r exponential-data}
+youdrawit_model_data      <- read_csv(file = here("data/02a-youdrawit/youdrawit-model-data.csv"))  %>%
+  mutate(`Points Truncated` = ifelse(points_truncated == 10, "50%", "75%"),
+         `Growth Rate` = ifelse(beta == "beta0.1", "Low", "High")) %>%
+  mutate(`Growth Rate` = factor(`Growth Rate`, levels = c("Low", "High")))
+
+youdrawit_simulated_data  <- read_csv(file = here("data/02a-youdrawit/youdrawit-simulated-data.csv"))  %>%
+  mutate(`Points Truncated` = ifelse(points_truncated == 10, "50%", "75%"),
+         `Growth Rate` = ifelse(beta == "beta0.1", "Low", "High")) %>%
+  mutate(`Growth Rate` = factor(`Growth Rate`, levels = c("Low", "High")))
+
+youdrawit_preds_gamm_0.1  <- read_csv(file = here("data/02a-youdrawit/youdrawit-exponential-prediction-gamm-preds-0.1.csv")) %>%
+  mutate(`Points Truncated` = ifelse(points_truncated == 10, "50%", "75%"),
+         `Growth Rate` = ifelse(beta == "beta0.1", "Low", "High")) %>%
+  mutate(`Growth Rate` = factor(`Growth Rate`, levels = c("Low", "High")))
+
+youdrawit_preds_gamm_0.23 <- read_csv(file = here("data/02a-youdrawit/youdrawit-exponential-prediction-gamm-preds-0.23.csv")) %>%
+  mutate(`Points Truncated` = ifelse(points_truncated == 10, "50%", "75%"),
+         `Growth Rate` = ifelse(beta == "beta0.1", "Low", "High")) %>%
+  mutate(`Growth Rate` = factor(`Growth Rate`, levels = c("Low", "High")))
+
 ```
 
 ## Introduction
@@ -32,7 +75,7 @@ The author then computed one iterative calculation of the relative potency based
 Results indicated that one cycle of iterations for calculating the relative potency was sufficient based on the starting values provided by eye from the participants.
 
 ```{r subjective-judgement, fig.cap = "Subjective Judgement in Statistical Analysis (1951) Parallel Probits", out.width="50%"}
-knitr::include_graphics("images/subjective-judgement-plot.png")
+knitr::include_graphics("images/02-you-draw-it/subjective-judgement-plot.png")
 ```
 
 Thirty years later, Mosteller et al. (1981), sought to understand the properties of least squares and other computed lines by establishing one systematic method of fitting lines by eye. 
@@ -45,7 +88,7 @@ It was found that order of presentation had no effect and that participants tend
 <!-- \rh{maybe some explanation would be nice for this.} -->
 
 ```{r mosteller-eyefitting-plot, fig.cap = "Eye Fitting Straight Lines (1981) Data Sets", out.width="70%"}
-knitr::include_graphics("images/eyefitting-straight-lines-plots.png")
+knitr::include_graphics("images/02-you-draw-it/eyefitting-straight-lines-plots.png")
 ```
 
 In 2015, the New York Times introduced an interactive feature, called 'You Draw It' [@aisch_cox_quealy_2015; @buchanan_park_pearce_2017; @katz_2017].
@@ -55,7 +98,7 @@ The New York Times team utilizes Data Driven Documents (D3) that allow readers t
 After the reader has completed drawing the line, the actual observed values are revealed and the reader may check their estimated knowledge against the actual reported data.
 
 ```{r nyt-caraccidents, fig.cap = "New York Times 'You Draw It' Feature", out.width="75%"}
-knitr::include_graphics("images/nyt-caraccidents-frame4.png")
+knitr::include_graphics("images/02-you-draw-it/nyt-caraccidents-frame4.png")
 ```
 
 ### Data Driven Documents
@@ -70,7 +113,7 @@ Data Driven Documents depend on Extensible Markup Language (XML) to generate gra
 Advantages of using D3 include animation and allowing for movement and user interaction such as hovering, clicking, and brushing. 
 
 ```{r raster-vs-vector, fig.cap = "SVG vs Raster", out.width="70%"}
-knitr::include_graphics("images/raster-vs-vector.png")
+knitr::include_graphics("images/02-you-draw-it/raster-vs-vector.png")
 # https://commons.wikimedia.org/wiki/File:Bitmap_VS_SVG.svg
 # https://creativecommons.org/licenses/by-sa/2.5/legalcode
 ```
@@ -94,7 +137,7 @@ r2d3(data = data,
 
 
 ```{r youdrawit-example, fig.cap = "You Draw It Example", out.width="100%"}
-knitr::include_graphics("images/ydiExample-0.10-10-linear.png")
+knitr::include_graphics("images/02-you-draw-it/ydiExample-0.10-10-linear.png")
 ```
 
 ## Study Design
@@ -176,9 +219,9 @@ In comparison, S shows a trend with a positive slope with a small variance and V
 Aesthetic design choices were made consistent across each of the interactive 'You Draw It' plots; the aspect ratio, defining the $x$ to $y$ axis ratio was set to one and the y-axis range extended 10\% beyond (above and below) the range of the simulated data points to allow for users to draw outside the simulated data set range. 
 <!-- \rh{I am not sure if readers wll understand "buffer of 50\% on the lower limit", "linear scale option", "start draw point set to 50\%.} -->
 
-```{r eyefitting-simplot, fig.height = 6, fig.width = 6, fig.cap = "Eye Fitting Straight Lines in the Modern Era Simulated Data Example", out.width="75%"}
+```{r eyefitting-simplot, fig.height = 8, fig.width = 8, fig.cap = "Eye Fitting Straight Lines in the Modern Era Simulated Data Example", out.width="75%"}
 
-eyefitting_example_sim <- read.csv("data/youdrawit/youdrawit-eyefitting-simdata-example.csv")
+eyefitting_example_sim <- read.csv(here("data/02b-eyefitting/eyefitting-simdata-example.csv"))
 eyefitting_example_simplot <- eyefitting_example_sim %>%
   filter(data == "point_data") %>%
   filter(dataset %in% c("F", "N", "S") | (x < 16 & x > 4)) %>%
@@ -256,7 +299,7 @@ points = apply(dat,1,FUN=pointOnLine)
 segmeData = rbind(data.frame(x=dat[,1],y=dat[,2],xend=points[1,],yend=points[2,],type = "Principal Component"),
                   data.frame(x=dat[,1],y=dat[,2],yend=dat[,1]*x2tox1[2],xend=dat[,1],type="Ordinary Least Squares"))
 
-dat %>%
+ols_pca_plot <- dat %>%
 ggplot(aes(x1,x2))+
   geom_point()+
   geom_abline(data=slopeData,aes(slope = slope,intercept=0,color=type, linetype=type), size = 1.2)+
@@ -278,6 +321,7 @@ ggplot(aes(x1,x2))+
         ) +
   scale_color_manual(values = c("steelblue", "orange"), labels = c("OLS", "PCA")) +
   scale_linetype_manual(values = c("solid", "dashed"), labels = c("OLS", "PCA"))
+ols_pca_plot
 ```
 
 <!-- To calculate the first principal component fit: https://benediktehinger.de/blog/science/scatterplots-regression-lines-and-the-first-principal-component/ -->
@@ -288,18 +332,22 @@ For each participant, the final data set used for analysis contains $x_{ijk}, y_
 Using both a linear mixed model and a generalized additive mixed model, comparisons of vertical residuals in relation to the OLS fitted values ($e_{ijk,OLS} = y_{ijk,drawn} - \hat y_{ijk,OLS}$) and PCA fitted values ($e_{ijk,PCA} = y_{ijk,drawn} - \hat y_{ijk,PCA}$) were made across the domain.
 \cref{fig:eyefitting-example-plot} displays an example of all three fitted trend lines for parameter choice F.
 
-```{r eyefitting-example-plot, fig.height = 4, fig.width = 4, fig.cap = "Eye Fitting Straight Lines in the Modern Era Example", out.width="65%"}
-trial.feedback <- read.csv("data/youdrawit/youdrawit-eyefitting-example-feedback.csv") %>%
+```{r eyefitting-example-plot, fig.height = 6, fig.width = 6, fig.cap = "Eye Fitting Straight Lines in the Modern Era Example", out.width="100%"}
+trial_feedback <- read_csv(here("data/02b-eyefitting/eyefitting-example-feedback.csv")) %>%
     mutate(`Parameter Choice` = "F")
-trial.sim <- read.csv("data/youdrawit/youdrawit-eyefitting-example-simulated.csv") %>%
+trial_sim <- read_csv(here("data/02b-eyefitting/eyefitting-example-simulated.csv")) %>%
     mutate(`Parameter Choice` = "F")
     
-trial.feedback %>%
+eyefitting_example <- eyefitting_model_data %>%
+  # filter(participant_id == "65c10d498eae365e108efcd3dcb75287", parm_id == "N") %>%
+  filter(participant_id == "60b16b9bd5a122c1457d31055df51a45", parm_id == "F") %>%
   ggplot(aes(x = x)) +
   geom_line(aes(y = y, color = "OLS", linetype = "OLS")) +
   geom_line(aes(y = ypca, color = "PCA", linetype = "PCA")) +
   geom_line(aes(y = ydrawn, color = "Drawn", linetype = "Drawn")) +
-  geom_point(data = trial.sim, aes(y = y)) +
+  geom_point(data = eyefitting_simulated_data %>%
+               filter(dataset == "point_data", participant_id == "60b16b9bd5a122c1457d31055df51a45", parm_id == "F"),
+             aes(x = x, y = y)) +
   facet_wrap(~`Parameter Choice`, labeller = labeller(`Parameter Choice` = label_both)) +
   theme_bw(base_size = 14) +
   theme(aspect.ratio = 1,
@@ -314,7 +362,10 @@ trial.feedback %>%
         ) +
   scale_x_continuous(limits = c(0,20)) +
   scale_color_manual("", values = c("black", "steelblue", "orange")) +
-  scale_linetype_manual("", values = c("dashed", "solid", "solid"))
+  scale_linetype_manual("", values = c("dashed", "solid", "solid")) +
+  scale_y_continuous("y")
+
+eyefitting_example
 ```
 
 Using the `lmer` function in the `lme4` package [@lme4], a linear mixed model (LMM) is fit separately to the OLS and PCA residuals, constraining the fit to a linear trend. 
@@ -358,16 +409,15 @@ Examining the plots, the estimated trends of PCA residuals (orange) appear to al
 In particular, this trend is more prominent in parameter choices with large variances (F and N).
 These results are consistent to those found in @mosteller_eye_1981 indicating participants fit a trend line closer to the estimated regression line with the slope of the first principal component than the estimated OLS regression line.
 
-```{r eyefitting-lmer-residualplots, fig.height = 8, fig.width = 8, out.width = "90%", fig.cap = "Eye Fitting Straight Lines in the Modern Era LMM results"}
-eyefitting.preds.lmer <- read.csv("data/youdrawit/youdrawit-eyefitting-lmerpred-data.csv")
+```{r eyefitting-lmer-residualplots, fig.height = 9, fig.width = 9, out.width = "100%", fig.cap = "Eye Fitting Straight Lines in the Modern Era LMM results"}
 # Plot Predictions
-eyefitting.lmer.plot <- eyefitting.preds.lmer %>%
+eyefitting_lmer_plot <- eyefitting_preds_lmer %>%
   filter((parm_id %in% c("F", "N", "S") | (x <= 16 & x >= 4))) %>%
   mutate(parm_id = factor(parm_id, levels = c("S", "F", "V", "N"))) %>%
   dplyr::rename(`Parameter Choice` = parm_id) %>%
   ggplot(aes(x = x)) +
-  geom_line(data = eyefitting_model_data, aes(x = x, y = residualols, group = plotID, color = "OLS"), alpha = 0.1) +
-  geom_line(data = eyefitting_model_data, aes(x = x, y = residualpca, group = plotID, color = "PCA"), alpha = 0.1) +
+  geom_line(data = eyefitting_model_data, aes(x = x, y = residual_ols_drawn, group = plot_id, color = "OLS"), alpha = 0.1) +
+  geom_line(data = eyefitting_model_data, aes(x = x, y = residual_pca_drawn, group = plot_id, color = "PCA"), alpha = 0.1) +
   geom_ribbon(aes(ymin = asymp.LCL.ols, ymax = asymp.UCL.ols, fill = "OLS"), color = NA, alpha = 0.7) +
   geom_line(aes(y = emmean.ols, color = "OLS")) +
   geom_ribbon(aes(ymin = asymp.LCL.pca, ymax = asymp.UCL.pca, fill = "PCA"), color = NA, alpha = 0.7) +
@@ -390,18 +440,17 @@ eyefitting.lmer.plot <- eyefitting.preds.lmer %>%
   scale_color_manual("Individual participant \nresiduals", values = c("steelblue", "orange"), labels = c("OLS", "PCA")) +
   scale_fill_manual("LMER fitted trend", values = c("steelblue", "orange"), labels = c("OLS", "PCA")) 
 
-eyefitting.lmer.plot
+eyefitting_lmer_plot
 ```
 
-```{r eyefitting-gamm-residualplots, fig.height = 8, fig.width = 8, out.width = "90%", fig.cap = "Eye Fitting Straight Lines in the Modern Era GAMM results"}
-eyefitting.grid.gamm <- read.csv("data/youdrawit/youdrawit-eyefitting-gammpred-data.csv")
-eyefitting.gamm.plot <- eyefitting.grid.gamm %>%
+```{r eyefitting-gamm-residualplots, fig.height = 9, fig.width = 9, out.width = "100%", fig.cap = "Eye Fitting Straight Lines in the Modern Era GAMM results"}
+eyefitting_gamm_plot <- eyefitting_grid_gamm %>%
   filter((parm_id %in% c("F", "N", "S") | (x <= 16 & x >= 4))) %>%
   mutate(parm_id = factor(parm_id, levels = c("S", "F", "V", "N"))) %>%
   dplyr::rename(`Parameter Choice` = parm_id) %>%
   ggplot(aes(x = x)) +
-  geom_line(data = eyefitting_model_data, aes(x = x, y = residualols, group = plotID, color = "OLS"), alpha = 0.1) +
-  geom_line(data = eyefitting_model_data, aes(x = x, y = residualpca, group = plotID, color = "PCA"), alpha = 0.1) +
+  geom_line(data = eyefitting_model_data, aes(x = x, y = residual_ols_drawn, group = plot_id, color = "OLS"), alpha = 0.1) +
+  geom_line(data = eyefitting_model_data, aes(x = x, y = residual_pca_drawn, group = plot_id, color = "PCA"), alpha = 0.1) +
   geom_ribbon(aes(ymin = ols.lower, ymax = ols.upper, fill = "OLS"), color = NA, alpha = 0.5) +
   geom_line(aes(y = ols.pred, color = "OLS")) +
   geom_ribbon(aes(ymin = pca.lower, ymax = pca.upper, fill = "PCA"), color = NA, alpha = 0.5) +
@@ -423,44 +472,7 @@ eyefitting.gamm.plot <- eyefitting.grid.gamm %>%
   scale_y_continuous("Residual") +
   scale_color_manual("Individual participant \nresiduals", values = c("steelblue", "orange"), labels = c("OLS", "PCA")) +
   scale_fill_manual("GAMM fitted trend", values = c("steelblue", "orange"), labels = c("OLS", "PCA")) 
-eyefitting.gamm.plot
-```
-
-<!-- In addition to fitting trend lines over the residuals between the participant drawn values and fitted values, an OLS sum of squares and PCA sums of squares measure was calculated for each 'You Draw It' plot. -->
-<!-- Sums of squares between the two fits were compared using the lmer function in the lme4 package in R [@lme4] to run a linear mixed model (LMM) with a log transformation. -->
-<!-- Parameter choice (S, F, V, N), fit (OLS, PCA), and the interaction between parameter choice and fit were treated as fixed effects with a random participant effect.  -->
-<!-- Define $SS_{ijk}$ as the sums of squares for parameter choice $i = 1,2,3,4$, fit $j=1,2$, and participant $k = 1,...,N_{participant}$. -->
-<!-- The LMM equation is given by:  -->
-<!-- <!-- \rh{in equation 3.4, have epsilon ijk, and on page 56 too.} --> -->
-<!-- \begin{equation} -->
-<!-- \log\left(SS_{ijk}\right) = \alpha_i + \beta_j + \alpha\beta_{ij} + p_{j} + \epsilon_{ijk} -->
-<!-- \end{equation} -->
-
-<!-- + $\alpha_i$ denotes the effect of the $i^{th}$ parameter choice -->
-<!-- + $\beta_j$ denotes the effect of the $j^{th}$ fit -->
-<!-- + $\alpha\beta_{ij}$ denotes the interaction between the $i^{th}$ parameter choice and $j^{th}$ fit -->
-<!-- + $p_{j} \sim N(0, \sigma^2_{participant})$ is the random error due to the $k^{th}$ participant's characteristics -->
-<!-- + $\epsilon_{ijk} \sim N(0, \sigma^2)$ is the residual error. -->
-
-<!-- The estimated odds ratios between the OLS fit and PCA fit for each parameter choice are displayed in \cref{fig:eyefitting-ss-oddsratio}. -->
-<!-- While there is no significant effect of fit for any parameter choices, there is indication of the trend found previously in the residual regression models indicating that participants tend to fit the slope of the first principal component over the slope of the ordinary least squares regression line, particularly for trends with large variation (parameter choices N and F).  -->
-
-```{r eyefitting-ss-oddsratio, eval = F, fig.cap = "Eye Fitting Straight Lines in the Modern Era Sum of Squares Results", out.width="75%"}
-ss.slicediffs <- read.csv("data/youdrawit/youdrawit-ssSlicediffs-lmer.csv")
-ss.slicediffs %>%
-  ggplot(aes(x = ratio, y = parm_id)) +
-  geom_point() +
-  geom_errorbar(aes(xmin = lower.CL, xmax = upper.CL), width = 0.5) +
-  geom_vline(xintercept = 1, linetype = "dashed") +
-  theme_bw(base_size = 14) +
-  theme(aspect.ratio = 0.5,
-        axis.text    = element_text(size = 12),
-        axis.title   = element_text(size = 12),
-        legend.title = element_text(size = 12),
-        legend.text  = element_text(size = 12)
-        ) +
-  scale_x_continuous("Sum of Squares Odds Ratio \n (OLS vs PCA)", limits = c(0,2.5), breaks = seq(0,2.5,0.5)) +
-  scale_y_discrete("Data Set")
+eyefitting_gamm_plot
 ```
 
 ## Prediction of Exponential Trends
@@ -516,16 +528,13 @@ For each participant $l = 1,...N_{participant}$, the final data set used for ana
 The spaghetti plot with a high growth rate suggests participants underestimated the exponential trend when asked to draw a trend line on the linear scale compared to when asked to draw a trend line on the log scale.
 In particular, this suggestion is most noticeable when points are truncated at 50\% with the underestimation beginning at a later $x$ value when points are truncated at 75\%. 
 
-```{r exponential-yloess-spaghetti-plot, fig.height = 8, fig.width = 8, out.width = "90%", fig.cap = "Exponential Prediction Spaghetti Plot"}
-exp_data <- read.csv("data/youdrawit/youdrawit-exponential-prediction-model-data.csv") %>%
-  mutate(`Points Truncated` = ifelse(points_end == 10, "50%", "75%")) %>%
-  mutate(`Growth Rate` = ifelse(beta == 0.1, "Low", "High")) %>%
-  mutate(`Growth Rate` = factor(`Growth Rate`, levels = c("Low", "High")))
+```{r exponential-yloess-spaghetti-plot, fig.height = 9, fig.width = 9, out.width = "100%", fig.cap = "Exponential Prediction Spaghetti Plot"}
 
-exp_data %>%
+spaghetti_plot <- youdrawit_model_data %>%
+  # filter(beta == "beta0.1") %>%
   ggplot(aes(x = x)) +
-  geom_line(aes(y = yloess, group = plotID, color = scale), alpha = 0.5) +
-  geom_line(alpha = 0.1, aes(y = y, group = participantID, color = "Fitted NLS")) +
+  geom_line(aes(y = yloess, group = plot_id, color = scale), alpha = 0.2) +
+  geom_line(alpha = 0.01, aes(y = ynls, group = plot_id, color = "Fitted NLS")) +
   facet_grid(`Growth Rate` ~ `Points Truncated`, scales = "free", labeller = labeller(`Growth Rate` = label_both, `Points Truncated` = label_both)) +
   theme_bw() +
   theme(aspect.ratio = 1,
@@ -533,7 +542,10 @@ exp_data %>%
         ) +
   scale_color_manual("", values = c("black", "steelblue", "orange"), labels = c("Fitted \n (NLS)", "Linear Scale \n (drawn, loess)", "Log Scale \n (drawn, loess)")) +
   scale_x_continuous(limits = c(10, 20)) +
-  scale_y_continuous("y")
+  scale_y_continuous("y") +
+  guides(color = guide_legend(override.aes = list(alpha = 1)),
+         fill = guide_legend(override.aes = list(alpha = 1)))
+spaghetti_plot
 ```
 
 Allowing for flexibility, the `bam` function in the `mgcv` package [@mgcv1; @mgcv2; @mgcv3; @mgcv4; @mgcv5] is used to fit a GAMM to estimate trends of vertical residuals from the participant drawn line in relation to the NLS fitted values ($e_{ijklm,NLS} = y_{ijklm,drawn} - \hat y_{ijklm,NLS}$) across the domain. 
@@ -560,24 +572,41 @@ Examining the plots, the estimated trends of residuals for predictions made on t
 In comparisons, the estimated trends of residuals for predictions made on the log scale (orange) follow closely to the $y=0$ horizontal (dashed) line, implying exponential trends predicted on the log scale are more accurate than those predicted on the linear scale.
 In particular, this trend is more prominent in high exponential growth rates where underestimation becomes prominent after the aid of points is removed.
 
-```{r exponential-prediction-gamm-preds, fig.height = 8, fig.width = 8, out.width = "90%", fig.cap = "Exponential Prediction GAMM Results"}
-grid_data.exp.reduced <- read.csv(file = "data/youdrawit/youdrawit-exponential-prediction-gamm-preds.csv")
+```{r exponential-prediction-gamm-preds, fig.height = 9, fig.width = 9, out.width = "100%", fig.cap = "Exponential Prediction GAMM Results"}
 
-grid_data.exp.reduced %>%
-  mutate(`Points Truncated` = ifelse(points_end == 10, "50%", "75%")) %>%
-  mutate(`Growth Rate` = ifelse(beta == 0.1, "Low", "High")) %>%
-  mutate(`Growth Rate` = factor(`Growth Rate`, levels = c("Low", "High"))) %>%
+gamm_plot_0.1 <- youdrawit_preds_gamm_0.1 %>%
   ggplot(aes(x = x, y = estimate, group = scale, color = scale, fill = scale)) +
-  geom_line(data = exp_data, aes(x = x, y = residualdrawn, group = plotID), alpha = 0.1) +
-  geom_ribbon(aes(ymin = lower, ymax = upper), color = NA, alpha = 0.5) +
+  geom_line(data = youdrawit_model_data %>% filter(beta == "beta0.1"), aes(x = x, y = residual_nls_drawn, group = plot_id), alpha = 0.05) +
+  geom_ribbon(aes(ymin = lower, ymax = upper), color = NA, alpha = 0.4) +
   geom_line() +
   geom_hline(yintercept = 0, linetype = "dashed") +
   facet_grid(`Growth Rate` ~ `Points Truncated`, scales = "free", labeller = labeller(`Growth Rate` = label_both, `Points Truncated` = label_both)) +
   theme_bw() +
   theme(aspect.ratio = 1) +
-  scale_y_continuous("Residual \n (ydrawn - ynls)") +
-  scale_color_manual("Individual participant \nresiduals", values = c("steelblue", "orange"), labels = c("Linear scale", "Log scale")) +
-  scale_fill_manual("GAMM fitted trend", values = c("steelblue", "orange"), labels = c("Linear scale", "Log scale"))
+  scale_y_continuous("Residual \n (ydrawn - ynls)", limits = c(-8, 8), breaks = seq(-10,10,2)) +
+  scale_color_manual("Individual participant \nresiduals", values = c("steelblue", "orange2"), labels = c("Linear scale", "Log scale")) +
+  scale_fill_manual("GAMM fitted trend", values = c("steelblue", "orange2"), labels = c("Linear scale", "Log scale")) +
+  guides(color = guide_legend(override.aes = list(alpha = 1)),
+         fill = guide_legend(override.aes = list(alpha = 1)))
+
+
+gamm_plot_0.23 <- youdrawit_preds_gamm_0.23 %>%
+  ggplot(aes(x = x, y = estimate, group = scale, color = scale, fill = scale)) +
+  geom_line(data = youdrawit_model_data %>% filter(beta == "beta0.23"), aes(x = x, y = residual_nls_drawn, group = plot_id), alpha = 0.05) +
+  geom_ribbon(aes(ymin = lower, ymax = upper), color = NA, alpha = 0.4) +
+  geom_line() +
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  facet_grid(`Growth Rate` ~ `Points Truncated`, scales = "free", labeller = labeller(`Growth Rate` = label_both, `Points Truncated` = label_both)) +
+  theme_bw() +
+  theme(aspect.ratio = 1) +
+  scale_y_continuous("Residual \n (ydrawn - ynls)", limits = c(-150, 225), breaks = seq(-200,200,50)) +
+  scale_color_manual("Individual participant \nresiduals", values = c("steelblue", "orange2"), labels = c("Linear scale", "Log scale")) +
+  scale_fill_manual("GAMM fitted trend", values = c("steelblue", "orange2"), labels = c("Linear scale", "Log scale")) +
+  guides(color = guide_legend(override.aes = list(alpha = 1)),
+         fill = guide_legend(override.aes = list(alpha = 1)))
+
+gamm_plot_0.1/
+gamm_plot_0.23
 ```
 
 <!-- + advocate smoothing of scatterplots to assist in detecting the shape of the point cloud in situations where the error in the data is substantial, or where the density of points changes along the abscissa @cleveland_graphical_1984 -->
