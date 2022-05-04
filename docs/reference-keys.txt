@@ -62,6 +62,7 @@ fig:high-10-linear
 fig:high-10-log
 fig:high-15-linear
 fig:high-15-log
+fig:unnamed-chunk-2
 literature-review
 introduction-to-graphics
 perception-and-psychophysics
@@ -109,5 +110,4 @@ discussion-and-conclusion-2
 conclusion
 youdrawit-with-shiny
 exponential-prediction-plots
-estimation-1
 estimation-comparison

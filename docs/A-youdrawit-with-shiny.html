@@ -233,10 +233,9 @@ div.csl-indent {
 <li class="chapter" data-level="5" data-path="5-conclusion.html"><a href="5-conclusion.html"><i class="fa fa-check"></i><b>5</b> Conclusion<span></span></a></li>
 <li class="appendix"><span><b>Appendix<span></span></b></span></li>
 <li class="chapter" data-level="A" data-path="A-youdrawit-with-shiny.html"><a href="A-youdrawit-with-shiny.html"><i class="fa fa-check"></i><b>A</b> You Draw It Setup with Shiny<span></span></a></li>
-<li class="chapter" data-level="B" data-path="B-exponential-prediction-plots.html"><a href="B-exponential-prediction-plots.html"><i class="fa fa-check"></i><b>B</b> Exponential Prediction Interactive Plots<span></span></a></li>
-<li class="chapter" data-level="C" data-path="C-estimation-1.html"><a href="C-estimation-1.html"><i class="fa fa-check"></i><b>C</b> Estimation<span></span></a>
+<li class="chapter" data-level="B" data-path="B-exponential-prediction-plots.html"><a href="B-exponential-prediction-plots.html"><i class="fa fa-check"></i><b>B</b> Exponential Prediction Interactive Plots<span></span></a>
 <ul>
-<li class="chapter" data-level="C.1" data-path="C-estimation-1.html"><a href="C-estimation-1.html#estimation-comparison"><i class="fa fa-check"></i><b>C.1</b> Scratchwork participant comparison<span></span></a></li>
+<li class="chapter" data-level="B.1" data-path="B-exponential-prediction-plots.html"><a href="B-exponential-prediction-plots.html#estimation-comparison"><i class="fa fa-check"></i><b>B.1</b> Scratchwork participant comparison<span></span></a></li>
 </ul></li>
 <li><a href="references.html#references">References<span></span></a></li>
 <li class="divider"></li>
@@ -261,10 +260,18 @@ div.csl-indent {
 <div id="youdrawit-with-shiny" class="section level1 hasAnchor" number="6">
 <h1><span class="header-section-number">A</span> You Draw It Setup with Shiny<a href="A-youdrawit-with-shiny.html#youdrawit-with-shiny" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Interactive plots for the you draw it study were created using the <code>r2d3</code> package and integrating D3 source code with an R shiny application.
+I conducted all data simulation and processing in R and outputted two data sets - point data and line data - containing (x, y) coordinates corresponding to either a simulated point or fitted value predicted by a statistical model respectively.
+Then, the r2d3 package converted the data sets in R to JSON to be interpreted by the D3.js code.
+I define functions in D3.js to draw the initial plot and set up drawable points for the user drawn line.
+Drag events in D3.js were utilized to react to observe and react to user input.
+Shiny Messages were used to communicate the user interaction between the D3 code and the R environment.
+The plot was then rendered and updated on user interaction into the R shiny application with the RenderD3 and d3Output functions.
+Parameters for aesthetic design choices were defined in a list of options and r2d3 passes these to the D3.js code.
+For instance, I specified the buffer space allowed for the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> axes to avoid users anchoring their lines to the axes limits. For D3.js source code, visit GitHub <a href="https://github.com/srvanderplas/Perception-of-Log-Scales/blob/master/you-draw-it-development/you-draw-it-test-app/main.js">here</a>.
 provides a visual aid of the process of creating the you draw it experimental study in <a href="3-youdrawit.html#youdrawit">Chapter 3</a>.</p>
 <!-- ## You draw it D3.js source code {#d3.js-source-code} -->
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:r2d3-shiny-flowchart"></span>
-<img src="images/02-you-draw-it/r2d3+shiny-inkscape.png" alt="Interactive plot development" width="80%"  />
+<img src="images/02-you-draw-it/r2d3+shiny.png" alt="Interactive plot development" width="100%"  />
 <p class="caption">
 Figure A.1: Interactive plot development
 </p>

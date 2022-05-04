@@ -1,6 +1,6 @@
 # Prediction with 'You Draw It' {#youdrawit}
 
-\ear{Fix Hadley Whickham and S.N. Wood in text citations.}
+<!-- \ear{Fix Hadley Whickham and S.N. Wood in text citations.} -->
 
 ```{r youdrawit-setup, message=FALSE, warning=FALSE, echo = F}
 library(tidyverse)
@@ -54,22 +54,26 @@ youdrawit_preds_gamm_0.23 <- read_csv(file = here("data/02a-youdrawit/youdrawit-
 
 In [Chapter 2](#lineups), a base foundation for future exploration of the use of log scales was established by evaluating participants ability to identify differences in charts through the use of lineups. 
 This did not require that participants were able to understand exponential growth, identify log scales, or have any mathematical training; instead, it simply tested the change in perceptual sensitivity resulting from visualization choices. 
-In order to determine whether there are cognitive disadvantages to log scales, I utilize interactive graphics to test an individual's ability to make predictions for exponentially increasing data. In this study, participants are asked to draw a line using their computer mouse through the exponentially increasing trend shown on both the log and linear scales. 
+In order to determine whether there are cognitive disadvantages to log scales, I utilized interactive graphics to test an individual's ability to make predictions for exponentially increasing data. 
+In this study, participants were asked to draw a line using their computer mouse through the exponentially increasing trend shown on both the log and linear scales. 
 
 ### Past Methodology
 
+Our visual system is naturally built to look for structure and identify patterns. 
+For instance, points going down from left to right indicates a negative correlation between the x and y variables. 
+In the past, manual methods have been used to compare our intuitive visual sense of patterns to those determined by statistical methods.
 Initial studies in the 20th century explored the use of fitting lines by eye through a set of points [@finney_subjective_1951; @mosteller_eye_1981]. 
 Common methods of fitting trends by eye involve maneuvering a string, black thread, or ruler until the fit is suitable, then drawing the line through the set of points. 
+
 In @finney_subjective_1951, it was of interest to determine the effect of stopping iterative maximum likelihood calculations after one iteration. 
 Many techniques in statistical analysis are performed with the aid of iterative calculations such as Newton's method or Fisher's scoring. 
-Guesses are made at the best estimates of certain parameters and these guesses are then used as the basis of a computation which yields a new set of approximation to the parameter estimates; this same procedure is the performed on the new parameter estimates and the computing cycle is repeated until convergence, as determined by the statistician, is reached. 
+Guesses are made at the best estimates of certain parameters and these guesses are then used as the basis of a computation which yields a new set of approximation to the parameter estimates; this same procedure is then performed on the new parameter estimates and the computing cycle is repeated until convergence, as determined by the statistician, is reached. 
 The author was interested in whether one iteration of calculations was sufficient in the estimation of parameters connected with dose-response relationships. 
-One measure of interest is the relative potency between a test preparation of doses and standard preparation of does; relative potency is calculated as the ratio of two equally effective doses between the two preparation methods. 
+One measure of interest in dose-response relationships is the relative potency between a test preparation of doses and standard preparation of does; relative potency is calculated as the ratio of two equally effective doses between the two preparation methods. 
 \cref{fig:subjective-judgement} shows a pair of parallel probit responses in a biological assay.
-The x-axis is the $\log_{1.5}$ dose level for four dose levels (for example, doses 4, 6, 9, and 13 correspond correspond to equally spaced values on a logarithmic scale, labeled  0, 1, 2, and 3) and the y-axis is the corresponding probit response as calculated in @finney1948table; circles correspond to the test preparation method while the crosses correspond to the standard preparation method.
+The $x$-axis is the $\log_{1.5}$ dose level for four dose levels (for example, doses 4, 6, 9, and 13 correspond correspond to equally spaced values on a logarithmic scale, labeled  0, 1, 2, and 3) and the $y$-axis is the corresponding probit response as calculated in @finney1948table; circles correspond to the test preparation method while the crosses correspond to the standard preparation method.
 For these sort of assays, the does-response relationship follows a linear regression of the probit response on the logarithm of the dose levels; the two preparation methods can be constrained to be parallel [@jerne1949validity], limiting the relative potency to one consistent value. 
 In this study, twenty-one scientists were recruited via postal mail and asked to "rule two lines" in order to judge by eye the positions for a pair of parallel probit regression lines in a biological assay \pcref{fig:subjective-judgement}.
-<!-- \rh{I think more explanation is needed for Figure 3.1 and the corresponding experiment.} -->
 <!-- https://www.quantics.co.uk/blog/what-is-relative-potency/ -->
 The author then computed one iterative calculation of the relative potency based on starting values as indicated by the pair of lines provided by each participant and compared these relative potency estimates to that which was estimated by the full probit technique (reaching convergence through multiple iterations).
 Results indicated that one cycle of iterations for calculating the relative potency was sufficient based on the starting values provided by eye from the participants.
@@ -82,8 +86,7 @@ Thirty years later, Mosteller et al. (1981), sought to understand the properties
 The authors recruited 153 graduate students and post doctoral researchers in Introductory Biostatistics. 
 Participants were asked to fit lines by eye to four sets of points \pcref{fig:mosteller-eyefitting-plot} using an 8.5 x 11 inch transparency with a straight line etched completely across the middle. 
 A latin square design [@anderson_design_1974] with packets of the set of points stapled together in four different sequences was used to determine if there is an effect of order of presentation.
-<!-- \rh{Maybe a reference would be nice for the latin square desing. THere might be people not being familiar with experimental design.} -->
-It was found that order of presentation had no effect and that participants tended to fit the slope of the first principal component (error minimized orthogonally, both horizontal and vertical, to the regression line) over the slope of the least squares regression line (error minimized vertically to the regression line).
+It was found that order of presentation had no effect and that participants tended to fit the slope of the first principal component (error minimized orthogonally, both horizontal and vertical, to the regression line) over the slope of the least squares regression line (error minimized vertically to the regression line) \pref{fig:ols-vs-pca-example}.
 <!-- \pref{fig:ols-vs-pca-example} -->
 <!-- \rh{maybe some explanation would be nice for this.} -->
 
@@ -91,11 +94,16 @@ It was found that order of presentation had no effect and that participants tend
 knitr::include_graphics("images/02-you-draw-it/eyefitting-straight-lines-plots.png")
 ```
 
-In 2015, the New York Times introduced an interactive feature, called 'You Draw It' [@aisch_cox_quealy_2015; @buchanan_park_pearce_2017; @katz_2017].
-Readers are asked to input their own assumptions about various metrics and compare how these assumptions relate to reality.
+Recently, @ciccione2021can conducted a comprehensive set of studies investigating human ability to detect trends in graphical representations from a psychophysical approach.
+Participants were asked to judge trends, estimate slopes, and conduct extrapolation. 
+To estimate slopes, participants were asked to report the slope of the best-fitting regression line using a track-pad to adjust the tilt of a line on the screen. 
+Results indicated the slopes participants reported were always in excess of the ideal slopes, both in the positive and in the negative direction, and those biases increase with noise and with number of points.
+This supports the results found in Mosteller et al. (1981) and suggest that participants might use Deming regression [@deming1943statistical], which is equivalent to a regression equation based ont the first principal component or principal axes and minimizes the Euclidean distance of points from the line, when fitting a line to a noisy scatter-plot.
+
+While not explicitly intended for perceptual testing, in 2015, the New York Times introduced an interactive feature, called 'You Draw It' [@aisch_cox_quealy_2015; @buchanan_park_pearce_2017; @katz_2017], where readers input their own assumptions about various metrics and compare how these assumptions relate to reality.
 The New York Times team utilizes Data Driven Documents (D3) that allow readers to predict these metrics through the use of drawing a line on their computer screen with their computer mouse. 
-\cref{fig:nyt-caraccidents} [@katz_2017] is one such example in which readers are asked to draw the line for the missing years providing what they estimate to be the number of Americans who have died every year from car accidents, since 1990.
-After the reader has completed drawing the line, the actual observed values are revealed and the reader may check their estimated knowledge against the actual reported data.
+\cref{fig:nyt-caraccidents} [@katz_2017] is one such example in which readers were asked to draw the line for the missing years providing what they estimated to be the number of Americans who have died every year from car accidents, since 1990.
+After the reader completed drawing the line, the actual observed values were revealed and the reader was able to check their estimated knowledge against the actual reported data.
 
 ```{r nyt-caraccidents, fig.cap = "New York Times 'You Draw It' Feature", out.width="75%"}
 knitr::include_graphics("images/02-you-draw-it/nyt-caraccidents-frame4.png")
@@ -104,7 +112,7 @@ knitr::include_graphics("images/02-you-draw-it/nyt-caraccidents-frame4.png")
 ### Data Driven Documents
 
 Major news and research organizations such as the New York Times, FiveThirtyEight, Washington Post, and the Pew Research Center create and customize graphics with Data Driven Documents (D3).
-In June 2020, the New York Times released a front page displaying figures that represent each of the 100,000 lives lost from the COVID-19 pandemic until this point in time [@NYTrememberinglives]; this visualization was meant to bring about a visceral reaction and resonate with readers. 
+In June 2020, the New York Times released a front page displaying figures that represent each of the 100,000 lives lost from the COVID-19 pandemic until that point in time [@NYTrememberinglives]; this visualization was meant to bring about a visceral reaction and resonate with readers. 
 During 2021 March Madness, FiveThirtyEight created a roster-shuffling machine which allowed readers to build their own NBA contender through interactivity [@ryanabest_2021].
 Data Driven Documents (D3) is an open-source JavaScript based graphing framework created by Mike Bostock during his time working on graphics at the New York Times.
 For readers familiar with R, it is notable to consider D3 in JavaScript equivalent to the `ggplot2` package in R [@ggplot2]. 
@@ -125,9 +133,9 @@ The creator of the graphic applies D3.js source code to visualize data which has
 The example R code illustrates the structure of the `r2d3` function which includes specification of a data frame in R (converted to a JSON file), the D3.js source code file, and the D3 version that accompanies the source code.
 A default SVG container for layering elements is then generated by the `r2d3` function which renders the plot using the source code. 
 [Appendix A](#youdrawit-with-shiny) outlines the development of the 'You Draw It' interactive plots used in this study through the use of `r2d3` and R shiny applications. 
-\cref{fig:youdrawit-example} provides an example of a 'You Draw It' interactive plot as seen by participants during the study. 
-The first frame shows what the participant sees along with the prompt, "Use your mouse to fill in the trend in the yellow box region". 
-Next, the yellow box region moves along as the participant draws their trend-line until the yellow region disappears, indicating the participant has filled in the entire domain.
+\cref{fig:youdrawit-example} provides an example of a 'You Draw It' interactive plot as was shown to participants during the study. 
+The first frame shows what the participant saw along with the prompt, "Use your mouse to fill in the trend in the yellow box region". 
+Next, the yellow box region moved along as the participant drew their trend-line until the yellow region disappeared, indicating the participant had filled in the entire domain.
 
 ```{r r2d3-example, echo = T, eval = F}
 r2d3(data = data,
@@ -135,33 +143,32 @@ r2d3(data = data,
      d3_version= "5")
 ```
 
-
 ```{r youdrawit-example, fig.cap = "You Draw It Example", out.width="100%"}
 knitr::include_graphics("images/02-you-draw-it/ydiExample-0.10-10-linear.png")
 ```
 
 ## Study Design
 
-This chapter contains two sub-studies; the first aims to establish 'You Draw It' as a tool for measuring predictions of trends fitted by eye and a method for testing graphics, the second then applies you draw it to test an individual's ability to make predictions for exponentially increasing data.
-In order to validate you draw it as a method for testing graphics, the first sub-study, referred to as Eye Fitting Straight Lines in the Modern Era, replicated the experiment and results found in Mosteller et al. (1981). 
-<!-- \rh{Please explain first sentence in more detail.} -->
+This chapter contains two sub-studies; the first aims to establish 'You Draw It' as a tool for measuring predictions of trends fitted by eye and a method for testing graphics, the second then applies 'You Draw It' to test an individual's ability to make predictions for exponentially increasing data on the log and linear scale.
+The first sub-study, referred to as Eye Fitting Straight Lines in the Modern Era, was intended  to implement the ‘You Draw It’ feature as a way to measure the patterns we see in data. I validate the 'You Draw It' method for testing graphics by replicating the less technological study conducted by @mosteller_eye_1981.
+Based on previous research, I hypothesize that visual regression tends to mimic principle component or Deming regression rather than an ordinary least squares regression. 
+In order to assess this hypothesis, I introduce a method for statistically modeling the participant drawn lines using generalized additive mixed models (GAMM).
 The second sub-study, referred to as Prediction of Exponential Trends, uses the established 'You Draw It' method to test an individual's ability to make predictions for exponentially increasing data on both the log and linear scales.
-All subject's participated in both sub-studies at the same time in conjunction with one another. 
-<!-- \rh{"... over the same study participant sample?"} -->
+I then use the GAMMS to analyze participant drawn lines; a benefit of using a GAMM is the estimation of smoothing splines, allowing for flexibility in the residual trend and analysis of nonlinear trends.
 
 A total of six data sets - four Eye Fitting Straight Lines in the Modern Era and two Prediction of Exponential Trends - are generated for each individual at the start of the experiment. 
 The two simulated data sets corresponding to the simulated data models used in the Prediction of Exponential Trends sub-study are then plotted a total of four times each with different aesthetic and scale choices for a total of eight task plots. 
 Participants in the study are first shown two 'You Draw It' practice plots followed by twelve 'You Draw It' task plots. 
 The order of all twelve task plots was randomly assigned for each individual in a completely randomized design where users saw the four task plots from the Eye Fitting Straight Lines in the Modern Era sub-study interspersed with the eight task plots from the Prediction of Exponential Trends sub-study. 
 
-Participants completed the experiment using a RShiny application found [here](https://shiny.srvanderplas.com/you-draw-it/).
-During May 2021, participants were recruited through Twitter, Reddit, and direct email.
-A total of 39 individuals completed 256 unique 'You Draw It' task plots; all completed 'You Draw It' task plots were included in the analysis.
+The 'You Draw It' study in this chapter was completed second in the series of the three graphical studies and took about fifteen minutes for participants to complete drawn trend lines for the twelve 'You Draw It' task plots.
+Participants completed the series of graphical tests using a R Shiny application found [here](https://shiny.srvanderplas.com/perception-of-statistical-graphics/). 
+Participant recruitment and study deployment was conducted via Prolific, a crowd sourcing website, on Wednesday, March 23, 2022 during which a total of 302 individuals completed 1254 unique 'You Draw It' task plots for the first sub-study and 309 individuals completed 2520 unique 'You Draw It' task plots associated with the second sub-study.
 
 ## Eye Fitting Straight Lines in the Modern Era
 
-@finney_subjective_1951 and Mosteller et al. (1981) use methods such as using a ruler, string, or transparency sheet to fit straight lines through a set of points.
-This section replicates the study found in Mosteller et al. (1981) in order to establish 'You Draw It' as a tool and method for testing graphics.
+@finney_subjective_1951 and @mosteller_eye_1981 use methods such as using a ruler, string, or transparency sheet to fit straight lines through a set of points.
+This section replicates the study found in @mosteller_eye_1981 and extends this study with formal statistical analysis methods in order to establish 'You Draw It' as a tool and method for testing graphics.
 
 ### Data Generation
 
@@ -172,9 +179,9 @@ Data were simulated based on linear model with additive errors:
 y_i & = \beta_0 + \beta_1 x_i + e_i \\
 \text{with } e_i & \sim N(0, \sigma^2). \nonumber
 \end{align} 
-The parameters $\beta_0$ and $\beta_1$ are selected to replicate Mosteller et al. (1981) with $e_i$ generated by rejection sampling in order to guarantee the points shown align with that of the fitted line. 
-An ordinary least squares regression is then fit to the simulated points in order to obtain the best fit line and fitted values in 0.25 increments across the domain, $(x_k, \hat y_{k,OLS}), k = 1, ..., 4 x_{max} +1$.
-The data simulation function then outputs a list of point data and line data both indicating the parameter identification, x-value, and corresponding simulated or fitted y value.
+The parameters $\beta_0$ and $\beta_1$ were selected to replicate @mosteller_eye_1981 with $e_i$ generated by rejection sampling in order to guarantee the points shown align with that of the fitted line. 
+An ordinary least squares regression was then fit to the simulated points in order to obtain the best fit line and fitted values in 0.25 increments across the domain, $(x_k, \hat y_{k,OLS}), k = 1, ..., 4 x_{max} +1$.
+The data simulation function then outputted a list of point data and line data both indicating the parameter identification, $x$ value, and corresponding simulated or fitted $y$ value.
 The data simulation procedure is described in \cref{alg:eyefitting-algorithm}.
 
 \begin{algorithm}
@@ -213,13 +220,12 @@ data.frame(Parm = c("F", "N", "S", "V"),
 
 Simulated model equation parameters were selected to reflect the four data sets (F, N, S, and V) used in @mosteller_eye_1981 \pcref{tab:eyefitting-parameters}. 
 Parameter choices F, N, and S simulated data across a domain of 0 to 20. 
-Parameter choice F produces a trend with a positive slope and a large variance while N has a negative slope and a large variance. 
-In comparison, S shows a trend with a positive slope with a small variance and V yields a steep positive slope with a small variance over the domain of 4 to 16. 
+Parameter choice F produced a trend with a positive slope and a large variance while N had a negative slope and a large variance. 
+In comparison, S resulted a trend with a positive slope with a small variance and V yielded a steep positive slope with a small variance over the domain of 4 to 16. 
 \cref{fig:eyefitting-simplot} illustrates an example of simulated data for all four parameter choices intended to reflect the trends seen in \cref{fig:mosteller-eyefitting-plot}.
-Aesthetic design choices were made consistent across each of the interactive 'You Draw It' plots; the aspect ratio, defining the $x$ to $y$ axis ratio was set to one and the y-axis range extended 10\% beyond (above and below) the range of the simulated data points to allow for users to draw outside the simulated data set range. 
-<!-- \rh{I am not sure if readers wll understand "buffer of 50\% on the lower limit", "linear scale option", "start draw point set to 50\%.} -->
+Aesthetic design choices were made consistent across each of the interactive 'You Draw It' plots; the $y$-axis range extended 10\% beyond (above and below) the range of the simulated data points to allow for users to draw outside the simulated data set range and minimize participants anchoring their lines to the edges of the graph.
 
-```{r eyefitting-simplot, fig.height = 8, fig.width = 8, fig.cap = "Eye Fitting Straight Lines in the Modern Era Simulated Data Example", out.width="75%"}
+```{r eyefitting-simplot, fig.height = 8, fig.width = 8, fig.cap = "Eye Fitting Straight Lines in the Modern Era Simulated Data Example", out.width="100%"}
 
 eyefitting_example_sim <- read.csv(here("data/02b-eyefitting/eyefitting-simdata-example.csv"))
 eyefitting_example_simplot <- eyefitting_example_sim %>%
@@ -249,10 +255,8 @@ eyefitting_example_simplot
 ### Results
 
 In addition to the participant drawn points, $(x_k, y_{k,drawn})$, and the ordinary least squares (OLS) regression fitted values, $(x_k, \hat y_{k,OLS})$, a regression equation with a slope based on the first principal component (PCA) was used to calculate fitted values, $(x_k, \hat y_{k,PCA})$.
-For each set of simulated data and parameter choice, the PCA regression equation was determined by using the `princomp` function in the `stats` package in base R to obtain the rotation of the coordinate axes from the first principal component (direction which captures the most variance).
-The estimated slope, $\hat\beta_{1,PCA}$, is determined by the ratio of the axis rotation in y and axis rotation in x of the first principal component with the y-intercept, $\hat\beta_{0,PCA}$ calculated by the point-slope equation of a line using the mean of of the simulated points, $(\bar x_i, \bar y_i)$.
-<!-- \rh{Please explain x-rotation and y-rotation of PC1. Maybe the first paragraph of section 3.3.2 could be extended.} -->
-Fitted values, $\hat y_{k,PCA}$ are then obtained every 0.25 increment across the domain from the PCA regression equation, $\hat y_{k,PCA} = \hat\beta_{0,PCA} + \hat\beta_{1,PCA} x_k$.
+For each set of simulated data and parameter choice, the PCA regression slope, $\hat\beta_{1,PCA}$, and y-intercept, $\hat\beta_{0,PCA}$, were determined by using the `mcreg` function in the `mcr` package in R [@mcr_pkg] which implements Deming regression (equivalent to a regression based on the slope of the first principal component).
+Fitted values, $\hat y_{k,PCA}$ were then obtained every 0.25 increment across the domain from the PCA regression equation, $\hat y_{k,PCA} = \hat\beta_{0,PCA} + \hat\beta_{1,PCA} x_k$.
 \cref{fig:ols-vs-pca-example} illustrates the difference between an OLS regression equation which minimizes the vertical distance of points from the line and a regression equation with a slope calculated by the first principal component which minimizes the smallest distance of points from the line.
 
 ```{r ols-vs-pca-example, fig.height = 6, fig.width = 8, warning = F, message = F, fig.cap="OLS vs PCA Regression Lines", message=FALSE, warning=FALSE, out.width="100%"}
@@ -326,10 +330,8 @@ ols_pca_plot
 
 <!-- To calculate the first principal component fit: https://benediktehinger.de/blog/science/scatterplots-regression-lines-and-the-first-principal-component/ -->
 
-<!-- \rh{you have xijk and xk -> a little confusing.} -->
-<!-- \rh{you mention "domain of "x". what do you mean by that?} -->
 For each participant, the final data set used for analysis contains $x_{ijk}, y_{ijk,drawn}, \hat y_{ijk,OLS}$, and $\hat y_{ijk,PCA}$ for parameter choice $i = 1,2,3,4$, $j = 1,...N_{participant}$, and $x_{ijk}$ value $k = 1, ...,4 x_{max} + 1$. 
-Using both a linear mixed model and a generalized additive mixed model, comparisons of vertical residuals in relation to the OLS fitted values ($e_{ijk,OLS} = y_{ijk,drawn} - \hat y_{ijk,OLS}$) and PCA fitted values ($e_{ijk,PCA} = y_{ijk,drawn} - \hat y_{ijk,PCA}$) were made across the domain.
+Using both a linear mixed model (LMM) and a generalized additive mixed model (GAMM), comparisons of vertical residuals in relation to the OLS fitted values ($e_{ijk,OLS} = y_{ijk,drawn} - \hat y_{ijk,OLS}$) and PCA fitted values ($e_{ijk,PCA} = y_{ijk,drawn} - \hat y_{ijk,PCA}$) were made across the domain.
 \cref{fig:eyefitting-example-plot} displays an example of all three fitted trend lines for parameter choice F.
 
 ```{r eyefitting-example-plot, fig.height = 6, fig.width = 6, warning = F, message = F, fig.cap = "Eye Fitting Straight Lines in the Modern Era Example", out.width="100%"}
@@ -364,7 +366,7 @@ eyefitting_example <- eyefitting_model_data %>%
 eyefitting_example
 ```
 
-Using the `lmer` function in the `lme4` package [@lme4], a linear mixed model (LMM) is fit separately to the OLS and PCA residuals, constraining the fit to a linear trend. 
+Using the `lmer` function in the `lme4` package [@lme4], a LMM is fit separately to the OLS and PCA residuals, constraining the fit to a linear trend. 
 Parameter choice, $x$, and the interaction between $x$ and parameter choice were treated as fixed effects with a random participant effect accounting for variation due to participant.
 The LMM equation for each fit (OLS and PCA) residuals is given by:
 \begin{equation}
@@ -383,8 +385,9 @@ y_{ijk,drawn} - \hat y_{ijk,fit} = e_{ijk,fit} = \left[\gamma_0 + \alpha_i\right
 + $p_{j} \sim N(0, \sigma^2_{participant})$ is the random error due to the $j^{th}$ participant's characteristics
 + $\epsilon_{ijk} \sim N(0, \sigma^2)$ is the residual error.
 
-Eliminating the linear trend constraint, the `bam` function in the `mgcv` package [@mgcv1; @mgcv2; @mgcv3; @mgcv4; @mgcv5] is used to fit a generalized additive mixed model (GAMM) separately to the OLS and PCA residuals to allow for estimation of smoothing splines.
-Parameter choice was treated as a fixed effect with no estimated intercept and a separate smoothing spline for $x$ was estimated for each parameter choice. A random participant effect accounting for variation due to participant and a random spline for each participant accounted for variation in spline for each participant.
+Eliminating the linear trend constraint, the `bam` function in the `mgcv` package [@mgcv1; @mgcv2; @mgcv3; @mgcv4; @mgcv5] is used to fit a GAMM separately to the OLS and PCA residuals to allow for estimation of smoothing splines.
+Parameter choice was treated as a fixed effect with no estimated intercept and a separate smoothing spline for $x$ was estimated for each parameter choice. 
+A random participant effect accounting for variation due to participant and a random spline for each participant accounted for variation in spline for each participant.
 The GAMM equation for each fit (OLS and PCA) residuals is given by:
 \begin{equation}
 y_{ijk, drawn} - \hat y_{ijk, fit} = e_{ijk,fit} = \alpha_i + s_{i}(x_{ijk}) + p_{j} + s_{j}(x_{ijk})
@@ -401,9 +404,10 @@ y_{ijk, drawn} - \hat y_{ijk, fit} = e_{ijk,fit} = \alpha_i + s_{i}(x_{ijk}) + p
 + $s_{j}$ is the random smoothing spline for each participant.
 
 \cref{fig:eyefitting-lmer-residualplots} and \cref{fig:eyefitting-gamm-residualplots} show the estimated trends of residuals (vertical deviation of participant drawn points from both the OLS and PCA fitted points) as modeled by a LMM and GAMM respectively. 
-Examining the plots, the estimated trends of PCA residuals (orange) appear to align closer to the $y=0$ horizontal (dashed) line than the OLS residuals (blue). 
+Examining the plots, the estimated trends of PCA residuals (orange) appear to align more paralell and closer to the $y=0$ horizontal (dashed) line than the OLS residuals (blue). 
 In particular, this trend is more prominent in parameter choices with large variances (F and N).
 These results are consistent to those found in @mosteller_eye_1981 indicating participants fit a trend line closer to the estimated regression line with the slope of the first principal component than the estimated OLS regression line.
+This study established 'You Draw It' as a method for graphical testing and reinforced the differences between intuitive visual model fitting and statistical model fitting, providing information about human perception as it relates to the use of statistical graphics.
 
 ```{r eyefitting-lmer-residualplots, warning = F, message = F, fig.height = 9, fig.width = 9, out.width = "100%", fig.cap = "Eye Fitting Straight Lines in the Modern Era LMM results"}
 # Plot Predictions
@@ -477,9 +481,9 @@ eyefitting_gamm_plot
 
 ## Prediction of Exponential Trends
 
-The results from the first sub-study validate 'You Draw It' as a tool for testing graphics. 
-This sub-study is designed to test an individual's ability to make predictions for exponentially increasing data on both the log and linear scales, addressing cognitive understanding of log scales.
-Participants are asked to draw a line using their computer mouse through the exponentially increasing trend shown on both the log and linear scale. 
+The results from the first sub-study validated 'You Draw It' as a tool for testing graphics. 
+This sub-study was designed to test an individual's ability to make predictions for exponentially increasing data on both the log and linear scales, addressing cognitive understanding of log scales.
+Participants were asked to draw a line using their computer mouse through the exponentially increasing trend shown on both the log and linear scale. 
 
 ### Data Generation
 
@@ -515,15 +519,13 @@ Model equation parameter, $\beta$, was selected to reflect two exponential growt
 Each growth rate parameter was used to simulate data across a domain of 0 to 20.
 The two simulated data sets (low and high exponential growth rates) were then shown four times each by truncating the points shown at both 50\% and 75\% of the domain as well as on both the log and linear scales for a total of eight interactive plots reflecting a factorial treatment design. 
 [Appendix B](#exponential-prediction-plots) displays visual examples of all eight interactive plots.
-Aesthetic design choices were made consistent across each of the interactive 'You Draw It' plots; the aspect ratio, defining the $x$ to $y$ axis ratio was set to one, the y-axis extended 50\% below the lower limit of the simulated data range and 200\% beyond the upper limit of the simulated data range to allow for users to draw outside the data set range, and participants were asked to start drawing at 50\% of the domain (for example, at $x = 10$).
+Aesthetic design choices were made consistent across each of the interactive 'You Draw It' plots; the $y$-axis extended 50\% below the lower limit of the simulated data range and 200\% beyond the upper limit of the simulated data range to allow for users to draw outside the data set range, and participants were asked to start drawing at 50\% of the domain (for example, at $x = 10$).
 Reflecting the treatment design for each plot, the y-axis was assigned to be displayed on either the linear scale or log scale.
-<!-- \rh{I am not sure if readers wll understand "buffer of 50\% on the lower limit", "linear scale option", "start draw point set to 50\%.} -->
 
 ### Results
 
-<!-- \rh{Please check index l everywhere}. -->
 A LOESS smoother (local regression) was fit to each user line to allow for visual inspection.
-For each participant $l = 1,...N_{participant}$, the final data set used for analysis contains $x_{ijklm}, y_{ijklm,drawn}, \hat y_{ijklm,loess}$, and $\hat y_{ijklm,NLS}$ for growth rate $i = 1,2$, points truncated $j = 1,2$, scale $k = 1,2$ and $x_{ijklm}$ value for increment $m = 1, ...,81$. 
+For each participant $l = 1,...N_{participant}$, the final data set used for analysis contained $x_{ijklm}, y_{ijklm,drawn}, \hat y_{ijklm,loess}$, and $\hat y_{ijklm,NLS}$ for growth rate $i = 1,2$, points truncated $j = 1,2$, scale $k = 1,2$ and $x_{ijklm}$ value for increment $m = 1, ...,81$. 
 \cref{fig:exponential-yloess-spaghetti-plot} displays spaghetti plots for each of the eight treatment combinations.
 The spaghetti plot with a high growth rate suggests participants underestimated the exponential trend when asked to draw a trend line on the linear scale compared to when asked to draw a trend line on the log scale.
 In particular, this suggestion is most noticeable when points are truncated at 50\% with the underestimation beginning at a later $x$ value when points are truncated at 75\%. 
@@ -548,11 +550,10 @@ spaghetti_plot <- youdrawit_model_data %>%
 spaghetti_plot
 ```
 
-Allowing for flexibility, the `bam` function in the `mgcv` package [@mgcv1; @mgcv2; @mgcv3; @mgcv4; @mgcv5] is used to fit a GAMM to estimate trends of vertical residuals from the participant drawn line in relation to the NLS fitted values ($e_{ijklm,NLS} = y_{ijklm,drawn} - \hat y_{ijklm,NLS}$) across the domain. 
+Allowing for flexibility, the `bam` function in the `mgcv` package [@mgcv1; @mgcv2; @mgcv3; @mgcv4; @mgcv5] was used to fit a GAMM to estimate trends of vertical residuals from the participant drawn line in relation to the NLS fitted values ($e_{ijklm,NLS} = y_{ijklm,drawn} - \hat y_{ijklm,NLS}$) across the domain. 
 The combination between growth rate, point truncation, and scale was treated as a fixed effect with no estimated intercept and a separate smoothing spline for $x$ was estimated for each treatment combination. 
 A random participant effect accounting for variation due to participant and a random spline for each participant accounted for variation in spline for each participant.
 The GAMM equation for residuals is given by:
-<!-- \rh{What is xijkm? Now you have index l, but sometimes you don't.} -->
 \begin{equation}
 y_{ijklm,drawn} - \hat y_{ijklm,NLS} = e_{ijklm,nls} = \tau_{ijk} + s_{ijk}(x_{ijklm}) + p_{l} + s_{l}(x_{ijklm})
 \end{equation}
@@ -613,8 +614,8 @@ gamm_plot_0.23
 
 ## Discussion and Conclusion
 
-The intent of this chapter was to establish 'You Draw It' as a tool for testing graphics then use this tool to determine the cognitive implications of displaying data on the log scale.
-Eye Fitting Straight Lines in the Modern Era replicated the results found in Mosteller et al. (1981). 
+The intent of this chapter was to establish 'You Draw It' as a method and tool for testing graphics then use this tool to determine the cognitive implications of displaying data on the log scale.
+Eye Fitting Straight Lines in the Modern Era replicated the results found in @mosteller_eye_1981. 
 When shown points following a linear trend, participants tended to fit the slope of the first principal component over the slope of the least squares regression line.
 This trend was most prominent when shown data simulated with larger variances. 
 The reproducibility of these results serve as evidence of the reliability of the 'You Draw It' method.

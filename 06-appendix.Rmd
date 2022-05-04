@@ -27,12 +27,20 @@ library(tidyverse)
 # You Draw It Setup with Shiny {#youdrawit-with-shiny}
 
 Interactive plots for the you draw it study were created using the `r2d3` package and integrating D3 source code with an R shiny application. 
+I conducted all data simulation and processing in R and outputted two data sets - point data and line data - containing (x, y) coordinates corresponding to either a simulated point or fitted value predicted by a statistical model respectively. 
+Then, the r2d3 package converted the data sets in R to JSON to be interpreted by the D3.js code. 
+I define functions in D3.js to draw the initial plot and set up drawable points for the user drawn line. 
+Drag events in D3.js were utilized to react to observe and react to user input. 
+Shiny Messages were used to communicate the user interaction between the D3 code and the R environment. 
+The plot was then rendered and updated on user interaction into the R shiny application with the RenderD3 and d3Output functions.
+Parameters for aesthetic design choices were defined in a list of options and r2d3 passes these to the D3.js code.
+For instance, I specified the buffer space allowed for the $x$ and $y$ axes to avoid users anchoring their lines to the axes limits. For D3.js source code, visit GitHub [here](https://github.com/srvanderplas/Perception-of-Log-Scales/blob/master/you-draw-it-development/you-draw-it-test-app/main.js).
 \cref{fig:r2d3-shiny-flowchart} provides a visual aid of the process of creating the you draw it experimental study in [Chapter 3](#youdrawit).
 
 <!-- ## You draw it D3.js source code {#d3.js-source-code} -->
 
-```{r r2d3-shiny-flowchart, fig.cap = "Interactive plot development", out.width="80%"}
-knitr::include_graphics("images/02-you-draw-it/r2d3+shiny-inkscape.png")
+```{r r2d3-shiny-flowchart, fig.cap = "Interactive plot development", out.width="100%"}
+knitr::include_graphics("images/02-you-draw-it/r2d3+shiny.png")
 ```
 
 ```{r d3.js-source-code, include = F, eval = F, echo = T}
@@ -453,11 +461,9 @@ knitr::include_graphics("images/02-you-draw-it/high-15-linear.png")
 knitr::include_graphics("images/02-you-draw-it/high-15-log.png")
 ```
 
-# Estimation
-
 ## Scratchwork participant comparison {#estimation-comparison}
 
-```{r, echo = F}
+```{r, echo = F, fig.cap = "Estimation showed work density plot comparison", fig.height = 9, fig.width = 9, out.width = "100%", warning = F, message = F}
 
 # estimation_model_data <- read.csv(here("data/03-estimation/estimation-model-data.csv"))
 # q0_text_summary <- read.csv(here("data/03-estimation/q0-text-summary.csv"))
@@ -483,7 +489,10 @@ qe1_data %>%
   group_by(dataset, scale, showed_work_cutoff) %>%
   get_summary_stats(response, type = "median_iqr") %>%
   select(dataset,	scale,	showed_work_cutoff,	n) %>%
-  knitr::kable(digits = 2, col.names = c("Data set", "Scale", "Showed work", "N"))
+  kableExtra::kable("latex", 
+                    booktabs = T, 
+                    col.names = c("Data set", "Scale", "Showed work", "N"),
+               caption = "Estimation showed work summary")
 
 qe1_compare_work <- qe1_data %>%
   ggplot(aes(x = response, fill = showed_work_cutoff)) +
