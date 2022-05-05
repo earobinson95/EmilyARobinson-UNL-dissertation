@@ -65,10 +65,11 @@ fig:high-15-log
 fig:unnamed-chunk-2
 literature-review
 introduction-to-graphics
+misleading-graphics
 perception-and-psychophysics
 perceptual-process
 logarithmic-perception
-graphical-experiments
+lit-graphical-experiments
 logarithmic-scales-and-mapping
 underestimation
 research-objectives

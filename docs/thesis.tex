@@ -266,11 +266,17 @@ Thank you to all my people!
 \hypertarget{literature-review}{%
 \chapter{Literature Review}\label{literature-review}}
 
+Editing text colors: \ear{Emily's editing color.} Emily may also use mostly black text as well. \svp{Susan's editing color.} \rh{Reka's editing color.}
+
+\svp{General comment - it's a bit odd to write this in first person, but I'm not sure it's necessarily wrong. Just different.}
+
+\ear{Need to check references. In text should only show last name.}
+
 \hypertarget{introduction-to-graphics}{%
 \section{Introduction to Graphics}\label{introduction-to-graphics}}
 
 Advanced technology and computing power have promoted data visualization as a central tool in modern data science. Unwin (2020) defines data visualization as the art of drawing graphical charts in order to display data.
-Graphics are useful for data cleaning, exploring data structure, and have been an essential component in communicating information for the last 200 years (Lewandowsky \& Spence, 1989)
+Graphics are useful for data cleaning, exploring data structure, and have been an essential component in communicating information for the last 200 years (Lewandowsky \& Spence, 1989).
 During the \(\text{18}^{\text{th}}\) and \(\text{19}^{\text{th}}\) centuries, governments began using graphics in order to better understand their population and economic interests (Harms, 1991; Playfair, 1801; Walker et al., 2013).
 In \cref{fig:william-playfair-trade}, Playfair (1801) visually represents the power and economic status of each European Nation in the early \(\text{19}^{\text{th}}\) century.
 Circle size and numeric annotation within the circle indicate the number of square miles in each country with the number of people per square mile indicated above the circle.
@@ -285,16 +291,16 @@ Today, we encounter data visualizations everywhere; researchers include graphics
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.75\linewidth,]{images/william-playfair-balance-trade} 
+{\centering \includegraphics[width=0.85\linewidth,]{images/william-playfair-balance-trade} 
 
 }
 
-\caption{William Playfair's balance of trate}\label{fig:william-playfair-trade}
+\caption{William Playfair's balance of trade}\label{fig:william-playfair-trade}
 \end{figure}
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.75\linewidth,]{images/statistical-atlas-state-population} 
+{\centering \includegraphics[width=1\linewidth,]{images/statistical-atlas-state-population} 
 
 }
 
@@ -303,7 +309,7 @@ Today, we encounter data visualizations everywhere; researchers include graphics
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.75\linewidth,]{images/ATandT-revenue} 
+{\centering \includegraphics[width=1\linewidth,]{images/ATandT-revenue} 
 
 }
 
@@ -313,6 +319,7 @@ Today, we encounter data visualizations everywhere; researchers include graphics
 Although statistical graphics have become widely used and valued in science, business, and in many other aspects of life, as creators of graphics, we are too accepting of them as default without asking critical questions about the graphics we create or view (Unwin, 2020).
 Vanderplas, Cook, \& Hofmann (2020) poses the general question we must ask ourselves, ``how effective is this graph at communicating useful information?''
 An effective graphic accurately shows the data through the appropriate chart selection, axes and scales, and aesthetic design choices in order to successfully communicate the intended result.
+\protect\hyperlink{misleading-graphics}{Section 1.2} illustrates how graphics can be misleading and ineffective at communicating the intended result by inaccurately displaying the data.
 
 Higher quality of technology has influenced the creation, replication, and complexity of graphics as there are an infinitely many number of graphical displays and design choices that can be implemented at faster speeds with more flexibility.
 The creator of a graphic makes decisions about the variables displayed, the type of graphic, the size of the graphic and the aspect ratio, the colors and symbols used, the scales and limits, and the ordering of categorical variables.
@@ -326,7 +333,7 @@ The grammar of graphics serves as the fundamental framework for data visualizati
 Visual representations are constructed through the use of ``tidy data'' which is characterized as a data set in which each variable is in its own column, each observation is in its own row, and each value is in its own cell (Hadley Wickham \& Grolemund, 2016).
 Graphics are viewed as a mapping from variables in a data set (or statistics computed from the data) to visual attributes such as the axes, colors, shapes, or facets on the canvas in which the chart is displayed.
 \cref{fig:graphic-flowchart} illustrates the process of creating a graphic from a data set through the use of variable mapping, data transformations, coordinate systems, and aesthetic features (Vanderplas et al., 2020)
-Software, such as Hadley Wickham's ggplot2 (Hadley Wickham, 2011), aims to implement the framework of creating charts and graphics as the grammar of graphics recommends.
+Software, such as \texttt{ggplot2} (Hadley Wickham, 2016), aims to implement the framework of creating charts and graphics as the grammar of graphics recommends.
 
 \begin{figure}[tbp]
 
@@ -346,6 +353,11 @@ Both authors assigned an overall quality rating (poor, adequate, good, or exempl
 The authors rated 39\% of the 97 graphs sampled as poor, indicating there is still an astonishing lack in the quality of graphics.
 More startling is the fact that the source of the graphic from an applied science or a graphic from statistics had no effect on the quality of the graphic.
 In efforts to achieve a higher standard of the graphics being presented, future work must be done to implement the academic research being conducted in graphics into practice.
+
+\hypertarget{misleading-graphics}{%
+\section{Misleading Graphics}\label{misleading-graphics}}
+
+\rh{Maybe a small section could be included about bad graphics, and how people can mislead with bad graphics.}
 
 \hypertarget{perception-and-psychophysics}{%
 \section{Perception and Psychophysics}\label{perception-and-psychophysics}}
@@ -384,7 +396,7 @@ For example, Furmanski \& Engel (2000) tested behavioral responses with function
 According to a cognitive analysis, graph interpretation involves (a) relatively simple pattern perception and association processes in which viewers can associate graphic patterns to quantitative referents and (b) more complex and error-prone inferential processes in which viewers must mentally transform data (Shah, Mayer, \& Hegarty, 1999).
 Shah \& Carpenter (1995) established the process in which viewers interact with charts by first perceptually observing the visual features and later translating to cognitive processing of the information depicted by those features.
 A viewer must first encode the visual array by identifying meaningful visual features (for example, a straight light slanting downward).
-Next, the viewer must classify the quantitative measures and relationships in which those visual features illustrate (for example, a decreasing linear relationship between x and y).
+Next, the viewer must classify the quantitative measures and relationships which those visual features illustrate (for example, a decreasing linear relationship between x and y).
 The last step involves translating the quantitative measures and relationships to the variables defined in the data set (for example, a population decreasing over years).
 Psychophysics, the branch of psychology that deals with the relationships between physical stimuli (for example, light) and mental phenomena, aims to provide explanations of the relationship between physiology and perception and point out human perceptual biases.
 By examining both behavior and physiology together, we are able to understand the mechanisms responsible for perception.
@@ -392,23 +404,26 @@ By examining both behavior and physiology together, we are able to understand th
 \hypertarget{logarithmic-perception}{%
 \subsection{Logarithmic Perception}\label{logarithmic-perception}}
 
-Ernst Weber, an early psychophysics researcher, discovered a phenomenon known as Weber's law, by determining the relationship between the difference threshold (smallest detectable difference between two sensory stimuli; known as the ``Just Noticeable Difference'') and the magnitude of a stimulus (Fechner, 1860).
+\svp{Weber's law isn't quite the same thing as the numerical cognition stuff on log scales - it's a different perceptual phenomenon that is definitely related, but distinct in causal mechanism (as far as I know).}
+\rh{Is there a reference for the actual "Weber's Law"? Please provide more connection between your text and the "Weber's Law".}
+
+Ernst Weber, an early psychophysics researcher, discovered a phenomenon known as Weber's law by determining the relationship between the difference threshold (smallest detectable difference between two sensory stimuli; known as the ``Just Noticeable Difference'') and the magnitude of a stimulus (Fechner, 1860).
 This holds true for a variety of stimuli such as weight, light, and sound as well as for a range of magnitudes; larger numbers require a proportional larger difference in order to remain equally discriminate (Dehaene, Izard, Spelke, \& Pica, 2008).
 Known as \textbf{Weber's law}, it was established that we do not notice absolute changes in stimuli, but instead that we notice the relative change (Sun, Wang, Goyal, \& Varshney, 2012).
 Numerically, Weber's Law is defined as
 \begin{equation}
 \frac{\Delta S}{S} = K
 \end{equation}
-where \(\Delta S\) represents the difference threshold, S represents the initial stimulus intensity, and K is called Weber's contrast which remains constant as the magnitude of S changes.
+where \(\Delta S\) represents the difference threshold, \(S\) represents the initial stimulus intensity, and \(K\) is called Weber's contrast which remains constant as the magnitude of \(S\) changes.
 Gustav Fechner, a founder of psychophysics, provided further extension to Weber's law by discovering the relationship between the perceived intensity is logarithmic to the stimulus intensity when observed above a minimal threshold of perception (Sun et al., 2012).
 Formally known as the Weber-Fechner law, it is derived from Weber's law as
 \begin{equation}
 P = K\ln \frac{S}{S_0}
 \end{equation}
-where P represents the perceived stimulus, K represents Weber's contrast, S represents the initial stimulus intensity, and \(S_0\) represents the minimal threshold of perception.
+where \(P\) represents the perceived stimulus, \(K\) represents Weber's contrast, \(S\) represents the initial stimulus intensity, and \(S_0\) represents the minimal threshold of perception.
 
-\hypertarget{graphical-experiments}{%
-\section{Graphical Experiments}\label{graphical-experiments}}
+\hypertarget{lit-graphical-experiments}{%
+\section{Graphical Experiments}\label{lit-graphical-experiments}}
 
 One way in which we determine the relationship between behavior and physiology is through the use of graphical tests (Cleveland \& McGill, 1984; Lewandowsky \& Spence, 1989; Spence, 1990; VanderPlas \& Hofmann, 2015).
 These tests may take many forms: identifying differences in graphs, accurately reading information off a chart, using data to make correct real-world decisions, or predicting the next few observations.
@@ -436,7 +451,7 @@ It was found that the bar was preferable to the circle when shown percentages th
 \end{figure}
 
 While a typical psychophysics experiment focuses on whether an effect is detectable and whether the magnitude of the effect can be accurately estimated, these early experiments instead depended on speed and accuracy for plot evaluation (Lewandowsky \& Spence, 1989; Spence, 1990; Teghtsoonian, 1965).
-In attempts to understand the visual psychophysics of simple graphical elements, Spence (1990), presented stimuli (tables, lines - horizontal and vertical, bars, boxes, cylinders, pie charts, and disk charts) to participants on a monitor screen in a computer lab.
+In attempts to understand the visual psychophysics of simple graphical elements, Spence (1990) presented stimuli (tables, lines - horizontal and vertical, bars, boxes, cylinders, pie charts, and disk charts) to participants on a monitor screen in a computer lab.
 Participants were asked to use their cursor to position the marker to indicate the proportion to the apparent sizes of the elements \pcref{fig:spence-1990-proportion}.
 Results found that the table elements (numbers), pie elements, and bar elements led to the most accurate proportion estimates; boxes and disk elements resulted in the least accurate estimates.
 Measuring the speed at which participants made their judgments, it was found that two- and three- dimensional stimuli (for example, pie charts and box charts) assisted in faster judgment than zero- or one- dimensional stimuli (for example, tables and lines).
@@ -467,7 +482,7 @@ Results indicate that subjects found it easier to extract quantitative informati
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.9\linewidth,]{images/amer-poggendorff-illusion} 
+{\centering \includegraphics[width=1\linewidth,]{images/amer-poggendorff-illusion} 
 
 }
 
@@ -476,7 +491,7 @@ Results indicate that subjects found it easier to extract quantitative informati
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.9\linewidth,]{images/framed-murder-rate-map} 
+{\centering \includegraphics[width=1\linewidth,]{images/framed-murder-rate-map} 
 
 }
 
@@ -487,8 +502,8 @@ During the \(\text{21}^{\text{st}}\) century, there have been advancements in th
 Buja et al. (2009a) introduced the lineup protocol in which data plots are depicted and interpreted as statistics.
 Supported by the grammar of graphics, a data plot can be characterized as a statistic, defined as, ``a functional mapping of a variable or set of variables'' (Vanderplas et al., 2020).
 This allows the data plot to be tested similar to other statistics, by comparing the actual data plot to a set of plots with the absence of any data structure we can test the likelihood of any perceived structure being significant.
-The construction of data plots as statistics allow for easy experimentation, granting researchers the ability to compare the effectiveness of and understand the perception of different types of charts.
-While the lineup protocol differs from methodology used in earlier studies, the focus is still on initial perception and graph comprehension with a relatively small amount of work conducted to understand the effect of design choices on higher cognitive processes such as learning or analysis (Green \& Fisher, 2009).
+The construction of data plots as statistics allows for easy experimentation, granting researchers the ability to compare the effectiveness of and understand the perception of different types of charts.
+While the lineup protocol differs from methodology used in earlier studies, the focus is still on initial perception with a relatively small amount of work conducted to understand the effect of design choices on higher cognitive processes such as learning or analysis (Green \& Fisher, 2009).
 Lineups serve as a powerful tool for testing \emph{perceived} differences by eliminating ambiguous questions.
 However, the lineup protocol is constrained by the inability to test higher order cognitive skills such as accurately reading information off of a graph or drawing conclusions from the graph, limiting their ability to be used for testing real-world applications.
 
@@ -497,7 +512,7 @@ However, the lineup protocol is constrained by the inability to test higher orde
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.9\linewidth,]{images/91dovic-cases-july2021} 
+{\centering \includegraphics[width=1\linewidth,]{images/91dovic-cases-july2021} 
 
 }
 
@@ -506,7 +521,7 @@ However, the lineup protocol is constrained by the inability to test higher orde
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.9\linewidth,]{images/covid19-summer2020-risk-map} 
+{\centering \includegraphics[width=1\linewidth,]{images/covid19-summer2020-risk-map} 
 
 }
 
@@ -525,7 +540,7 @@ As graphics began to play an important role in the communication of the pandemic
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.9\linewidth,]{images/covid19-datawrapper-views-july2020} 
+{\centering \includegraphics[width=1\linewidth,]{images/covid19-datawrapper-views-july2020} 
 
 }
 
@@ -534,7 +549,7 @@ As graphics began to play an important role in the communication of the pandemic
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.7\linewidth,]{images/log-scale-comic} 
+{\centering \includegraphics[width=1\linewidth,]{images/log-scale-comic} 
 
 }
 
@@ -549,6 +564,7 @@ Exponential curves are a common source of data in which smaller magnitudes are c
 Logarithms convert multiplicative relationships (for example, 1 \& 10 displayed 10 units apart and 10 \& 100 displayed 90 units apart) to additive relationships (for example, 1 \& 10 and 10 \& 100 both equally spaced along the axis), showing proportional relationships and linearizing power functions (Menge et al., 2018).
 They also have practical purposes, easing the computation of small numbers such as likelihoods and transforming data to fit statistical assumptions.
 When presenting log scaled data, it is possible to use either un-transformed scale labels (for example, values of 1, 10 and 100 are equally spaced along the axis) or log transformed scale labels (for example, 0, 1, and 2, showing the corresponding powers of 10).
+\svp{In the grammar of graphics/ggplot2 formulation, this is the difference between a scale and a transformation... it might be worth seeing if that is a hadley-ism or if that is a wider convention.}
 
 \begin{figure}[tbp]
 
@@ -571,6 +587,7 @@ There are long histories of using log scales to display results in ecology, psyc
 In Waddell (2005), comparisons were made between the linear and logarithmic scales for the relationship between dosage and carcinogenicity in rodents.
 Results favored the use of logarithmic scales for doses in order to put the relative doses into perspective whereas using a linear scale to administer doses to animals with the same chemicals to which humans are exposed does not provide useful, comparative information.
 Given the widespread use of logarithmic scales, it is important to understand the implications of their use in order to provide guidelines for best use.
+\svp{elaborate on this a bit - when are they used, and where are they effective? Can you draw more comprehensive conclusions about the use of log scales?}.
 
 \begin{figure}[tbp]
 
@@ -676,20 +693,22 @@ To test an individual's ability to make predictions for exponentially increasing
 In addition to differentiation and prediction of exponentially increasing data, an experimental task was conducted to test an individuals' ability to translate a graph of exponentially increasing data into real value quantities and extend their estimations by making comparisons.
 The results of the three experimental tasks provide guidelines for readers to actively choose which of many possible graphics to draw, according to some set of design choices, to ensure their charts are effective.
 
+\svp{Things that seem to be missing: 1) Cleveland and McGill - hierarchy of accuracy in plot objects. You can think of e.g. exponentials as a series of tangential angles, which might help with explaining underestimation? 2) some literature explaining the different levels of complexity between perception, reading information off of a graph, predicting information, etc. - you should find this if only because it grounds the whole experiment in psychological theory (but you don't have to find it for your prelim)}
+
 \hypertarget{lineups}{%
 \chapter{Perception through lineups}\label{lineups}}
 
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
 
-To lay a foundation for future exploration of the use of log scales, I begin with the most fundamental ability to identify differences in charts; this does not require that participants understand exponential growth, identify log scales, or have any mathematical training.
-Instead, I am simply testing the change in perceptual sensitivity resulting from visualization choices.
+To lay a foundation for future exploration of the use of log scales, I begin with the most fundamental ability: to identify differences in charts. Identifying differences does not require that participants understand exponential growth, identify log scales, or have any mathematical training.
+Instead, I am simply testing the change in \emph{perceptual sensitivity} resulting from visualization choices.
 The study in this chapter is conducted through visual inference and the use of statistical lineups (Buja et al., 2009a) to differentiate between exponentially increasing curves with differing levels of curvature, using linear and log scales.
 
 \hypertarget{visual-inference}{%
 \section{Visual Inference}\label{visual-inference}}
 
-Previously, I explained how a data plot can be evaluated and treated as a visual statistic, a numerical function which summarizes the data.
+In \protect\hyperlink{lit-graphical-experiments}{Section 1.3}, I explained how a data plot can be evaluated and treated as a visual statistic, a numerical function which summarizes the data.
 To evaluate a graph, the statistic (data plot) must be run through a visual evaluation - a person.
 We can conclude the visual statistics are significantly different if two different methods of presenting data result in qualitatively different results when evaluated visually.
 Recent graphical experiments have utilized statistical lineups to quantify the perception of graphical design choices (Hofmann, Follett, Majumder, \& Cook, 2012; Loy, Follett, \& Hofmann, 2016; Loy, Hofmann, \& Cook, 2017; VanderPlas \& Hofmann, 2017).
@@ -712,13 +731,13 @@ The lineup plot on the left displays increasing exponential data displayed on a 
 \end{figure}
 
 While explicit graphical tests direct the participant to a specific feature of a plot to answer a specific question, implicit graphical tests require the user to identify both the purpose and function of the plot in order to evaluate the plots shown (Vanderplas et al., 2020).
-Implicit graphical tests, such as lineups, have the advantage of simultaneously visually testing for multiple visual features including outliers, clusters, linear and nonlinear relationships. Responses from multiple viewers are collected through crowd sourcing websites such as Prolific, Amazon Mechanical Turk, and Reddit.
+Implicit graphical tests, such as lineups, have the advantage of simultaneously visually testing for multiple visual features including outliers, clusters, linear and nonlinear relationships. Responses from multiple viewers are collected through convenience sampling (in informal situations) or crowd sourcing websites such as Prolific, Amazon Mechanical Turk, and Reddit (in more formal situations).
 
 \hypertarget{data-generation}{%
 \section{Data Generation}\label{data-generation}}
 
 In this study, both the target and null data sets were generated by simulating data from an exponential model; the models differ in the parameters selected for the null and target panels.
-In order to guarantee the simulated data spans the same domain and range of values, I implemented a domain constraint of \(x\in [0,20]\) and a range constraint of \(y\in [10,100]\) with \(N = 50\) points randomly assigned throughout the domain and mapped to the \(y\)-axis using the exponential model with the selected parameters.
+In order to guarantee the simulated data spans the same domain and range of values, I begin with a domain constraint of \(x\in [0,20]\) and a range constraint of \(y\in [10,100]\) with \(N = 50\) points randomly assigned throughout the domain and mapped to the \(y\)-axis using the exponential model with the selected parameters.
 These constraints provide some assurance that participants who select the target plot are doing so because of their visual perception differentiating between curvature or growth rate rather than different starting or ending values.
 
 Data were simulated based on a three-parameter exponential model with multiplicative errors:
@@ -799,7 +818,7 @@ By the implemented constraints, the target panel and null panels will span a sim
 There are a total of six lineup curvature combinations; \cref{fig:curvature-combination-example} illustrates the six lineup curvature combinations (top: linear scale; bottom: log scale) where the green line indicates the curvature level designated to the target plot while the black line indicates the curvature level assigned to the null plots.
 Two sets of each lineup curvature combination were simulated (total of 12 test data sets) and plotted on both the linear scale and the log scale (total of 24 test lineup plots).
 In addition, there are three curvature combinations which generate homogeneous ``Rorschach'' lineups, where all panels are from the same distribution.
-Each participant evaluated one of these lineups, but for simplicity, these evaluations are not described in this chapter.
+Each participant evaluated one of these lineups, but for simplicity, these evaluations are not described in this chapter and their analysis is left to a later date.
 
 \begin{figure}[tbp]
 
@@ -871,6 +890,7 @@ The results indicate that participants were more accurate at detecting the targe
 When examining this curvature combination, the same perceptual effect occurs as what we previously saw, but in a different context of scales.
 On the linear scale, participants are perceptually identifying a curved trend from close to a linear trend whereas after the logarithmic transformation, participants are perceptually identifying a trend close to linear from a curved trend.
 This again supports the claim that it is easy to identify a curve in a bunch of lines but much harder to identify a line in a bunch of curves (Best et al., 2007).
+\svp{First person plural is a bit odd compared to first person singular earlier. "We" is fairly typical in papers, so it's not as odd as the "I" earlier. But it is your dissertation, so... maybe see if Reka finds it odd?}
 
 \begin{figure}[tbp]
 
@@ -1911,7 +1931,7 @@ For instance, I specified the buffer space allowed for the \(x\) and \(y\) axes 
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.8\linewidth,]{images/02-you-draw-it/r2d3+shiny} 
+{\centering \includegraphics[width=1\linewidth,]{images/02-you-draw-it/r2d3+shiny} 
 
 }
 
@@ -2321,9 +2341,6 @@ Wagenaar, W. A., \& Sagaria, S. D. (1975). Misperception of exponential growth. 
 
 \leavevmode\vadjust pre{\hypertarget{ref-walker2013statistical}{}}%
 Walker, F. A.others. (2013). Statistical atlas of the united states based on the results of the ninth census 1870 with contributions from many eminent men of science and several departments of the government.
-
-\leavevmode\vadjust pre{\hypertarget{ref-wickham2011ggplot2}{}}%
-Wickham, Hadley. (2011). ggplot2. \emph{Wiley Interdisciplinary Reviews: Computational Statistics}, \emph{3}(2), 180--185.
 
 \leavevmode\vadjust pre{\hypertarget{ref-ggplot2}{}}%
 Wickham, Hadley. (2016). \emph{ggplot2: Elegant graphics for data analysis}. springer.

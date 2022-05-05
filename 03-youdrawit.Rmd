@@ -1,7 +1,5 @@
 # Prediction with 'You Draw It' {#youdrawit}
 
-<!-- \ear{Fix Hadley Whickham and S.N. Wood in text citations.} -->
-
 ```{r youdrawit-setup, message=FALSE, warning=FALSE, echo = F}
 library(tidyverse)
 library(patchwork)

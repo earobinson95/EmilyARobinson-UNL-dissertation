@@ -77,14 +77,16 @@ library(formatR)
 
 # Literature Review
 
-<!-- Editing text colors: \ear{Emily's editing color.} Emily may also use mostly black text as well. \svp{Susan's editing color.} \rh{Reka's editing color.} -->
+Editing text colors: \ear{Emily's editing color.} Emily may also use mostly black text as well. \svp{Susan's editing color.} \rh{Reka's editing color.}
 
-<!-- \rh{Also, maybe a small section could be included about bad graphics, and how people can mislead with bad graphics.} -->
+\svp{General comment - it's a bit odd to write this in first person, but I'm not sure it's necessarily wrong. Just different.}
+
+\ear{Need to check references. In text should only show last name.}
 
 ## Introduction to Graphics
 
 Advanced technology and computing power have promoted data visualization as a central tool in modern data science. @unwin_why_2020 defines data visualization as the art of drawing graphical charts in order to display data. 
-Graphics are useful for data cleaning, exploring data structure, and have been an essential component in communicating information for the last 200 years [@lewandowsky_perception_1989]
+Graphics are useful for data cleaning, exploring data structure, and have been an essential component in communicating information for the last 200 years [@lewandowsky_perception_1989].
 During the $\text{18}^{\text{th}}$ and $\text{19}^{\text{th}}$ centuries, governments began using graphics in order to better understand their population and economic interests [@playfair1801statistical; @harms1991august; @walker2013statistical].
 In \cref{fig:william-playfair-trade}, @playfair1801statistical visually represents the power and economic status of each European Nation in the early $\text{19}^{\text{th}}$ century. 
 Circle size and numeric annotation within the circle indicate the number of square miles in each country with the number of people per square mile indicated above the circle. 
@@ -99,44 +101,30 @@ In the $\text{20}^{\text{th}}$ century, companies began utilizing graphics to un
 Today, we encounter data visualizations everywhere; researchers include graphics to communicate their results in scientific publications and mass media present graphics in order to convey news stories to the public through newspapers, TV, and the Web [@gouretski2007much; @NYTimes_presidential_forecast; @natesilver538_2020].
 <!-- @natesilver538_2020 tracked the 2020 US presidential election by communicating results of their forecast model to the public through a variety of interactive visualizations including a bar chart, snake chart, and electoral college maps. -->
 
-```{r william-playfair-trade, fig.cap = "William Playfair's balance of trate", out.width="75%"}
+```{r william-playfair-trade, fig.cap = "William Playfair's balance of trade", out.width="85%"}
 knitr::include_graphics("images/william-playfair-balance-trade.png")
 
 # https://repository.tku.ac.jp/dspace/bitstream/11150/6149/1/LAUD_085-03.pdf
 ```
 
-```{r statistical-atlas-state-population, fig.cap = "Statistical Atlas 1870 state population", out.width="75%"}
+```{r statistical-atlas-state-population, fig.cap = "Statistical Atlas 1870 state population", out.width="100%"}
 knitr::include_graphics("images/statistical-atlas-state-population.jpg")
 
 # https://www.loc.gov/item/05019329/
 # PERMISSION: The Library of Congress is providing access to these materials for educational and research purposes and is not aware of any U.S. copyright protection (see Title 17 of the United States Code) or any other restrictions in the Map Collection materials.
 ```
 
-```{r ATandT-revenue, fig.cap = "AT\\&T utilization of assets", out.width="75%"}
+```{r ATandT-revenue, fig.cap = "AT\\&T utilization of assets", out.width="100%"}
 knitr::include_graphics("images/ATandT-revenue.png")
 # https://us.sagepub.com/en-us/nam/journal-author-archiving-policies-and-re-use
 # PERMISSION: You may use the Final Published PDF (or Original Submission or Accepted Manuscript, if preferred) in the following ways: in your dissertation or thesis, including where the dissertation or thesis will be posted in any electronic Institutional Repository or database
 ```
 
-<!-- \ear{Not entirely sure how to fit this paragraph into the flow. Is it necessary? I like the explanation that training may be necessary for understanding, but it might not belong here. I like the transition between the previous and the next paragraph now} -->
-<!-- In general, the public holds the self perception that numbers are difficult to understand and hold the belief that they did not perform well in mathematics during school [@unwin_why_2020].  -->
-<!-- In contrary, there tends to be a positive self perception when it comes to graphics as they are viewed more as illustrations and not as critical parts of an argument. -->
-<!-- While tables can be burdensome to readers, graphics can improve the interpretation and representation of the same data [@uri_presentation_1948]. -->
-<!-- @shah1999graphs recognizes the usefulness of charts and graphics, but points out there are still difficulties interpreting and explaining quantitative information depicted in graphs. -->
-<!-- \svp{I think Shah's argument is that some forms of graphics are too complicated, but that doesn't mean she's arguing that graphics aren't useful.} -->
-<!-- Complex graphics tend to be more complicated to understand and require a certain degree and formality of training necessary to evaluate the graphic material [@haemer_presentation_1949]; the general public is untrained in the ability required for the evaluation of graphic material. -->
-<!-- The complexity of graphic devices is directly related to the degree and formality of training necessary for understanding [@haemer_presentation_1949].  -->
-<!-- \svp{This is 1. a bit hard to understand, and 2. seems to be a slightly different tone than before. Probably not the ideal way to end a paragraph.} -->
-<!-- It is important to consider the purpose and motivation behind the generation of the chart as well as the complexity and intended audience you intend to view the chart.  -->
-<!-- \svp{This is circling around to a different paragraph -- might be a sign that you need to tighten your argument a bit?} -->
-<!-- A general guideline when generating graphics is to keep it familiar in order to not intimidate your audience and to encourage further interaction from the viewers [@unwin_why_2020]. -->
-
 Although statistical graphics have become widely used and valued in science, business, and in many other aspects of life, as creators of graphics, we are too accepting of them as default without asking critical questions about the graphics we create or view [@unwin_why_2020]. 
 @vanderplas_testing_2020 poses the general question we must ask ourselves, “how effective is this graph at communicating useful information?”
 <!-- \rh{what do you/they mean by effective? you use "effective" later too so it is imortant to define or provide some examples/counter examples.} -->
 An effective graphic accurately shows the data through the appropriate chart selection, axes and scales, and aesthetic design choices in order to successfully communicate the intended result. 
-<!-- [Section 1.2](#misleading-graphics) illustrates how graphics can be misleading and ineffective at communicating the intended result by inaccurately displaying the data. -->
-<!-- \ear{will add this section after prelims} -->
+[Section 1.2](#misleading-graphics) illustrates how graphics can be misleading and ineffective at communicating the intended result by inaccurately displaying the data.
 
 Higher quality of technology has influenced the creation, replication, and complexity of graphics as there are an infinitely many number of graphical displays and design choices that can be implemented at faster speeds with more flexibility. 
 The creator of a graphic makes decisions about the variables displayed, the type of graphic, the size of the graphic and the aspect ratio, the colors and symbols used, the scales and limits, and the ordering of categorical variables. 
@@ -150,7 +138,7 @@ The grammar of graphics serves as the fundamental framework for data visualizati
 Visual representations are constructed through the use of “tidy data” which is characterized as a data set in which each variable is in its own column, each observation is in its own row, and each value is in its own cell [@wickham2016r].
 Graphics are viewed as a mapping from variables in a data set (or statistics computed from the data) to visual attributes such as the axes, colors, shapes, or facets on the canvas in which the chart is displayed.
 \cref{fig:graphic-flowchart} illustrates the process of creating a graphic from a data set through the use of variable mapping, data transformations, coordinate systems, and aesthetic features [@vanderplas_testing_2020] 
-Software, such as Hadley Wickham's ggplot2 [@wickham2011ggplot2], aims to implement the framework of creating charts and graphics as the grammar of graphics recommends. 
+Software, such as `ggplot2` [@ggplot2], aims to implement the framework of creating charts and graphics as the grammar of graphics recommends. 
 
 ```{r graphic-flowchart, fig.cap = "Graphic flowchart", out.width="50%"}
 knitr::include_graphics("images/graphic-flowchart.png")
@@ -170,10 +158,11 @@ In efforts to achieve a higher standard of the graphics being presented, future 
 <!-- Better definitions of variables, units of measurements, scales, and other graphical elements is necessary in order to improve the overall quality of graphics.  -->
 <!-- Changes in software defaults such as the originally set number of bins in a bar chart can help support the improvement of graphs in both statistics and the applied science.  -->
 
-<!-- ## Misleading Graphics {#misleading-graphics} -->
+## Misleading Graphics {#misleading-graphics}
+
+\rh{Maybe a small section could be included about bad graphics, and how people can mislead with bad graphics.}
 
 ## Perception and Psychophysics
-<!-- \rh{Can you provide other references about the "perceptual process"?} -->
 
 ### Perceptual Process
 
@@ -196,8 +185,6 @@ knitr::include_graphics("images/perceptual-process-goldsein-pg5.png")
 When perception occurs, we first experience the **preattentive stage** in which we observe color, shape, size, and other basic information about the stimuli being perceived. Preattentive perception effects are automatically processed within the first 500 milliseconds of viewing and do not depend on sustained cognitive attention [@vanderplas_testing_2020]. 
 Following the preattentive stage, **direct attention** is required for additional processing to allow us to draw connections between components that assist in our interpretation of the stimuli. 
 When viewing a chart or graph, most insights we gain are due to the cognitive processes that occur after attention is focused on specific aspects of the graph.
-<!-- The knowledge a viewer brings to the situation influences their cognitive evaluation of the stimuli. [@denes1993speech] -->
-<!-- \svp{Citation? You should probably also provide a bit more context for this piece of the paragraph instead of ending with dropping this one fact...} \rh{Agreed.} -->
 
 The relationship between physiology and perception can provide us information about how graphics may be understood and interpreted.
 <!-- \rh{How?} -->
@@ -206,30 +193,30 @@ For example, @furmanski2000oblique tested behavioral responses with functional m
 According to a cognitive analysis, graph interpretation involves (a) relatively simple pattern perception and association processes in which viewers can associate graphic patterns to quantitative referents and (b) more complex and error-prone inferential processes in which viewers must mentally transform data [@shah1999graphs].
 @shah1995conceptual established the process in which viewers interact with charts by first perceptually observing the visual features and later translating to cognitive processing of the information depicted by those features.
 A viewer must first encode the visual array by identifying meaningful visual features (for example, a straight light slanting downward). 
-Next, the viewer must classify the quantitative measures and relationships in which those visual features illustrate (for example, a decreasing linear relationship between x and y). 
+Next, the viewer must classify the quantitative measures and relationships which those visual features illustrate (for example, a decreasing linear relationship between x and y). 
 The last step involves translating the quantitative measures and relationships to the variables defined in the data set (for example, a population decreasing over years). 
 Psychophysics, the branch of psychology that deals with the relationships between physical stimuli (for example, light) and mental phenomena, aims to provide explanations of the relationship between physiology and perception and point out human perceptual biases. 
 By examining both behavior and physiology together, we are able to understand the mechanisms responsible for perception.
 
 ### Logarithmic Perception
-<!-- \svp{Weber's law isn't quite the same thing as the numerical cognition stuff on log scales - it's a different perceptual phenomenon that is definitely related, but distinct in causal mechanism (as far as I know).} -->
-<!-- \rh{Is there a reference for the actual "Weber's Law"? Please provide more connection between your text and the "Weber's Law".} -->
-Ernst Weber, an early psychophysics researcher, discovered a phenomenon known as Weber's law, by determining the relationship between the difference threshold (smallest detectable difference between two sensory stimuli; known as the "Just Noticeable Difference") and the magnitude of a stimulus [@fechner1860elemente]. 
+\svp{Weber's law isn't quite the same thing as the numerical cognition stuff on log scales - it's a different perceptual phenomenon that is definitely related, but distinct in causal mechanism (as far as I know).}
+\rh{Is there a reference for the actual "Weber's Law"? Please provide more connection between your text and the "Weber's Law".}
+Ernst Weber, an early psychophysics researcher, discovered a phenomenon known as Weber's law by determining the relationship between the difference threshold (smallest detectable difference between two sensory stimuli; known as the "Just Noticeable Difference") and the magnitude of a stimulus [@fechner1860elemente]. 
 This holds true for a variety of stimuli such as weight, light, and sound as well as for a range of magnitudes; larger numbers require a proportional larger difference in order to remain equally discriminate [@dehaene2008log]. 
 Known as **Weber's law**, it was established that we do not notice absolute changes in stimuli, but instead that we notice the relative change [@sun_framework_2012]. 
 Numerically, Weber's Law is defined as 
 \begin{equation}
 \frac{\Delta S}{S} = K
 \end{equation}
-where $\Delta S$ represents the difference threshold, S represents the initial stimulus intensity, and K is called Weber's contrast which remains constant as the magnitude of S changes. 
+where $\Delta S$ represents the difference threshold, $S$ represents the initial stimulus intensity, and $K$ is called Weber's contrast which remains constant as the magnitude of $S$ changes. 
 Gustav Fechner, a founder of psychophysics, provided further extension to Weber's law by discovering the relationship between the perceived intensity is logarithmic to the stimulus intensity when observed above a minimal threshold of perception [@sun_framework_2012]. 
 Formally known as the Weber-Fechner law, it is derived from Weber's law as
 \begin{equation}
 P = K\ln \frac{S}{S_0}
 \end{equation}
-where P represents the perceived stimulus, K represents Weber's contrast, S represents the initial stimulus intensity, and $S_0$ represents the minimal threshold of perception.
+where $P$ represents the perceived stimulus, $K$ represents Weber's contrast, $S$ represents the initial stimulus intensity, and $S_0$ represents the minimal threshold of perception.
 
-## Graphical Experiments
+## Graphical Experiments {#lit-graphical-experiments}
 
 One way in which we determine the relationship between behavior and physiology is through the use of graphical tests [@cleveland_graphical_1984; @spence_visual_1990; @lewandowsky_perception_1989; @vanderplas2015spatial].
 <!-- \rh{can you provide references? Especially for the examples?} -->
@@ -255,7 +242,7 @@ knitr::include_graphics("images/eells-component-parts.png")
 
 While a typical psychophysics experiment focuses on whether an effect is detectable and whether the magnitude of the effect can be accurately estimated, these early experiments instead depended on speed and accuracy for plot evaluation [@spence_visual_1990; @teghtsoonian1965judgment; @lewandowsky_perception_1989]. 
 <!-- \rh{Examples?} -->
-In attempts to understand the visual psychophysics of simple graphical elements, @spence_visual_1990, presented stimuli (tables, lines - horizontal and vertical, bars, boxes, cylinders, pie charts, and disk charts) to participants on a monitor screen in a computer lab. 
+In attempts to understand the visual psychophysics of simple graphical elements, @spence_visual_1990 presented stimuli (tables, lines - horizontal and vertical, bars, boxes, cylinders, pie charts, and disk charts) to participants on a monitor screen in a computer lab. 
 Participants were asked to use their cursor to position the marker to indicate the proportion to the apparent sizes of the elements \pcref{fig:spence-1990-proportion}.
 Results found that the table elements (numbers), pie elements, and bar elements led to the most accurate proportion estimates; boxes and disk elements resulted in the least accurate estimates.
 Measuring the speed at which participants made their judgments, it was found that two- and three- dimensional stimuli (for example, pie charts and box charts) assisted in faster judgment than zero- or one- dimensional stimuli (for example, tables and lines).
@@ -282,11 +269,11 @@ The goal of the study was to assess the relative accuracy with which quantitativ
 Participants were strictly informed that the experiment was designed to test the ability of individuals to "read" or "decode" statistical maps and asked to write down their estimate of the murder rate as accurately as possible beside the 24 named states. 
 Results indicate that subjects found it easier to extract quantitative information from the framed rectangle chart than from the unclassed choropleth map and that the between individual variability in the choropleth map was related to the area of the state. 
 
-```{r amer-poggendorff-illusion, fig.cap = "Amer (2005) cost volume profit graph", out.width="90%"}
+```{r amer-poggendorff-illusion, fig.cap = "Amer (2005) cost volume profit graph", out.width="100%"}
 knitr::include_graphics("images/amer-poggendorff-illusion.png")
 ```
 
-```{r framed-murder-rate-map, fig.cap = "Dunn (1988) maps", out.width="90%"}
+```{r framed-murder-rate-map, fig.cap = "Dunn (1988) maps", out.width="100%"}
 knitr::include_graphics("images/framed-murder-rate-map.png")
 ```
 
@@ -294,9 +281,8 @@ During the $\text{21}^{\text{st}}$ century, there have been advancements in the 
 @buja_statistical_2009 introduced the lineup protocol in which data plots are depicted and interpreted as statistics. 
 Supported by the grammar of graphics, a data plot can be characterized as a statistic, defined as, "a functional mapping of a variable or set of variables" [@vanderplas_testing_2020].
 This allows the data plot to be tested similar to other statistics, by comparing the actual data plot to a set of plots with the absence of any data structure we can test the likelihood of any perceived structure being significant.
-The construction of data plots as statistics allow for easy experimentation, granting researchers the ability to compare the effectiveness of and understand the perception of different types of charts.
-While the lineup protocol differs from methodology used in earlier studies, the focus is still on initial perception and graph comprehension with a relatively small amount of work conducted to understand the effect of design choices on higher cognitive processes such as learning or analysis [@green2009personal]. 
-<!-- \svp{This is in part because lineups only ask about perceived differences and do not test the actual ability to read information off of a graph accurately or the conclusions drawn from the graph. They are a lower-level tool, which makes them powerful because they can eliminate ambiguous questions, but also limits their real-world application in the absence of complex experimental designs (feature hierarchy, etc.).} -->
+The construction of data plots as statistics allows for easy experimentation, granting researchers the ability to compare the effectiveness of and understand the perception of different types of charts.
+While the lineup protocol differs from methodology used in earlier studies, the focus is still on initial perception with a relatively small amount of work conducted to understand the effect of design choices on higher cognitive processes such as learning or analysis [@green2009personal]. 
 Lineups serve as a powerful tool for testing *perceived* differences by eliminating ambiguous questions. 
 However, the lineup protocol is constrained by the inability to test higher order cognitive skills such as accurately reading information off of a graph or drawing conclusions from the graph, limiting their ability to be used for testing real-world applications.
 
@@ -313,31 +299,29 @@ However, the lineup protocol is constrained by the inability to test higher orde
 
 ## Logarithmic Scales and Mapping
 
-```{r 91divoc-cases-july2021, fig.cap = "91-DOVIC New Daily Case Counts as of July 2021", out.width="90%"}
+```{r 91divoc-cases-july2021, fig.cap = "91-DOVIC New Daily Case Counts as of July 2021", out.width="100%"}
 knitr::include_graphics("images/91dovic-cases-july2021.png")
 ```
 
-```{r covid19-summer2020-risk-map, fig.cap = "COVID-19 Risk Level Map as of July 2020", out.width="90%"}
+```{r covid19-summer2020-risk-map, fig.cap = "COVID-19 Risk Level Map as of July 2020", out.width="100%"}
 knitr::include_graphics("images/covid19-summer2020-risk-map.png")
 ```
 
 We have recently experienced the impact graphics and charts have on a large scale through the SARSNCOV-2 pandemic (COVID-19). 
-<!-- \rh{please provide a LOT of examples here for sentence 1 (and actual examples describing why they are good/bad)} -->
 At the beginning of 2020, we saw an influx of dashboards being developed to display case counts, transmission rates, and outbreak regions [@rost_2020]; mass media routinely showed charts to share information with the public about the progression of the pandemic [@romano_scale_2020]. 
 @fagen-ulmschneider_2020 began the 91-DIVOC project to explore the global growth of COVID-19 through interactive graphics updated daily. 
 The interactive graphics allowed viewers to explore the current status of COVID-19 by selecting their desired regions, axes, axis scale, and measure of interest (for example, case count, death count, and vaccine count); \cref{fig:91divoc-cases-july2021} [@fagen-ulmschneider_2020] shows the new confirmed COVID-19 cases per day, normalized by population, as of July 2021. 
 Other graphics displayed COVID-19 data as maps \pcref{fig:covid19-summer2020-risk-map} with color indicating the severity and risk in each US county [@global_epidemics_2021].
 People began seeking out graphical displays of COVID-19 data as a direct result of these pieces of work [@rost_2020]; providing increased and ongoing exposure to these graphics over time. 
 \cref{fig:covid19-datawrapper-views-july2020} illustrates the increased views Datawrapper, a user-friendly web tool used to create basic interactive charts, had during the COVID-19 pandemic [@rost_2020].
-<!-- \svp{It would be appropriate to add some of those graphics in here, if you wanted to...} -->
 Many of these graphics helped guide decision makers to implement policies such as shut-downs or mandated mask wearing, as well as facilitated communication with the public to increase compliance [@bavel_using_2020]. 
 As graphics began to play an important role in the communication of the pandemic, creators of graphics were faced with design choices in order to ensure their charts were effective at accurately communicating the current status of the pandemic. 
 
-```{r covid19-datawrapper-views-july2020, fig.cap = "Datawrapper daily chart views during COVID-19", out.width="90%"}
+```{r covid19-datawrapper-views-july2020, fig.cap = "Datawrapper daily chart views during COVID-19", out.width="100%"}
 knitr::include_graphics("images/covid19-datawrapper-views-july2020.png")
 ```
 
-```{r log-scale-comic, include = T, fig.cap = "Usefulness of the log scale in science", out.width="70%"}
+```{r log-scale-comic, include = T, fig.cap = "Usefulness of the log scale in science", out.width="100%"}
 knitr::include_graphics("images/log-scale-comic.png")
 ```
 
@@ -351,7 +335,7 @@ Exponential curves are a common source of data in which smaller magnitudes are c
 Logarithms convert multiplicative relationships (for example, 1 \& 10 displayed 10 units apart and 10 \& 100 displayed 90 units apart) to additive relationships (for example, 1 \& 10 and 10 \& 100 both equally spaced along the axis), showing proportional relationships and linearizing power functions [@menge_logarithmic_2018].
 They also have practical purposes, easing the computation of small numbers such as likelihoods and transforming data to fit statistical assumptions.
 When presenting log scaled data, it is possible to use either un-transformed scale labels (for example, values of 1, 10 and 100 are equally spaced along the axis) or log transformed scale labels (for example, 0, 1, and 2, showing the corresponding powers of 10).
-<!-- \svp{In the grammar of graphics/ggplot2 formulation, this is the difference between a scale and a transformation... it might be worth seeing if that is a hadley-ism or if that is a wider convention.} -->
+\svp{In the grammar of graphics/ggplot2 formulation, this is the difference between a scale and a transformation... it might be worth seeing if that is a hadley-ism or if that is a wider convention.}
 
 ```{r log-scales, fig.cap = "Linear scale verses log scale", out.width="100%"}
 data <- tibble(x = seq(0,10, by = 0.1), y = exp(x))
@@ -417,7 +401,7 @@ There are long histories of using log scales to display results in ecology, psyc
 In @waddell2005comparisons, comparisons were made between the linear and logarithmic scales for the relationship between dosage and carcinogenicity in rodents.
 Results favored the use of logarithmic scales for doses in order to put the relative doses into perspective whereas using a linear scale to administer doses to animals with the same chemicals to which humans are exposed does not provide useful, comparative information.
 Given the widespread use of logarithmic scales, it is important to understand the implications of their use in order to provide guidelines for best use.
-<!-- \svp{elaborate on this a bit - when are they used, and where are they effective? Can you draw more comprehensive conclusions about the use of log scales?}. -->
+\svp{elaborate on this a bit - when are they used, and where are they effective? Can you draw more comprehensive conclusions about the use of log scales?}.
 
 ```{r covid19-FT-deaths-march2020-log, fig.cap = "Covid 19 Deaths (log scale) as of March 23, 2020", out.width="90%"}
 knitr::include_graphics("images/covid19-FT-03.23.2020-log.png")
@@ -431,14 +415,11 @@ knitr::include_graphics("images/covid19-FT-case-count-06.30.2020-linear.png")
 ```{r covid19-FT-june2020-case-counts-log, fig.cap = "Covid 19 Case Counts (log scale) as of June 30, 2020", out.width="90%"}
 knitr::include_graphics("images/covid19-FT-case-count-06.30.2020-log.png")
 ```
-<!-- \svp{You might start this out by pointing out that while logarithms seem unnatural at first, we learn to count by ones, tens, and hundreds -- that is, in a base10 order of magnitude system. Then you can transition to research showing one, two, 10 and log-number scales.} -->
 
 When we first learn to count, we begin counting by ones (for example, 1, 2, 3, etc.), then by tens (for example, 10, 20, 30, etc.), and advancing to hundreds (for example, 100, 200, 300, etc.), following the base10 order of magnitude system (for example, 1, 10, 100, etc.).
 Research suggests our perception and mapping of numbers to a number line is logarithmic at first, but transitions to a linear scale later in development, with formal mathematics education [@siegler_numerical_2017; @siegler_numerical_2017; @varshney_why_2013; @dehaene2008log].
 For example, a kindergartner asked to place numbers one through ten along a number line would place three close to the middle, following the logarithmic perspective [@varshney_why_2013]; \cref{fig:log-number-line} demonstrates how a kindergartner might map numbers along a number line. 
-<!-- \svp{Might be worth showing this graphically if you can reproduce pics from the paper...} -->
 @dehaene2008log found that with basic training, members of remote cultures with a basic vocabulary and minimal education understood the concept that numbers can be mapped into a spacial space; for example, numbers can be mapped to a number line or numbers can be mapped onto a clock. 
-<!-- \rh{Please explain.} -->
 There was a gradual transition from logarithmic to linear scale as the mapping of whole number magnitude representations transitioned from a compressed (approximately logarithmic) distribution to an approximately linear one. 
 These results indicate the universal and cultural-dependent characteristics of the sense of number. 
 
@@ -476,8 +457,6 @@ The idea is compression enlarges the coding space, thus increasing the dynamic r
 Similar to the training and education required to transition from logarithmic mapping to linear mapping, there is also necessary training required in the assessment of graphical displays associated with logarithmic scales. @haemer_presentation_1949 identify semi-logarithmic charts for temporal series as requiring a certain degree of technical training.
     
 ## Underestimation of Exponential Growth {#underestimation}
-<!-- \svp{Start out by showing exponential growth e.g. 3 stages (early, mid, late) to explain why this is a hard problem to solve...} -->
-<!-- \svp{This reads like a bulleted list turned into a paragraph, which isn't bad, but it does need some work - turn it into a narrative, explain weaknesses in these studies, etc.} -->
 
 ```{r exponential-stages, include = F, fig.cap = "Stages of exponential growth", out.width = "75%"}
 data <- tibble(x = seq(0,6,0.001),
@@ -522,8 +501,6 @@ These misconceptions are a result of linear extrapolation assuming that a line i
 knitr::include_graphics("images/menge-plots.png")
 ```
 
-<!-- \svp{You might take a whack at illustrating some of these fallacies} -->
-<!-- \rh{Menge's example should be visually illustrated.} -->
 The 'hand-hold fallacy' stems from the misconception that steeper slopes in log-log relationships are steeper slopes in linear-linear space, illustrated in \cref{fig:menge-plots} d-f. 
 In fact, it is not only the slope that matters, but also the intercept and the location on the horizontal axis since a line in log-log space represents a power law in linear-linear space (linear extrapolation). 
 Emerging from 'Zeno's zero fallacy' is the misconception that positively sloped lines in log-log space can imply a non-zero value of y when x is zero, illustrated in \cref{fig:menge-plots} a-c and d-f.
@@ -531,8 +508,6 @@ This is never true as positively sloped lines in log-log space actually imply th
 The last misconception, 'watch out for curves fallacies' encompasses three faults: (1) lines in log-log space are lines in linear-linear space, illustrated in \cref{fig:menge-plots} d-f, (2) lines in log-log space curve upward in linear-linear space, illustrated in \cref{fig:menge-plots} d-f, and (3) curves in log-log space have the same curvature in linear-linear space, illustrated in \cref{fig:menge-plots} g-i. 
 Linear extrapolation is again responsible for the first and third faults while the second fault is a result of error in thinking that log-log lines represent power laws, and all exponential relationships curve upward; this is only true when the log-log slope is greater than one. 
 @menge_logarithmic_2018 found that in each of these scenarios, participants were confident in their incorrect responses, indicating incorrect knowledge rather than a lack of knowledge.
-
-<!-- ## Risk Assessment -->
 
 ## Research Objectives
 In my research, I conduct three graphical experimental tasks to evaluate the impact displaying data on the log scale has on human perception of exponentially increasing trends compared to displaying data on the linear scale.
@@ -542,4 +517,4 @@ To test an individual's ability to make predictions for exponentially increasing
 In addition to differentiation and prediction of exponentially increasing data, an experimental task was conducted to test an individuals' ability to translate a graph of exponentially increasing data into real value quantities and extend their estimations by making comparisons. 
 The results of the three experimental tasks provide guidelines for readers to actively choose which of many possible graphics to draw, according to some set of design choices, to ensure their charts are effective.
 
-<!-- \svp{Things that seem to be missing: 1) Cleveland and McGill - hierarchy of accuracy in plot objects. You can think of e.g. exponentials as a series of tangential angles, which might help with explaining underestimation? 2) some literature explaining the different levels of complexity between perception, reading information off of a graph, predicting information, etc. - you should find this if only because it grounds the whole experiment in psychological theory (but you don't have to find it for your prelim)} -->
+\svp{Things that seem to be missing: 1) Cleveland and McGill - hierarchy of accuracy in plot objects. You can think of e.g. exponentials as a series of tangential angles, which might help with explaining underestimation? 2) some literature explaining the different levels of complexity between perception, reading information off of a graph, predicting information, etc. - you should find this if only because it grounds the whole experiment in psychological theory (but you don't have to find it for your prelim)}
