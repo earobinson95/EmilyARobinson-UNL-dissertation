@@ -13,7 +13,6 @@ fig:children-height
 fig:91divoc-cases-july2021
 fig:covid19-summer2020-risk-map
 fig:covid19-datawrapper-views-july2020
-fig:log-scale-comic
 fig:log-scales
 fig:covid19-FT-deaths-march2020-log
 fig:covid19-FT-june2020-case-counts-linear
@@ -80,7 +79,7 @@ lit-graphical-experiments
 graph-comprehension
 questioning
 estimation-strategies
-anchoring-and-rounding-errors
+estimation-biases
 motivation-and-background
 logarithmic-scales-and-mapping
 underestimation

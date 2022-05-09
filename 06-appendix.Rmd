@@ -501,7 +501,7 @@ qe1_compare_work <- qe1_data %>%
   geom_vline(aes(xintercept = closest_pt_value, linetype = "Closest Point")) +
   facet_grid(dataset ~ scale, scales = "free_y") +
   theme_bw() +
-  theme(aspect.ratio = 1) +
+  theme(aspect.ratio = 1) + 
   scale_fill_manual(values = c("steelblue", "orange3")) +
   scale_linetype_manual("Actual Value", values = c("dashed", "dotted")) +
   # coord_cartesian(xlim = c(0,1000), ylim = c(0, 0.1)) +

@@ -276,7 +276,10 @@ Thank you to all my people!
 \hypertarget{statistical-graphics}{%
 \section{Statistical Graphics}\label{statistical-graphics}}
 
-Advanced technology and computing power have promoted data visualization as a central tool in modern data science. Unwin (2020) defines data visualization as the art of drawing graphical charts in order to display data. Graphics are useful for data cleaning, exploring data structure, and have been an essential component in communicating information for the last 200 years (Lewandowsky \& Spence, 1989).
+Advanced technology and computing power have promoted data visualization as a central tool in modern data science. Unwin (2020) defines data visualization as the art of drawing graphical charts in order to display data.
+Graphics are useful for data cleaning, exploring data structure, and have been an essential component in communicating information for the last 200 years (Lewandowsky \& Spence, 1989).
+This chapter aims to provide an overview of statistical graphics as they relate to effective communication in science and the media.
+We examine how our interpretation is affected by our interaction with graphics through cognitive tasks of differing levels of complexity, and then introduce the
 
 \hypertarget{history-of-graphics}{%
 \subsection{History of Graphics}\label{history-of-graphics}}
@@ -304,7 +307,7 @@ Today, we encounter data visualizations everywhere; researchers include graphics
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.9\linewidth,]{images/statistical-atlas-state-population} 
+{\centering \includegraphics[width=0.85\linewidth,]{images/statistical-atlas-state-population} 
 
 }
 
@@ -313,7 +316,7 @@ Today, we encounter data visualizations everywhere; researchers include graphics
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.9\linewidth,]{images/ATandT-revenue} 
+{\centering \includegraphics[width=0.85\linewidth,]{images/ATandT-revenue} 
 
 }
 
@@ -350,7 +353,7 @@ Shortly after the graphic was released, the governor's office made a statement t
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.9\linewidth,]{images/percent-who-agree-with-count} 
+{\centering \includegraphics[width=0.85\linewidth,]{images/percent-who-agree-with-count} 
 
 }
 
@@ -359,7 +362,7 @@ Shortly after the graphic was released, the governor's office made a statement t
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.9\linewidth,]{images/covid-ga-recreation} 
+{\centering \includegraphics[width=0.85\linewidth,]{images/covid-ga-recreation} 
 
 }
 
@@ -405,7 +408,7 @@ In order to develop guiding principles for generating graphics effective in comm
 \subsection{Perceptual Process}\label{perceptual-process}}
 
 The perceptual process is a sequence of steps used to describe a how a stimulus in the environment leads to our perception of the stimulus and action in response to the stimulus \pcref{fig:perceptual-process}.
-This process is separated into sensation (Carlson, 2010) - involving simple processes that occur right at the beginning of a sensory system - and perception (Myers \& DeWall, 2021) - involving higher-order mechanisms and identified with more complex processes.
+This process is separated into sensation (Carlson, 2010) - involving simple processes that occur right at the beginning of a sensory system - and perception (D. G. Myers \& DeWall, 2021) - involving higher-order mechanisms and identified with more complex processes.
 
 The perceptual process begins when there is a stimulus in the environment and light is reflected and focused back into the viewer's eyes.
 Within the eye, the light reflected is transformed and focused by the eye's optical system and an image is formed on the receptors of the viewer's retina.
@@ -587,7 +590,7 @@ Lastly, extension items required an extension, prediction, or inference such as,
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=1\linewidth,]{images/children-height} 
+{\centering \includegraphics[width=0.8\linewidth,]{images/children-height} 
 
 }
 
@@ -618,28 +621,20 @@ M. G. Jones, Gardner, Taylor, Forrester, \& Andre (2012) examined the effect of 
 The study showed that students were less accurate in estimating metric units as compared to English units and that estimation accuracy was highly dependent on task context.
 Forrester, Latham, \& Shire (1990) argues that estimation, approximating, and measuring are key components in the intuitive understanding of dimension and scale necessary to manipulate information and interact effectively with our environment.
 
-\hypertarget{anchoring-and-rounding-errors}{%
-\subsection{Anchoring and Rounding Errors}\label{anchoring-and-rounding-errors}}
+\hypertarget{estimation-biases}{%
+\subsection{Estimation Biases}\label{estimation-biases}}
 
-\begin{itemize}
-\tightlist
-\item
-  Beeby and Taylor (cited in MacDonald-Ross, 1977) found that in reading data from line graphs, people persistently misread the scale on the vertical axis; when only alternate lines were numbered, the unnumbered lines were read as halves.
-\item
-  Dunham and Osborne (1991) found that if students do not attend to scale when they use line graphs for lab or stat data, they may have problems in interpreting asymmetric scales and in choosing appropriate scales to make good use of the grpahing space.
-\item
-  Leinhardt, Zaslavsky, and Stein (1990) noted that the shape of a graph changes depending on the scale; this change may create a ``conceptual demand'' (p.17) that affects the mental image a graph user is able to construct.
-\end{itemize}
+Certain biases including anchoring and rounding to multiples of 5 or 10 arise in open-ended estimation tasks.
+When it comes to understading graphics, anchoring is prominent in both graphical representations and data extraction tasks (Joseph KH Tan \& Benbasat, 1990).
+Anchoring bias refers to an individual using easily observed visual cues such as gridlines or ``anchors'' when extracting information such as the \(x\) or \(y\) value on a chart (Joseph K. Tan, 1994 ; Godlonton, Hernandez, \& Murphy, 2018).
+Rounding baises occur out of natural human preference to provide rounded figures even if a precise estimate is desired or requested (R. J. Myers, 1954).
+Schneeweiss, Komlos, \& Ahmad (2010) outlines distortion in results as a consequence of rounding and suggests the use of corrections when conducting statistical regression analyses on data prone to rounding.
 
-Joseph K. Tan (1994) (\url{https://www.tandfonline.com/doi/pdf/10.1080/10447319409526104})
-
-\begin{itemize}
-\tightlist
-\item
-  Joseph KH Tan \& Benbasat (1990) introduced the notion of anchoring for reading and understanding two-dimensional graphics and applied the concept to generate two taxonomies: one for graphical representations and the other for data-extraction tasks. Anchoring is the segmentation of a graphical image into specific and diverse parts that act as salient and relevant cues, or ``anchors,'' when extracting different classes of information (e.g., x-value, y-value, and entity information).
-\item
-  It is therefore a decomposition strategy that graph readers use when processing two-dimensional graphics. Put in this context, Tan and Benbasat noted (1990) that there are three graphical design components where information anchoring can be operationally characterized: (a) x-value component, (b) y-value component, and (c) entity component.
-\end{itemize}
+Scale and axis labels are other critical factors in estimation accuracy.
+Dunham \& Osborne (1991) argue that if there is not proper attention given to the scale when using a line graph, there is a potential for issues when interpretting asymmetric scales and when choosing appropriate scales for the graphic.
+Beeby \& Taylor (1973) found that when asked to read data from line graphs, viewers consistentely misread the \(y\)-axis scale; when alternate grid lines were labeled, the unlabeled grid lines were read as halves.
+This misrepresentation is highlighted for assymetric scales where spatial distance does not necessarily equate to numerical or quantiative difference.
+The choice of scale can change the shape of a graph, thus creating a conceptual demand for the viewer when constructing a mental image of the graph (Leinhardt, Zaslavsky, \& Stein, 1990).
 
 \hypertarget{motivation-and-background}{%
 \section{Motivation and Background}\label{motivation-and-background}}
@@ -684,18 +679,8 @@ As graphics began to play an important role in the communication of the pandemic
 \hypertarget{logarithmic-scales-and-mapping}{%
 \subsection{Logarithmic Scales and Mapping}\label{logarithmic-scales-and-mapping}}
 
-\begin{figure}[tbp]
-
-{\centering \includegraphics[width=1\linewidth,]{images/log-scale-comic} 
-
-}
-
-\caption{Usefulness of the log scale in science}\label{fig:log-scale-comic}
-\end{figure}
-
 When faced with data which spans several orders of magnitude, we must decide whether to show the data on its original scale (compressing the smaller magnitudes into relatively little area) or to transform the scale and alter the contextual appearance of the data.
 One common solution is to use a log scale transformation to display data over several orders of magnitude within one graph.
-The usefulness of the log scale in science is illustrated in \cref{fig:log-scale-comic} (Munroe, 2005) showing the challenge of displaying the fuel energy density of Uranium along side other sources of fuel due to differences in magnitude of density.
 Exponential curves are a common source of data in which smaller magnitudes are compressed into a smaller area;
 \cref{fig:log-scales} presents an exponential curve displayed on both the linear and log scale illustrating the use of the log scale when displaying data which spans several magnitudes.
 Logarithms convert multiplicative relationships (for example, 1 \& 10 displayed 10 units apart and 10 \& 100 displayed 90 units apart) to additive relationships (for example, 1 \& 10 and 10 \& 100 both equally spaced along the axis), showing proportional relationships and linearizing power functions (Menge et al., 2018).
@@ -823,12 +808,15 @@ Menge et al. (2018) found that in each of these scenarios, participants were con
 \hypertarget{research-objectives}{%
 \section{Research Objectives}\label{research-objectives}}
 
-In this research, we conducted three graphical experimental tasks to evaluate the impact displaying data on the log scale has on human perception of exponentially increasing trends compared to displaying data on the linear scale.
-The first experiment evaluates whether our ability to perceptually notice differences in exponentially increasing trends is impacted by the choice of scale. I conducted a visual inference experiment in which participants were shown a series of lineups and asked to identify the plot that differed most from the surrounding plots.
+In this research, we conducted a series of three graphical studies to evaluate the impact displaying data on the log scale has on human perception of exponentially increasing trends compared to displaying data on the linear scale.
+Each study was related to a different graphical task, each requring a different level of interaction and cognitive use of the data being presented.
+The first experiment evaluated whether our ability to perceptually notice differences in exponentially increasing trends is impacted by the choice of scale.
+We conducted a visual inference experiment in which participants were shown a series of lineups and asked to identify the plot that differed most from the surrounding plots.
 The other experimental tasks focus on determining whether there are cognitive disadvantages to log scales: do log scales make it harder to make use of graphical information?
 To test an individual's ability to make predictions for exponentially increasing data, participants were asked to draw a line using their computer mouse through an exponentially increasing trend shown on both the linear and log scale.
-In addition to differentiation and prediction of exponentially increasing data, an experimental task was conducted to test an individuals' ability to translate a graph of exponentially increasing data into real value quantities and extend their estimations by making comparisons.
-The results of the three experimental tasks provide guidelines for readers to actively choose which of many possible graphics to draw, according to some set of design choices, to ensure their charts are effective.
+In addition to differentiation and prediction of exponentially increasing data, an estimation task was conducted to test an individuals' ability to translate a graph of exponentially increasing data into real value quantities and extend their estimations by making comparisons.
+Combined, the three studies provide a comprehensive evaluation of the impact of displaying exponentially increasing data on a log scale as it relates to perception, prediction, and estimation.
+The results of these studies help us to make reccommendations and provide guidelines for the use of log scales.
 
 \hypertarget{lineups}{%
 \chapter{Perception through lineups}\label{lineups}}
@@ -1520,6 +1508,11 @@ The three behaviors related to graph comprehension involve (1) literal reading o
 \subsection{Rounding Estimates \& Anchoring}\label{rounding-estimates-anchoring}}
 
 Certain well-known biases such as the tendency to round to multiples of five or ten or to anchor estimates to visual cues arise from open-ended estimation tasks \ear{CITE AND ELABORATE}.
+
+Beeby and Taylor (cited in MacDonald-Ross, 1977) found that in reading data from line graphs, people persistently misread the scale on the vertical axis; when only alternate lines were numbered, the unnumbered lines were read as halves.
+
+Dunham and Osborne (1991) found that if students do not attend to scale when they use line graphs for lab or stat data, they may have problems in interpreting asymmetric scales and in choosing appropriate scales to make good use of the grpahing space.
++ Leinhardt, Zaslavsky, and Stein (1990) noted that the shape of a graph changes depending on the scale; this change may create a ``conceptual demand'' (p.17) that affects the mental image a graph user is able to construct.
 
 \hypertarget{study-design-2}{%
 \section{Study Design}\label{study-design-2}}
@@ -2228,6 +2221,9 @@ Bavel, J. J. V., Baicker, K., Boggio, P. S., Capraro, V., Cichocka, A., Cikara, 
 \leavevmode\vadjust pre{\hypertarget{ref-becker2019trackr}{}}%
 Becker, G., Moore, S. E., \& Lawrence, M. (2019). Trackr: A framework for enhancing discoverability and reproducibility of data visualizations and other artifacts in r. \emph{Journal of Computational and Graphical Statistics}, \emph{28}(3), 644--658.
 
+\leavevmode\vadjust pre{\hypertarget{ref-beeby1973well}{}}%
+Beeby, A., \& Taylor, H. (1973). How well can we use graphs. \emph{The Communicator of Scientific and Technical Information}, \emph{17}, 7--11.
+
 \leavevmode\vadjust pre{\hypertarget{ref-best_perception_2007}{}}%
 Best, L. A., Smith, L. D., \& Stubbs, D. A. (2007). Perception of {Linear} and {Nonlinear} {Trends}: {Using} {Slope} and {Curvature} {Information} to {Make} {Trend} {Discriminations}. \emph{Perceptual and Motor Skills}, \emph{104}(3), 707--721. http://doi.org/\href{https://doi.org/10.2466/pms.104.3.707-721}{10.2466/pms.104.3.707-721}
 
@@ -2276,6 +2272,9 @@ Dehaene, S., Izard, V., Spelke, E., \& Pica, P. (2008). Log or linear? Distinct 
 \leavevmode\vadjust pre{\hypertarget{ref-deming1943statistical}{}}%
 Deming, W. E. (1943). Statistical adjustment of data.
 
+\leavevmode\vadjust pre{\hypertarget{ref-dunham1991learning}{}}%
+Dunham, P. H., \& Osborne, A. (1991). Learning how to see: Students graphing difficulties. \emph{Focus on Learning Problems in Mathematics}, \emph{13}(4), 35--49.
+
 \leavevmode\vadjust pre{\hypertarget{ref-dunn1988framed}{}}%
 Dunn, R. (1988). Framed rectangle charts or statistical maps with shading: An experiment in graphical perception. \emph{The American Statistician}, \emph{42}(2), 123--129.
 
@@ -2311,6 +2310,9 @@ Furmanski, C. S., \& Engel, S. A. (2000). An oblique effect in human primary vis
 
 \leavevmode\vadjust pre{\hypertarget{ref-glazer2011challenges}{}}%
 Glazer, N. (2011). Challenges with graph interpretation: A review of the literature. \emph{Studies in Science Education}, \emph{47}(2), 183--210.
+
+\leavevmode\vadjust pre{\hypertarget{ref-godlonton2018anchoring}{}}%
+Godlonton, S., Hernandez, M. A., \& Murphy, M. (2018). Anchoring bias in recall data: Evidence from central america. \emph{American Journal of Agricultural Economics}, \emph{100}(2), 479--501.
 
 \leavevmode\vadjust pre{\hypertarget{ref-goldstein_sensation_2017}{}}%
 Goldstein, E. B., \& Brockmole, J. R. (2017). Sensation and {Perception}, 480.
@@ -2363,6 +2365,9 @@ Katz, J. (2017, April). You draw it: Just how bad is the drug overdose epidemic?
 \leavevmode\vadjust pre{\hypertarget{ref-kruskal1975visions}{}}%
 Kruskal, W. (1975). Visions of maps and graphs. In \emph{Proceedings of the international symposium on computer-assisted cartography, auto-carto II} (pp. 27--36). Citeseer.
 
+\leavevmode\vadjust pre{\hypertarget{ref-leinhardt1990functions}{}}%
+Leinhardt, G., Zaslavsky, O., \& Stein, M. K. (1990). Functions, graphs, and graphing: Tasks, learning, and teaching. \emph{Review of Educational Research}, \emph{60}(1), 1--64.
+
 \leavevmode\vadjust pre{\hypertarget{ref-emmeans}{}}%
 Lenth, R. V. (2021). \emph{Emmeans: Estimated marginal means, aka least-squares means}. Retrieved from \url{https://CRAN.R-project.org/package=emmeans}
 
@@ -2399,11 +2404,11 @@ Misleading graphs: Real life examples. (2022, January). \emph{Statistics How To}
 \leavevmode\vadjust pre{\hypertarget{ref-mosteller_eye_1981}{}}%
 Mosteller, F., Siegel, A. F., Trapido, E., \& Youtz, C. (1981). Eye fitting straight lines. \emph{The American Statistician}, \emph{35}(3), 150--152.
 
-\leavevmode\vadjust pre{\hypertarget{ref-munroe_2005}{}}%
-Munroe, R. (2005). Log scale. \emph{xkcd: A webcomic of romance, sarcasm, math, and language}. Creative Commons. Retrieved from \url{https://xkcd.com/1162/}
-
 \leavevmode\vadjust pre{\hypertarget{ref-myers_dewall_2021}{}}%
 Myers, D. G., \& DeWall, C. N. (2021). \emph{Psychology}. Worth Publishers.
+
+\leavevmode\vadjust pre{\hypertarget{ref-myers1954accuracy}{}}%
+Myers, R. J. (1954). Accuracy of age reporting in the 1950 united states census. \emph{Journal of the American Statistical Association}, \emph{49}(268), 826--831.
 
 \leavevmode\vadjust pre{\hypertarget{ref-nieder2003coding}{}}%
 Nieder, A., \& Miller, E. K. (2003). Coding of cognitive magnitude: Compressed scaling of numerical information in the primate prefrontal cortex. \emph{Neuron}, \emph{37}(1), 149--157.
@@ -2431,6 +2436,9 @@ Rost, L. C. (2020, December). You've informed the public with visualizations abo
 
 \leavevmode\vadjust pre{\hypertarget{ref-ryanabest_2021}{}}%
 Ryanabest. (2021, June). Build an NBA contender with our roster-shuffling machine. \emph{FiveThirtyEight}. Retrieved from \url{https://projects.fivethirtyeight.com/nba-trades-2021/}
+
+\leavevmode\vadjust pre{\hypertarget{ref-schneeweiss2010symmetric}{}}%
+Schneeweiss, H., Komlos, J., \& Ahmad, A. S. (2010). Symmetric and asymmetric rounding: A review and some new results. \emph{AStA Advances in Statistical Analysis}, \emph{94}(3), 247--271.
 
 \leavevmode\vadjust pre{\hypertarget{ref-shah1995conceptual}{}}%
 Shah, P., \& Carpenter, P. A. (1995). Conceptual limitations in comprehending line graphs. \emph{Journal of Experimental Psychology: General}, \emph{124}(1), 43.

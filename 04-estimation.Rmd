@@ -101,6 +101,11 @@ The three behaviors related to graph comprehension involve (1) literal reading o
 
 Certain well-known biases such as the tendency to round to multiples of five or ten or to anchor estimates to visual cues arise from open-ended estimation tasks \ear{CITE AND ELABORATE}.
 
+Beeby and Taylor (cited in MacDonald-Ross, 1977) found that in reading data from line graphs, people persistently misread the scale on the vertical axis; when only alternate lines were numbered, the unnumbered lines were read as halves.
+
+ Dunham and Osborne (1991) found that if students do not attend to scale when they use line graphs for lab or stat data, they may have problems in interpreting asymmetric scales and in choosing appropriate scales to make good use of the grpahing space.
++ Leinhardt, Zaslavsky, and Stein (1990) noted that the shape of a graph changes depending on the scale; this change may create a “conceptual demand” (p.17) that affects the mental image a graph user is able to construct.
+
 ## Study Design
 
 Participants in this study were asked to answer six questions related to each of two contextual scenarios and an associated scatter plot shown for a total of twelve questions. 

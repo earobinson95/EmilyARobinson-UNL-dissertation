@@ -84,7 +84,10 @@ library(formatR)
 
 ## Statistical Graphics
 
-Advanced technology and computing power have promoted data visualization as a central tool in modern data science. @unwin_why_2020 defines data visualization as the art of drawing graphical charts in order to display data. Graphics are useful for data cleaning, exploring data structure, and have been an essential component in communicating information for the last 200 years [@lewandowsky_perception_1989].
+Advanced technology and computing power have promoted data visualization as a central tool in modern data science. @unwin_why_2020 defines data visualization as the art of drawing graphical charts in order to display data. 
+Graphics are useful for data cleaning, exploring data structure, and have been an essential component in communicating information for the last 200 years [@lewandowsky_perception_1989]. 
+This chapter aims to provide an overview of statistical graphics as they relate to effective communication in science and the media.
+We examine how our interpretation is affected by our interaction with graphics through cognitive tasks of differing levels of complexity, and then introduce the 
 
 ### History of Graphics
 
@@ -366,16 +369,19 @@ Results from the study found that students who used a reference point had a more
 The study showed that students were less accurate in estimating metric units as compared to English units and that estimation accuracy was highly dependent on task context. 
 @forrester1990exploring argues that estimation, approximating, and measuring are key components in the intuitive understanding of dimension and scale necessary to manipulate information and interact effectively with our environment.
 
-### Anchoring and Rounding Errors
+### Estimation Biases
 
-+ Beeby and Taylor (cited in MacDonald-Ross, 1977) found that in reading data from line graphs, people persistently misread the scale on the vertical axis; when only alternate lines were numbered, the unnumbered lines were read as halves.
-+ Dunham and Osborne (1991) found that if students do not attend to scale when they use line graphs for lab or stat data, they may have problems in interpreting asymmetric scales and in choosing appropriate scales to make good use of the grpahing space.
-+ Leinhardt, Zaslavsky, and Stein (1990) noted that the shape of a graph changes depending on the scale; this change may create a “conceptual demand” (p.17) that affects the mental image a graph user is able to construct.
+Certain biases including anchoring and rounding to multiples of 5 or 10 arise in open-ended estimation tasks.
+When it comes to understading graphics, anchoring is prominent in both graphical representations and data extraction tasks [@tan1990processing].
+Anchoring bias refers to an individual using easily observed visual cues such as gridlines or "anchors" when extracting information such as the $x$ or $y$ value on a chart [@tan1994human ; @godlonton2018anchoring].
+Rounding baises occur out of natural human preference to provide rounded figures even if a precise estimate is desired or requested [@myers1954accuracy]. 
+ @schneeweiss2010symmetric outlines distortion in results as a consequence of rounding and suggests the use of corrections when conducting statistical regression analyses on data prone to rounding.
 
-@tan1994human (https://www.tandfonline.com/doi/pdf/10.1080/10447319409526104)
-
-+ @tan1990processing introduced the notion of anchoring for reading and understanding two-dimensional graphics and applied the concept to generate two taxonomies: one for graphical representations and the other for data-extraction tasks. Anchoring is the segmentation of a graphical image into specific and diverse parts that act as salient and relevant cues, or "anchors," when extracting different classes of information (e.g., x-value, y-value, and entity information).
-+ It is therefore a decomposition strategy that graph readers use when processing two-dimensional graphics. Put in this context, Tan and Benbasat noted (1990) that there are three graphical design components where information anchoring can be operationally characterized: (a) x-value component, (b) y-value component, and (c) entity component.
+Scale and axis labels are other critical factors in estimation accuracy.
+@dunham1991learning argue that if there is not proper attention given to the scale when using a line graph, there is a potential for issues when interpretting asymmetric scales and when choosing appropriate scales for the graphic.
+@beeby1973well found that when asked to read data from line graphs, viewers consistentely misread the $y$-axis scale; when alternate grid lines were labeled, the unlabeled grid lines were read as halves.
+This misrepresentation is highlighted for assymetric scales where spatial distance does not necessarily equate to numerical or quantiative difference.
+The choice of scale can change the shape of a graph, thus creating a conceptual demand for the viewer when constructing a mental image of the graph [@leinhardt1990functions]. 
 
 ## Motivation and Background
 
@@ -403,15 +409,13 @@ knitr::include_graphics("images/covid19-datawrapper-views-july2020.png")
 
 ### Logarithmic Scales and Mapping
 
-```{r log-scale-comic, include = T, fig.cap = "Usefulness of the log scale in science", out.width="100%"}
+```{r log-scale-comic, include = F, fig.cap = "Usefulness of the log scale in science", out.width="100%"}
 knitr::include_graphics("images/log-scale-comic.png")
 ```
 
 When faced with data which spans several orders of magnitude, we must decide whether to show the data on its original scale (compressing the smaller magnitudes into relatively little area) or to transform the scale and alter the contextual appearance of the data.
 One common solution is to use a log scale transformation to display data over several orders of magnitude within one graph.
-The usefulness of the log scale in science is illustrated in \cref{fig:log-scale-comic} [@munroe_2005] showing the challenge of displaying the fuel energy density of Uranium along side other sources of fuel due to differences in magnitude of density.
-<!-- \rh{Maybe more explanation is needed for this. And it is not really connected to the text.} -->
-<!-- \rh{I think more details are needed for the use of log scale. Providing examples would be useful} -->
+<!-- The usefulness of the log scale in science is illustrated in \cref{fig:log-scale-comic} [@munroe_2005] showing the challenge of displaying the fuel energy density of Uranium along side other sources of fuel due to differences in magnitude of density. -->
 Exponential curves are a common source of data in which smaller magnitudes are compressed into a smaller area; 
 \cref{fig:log-scales} presents an exponential curve displayed on both the linear and log scale illustrating the use of the log scale when displaying data which spans several magnitudes. 
 Logarithms convert multiplicative relationships (for example, 1 \& 10 displayed 10 units apart and 10 \& 100 displayed 90 units apart) to additive relationships (for example, 1 \& 10 and 10 \& 100 both equally spaced along the axis), showing proportional relationships and linearizing power functions [@menge_logarithmic_2018].
@@ -591,11 +595,14 @@ Linear extrapolation is again responsible for the first and third faults while t
 @menge_logarithmic_2018 found that in each of these scenarios, participants were confident in their incorrect responses, indicating incorrect knowledge rather than a lack of knowledge.
 
 ## Research Objectives
-In this research, we conducted three graphical experimental tasks to evaluate the impact displaying data on the log scale has on human perception of exponentially increasing trends compared to displaying data on the linear scale.
-The first experiment evaluates whether our ability to perceptually notice differences in exponentially increasing trends is impacted by the choice of scale. I conducted a visual inference experiment in which participants were shown a series of lineups and asked to identify the plot that differed most from the surrounding plots. 
+In this research, we conducted a series of three graphical studies to evaluate the impact displaying data on the log scale has on human perception of exponentially increasing trends compared to displaying data on the linear scale.
+Each study was related to a different graphical task, each requring a different level of interaction and cognitive use of the data being presented.
+The first experiment evaluated whether our ability to perceptually notice differences in exponentially increasing trends is impacted by the choice of scale. 
+We conducted a visual inference experiment in which participants were shown a series of lineups and asked to identify the plot that differed most from the surrounding plots. 
 The other experimental tasks focus on determining whether there are cognitive disadvantages to log scales: do log scales make it harder to make use of graphical information? 
 To test an individual's ability to make predictions for exponentially increasing data, participants were asked to draw a line using their computer mouse through an exponentially increasing trend shown on both the linear and log scale.
-In addition to differentiation and prediction of exponentially increasing data, an experimental task was conducted to test an individuals' ability to translate a graph of exponentially increasing data into real value quantities and extend their estimations by making comparisons. 
-The results of the three experimental tasks provide guidelines for readers to actively choose which of many possible graphics to draw, according to some set of design choices, to ensure their charts are effective.
+In addition to differentiation and prediction of exponentially increasing data, an estimation task was conducted to test an individuals' ability to translate a graph of exponentially increasing data into real value quantities and extend their estimations by making comparisons.
+Combined, the three studies provide a comprehensive evaluation of the impact of displaying exponentially increasing data on a log scale as it relates to perception, prediction, and estimation.
+The results of these studies help us to make reccommendations and provide guidelines for the use of log scales.
 
 <!-- \svp{Things that seem to be missing: 1) Cleveland and McGill - hierarchy of accuracy in plot objects. You can think of e.g. exponentials as a series of tangential angles, which might help with explaining underestimation? 2) some literature explaining the different levels of complexity between perception, reading information off of a graph, predicting information, etc. - you should find this if only because it grounds the whole experiment in psychological theory (but you don't have to find it for your prelim)} -->

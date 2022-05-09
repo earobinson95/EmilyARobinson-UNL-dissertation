@@ -188,7 +188,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="1.4.1" data-path="index.html"><a href="index.html#questioning"><i class="fa fa-check"></i><b>1.4.1</b> Questioning<span></span></a></li>
 <li class="chapter" data-level="1.4.2" data-path="index.html"><a href="index.html#estimation-strategies"><i class="fa fa-check"></i><b>1.4.2</b> Estimation Strategies<span></span></a></li>
-<li class="chapter" data-level="1.4.3" data-path="index.html"><a href="index.html#anchoring-and-rounding-errors"><i class="fa fa-check"></i><b>1.4.3</b> Anchoring and Rounding Errors<span></span></a></li>
+<li class="chapter" data-level="1.4.3" data-path="index.html"><a href="index.html#estimation-biases"><i class="fa fa-check"></i><b>1.4.3</b> Estimation Biases<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#motivation-and-background"><i class="fa fa-check"></i><b>1.5</b> Motivation and Background<span></span></a>
 <ul>
@@ -292,7 +292,10 @@ div.csl-indent {
 </ul>
 <div id="statistical-graphics" class="section level2 hasAnchor" number="1.1">
 <h2><span class="header-section-number">1.1</span> Statistical Graphics<a href="index.html#statistical-graphics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Advanced technology and computing power have promoted data visualization as a central tool in modern data science. <span class="citation">Unwin (2020)</span> defines data visualization as the art of drawing graphical charts in order to display data. Graphics are useful for data cleaning, exploring data structure, and have been an essential component in communicating information for the last 200 years <span class="citation">(Lewandowsky &amp; Spence, 1989)</span>.</p>
+<p>Advanced technology and computing power have promoted data visualization as a central tool in modern data science. <span class="citation">Unwin (2020)</span> defines data visualization as the art of drawing graphical charts in order to display data.
+Graphics are useful for data cleaning, exploring data structure, and have been an essential component in communicating information for the last 200 years <span class="citation">(Lewandowsky &amp; Spence, 1989)</span>.
+This chapter aims to provide an overview of statistical graphics as they relate to effective communication in science and the media.
+We examine how our interpretation is affected by our interaction with graphics through cognitive tasks of differing levels of complexity, and then introduce the</p>
 <div id="history-of-graphics" class="section level3 hasAnchor" number="1.1.1">
 <h3><span class="header-section-number">1.1.1</span> History of Graphics<a href="index.html#history-of-graphics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>During the <span class="math inline">\(\text{18}^{\text{th}}\)</span> and <span class="math inline">\(\text{19}^{\text{th}}\)</span> centuries, governments began using graphics in order to better understand their population and economic interests <span class="citation">(Harms, 1991; Playfair, 1801; Walker et al., 2013)</span>.
@@ -315,13 +318,13 @@ Figure 1.1: William Playfair’s balance of trade
 </p>
 </div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:statistical-atlas-state-population"></span>
-<img src="images/statistical-atlas-state-population.jpg" alt="Statistical Atlas 1870 state population" width="90%"  />
+<img src="images/statistical-atlas-state-population.jpg" alt="Statistical Atlas 1870 state population" width="85%"  />
 <p class="caption">
 Figure 1.2: Statistical Atlas 1870 state population
 </p>
 </div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:ATandT-revenue"></span>
-<img src="images/ATandT-revenue.png" alt="AT\&amp;T utilization of assets" width="90%"  />
+<img src="images/ATandT-revenue.png" alt="AT\&amp;T utilization of assets" width="85%"  />
 <p class="caption">
 Figure 1.3: AT&amp;T utilization of assets
 </p>
@@ -353,13 +356,13 @@ Notice the case count for April 17th appears to the right of April 19th, and tha
 The appearance of this graphic leads viewers to believe COVID cases are decreasing.
 Shortly after the graphic was released, the governor’s office made a statement that in future graphics, chronological order would be used to display time due to public demand. While both examples were misleading due to axis labels and scales, other issues such as incomplete data and partitions that do not add to a whole can lead to misrepresentation of information.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:percent-who-agree-with-count"></span>
-<img src="images/percent-who-agree-with-count.jpg" alt="Percent who agree with count" width="90%"  />
+<img src="images/percent-who-agree-with-count.jpg" alt="Percent who agree with count" width="85%"  />
 <p class="caption">
 Figure 1.4: Percent who agree with count
 </p>
 </div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:covid-19-reporting"></span>
-<img src="images/covid-ga-recreation.jpg" alt="COVID-19 reporting" width="90%"  />
+<img src="images/covid-ga-recreation.jpg" alt="COVID-19 reporting" width="85%"  />
 <p class="caption">
 Figure 1.5: COVID-19 reporting
 </p>
@@ -396,7 +399,7 @@ Changes in software defaults such as the originally set number of bins in a bar 
 <div id="perceptual-process" class="section level3 hasAnchor" number="1.2.1">
 <h3><span class="header-section-number">1.2.1</span> Perceptual Process<a href="index.html#perceptual-process" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The perceptual process is a sequence of steps used to describe a how a stimulus in the environment leads to our perception of the stimulus and action in response to the stimulus .
-This process is separated into sensation <span class="citation">(Carlson, 2010)</span> - involving simple processes that occur right at the beginning of a sensory system - and perception <span class="citation">(Myers &amp; DeWall, 2021)</span> - involving higher-order mechanisms and identified with more complex processes.</p>
+This process is separated into sensation <span class="citation">(Carlson, 2010)</span> - involving simple processes that occur right at the beginning of a sensory system - and perception <span class="citation">(D. G. Myers &amp; DeWall, 2021)</span> - involving higher-order mechanisms and identified with more complex processes.</p>
 <p>The perceptual process begins when there is a stimulus in the environment and light is reflected and focused back into the viewer’s eyes.
 Within the eye, the light reflected is transformed and focused by the eye’s optical system and an image is formed on the receptors of the viewer’s retina.
 It is important to note that everything a person perceives is based not on direct contact with stimuli but on representations of stimuli that are formed on the receptors and the resulting activity in the person’s nervous system.
@@ -547,7 +550,7 @@ Two literal items required the viewer to read the data, title, or axis label in 
 Comparison items required comparisons and the use of mathematical concepts to answer, “Who was the tallest” and “How much taller was x than y?”
 Lastly, extension items required an extension, prediction, or inference such as, “If x grows 5 centimeters and y grows 10 centimeters by Sept. 1981, who will be taller and by how much?</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:children-height"></span>
-<img src="images/children-height.png" alt="Comprehension of heights (1987) " width="100%"  />
+<img src="images/children-height.png" alt="Comprehension of heights (1987) " width="80%"  />
 <p class="caption">
 Figure 1.12: Comprehension of heights (1987)
 </p>
@@ -577,18 +580,18 @@ Results from the study found that students who used a reference point had a more
 The study showed that students were less accurate in estimating metric units as compared to English units and that estimation accuracy was highly dependent on task context.
 <span class="citation">Forrester, Latham, &amp; Shire (1990)</span> argues that estimation, approximating, and measuring are key components in the intuitive understanding of dimension and scale necessary to manipulate information and interact effectively with our environment.</p>
 </div>
-<div id="anchoring-and-rounding-errors" class="section level3 hasAnchor" number="1.4.3">
-<h3><span class="header-section-number">1.4.3</span> Anchoring and Rounding Errors<a href="index.html#anchoring-and-rounding-errors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li>Beeby and Taylor (cited in MacDonald-Ross, 1977) found that in reading data from line graphs, people persistently misread the scale on the vertical axis; when only alternate lines were numbered, the unnumbered lines were read as halves.</li>
-<li>Dunham and Osborne (1991) found that if students do not attend to scale when they use line graphs for lab or stat data, they may have problems in interpreting asymmetric scales and in choosing appropriate scales to make good use of the grpahing space.</li>
-<li>Leinhardt, Zaslavsky, and Stein (1990) noted that the shape of a graph changes depending on the scale; this change may create a “conceptual demand” (p.17) that affects the mental image a graph user is able to construct.</li>
-</ul>
-<p><span class="citation">Joseph K. Tan (1994)</span> (<a href="https://www.tandfonline.com/doi/pdf/10.1080/10447319409526104" class="uri">https://www.tandfonline.com/doi/pdf/10.1080/10447319409526104</a>)</p>
-<ul>
-<li><span class="citation">Joseph KH Tan &amp; Benbasat (1990)</span> introduced the notion of anchoring for reading and understanding two-dimensional graphics and applied the concept to generate two taxonomies: one for graphical representations and the other for data-extraction tasks. Anchoring is the segmentation of a graphical image into specific and diverse parts that act as salient and relevant cues, or “anchors,” when extracting different classes of information (e.g., x-value, y-value, and entity information).</li>
-<li>It is therefore a decomposition strategy that graph readers use when processing two-dimensional graphics. Put in this context, Tan and Benbasat noted (1990) that there are three graphical design components where information anchoring can be operationally characterized: (a) x-value component, (b) y-value component, and (c) entity component.</li>
-</ul>
+<div id="estimation-biases" class="section level3 hasAnchor" number="1.4.3">
+<h3><span class="header-section-number">1.4.3</span> Estimation Biases<a href="index.html#estimation-biases" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Certain biases including anchoring and rounding to multiples of 5 or 10 arise in open-ended estimation tasks.
+When it comes to understading graphics, anchoring is prominent in both graphical representations and data extraction tasks <span class="citation">(Joseph KH Tan &amp; Benbasat, 1990)</span>.
+Anchoring bias refers to an individual using easily observed visual cues such as gridlines or “anchors” when extracting information such as the <span class="math inline">\(x\)</span> or <span class="math inline">\(y\)</span> value on a chart <span class="citation">(Joseph K. Tan, 1994 ; Godlonton, Hernandez, &amp; Murphy, 2018)</span>.
+Rounding baises occur out of natural human preference to provide rounded figures even if a precise estimate is desired or requested <span class="citation">(R. J. Myers, 1954)</span>.
+<span class="citation">Schneeweiss, Komlos, &amp; Ahmad (2010)</span> outlines distortion in results as a consequence of rounding and suggests the use of corrections when conducting statistical regression analyses on data prone to rounding.</p>
+<p>Scale and axis labels are other critical factors in estimation accuracy.
+<span class="citation">Dunham &amp; Osborne (1991)</span> argue that if there is not proper attention given to the scale when using a line graph, there is a potential for issues when interpretting asymmetric scales and when choosing appropriate scales for the graphic.
+<span class="citation">Beeby &amp; Taylor (1973)</span> found that when asked to read data from line graphs, viewers consistentely misread the <span class="math inline">\(y\)</span>-axis scale; when alternate grid lines were labeled, the unlabeled grid lines were read as halves.
+This misrepresentation is highlighted for assymetric scales where spatial distance does not necessarily equate to numerical or quantiative difference.
+The choice of scale can change the shape of a graph, thus creating a conceptual demand for the viewer when constructing a mental image of the graph <span class="citation">(Leinhardt, Zaslavsky, &amp; Stein, 1990)</span>.</p>
 </div>
 </div>
 <div id="motivation-and-background" class="section level2 hasAnchor" number="1.5">
@@ -622,17 +625,9 @@ Figure 1.15: Datawrapper daily chart views during COVID-19
 </div>
 <div id="logarithmic-scales-and-mapping" class="section level3 hasAnchor" number="1.5.1">
 <h3><span class="header-section-number">1.5.1</span> Logarithmic Scales and Mapping<a href="index.html#logarithmic-scales-and-mapping" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:log-scale-comic"></span>
-<img src="images/log-scale-comic.png" alt="Usefulness of the log scale in science" width="100%"  />
-<p class="caption">
-Figure 1.16: Usefulness of the log scale in science
-</p>
-</div>
 <p>When faced with data which spans several orders of magnitude, we must decide whether to show the data on its original scale (compressing the smaller magnitudes into relatively little area) or to transform the scale and alter the contextual appearance of the data.
 One common solution is to use a log scale transformation to display data over several orders of magnitude within one graph.
-The usefulness of the log scale in science is illustrated in <span class="citation">(Munroe, 2005)</span> showing the challenge of displaying the fuel energy density of Uranium along side other sources of fuel due to differences in magnitude of density.
-<!-- \rh{Maybe more explanation is needed for this. And it is not really connected to the text.} -->
-<!-- \rh{I think more details are needed for the use of log scale. Providing examples would be useful} -->
+<!-- The usefulness of the log scale in science is illustrated in \cref{fig:log-scale-comic} [@munroe_2005] showing the challenge of displaying the fuel energy density of Uranium along side other sources of fuel due to differences in magnitude of density. -->
 Exponential curves are a common source of data in which smaller magnitudes are compressed into a smaller area;
 presents an exponential curve displayed on both the linear and log scale illustrating the use of the log scale when displaying data which spans several magnitudes.
 Logarithms convert multiplicative relationships (for example, 1 &amp; 10 displayed 10 units apart and 10 &amp; 100 displayed 90 units apart) to additive relationships (for example, 1 &amp; 10 and 10 &amp; 100 both equally spaced along the axis), showing proportional relationships and linearizing power functions <span class="citation">(Menge et al., 2018)</span>.
@@ -642,7 +637,7 @@ When presenting log scaled data, it is possible to use either un-transformed sca
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:log-scales"></span>
 <img src="thesis_files/figure-html/log-scales-1.png" alt="Linear scale verses log scale" width="100%"  />
 <p class="caption">
-Figure 1.17: Linear scale verses log scale
+Figure 1.16: Linear scale verses log scale
 </p>
 </div>
 <p>We have recently experienced the benefits and pitfalls of using log scales as COVID-19 dashboards displayed
@@ -661,19 +656,19 @@ Given the widespread use of logarithmic scales, it is important to understand th
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:covid19-FT-deaths-march2020-log"></span>
 <img src="images/covid19-FT-03.23.2020-log.png" alt="Covid 19 Deaths (log scale) as of March 23, 2020" width="90%"  />
 <p class="caption">
-Figure 1.18: Covid 19 Deaths (log scale) as of March 23, 2020
+Figure 1.17: Covid 19 Deaths (log scale) as of March 23, 2020
 </p>
 </div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:covid19-FT-june2020-case-counts-linear"></span>
 <img src="images/covid19-FT-case-count-06.30.2020-linear.png" alt="Covid 19 Case Counts (linear scale) as of June 30, 2020" width="90%"  />
 <p class="caption">
-Figure 1.19: Covid 19 Case Counts (linear scale) as of June 30, 2020
+Figure 1.18: Covid 19 Case Counts (linear scale) as of June 30, 2020
 </p>
 </div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:covid19-FT-june2020-case-counts-log"></span>
 <img src="images/covid19-FT-case-count-06.30.2020-log.png" alt="Covid 19 Case Counts (log scale) as of June 30, 2020" width="90%"  />
 <p class="caption">
-Figure 1.20: Covid 19 Case Counts (log scale) as of June 30, 2020
+Figure 1.19: Covid 19 Case Counts (log scale) as of June 30, 2020
 </p>
 </div>
 <p>When we first learn to count, we begin counting by ones (for example, 1, 2, 3, etc.), then by tens (for example, 10, 20, 30, etc.), and advancing to hundreds (for example, 100, 200, 300, etc.), following the base10 order of magnitude system (for example, 1, 10, 100, etc.).
@@ -685,7 +680,7 @@ These results indicate the universal and cultural-dependent characteristics of t
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:log-number-line"></span>
 <img src="thesis_files/figure-html/log-number-line-1.png" alt="Kindergarten example of mapping numbers 1-10 along a number line" width="65%"  />
 <p class="caption">
-Figure 1.21: Kindergarten example of mapping numbers 1-10 along a number line
+Figure 1.20: Kindergarten example of mapping numbers 1-10 along a number line
 </p>
 </div>
 <p>Assuming there is a direct relationship between perceptual and cognitive processes, it is reasonable to assume numerical representations should also be displayed on a nonlinear, compressed number scale. Therefore, if we perceive logarithmically by default, it is a natural (and presumably low effort) way to display information and should be easy to read and understand/use.
@@ -697,7 +692,7 @@ Similar to the training and education required to transition from logarithmic ma
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:exponential-stages-comic"></span>
 <img src="images/exponential-stages-comic.jpg" alt="Log scale comic" width="100%"  />
 <p class="caption">
-Figure 1.22: Log scale comic
+Figure 1.21: Log scale comic
 </p>
 </div>
 <p>People with diverse backgrounds can interpret the same display of data in vastly different ways; <span class="citation">(von Bergmann, 2021)</span> illustrates how individuals in public health interpret exponential growth distinctly different from scientists during early, middle, and late stages of growth.
@@ -718,7 +713,7 @@ These misconceptions are a result of linear extrapolation assuming that a line i
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:menge-plots"></span>
 <img src="images/menge-plots.png" alt="Graphs viewed in Menge (2018) survey" width="100%"  />
 <p class="caption">
-Figure 1.23: Graphs viewed in Menge (2018) survey
+Figure 1.22: Graphs viewed in Menge (2018) survey
 </p>
 </div>
 <p>The ‘hand-hold fallacy’ stems from the misconception that steeper slopes in log-log relationships are steeper slopes in linear-linear space, illustrated in d-f. 
@@ -732,12 +727,15 @@ Linear extrapolation is again responsible for the first and third faults while t
 </div>
 <div id="research-objectives" class="section level2 hasAnchor" number="1.6">
 <h2><span class="header-section-number">1.6</span> Research Objectives<a href="index.html#research-objectives" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In this research, we conducted three graphical experimental tasks to evaluate the impact displaying data on the log scale has on human perception of exponentially increasing trends compared to displaying data on the linear scale.
-The first experiment evaluates whether our ability to perceptually notice differences in exponentially increasing trends is impacted by the choice of scale. I conducted a visual inference experiment in which participants were shown a series of lineups and asked to identify the plot that differed most from the surrounding plots.
+<p>In this research, we conducted a series of three graphical studies to evaluate the impact displaying data on the log scale has on human perception of exponentially increasing trends compared to displaying data on the linear scale.
+Each study was related to a different graphical task, each requring a different level of interaction and cognitive use of the data being presented.
+The first experiment evaluated whether our ability to perceptually notice differences in exponentially increasing trends is impacted by the choice of scale.
+We conducted a visual inference experiment in which participants were shown a series of lineups and asked to identify the plot that differed most from the surrounding plots.
 The other experimental tasks focus on determining whether there are cognitive disadvantages to log scales: do log scales make it harder to make use of graphical information?
 To test an individual’s ability to make predictions for exponentially increasing data, participants were asked to draw a line using their computer mouse through an exponentially increasing trend shown on both the linear and log scale.
-In addition to differentiation and prediction of exponentially increasing data, an experimental task was conducted to test an individuals’ ability to translate a graph of exponentially increasing data into real value quantities and extend their estimations by making comparisons.
-The results of the three experimental tasks provide guidelines for readers to actively choose which of many possible graphics to draw, according to some set of design choices, to ensure their charts are effective.</p>
+In addition to differentiation and prediction of exponentially increasing data, an estimation task was conducted to test an individuals’ ability to translate a graph of exponentially increasing data into real value quantities and extend their estimations by making comparisons.
+Combined, the three studies provide a comprehensive evaluation of the impact of displaying exponentially increasing data on a log scale as it relates to perception, prediction, and estimation.
+The results of these studies help us to make reccommendations and provide guidelines for the use of log scales.</p>
 <!-- \svp{Things that seem to be missing: 1) Cleveland and McGill - hierarchy of accuracy in plot objects. You can think of e.g. exponentials as a series of tangential angles, which might help with explaining underestimation? 2) some literature explaining the different levels of complexity between perception, reading information off of a graph, predicting information, etc. - you should find this if only because it grounds the whole experiment in psychological theory (but you don't have to find it for your prelim)} -->
 
 </div>
