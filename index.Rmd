@@ -79,17 +79,23 @@ library(formatR)
 
 <!-- + Editing text colors: \ear{Emily's editing color.} Emily may also use mostly black text as well. \svp{Susan's editing color.} \rh{Reka's editing color.} -->
 
-+ \svp{General comment - it's a bit odd to write this in first person, but I'm not sure it's necessarily wrong. Just different.}
-+ \ear{Need to check references. In text should only show last name.}
+<!-- + \svp{General comment - it's a bit odd to write this in first person, but I'm not sure it's necessarily wrong. Just different.} -->
+<!-- + \ear{Need to check references. In text should only show last name.} -->
 
-## Statistical Graphics
+## Introduction to Statistical Graphics
 
 Advanced technology and computing power have promoted data visualization as a central tool in modern data science. @unwin_why_2020 defines data visualization as the art of drawing graphical charts in order to display data. 
 Graphics are useful for data cleaning, exploring data structure, and have been an essential component in communicating information for the last 200 years [@lewandowsky_perception_1989]. 
 This chapter aims to provide an overview of statistical graphics as they relate to effective communication in science and the media.
-We examine how our interpretation is affected by our interaction with graphics through cognitive tasks of differing levels of complexity, and then introduce the 
+We examine how our interpretation of the data is affected by our interaction with graphics through cognitive tasks of differing levels of complexity, and then introduce the motivation and background for the rest of the work.
 
 ### History of Graphics
+
+```{r william-playfair-trade, fig.cap = "William Playfair's balance of trade", out.width="85%"}
+knitr::include_graphics("images/william-playfair-balance-trade.png")
+
+# https://repository.tku.ac.jp/dspace/bitstream/11150/6149/1/LAUD_085-03.pdf
+```
 
 During the $\text{18}^{\text{th}}$ and $\text{19}^{\text{th}}$ centuries, governments began using graphics in order to better understand their population and economic interests [@playfair1801statistical; @harms1991august; @walker2013statistical].
 In \cref{fig:william-playfair-trade}, @playfair1801statistical visually represents the power and economic status of each European Nation in the early $\text{19}^{\text{th}}$ century. 
@@ -101,15 +107,7 @@ The Statistical atlas of the United States [@walker2013statistical] used charts 
 The rectangle shown to the right represents the proportion of residents born in the state who have become residents of other states.
 In the $\text{20}^{\text{th}}$ century, companies began utilizing graphics to understand their mechanics and support business decisions and news sources began displaying graphics of weather forecasts as a means to communicate critical information and aid in decision-making [@chandar2012graph; @yates1985graphs].
 @chandar2012graph illustrates how AT\&T used graphics to demonstrate management's ability to optimize utilization of assets by making comparisons between their annual net telephone revenues and their returns on total assets \pcref{fig:ATandT-revenue}.
-<!-- \svp{Might want to add a set of pictures showing the different types of graphics from this sentence - playfair's balance of trade, statistical atlas, and something from e.g. early IBM?}.  -->
 Today, we encounter data visualizations everywhere; researchers include graphics to communicate their results in scientific publications and mass media present graphics in order to convey news stories to the public through newspapers, TV, and the Web [@gouretski2007much; @NYTimes_presidential_forecast; @natesilver538_2020].
-<!-- @natesilver538_2020 tracked the 2020 US presidential election by communicating results of their forecast model to the public through a variety of interactive visualizations including a bar chart, snake chart, and electoral college maps. -->
-
-```{r william-playfair-trade, fig.cap = "William Playfair's balance of trade", out.width="85%"}
-knitr::include_graphics("images/william-playfair-balance-trade.png")
-
-# https://repository.tku.ac.jp/dspace/bitstream/11150/6149/1/LAUD_085-03.pdf
-```
 
 ```{r statistical-atlas-state-population, fig.cap = "Statistical Atlas 1870 state population", out.width="85%"}
 knitr::include_graphics("images/statistical-atlas-state-population.jpg")
@@ -126,7 +124,6 @@ knitr::include_graphics("images/ATandT-revenue.png")
 
 Although statistical graphics have become widely used and valued in science, business, and in many other aspects of life, as creators of graphics, we are too accepting of them as default without asking critical questions about the graphics we create or view [@unwin_why_2020]. 
 @vanderplas_testing_2020 poses the general question we must ask ourselves, “how effective is this graph at communicating useful information?”
-<!-- \rh{what do you/they mean by effective? you use "effective" later too so it is imortant to define or provide some examples/counter examples.} -->
 An effective graphic accurately shows the data through the appropriate chart selection, axes and scales, and aesthetic design choices in order to successfully communicate the intended result. 
 [Section 1.2](#misleading-graphics) illustrates how graphics can be misleading and ineffective at communicating the intended result by inaccurately displaying the data.
 
@@ -141,16 +138,16 @@ Both authors assigned an overall quality rating (poor, adequate, good, or exempl
 The authors rated 39% of the 97 graphs sampled as poor, indicating there is still an astonishing lack in the quality of graphics. 
 More startling is the fact that the source of the graphic from an applied science or a graphic from statistics had no effect on the quality of the graphic. 
 
-News media is a major culprit in displaying data in ways that could be misleading to the public. For example, in 2005, Terri Schiavo was removed from life-support after a seven year long court case .
-News organizations [@misleading_graphs_2022] used graphs from polls to show the proportion of Americans from different political parties who agreed with the decision to remove the feeding tube \pcref{fig:percent-who-agree-with-count}.
+News media is a major culprit in displaying data in ways that could be misleading to the public. For example, in 2005, there was a seven year long court case in which the decision was made to remove Terri Schiavo from life-support [@cranford2005facts].
+News organizations such as CNN [@maloy_2005] used graphs from polls to show the proportion of Americans from different political parties who agreed with the decision to remove the feeding tube \pcref{fig:percent-who-agree-with-count}.
 Upon initial inspection of \cref{fig:percent-who-agree-with-count}, it appears that about three times as many democrats supported the decision as republicans or independents.
 However, the scale on the vertical axis begins at 50\%, misleading the viewer to believe there was a much larger discrepancy in support between political parties than there actually was.
 While this graph does display the truth, it is misleading due to the choice of baseline on the $y$-axis.
 @baumer2021texts discuss a more recent example of a misleading graphic in the news shown in May 2020 when Georgia published a graphical display of COVID-19 cases \pcref{fig:covid-19-reporting}. 
 This graphic was highly misleading in communicating the state of the pandemic due to the ordering along the $x$-axis.
-Notice the case count for April 17th appears to the right of April 19th, and that the order of the counties has been selected so that the case counts are monotonically dcreasing for each day of reporting.
+Notice the case count for April $17^{th}$ appears to the right of April $19^{th}$, and that the order of the counties has been selected so that the case counts are monotonically decreasing for each day of reporting.
 The appearance of this graphic leads viewers to believe COVID cases are decreasing.
-Shortly after the graphic was released, the governor's office made a statement that in future graphics, chronological order would be used to display time due to public demand. While both examples were misleading due to axis labels and scales, other issues such as incomplete data and partitions that do not add to a whole can lead to misrepresentation of information.
+Shortly after the graphic was released, the governor's office made a statement that in future charts, chronological order would be used to display time due to public demand. While both examples were misleading due to axis labels and scales, other issues such as incomplete data and partitions that do not add to a whole can lead to misrepresentation of information.
 
 ```{r percent-who-agree-with-count, fig.cap = "Percent who agree with count", out.width="85%"}
 knitr::include_graphics("images/percent-who-agree-with-count.jpg")
@@ -188,7 +185,7 @@ Changes in software defaults such as the originally set number of bins in a bar 
 
 ## Perception
 
-In order to develop guiding principles for generating graphics effective in communication, we must first understand the basic mechanics of the human perceptual system and the biases we are vulnerable to [@goldstein_sensation_2017]. This section aims to provide an overview of the perceptual process as it relates to inspection of graphical displays.
+In order to develop guiding principles for generating graphics effective in communication, we must first understand the basic mechanics of the human perceptual system and the biases we are vulnerable to [@goldstein_sensation_2017]. This section aims to provide an overview of the perceptual process as it relates to inspection of graphical displays, and then address specific perceptual biases.
 
 ### Perceptual Process
 
@@ -207,8 +204,8 @@ The perceptual process is not direct and instead takes on more of a cyclic natur
 knitr::include_graphics("images/perceptual-process-goldsein-pg5.png")
 ```
 
-When perception occurs, we first experience the **preattentive stage** in which we observe color, shape, size, and other basic information about the stimuli being perceived. Preattentive perception effects are automatically processed within the first 500 milliseconds of viewing and do not depend on sustained cognitive attention [@vanderplas_testing_2020]. 
-Following the preattentive stage, **direct attention** is required for additional processing to allow us to draw connections between components that assist in our interpretation of the stimuli. 
+When perception occurs, we first experience the *preattentive stage* in which we observe color, shape, size, and other basic information about the stimuli being perceived. Preattentive perception effects are automatically processed within the first 500 milliseconds of viewing and do not depend on sustained cognitive attention [@vanderplas_testing_2020]. 
+Following the preattentive stage, *direct attention* is required for additional processing to allow us to draw connections between components that assist in our interpretation of the stimuli. 
 When viewing a chart or graph, most insights we gain are due to the cognitive processes that occur after attention is focused on specific aspects of the graph.
 
 The relationship between physiology and perception can provide us information about how graphics may be understood and interpreted.
@@ -225,12 +222,10 @@ By examining both behavior and physiology together, we are able to understand th
 
 ### Logarithmic Perception
 
-<!-- \svp{Weber's law isn't quite the same thing as the numerical cognition stuff on log scales - it's a different perceptual phenomenon that is definitely related, but distinct in causal mechanism (as far as I know).} -->
-<!-- \rh{Is there a reference for the actual "Weber's Law"? Please provide more connection between your text and the "Weber's Law".} -->
 While our visual system is powerful, we are still vulnerable to biases related to our perception of different stimuli.
 Ernst Weber, an early psychophysics researcher, discovered a phenomenon known as Weber's law by determining the relationship between the difference threshold (smallest detectable difference between two sensory stimuli; known as the "Just Noticeable Difference") and the magnitude of a stimulus [@fechner1860elemente]. 
 This holds true for a variety of stimuli such as weight, light, and sound as well as for a range of magnitudes; larger numbers require a proportional larger difference in order to remain equally discriminate [@dehaene2008log]. 
-Known as **Weber's law**, it was established that we do not notice absolute changes in stimuli, but instead that we notice the relative change [@sun_framework_2012]. 
+Known as *Weber's law*, it was established that we do not notice absolute changes in stimuli, but instead that we notice the relative change [@sun_framework_2012]. 
 Numerically, Weber's Law is defined as 
 \begin{equation}
 \frac{\Delta S}{S} = K
@@ -245,30 +240,29 @@ where $P$ represents the perceived stimulus, $K$ represents Weber's contrast, $S
 
 ## Cognitive Tasks and Testing Statistical Graphics
 
+In order to understand how our visual system perceives statistical graphics, we must first consider the complexity of the graphic and how viewers are interacting with the data and information being displayed [@@tory2004human].
+Each interaction requires a different level of cognitive involvement and the complexity of the task being asked of the viewer must match the graphic and desired hypothesis.
+
 ### Cognitive Fit
+
 + @vessey1991cognitive
-
 + @tan1990processing
++ @tory2004human
+  + how people perceive and interact with a visualization tool can strongly influence their understanding of the data as well as the system’s usefulness
++ Three levels
+  + Reasoning
+  + Sensemaking
+  + Decision-Making
 
-+ Reasoning
-+ Sensemaking
-+ Decision-Making
-
-@tory2004human
-
-+ how people perceive and interact with a visualization tool can strongly influence their understanding of the data as well as the system’s usefulness
-
-### Testing Statistical Graphics {#lit-graphical-experiments}
+### Testing Statistical Graphics {#testing-statistical-graphics}
 
 One way in which we determine the relationship between behavior and physiology is through the use of graphical tests [@cleveland_graphical_1984; @spence_visual_1990; @lewandowsky_perception_1989; @vanderplas2015spatial].
-<!-- \rh{can you provide references? Especially for the examples?} -->
 These tests may take many forms: identifying differences in graphs, accurately reading information off a chart, using data to make correct real-world decisions, or predicting the next few observations.
 All of these types of tests require different levels of use and manipulation of the information presented in the chart.
 
 The initial push to develop classification and recommendation systems for charts was grounded on heuristics rather than on experimentation [@kruskal1975visions; @macdonald1977numbers].
 Request were made for the validation of the perception and utility of statistical charts through graphical experiments.
-Initial experiments struggled with methodological issues [@eells1926relative; @croxton1927bar; @croxton1932graphic] with most early experimentation stemming from psychophysics research on the perception of size and shape [@teghtsoonian1965judgment]. 
-<!-- \rh{"struggled with methodological issues" - examples?} -->
+Initial experiments [@eells1926relative; @croxton1927bar; @croxton1932graphic] with most early experimentation stemmed from psychophysics research on the perception of size and shape [@teghtsoonian1965judgment]. 
 In attempts to understand the human perception and judgment of component parts, @eells1926relative instructed students to think of each circle diagram \pcref{fig:eells-compoment-parts} as representing 100\% and write their best estimate of the percentage of the whole in each sector.
 Participants were told not to hurry, but to work steadily in order to determine efficiency of judgment. 
 Students were then asked to analyze their mental processes used to make their estimates and indicate the method that best matches: by areas of sectors, by central angles, by arcs on the circumference, by subtending chords.
@@ -276,14 +270,13 @@ This process was repeated three days later by presenting students the same data 
 Results of the study led the authors to argue for the use of circle diagrams to show component parts based on both participant accuracy and speed.
 In response, @croxton1927bar evaluated the accuracy of judgment of two types of charts (bars and circles) in efforts to reach a consistent conclusion. 
 During class, students were individually presented pairs of diagrams (without scales) on cards and asked to estimate the percentages displayed in the diagram.
-It was found that the bar was preferable to the circle when shown percentages that deviate from quarters, but that the circle is strongly preferred when shown percentages separating the diagrams into 25\% or 50\%. 
+It was found that the bar was preferable to the circle when shown percentages that deviate from quarters, but that the circle is strongly preferred when shown percentages separating the diagrams into 25\% or 50\%; this introduces the concept of anchoring discussed further in [Section 1.4.3](#estimation-biases).
 
 ```{r eells-compoment-parts, fig.cap = "Eells (1926) component parts diagrams", out.width="75%"}
 knitr::include_graphics("images/eells-component-parts.png")
 ```
 
 While a typical psychophysics experiment focuses on whether an effect is detectable and whether the magnitude of the effect can be accurately estimated, these early experiments instead depended on speed and accuracy for plot evaluation [@spence_visual_1990; @teghtsoonian1965judgment; @lewandowsky_perception_1989]. 
-<!-- \rh{Examples?} -->
 In attempts to understand the visual psychophysics of simple graphical elements, @spence_visual_1990 presented stimuli (tables, lines - horizontal and vertical, bars, boxes, cylinders, pie charts, and disk charts) to participants on a monitor screen in a computer lab. 
 Participants were asked to use their cursor to position the marker to indicate the proportion to the apparent sizes of the elements \pcref{fig:spence-1990-proportion}.
 Results found that the table elements (numbers), pie elements, and bar elements led to the most accurate proportion estimates; boxes and disk elements resulted in the least accurate estimates.
@@ -294,10 +287,11 @@ knitr::include_graphics("images/spence-1990-proportion.png")
 ```
 
 Cognitive psychologists and statisticians made progress by conducting experiments to identify perceptual errors associated with different styles of graphics and charts [@cleveland_graphical_1984; @cleveland_graphical_1985; @shah1999graphs]. 
-<!-- \rh{Examples?} -->
-@cleveland_graphical_1984 provides a basis for perceptual judgment, still utilized today, by examining six basic aesthetic design choices: position along a common scale, position along nonaligned scales, length, angle, slope, and area.
+@cleveland_graphical_1984 provides a basis for perceptual judgment, still utilized today, by examining six basic plot objects: position along a common scale, position along nonaligned scales, length, angle, slope, and area.
+In @cleveland_graphical_1985, these plot objects are ordered by accuracy performed through graphical-perception tasks; for example, comparisons of angles resulted in more difficult judgments than between lengths of lines. 
 @shah1999graphs established the notion that redesigning graphs can result in the improvement of the viewer's interpretation of the data.
 For example, the use of gestalt principles [@goldstein_sensation_2017] such as proximity, similarity, and good continuation can help minimize the inferential processes and maximize the pattern association processes required to interpret relevant information.
+In [Section 1.5.2](#underestimation) we see how the hierarchy of accuracy in plot objects presented in @cleveland_graphical_1985 can explain biases in our interpretation and use of graphics.
 
 During the $\text{21}^{\text{st}}$ century, there have been advancements in the methodology used to investigate the effectiveness of statistical charts [@majumder_validation_2013]. 
 @buja_statistical_2009 introduced the lineup protocol in which data plots are depicted and interpreted as statistics. 
@@ -310,6 +304,7 @@ However, the lineup protocol is constrained by the inability to test higher orde
 
 ## Graph Comprehension
 
+Higher order cognitive processes require viewers to translate the visual features into conceptual relations by interpreting titles, labels, and scales.
 In order to understand how viewers are interpreting and using the data and information displayed on the chart, studies have asked participants to read information directly from a chart and provide a quantitative estimate or answer a predefined question [@peterson1954accurately; @broersma1985graphical; @dunn1988framed; @tan1994human; @amer2005bias].
 @spence_visual_1990 presents four example questions for comparing the sizes of individual graphical elements: (1) How much greater was the rainfall in September than May? (2) Is the price of oil in constant dollars increasing or decreasing from year to year? (3) Do more people subscribe to Time than Newsweek? and (4) Did the ABC Corporation pay the largest dividends last year, or did XYZ?
 @amer2005bias demonstrates that visual illusion may bias decision making and graph comprehension, even if the graphs are constructed according to best practice.
@@ -318,7 +313,7 @@ Results indicate that decision makers may consistently underestimate or overesti
 In @dunn1988framed, participants were shown two maps, an unclassed choropleth map and a framed rectangle chart, indicating the murder rate of each US state \pcref{fig:framed-murder-rate-map}.
 The goal of the study was to assess the relative accuracy with which quantitative information is extracted from both types of charts.
 Participants were strictly informed that the experiment was designed to test the ability of individuals to "read" or "decode" statistical maps and asked to write down their estimate of the murder rate as accurately as possible beside the 24 named states. 
-Results indicate that subjects found it easier to extract quantitative information from the framed rectangle chart than from the unclassed choropleth map and that the between individual variability in the choropleth map was related to the area of the state. 
+Results indicate that subjects found it easier to extract quantitative information from the framed rectangle chart than from the unclassed choropleth map and that the between individual variability in the choropleth map was related to the area of the state.
 
 ```{r amer-poggendorff-illusion, fig.cap = "Amer (2005) cost volume profit graph", out.width="100%"}
 knitr::include_graphics("images/amer-poggendorff-illusion.png")
@@ -334,32 +329,29 @@ An important consideration in understanding graph comprehension is is the questi
 Low level questions address the content and interpretation or explicit material while deeper questions require inference, application, and evaluation of the information being presented.
 Three levels of graph comprehension have emerged from mathematics education research [@wood1968objectives; @curcio1987comprehension; @jolliffe1991assessment; @friel2001making; @glazer2011challenges].
 The three behaviors related to graph comprehension involve (1) literal reading of the data (elementary level), (2) reading between the data (intermediate level), and (3) reading beyond the data (advanced level).
-@curcio1987comprehension aligns two questions multiple choice with each level of comprehension related to a graph showing the height of four children in centimeters \pcref{fig:children-height}.
+@curcio1987comprehension aligns two multiple choice questions with each level of comprehension related to a graph showing the height of four children in centimeters \pcref{fig:children-height}.
 Two literal items required the viewer to read the data, title, or axis label in order to answer, "What does this graph tell you" or "How tall was xxx?"
 Comparison items required comparisons and the use of mathematical concepts to answer, "Who was the tallest" and "How much taller was x than y?"
 Lastly, extension items required an extension, prediction, or inference such as, "If x grows 5 centimeters and y grows 10 centimeters by Sept. 1981, who will be taller and by how much?
+In @friel2001making, several studies were reviewed and their questions were placed in the taxonomy of skills required for answering questions at each level.
+In addition to th graph's visual features and questioning, it is important for researchers to give careful consideration to the context of the graphic on the viewers comprehension.
 
 ```{r children-height, fig.cap = "Comprehension of heights (1987) ", out.width="80%"}
 knitr::include_graphics("images/children-height.png")
 ```
 
-<!-- Conceptual processes that translate the visual features into conceptual relations when one interprets titles, labels, and scales as well as any other keys or symbols that are part of the display. -->
-<!-- Researchers must consider the effect of the graph’s visual characteristics and the graph’s context on one’s comprehension. -->
-
 ### Estimation Strategies
 
-While not exclusive to extracting numerical values from charts, mathematics education research places an emphasis quantitative estimation skills [@hogan2003quantitative].
+While not exclusive to extracting numerical values from charts, mathematics education research places an emphasis on quantitative estimation skills [@hogan2003quantitative].
 Three modes of estimation are taught as part of the mathematics curriculum in schools: numerosity, measurement, and computational estimation. 
 Numerosity estimation requires the estimation of the number of items in a group or array; for example, guessing the number of M&M's in a jar.
 Measurement estimation requires participants to provide an estimated value related to an object; for instance, an estimated length of a string or weight or a box.
 Computational estimation is the third mode which refers to estimated answers to computations as a way to avoid exact calculations.
 These estimates may be presented in either algorithmic form or a contextual scenario with words.
-A longer history of quantitative estimation can be found in psychometic literature in which estimation tasks appeared in early psychometric studies of mental abilities.
+A longer history of quantitative estimation can be found in psychometric literature in which estimation tasks appeared in early psychometric studies of mental abilities.
 
 In efforts to develop estimation skills, research has been conducted to evaluate strategies for estimating tasks.
-Two common strategies in particular related to measurement estimation, involve reference point estimation and benchmark estimation.
-Reference point estimation
-Benchmark estimation 
+Common strategies related to measurement estimation, involve reference point estimation, benchmark estimation, unit iteration, and guess and check.
 @joram2005children was interested in the relationship among strategy use and accuracy of students’ representations of standard measurement units and measurement accuracy.
 In this study, students were asked to estimate the lengths of two objects and explain their process.
 In order to prompt students to communicate their estimation strategies, an interviewer asked questions such as, “How did you come up with your answer?” and “What were you thinking about when you came up with your answer?”.
@@ -369,18 +361,18 @@ Results from the study found that students who used a reference point had a more
 The study showed that students were less accurate in estimating metric units as compared to English units and that estimation accuracy was highly dependent on task context. 
 @forrester1990exploring argues that estimation, approximating, and measuring are key components in the intuitive understanding of dimension and scale necessary to manipulate information and interact effectively with our environment.
 
-### Estimation Biases
+### Estimation Biases {#estimation-biases}
 
-Certain biases including anchoring and rounding to multiples of 5 or 10 arise in open-ended estimation tasks.
-When it comes to understading graphics, anchoring is prominent in both graphical representations and data extraction tasks [@tan1990processing].
-Anchoring bias refers to an individual using easily observed visual cues such as gridlines or "anchors" when extracting information such as the $x$ or $y$ value on a chart [@tan1994human ; @godlonton2018anchoring].
-Rounding baises occur out of natural human preference to provide rounded figures even if a precise estimate is desired or requested [@myers1954accuracy]. 
+Certain biases including anchoring and rounding to multiples of five or ten arise in open-ended estimation tasks.
+When it comes to understanding graphics, anchoring is prominent in both graphical representations and data extraction tasks [@tan1990processing].
+Anchoring bias refers to an individual using easily observed visual cues such as grid lines or "anchors" when extracting information such as the $x$ or $y$ value on a chart [@tan1994human ; @godlonton2018anchoring].
+Rounding errors occur out of natural human preference to provide rounded figures even if a precise estimate is desired or requested [@myers1954accuracy]. 
  @schneeweiss2010symmetric outlines distortion in results as a consequence of rounding and suggests the use of corrections when conducting statistical regression analyses on data prone to rounding.
 
 Scale and axis labels are other critical factors in estimation accuracy.
-@dunham1991learning argue that if there is not proper attention given to the scale when using a line graph, there is a potential for issues when interpretting asymmetric scales and when choosing appropriate scales for the graphic.
-@beeby1973well found that when asked to read data from line graphs, viewers consistentely misread the $y$-axis scale; when alternate grid lines were labeled, the unlabeled grid lines were read as halves.
-This misrepresentation is highlighted for assymetric scales where spatial distance does not necessarily equate to numerical or quantiative difference.
+@dunham1991learning argue that if there is not proper attention given to the scale when using a line graph, there is a potential for issues when interpreting asymmetric scales and when choosing appropriate scales for the graphic.
+@beeby1973well found that when asked to read data from line graphs, viewers consistently misread the $y$-axis scale; when alternate grid lines were labeled, the unlabeled grid lines were read as halves.
+This misrepresentation is highlighted for asymmetric scales where spatial distance does not necessarily equate to numerical or quantitative difference.
 The choice of scale can change the shape of a graph, thus creating a conceptual demand for the viewer when constructing a mental image of the graph [@leinhardt1990functions]. 
 
 ## Motivation and Background
@@ -421,7 +413,7 @@ Exponential curves are a common source of data in which smaller magnitudes are c
 Logarithms convert multiplicative relationships (for example, 1 \& 10 displayed 10 units apart and 10 \& 100 displayed 90 units apart) to additive relationships (for example, 1 \& 10 and 10 \& 100 both equally spaced along the axis), showing proportional relationships and linearizing power functions [@menge_logarithmic_2018].
 They also have practical purposes, easing the computation of small numbers such as likelihoods and transforming data to fit statistical assumptions.
 When presenting log scaled data, it is possible to use either un-transformed scale labels (for example, values of 1, 10 and 100 are equally spaced along the axis) or log transformed scale labels (for example, 0, 1, and 2, showing the corresponding powers of 10).
-\svp{In the grammar of graphics/ggplot2 formulation, this is the difference between a scale and a transformation... it might be worth seeing if that is a hadley-ism or if that is a wider convention.}
+<!-- \svp{In the grammar of graphics/ggplot2 formulation, this is the difference between a scale and a transformation... it might be worth seeing if that is a hadley-ism or if that is a wider convention.} -->
 
 ```{r log-scales, fig.cap = "Linear scale verses log scale", out.width="100%"}
 data <- tibble(x = seq(0,10, by = 0.1), y = exp(x))
@@ -482,11 +474,10 @@ The usefulness of log scales in comparing deaths attributed to COVID-19 between 
 As the pandemic evolved, and the case counts were no longer spreading exponentially, graphs with linear scales seemed more effective at spotting early increases in case counts that signaled more localized outbreaks. In \cref{fig:covid19-FT-june2020-case-counts-linear} and \cref{fig:covid19-FT-june2020-case-counts-log}, the daily case counts as of June 30, 2020 are displayed on both the linear and log scales respectively [@burnmurdoch_2020]. 
 The effect of the linear scale \pcref{fig:covid19-FT-june2020-case-counts-linear} appears to evoke a stronger reaction from the public than the log scale \pcref{fig:covid19-FT-june2020-case-counts-log} as daily case counts are clearly rising rapidly during the summer wave. 
 This is only one recent example of a situation in which both log and linear scales are useful for showing different aspects of the same data. 
-There are long histories of using log scales to display results in ecology, psychophysics, engineering, and physics [@menge_logarithmic_2018; @heckler_student_2013]
+There are long histories of using log scales to display results in ecology, psychophysics, engineering, and physics [@menge_logarithmic_2018; @heckler_student_2013].
 In @waddell2005comparisons, comparisons were made between the linear and logarithmic scales for the relationship between dosage and carcinogenicity in rodents.
 Results favored the use of logarithmic scales for doses in order to put the relative doses into perspective whereas using a linear scale to administer doses to animals with the same chemicals to which humans are exposed does not provide useful, comparative information.
 Given the widespread use of logarithmic scales, it is important to understand the implications of their use in order to provide guidelines for best use.
-\svp{elaborate on this a bit - when are they used, and where are they effective? Can you draw more comprehensive conclusions about the use of log scales?}.
 
 ```{r covid19-FT-deaths-march2020-log, fig.cap = "Covid 19 Deaths (log scale) as of March 23, 2020", out.width="90%"}
 knitr::include_graphics("images/covid19-FT-03.23.2020-log.png")
@@ -571,7 +562,8 @@ It is not until late stages of exponential growth when it is quite apparent that
 This misinterpretation can lead to decisions made under inaccurate understanding causing future consequences.
 
 Early studies explored the estimation and prediction of exponential growth and found that growth is underestimated when presented both numerically and graphically [@wagenaar_misperception_1975].
-Results indicated that numerical estimation is more accurate than graphical estimation for exponential curves. 
+The hierarchy of plot objects found in @cleveland_graphical_1985 can provide a possible explanation for the underestimation the occurs in exponentially increasing trends; the exponential trend can be thought of as a series of tangential angles leading to less accurate judgement of the next points.
+Results from @wagenaar_misperception_1975 indicated that numerical estimation is more accurate than graphical estimation for exponential curves. 
 Experimental studies were conducted in order to determine strategies to improve the accuracy of estimation of exponential growth [@wagenaar_misperception_1975; @jones_polynomial_1977; @mackinnon_feedback_1991].
 There was no improvement in estimation found when participants had contextual knowledge or experience with exponential growth, but instruction on exponential growth reduced the underestimation; participants adjusted their initial starting value but not their perception of the growth rate [@wagenaar_misperception_1975; @jones_polynomial_1977].
 @mackinnon_feedback_1991 found that estimation was improved by providing immediate feedback to participants about the accuracy of their current predictions.  
@@ -596,13 +588,11 @@ Linear extrapolation is again responsible for the first and third faults while t
 
 ## Research Objectives
 In this research, we conducted a series of three graphical studies to evaluate the impact displaying data on the log scale has on human perception of exponentially increasing trends compared to displaying data on the linear scale.
-Each study was related to a different graphical task, each requring a different level of interaction and cognitive use of the data being presented.
+Each study was related to a different graphical task, each requiring a different level of interaction and cognitive use of the data being presented.
 The first experiment evaluated whether our ability to perceptually notice differences in exponentially increasing trends is impacted by the choice of scale. 
 We conducted a visual inference experiment in which participants were shown a series of lineups and asked to identify the plot that differed most from the surrounding plots. 
 The other experimental tasks focus on determining whether there are cognitive disadvantages to log scales: do log scales make it harder to make use of graphical information? 
 To test an individual's ability to make predictions for exponentially increasing data, participants were asked to draw a line using their computer mouse through an exponentially increasing trend shown on both the linear and log scale.
 In addition to differentiation and prediction of exponentially increasing data, an estimation task was conducted to test an individuals' ability to translate a graph of exponentially increasing data into real value quantities and extend their estimations by making comparisons.
 Combined, the three studies provide a comprehensive evaluation of the impact of displaying exponentially increasing data on a log scale as it relates to perception, prediction, and estimation.
-The results of these studies help us to make reccommendations and provide guidelines for the use of log scales.
-
-<!-- \svp{Things that seem to be missing: 1) Cleveland and McGill - hierarchy of accuracy in plot objects. You can think of e.g. exponentials as a series of tangential angles, which might help with explaining underestimation? 2) some literature explaining the different levels of complexity between perception, reading information off of a graph, predicting information, etc. - you should find this if only because it grounds the whole experiment in psychological theory (but you don't have to find it for your prelim)} -->
+The results of these studies help us to make recommendations and provide guidelines for the use of log scales.

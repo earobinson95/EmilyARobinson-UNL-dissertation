@@ -95,16 +95,13 @@ Evaluation of how viewers explore a new and complex graphic requires long-term i
 While it is difficult to obtain an accurate representation of a viewers understanding of the graphic with a fixed set of numerical estimates, three levels of graph comprehension have emerged from literature [@wood1968objectives; @curcio1987comprehension; @jolliffe1991assessment; @friel2001making; @glazer2011challenges].
 The three behaviors related to graph comprehension involve (1) literal reading of the data (elementary level), (2) reading between the data (intermediate level), and (3) reading beyond the data (advanced level).
 
-<!-- Comprehension of information in written or symbolic form involves three kinds of behaviors (Jolliffe, 1991; Wood, 1968) that seem to be related to graph comprehension: (1) translation, (2) interpretation, and (3) extrapolation/interpolation. -->
+### Estimation Biases
 
-### Rounding Estimates & Anchoring
-
-Certain well-known biases such as the tendency to round to multiples of five or ten or to anchor estimates to visual cues arise from open-ended estimation tasks \ear{CITE AND ELABORATE}.
-
-Beeby and Taylor (cited in MacDonald-Ross, 1977) found that in reading data from line graphs, people persistently misread the scale on the vertical axis; when only alternate lines were numbered, the unnumbered lines were read as halves.
-
- Dunham and Osborne (1991) found that if students do not attend to scale when they use line graphs for lab or stat data, they may have problems in interpreting asymmetric scales and in choosing appropriate scales to make good use of the grpahing space.
-+ Leinhardt, Zaslavsky, and Stein (1990) noted that the shape of a graph changes depending on the scale; this change may create a “conceptual demand” (p.17) that affects the mental image a graph user is able to construct.
+Certain well-known biases such as the tendency to round to multiples of five or ten or to anchor estimates to visual cues arise from open-ended estimation tasks [@tan1990processing].
+Viewers may anchor their estimates to grid lines or round their approximations to rounded figures due to natural preference [@tan1994human; @godlonton2018anchoring; @myers1954accuracy].
+Estimation accuracy is also affected by scale and axis labels [@dunham1991learning]; when alternate grid lines are labeled, viewers often read unlabeled grid lines as halves [@beeby1973well].
+This misrepresentation is highlighted for asymmetric scales, such as a log scale, since spatial distance does not equate to numerical or quantitative difference.
+Therefore, careful consideration must be given to the choice of scale for the graphic and how the viewer will interpret the data and information displayed.
 
 ## Study Design
 

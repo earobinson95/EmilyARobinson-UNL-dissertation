@@ -66,7 +66,7 @@ fig:high-15-linear
 fig:high-15-log
 fig:unnamed-chunk-2
 literature-review
-statistical-graphics
+introduction-to-statistical-graphics
 history-of-graphics
 misleading-graphics
 graphical-guidelines
@@ -75,7 +75,7 @@ perceptual-process
 logarithmic-perception
 cognitive-tasks-and-testing-statistical-graphics
 cognitive-fit
-lit-graphical-experiments
+testing-statistical-graphics
 graph-comprehension
 questioning
 estimation-strategies
@@ -108,7 +108,7 @@ discussion-and-conclusion-1
 estimation
 introduction-2
 graph-comprehension-1
-rounding-estimates-anchoring
+estimation-biases-1
 study-design-2
 data-generation-3
 results-3
