@@ -245,13 +245,15 @@ Each interaction requires a different level of cognitive involvement and the com
 
 ### Cognitive Fit
 
+How viewers interact with a graphic 
+
 + @vessey1991cognitive
 + @tan1990processing
 + @tory2004human
   + how people perceive and interact with a visualization tool can strongly influence their understanding of the data as well as the system’s usefulness
 + Three levels
   + Reasoning
-  + Sensemaking
+  + Sense making
   + Decision-Making
 
 ### Testing Statistical Graphics {#testing-statistical-graphics}

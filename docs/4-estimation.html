@@ -283,7 +283,7 @@ div.csl-indent {
 These graphical tasks were conducted independent of scenarios or contextual applications of log scales; instead, they focused how our visual system perceives and identifies patterns in exponential growth.
 In order to understand the cognitive implications of displaying exponentially increasing data on a log scale, it is essential to evaluate graph comprehension as it relates to the contextual scenario of the data shown.
 This is a complex inferential process which requires participants to engage with the data by quantitatively transforming information in the chart <span class="citation">(Cleveland &amp; McGill, 1984, 1985)</span>.
-In this study, I asked participants to translate a graph of exponentially increasing data into real value quantities and extend their estimations by comparing two data points.</p>
+In this study, we asked participants to translate a graph of exponentially increasing data into real value quantities and extend their estimations by comparing two data points.</p>
 <!-- Such complex inferential processes involve quantitatively transforming the information in the display (e.g., mentally transforming from a linear to log scale or calculating the difference between two or more data points; Cleveland, 1984, 1985). -->
 <div id="graph-comprehension-1" class="section level3 hasAnchor" number="4.1.1">
 <h3><span class="header-section-number">4.1.1</span> Graph Comprehension<a href="4-estimation.html#graph-comprehension-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -306,22 +306,22 @@ Therefore, careful consideration must be given to the choice of scale for the gr
 <p>Participants in this study were asked to answer six questions related to each of two contextual scenarios and an associated scatter plot shown for a total of twelve questions.
 The text for each scenario is presented below; the context of both scenarios was selected to be similar.
 Each text describes a situation in which a fictional intergalactic species is exponentially increasing in population over a time measure adjusted to reflect the popular culture media depiction of that species <span class="citation">(Marquand, 1983; <em>Star trek</em>, 1967; <em>Star wars</em>, 1977)</span>.
-For simplicity, I will refer to these fictional time components as a year throughout the rest of the chapter.</p>
+For simplicity, we will refer to these fictional time components as a year throughout the rest of the chapter.</p>
 <p>Fictional illustrations of the figures used in context were modified from artwork by <span class="citation">Allison Horst</span> and included on the main page for each scenario.
 The scale of the graphic and data set displayed was randomly assigned to scenarios for each individual.
 For instance, a participant may have seen a scatter plot of data set two displayed on the linear scale paired with the Ewok scenario text and a scatter plot of data set one displayed on the log scale paired with the Tribble scenario text.
 The order of the two scenarios and their assigned data set and scale was randomly assigned to each individual.</p>
-<p>I selected the six questions for graph comprehension based on the three defined levels of questioning.
+<p>We selected the six questions for graph comprehension based on the three defined levels of questioning.
 In each scenario, participants were first asked an open ended question, which required them to spend time exploring the data displayed in the graphic, followed by a random order of two elementary level questions and three intermediate level questions.
-I did not focus on advanced level questioning since extrapolation and interpolation was addressed in <a href="3-youdrawit.html#youdrawit">Chapter 2</a>.</p>
+We did not focus on advanced level questioning since extrapolation and interpolation was addressed in <a href="3-youdrawit.html#youdrawit">Chapter 2</a>.</p>
 <p>The estimation study in this chapter was completed last in the series of the three graphical studies and took about fifteen minutes for participants to answer all twelve estimation questions.
 Participants completed the series of graphical tests using a R Shiny application found <a href="https://shiny.srvanderplas.com/perception-of-statistical-graphics/">here</a>.
 For each of the quantitative translation questions, participants were provided a basic calculator and scratchpad to aid in their estimation of values.
-I recorded the inputted and evaluated calculations and scratch work of each participant in order to better understand participant strategies for estimation.</p>
+We recorded the inputted and evaluated calculations and scratch work of each participant in order to better understand participant strategies for estimation.</p>
 </div>
 <div id="data-generation-3" class="section level2 hasAnchor" number="4.3">
 <h2><span class="header-section-number">4.3</span> Data Generation<a href="4-estimation.html#data-generation-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>I generated two unique data sets with the same underlying parameter coefficients, but different errors randomly generated from the same error distribution.
+<p>We generated two unique data sets with the same underlying parameter coefficients, but different errors randomly generated from the same error distribution.
 For each data set, a total of <span class="math inline">\(N = 50\)</span> points <span class="math inline">\((x_i, y_i), i = 1,...N\)</span> were generated for single increments of <span class="math inline">\(x_i\in [0, 50]\)</span> where <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> have an exponential relationship.
 Data were simulated based on a three parameter exponential model with multiplicative errors:
 <span class="math display">\[\begin{align}
@@ -393,10 +393,10 @@ Figure 4.4: Elementary Q1 Density in year 10
 <p>During the study, participants were explicitly asked to estimate the population during year 10; this value corresponds to a low magnitude where the population is condensed in a small region on the linear scale as opposed to later in time when larger magnitudes in population can be seen.
 While the results provided support for less variability in the estimated population in year 10 on the log scale, it is important to evaluate the accuracy of estimates along the domain.
 In two estimation questions related to intermediate level reading between the data, participants are asked to provide an increase and change in population between years 20 and 40, thus requiring participants to make first level estimates at these locations ( and ).
-In order to understand the effect of the location along the domain and in turn the magnitude of the population being estimated, I extracted first level estimates for years 20 and 40 from participant calculations and scratch work.
-I first compared population estimates from the explicitly asked year 10 location between participants who used the calculator and scratchpad in two or more of the questions to determine whether there were differences or biases between those who used resources for estimation compared to those who did not utilize the resources <a href="B-exponential-prediction-plots.html#estimation-comparison">Appendix 3b</a>.
+In order to understand the effect of the location along the domain and in turn the magnitude of the population being estimated, we extracted first level estimates for years 20 and 40 from participant calculations and scratch work.
+We first compared population estimates from the explicitly asked year 10 location between participants who used the calculator and scratchpad in two or more of the questions to determine whether there were differences or biases between those who used resources for estimation compared to those who did not utilize the resources <a href="B-exponential-prediction-plots.html#estimation-comparison">Appendix 3b</a>.
 About half of the participants fell into the category which provided scratch work and half did not.
-It was determined there was no substantial difference or biases in estimations between the two groups, therefore, I proceeded to examine the estimated populations across scales from the first level estimates.</p>
+It was determined there was no substantial difference or biases in estimations between the two groups, therefore, we proceeded to examine the estimated populations across scales from the first level estimates.</p>
 <p>The true population from the underlying parameters in year 20 was 1483.01 with closest simulated point values of 1529.19 and 1288.9 for data sets one and two respectively; this location still results in a relatively low magnitude of population, but is closer to the crux of the exponential curve.
 In year 40, the true population from the underlying parameters in year 40 is 15846.35 with closest simulated point values of 17046.94 and 24186.34 for data sets one and two respectively.
 It is important to note the discrepancy in simulated point values in year 40 between the two data sets as a result to a multiplicative error causing a larger variance in simulated points for later years and larger population magnitudes.</p>
@@ -419,7 +419,7 @@ This provides argument that estimates are highly subjective to the particular da
 As the year increases, we observe an increased accuracy in estimates made on the linear scale while estimates made on the log scale suffer in accuracy due to strong anchoring to grid lines and the larger quantitative difference between grid lines as population magnitudes increase.
 For instance, on the log scale, there was a tendency to overestimate the population for year 20 from data set one, underestimate the population for year 20 from data set two, and overestimate the population for year 40 from data set two.
 Inaccurate first level estimations can lead to consequences in estimations which require participants to make comparisons between two points (e.g. Intermediate Q1 and Q2).</p>
-<p>In extracting participant first level estimates from their calculation and scratch work, I observed participants were resistant to estimating between grid lines and had a greater tendency to anchor their estimates to the grid line estimates on the log scale.
+<p>In extracting participant first level estimates from their calculation and scratch work, we observed participants were resistant to estimating between grid lines and had a greater tendency to anchor their estimates to the grid line estimates on the log scale.
 illustrates the number of participants who provided that estimate on either the linear or log base two scale.
 True values based on underlying estimates, closest simulated point values, and grid line breaks are indicated by the horizontal line types.
 In particular, for year 40 in data set one, the closest point (17046.94) falls close to the log grid line (16384); participants greatly anchored to the grid line of 16384 with some participants adjusting to 16500 or 17000, anchoring again to a base ten value.
@@ -686,7 +686,7 @@ Common responses strongly suggest participants were anchoring to multiples of 5 
 <div id="discussion-and-conclusion-2" class="section level2 hasAnchor" number="4.5">
 <h2><span class="header-section-number">4.5</span> Discussion and Conclusion<a href="4-estimation.html#discussion-and-conclusion-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This study was intended to help inform and aid in understanding the cognitive implications of displaying exponentially increasing data on a log scale.
-I evaluated graph comprehension as it relates to two contextual scenarios by asking participants a series of six questions (one open ended, two elementary level, and three intermediate) which required them to quantitatively transform information in the chart.
+We evaluated graph comprehension as it relates to two contextual scenarios by asking participants a series of six questions (one open ended, two elementary level, and three intermediate) which required them to quantitatively transform information in the chart.
 Results provided an understanding of the advantages and disadvantages of the log scale.</p>
 <p>In general, results suggest that understanding log logic is difficult as indicated by the misunderstanding in Intermediate Q1 and Q2.
 This is also supported in following participants estimation strategies for making first level estimates in Intermediate Q3 rather than relying on their spatial awareness between grid lines on the log scale.
@@ -702,7 +702,7 @@ Common responses revealed participants bias to anchoring their estimates to the 
 The strong tendency to anchor to grid lines on the log scale resulted in a sacrifice in accuracy as quantitative differences between grid lines increased.
 This also implies that accuracy strongly depended on the location of the simulated point in relation to the grid lines.</p>
 <p>Understanding graph comprehension is a complex process and requires long-term interaction with the chart and information being presented.
-With a fixed number of estimates and assessment of participant scratch work, I outlined a variety of situations in which displaying exponentially increasing data on the log scale resulted in both advantages and disadvantages, thus providing a better understanding of the cognitive implications of the use of log scales.</p>
+With a fixed number of estimates and assessment of participant scratch work, we outlined a variety of situations in which displaying exponentially increasing data on the log scale resulted in both advantages and disadvantages, thus providing a better understanding of the cognitive implications of the use of log scales.</p>
 
 </div>
 </div>

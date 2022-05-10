@@ -281,7 +281,7 @@ div.csl-indent {
 <h2><span class="header-section-number">3.1</span> Introduction<a href="3-youdrawit.html#introduction-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In <a href="2-lineups.html#lineups">Chapter 2</a>, a base foundation for future exploration of the use of log scales was established by evaluating participants ability to identify differences in charts through the use of lineups.
 This did not require that participants were able to understand exponential growth, identify log scales, or have any mathematical training; instead, it simply tested the change in perceptual sensitivity resulting from visualization choices.
-In order to determine whether there are cognitive disadvantages to log scales, I utilized interactive graphics to test an individual’s ability to make predictions for exponentially increasing data.
+In order to determine whether there are cognitive disadvantages to log scales, we utilized interactive graphics to test an individual’s ability to make predictions for exponentially increasing data.
 In this study, participants were asked to draw a line using their computer mouse through the exponentially increasing trend shown on both the log and linear scales.</p>
 <div id="past-methodology" class="section level3 hasAnchor" number="3.1.1">
 <h3><span class="header-section-number">3.1.1</span> Past Methodology<a href="3-youdrawit.html#past-methodology" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -375,11 +375,11 @@ Figure 3.5: You Draw It Example
 <div id="study-design-1" class="section level2 hasAnchor" number="3.2">
 <h2><span class="header-section-number">3.2</span> Study Design<a href="3-youdrawit.html#study-design-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This chapter contains two sub-studies; the first aims to establish ‘You Draw It’ as a tool for measuring predictions of trends fitted by eye and a method for testing graphics, the second then applies ‘You Draw It’ to test an individual’s ability to make predictions for exponentially increasing data on the log and linear scale.
-The first sub-study, referred to as Eye Fitting Straight Lines in the Modern Era, was intended to implement the ‘You Draw It’ feature as a way to measure the patterns we see in data. I validate the ‘You Draw It’ method for testing graphics by replicating the less technological study conducted by <span class="citation">Mosteller et al. (1981)</span>.
-Based on previous research, I hypothesize that visual regression tends to mimic principle component or Deming regression rather than an ordinary least squares regression.
-In order to assess this hypothesis, I introduce a method for statistically modeling the participant drawn lines using generalized additive mixed models (GAMM).
+The first sub-study, referred to as Eye Fitting Straight Lines in the Modern Era, was intended to implement the ‘You Draw It’ feature as a way to measure the patterns we see in data. We validate the ‘You Draw It’ method for testing graphics by replicating the less technological study conducted by <span class="citation">Mosteller et al. (1981)</span>.
+Based on previous research, we hypothesize that visual regression tends to mimic principle component or Deming regression rather than an ordinary least squares regression.
+In order to assess this hypothesis, we introduce a method for statistically modeling the participant drawn lines using generalized additive mixed models (GAMM).
 The second sub-study, referred to as Prediction of Exponential Trends, uses the established ‘You Draw It’ method to test an individual’s ability to make predictions for exponentially increasing data on both the log and linear scales.
-I then use the GAMMS to analyze participant drawn lines; a benefit of using a GAMM is the estimation of smoothing splines, allowing for flexibility in the residual trend and analysis of nonlinear trends.</p>
+We then use the GAMMS to analyze participant drawn lines; a benefit of using a GAMM is the estimation of smoothing splines, allowing for flexibility in the residual trend and analysis of nonlinear trends.</p>
 <p>A total of six data sets - four Eye Fitting Straight Lines in the Modern Era and two Prediction of Exponential Trends - are generated for each individual at the start of the experiment.
 The two simulated data sets corresponding to the simulated data models used in the Prediction of Exponential Trends sub-study are then plotted a total of four times each with different aesthetic and scale choices for a total of eight task plots.
 Participants in the study are first shown two ‘You Draw It’ practice plots followed by twelve ‘You Draw It’ task plots.
@@ -478,7 +478,8 @@ where</p>
 <li><span class="math inline">\(s_{j}\)</span> is the random smoothing spline for each participant.</li>
 </ul>
 <p> and show the estimated trends of residuals (vertical deviation of participant drawn points from both the OLS and PCA fitted points) as modeled by a LMM and GAMM respectively.
-Examining the plots, the estimated trends of PCA residuals (orange) appear to align more paralell and closer to the <span class="math inline">\(y=0\)</span> horizontal (dashed) line than the OLS residuals (blue).
+A random sample of 75 participants was selected to display individual participant residuals behind the overall residual trend.
+Examining the plots, the estimated trends of PCA residuals (orange) appear to align more parallel and closer to the <span class="math inline">\(y=0\)</span> horizontal (dashed) line than the OLS residuals (blue).
 In particular, this trend is more prominent in parameter choices with large variances (F and N).
 These results are consistent to those found in <span class="citation">Mosteller et al. (1981)</span> indicating participants fit a trend line closer to the estimated regression line with the slope of the first principal component than the estimated OLS regression line.
 This study established ‘You Draw It’ as a method for graphical testing and reinforced the differences between intuitive visual model fitting and statistical model fitting, providing information about human perception as it relates to the use of statistical graphics.</p>
