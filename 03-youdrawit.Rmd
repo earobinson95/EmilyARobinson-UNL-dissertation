@@ -8,20 +8,20 @@ library(readr)
 library(knitr)
 ```
 
-```{r eyefitting-data, message=FALSE, warning=FALSE, cache = F}
-eyefitting_model_data <- read_csv(here("data/02b-eyefitting/eyefitting-model-data.csv")) %>%
+```{r eyefitting-data, message=FALSE, warning=FALSE}
+eyefitting_model_data <- read_csv("data/02b-eyefitting/eyefitting-model-data.csv") %>%
   dplyr::rename(`Parameter Choice` = parm_id)
 
-eyefitting_simulated_data <- read_csv(here("data/02b-eyefitting/eyefitting-simulated-data.csv")) %>%
+eyefitting_simulated_data <- read_csv("data/02b-eyefitting/eyefitting-simulated-data.csv") %>%
   dplyr::rename(`Parameter Choice` = parm_id)
 
-eyefitting_parameters <- read_csv(here("data/02b-eyefitting/eyefitting-parameters.csv")) %>%
+eyefitting_parameters <- read_csv("data/02b-eyefitting/eyefitting-parameters.csv") %>%
   dplyr::rename(`Parameter Choice` = parm_id)
 
-eyefitting_lmer_preds <- read_csv(here("data/02b-eyefitting/eyefitting-lmer-preds.csv")) %>%
+eyefitting_lmer_preds <- read_csv("data/02b-eyefitting/eyefitting-lmer-preds.csv") %>%
   dplyr::rename(`Parameter Choice` = parm_id)
 
-eyefitting_gamm_preds <- read_csv(here("data/02b-eyefitting/eyefitting-gamm-preds.csv")) %>%
+eyefitting_gamm_preds <- read_csv("data/02b-eyefitting/eyefitting-gamm-preds.csv") %>%
   dplyr::rename(`Parameter Choice` = parm_id)
 ```
 
@@ -228,9 +228,9 @@ In comparison, S resulted a trend with a positive slope with a small variance an
 \cref{fig:eyefitting-simplot} illustrates an example of simulated data for all four parameter choices intended to reflect the trends seen in \cref{fig:mosteller-eyefitting-plot}.
 Aesthetic design choices were made consistent across each of the interactive 'You Draw It' plots; the $y$-axis range extended 10\% beyond (above and below) the range of the simulated data points to allow for users to draw outside the simulated data set range and minimize participants anchoring their lines to the edges of the graph.
 
-```{r eyefitting-simplot, fig.height = 8, fig.width = 8, fig.cap = "Eye Fitting Straight Lines in the Modern Era Simulated Data Example", out.width="100%"}
+```{r eyefitting-simplot, fig.height = 8, fig.width = 8, fig.cap = "Eye Fitting Straight Lines in the Modern Era Simulated Data Example", out.width="100%", echo = F, messages = F, warning = F}
 
-eyefitting_example_sim <- read.csv(here("data/02b-eyefitting/eyefitting-simdata-example.csv"))
+eyefitting_example_sim <- read_csv("data/02b-eyefitting/eyefitting-simdata-example.csv")
 eyefitting_example_simplot <- eyefitting_example_sim %>%
   filter(data == "point_data") %>%
   filter(dataset %in% c("F", "N", "S") | (x < 16 & x > 4)) %>%
@@ -413,7 +413,7 @@ In particular, this trend is more prominent in parameter choices with large vari
 These results are consistent to those found in @mosteller_eye_1981 indicating participants fit a trend line closer to the estimated regression line with the slope of the first principal component than the estimated OLS regression line.
 This study established 'You Draw It' as a method for graphical testing and reinforced the differences between intuitive visual model fitting and statistical model fitting, providing information about human perception as it relates to the use of statistical graphics.
 
-```{r eyefitting-lmer-residualplots, warning = F, message = F, fig.height = 9, fig.width = 9, out.width = "100%", fig.cap = "Eye Fitting Straight Lines in the Modern Era LMM results"}
+```{r eyefitting-lmer-residualplots, warning = F, message = F, fig.height = 9, fig.width = 9, out.width = "100%", fig.cap = "Eye Fitting Straight Lines in the Modern Era LMM results", dev='png'}
 
 set.seed(68505)
 participant_sample <- sample(unique(eyefitting_model_data$prolific_id), 75)
@@ -456,7 +456,7 @@ eyefitting_lmer_plot <- eyefitting_lmer_preds %>%
 eyefitting_lmer_plot
 ```
 
-```{r eyefitting-gamm-residualplots, warning = F, message = F, fig.height = 9, fig.width = 9, out.width = "100%", fig.cap = "Eye Fitting Straight Lines in the Modern Era GAMM results"}
+```{r eyefitting-gamm-residualplots, warning = F, message = F, fig.height = 9, fig.width = 9, out.width = "100%", fig.cap = "Eye Fitting Straight Lines in the Modern Era GAMM results", dev='png'}
 
 eyefitting_gamm_plot <- eyefitting_gamm_preds %>%
   filter((`Parameter Choice` %in% c("F", "N", "S") | (x <= 16 & x >= 4))) %>%
@@ -546,7 +546,7 @@ For each participant $l = 1,...N_{participant}$, the final data set used for ana
 The spaghetti plot with a high growth rate suggests participants underestimated the exponential trend when asked to draw a trend line on the linear scale compared to when asked to draw a trend line on the log scale.
 In particular, this suggestion is most noticeable when points are truncated at 50\% with the underestimation beginning at a later $x$ value when points are truncated at 75\%. 
 
-```{r exponential-yloess-spaghetti-plot, message=FALSE, warning=FALSE, fig.height = 9, fig.width = 9, out.width = "100%", fig.cap = "Exponential Prediction Spaghetti Plot", cache = F}
+```{r exponential-yloess-spaghetti-plot, message=FALSE, warning=FALSE, fig.height = 9, fig.width = 9, out.width = "100%", fig.cap = "Exponential Prediction Spaghetti Plot", dev='png'}
 
 spaghetti_plot <- youdrawit_model_data %>%
   ggplot(aes(x = x)) +
@@ -589,7 +589,7 @@ Examining the plots, the estimated trends of residuals for predictions made on t
 In comparisons, the estimated trends of residuals for predictions made on the log scale (orange) follow closely to the $y=0$ horizontal (dashed) line, implying exponential trends predicted on the log scale are more accurate than those predicted on the linear scale.
 In particular, this trend is more prominent in high exponential growth rates where underestimation becomes prominent after the aid of points is removed.
 
-```{r exponential-prediction-gamm-preds, message=FALSE, warning=FALSE, fig.height = 9, fig.width = 9, out.width = "100%", fig.cap = "Exponential Prediction GAMM Results"}
+```{r exponential-prediction-gamm-preds, message=FALSE, warning=FALSE, fig.height = 9, fig.width = 9, out.width = "100%", fig.cap = "Exponential Prediction GAMM Results", dev='png'}
 
 set.seed(68505)
 participant_sample2 <- sample(unique(youdrawit_model_data$prolific_id), 75)

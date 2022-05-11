@@ -441,7 +441,6 @@ The results indicate that participants were more accurate at detecting the targe
 When examining this curvature combination, the same perceptual effect occurs as what we previously saw, but in a different context of scales.
 On the linear scale, participants are perceptually identifying a curved trend from close to a linear trend whereas after the logarithmic transformation, participants are perceptually identifying a trend close to linear from a curved trend.
 This again supports the claim that it is easy to identify a curve in a bunch of lines but much harder to identify a line in a bunch of curves [@best_perception_2007].
-\svp{First person plural is a bit odd compared to first person singular earlier. "We" is fairly typical in papers, so it's not as odd as the "I" earlier. But it is your dissertation, so... maybe see if Reka finds it odd?}
 
 ```{r odds-ratio-plot, echo = F, eval = T, fig.width = 12, fig.height = 6, fig.align='center', fig.cap = "Lineups log(odds) results", message = F, warning = F}
 lineups_or <- read.csv("data/01-lineups/lineups-odds-ratios.csv")

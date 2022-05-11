@@ -41,13 +41,20 @@ lof: true
 ```{r setup, include = F}
 options(width = 60)
 knitr::opts_chunk$set(
-  echo = F, eval = T, messages = F, warnings = F,
-  fig.width = 6, fig.height = 4,  fig.align = 'center',
-  out.width = "\\linewidth", dpi = 300, 
+  echo = F, 
+  eval = T, 
+  messages = F, 
+  warnings = F,
+  fig.width = 6, 
+  fig.height = 4,  
+  fig.align = 'center',
+  out.width = "\\linewidth", 
+  dpi = 300, 
   tidy = T, tidy.opts=list(width.cutoff=45),
   fig.pos = "tbp",
   out.extra = "",
-  cache = T
+  cache = F,
+  dev = "png"
 )
 ```
 
@@ -240,21 +247,41 @@ where $P$ represents the perceived stimulus, $K$ represents Weber's contrast, $S
 
 ## Cognitive Tasks and Testing Statistical Graphics
 
-In order to understand how our visual system perceives statistical graphics, we must first consider the complexity of the graphic and how viewers are interacting with the data and information being displayed [@@tory2004human].
+In order to understand how our visual system perceives statistical graphics, we must first consider the complexity of the graphic and how viewers are interacting with the data and information being displayed [@tory2004human].
 Each interaction requires a different level of cognitive involvement and the complexity of the task being asked of the viewer must match the graphic and desired hypothesis.
 
 ### Cognitive Fit
 
-How viewers interact with a graphic 
+The efficiency in which a viewer extracts data and information from a graphical display is greatly affected by the complexity in the task environment.
+Cognitive fit refers to a match between the representation of the data and the complexity of the task; the representation and tools should support the task strategies, thus reducing the complexity of the task [@vessey1991cognitive].
+@carpenter1998model identifies pattern recognition, interpretative processes, and integrative processes as strategies and processes required to complete tasks of varying degrees of complexity.
+Pattern recognition requires the viewer to encode graphic patterns while interpretive processes operate on those patterns to construct meaning.
+Integrative processes then relate the meanings to the contextual scenario as inferred from labels and titles.
+These processes are critical when determining cognitive fit since they provide the link between the graphical representation and task [@vessey1991cognitive].
+For example, perceptual differences may be identified through pattern recognition while estimation tasks would require integrative processes.
+@tory2004human argues for multiple visual representations of the data since the users' information needs are dependent on both domain and task.
+Therefore, we must consider and determine how the viewer is perceiving and interacting with the graphic as this can influence their understanding of the data and information.
 
-+ @vessey1991cognitive
-+ @tan1990processing
-+ @tory2004human
-  + how people perceive and interact with a visualization tool can strongly influence their understanding of the data as well as the system’s usefulness
-+ Three levels
-  + Reasoning
-  + Sense making
-  + Decision-Making
+<!-- + @vessey1991cognitive -->
+<!--   + decision-making performance  -->
+<!--   + (1) although graphical and tabular representations may contain the same information, they present that information in fundamentally different ways (grahphical representations emphasize spatial information, while tables emphasize symbolic information) -->
+<!--   + (2) tasks can be divided into two types: spatial and symbolic, based on the type of informaiton that facilitates their solution -->
+<!--   + (3) performance on a task will be enhanced when there is a cognitive fit (match) between the information emphasized in the representation type and that required by the task type (graphs support spatial tasks and tables support symbolic tasks) -->
+<!--   + (4) the processes or strategies problem solvers use are the crucial elements of cognitive fit since they provide the link between representation and task (perceptual and analytical) -->
+<!--   + (5) a complete fit of representaiton, processes, and task type, each represetation will lead to both quicker and more accurate problem solving. -->
+  
+<!-- + @tan1990processing -->
+<!--   + taxonomy of tasks for guiding research in the graphics domain (classifying data extraction tasks). -->
+<!--   + lack of a strong theoretical basis for explaining mechanisms underlying the way human's process information in graphical form. -->
+
+<!-- + @tory2004human -->
+<!--   + how people perceive and interact with a visualization tool can strongly influence their understanding of the data as well as the system’s usefulness -->
+<!--   + users' information needs are domain and task dependent: suggestion - multiple visual representations of the data should be available. -->
+  
+<!-- + Three levels -->
+<!--   + Reasoning -->
+<!--   + Sense making -->
+<!--   + Decision-Making -->
 
 ### Testing Statistical Graphics {#testing-statistical-graphics}
 
@@ -368,6 +395,7 @@ The study showed that students were less accurate in estimating metric units as 
 Certain biases including anchoring and rounding to multiples of five or ten arise in open-ended estimation tasks.
 When it comes to understanding graphics, anchoring is prominent in both graphical representations and data extraction tasks [@tan1990processing].
 Anchoring bias refers to an individual using easily observed visual cues such as grid lines or "anchors" when extracting information such as the $x$ or $y$ value on a chart [@tan1994human ; @godlonton2018anchoring].
+In addition to $x$-value and $y$-value anchoring, entity anchoring refers to anchoring on group information withing a data set. 
 Rounding errors occur out of natural human preference to provide rounded figures even if a precise estimate is desired or requested [@myers1954accuracy]. 
  @schneeweiss2010symmetric outlines distortion in results as a consequence of rounding and suggests the use of corrections when conducting statistical regression analyses on data prone to rounding.
 
