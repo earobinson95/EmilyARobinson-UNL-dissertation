@@ -56,11 +56,12 @@ youdrawit_preds_gamm_0.23 <- read_csv("data/02a-youdrawit/youdrawit-exponential-
 ## Introduction
 
 In [Chapter 2](#lineups), a base foundation for future exploration of the use of log scales was established by evaluating participants ability to identify differences in charts through the use of lineups. 
-This did not require that participants were able to understand exponential growth, identify log scales, or have any mathematical training; instead, it simply tested \svp{whether individuals are able to perceptually distinguish different curvature and slopes in a standard scatterplot.} \svp{This is necessary, but not sufficient, to determine whether individuals are capable of higher-level interaction with statistical data on log and linear scales.} 
+This did not require that participants were able to understand exponential growth, identify log scales, or have any mathematical training; instead, it simply tested whether individuals are able to perceptually distinguish different curvature and slopes in a standard scatterplot. 
+This is necessary, but not sufficient, to determine whether individuals are capable of higher-level interaction with statistical data on log and linear scales.
 In order to determine whether there are cognitive disadvantages to log scales, we utilized interactive graphics to test an individual's ability to make predictions for exponentially increasing data. 
-In this study, participants were asked to draw a line using their computer mouse through \svp{an} exponentially increasing trend shown on both the log and linear scales. 
+In this study, participants were asked to draw a line using their computer mouse through an exponentially increasing trend shown on both the log and linear scales. 
 
-### \svp{A Review of Regression and Prediction} Methodology
+### A Review of Regression and Prediction
 
 Our visual system is naturally built to look for structure and identify patterns. 
 For instance, points going down from left to right indicates a negative correlation between the x and y variables. 
@@ -68,8 +69,8 @@ In the past, manual methods have been used to compare our intuitive visual sense
 Initial studies in the 20th century explored the use of fitting lines by eye through a set of points [@finney_subjective_1951; @mosteller_eye_1981]. 
 Common methods of fitting trends by eye involve maneuvering a string, black thread, or ruler until the fit is suitable, then drawing the line through the set of points. 
 
-\svp{You can change this to active voice relatively easily by saying "researchers were interested in assessing..."}
-In @finney_subjective_1951, it was of interest to determine the effect of stopping iterative maximum likelihood calculations after one iteration. 
+<!-- \svp{You can change this to active voice relatively easily by saying "researchers were interested in assessing..."} -->
+In @finney_subjective_1951, researchers were interested in assessing the effect of stopping iterative maximum likelihood calculations after one iteration. 
 Many techniques in statistical analysis are performed with the aid of iterative calculations such as Newton's method or Fisher's scoring. 
 Guesses are made at the best estimates of certain parameters and these guesses are then used as the basis of a computation which yields a new set of approximation to the parameter estimates; this same procedure is then performed on the new parameter estimates and the computing cycle is repeated until convergence, as determined by the statistician, is reached. 
 The author was interested in whether one iteration of calculations was sufficient in the estimation of parameters connected with dose-response relationships. 
@@ -89,10 +90,9 @@ knitr::include_graphics("images/02-you-draw-it/subjective-judgement-plot.png")
 Thirty years later, Mosteller et al. (1981), sought to understand the properties of least squares and other computed lines by establishing one systematic method of fitting lines by eye. 
 The authors recruited 153 graduate students and post doctoral researchers in Introductory Biostatistics. 
 Participants were asked to fit lines by eye to four sets of points \pcref{fig:mosteller-eyefitting-plot} using an 8.5 x 11 inch transparency with a straight line etched completely across the middle. 
-A latin square design [@anderson_design_1974] with packets of the set of points stapled together in four different sequences was used to determine if there is an effect of order of presentation.
-It was found that order of presentation had no effect and that participants tended to fit the slope of the first principal component (error minimized orthogonally, both horizontal and vertical, to the regression line) over the slope of the least squares regression line (error minimized vertically to the regression line) \pref{fig:ols-vs-pca-example}. \svp{Mention that there wasn't an actual analysis here, just a discussion of the idea.}
-<!-- \pref{fig:ols-vs-pca-example} -->
-<!-- \rh{maybe some explanation would be nice for this.} -->
+A latin square design [@anderson_design_1974] with packets of the set of points stapled together in four different sequences was used to determine if there is an effect of order of presentation; results indicated that order of presentation had no effect. 
+Without a formal analysis of the study, the researchers discussed the idea that participants tended to fit the slope of the first principal component (error minimized orthogonally, both horizontal and vertical, to the regression line) over the slope of the least squares regression line (error minimized vertically to the regression line) \pcref{fig:ols-vs-pca-example}. 
+<!-- \svp{Mention that there wasn't an actual analysis here, just a discussion of the idea.} -->
 
 ```{r mosteller-eyefitting-plot, fig.cap = "Eye Fitting Straight Lines (1981) Data Sets", out.width="70%"}
 knitr::include_graphics("images/02-you-draw-it/eyefitting-straight-lines-plots.png")
@@ -119,8 +119,10 @@ Major news and research organizations such as the New York Times, FiveThirtyEigh
 In June 2020, the New York Times released a front page displaying figures that represent each of the 100,000 lives lost from the COVID-19 pandemic until that point in time [@NYTrememberinglives]; this visualization was meant to bring about a visceral reaction and resonate with readers. 
 During 2021 March Madness, FiveThirtyEight created a roster-shuffling machine which allowed readers to build their own NBA contender through interactivity [@ryanabest_2021].
 Data Driven Documents (D3) is an open-source JavaScript based graphing framework created by Mike Bostock during his time working on graphics at the New York Times.
-For readers familiar with R, it is notable to consider D3 in JavaScript equivalent to the `ggplot2` package in R [@ggplot2]. \svp{eek, that makes me squirm. D3 is not a grammar-of-graphics approach. It is a nice plotting framework though.}
-Similar to geometric objects and style choices in `ggplot2`, the grammar of D3 also includes elements such as circles, paths, and rectangles with choices of attributes and styles such as color and size.
+<!-- Although the theoretical consider D3 the plotting framework for JavaScript equivalent to the `ggplot2` package in R [@ggplot2]. -->
+<!-- \svp{eek, that makes me squirm. D3 is not a grammar-of-graphics approach. It is a nice plotting framework though.} -->
+<!-- Similar to geometric objects and style choices in `ggplot2`, the  -->
+The grammar of D3 includes elements such as circles, paths, and rectangles with choices of attributes and styles such as color and size.
 Data Driven Documents depend on Extensible Markup Language (XML) to generate graphics and images by binding objects and layers to the plotting area as Scalable Vector Graphics (SVG) in order to preserve the shapes rather than the pixels \pcref{fig:raster-vs-vector} [@raster_vs_svg].
 Advantages of using D3 include animation and allowing for movement and user interaction such as hovering, clicking, and brushing. 
 
@@ -203,7 +205,7 @@ The data simulation procedure is described in \cref{alg:eyefitting-algorithm}.
   \end{algorithmic}
 \end{algorithm}
 
-```{r eyefitting-parameters}
+```{r eyefitting-parameters, messages = F, warning = F}
 data.frame(Parm = c("F", "N", "S", "V"),
            y_xbar = c(3.9, 4.11, 3.88, 3.89),
            slope = c(0.66, -0.70, 0.66, 1.98),
@@ -229,9 +231,9 @@ In comparison, S resulted a trend with a positive slope with a small variance an
 \cref{fig:eyefitting-simplot} illustrates an example of simulated data for all four parameter choices intended to reflect the trends seen in \cref{fig:mosteller-eyefitting-plot}.
 Aesthetic design choices were made consistent across each of the interactive 'You Draw It' plots; the $y$-axis range extended 10\% beyond (above and below) the range of the simulated data points to allow for users to draw outside the simulated data set range and minimize participants anchoring their lines to the edges of the graph.
 
-```{r eyefitting-simplot, fig.height = 8, fig.width = 8, fig.cap = "Eye Fitting Straight Lines in the Modern Era Simulated Data Example", out.width="100%", echo = F, messages = F, warning = F}
+```{r eyefitting-simplot, echo=F, fig.cap="Eye Fitting Straight Lines in the Modern Era Simulated Data Example", fig.height=8, fig.width=8, message=FALSE, warning=FALSE, out.width="100%"}
 
-eyefitting_example_sim <- read_csv("data/02b-eyefitting/eyefitting-simdata-example.csv")
+eyefitting_example_sim <- read_csv("data/02b-eyefitting/eyefitting-simdata-example.csv", show_col_types = F)
 eyefitting_example_simplot <- eyefitting_example_sim %>%
   filter(data == "point_data") %>%
   filter(dataset %in% c("F", "N", "S") | (x < 16 & x > 4)) %>%
@@ -649,6 +651,5 @@ This phenomena is strongly supported for high exponential growth rates.
 Improvement in predictions are made when points along the exponential trend are shown as indicated by the discrepancy in results for treatments with points truncated at 50\% compared to 75\% of the domain. 
 
 The results of this study suggest that there are cognitive advantages to log scales when making predictions of exponential trends.
-\svp{Participants' predictions were more accurate at high growth rates when participants drew trend lines on the log scale compared to the linear scale.}
-<!-- Improvement in predictions were made for trends with high exponential growth rates when participants were asked to draw a trend line on the log scale compared to the linear scale.  -->
-Further investigation is necessary to determine the implications of using log scales when translating exponential graphs to numerical values; \svp{we address this problem in the next chapter}. 
+Participants' predictions were more accurate at high growth rates when participants drew trend lines on the log scale compared to the linear scale.
+Further investigation is necessary to determine the implications of using log scales when translating exponential graphs to numerical values; we address this problem in the next chapter. 

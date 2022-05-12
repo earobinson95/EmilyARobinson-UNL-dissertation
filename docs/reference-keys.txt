@@ -95,7 +95,7 @@ results
 discussion-and-conclusion
 youdrawit
 introduction-1
-methodology
+a-review-of-regression-and-prediction
 data-driven-documents
 study-design-1
 eye-fitting-straight-lines-in-the-modern-era
@@ -120,9 +120,6 @@ intermediate-q2-multiplicative-change-in-population
 intermediate-q3-time-until-population-doubles
 discussion-and-conclusion-2
 conclusion
-lineups-1
-you-draw-it
-estimation-1
 youdrawit-with-shiny
 exponential-prediction-plots
 estimation-comparison

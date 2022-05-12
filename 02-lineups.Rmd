@@ -21,7 +21,7 @@ If the viewer can identify the target panel randomly embedded within the set of 
 \cref{fig:lineup-example} provides examples of statistical lineups. 
 The lineup plot on the left displays increasing exponential data displayed on a linear scale with panel 13 as the target; the lineup plot on the right displays increasing exponential data on the log base ten scale with panel 4 as the target.
 
-```{r lineup-example, fig.height = 2.75, fig.width = 5.75, fig.cap = "Example Lineups"}
+```{r lineup-example, fig.height = 2.75, fig.width = 5.75, fig.scap = "Lineup Examples", fig.cap = "The lineup plot on the left displays increasing exponential data on a linear scale with panel (2 x 5) + 3 as the target. The lineup plot on the right displays increasing exponential data on the log scale with panel 2 x 2 as the target."}
 lineupData_linear <- read.csv(file = "data/01-lineups/lineup-example-data-linear.csv")
 linearPlot <- ggplot(lineupData_linear, aes(x=x, y=y)) +
   facet_wrap(~.sample, ncol=5) +
@@ -106,7 +106,7 @@ The density curves of the LOF statistics for each level of curvature are plotted
 While the LOF statistic provides a numerical value for discriminating between the difficulty levels, it cannot be directly related to the perceptual discriminability; it serves primarily as an approximation to ensure that we are testing parameters at several distinct curvature levels.
 Final parameters used for data simulation are shown in \cref{tab:parameter-data}.
 
-```{r lof-density-curves, fig.height = 2.5, fig.width = 5, fig.cap = "Lack of fit statistic density curves", out.width = "75%"}
+```{r lof-density-curves, fig.height = 2.5, fig.width = 5, fig.scap = "Lineup parameter selection", fig.cap = "Density plot of the lack of fit statistic showing separation of difficulty levels: obvious curvature, noticable curvature, and almost linear." out.width = "100%"}
 lofData <- read.csv(file = "data/01-lineups/lineup-lof-data.csv")
 lofPlot_curvature <- lofData %>%
   mutate(Curvature = factor(Curvature, levels = c("Obvious Curvature", "Noticeable Curvature", "Almost Linear"), labels = c("High Curvature", "Medium Curvature", "Low Curvature"))) %>%
@@ -151,7 +151,7 @@ Two sets of each lineup curvature combination were simulated (total of 12 test d
 In addition, there are three curvature combinations which generate homogeneous "Rorschach" lineups, where all panels are from the same distribution. 
 Each participant evaluated one of these lineups, but for simplicity, these evaluations are not described in this chapter and their analysis is left to a later date.
 
-```{r curvature-combination-example, fig.height = 6, fig.width = 9, fig.cap = "Lineup curvature combinations", out.width="100%"}
+```{r curvature-combination-example, fig.height = 6, fig.width = 9, fig.scap = "Lineup curvature combinations", fig.cap = "Thumbnail plots illustrating the six curvature combinations displayed on both scales (linear and log). The green line indicates the curvature level to be identified as the target plot from amongst a set of null plots with the curvature level indicated by the black line.", out.width="100%"}
 simData <- read.csv("data/01-lineups/difficulty-comparison-data.csv")
 
 # simData  %>%
@@ -442,7 +442,7 @@ When examining this curvature combination, the same perceptual effect occurs as 
 On the linear scale, participants are perceptually identifying a curved trend from close to a linear trend whereas after the logarithmic transformation, participants are perceptually identifying a trend close to linear from a curved trend.
 This again supports the claim that it is easy to identify a curve in a bunch of lines but much harder to identify a line in a bunch of curves [@best_perception_2007].
 
-```{r odds-ratio-plot, echo = F, eval = T, fig.width = 12, fig.height = 6, fig.align='center', fig.cap = "Lineups log(odds) results", message = F, warning = F}
+```{r odds-ratio-plot, echo = F, eval = T, fig.width = 12, fig.height = 6, fig.align='center', fig.scap = "Lineups log(odds) results", fig.cap = "Estimated (log) odds ratio of successfully identifying the target panel on the log scale compared to the linear scale. The y-axis indicates the the model parameters used to simulate the null plots with the target plot model parameter selection designated by shape and shade of green. The thumbnail figures on the right display the curvature combination as shown in \\cref{fig:curvature-combination-example} on both scales (linear - left, log - right).", message = F, warning = F}
 lineups_or <- read.csv("data/01-lineups/lineups-odds-ratios.csv")
 
 dodge <- position_dodge(width=0.9)

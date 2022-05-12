@@ -1029,12 +1029,13 @@ What remains to be seen is whether there are cognitive disadvantages to log scal
 \section{Introduction}\label{introduction-1}}
 
 In \protect\hyperlink{lineups}{Chapter 2}, a base foundation for future exploration of the use of log scales was established by evaluating participants ability to identify differences in charts through the use of lineups.
-This did not require that participants were able to understand exponential growth, identify log scales, or have any mathematical training; instead, it simply tested \svp{whether individuals are able to perceptually distinguish different curvature and slopes in a standard scatterplot.} \svp{This is necessary, but not sufficient, to determine whether individuals are capable of higher-level interaction with statistical data on log and linear scales.}
+This did not require that participants were able to understand exponential growth, identify log scales, or have any mathematical training; instead, it simply tested whether individuals are able to perceptually distinguish different curvature and slopes in a standard scatterplot.
+This is necessary, but not sufficient, to determine whether individuals are capable of higher-level interaction with statistical data on log and linear scales.
 In order to determine whether there are cognitive disadvantages to log scales, we utilized interactive graphics to test an individual's ability to make predictions for exponentially increasing data.
-In this study, participants were asked to draw a line using their computer mouse through \svp{an} exponentially increasing trend shown on both the log and linear scales.
+In this study, participants were asked to draw a line using their computer mouse through an exponentially increasing trend shown on both the log and linear scales.
 
-\hypertarget{methodology}{%
-\subsection{\texorpdfstring{\svp{A Review of Regression and Prediction} Methodology}{ Methodology}}\label{methodology}}
+\hypertarget{a-review-of-regression-and-prediction}{%
+\subsection{A Review of Regression and Prediction}\label{a-review-of-regression-and-prediction}}
 
 Our visual system is naturally built to look for structure and identify patterns.
 For instance, points going down from left to right indicates a negative correlation between the x and y variables.
@@ -1042,9 +1043,7 @@ In the past, manual methods have been used to compare our intuitive visual sense
 Initial studies in the 20th century explored the use of fitting lines by eye through a set of points (Finney, 1951; Mosteller, Siegel, Trapido, \& Youtz, 1981).
 Common methods of fitting trends by eye involve maneuvering a string, black thread, or ruler until the fit is suitable, then drawing the line through the set of points.
 
-\svp{You can change this to active voice relatively easily by saying "researchers were interested in assessing..."}
-
-In Finney (1951), it was of interest to determine the effect of stopping iterative maximum likelihood calculations after one iteration.
+In Finney (1951), researchers were interested in assessing the effect of stopping iterative maximum likelihood calculations after one iteration.
 Many techniques in statistical analysis are performed with the aid of iterative calculations such as Newton's method or Fisher's scoring.
 Guesses are made at the best estimates of certain parameters and these guesses are then used as the basis of a computation which yields a new set of approximation to the parameter estimates; this same procedure is then performed on the new parameter estimates and the computing cycle is repeated until convergence, as determined by the statistician, is reached.
 The author was interested in whether one iteration of calculations was sufficient in the estimation of parameters connected with dose-response relationships.
@@ -1068,8 +1067,8 @@ Results indicated that one cycle of iterations for calculating the relative pote
 Thirty years later, Mosteller et al.~(1981), sought to understand the properties of least squares and other computed lines by establishing one systematic method of fitting lines by eye.
 The authors recruited 153 graduate students and post doctoral researchers in Introductory Biostatistics.
 Participants were asked to fit lines by eye to four sets of points \pcref{fig:mosteller-eyefitting-plot} using an 8.5 x 11 inch transparency with a straight line etched completely across the middle.
-A latin square design (Anderson \& McLean, 1974) with packets of the set of points stapled together in four different sequences was used to determine if there is an effect of order of presentation.
-It was found that order of presentation had no effect and that participants tended to fit the slope of the first principal component (error minimized orthogonally, both horizontal and vertical, to the regression line) over the slope of the least squares regression line (error minimized vertically to the regression line) \pref{fig:ols-vs-pca-example}. \svp{Mention that there wasn't an actual analysis here, just a discussion of the idea.}
+A latin square design (Anderson \& McLean, 1974) with packets of the set of points stapled together in four different sequences was used to determine if there is an effect of order of presentation; results indicated that order of presentation had no effect.
+Without a formal analysis of the study, the researchers discussed the idea that participants tended to fit the slope of the first principal component (error minimized orthogonally, both horizontal and vertical, to the regression line) over the slope of the least squares regression line (error minimized vertically to the regression line) \pcref{fig:ols-vs-pca-example}.
 
 \begin{figure}[tbp]
 
@@ -1107,8 +1106,7 @@ Major news and research organizations such as the New York Times, FiveThirtyEigh
 In June 2020, the New York Times released a front page displaying figures that represent each of the 100,000 lives lost from the COVID-19 pandemic until that point in time (Barry et al., 2020); this visualization was meant to bring about a visceral reaction and resonate with readers.
 During 2021 March Madness, FiveThirtyEight created a roster-shuffling machine which allowed readers to build their own NBA contender through interactivity (Ryanabest, 2021).
 Data Driven Documents (D3) is an open-source JavaScript based graphing framework created by Mike Bostock during his time working on graphics at the New York Times.
-For readers familiar with R, it is notable to consider D3 in JavaScript equivalent to the \texttt{ggplot2} package in R (Hadley Wickham, 2016). \svp{eek, that makes me squirm. D3 is not a grammar-of-graphics approach. It is a nice plotting framework though.}
-Similar to geometric objects and style choices in \texttt{ggplot2}, the grammar of D3 also includes elements such as circles, paths, and rectangles with choices of attributes and styles such as color and size.
+The grammar of D3 includes elements such as circles, paths, and rectangles with choices of attributes and styles such as color and size.
 Data Driven Documents depend on Extensible Markup Language (XML) to generate graphics and images by binding objects and layers to the plotting area as Scalable Vector Graphics (SVG) in order to preserve the shapes rather than the pixels \pcref{fig:raster-vs-vector} (Tol, 2021).
 Advantages of using D3 include animation and allowing for movement and user interaction such as hovering, clicking, and brushing.
 
@@ -1225,17 +1223,6 @@ Parameter choice F produced a trend with a positive slope and a large variance w
 In comparison, S resulted a trend with a positive slope with a small variance and V yielded a steep positive slope with a small variance over the domain of 4 to 16.
 \cref{fig:eyefitting-simplot} illustrates an example of simulated data for all four parameter choices intended to reflect the trends seen in \cref{fig:mosteller-eyefitting-plot}.
 Aesthetic design choices were made consistent across each of the interactive `You Draw It' plots; the \(y\)-axis range extended 10\% beyond (above and below) the range of the simulated data points to allow for users to draw outside the simulated data set range and minimize participants anchoring their lines to the edges of the graph.
-
-\begin{verbatim}
-## Rows: 444 Columns: 9
-## -- Column specification ------------------------------------
-## Delimiter: ","
-## chr (2): dataset, data
-## dbl (7): y_xbar, slope, sigma, x_min, x_max, x, y
-## 
-## i Use `spec()` to retrieve the full column specification for this data.
-## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
-\end{verbatim}
 
 \begin{figure}[tbp]
 
@@ -1482,8 +1469,8 @@ This phenomena is strongly supported for high exponential growth rates.
 Improvement in predictions are made when points along the exponential trend are shown as indicated by the discrepancy in results for treatments with points truncated at 50\% compared to 75\% of the domain.
 
 The results of this study suggest that there are cognitive advantages to log scales when making predictions of exponential trends.
-\svp{Participants' predictions were more accurate at high growth rates when participants drew trend lines on the log scale compared to the linear scale.}
-Further investigation is necessary to determine the implications of using log scales when translating exponential graphs to numerical values; \svp{we address this problem in the next chapter}.
+Participants' predictions were more accurate at high growth rates when participants drew trend lines on the log scale compared to the linear scale.
+Further investigation is necessary to determine the implications of using log scales when translating exponential graphs to numerical values; we address this problem in the next chapter.
 
 \hypertarget{estimation}{%
 \chapter{Numerical Translation and Estimation}\label{estimation}}
@@ -1492,7 +1479,7 @@ Further investigation is necessary to determine the implications of using log sc
 \section{Introduction}\label{introduction-2}}
 
 The previous two chapters explored the use of log scales through differentiation and visual prediction of trends.
-These graphical tasks were conducted independent of \svp{context - no information about the data itself or even numerical scale values were provided to participants}; instead, \svp{participants} focused how our visual system perceives and identifies patterns in exponential growth.
+These graphical tasks were conducted independent of context - no information about the data itself or even numerical scale values were provided to participants; instead, participants focused how our visual system perceives and identifies patterns in exponential growth.
 In order to understand the cognitive implications of displaying exponentially increasing data on a log scale, it is essential to evaluate graph comprehension as it relates to the contextual scenario of the data shown.
 This is a complex inferential process which requires participants to engage with the data by quantitatively transforming information in the chart (Cleveland \& McGill, 1984, 1985).
 In this study, we asked participants to translate a graph of exponentially increasing data into real value quantities and extend their estimations by comparing two data points.
@@ -1500,7 +1487,7 @@ In this study, we asked participants to translate a graph of exponentially incre
 \hypertarget{graph-comprehension-1}{%
 \subsection{Graph Comprehension}\label{graph-comprehension-1}}
 
-Graph comprehension is heavily dependent on the questions being asked of the viewer; therefore, \svp{how these questions are phrased} is an important aspect of comprehension and must be given deliberate consideration (Graesser et al., 2014).
+Graph comprehension is heavily dependent on the questions being asked of the viewer; therefore, how these questions are phrased is an important aspect of comprehension and must be given deliberate consideration (Graesser et al., 2014).
 Evaluation of how viewers explore a new and complex graphic requires long-term interaction with the chart displaying the data (Becker, Moore, \& Lawrence, 2019).
 While it is difficult to obtain an accurate representation of a viewers understanding of the graphic with a fixed set of numerical estimates, three levels of graph comprehension have emerged from literature (Curcio, 1987; Friel et al., 2001; Glazer, 2011; Jolliffe, 1991; R. Wood, 1968).
 The three behaviors related to graph comprehension involve (1) literal reading of the data (elementary level), (2) reading between the data (intermediate level), and (3) reading beyond the data (advanced level).
@@ -1520,7 +1507,7 @@ Therefore, careful consideration must be given to the choice of scale for the gr
 
 Participants in this study were asked to answer six questions related to each of two contextual scenarios and an associated scatter plot shown for a total of twelve questions.
 The text for each scenario is presented below; the context of both scenarios was selected to be similar.
-Each text describes a situation in which a fictional intergalactic species is exponentially increasing in population over a time \svp{chosen} to reflect the popular culture media depiction of that species (Marquand, 1983; \emph{Star trek}, 1967; \emph{Star wars}, 1977).
+Each text describes a situation in which a fictional intergalactic species is exponentially increasing in population over a time chosen to reflect the popular culture media depiction of that species (Marquand, 1983; \emph{Star trek}, 1967; \emph{Star wars}, 1977).
 For simplicity, we will refer to these fictional time components as a year throughout the rest of the chapter.
 
 \begin{quote}
@@ -1623,14 +1610,14 @@ The comparison word cloud illustrates the general terminology participants used 
 Participants more frequently referred to terms such as `exponential' and `rapid' when shown the scatter plot on the linear scale while `double' and `quadruple' were often used to describe the graphic when shown on the log scale; indicating participants read the \(y\)-axis labels and noticed the doubling grid lines.
 Participants often used ``triple'' to describe the data when displayed on the linear scale; one explanation might be that participants were roughly estimating the multiplicative change between grid lines.
 For example, in year 40, the trend lands roughly around 15,000 and ends near 45,000 (three times as large) in year 50.
-The use of the term `linear' when participants are describing the appearance of the data displayed on the log scale suggests that a portion of participants did not recognize the data was exponentially increasing rather than linearly increasing due to the change in the visual appearance of the data between the two scales. \svp{Or that they were describing the shape of the points independent of the axis -- we don't have enough context in the wordcloud to tell, even if it is suggestive.}
+The use of the term `linear' when participants are describing the appearance of the data displayed on the log scale suggests that a portion of participants described the visual appearance of the data independent of the axis labels; without further context, we do not have enough information to determine whether this implies participants were not recognizing the data was exponentially increasing rather than linearly increasing due to the change in contextual appearance caused by the choice of scale.
 
 \hypertarget{elementary-q1-estimation-of-population}{%
 \subsection{Elementary Q1: Estimation of population}\label{elementary-q1-estimation-of-population}}
 
 In order to examine the effect of scale on literal reading of the data, participants were asked, \textit{"What is the population in year 10?"} \pcref{fig:qe1-sketch}.
-The true estimated population in year 10 based on the underlying parameter estimates aw 481.61 with simulated points of 445.48 and 466.9 for data sets one and two respectively.
-The median participant estimate across both scales and data sets was 500 with innerquartile ranges of 500 and 400 for data set one and data set two respectively when displayed on the linear scale and 48 and 12 for data set one and data set two respectively when displayed on the log scale.
+The true estimated population in year 10 based on the underlying parameter estimates was 481.61 with simulated points of 445.48 and 466.9 for data sets one and two respectively.
+The median participant estimate across both scales and data sets was 500, with innerquartile ranges of 500 and 400 for data set one and data set two respectively when displayed on the linear scale and 48 and 12 for data set one and data set two respectively when displayed on the log scale.
 
 \begin{figure}[tbp]
 
@@ -1643,7 +1630,7 @@ The median participant estimate across both scales and data sets was 500 with in
 
 Density plots were used to illustrate the distribution of the quantitative estimates provided by participants.
 \pcref{fig:qe1-density-plot-10-all} reveals a larger variance in quantitative population estimates made on the linear scale compared to the log scale.
-There is strong support that participants were anchoring to grid lines and base ten values as highlighted by the high density of estimates at 512 and 500 on the log scale as well as local maximums near multiples of ten such as 500 and 1000.
+As expected, it is clear that participants were anchoring to grid lines and base ten values as highlighted by the high density of estimates at 512 and 500 on the log scale as well as local maximums near multiples of ten such as 500 and 1000.
 
 \begin{figure}[tbp]
 
@@ -1655,16 +1642,17 @@ There is strong support that participants were anchoring to grid lines and base 
 \end{figure}
 
 During the study, participants were explicitly asked to estimate the population during year 10; this value corresponds to a low magnitude where the population is condensed in a small region on the linear scale as opposed to later in time when larger magnitudes in population can be seen.
-While the results provided support for less variability in the estimated population in year 10 on the log scale, it is important to evaluate the accuracy of estimates along the \svp{full} domain.
-In two estimation questions related to intermediate level reading between the data, participants are asked to provide an increase and change in population between years 20 and 40, thus requiring participants to make first level estimates at these locations (\cref{fig:qi1-sketch} and \cref{qi2-sketch}).
-In order to understand the effect of the location along the domain and in turn the magnitude of the population being estimated, we extracted first level estimates for years 20 and 40 from participant calculations and scratch work. \svp{Note that not all participants provided scratch work - we are working with a subset for the not-year-10 data...}
-We first compared population estimates from the explicitly asked year 10 location between participants who used the calculator and scratchpad in two or more of the questions to determine whether there were differences or biases between those who used resources for estimation compared to those who did not utilize the resources \protect\hyperlink{estimation-comparison}{Appendix 3b}.
+While the results provided support for less variability in the estimated population in year 10 on the log scale, it is important to evaluate the accuracy of estimates along the full domain.
+In two estimation questions related to intermediate level reading between the data, participants are asked to provide an increase and change in population between years 20 and 40, thus requiring participants to make first level estimates at these locations (\cref{fig:qi1-sketch} and \cref{fig:qi2-sketch}).
+In order to understand the effect of the location along the domain and in turn the magnitude of the population being estimated, we extracted first level estimates for years 20 and 40 from participant calculations and scratch work.
+
+In order to examine whether participants who used the provided resources for estimation differed in their numerical estimations from those who did not, we first compared population estimates from the explicitly asked year 10 location; these comparisons are provided in \protect\hyperlink{estimation-comparison}{Appendix 3b}.
 About half of the participants fell into the category which provided scratch work and half did not.
-It was determined there was no substantial difference or biases in estimations between the two groups, therefore, we proceeded to examine the estimated populations across scales from the first level estimates.
+It was determined there was no substantial difference or bias in estimates between the two groups, therefore, we proceeded to examine the estimated populations across scales from the first level estimates.
 
 The true population from the underlying parameters in year 20 was 1483.01 with closest simulated point values of 1529.19 and 1288.9 for data sets one and two respectively; this location still results in a relatively low magnitude of population, but is closer to the crux of the exponential curve.
 In year 40, the true population from the underlying parameters in year 40 is 15846.35 with closest simulated point values of 17046.94 and 24186.34 for data sets one and two respectively.
-It is important to note \svp{that there is a difference} in simulated point values in year 40 between the two data sets\svp{; as a result, the} multiplicative error \svp{causes} larger variance in simulated points for later years and larger population magnitudes.
+It is important to note that there is a difference in simulated point values in year 40 between the two data sets; as a result, the multiplicative error causes larger variance in simulated points for later years and larger population magnitudes.
 
 \begin{figure}[tbp]
 
@@ -1691,15 +1679,17 @@ This provides argument that estimates are highly subjective to the particular da
 As the year increases, we observe an increased accuracy in estimates made on the linear scale while estimates made on the log scale suffer in accuracy due to strong anchoring to grid lines and the larger quantitative difference between grid lines as population magnitudes increase.
 For instance, on the log scale, there was a tendency to overestimate the population for year 20 from data set one, underestimate the population for year 20 from data set two, and overestimate the population for year 40 from data set two.
 Inaccurate first level estimations can lead to consequences in estimations which require participants to make comparisons between two points (e.g.~Intermediate Q1 and Q2).
+\svp{This observation needs to show up in your discussion very clearly - it's a great example of the tradeoffs between the two scales! (I'm not there yet, just making notes as I go along)}
 
-In extracting participant first level estimates from their calculation and scratch work, we observed participants were resistant to estimating between grid lines and had a greater tendency to anchor their estimates to the grid line estimates on the log scale.
+In extracting participant first level estimates from their calculation and scratch work, we observed participants were resistant to estimating between grid lines and had a greater tendency to anchor their estimates to the grid line estimates on the log scale. \svp{Do you think this would be true if we'd used log 10 and had 10 grid lines? Might be worth bringing up in your conclusion section...}
 \cref{fig:common-population-estimates} illustrates the number of participants who provided that estimate on either the linear or log base two scale.
-True values based on underlying estimates, closest simulated point values, and grid line breaks are indicated by the horizontal line types.
+\svp{You should probably explain what "true" means here - that is, there are several different ways to visually estimate the truth. A picture might even help to demonstrate.}
+True values are based on underlying estimates, closest simulated point values, and grid line breaks are indicated by the horizontal line types.
 In particular, for year 40 in data set one, the closest point (17046.94) falls close to the log grid line (16384); participants greatly anchored to the grid line of 16384 with some participants adjusting to 16500 or 17000, anchoring again to a base ten value.
 In a similar situation, for year 40 in data set two, the closest point (24186.34) falls close to the linear grid line (25000); more participants adjusted their estimates to 24500 or 24000 rather than anchoring to the grid line.
 This suggests that participants were more likely to provide estimates which deviated from grid lines when making estimates on the linear scale, indicating they are more comfortable with interpreting values on a linear scale as opposed to the log scale.
 When participants made estimates between grid lines on the log scale as indicated by their scratch work, they tended to estimate ``halfway'' between the two values indicated by the grid line breaks.
-For example, 1536 was a common population estimate for year 20 in data set one because visually the location of estimation lands about halfway between grid lines 1024 and 2048 (\cref{fig:qi1-sketch} and \cref{qi2-sketch}).
+For example, 1536 was a common population estimate for year 20 in data set one because visually the location of estimation lands about halfway between grid lines 1024 and 2048 (\cref{fig:qi1-sketch} and \cref{fig:qi2-sketch}).
 Another common halfway point on the log scale occurred at 24576 which visually lands between grid lines 16384 and 32768 for year 40 in data set two.
 Participant calculations and scratch work provides support that participants equated these as halfway numerically as indicated by the selected work provided below:
 \begin{align}
@@ -1735,8 +1725,8 @@ This indicates a lack of understanding of log mapping where the spatial equivale
 
 In conclusion, Elementary Q1 and the first level population estimates extracted from participant calculations and scratch work indicate that accuracy for low magnitudes are more accurate with lower variance in those estimates on the log scale than on the linear scale.
 Accuracy of population estimates made on the linear scale improve as the magnitude of the population increases.
-The results also provided support that participants have a strong tendency to anchor their estimates to both grid lines and a base ten framework with resistance to estimating between grid lines on the log scale in particular, leading to a sacrifice in accuracy for larger magnitudes.
-Participant calculations and scratch work revealed a lack of understanding of logarithmic mapping as they equated spatial distance to numerical distance.
+The results also provided support for the idea\}that participants have a strong tendency to anchor their estimates to both grid lines and a base ten framework with resistance to estimating between grid lines on the log scale in particular, leading to a sacrifice in accuracy for larger magnitudes.
+Participant calculations and scratch work revealed a lack of understanding of logarithmic mapping due to considering spatial distance as indicative of numerical distance.
 
 \hypertarget{elementary-q2-estimation-of-time}{%
 \subsection{Elementary Q2: Estimation of time}\label{elementary-q2-estimation-of-time}}
@@ -1758,9 +1748,9 @@ The median year estimated by participants for data set one was 24 on both scales
 
 While a small portion of participants provided estimates of years 5, 10 and 15, the density plots in \cref{fig:qe2-density-plot} focus on reasonable participant estimates between years 20 and 35.
 A population of 4000 occurs around a medium magnitude and is thus distinguishable on the linear scale, making the estimated location more visible.
-Participant accuracy was consistent across both the linear and log scales with a larger variance for data set one when estimates were made on the log scale.
+Participants were consistently accurate across both the linear and log scales with a larger variance for data set one when estimates were made on the log scale.
 One possible explanation for the difference in variation between data sets is that some participants were first visually fitting a trend on on the log scale (results in a visually linear trend) while some participants were basing their estimates off the closest point (year 24).
-This is apparent by participants overestimation of the closest point, with some estimates drawing closer to the true value based on the underlying equation.
+These competing strategies are clearly visible on the plot: some participants overestimated the closest point, while others made estimates more consistent with the true value based on the underlying (mean) equation.
 On the log scale, participants were able to strongly anchor their estimates to the grid line break of 4096 and provide accurate year estimates by counting between grid lines on the \(x\)-axis with few participants making estimates between years (for example, 27.5).
 However, participants still had a tendency to anchor to a base ten framework as indicated by an increase in the density of estimates occurring at year 30.
 
@@ -1770,10 +1760,10 @@ However, participants still had a tendency to anchor to a base ten framework as 
 
 }
 
-\caption{Elementary Q2 Density}\label{fig:qe2-density-plot}
+\caption{Elementary Q2 Density. \svp{Describe what is shown here - what are the main features? You have density plots with responses shown using a rug plot, but you can specifically describe anchoring to the closest point and then to specific even/round values.}}\label{fig:qe2-density-plot}
 \end{figure}
 
-Results form Elementary Q2 provide support that participants accurately estimated the year in which the population reaches 4000 on both scales.
+Results from Elementary Q2 provide support that participants accurately estimated the year in which the population reaches 4000 on both scales.
 The accuracy on the linear scale can be explained by the visibility of a medium magnitude along with participant ability to make accurate estimates between grid lines on a linear scale.
 The population given aligned closely with grid line 4096 on the log scale, allowing participants to strongly anchor to the grid line for their estimation.
 In particular, for data set one, participants were slightly more likely to base their estimates off the underlying trend line on the log scale than on the linear scale.
@@ -1821,7 +1811,7 @@ The discrepancy in the summary between the two data sets provides further suppor
 
 }
 
-\caption{Intermediate Q1 Density (Data set 1)}\label{fig:qi1-density-1}
+\caption{Intermediate Q1 Density (Data set 1) \svp{Describe better. Also consider using alpha with rug plots because at the moment I can't see why the linear scale density is the way it is - all of the points seem to be above or below it with very few between true and closest point lines in blue...}}\label{fig:qi1-density-1}
 \end{figure}
 
 \begin{figure}[tbp]
@@ -1934,8 +1924,8 @@ The inconsistency between the two data sets aligns with previous evidence that p
 \end{figure}
 
 As seen in the results for Intermediate Q1, some participants struggled to understand the value they were being asked to estimate.
-Similarly, \cref{qi2-plots} illustrates a substantial number of participants provided estimates that more closely reflected that of the additive increase in population rather than the multiplicative change.
-\cref{qi2-common-responses} highlights that 15000 was still a common participant response.
+Similarly, \cref{fig:qi2-plots} illustrates a substantial number of participants provided estimates that more closely reflected that of the additive increase in population rather than the multiplicative change.
+\cref{fig:qi2-common-responses} highlights that 15000 was still a common participant response.
 Sample work below demonstrate common incorrect logic and calculations conducted by participants:
 
 \begin{align}
@@ -1947,7 +1937,7 @@ Sample work below demonstrate common incorrect logic and calculations conducted 
 \end{align}
 
 Evaluating reasonable participant responses for the change in population between 0 times as many and 35 times as many, \cref{fig:qi2-density} indicates participants tended to be make more accurate and less variable estimates on the log scale than on the linear scale.
-\cref{qi2-plots} shows common responses provided by participants.
+\cref{fig:qi2-plots} shows common responses provided by participants.
 
 \begin{figure}[tbp]
 
@@ -1975,7 +1965,7 @@ While anchoring to grid lines and base ten values for first level estimates stil
 \subsection{Intermediate Q3: Time until population doubles}\label{intermediate-q3-time-until-population-doubles}}
 
 An alternative multiplicative comparison between two points was to determine the amount of time it took for a value to double.
-Participants were asked, \textit{"How long does it take for the population in year 10 to double?"} \pcref{qi3-sketch}.
+Participants were asked, \emph{``How long does it take for the population in year 10 to double?''} \pcref{fig:qi3-sketch}.
 In order to accurately evaluate this comparison, participants must have made a first level estimate for the population in year 10, asked in Elementary Q1.
 Participants then needed to double their first level estimate in order to extract the year in which this value occurred and finally subtract year 10.
 Alternatively, on the log scale, participants could have made this comparison without actually extracting the numeric values and instead relied on their spatial distance equating one increase in grid lines to a double in population.
@@ -1995,7 +1985,7 @@ One participant stated, ``4510 has 512 Tribble Population and to double it it ne
 Based on the true underlying equation, the population in year 10 (481.62) doubled to 963.24 in year 16.25, thus it took 6.25 years for the population to double.
 Closest simulated points resulted in the population doubling in 4 years (445 x 2 = 890.97 in 14) for data set one and 6 years (466.90 x 2 = 933.79 in 16) for data set two.
 The median participant response for data set one was 5 (IQR = 5) and 5 (IQR = 2) for the linear and log scale respectively with a median for data set two of 8 (IQR = 6) and 6 (IQR = 2) for the linear and log scale respectively.
-\cref{qi3-density} illustrates the estimated number of years until the population in year 10 doubled.
+\cref{fig:qi3-density} illustrates the estimated number of years until the population in year 10 doubled.
 While there appears to be similar accuracy across both scales, the variance in estimates was considerably smaller for the log scale.
 The large variance in the linear scale may be explained by the location of reference year 10 which resulted in a population of low magnitude and is visually difficult to estimate.
 As indicated by peaks in density, there was strong anchoring which occurs at multiples of five.
@@ -2042,84 +2032,45 @@ With a fixed number of estimates and assessment of participant scratch work, we 
 \hypertarget{conclusion}{%
 \chapter{Conclusion}\label{conclusion}}
 
-In this research, we conducted a series of three graphical studies to evaluate the impact displaying data on the log scale has on human perception of exponentially increasing trends compared to displaying data on the linear scale.
-Each study was related to a different graphical task, each requiring a different level of interaction and cognitive use of the data being presented.
-The first experiment evaluated whether our ability to perceptually notice differences in exponentially increasing trends is impacted by the choice of scale.
-We conducted a visual inference experiment in which participants were shown a series of lineups and asked to identify the plot that differed most from the surrounding plots.
-The other experimental tasks focus on determining whether there are cognitive disadvantages to log scales: do log scales make it harder to make use of graphical information?
-To test an individual's ability to make predictions for exponentially increasing data, participants were asked to draw a line using their computer mouse through an exponentially increasing trend shown on both the linear and log scale.
-In addition to differentiation and prediction of exponentially increasing data, an estimation task was conducted to test an individuals' ability to translate a graph of exponentially increasing data into real value quantities and extend their estimations by making comparisons.
-Combined, the three studies provide a comprehensive evaluation of the impact of displaying exponentially increasing data on a log scale as it relates to perception, prediction, and estimation.
-The results of these studies help us to make recommendations and provide guidelines for the use of log scales.
+This research evaluated the use of log scales to display exponentially increasing data from three different angles and levels of complexity: perception, prediction, and estimation.
+Each study provided us insight into the advantages and disadvantages of displaying exponentially increasing data on a log scale and in what context each choice of scale might be more appropriate.
+The first study laid the foundation for future studies by testing participants ability to perceptually distinguish between lines and curves.
+This study utilized statistical lineups and did not require participants to understand exponential growth, identify log scales, or have any mathematical training; instead, participants cognitive load relied on pattern recognition.
+An analysis on the accuracy of participants identification of the target plot provides us with insight to the perceptual implications of the scale.
+Results from the lineup analysis indicated the perceptual difference resulted from the contextual appearance of the trend.
+The choice of scale changes this contextual appearance leading to slight perceptual advantages for both scales depending on the curvatures being compared.
+In general, when there were large curvature differences, the choice of scale had no impact and perceptual differences were easily identified on both scales.
+However, when minor differences in curvature occurred, there was a perceptual advantage for the scale which resulted in identified the trend which contextually appeared as a curve from the trends that appeared as a line.
+This revealed an advantage for the log scale when differences were subtle with an exception of the the linear scale leading to a perceptual advantage for identifying a trend with more curvature from one which appears to be more linear - contextually appears opposite on the log scale to identify a trend that contextually appears linear from ones that appear curved.
+The second study required interpretative processes to extend the pattern recognition and construct meaning.
+`You Draw It' interactive graphics were adapted from the New York Times and used to test the ability to make forecast predictions for exponentially increasing trends on both scales by drawing a visually fit line with a computer mouse.
+This study was supported by a sub-study which validated `You Draw It' as a tool and method for testing statistical graphics and introduced an appropriate statistical analysis method using generalized additive mixed models for comparing visually fitted trend lines to statistical regression results.
+The results from the analysis related to visually fitted predictions for exponential trends showed a clear underestimation of forecasting trends with high exponential growth rates when participants were asked to make predictions on the linear scale.
+Improvement in forecasts were made when participants were asked to make predictions on the log scale as well as when participants were provided visual aids of points along the trend line.
+These improvements can be explained by the change in contextual appearance of the data between the two scales; participants visually extended a linear trend on the log scale and an exponential trend on the linear scale.
+The graphical tasks from the first two studies were conducted independent of scenarios or contextual applications of log scales; instead, they focused how our visual system perceives and identifies patterns in exponential growth.
+This did not require participants to understand or read log scales.
+In order to understand the cognitive implications of displaying exponentially increasing data on a log scale, the third study evaluated graph comprehension as it relates to the contextual scenario of the data shown.
+This required participants to use integrative processes to relate the meanings of the graphic to the contextual scenario as inferred from labels and titles.
+In the study, participants were asked to quantitatively transform a graph of exponentially increasing data and extend their estimates to compare two points.
+We evaluated graph comprehension as it relates to two contextual scenarios by asking participants a series of questions based on the elementary (literally reading the data) and intermediate (reading between the data) level questions.
+The results of this study helped inform and aid in understanding the cognitive implications of displaying exponentially increasing data on a log scale.
+Overall, our results suggested that log logic is difficult and that we often misinterpret and miscalculate multiplicative reasoning.
+However, further investigation is necessary to determine if the misunderstanding occurs due to the ambiguity of language or scale.
+By collecting information from the calculation and scratchpad inputs, we were able to better understand the strategies used to make estimations.
+Participants often made first level estimates when comparing two points rather than relying on their spatial awareness between grid lines on the log scale.
+They were resistant to make estimates between grid lines (anchored to grid lines) and tended to inaccurately equate spatial distance to numerical difference on the log scale, leading to a sacrifice in estimation accuracy; this resistance and misinterpretation leads to greater consequences for larger magnitudes when distances between grid lines is large.
+Further testing is required to evaluate this impact on log scales of different bases, such as base 10 where this spatial distance has a much larger effect than on base 2.
+Discrepancy in estimates between the two data sets implies a large portion of participants were reading the actual simulated data points as opposed to basing estimates on the underlying visual trend of the data.
+Overall, estimation accuracy for small magnitudes was improved by the use of the log scale, but sacrifices in accuracy on the log scale became apparent as magnitudes increased leading to advantages on the linear scale.
 
-\hypertarget{lineups-1}{%
-\section{Lineups}\label{lineups-1}}
-
-To lay a foundation for future exploration of the use of log scales, we begin with the most fundamental ability: to identify differences in charts. Identifying differences does not require that participants understand exponential growth, identify log scales, or have any mathematical training.
-Instead, we am simply testing the change in \emph{perceptual sensitivity} resulting from visualization choices.
-The study in this chapter is conducted through visual inference and the use of statistical lineups (Buja et al., 2009a) to differentiate between exponentially increasing curves with differing levels of curvature, using linear and log scales.
-
-The overall goal of this chapter is to provide basic research to support the principles used to guide design decisions in scientific visualizations of exponential data.
-In this study, we explored the use of linear and log scales to determine whether our ability to notice differences in exponentially increasing trends is impacted by the choice of scale.
-The results indicated that when there was a large difference in curvature between the target plot and null plots and the target plot had more curvature than the null plots, the choice of scale had no impact and participants accurately differentiated between the two curves on both the linear and log scale.
-However, displaying exponentially increasing data on a log scale improved the accuracy of differentiating between models with slight curvature differences or large curvature differences when the target plot had less curvature than the null plots.
-An exception occurred when identifying a plot with curvature embedded in surrounding plots closely relating to a linear trend, indicating that it is easy to identify a curve in a group of lines but much harder to identify a line in a group of curves.
-The use of visual inference to identify these guidelines suggests that there are \emph{perceptual} advantages to log scales when differences are subtle.
-What remains to be seen is whether there are cognitive disadvantages to log scales: do log scales make it harder to make use of graphical information?
-
-\hypertarget{you-draw-it}{%
-\section{You Draw It}\label{you-draw-it}}
-
-In \protect\hyperlink{lineups}{Chapter 2}, a base foundation for future exploration of the use of log scales was established by evaluating participants ability to identify differences in charts through the use of lineups.
-This did not require that participants were able to understand exponential growth, identify log scales, or have any mathematical training; instead, it simply tested the change in perceptual sensitivity resulting from visualization choices.
-In order to determine whether there are cognitive disadvantages to log scales, we utilized interactive graphics to test an individual's ability to make predictions for exponentially increasing data.
-In this study, participants were asked to draw a line using their computer mouse through the exponentially increasing trend shown on both the log and linear scales.
-
-The intent of this chapter was to establish `You Draw It' as a method and tool for testing graphics then use this tool to determine the cognitive implications of displaying data on the log scale.
-Eye Fitting Straight Lines in the Modern Era replicated the results found in Mosteller et al. (1981).
-When shown points following a linear trend, participants tended to fit the slope of the first principal component over the slope of the least squares regression line.
-This trend was most prominent when shown data simulated with larger variances.
-The reproducibility of these results serve as evidence of the reliability of the `You Draw It' method.
-
-In Prediction of Exponential Trends, the `You Draw It' method was used to test an individual's ability to make predictions for exponentially increasing data.
-Results indicate that underestimation of exponential growth occurs when participants were asked to draw trend lines on the linear scale and that there was an improvement in accuracy when trends were drawn on the log scale.
-This phenomena is strongly supported for high exponential growth rates.
-Improvement in predictions are made when points along the exponential trend are shown as indicated by the discrepancy in results for treatments with points truncated at 50\% compared to 75\% of the domain.
-
-The results of this study suggest that there are cognitive advantages to log scales when making predictions of exponential trends.
-Improvement in predictions were made for trends with high exponential growth rates when participants were asked to draw a trend line on the log scale compared to the linear scale.
-Further investigation is necessary to determine the implications of using log scales when translating exponential graphs to numerical values.
-
-\hypertarget{estimation-1}{%
-\section{Estimation}\label{estimation-1}}
-
-The previous two chapters explored the use of log scales through differentiation and visual prediction of trends.
-These graphical tasks were conducted independent of scenarios or contextual applications of log scales; instead, they focused how our visual system perceives and identifies patterns in exponential growth.
-In order to understand the cognitive implications of displaying exponentially increasing data on a log scale, it is essential to evaluate graph comprehension as it relates to the contextual scenario of the data shown.
-This is a complex inferential process which requires participants to engage with the data by quantitatively transforming information in the chart (Cleveland \& McGill, 1984, 1985).
-In this study, we asked participants to translate a graph of exponentially increasing data into real value quantities and extend their estimations by comparing two data points.
-
-This study was intended to help inform and aid in understanding the cognitive implications of displaying exponentially increasing data on a log scale.
-We evaluated graph comprehension as it relates to two contextual scenarios by asking participants a series of six questions (one open ended, two elementary level, and three intermediate) which required them to quantitatively transform information in the chart.
-Results provided an understanding of the advantages and disadvantages of the log scale.
-
-In general, results suggest that understanding log logic is difficult as indicated by the misunderstanding in Intermediate Q1 and Q2.
-This is also supported in following participants estimation strategies for making first level estimates in Intermediate Q3 rather than relying on their spatial awareness between grid lines on the log scale.
-The accuracy of estimates greatly depends on the location of the value being estimated in relation to the magnitude.
-For example, accuracy and variability of population estimates made on the linear scale improved as the year of interest increased and thus the magnitude of population increased, making the point more visible.
-Alternatively, there was a slight sacrifice in the accuracy of population estimates on the log scale as the year of interest increased.
-This was due to participant resistance to estimate between grid lines on the log scale and inaccurate representation of equating spatial distance to quantitative difference.
-As the magnitude of population increases, there was a more noticeable effect of the resistance and lack of understanding.
-Density plots showed an advantage of the linear scale when estimating an additive increase in population and a slight advantage of the log scale when estimating a multiplicative change in population.
-
-It was also found that estimates were subjective to the simulated data set as shown by the discrepancy between data set one and data set two.
-This implies a large portion of participants were reading the actual simulated data points as opposed to basing estimates on the underlying visual trend of the data.
-Common responses revealed participants bias to anchoring their estimates to the grid lines, particularly on the log scale, as well as to base ten values.
-The strong tendency to anchor to grid lines on the log scale resulted in a sacrifice in accuracy as quantitative differences between grid lines increased.
-This also implies that accuracy strongly depended on the location of the simulated point in relation to the grid lines.
-
-Understanding graph comprehension is a complex process and requires long-term interaction with the chart and information being presented.
-With a fixed number of estimates and assessment of participant scratch work, we outlined a variety of situations in which displaying exponentially increasing data on the log scale resulted in both advantages and disadvantages, thus providing a better understanding of the cognitive implications of the use of log scales.
+The studies conducted in this research relied on graphical tasks of varying complexity in order to help us understand the perceptual and cognitive advantages and disadvantages of displaying exponentially increasing data on the log scale.
+Our results showed there are perceptual advantages of the use of log scales due to the change in contextual appearance; however, our understanding of log logic is flawed when translating the information into context.
+We recommend consideration of both user needs and graph specific tasks when presenting data on the log scale; caution should be taken when interpretation of large magnitudes is required, but advantages may appear when it is necessary to visually identify and interpret small magnitudes on the chart.
+In addition this research, further investigation is necessary to expand the use of log scales to data which does not follow an exponential trend - such as polynomial or sinusoidal curves.
+It is also necessary to evaluate the use of transforming the implications of transforming or displaying the \(x\)-axis on a log scale as we focused on the transformation of the \(y\)-axis.
+Follow-up studies for this research could provide further insight into how we make decisions based on data displayed on a log scale in order to evaluate the effect of scale on risk adversity.
+This research stands as a model for conducting an extensive series of graphical tasks on the same type of data and plot in order to gain a comprehensive understanding of both the perceptual and cognitive implications of the design choices.
 
 \appendix
 
