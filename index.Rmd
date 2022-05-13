@@ -91,28 +91,29 @@ library(formatR)
 
 ## Introduction to Statistical Graphics
 
-Advanced technology and computing power have promoted data visualization as a central tool in modern data science. @unwin_why_2020 defines data visualization as the art of drawing graphical charts in order to display data. 
+\svp{This introduction is a bit... scattered? We might want to talk through how to break the ice and come up with a good way to do it. But it's always a bit awkward to start out.}
+Advanced technology and computing power have promoted data visualization as a central tool in modern data science. @unwin_why_2020 defines data visualization as the art of drawing charts in order to display data. 
 Graphics are useful for data cleaning, exploring data structure, and have been an essential component in communicating information for the last 200 years [@lewandowsky_perception_1989]. 
 This chapter aims to provide an overview of statistical graphics as they relate to effective communication in science and the media.
-We examine how our interpretation of the data is affected by our interaction with graphics through cognitive tasks of differing levels of complexity, and then introduce the motivation and background for the rest of the work.
+We examine how our interpretation of the data is affected by our interaction with \svp{charts} through cognitive tasks of differing levels of complexity, and then introduce the motivation and background for the rest of the work.
 
 ### History of Graphics
 
-```{r william-playfair-trade, fig.cap = "William Playfair's balance of trade", out.width="85%"}
-knitr::include_graphics("images/william-playfair-balance-trade.png")
-
+```{r william-playfair-trade, fig.cap = "William Playfair's balance of trade.\\svp{Needs a better caption - explain what he was showing and what it does well and poorly}", out.width = ".75\\linewidth"}
+knitr::include_graphics("images/BalanceofTrade-crop.png")
+ 
 # https://repository.tku.ac.jp/dspace/bitstream/11150/6149/1/LAUD_085-03.pdf
 ```
 
-During the $\text{18}^{\text{th}}$ and $\text{19}^{\text{th}}$ centuries, governments began using graphics in order to better understand their population and economic interests [@playfair1801statistical; @harms1991august; @walker2013statistical].
-In \cref{fig:william-playfair-trade}, @playfair1801statistical visually represents the power and economic status of each European Nation in the early $\text{19}^{\text{th}}$ century. 
-Circle size and numeric annotation within the circle indicate the number of square miles in each country with the number of people per square mile indicated above the circle. 
+During the 18th and 19th centuries, governments began using graphics in order to better understand their population and economic interests [@playfair1801statistical; @harms1991august; @walker2013statistical].
+In \cref{fig:william-playfair-trade}, @playfair1801statistical visually represents the power and economic status of each European Nation in the early 19th century. 
+Circle size and numeric annotations within the circles indicate the number of square miles in each country with the number of people per square mile indicated above the circle. \svp{This may need editing since I think the version of the chart that I have in color is slightly different}
 The vertical bar to the left side represents the number of inhabitants (millions), and the line to the right side represents the revenue (million pounds). 
 Color in the original figure, not shown, identifies countries as maritime powers or powerful by land only. 
-The Statistical atlas of the United States [@walker2013statistical] used charts and graphics to display data compiled from the 1870 US census. 
+The statistical atlas of the United States [@walker2013statistical] used charts and graphics to display data compiled from the 1870 US census\svp{; similar atlases were also published for the 10th and 11th censuses}. 
 \cref{fig:statistical-atlas-state-population} displays the population of each state where square size represents the proportion of the states population separated into three regions representing the origin and race of the population.
 The rectangle shown to the right represents the proportion of residents born in the state who have become residents of other states.
-In the $\text{20}^{\text{th}}$ century, companies began utilizing graphics to understand their mechanics and support business decisions and news sources began displaying graphics of weather forecasts as a means to communicate critical information and aid in decision-making [@chandar2012graph; @yates1985graphs].
+In the 20th century, companies began utilizing graphics to understand their mechanics and to support business decisions; news sources began displaying graphics of weather forecasts as a means to communicate critical information and aid in decision-making [@chandar2012graph; @yates1985graphs].
 @chandar2012graph illustrates how AT\&T used graphics to demonstrate management's ability to optimize utilization of assets by making comparisons between their annual net telephone revenues and their returns on total assets \pcref{fig:ATandT-revenue}.
 Today, we encounter data visualizations everywhere; researchers include graphics to communicate their results in scientific publications and mass media present graphics in order to convey news stories to the public through newspapers, TV, and the Web [@gouretski2007much; @NYTimes_presidential_forecast; @natesilver538_2020].
 
@@ -129,8 +130,8 @@ knitr::include_graphics("images/ATandT-revenue.png")
 # PERMISSION: You may use the Final Published PDF (or Original Submission or Accepted Manuscript, if preferred) in the following ways: in your dissertation or thesis, including where the dissertation or thesis will be posted in any electronic Institutional Repository or database
 ```
 
-Although statistical graphics have become widely used and valued in science, business, and in many other aspects of life, as creators of graphics, we are too accepting of them as default without asking critical questions about the graphics we create or view [@unwin_why_2020]. 
-@vanderplas_testing_2020 poses the general question we must ask ourselves, “how effective is this graph at communicating useful information?”
+Although statistical graphics have become widely used and valued in science, business, and in many other aspects of life, as creators of graphics, we are too accepting of them as default without asking critical questions about the graphics we create or view [@unwin_why_2020]. \svp{I would probably state this more moderately, e.g. "we may be too accepting of easy-to-create, default data displays, using them without critically questioning the data and/or how effective the display is at displaying the data."}
+@vanderplas_testing_2020 poses the general question we must ask ourselves, "how effective is this graph at communicating useful information?"
 An effective graphic accurately shows the data through the appropriate chart selection, axes and scales, and aesthetic design choices in order to successfully communicate the intended result. 
 [Section 1.2](#misleading-graphics) illustrates how graphics can be misleading and ineffective at communicating the intended result by inaccurately displaying the data.
 
@@ -145,6 +146,7 @@ Both authors assigned an overall quality rating (poor, adequate, good, or exempl
 The authors rated 39% of the 97 graphs sampled as poor, indicating there is still an astonishing lack in the quality of graphics. 
 More startling is the fact that the source of the graphic from an applied science or a graphic from statistics had no effect on the quality of the graphic. 
 
+\svp{This is a bit of an older example - were you even in middle school during this? :-p}
 News media is a major culprit in displaying data in ways that could be misleading to the public. For example, in 2005, there was a seven year long court case in which the decision was made to remove Terri Schiavo from life-support [@cranford2005facts].
 News organizations such as CNN [@maloy_2005] used graphs from polls to show the proportion of Americans from different political parties who agreed with the decision to remove the feeding tube \pcref{fig:percent-who-agree-with-count}.
 Upon initial inspection of \cref{fig:percent-who-agree-with-count}, it appears that about three times as many democrats supported the decision as republicans or independents.
@@ -166,6 +168,8 @@ knitr::include_graphics("images/covid-ga-recreation.jpg")
 # https://mdsr-book.github.io/mdsr2e/ch-ethics.html#truthful-falsehoods
 ```
 
+\svp{Transition from bad/ineffective graphics to the need for graphical guidelines to prevent the worst mismatches. Are you citing the paper we looked at for graphics group in here?}
+
 ### Graphical Guidelines
 
 Higher quality of technology has influenced the creation, replication, and complexity of graphics as there are an infinitely many number of graphical displays and design choices that can be implemented at faster speeds with more flexibility. 
@@ -186,7 +190,7 @@ Software, such as `ggplot2` [@ggplot2], aims to implement the framework of creat
 knitr::include_graphics("images/graphic-flowchart.png")
 ```
 
-In efforts to achieve a higher standard of the graphics being presented, future work must be done to implement the academic research being conducted in graphics into practice.
+In efforts to achieve a higher standard of the graphics being presented, ~~future~~ work must be done to implement the academic research being conducted in graphics into practice.
 For example, better definitions of variables, units of measurements, scales, and other graphical elements is necessary in order to improve the overall quality of graphics.
 Changes in software defaults such as the originally set number of bins in a bar chart can help support the improvement of graphs in both statistics and the applied science.
 
@@ -245,8 +249,11 @@ P = K\ln \frac{S}{S_0}
 \end{equation}
 where $P$ represents the perceived stimulus, $K$ represents Weber's contrast, $S$ represents the initial stimulus intensity, and $S_0$ represents the minimal threshold of perception.
 
+\svp{It might be better to focus this section on logarithms and numerical perception - your research doesn't do too much with Weber's law, so more than a cursory mention might be excessive.}
+
 ## Cognitive Tasks and Testing Statistical Graphics
 
+\svp{semantic satiation with the word graphic here. Switch it up - chart, graph, plot...}
 In order to understand how our visual system perceives statistical graphics, we must first consider the complexity of the graphic and how viewers are interacting with the data and information being displayed [@tory2004human].
 Each interaction requires a different level of cognitive involvement and the complexity of the task being asked of the viewer must match the graphic and desired hypothesis.
 
@@ -406,6 +413,8 @@ This misrepresentation is highlighted for asymmetric scales where spatial distan
 The choice of scale can change the shape of a graph, thus creating a conceptual demand for the viewer when constructing a mental image of the graph [@leinhardt1990functions]. 
 
 ## Motivation and Background
+
+\svp{It might be worth just starting your lit review with this! It's an interesting lead-in and gives you all sorts of opportunities to connect your goals to the lit review, without the stilted introduction that starting with Antony's work gives you. This is much more organic and natural.}
 
 ```{r 91divoc-cases-july2021, fig.cap = "91-DOVIC New Daily Case Counts as of July 2021", out.width="100%"}
 knitr::include_graphics("images/91dovic-cases-july2021.png")
