@@ -106,7 +106,7 @@ The density curves of the LOF statistics for each level of curvature are plotted
 While the LOF statistic provides a numerical value for discriminating between the difficulty levels, it cannot be directly related to the perceptual discriminability; it serves primarily as an approximation to ensure that we are testing parameters at several distinct curvature levels.
 Final parameters used for data simulation are shown in \cref{tab:parameter-data}.
 
-```{r lof-density-curves, fig.height = 2.5, fig.width = 5, fig.scap = "Lineup parameter selection", fig.cap = "Density plot of the lack of fit statistic showing separation of difficulty levels: obvious curvature, noticable curvature, and almost linear." out.width = "100%"}
+```{r lof-density-curves, fig.height = 2.5, fig.width = 5, fig.scap = "Lineup parameter selection", fig.cap = "Density plot of the lack of fit statistic showing separation of difficulty levels: obvious curvature, noticable curvature, and almost linear.", out.width = "100%"}
 lofData <- read.csv(file = "data/01-lineups/lineup-lof-data.csv")
 lofPlot_curvature <- lofData %>%
   mutate(Curvature = factor(Curvature, levels = c("Obvious Curvature", "Noticeable Curvature", "Almost Linear"), labels = c("High Curvature", "Medium Curvature", "Low Curvature"))) %>%
