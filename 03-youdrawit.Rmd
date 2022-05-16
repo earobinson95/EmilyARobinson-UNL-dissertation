@@ -8,7 +8,7 @@ library(readr)
 library(knitr)
 ```
 
-```{r eyefitting-data, message=FALSE, warning=FALSE}
+```{r eyefitting-data, message=FALSE, warning=FALSE, echo = F}
 eyefitting_model_data <- read_csv("data/02b-eyefitting/eyefitting-model-data.csv") %>%
   dplyr::rename(`Parameter Choice` = parm_id)
 
@@ -25,7 +25,7 @@ eyefitting_gamm_preds <- read_csv("data/02b-eyefitting/eyefitting-gamm-preds.csv
   dplyr::rename(`Parameter Choice` = parm_id)
 ```
 
-```{r exponential-data, message=FALSE, warning=FALSE, cache = F}
+```{r exponential-data, message=FALSE, warning=FALSE, cache = F, echo = F}
 youdrawit_model_data      <- read_csv("data/02a-youdrawit/youdrawit-model-data.csv")  %>%
   mutate(`Points Truncated` = ifelse(points_truncated == 10, "50%", "75%"),
          `Growth Rate` = ifelse(beta == "beta0.1", "Low", "High")) %>%
@@ -70,7 +70,7 @@ Initial studies in the 20th century explored the use of fitting lines by eye thr
 Common methods of fitting trends by eye involve maneuvering a string, black thread, or ruler until the fit is suitable, then drawing the line through the set of points. 
 
 <!-- \svp{You can change this to active voice relatively easily by saying "researchers were interested in assessing..."} -->
-In @finney_subjective_1951, researchers were interested in assessing the effect of stopping iterative maximum likelihood calculations after one iteration. 
+Researchers in @finney_subjective_1951 were interested in assessing the effect of stopping iterative maximum likelihood calculations after one iteration. 
 Many techniques in statistical analysis are performed with the aid of iterative calculations such as Newton's method or Fisher's scoring. 
 Guesses are made at the best estimates of certain parameters and these guesses are then used as the basis of a computation which yields a new set of approximation to the parameter estimates; this same procedure is then performed on the new parameter estimates and the computing cycle is repeated until convergence, as determined by the statistician, is reached. 
 The author was interested in whether one iteration of calculations was sufficient in the estimation of parameters connected with dose-response relationships. 
@@ -83,7 +83,7 @@ In this study, twenty-one scientists were recruited via postal mail and asked to
 The author then computed one iterative calculation of the relative potency based on starting values as indicated by the pair of lines provided by each participant and compared these relative potency estimates to that which was estimated by the full probit technique (reaching convergence through multiple iterations).
 Results indicated that one cycle of iterations for calculating the relative potency was sufficient based on the starting values provided by eye from the participants.
 
-```{r subjective-judgement, fig.cap = "Subjective Judgement in Statistical Analysis (1951) Parallel Probits", out.width="50%"}
+```{r subjective-judgement, fig.scap = "Subjective Judgement in Statistical Analysis (1951) Parallel Probits", fig.cap = "Parallel probit responses in a biological assay shown to study participants in Subjective Judgement in Statistical Analysis (1951). The $x$-axis is the $\\log_{1.5}$ dose level and the $y$-axis is the corresponding probit response; circles correspond to the test preparation method while the crosses correspond to the standard preparation method.", out.width="50%"}
 knitr::include_graphics("images/02-you-draw-it/subjective-judgement-plot.png")
 ```
 
