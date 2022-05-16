@@ -29,6 +29,7 @@ By collecting information from the calculation and scratchpad inputs, we were ab
 Participants often made first level estimates when comparing two points rather than relying on their spatial awareness between grid lines on the log scale.
 They were resistant to make estimates between grid lines (anchored to grid lines) and tended to inaccurately equate spatial distance to numerical difference on the log scale, leading to a sacrifice in estimation accuracy; this resistance and misinterpretation leads to greater consequences for larger magnitudes when distances between grid lines is large.
 Further testing is required to evaluate this impact on log scales of different bases, such as base 10 where this spatial distance has a much larger effect than on base 2.
+Extension studies could also provide information about the impact including minor grid lines has on anchoring; for example, 10 visually unequal spaced minor grid lines (equal numerical difference) could be added to a log base 10 scale to potentially aid in participant estimation.
 Discrepancy in estimates between the two data sets implies a large portion of participants were reading the actual simulated data points as opposed to basing estimates on the underlying visual trend of the data.
 Overall, estimation accuracy for small magnitudes was improved by the use of the log scale, but sacrifices in accuracy on the log scale became apparent as magnitudes increased leading to advantages on the linear scale.
 

@@ -190,7 +190,7 @@ Software, such as `ggplot2` [@ggplot2], aims to implement the framework of creat
 knitr::include_graphics("images/graphic-flowchart.png")
 ```
 
-In efforts to achieve a higher standard of the graphics being presented, ~~future~~ work must be done to implement the academic research being conducted in graphics into practice.
+In efforts to achieve a higher standard of the graphics being presented, work must be done to implement the academic research being conducted in graphics into practice.
 For example, better definitions of variables, units of measurements, scales, and other graphical elements is necessary in order to improve the overall quality of graphics.
 Changes in software defaults such as the originally set number of bins in a bar chart can help support the improvement of graphs in both statistics and the applied science.
 
@@ -359,7 +359,7 @@ knitr::include_graphics("images/amer-poggendorff-illusion.png")
 knitr::include_graphics("images/framed-murder-rate-map.png")
 ```
 
-### Questioning
+### Questioning {#lit-questioning}
 
 An important consideration in understanding graph comprehension is is the questions being asked of the viewer [@graesser2014new].
 Low level questions address the content and interpretation or explicit material while deeper questions require inference, application, and evaluation of the information being presented.
@@ -370,7 +370,7 @@ Two literal items required the viewer to read the data, title, or axis label in 
 Comparison items required comparisons and the use of mathematical concepts to answer, "Who was the tallest" and "How much taller was x than y?"
 Lastly, extension items required an extension, prediction, or inference such as, "If x grows 5 centimeters and y grows 10 centimeters by Sept. 1981, who will be taller and by how much?
 In @friel2001making, several studies were reviewed and their questions were placed in the taxonomy of skills required for answering questions at each level.
-In addition to th graph's visual features and questioning, it is important for researchers to give careful consideration to the context of the graphic on the viewers comprehension.
+In addition to the graph's visual features and questioning, it is important for researchers to give careful consideration to the context of the graphic on the viewers comprehension.
 
 ```{r children-height, fig.cap = "Comprehension of heights (1987) ", out.width="80%"}
 knitr::include_graphics("images/children-height.png")
