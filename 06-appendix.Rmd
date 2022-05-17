@@ -2,24 +2,6 @@
 
 `r if(!knitr:::is_latex_output()) '# (APPENDIX) Appendix {-}'` 
 
-<!--
-If you feel it necessary to include an appendix, it goes here.
--->
-
-<!-- # First Appendix -->
-
-<!-- This first appendix includes all of the R chunks of code that were hidden throughout the document (using the `include = FALSE` chunk tag) to help with readibility and/or setup. -->
-
-<!-- **In the main Rmd file** -->
-
-<!-- ```{r ref.label='include_packages', results='hide', echo = TRUE} -->
-<!-- ``` -->
-
-<!-- **In Chapter \@ref(ref-labels):** -->
-
-<!-- ```{r ref.label='include_packages_2', results='hide', echo = TRUE} -->
-<!-- ``` -->
-
 ```{r appendix-setup, message=FALSE, warning=FALSE, echo = F}
 library(tidyverse)
 ```
@@ -37,13 +19,11 @@ Parameters for aesthetic design choices were defined in a list of options and r2
 For instance, I specified the buffer space allowed for the $x$ and $y$ axes to avoid users anchoring their lines to the axes limits. For D3.js source code, visit GitHub [here](https://github.com/srvanderplas/Perception-of-Log-Scales/blob/master/you-draw-it-development/you-draw-it-test-app/main.js).
 \cref{fig:r2d3-shiny-flowchart} provides a visual aid of the process of creating the you draw it experimental study in [Chapter 3](#youdrawit).
 
-<!-- ## You draw it D3.js source code {#d3.js-source-code} -->
-
 ```{r r2d3-shiny-flowchart, fig.cap = "Interactive plot development", out.width="100%"}
 knitr::include_graphics("images/02-you-draw-it/r2d3+shiny.png")
 ```
 
-```{r d3.js-source-code, include = F, eval = F, echo = T}
+```{r d3.js-source-code, include = F, eval = F, echo = T, tidy = T}
 # Define variable margins
 const margin = {left: 55, 
                 right: 10, 
@@ -463,7 +443,12 @@ knitr::include_graphics("images/02-you-draw-it/high-15-log.png")
 
 ## Scratchwork participant comparison {#estimation-comparison}
 
-```{r, echo = F, fig.cap = "Estimation showed work density plot comparison", fig.height = 9, fig.width = 9, out.width = "100%", warning = F, message = F}
+In order to examine whether participants who used the provided resources for estimation differed in their numerical estimations from those who did not, we first compared population estimates from the explicitly asked year 10 location.
+About half of the participants fell into the category which provided scratch work and half did not \pcref{tab:showed-work-comparison-table}. 
+The  was determined there was no substantial difference or bias in estimates between the two groups, therefore, we proceeded to examine the estimated populations across scales from the first level estimates \pcref{fig:showed-work-comparison}.
+See [4.4.2](#eq1-results) for follow-up comparisons.
+
+```{r, showed-work-comparison, echo = F, fig.cap = "Estimation showed work density plot comparison", fig.height = 9, fig.width = 9, out.width = "100%", warning = F, message = F}
 
 # estimation_model_data <- read.csv(here("data/03-estimation/estimation-model-data.csv"))
 # q0_text_summary <- read.csv(here("data/03-estimation/q0-text-summary.csv"))
@@ -492,7 +477,8 @@ qe1_data %>%
   kableExtra::kable("latex", 
                     booktabs = T, 
                     col.names = c("Data set", "Scale", "Showed work", "N"),
-               caption = "Estimation showed work summary")
+               caption = "Estimation showed work summary",
+               label = "showed-work-comparison-table")
 
 qe1_compare_work <- qe1_data %>%
   ggplot(aes(x = response, fill = showed_work_cutoff)) +

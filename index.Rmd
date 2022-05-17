@@ -53,7 +53,7 @@ knitr::opts_chunk$set(
   tidy = T, tidy.opts=list(width.cutoff=45),
   fig.pos = "tbp",
   out.extra = "",
-  cache = F,
+  cache = TRUE,
   dev = "png"
 )
 ```
@@ -84,58 +84,36 @@ library(formatR)
 
 # Literature Review
 
-<!-- + Editing text colors: \ear{Emily's editing color.} Emily may also use mostly black text as well. \svp{Susan's editing color.} \rh{Reka's editing color.} -->
+## Motivation and Background
 
-<!-- + \svp{General comment - it's a bit odd to write this in first person, but I'm not sure it's necessarily wrong. Just different.} -->
-<!-- + \ear{Need to check references. In text should only show last name.} -->
+We have recently experienced the impact graphics and charts have on a large scale through the SARSNCOV-2 pandemic (COVID-19). 
+At the beginning of 2020, we saw an influx of dashboards being developed to display case counts, transmission rates, and outbreak regions [@rost_2020]; mass media routinely showed charts to share information with the public about the progression of the pandemic [@romano_scale_2020]. 
+@fagen-ulmschneider_2020 began the 91-DIVOC project to explore the global growth of COVID-19 through interactive graphics updated daily. 
+The interactive graphics allowed viewers to explore the current status of COVID-19 by selecting their desired regions, axes, axis scale, and measure of interest (for example, case count, death count, and vaccine count); \cref{fig:91divoc-cases-july2021} [@fagen-ulmschneider_2020] shows the new confirmed COVID-19 cases per day, normalized by population, as of July 2021. 
+Other graphics displayed COVID-19 data as maps \pcref{fig:covid19-summer2020-risk-map} with color indicating the severity and risk in each US county [@global_epidemics_2021].
+People began seeking out graphical displays of COVID-19 data as a direct result of these pieces of work [@rost_2020]; providing increased and ongoing exposure to these graphics over time. 
+\cref{fig:covid19-datawrapper-views-july2020} illustrates the increased views Datawrapper, a user-friendly web tool used to create basic interactive charts, had during the COVID-19 pandemic [@rost_2020].
+Many of these graphics helped guide decision makers to implement policies such as shut-downs or mandated mask wearing, as well as facilitated communication with the public to increase compliance [@bavel_using_2020]. 
+As graphics began to play an important role in the communication of the pandemic, creators of graphics were faced with design choices in order to ensure their charts were effective at accurately communicating the current status of the pandemic. 
 
-## Introduction to Statistical Graphics
-
-\svp{This introduction is a bit... scattered? We might want to talk through how to break the ice and come up with a good way to do it. But it's always a bit awkward to start out.}
-Advanced technology and computing power have promoted data visualization as a central tool in modern data science. @unwin_why_2020 defines data visualization as the art of drawing charts in order to display data. 
-Graphics are useful for data cleaning, exploring data structure, and have been an essential component in communicating information for the last 200 years [@lewandowsky_perception_1989]. 
-This chapter aims to provide an overview of statistical graphics as they relate to effective communication in science and the media.
-We examine how our interpretation of the data is affected by our interaction with \svp{charts} through cognitive tasks of differing levels of complexity, and then introduce the motivation and background for the rest of the work.
-
-### History of Graphics
-
-```{r william-playfair-trade, fig.cap = "William Playfair's balance of trade.\\svp{Needs a better caption - explain what he was showing and what it does well and poorly}", out.width = ".75\\linewidth"}
-knitr::include_graphics("images/BalanceofTrade-crop.png")
- 
-# https://repository.tku.ac.jp/dspace/bitstream/11150/6149/1/LAUD_085-03.pdf
+```{r 91divoc-cases-july2021, fig.cap = "91-DOVIC New Daily Case Counts as of July 2021", out.width="100%"}
+knitr::include_graphics("images/91dovic-cases-july2021.png")
 ```
 
-During the 18th and 19th centuries, governments began using graphics in order to better understand their population and economic interests [@playfair1801statistical; @harms1991august; @walker2013statistical].
-In \cref{fig:william-playfair-trade}, @playfair1801statistical visually represents the power and economic status of each European Nation in the early 19th century. 
-Circle size and numeric annotations within the circles indicate the number of square miles in each country with the number of people per square mile indicated above the circle. \svp{This may need editing since I think the version of the chart that I have in color is slightly different}
-The vertical bar to the left side represents the number of inhabitants (millions), and the line to the right side represents the revenue (million pounds). 
-Color in the original figure, not shown, identifies countries as maritime powers or powerful by land only. 
-The statistical atlas of the United States [@walker2013statistical] used charts and graphics to display data compiled from the 1870 US census\svp{; similar atlases were also published for the 10th and 11th censuses}. 
-\cref{fig:statistical-atlas-state-population} displays the population of each state where square size represents the proportion of the states population separated into three regions representing the origin and race of the population.
-The rectangle shown to the right represents the proportion of residents born in the state who have become residents of other states.
-In the 20th century, companies began utilizing graphics to understand their mechanics and to support business decisions; news sources began displaying graphics of weather forecasts as a means to communicate critical information and aid in decision-making [@chandar2012graph; @yates1985graphs].
-@chandar2012graph illustrates how AT\&T used graphics to demonstrate management's ability to optimize utilization of assets by making comparisons between their annual net telephone revenues and their returns on total assets \pcref{fig:ATandT-revenue}.
-Today, we encounter data visualizations everywhere; researchers include graphics to communicate their results in scientific publications and mass media present graphics in order to convey news stories to the public through newspapers, TV, and the Web [@gouretski2007much; @NYTimes_presidential_forecast; @natesilver538_2020].
-
-```{r statistical-atlas-state-population, fig.cap = "Statistical Atlas 1870 state population", out.width="85%"}
-knitr::include_graphics("images/statistical-atlas-state-population.jpg")
-
-# https://www.loc.gov/item/05019329/
-# PERMISSION: The Library of Congress is providing access to these materials for educational and research purposes and is not aware of any U.S. copyright protection (see Title 17 of the United States Code) or any other restrictions in the Map Collection materials.
+```{r covid19-summer2020-risk-map, fig.cap = "COVID-19 Risk Level Map as of July 2020", out.width="100%"}
+knitr::include_graphics("images/covid19-summer2020-risk-map.png")
 ```
 
-```{r ATandT-revenue, fig.cap = "AT\\&T utilization of assets", out.width="85%"}
-knitr::include_graphics("images/ATandT-revenue.png")
-# https://us.sagepub.com/en-us/nam/journal-author-archiving-policies-and-re-use
-# PERMISSION: You may use the Final Published PDF (or Original Submission or Accepted Manuscript, if preferred) in the following ways: in your dissertation or thesis, including where the dissertation or thesis will be posted in any electronic Institutional Repository or database
+```{r covid19-datawrapper-views-july2020, fig.cap = "Datawrapper daily chart views during COVID-19", out.width="100%"}
+knitr::include_graphics("images/covid19-datawrapper-views-july2020.png")
 ```
 
-Although statistical graphics have become widely used and valued in science, business, and in many other aspects of life, as creators of graphics, we are too accepting of them as default without asking critical questions about the graphics we create or view [@unwin_why_2020]. \svp{I would probably state this more moderately, e.g. "we may be too accepting of easy-to-create, default data displays, using them without critically questioning the data and/or how effective the display is at displaying the data."}
-@vanderplas_testing_2020 poses the general question we must ask ourselves, "how effective is this graph at communicating useful information?"
-An effective graphic accurately shows the data through the appropriate chart selection, axes and scales, and aesthetic design choices in order to successfully communicate the intended result. 
-[Section 1.2](#misleading-graphics) illustrates how graphics can be misleading and ineffective at communicating the intended result by inaccurately displaying the data.
+<!-- Although statistical graphics have become widely used and valued in science, business, and in many other aspects of life, as creators of graphics, we are too accepting of them as default without asking critical questions about the graphics we create or view [@unwin_why_2020]. \svp{I would probably state this more moderately, e.g. "we may be too accepting of easy-to-create, default data displays, using them without critically questioning the data and/or how effective the display is at displaying the data."} -->
+<!-- @vanderplas_testing_2020 poses the general question we must ask ourselves, "how effective is this graph at communicating useful information?" -->
+<!-- An effective graphic accurately shows the data through the appropriate chart selection, axes and scales, and aesthetic design choices in order to successfully communicate the intended result.  -->
+<!-- [Section 1.2](#misleading-graphics) illustrates how graphics can be misleading and ineffective at communicating the intended result by inaccurately displaying the data. -->
 
-### Misleading Graphics {#misleading-graphics}
+## Misleading Graphics {#misleading-graphics}
 
 Despite past attempts to improve the use of graphics in science, graphics displayed in academic research are still falling short of the standards. @gordon_statistician_2015 evaluated 97 graphs for overall quality, based on five principles of graphical excellence including: (1) show the data clearly (2) use simplicity in design (3) use good alignment on a common scale for quantities to be compared (4) keep the visual encoding transparent (5) use graphical forms consistent with principles 1 and 4.
 The authors randomly sampled 97 graphs published in A\* (top 5%) journals with work in statistics and applied science disciplines.
@@ -146,22 +124,11 @@ Both authors assigned an overall quality rating (poor, adequate, good, or exempl
 The authors rated 39% of the 97 graphs sampled as poor, indicating there is still an astonishing lack in the quality of graphics. 
 More startling is the fact that the source of the graphic from an applied science or a graphic from statistics had no effect on the quality of the graphic. 
 
-\svp{This is a bit of an older example - were you even in middle school during this? :-p}
-News media is a major culprit in displaying data in ways that could be misleading to the public. For example, in 2005, there was a seven year long court case in which the decision was made to remove Terri Schiavo from life-support [@cranford2005facts].
-News organizations such as CNN [@maloy_2005] used graphs from polls to show the proportion of Americans from different political parties who agreed with the decision to remove the feeding tube \pcref{fig:percent-who-agree-with-count}.
-Upon initial inspection of \cref{fig:percent-who-agree-with-count}, it appears that about three times as many democrats supported the decision as republicans or independents.
-However, the scale on the vertical axis begins at 50\%, misleading the viewer to believe there was a much larger discrepancy in support between political parties than there actually was.
-While this graph does display the truth, it is misleading due to the choice of baseline on the $y$-axis.
 @baumer2021texts discuss a more recent example of a misleading graphic in the news shown in May 2020 when Georgia published a graphical display of COVID-19 cases \pcref{fig:covid-19-reporting}. 
 This graphic was highly misleading in communicating the state of the pandemic due to the ordering along the $x$-axis.
 Notice the case count for April $17^{th}$ appears to the right of April $19^{th}$, and that the order of the counties has been selected so that the case counts are monotonically decreasing for each day of reporting.
 The appearance of this graphic leads viewers to believe COVID cases are decreasing.
 Shortly after the graphic was released, the governor's office made a statement that in future charts, chronological order would be used to display time due to public demand. While both examples were misleading due to axis labels and scales, other issues such as incomplete data and partitions that do not add to a whole can lead to misrepresentation of information.
-
-```{r percent-who-agree-with-count, fig.cap = "Percent who agree with count", out.width="85%"}
-knitr::include_graphics("images/percent-who-agree-with-count.jpg")
-# https://www.statisticshowto.com/probability-and-statistics/descriptive-statistics/misleading-graphs/#:~:text=Misleading%20graphs%20are%20sometimes%20deliberately,doesn't%20start%20at%20zero.
-```
 
 ```{r covid-19-reporting, fig.cap = "COVID-19 reporting", out.width="85%"}
 knitr::include_graphics("images/covid-ga-recreation.jpg")
@@ -170,7 +137,7 @@ knitr::include_graphics("images/covid-ga-recreation.jpg")
 
 \svp{Transition from bad/ineffective graphics to the need for graphical guidelines to prevent the worst mismatches. Are you citing the paper we looked at for graphics group in here?}
 
-### Graphical Guidelines
+## Graphical Guidelines
 
 Higher quality of technology has influenced the creation, replication, and complexity of graphics as there are an infinitely many number of graphical displays and design choices that can be implemented at faster speeds with more flexibility. 
 The creator of a graphic makes decisions about the variables displayed, the type of graphic, the size of the graphic and the aspect ratio, the colors and symbols used, the scales and limits, and the ordering of categorical variables. 
@@ -194,103 +161,7 @@ In efforts to achieve a higher standard of the graphics being presented, work mu
 For example, better definitions of variables, units of measurements, scales, and other graphical elements is necessary in order to improve the overall quality of graphics.
 Changes in software defaults such as the originally set number of bins in a bar chart can help support the improvement of graphs in both statistics and the applied science.
 
-## Perception
-
-In order to develop guiding principles for generating graphics effective in communication, we must first understand the basic mechanics of the human perceptual system and the biases we are vulnerable to [@goldstein_sensation_2017]. This section aims to provide an overview of the perceptual process as it relates to inspection of graphical displays, and then address specific perceptual biases.
-
-### Perceptual Process
-
-The perceptual process is a sequence of steps used to describe a how a stimulus in the environment leads to our perception of the stimulus and action in response to the stimulus \pcref{fig:perceptual-process}. 
-This process is separated into sensation [@carlson2010psychology] - involving simple processes that occur right at the beginning of a sensory system - and perception [@myers_dewall_2021] - involving higher-order mechanisms and identified with more complex processes. 
-
-The perceptual process begins when there is a stimulus in the environment and light is reflected and focused back into the viewer's eyes. 
-Within the eye, the light reflected is transformed and focused by the eye's optical system and an image is formed on the receptors of the viewer's retina. 
-It is important to note that everything a person perceives is based not on direct contact with stimuli but on representations of stimuli that are formed on the receptors and the resulting activity in the person's nervous system.
-Once light is reflected and focused, our visual receptors respond to the light and transform the light energy into electrical energy through a process called transduction. 
-Signals from the receptors are then transmitted through the retina, to the brain, and then within the brain where perception (what do you see?) and recognition (what is it called?) occur.
-After recognition, viewers take some sort of motor action; for example, the viewer might move closer to the object.
-The perceptual process is not direct and instead takes on more of a cyclic nature where a person may go through many iterations of stimuli, perception, recognition, and action before the final image is identified and understood [@peterson1994object]. 
-
-```{r perceptual-process, fig.cap = "Perceptual process", out.width="75%"}
-knitr::include_graphics("images/perceptual-process-goldsein-pg5.png")
-```
-
-When perception occurs, we first experience the *preattentive stage* in which we observe color, shape, size, and other basic information about the stimuli being perceived. Preattentive perception effects are automatically processed within the first 500 milliseconds of viewing and do not depend on sustained cognitive attention [@vanderplas_testing_2020]. 
-Following the preattentive stage, *direct attention* is required for additional processing to allow us to draw connections between components that assist in our interpretation of the stimuli. 
-When viewing a chart or graph, most insights we gain are due to the cognitive processes that occur after attention is focused on specific aspects of the graph.
-
-The relationship between physiology and perception can provide us information about how graphics may be understood and interpreted.
-<!-- \rh{How?} -->
-Through experimentation, the physiological response (automatic reaction) is related to the behavioral response (perception, recognition, and action). 
-For example, @furmanski2000oblique tested behavioral responses with functional magnetic resonance imaging (fMRI) techniques to show that the the human visual system is more sensitive to horizontal and vertical stimuli than to stimuli at other orientations.
-According to a cognitive analysis, graph interpretation involves (a) relatively simple pattern perception and association processes in which viewers can associate graphic patterns to quantitative referents and (b) more complex and error-prone inferential processes in which viewers must mentally transform data [@shah1999graphs].
-@shah1995conceptual established the process in which viewers interact with charts by first perceptually observing the visual features and later translating to cognitive processing of the information depicted by those features.
-A viewer must first encode the visual array by identifying meaningful visual features (for example, a straight light slanting downward). 
-Next, the viewer must classify the quantitative measures and relationships which those visual features illustrate (for example, a decreasing linear relationship between $x$ and $y$). 
-The last step involves translating the quantitative measures and relationships to the variables defined in the data set (for example, a population decreasing over years). 
-Psychophysics, the branch of psychology that deals with the relationships between physical stimuli (for example, light) and mental phenomena, aims to provide explanations of the relationship between physiology and perception and point out human perceptual biases. 
-By examining both behavior and physiology together, we are able to understand the mechanisms responsible for perception.
-
-### Logarithmic Perception
-
-While our visual system is powerful, we are still vulnerable to biases related to our perception of different stimuli.
-Ernst Weber, an early psychophysics researcher, discovered a phenomenon known as Weber's law by determining the relationship between the difference threshold (smallest detectable difference between two sensory stimuli; known as the "Just Noticeable Difference") and the magnitude of a stimulus [@fechner1860elemente]. 
-This holds true for a variety of stimuli such as weight, light, and sound as well as for a range of magnitudes; larger numbers require a proportional larger difference in order to remain equally discriminate [@dehaene2008log]. 
-Known as *Weber's law*, it was established that we do not notice absolute changes in stimuli, but instead that we notice the relative change [@sun_framework_2012]. 
-Numerically, Weber's Law is defined as 
-\begin{equation}
-\frac{\Delta S}{S} = K
-\end{equation}
-where $\Delta S$ represents the difference threshold, $S$ represents the initial stimulus intensity, and $K$ is called Weber's contrast which remains constant as the magnitude of $S$ changes. 
-Gustav Fechner, a founder of psychophysics, provided further extension to Weber's law by discovering the relationship between the perceived intensity is logarithmic to the stimulus intensity when observed above a minimal threshold of perception [@sun_framework_2012]. 
-Formally known as the Weber-Fechner law, it is derived from Weber's law as
-\begin{equation}
-P = K\ln \frac{S}{S_0}
-\end{equation}
-where $P$ represents the perceived stimulus, $K$ represents Weber's contrast, $S$ represents the initial stimulus intensity, and $S_0$ represents the minimal threshold of perception.
-
-\svp{It might be better to focus this section on logarithms and numerical perception - your research doesn't do too much with Weber's law, so more than a cursory mention might be excessive.}
-
-## Cognitive Tasks and Testing Statistical Graphics
-
-\svp{semantic satiation with the word graphic here. Switch it up - chart, graph, plot...}
-In order to understand how our visual system perceives statistical graphics, we must first consider the complexity of the graphic and how viewers are interacting with the data and information being displayed [@tory2004human].
-Each interaction requires a different level of cognitive involvement and the complexity of the task being asked of the viewer must match the graphic and desired hypothesis.
-
-### Cognitive Fit
-
-The efficiency in which a viewer extracts data and information from a graphical display is greatly affected by the complexity in the task environment.
-Cognitive fit refers to a match between the representation of the data and the complexity of the task; the representation and tools should support the task strategies, thus reducing the complexity of the task [@vessey1991cognitive].
-@carpenter1998model identifies pattern recognition, interpretative processes, and integrative processes as strategies and processes required to complete tasks of varying degrees of complexity.
-Pattern recognition requires the viewer to encode graphic patterns while interpretive processes operate on those patterns to construct meaning.
-Integrative processes then relate the meanings to the contextual scenario as inferred from labels and titles.
-These processes are critical when determining cognitive fit since they provide the link between the graphical representation and task [@vessey1991cognitive].
-For example, perceptual differences may be identified through pattern recognition while estimation tasks would require integrative processes.
-@tory2004human argues for multiple visual representations of the data since the users' information needs are dependent on both domain and task.
-Therefore, we must consider and determine how the viewer is perceiving and interacting with the graphic as this can influence their understanding of the data and information.
-
-<!-- + @vessey1991cognitive -->
-<!--   + decision-making performance  -->
-<!--   + (1) although graphical and tabular representations may contain the same information, they present that information in fundamentally different ways (grahphical representations emphasize spatial information, while tables emphasize symbolic information) -->
-<!--   + (2) tasks can be divided into two types: spatial and symbolic, based on the type of informaiton that facilitates their solution -->
-<!--   + (3) performance on a task will be enhanced when there is a cognitive fit (match) between the information emphasized in the representation type and that required by the task type (graphs support spatial tasks and tables support symbolic tasks) -->
-<!--   + (4) the processes or strategies problem solvers use are the crucial elements of cognitive fit since they provide the link between representation and task (perceptual and analytical) -->
-<!--   + (5) a complete fit of representaiton, processes, and task type, each represetation will lead to both quicker and more accurate problem solving. -->
-  
-<!-- + @tan1990processing -->
-<!--   + taxonomy of tasks for guiding research in the graphics domain (classifying data extraction tasks). -->
-<!--   + lack of a strong theoretical basis for explaining mechanisms underlying the way human's process information in graphical form. -->
-
-<!-- + @tory2004human -->
-<!--   + how people perceive and interact with a visualization tool can strongly influence their understanding of the data as well as the system’s usefulness -->
-<!--   + users' information needs are domain and task dependent: suggestion - multiple visual representations of the data should be available. -->
-  
-<!-- + Three levels -->
-<!--   + Reasoning -->
-<!--   + Sense making -->
-<!--   + Decision-Making -->
-
-### Testing Statistical Graphics {#testing-statistical-graphics}
+## Testing Statistical Graphics {#testing-statistical-graphics}
 
 One way in which we determine the relationship between behavior and physiology is through the use of graphical tests [@cleveland_graphical_1984; @spence_visual_1990; @lewandowsky_perception_1989; @vanderplas2015spatial].
 These tests may take many forms: identifying differences in graphs, accurately reading information off a chart, using data to make correct real-world decisions, or predicting the next few observations.
@@ -337,6 +208,19 @@ The construction of data plots as statistics allows for easy experimentation, gr
 While the lineup protocol differs from methodology used in earlier studies, the focus is still on initial perception with a relatively small amount of work conducted to understand the effect of design choices on higher cognitive processes such as learning or analysis [@green2009personal]. 
 Lineups serve as a powerful tool for testing *perceived* differences by eliminating ambiguous questions. 
 However, the lineup protocol is constrained by the inability to test higher order cognitive skills such as accurately reading information off of a graph or drawing conclusions from the graph, limiting their ability to be used for testing real-world applications.
+
+## Task Complexity
+
+In order to understand how our visual system perceives statistical charts, we must first consider the complexity of the graphic and how viewers are interacting with the data and information being displayed [@tory2004human].
+The efficiency in which a viewer extracts data and information from a graphical display is greatly affected by the complexity in the task environment.
+Cognitive fit refers to a match between the representation of the data and the complexity of the task; the representation and tools should support the task strategies, thus reducing the complexity of the task [@vessey1991cognitive].
+@carpenter1998model identifies pattern recognition, interpretative processes, and integrative processes as strategies and processes required to complete tasks of varying degrees of complexity.
+Pattern recognition requires the viewer to encode graphic patterns while interpretive processes operate on those patterns to construct meaning.
+Integrative processes then relate the meanings to the contextual scenario as inferred from labels and titles.
+These processes are critical when determining cognitive fit since they provide the link between the graphical representation and task [@vessey1991cognitive].
+For example, perceptual differences may be identified through pattern recognition while estimation tasks would require integrative processes.
+@tory2004human argues for multiple visual representations of the data since the users' information needs are dependent on both domain and task.
+Therefore, we must consider and determine how the viewer is perceiving and interacting with the graphic as this can influence their understanding of the data and information.
 
 ## Graph Comprehension
 
@@ -412,37 +296,13 @@ Scale and axis labels are other critical factors in estimation accuracy.
 This misrepresentation is highlighted for asymmetric scales where spatial distance does not necessarily equate to numerical or quantitative difference.
 The choice of scale can change the shape of a graph, thus creating a conceptual demand for the viewer when constructing a mental image of the graph [@leinhardt1990functions]. 
 
-## Motivation and Background
-
-\svp{It might be worth just starting your lit review with this! It's an interesting lead-in and gives you all sorts of opportunities to connect your goals to the lit review, without the stilted introduction that starting with Antony's work gives you. This is much more organic and natural.}
-
-```{r 91divoc-cases-july2021, fig.cap = "91-DOVIC New Daily Case Counts as of July 2021", out.width="100%"}
-knitr::include_graphics("images/91dovic-cases-july2021.png")
-```
-
-```{r covid19-summer2020-risk-map, fig.cap = "COVID-19 Risk Level Map as of July 2020", out.width="100%"}
-knitr::include_graphics("images/covid19-summer2020-risk-map.png")
-```
-
-We have recently experienced the impact graphics and charts have on a large scale through the SARSNCOV-2 pandemic (COVID-19). 
-At the beginning of 2020, we saw an influx of dashboards being developed to display case counts, transmission rates, and outbreak regions [@rost_2020]; mass media routinely showed charts to share information with the public about the progression of the pandemic [@romano_scale_2020]. 
-@fagen-ulmschneider_2020 began the 91-DIVOC project to explore the global growth of COVID-19 through interactive graphics updated daily. 
-The interactive graphics allowed viewers to explore the current status of COVID-19 by selecting their desired regions, axes, axis scale, and measure of interest (for example, case count, death count, and vaccine count); \cref{fig:91divoc-cases-july2021} [@fagen-ulmschneider_2020] shows the new confirmed COVID-19 cases per day, normalized by population, as of July 2021. 
-Other graphics displayed COVID-19 data as maps \pcref{fig:covid19-summer2020-risk-map} with color indicating the severity and risk in each US county [@global_epidemics_2021].
-People began seeking out graphical displays of COVID-19 data as a direct result of these pieces of work [@rost_2020]; providing increased and ongoing exposure to these graphics over time. 
-\cref{fig:covid19-datawrapper-views-july2020} illustrates the increased views Datawrapper, a user-friendly web tool used to create basic interactive charts, had during the COVID-19 pandemic [@rost_2020].
-Many of these graphics helped guide decision makers to implement policies such as shut-downs or mandated mask wearing, as well as facilitated communication with the public to increase compliance [@bavel_using_2020]. 
-As graphics began to play an important role in the communication of the pandemic, creators of graphics were faced with design choices in order to ensure their charts were effective at accurately communicating the current status of the pandemic. 
-
-```{r covid19-datawrapper-views-july2020, fig.cap = "Datawrapper daily chart views during COVID-19", out.width="100%"}
-knitr::include_graphics("images/covid19-datawrapper-views-july2020.png")
-```
-
-### Logarithmic Scales and Mapping
+## Logarithmic Scales and Mapping
 
 ```{r log-scale-comic, include = F, fig.cap = "Usefulness of the log scale in science", out.width="100%"}
 knitr::include_graphics("images/log-scale-comic.png")
 ```
+
+\ear{big issue with covid graphics; mention weber}
 
 When faced with data which spans several orders of magnitude, we must decide whether to show the data on its original scale (compressing the smaller magnitudes into relatively little area) or to transform the scale and alter the contextual appearance of the data.
 One common solution is to use a log scale transformation to display data over several orders of magnitude within one graph.
@@ -571,7 +431,9 @@ Assuming there is a direct relationship between perceptual and cognitive process
 The idea is compression enlarges the coding space, thus increasing the dynamic range of perception and firing neurons within our visual system [@nieder2003coding].
 Similar to the training and education required to transition from logarithmic mapping to linear mapping, there is also necessary training required in the assessment of graphical displays associated with logarithmic scales. @haemer_presentation_1949 identify semi-logarithmic charts for temporal series as requiring a certain degree of technical training.
     
-### Underestimation of Exponential Growth {#underestimation}
+## Underestimation of Exponential Growth {#underestimation}
+
+\ear{not only log mapping and scales, but exponential growth too}
 
 ```{r exponential-stages, include = F, fig.cap = "Stages of exponential growth", out.width = "75%"}
 data <- tibble(x = seq(0,6,0.001),
