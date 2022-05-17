@@ -345,12 +345,12 @@ Selecting from an extensive list of styles and choices of graphics in order to e
 A consistent concern is the lack of theory of graphics available to build on; better theory should result in better graphics.
 Creators of graphics need an established set of concepts and terminology to build their graphics from so they can actively choose which of many possible graphics to draw in order to ensure their charts are effective at communicating the intended result.
 
-Many efforts have been made to provide guidelines for graphical designs including Wilkinson's Grammar of Graphics (Wilkinson, 2012).
+Many efforts have been made to provide guidelines for graphical designs including Wilkinson's Grammar of Graphics (Wilkinson, 2013).
 The grammar of graphics serves as the fundamental framework for data visualization with the notion that graphics are built from the ground up by specifying exactly how to create a particular graph from a given data set.
-Visual representations are constructed through the use of ``tidy data'' which is characterized as a data set in which each variable is in its own column, each observation is in its own row, and each value is in its own cell (Hadley Wickham \& Grolemund, 2016).
+Visual representations are constructed through the use of ``tidy data'' which is characterized as a data set in which each variable is in its own column, each observation is in its own row, and each value is in its own cell (Wickham \& Grolemund, 2016).
 Graphics are viewed as a mapping from variables in a data set (or statistics computed from the data) to visual attributes such as the axes, colors, shapes, or facets on the canvas in which the chart is displayed.
 \cref{fig:graphic-flowchart} illustrates the process of creating a graphic from a data set through the use of variable mapping, data transformations, coordinate systems, and aesthetic features (Vanderplas, Cook, \& Hofmann, 2020)
-Software, such as \texttt{ggplot2} (Hadley Wickham, 2016), aims to implement the framework of creating charts and graphics as the grammar of graphics recommends.
+Software, such as \texttt{ggplot2} (Wickham, 2016), aims to implement the framework of creating charts and graphics as the grammar of graphics recommends.
 
 \begin{figure}[tbp]
 
@@ -412,7 +412,7 @@ Cognitive psychologists and statisticians made progress by conducting experiment
 Cleveland \& McGill (1984) provides a basis for perceptual judgment, still utilized today, by examining six basic plot objects: position along a common scale, position along nonaligned scales, length, angle, slope, and area.
 In Cleveland \& McGill (1985), these plot objects are ordered by accuracy performed through graphical-perception tasks; for example, comparisons of angles resulted in more difficult judgments than between lengths of lines.
 Shah et al. (1999) established the notion that redesigning graphs can result in the improvement of the viewer's interpretation of the data.
-For example, the use of gestalt principles (Goldstein \& Brockmole, 2017) such as proximity, similarity, and good continuation can help minimize the inferential processes and maximize the pattern association processes required to interpret relevant information.
+For example, the use of gestalt principles (\textbf{goldstein\_sensation\_2017?}) such as proximity, similarity, and good continuation can help minimize the inferential processes and maximize the pattern association processes required to interpret relevant information.
 In \protect\hyperlink{underestimation}{Section 1.5.2} we see how the hierarchy of accuracy in plot objects presented in Cleveland \& McGill (1985) can explain biases in our interpretation and use of graphics.
 
 During the \(\text{21}^{\text{st}}\) century, there have been advancements in the methodology used to investigate the effectiveness of statistical charts (Majumder, Hofmann, \& Cook, 2013).
@@ -636,9 +636,9 @@ This misinterpretation can lead to decisions made under inaccurate understanding
 Early studies explored the estimation and prediction of exponential growth and found that growth is underestimated when presented both numerically and graphically (Wagenaar \& Sagaria, 1975).
 The hierarchy of plot objects found in Cleveland \& McGill (1985) can provide a possible explanation for the underestimation the occurs in exponentially increasing trends; the exponential trend can be thought of as a series of tangential angles leading to less accurate judgement of the next points.
 Results from Wagenaar \& Sagaria (1975) indicated that numerical estimation is more accurate than graphical estimation for exponential curves.
-Experimental studies were conducted in order to determine strategies to improve the accuracy of estimation of exponential growth (G. V. Jones, 1977; Mackinnon \& Wearing, 1991; Wagenaar \& Sagaria, 1975).
+Experimental studies were conducted in order to determine strategies to improve the accuracy of estimation of exponential growth (G. V. Jones, 1977; MacKinnon \& Wearing, 1991; Wagenaar \& Sagaria, 1975).
 There was no improvement in estimation found when participants had contextual knowledge or experience with exponential growth, but instruction on exponential growth reduced the underestimation; participants adjusted their initial starting value but not their perception of the growth rate (G. V. Jones, 1977; Wagenaar \& Sagaria, 1975).
-Mackinnon \& Wearing (1991) found that estimation was improved by providing immediate feedback to participants about the accuracy of their current predictions.
+MacKinnon \& Wearing (1991) found that estimation was improved by providing immediate feedback to participants about the accuracy of their current predictions.
 
 Our inability to accurately predict exponential growth might also be addressed by log transforming the data, however, this transformation introduces new complexities; most readers are not mathematically sophisticated enough to intuitively understand logarithmic math and translate that back into real-world effects.
 In Menge et al. (2018), ecologists were surveyed to determine how often ecologists encounter log scaled data and how well ecologists understand log scaled data when they see it in the literature.
@@ -693,7 +693,7 @@ In \protect\hyperlink{testing-statistical-graphics}{Section 1.3.2}, we explained
 To evaluate a graph, the statistic (data plot) must be run through a visual evaluation - a person.
 We can conclude the visual statistics are significantly different if two different methods of presenting data result in qualitatively different results when evaluated visually.
 Recent graphical experiments have utilized statistical lineups to quantify the perception of graphical design choices (Hofmann, Follett, Majumder, \& Cook, 2012; Loy, Follett, \& Hofmann, 2016; Loy, Hofmann, \& Cook, 2017; VanderPlas \& Hofmann, 2017).
-Statistical lineups provide an elegant way of combining perception and statistical hypothesis testing using graphical experiments (Majumder et al., 2013; Vanderplas et al., 2020; H. Wickham, Cook, Hofmann, \& Buja, 2010).
+Statistical lineups provide an elegant way of combining perception and statistical hypothesis testing using graphical experiments (Majumder et al., 2013; Vanderplas et al., 2020; \textbf{wickham\_graphical\_2010?}).
 `Lineups' are named after the `police lineup' of criminal investigations where witnesses are asked to identify the criminal from a set of individuals.
 Similarly, a statistical lineup is a plot consisting of smaller panels; the viewer is asked to identify the panel containing the real data from among a set of decoy null plots.
 Null plots display data under the assumption there is no relationship and can be generated by permutation or simulation.
@@ -837,7 +837,7 @@ Only participants who completed the lineup study were included in the final data
 Each plot was evaluated between 141 and 203 times (Mean: 164.92, SD: 14.9).
 Participants correctly identified the target panel in 47\% of the 1981 lineup evaluations made on the linear scale and 65.3\% of the 1977 lineup evaluations made on the log scale.
 
-Target plot identification was analyzed using the \texttt{glmer} function in the \texttt{lme4} R package (Bates, Mächler, Bolker, \& Walker, 2015).
+Target plot identification was analyzed using the \texttt{glmer} function in the \texttt{lme4} R package (Bates, Mächler, Bolker, \& Walker, 2014).
 Estimates and odds ratio comparisons between the log and linear scales were calculated using the \texttt{emmeans} R package (Lenth, 2021).
 Each lineup plot evaluated was assigned a binary value based on the participant response (correct = 1, not correct = 0).
 Define \(Y_{ijkl}\) to be the event that participant \(l = 1,...,N_{participant}\) correctly identifies the target plot for data set \(k = 1,2\) with curvature combination \(j = 1,2,3,4,5,6\) plotted on scale \(i = 1,2\).
@@ -1133,7 +1133,7 @@ Using both a linear mixed model (LMM) and a generalized additive mixed model (GA
 \caption[Eye Fitting Straight Lines in the Modern Era Feedback Data Example]{Example of three trend lines showing the the OLS fitted, PCA fitted, and participant drawn values overlaid on the simulated data points.}\label{fig:eyefitting-example-plot}
 \end{figure}
 
-Using the \texttt{lmer} function in the \texttt{lme4} package (Bates et al., 2015), a LMM is fit separately to the OLS and PCA residuals, constraining the fit to a linear trend.
+Using the \texttt{lmer} function in the \texttt{lme4} package (Bates et al., 2014), a LMM is fit separately to the OLS and PCA residuals, constraining the fit to a linear trend.
 Parameter choice, \(x\), and the interaction between \(x\) and parameter choice were treated as fixed effects with a random participant effect accounting for variation due to participant.
 The LMM equation for each fit (OLS and PCA) residuals is given by:
 \begin{equation}
@@ -2122,13 +2122,13 @@ Anderson, V. L., \& McLean, R. A. (1974). \emph{Design of experiments: A realist
 Barry, D., Buchanan, L., Cargill, C., Daniel, A., Delaquérière, A., Gamio, L., \ldots{} al., et. (2020, May). Remembering the 100,000 lives lost to coronavirus in america. \emph{The New York Times}. The New York Times. Retrieved from \url{https://www.nytimes.com/interactive/2020/05/24/us/us-coronavirus-deaths-100000.html}
 
 \leavevmode\vadjust pre{\hypertarget{ref-lme4}{}}%
-Bates, D., Mächler, M., Bolker, B., \& Walker, S. (2015). Fitting linear mixed-effects models using {lme4}. \emph{Journal of Statistical Software}, \emph{67}(1), 1--48. http://doi.org/\href{https://doi.org/10.18637/jss.v067.i01}{10.18637/jss.v067.i01}
+Bates, D., Mächler, M., Bolker, B., \& Walker, S. (2014). Fitting linear mixed-effects models using lme4. \emph{arXiv Preprint arXiv:1406.5823}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-baumer2021texts}{}}%
 Baumer, B. S., Kaplan, D. T., \& Horton, N. J. (2021). \emph{Texts in statistical science: Modern data science with r}. Chapman; Hall/CRC.
 
 \leavevmode\vadjust pre{\hypertarget{ref-bavel_using_2020}{}}%
-Bavel, J. J. V., Baicker, K., Boggio, P. S., Capraro, V., Cichocka, A., Cikara, M., \ldots{} Willer, R. (2020). Using social and behavioural science to support {COVID}-19 pandemic response. \emph{Nature Human Behaviour}, \emph{4}(5), 460--471. http://doi.org/\href{https://doi.org/10.1038/s41562-020-0884-z}{10.1038/s41562-020-0884-z}
+Bavel, J. J. V., Baicker, K., Boggio, P. S., Capraro, V., Cichocka, A., Cikara, M., \ldots{} others. (2020). Using social and behavioural science to support COVID-19 pandemic response. \emph{Nature Human Behaviour}, \emph{4}(5), 460--471.
 
 \leavevmode\vadjust pre{\hypertarget{ref-becker2019trackr}{}}%
 Becker, G., Moore, S. E., \& Lawrence, M. (2019). Trackr: A framework for enhancing discoverability and reproducibility of data visualizations and other artifacts in r. \emph{Journal of Computational and Graphical Statistics}, \emph{28}(3), 644--658.
@@ -2137,7 +2137,7 @@ Becker, G., Moore, S. E., \& Lawrence, M. (2019). Trackr: A framework for enhanc
 Beeby, A., \& Taylor, H. (1973). How well can we use graphs. \emph{The Communicator of Scientific and Technical Information}, \emph{17}, 7--11.
 
 \leavevmode\vadjust pre{\hypertarget{ref-best_perception_2007}{}}%
-Best, L. A., Smith, L. D., \& Stubbs, D. A. (2007). Perception of {Linear} and {Nonlinear} {Trends}: {Using} {Slope} and {Curvature} {Information} to {Make} {Trend} {Discriminations}. \emph{Perceptual and Motor Skills}, \emph{104}(3), 707--721. http://doi.org/\href{https://doi.org/10.2466/pms.104.3.707-721}{10.2466/pms.104.3.707-721}
+Best, L. A., Smith, L. D., \& Stubbs, D. A. (2007). Perception of linear and nonlinear trends: Using slope and curvature information to make trend discriminations. \emph{Perceptual and Motor Skills}, \emph{104}(3), 707--721.
 
 \leavevmode\vadjust pre{\hypertarget{ref-broersma1985graphical}{}}%
 Broersma, H., \& Molenaar, I. (1985). Graphical perception of distributional aspects of data. \emph{Computational Statistics Quarterly}, \emph{2}(1), 53--72.
@@ -2146,10 +2146,10 @@ Broersma, H., \& Molenaar, I. (1985). Graphical perception of distributional asp
 Buchanan, L., Park, H., \& Pearce, A. (2017, January). You draw it: What got better or worse during obama's presidency. \emph{The New York Times}. The New York Times. Retrieved from \url{https://www.nytimes.com/interactive/2017/01/15/us/politics/you-draw-obama-legacy.html}
 
 \leavevmode\vadjust pre{\hypertarget{ref-buja_statistical_2009}{}}%
-Buja, A., Cook, D., Hofmann, H., Lawrence, M., Lee, E.-K., Swayne, D. F., \& Wickham, H. (2009a). Statistical inference for exploratory data analysis and model diagnostics. \emph{Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences}, \emph{367}(1906), 4361--4383. http://doi.org/\href{https://doi.org/10.1098/rsta.2009.0120}{10.1098/rsta.2009.0120}
+Buja, A., Cook, D., Hofmann, H., Lawrence, M., Lee, E.-K., Swayne, D. F., \& Wickham, H. (2009a). Statistical inference for exploratory data analysis and model diagnostics. \emph{Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences}, \emph{367}(1906), 4361--4383.
 
 \leavevmode\vadjust pre{\hypertarget{ref-nullabor}{}}%
-Buja, A., Cook, D., Hofmann, H., Lawrence, M., Lee, E., Swayne, D. F., \& Wickham, H. (2009b). Statistical inference for exploratory data analysis and model diagnostics. \emph{Royal Society Philosophical Transactions A}, \emph{367}(1906), 4361--4383. Retrieved from \url{http://rsta.royalsocietypublishing.org/content/367/1906/4361.article-info}
+Buja, A., Cook, D., Hofmann, H., Lawrence, M., Lee, E.-K., Swayne, D. F., \& Wickham, H. (2009b). Statistical inference for exploratory data analysis and model diagnostics. \emph{Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences}, \emph{367}(1906), 4361--4383.
 
 \leavevmode\vadjust pre{\hypertarget{ref-burnmurdoch_2020}{}}%
 Burn-Murdoch, J., Nevitt, C., Tilford, C., Rininsland, A., Kao, J. S., Elliott, O., \ldots{} Stabe, M. (2020). Coronavirus tracked: Has the epidemic peaked near you? \emph{Coronavirus chart: see how your country compares}. Financial Times. Retrieved from \url{https://ig.ft.com/coronavirus-chart/?areas=eur}
@@ -2161,10 +2161,10 @@ Carpenter, P. A., \& Shah, P. (1998). A model of the perceptual and conceptual p
 Ciccione, L., \& Dehaene, S. (2021). Can humans perform mental regression on a graph? Accuracy and bias in the perception of scatterplots. \emph{Cognitive Psychology}, \emph{128}, 101406.
 
 \leavevmode\vadjust pre{\hypertarget{ref-cleveland_graphical_1984}{}}%
-Cleveland, W. S., \& McGill, R. (1984). Graphical {Perception}: {Theory}, {Experimentation}, and {Application} to the {Development} of {Graphical} {Methods}. Retrieved from \url{http://euclid.psych.yorku.ca/www/psy6135/papers/ClevelandMcGill1984.pdf}
+Cleveland, W. S., \& McGill, R. (1984). Graphical perception: Theory, experimentation, and application to the development of graphical methods. \emph{Journal of the American statistical association}. Taylor \& Francis.
 
 \leavevmode\vadjust pre{\hypertarget{ref-cleveland_graphical_1985}{}}%
-Cleveland, W. S., \& McGill, R. (1985). Graphical {Perception} and {Graphical} {Methods} for {Analyzing} {Scientific} {Data}. \emph{Science, New Series}, \emph{229}(4716), 828--833. Retrieved from \url{http://www.jstor.org/stable/1695272}
+Cleveland, W. S., \& McGill, R. (1985). Graphical perception and graphical methods for analyzing scientific data. \emph{Science}, \emph{229}(4716), 828--833.
 
 \leavevmode\vadjust pre{\hypertarget{ref-croxton1932graphic}{}}%
 Croxton, F. E., \& Stein, H. (1932). Graphic comparisons by bars, squares, circles, and cubes. \emph{Journal of the American Statistical Association}, \emph{27}(177), 54--60.
@@ -2214,9 +2214,6 @@ Glazer, N. (2011). Challenges with graph interpretation: A review of the literat
 \leavevmode\vadjust pre{\hypertarget{ref-godlonton2018anchoring}{}}%
 Godlonton, S., Hernandez, M. A., \& Murphy, M. (2018). Anchoring bias in recall data: Evidence from central america. \emph{American Journal of Agricultural Economics}, \emph{100}(2), 479--501.
 
-\leavevmode\vadjust pre{\hypertarget{ref-goldstein_sensation_2017}{}}%
-Goldstein, E. B., \& Brockmole, J. R. (2017). Sensation and {Perception}, 480.
-
 \leavevmode\vadjust pre{\hypertarget{ref-gordon_statistician_2015}{}}%
 Gordon, I., \& Finch, S. (2015). Statistician heal thyself: Have we lost the plot? \emph{Journal of Computational and Graphical Statistics}, \emph{24}(4), 1210--1229.
 
@@ -2227,13 +2224,13 @@ Graesser, A. C., Swamer, S. S., Baggett, W. B., \& Sell, M. A. (2014). New model
 Green, T. M., \& Fisher, B. (2009). The personal equation of complex individual cognition during visual interface interaction. In \emph{Workshop on human-computer interaction and visualization} (pp. 38--57). Springer.
 
 \leavevmode\vadjust pre{\hypertarget{ref-haemer_presentation_1949}{}}%
-Haemer, K. W., \& Kelley, T. L. (1949). Presentation {Problems}: {Suiting} the {Chart} to the {Audience}: {Common} {Graphic} {Devices} {Classified} {According} to {Ease} of {Reading}. \emph{The American Statistician}, \emph{3}(5), 11--11. http://doi.org/\href{https://doi.org/10.1080/00031305.1949.10501608}{10.1080/00031305.1949.10501608}
+Haemer, K. W., \& Kelley, T. L. (1949). Presentation problems: Suiting the chart to the audience: Common graphic devices classified according to ease of reading. \emph{The American Statistician}, \emph{3}(5), 11--11.
 
 \leavevmode\vadjust pre{\hypertarget{ref-heckler_student_2013}{}}%
-Heckler, A. F., Mikula, B., \& Rosenblatt, R. (2013). Student accuracy in reading logarithmic plots: {The} problem and how to fix it. In \emph{2013 {IEEE} {Frontiers} in {Education} {Conference} ({FIE})} (pp. 1066--1071). http://doi.org/\href{https://doi.org/10.1109/FIE.2013.6684990}{10.1109/FIE.2013.6684990}
+Heckler, A. F., Mikula, B., \& Rosenblatt, R. (2013). Student accuracy in reading logarithmic plots: The problem and how to fix it. In \emph{2013 IEEE frontiers in education conference (FIE)} (pp. 1066--1071). IEEE.
 
 \leavevmode\vadjust pre{\hypertarget{ref-hofmann_graphical_2012}{}}%
-Hofmann, H., Follett, L., Majumder, M., \& Cook, D. (2012). Graphical {Tests} for {Power} {Comparison} of {Competing} {Designs}. \emph{IEEE Transactions on Visualization and Computer Graphics}, \emph{18}(12), 2441--2448. http://doi.org/\href{https://doi.org/10.1109/TVCG.2012.230}{10.1109/TVCG.2012.230}
+Hofmann, H., Follett, L., Majumder, M., \& Cook, D. (2012). Graphical tests for power comparison of competing designs. \emph{IEEE Transactions on Visualization and Computer Graphics}, \emph{18}(12), 2441--2448.
 
 \leavevmode\vadjust pre{\hypertarget{ref-hogan2003quantitative}{}}%
 Hogan, T. P., \& Brezinski, K. L. (2003). Quantitative estimation: One, two, or three abilities? \emph{Mathematical Thinking and Learning}, \emph{5}(4), 259--280.
@@ -2245,7 +2242,7 @@ Jerne, N. K., \& Wood, E. C. (1949). The validity and meaning of the results of 
 Jolliffe, F. R. (1991). Assessment of the understanding of statistical concepts. In \emph{Proceedings of the third international conference on teaching statistics} (Vol. 1, pp. 461--466).
 
 \leavevmode\vadjust pre{\hypertarget{ref-jones_polynomial_1977}{}}%
-Jones, G. V. (1977). Polynomial perception of exponential growth. \emph{Perception \& Psychophysics}, \emph{21}(2), 197--198. http://doi.org/\href{https://doi.org/10.3758/BF03198726}{10.3758/BF03198726}
+Jones, G. V. (1977). Polynomial perception of exponential growth.
 
 \leavevmode\vadjust pre{\hypertarget{ref-jones2012students}{}}%
 Jones, M. G., Gardner, G. E., Taylor, A. R., Forrester, J. H., \& Andre, T. (2012). Students' accuracy of measurement estimation: Context, units, and logical thinking. \emph{School Science and Mathematics}, \emph{112}(3), 171--178.
@@ -2266,13 +2263,13 @@ Leinhardt, G., Zaslavsky, O., \& Stein, M. K. (1990). Functions, graphs, and gra
 Lenth, R. V. (2021). \emph{Emmeans: Estimated marginal means, aka least-squares means}. Retrieved from \url{https://CRAN.R-project.org/package=emmeans}
 
 \leavevmode\vadjust pre{\hypertarget{ref-lewandowsky_perception_1989}{}}%
-Lewandowsky, S., \& Spence, I. (1989). The {Perception} of {Statistical} {Graphs}. \emph{Sociological Methods \& Research}, \emph{18}(2-3), 200--242. http://doi.org/\href{https://doi.org/10.1177/0049124189018002002}{10.1177/0049124189018002002}
+Lewandowsky, S., \& Spence, I. (1989). The perception of statistical graphs. \emph{Sociological Methods \& Research}, \emph{18}(2-3), 200--242.
 
 \leavevmode\vadjust pre{\hypertarget{ref-loy_variations_2016}{}}%
-Loy, A., Follett, L., \& Hofmann, H. (2016). Variations of \emph{q} -- \emph{q} {Plots}: {The} {Power} of {Our} {Eyes}! \emph{The American Statistician}, \emph{70}(2), 202--214. http://doi.org/\href{https://doi.org/10.1080/00031305.2015.1077728}{10.1080/00031305.2015.1077728}
+Loy, A., Follett, L., \& Hofmann, H. (2016). Variations of q--q plots: The power of our eyes! \emph{The American Statistician}, \emph{70}(2), 202--214.
 
 \leavevmode\vadjust pre{\hypertarget{ref-loy_model_2017}{}}%
-Loy, A., Hofmann, H., \& Cook, D. (2017). Model {Choice} and {Diagnostics} for {Linear} {Mixed}-{Effects} {Models} {Using} {Statistics} on {Street} {Corners}. \emph{Journal of Computational and Graphical Statistics}, \emph{26}(3), 478--492. http://doi.org/\href{https://doi.org/10.1080/10618600.2017.1330207}{10.1080/10618600.2017.1330207}
+Loy, A., Hofmann, H., \& Cook, D. (2017). Model choice and diagnostics for linear mixed-effects models using statistics on street corners. \emph{Journal of Computational and Graphical Statistics}, \emph{26}(3), 478--492.
 
 \leavevmode\vadjust pre{\hypertarget{ref-r2d3}{}}%
 Luraschi, J., \& Allaire, J. (2018). \emph{r2d3: Interface to 'D3' visualizations}. Retrieved from \url{https://CRAN.R-project.org/package=r2d3}
@@ -2281,16 +2278,16 @@ Luraschi, J., \& Allaire, J. (2018). \emph{r2d3: Interface to 'D3' visualization
 Macdonald-Ross, M. (1977). How numbers are shown. \emph{AV Communication Review}, \emph{25}(4), 359--409.
 
 \leavevmode\vadjust pre{\hypertarget{ref-mackinnon_feedback_1991}{}}%
-Mackinnon, A. J., \& Wearing, A. J. (1991). Feedback and the forecasting of exponential change. \emph{Acta Psychologica}, \emph{76}(2), 177--191. http://doi.org/\href{https://doi.org/10.1016/0001-6918(91)90045-2}{10.1016/0001-6918(91)90045-2}
+MacKinnon, A. J., \& Wearing, A. J. (1991). Feedback and the forecasting of exponential change. \emph{Acta Psychologica}, \emph{76}(2), 177--191.
 
 \leavevmode\vadjust pre{\hypertarget{ref-majumder_validation_2013}{}}%
-Majumder, M., Hofmann, H., \& Cook, D. (2013). Validation of {Visual} {Statistical} {Inference}, {Applied} to {Linear} {Models}. \emph{Journal of the American Statistical Association}, \emph{108}(503), 942--956. http://doi.org/\href{https://doi.org/10.1080/01621459.2013.808157}{10.1080/01621459.2013.808157}
+Majumder, M., Hofmann, H., \& Cook, D. (2013). Validation of visual statistical inference, applied to linear models. \emph{Journal of the American Statistical Association}, \emph{108}(503), 942--956.
 
 \leavevmode\vadjust pre{\hypertarget{ref-star_wars2}{}}%
-Marquand, R. (Director). (1983). Star wars: Episode VI - return of the jedi. 20th Century Fox: Lucasfilm Ltd.
+Marquand, R. (Director). (1983). \emph{Star wars: Episode VI - return of the jedi}. 20th Century Fox: Lucasfilm Ltd.
 
 \leavevmode\vadjust pre{\hypertarget{ref-menge_logarithmic_2018}{}}%
-Menge, D. N. L., MacPherson, A. C., Bytnerowicz, T. A., Quebbeman, A. W., Schwartz, N. B., Taylor, B. N., \& Wolf, A. A. (2018). Logarithmic scales in ecological data presentation may cause misinterpretation. \emph{Nature Ecology \& Evolution}, \emph{2}(9), 1393--1402. http://doi.org/\href{https://doi.org/10.1038/s41559-018-0610-7}{10.1038/s41559-018-0610-7}
+Menge, D. N., MacPherson, A. C., Bytnerowicz, T. A., Quebbeman, A. W., Schwartz, N. B., Taylor, B. N., \& Wolf, A. A. (2018). Logarithmic scales in ecological data presentation may cause misinterpretation. \emph{Nature Ecology \& Evolution}, \emph{2}(9), 1393--1402.
 
 \leavevmode\vadjust pre{\hypertarget{ref-mosteller_eye_1981}{}}%
 Mosteller, F., Siegel, A. F., Trapido, E., \& Youtz, C. (1981). Eye fitting straight lines. \emph{The American Statistician}, \emph{35}(3), 150--152.
@@ -2311,7 +2308,7 @@ Peterson, L. V., \& Schramm, W. (1954). How accurately are different kinds of gr
 Risk levels. (2021, March). \emph{Global Epidemics}. Brown School of Public Health. Retrieved from \url{https://globalepidemics.org/key-metrics-for-covid-suppression/}
 
 \leavevmode\vadjust pre{\hypertarget{ref-romano_scale_2020}{}}%
-Romano, A., Sotis, C., Dominioni, G., \& Guidi, S. (2020). \emph{The {Scale} of {COVID}-19 {Graphs} {Affects} {Understanding}, {Attitudes}, and {Policy} {Preferences}} (\{SSRN\} \{Scholarly\} \{Paper\} No. ID 3588511). Rochester, NY: Social Science Research Network. Retrieved from \url{https://papers.ssrn.com/abstract=3588511}
+Romano, A., Sotis, C., Dominioni, G., \& Guidi, S. (2020). The scale of COVID-19 graphs affects understanding, attitudes, and policy preferences. \emph{Health Economics}, \emph{29}(11), 1482--1494.
 
 \leavevmode\vadjust pre{\hypertarget{ref-rost_2020}{}}%
 Rost, L. C. (2020, December). You've informed the public with visualizations about the coronavirus. Thank you. \emph{Datawrapper Blog}. Retrieved from \url{https://blog.datawrapper.de/coronavirus-data-visualization-effect-datawrapper/}
@@ -2329,13 +2326,13 @@ Schuetzenmeister, A., \& Model, F. (2021). \emph{Mcr: Method comparison regressi
 Shah, P., Mayer, R. E., \& Hegarty, M. (1999). Graphs as aids to knowledge construction: Signaling techniques for guiding the process of graph comprehension. \emph{Journal of Educational Psychology}, \emph{91}(4), 690.
 
 \leavevmode\vadjust pre{\hypertarget{ref-siegler_numerical_2017}{}}%
-Siegler, R. S., \& Braithwaite, D. W. (2017). Numerical {Development}. \emph{Annual Review of Psychology}, \emph{68}(1), 187--213. http://doi.org/\href{https://doi.org/10.1146/annurev-psych-010416-044101}{10.1146/annurev-psych-010416-044101}
+Siegler, R. S., \& Braithwaite, D. W. (2017). Numerical development. \emph{Annual Review of Psychology}, \emph{68}, 187--213.
 
 \leavevmode\vadjust pre{\hypertarget{ref-tidytext_pkg}{}}%
-Silge, J., \& Robinson, D. (2016). Tidytext: Text mining and analysis using tidy data principles in r. \emph{JOSS}, \emph{1}(3). http://doi.org/\href{https://doi.org/10.21105/joss.00037}{10.21105/joss.00037}
+Silge, J., \& Robinson, D. (2016). Tidytext: Text mining and analysis using tidy data principles in r. \emph{Journal of Open Source Software}, \emph{1}(3), 37.
 
 \leavevmode\vadjust pre{\hypertarget{ref-spence_visual_1990}{}}%
-Spence, I. (1990). Visual psychophysics of simple graphical elements. \emph{Journal of Experimental Psychology: Human Perception and Performance}, \emph{16}(4), 683--692. http://doi.org/\href{https://doi.org/10.1037/0096-1523.16.4.683}{10.1037/0096-1523.16.4.683}
+Spence, I. (1990). Visual psychophysics of simple graphical elements. \emph{Journal of Experimental Psychology: Human Perception and Performance}, \emph{16}(4), 683.
 
 \leavevmode\vadjust pre{\hypertarget{ref-star_trek}{}}%
 \emph{Star trek: The original series. "The trouble with tribbles". Season 2. Episode 15.} (1967). Broadcast on NBC.
@@ -2359,16 +2356,16 @@ Tol. (2021). Bitmap VS SVG. Retrieved from \url{https://commons.wikimedia.org/wi
 Tory, M., \& Moller, T. (2004). Human factors in visualization research. \emph{IEEE Transactions on Visualization and Computer Graphics}, \emph{10}(1), 72--84.
 
 \leavevmode\vadjust pre{\hypertarget{ref-vanderplas_testing_2020}{}}%
-Vanderplas, S., Cook, D., \& Hofmann, H. (2020). Testing {Statistical} {Charts}: {What} {Makes} a {Good} {Graph}? \emph{Annual Review of Statistics and Its Application}, \emph{7}(1), 61--88. http://doi.org/\href{https://doi.org/10.1146/annurev-statistics-031219-041252}{10.1146/annurev-statistics-031219-041252}
+Vanderplas, S., Cook, D., \& Hofmann, H. (2020). Testing statistical charts: What makes a good graph? \emph{Annual Review of Statistics and Its Application}, \emph{7}, 61--88.
 
 \leavevmode\vadjust pre{\hypertarget{ref-vanderplas2015spatial}{}}%
 VanderPlas, S., \& Hofmann, H. (2015). Spatial reasoning and data displays. \emph{IEEE Transactions on Visualization and Computer Graphics}, \emph{22}(1), 459--468.
 
 \leavevmode\vadjust pre{\hypertarget{ref-vanderplas_clusters_2017}{}}%
-VanderPlas, S., \& Hofmann, H. (2017). Clusters {Beat} {Trend}!? {Testing} {Feature} {Hierarchy} in {Statistical} {Graphics}. \emph{Journal of Computational and Graphical Statistics}, \emph{26}(2), 231--242. http://doi.org/\href{https://doi.org/10.1080/10618600.2016.1209116}{10.1080/10618600.2016.1209116}
+VanderPlas, S., \& Hofmann, H. (2017). Clusters beat trend!? Testing feature hierarchy in statistical graphics. \emph{Journal of Computational and Graphical Statistics}, \emph{26}(2), 231--242.
 
 \leavevmode\vadjust pre{\hypertarget{ref-varshney_why_2013}{}}%
-Varshney, L. R., \& Sun, J. Z. (2013). Why do we perceive logarithmically? \emph{Significance}, \emph{10}(1), 28--31. http://doi.org/\href{https://doi.org/10.1111/j.1740-9713.2013.00636.x}{10.1111/j.1740-9713.2013.00636.x}
+Varshney, L. R., \& Sun, J. Z. (2013). Why do we perceive logarithmically? \emph{Significance}, \emph{10}(1), 28--31.
 
 \leavevmode\vadjust pre{\hypertarget{ref-vessey1991cognitive}{}}%
 Vessey, I. (1991). Cognitive fit: A theory-based analysis of the graphs versus tables literature. \emph{Decision Sciences}, \emph{22}(2), 219--240.
@@ -2380,19 +2377,16 @@ Von Bergmann, J. (2021, March). Xkcd\_exponential: Public health vs scientists. 
 Waddell, W. J. (2005). Comparisons of thresholds for carcinogenicity on linear and logarithmic dosage scales. \emph{Human \& Experimental Toxicology}, \emph{24}(6), 325--332.
 
 \leavevmode\vadjust pre{\hypertarget{ref-wagenaar_misperception_1975}{}}%
-Wagenaar, W. A., \& Sagaria, S. D. (1975). Misperception of exponential growth. \emph{Perception \& Psychophysics}, \emph{18}(6), 416--422. http://doi.org/\href{https://doi.org/10.3758/BF03204114}{10.3758/BF03204114}
+Wagenaar, W. A., \& Sagaria, S. D. (1975). Misperception of exponential growth. \emph{Perception \& Psychophysics}, \emph{18}(6), 416--422.
 
 \leavevmode\vadjust pre{\hypertarget{ref-ggplot2}{}}%
-Wickham, Hadley. (2016). \emph{ggplot2: Elegant graphics for data analysis}. springer.
-
-\leavevmode\vadjust pre{\hypertarget{ref-wickham_graphical_2010}{}}%
-Wickham, H., Cook, D., Hofmann, H., \& Buja, A. (2010). Graphical inference for infovis. \emph{IEEE Transactions on Visualization and Computer Graphics}, \emph{16}(6), 973--979. http://doi.org/\href{https://doi.org/10.1109/TVCG.2010.161}{10.1109/TVCG.2010.161}
+Wickham, H. (2016). \emph{ggplot2: Elegant graphics for data analysis}. springer.
 
 \leavevmode\vadjust pre{\hypertarget{ref-wickham2016r}{}}%
-Wickham, Hadley, \& Grolemund, G. (2016). \emph{R for data science: Import, tidy, transform, visualize, and model data}. " O'Reilly Media, Inc.".
+Wickham, H., \& Grolemund, G. (2016). \emph{R for data science: Import, tidy, transform, visualize, and model data}. " O'Reilly Media, Inc.".
 
-\leavevmode\vadjust pre{\hypertarget{ref-wilkinson2012grammar}{}}%
-Wilkinson, L. (2012). The grammar of graphics. In \emph{Handbook of computational statistics} (pp. 375--414). Springer.
+\leavevmode\vadjust pre{\hypertarget{ref-wilkinson2013grammar}{}}%
+Wilkinson, L. (2013). \emph{The grammar of graphics}. Springer Science \& Business Media.
 
 \leavevmode\vadjust pre{\hypertarget{ref-wood1968objectives}{}}%
 Wood, R. (1968). Objectives in the teaching of mathematics. \emph{Educational Research}, \emph{10}(2), 83--98.

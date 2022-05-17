@@ -53,7 +53,7 @@ knitr::opts_chunk$set(
   tidy = T, tidy.opts=list(width.cutoff=45),
   fig.pos = "tbp",
   out.extra = "",
-  cache = TRUE,
+  cache = FALSE,
   dev = "png"
 )
 ```
@@ -146,7 +146,7 @@ Selecting from an extensive list of styles and choices of graphics in order to e
 A consistent concern is the lack of theory of graphics available to build on; better theory should result in better graphics. 
 Creators of graphics need an established set of concepts and terminology to build their graphics from so they can actively choose which of many possible graphics to draw in order to ensure their charts are effective at communicating the intended result. 
 
-Many efforts have been made to provide guidelines for graphical designs including Wilkinson's Grammar of Graphics [@wilkinson2012grammar].
+Many efforts have been made to provide guidelines for graphical designs including Wilkinson's Grammar of Graphics [@wilkinson2013grammar].
 The grammar of graphics serves as the fundamental framework for data visualization with the notion that graphics are built from the ground up by specifying exactly how to create a particular graph from a given data set.
 Visual representations are constructed through the use of “tidy data” which is characterized as a data set in which each variable is in its own column, each observation is in its own row, and each value is in its own cell [@wickham2016r].
 Graphics are viewed as a mapping from variables in a data set (or statistics computed from the data) to visual attributes such as the axes, colors, shapes, or facets on the canvas in which the chart is displayed.
