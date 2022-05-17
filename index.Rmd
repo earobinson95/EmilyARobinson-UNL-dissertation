@@ -53,8 +53,7 @@ knitr::opts_chunk$set(
   tidy = T, tidy.opts=list(width.cutoff=45),
   fig.pos = "tbp",
   out.extra = "",
-  cache = FALSE,
-  dev = "png"
+  cache = FALSE
 )
 ```
 
@@ -197,7 +196,7 @@ Cognitive psychologists and statisticians made progress by conducting experiment
 @cleveland_graphical_1984 provides a basis for perceptual judgment, still utilized today, by examining six basic plot objects: position along a common scale, position along nonaligned scales, length, angle, slope, and area.
 In @cleveland_graphical_1985, these plot objects are ordered by accuracy performed through graphical-perception tasks; for example, comparisons of angles resulted in more difficult judgments than between lengths of lines. 
 @shah1999graphs established the notion that redesigning graphs can result in the improvement of the viewer's interpretation of the data.
-For example, the use of gestalt principles [@goldstein_sensation_2017] such as proximity, similarity, and good continuation can help minimize the inferential processes and maximize the pattern association processes required to interpret relevant information.
+For example, the use of gestalt principles [@goldstein2021sensation] such as proximity, similarity, and good continuation can help minimize the inferential processes and maximize the pattern association processes required to interpret relevant information.
 In [Section 1.5.2](#underestimation) we see how the hierarchy of accuracy in plot objects presented in @cleveland_graphical_1985 can explain biases in our interpretation and use of graphics.
 
 During the $\text{21}^{\text{st}}$ century, there have been advancements in the methodology used to investigate the effectiveness of statistical charts [@majumder_validation_2013]. 

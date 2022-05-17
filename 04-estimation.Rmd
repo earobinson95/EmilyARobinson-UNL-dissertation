@@ -19,6 +19,12 @@ library(tm)
 library(tidytext)
 library(corpus)
 library(reshape2)
+
+# ragg_png = function(..., res = 192) {
+#   ragg::agg_png(..., res = res, units = "in")
+# }
+
+# dev = "ragg_png", fig.ext = "png"
 ```
 
 ```{r estimation-data, message=FALSE, warning=FALSE, echo = F, cache = F}
@@ -637,7 +643,7 @@ qi1_data %>%
 
 <!-- \svp{Describe better. Also consider using alpha with rug plots because at the moment I can't see why the linear scale density is the way it is - all of the points seem to be above or below it with very few between true and closest point lines in blue...} -->
 
-```{r qi1-density-1, fig.scap = "Intermediate Q1 density (data set 1)", fig.cap = "Density of the participant estimates for the difference in population between years 20 and 40 for data set 1. Colors are associated to scale - linear (blue) and log (orange) - and vertical lines indicate the true difference based on the underlying model equation (black solid) and closest point difference based on the simulated data set (black dashed). A jittered rug plot along the $x$-axis shows where participant estimates were made. The plot shows an improvment in accuracy when estimates are made on the linear scale as opposed to the log scale as indicated by the linear peak at the closest point.", fig.width = 9, fig.height = 9, out.width = "100%", message=FALSE, warning=FALSE, dev = "png"}
+```{r qi1-density-1, fig.scap = "Intermediate Q1 density (data set 1)", fig.cap = "Density of the participant estimates for the difference in population between years 20 and 40 for data set 1. Colors are associated to scale - linear (blue) and log (orange) - and vertical lines indicate the true difference based on the underlying model equation (black solid) and closest point difference based on the simulated data set (black dashed). A jittered rug plot along the $x$-axis shows where participant estimates were made. The plot shows an improvment in accuracy when estimates are made on the linear scale as opposed to the log scale as indicated by the linear peak at the closest point.", fig.width = 9, fig.height = 9, out.width = "100%", message=FALSE, warning=FALSE}
 
 # DATA SET 1
 vline1 = c(14750)
@@ -664,7 +670,7 @@ qi1_density_1b <- ggplot_gtable(qi1_density_1b)
 grid::grid.draw(qi1_density_1b)
 ```
 
-```{r qi1-density-2, fig.scap = "Intermediate Q1 density (data set 2)", fig.cap = "Density of the participant estimates for the difference in population between years 20 and 40 for data set 2. Colors are associated to scale - linear (blue) and log (orange) - and vertical lines indicate the true difference based on the underlying model equation (black solid) and closest point difference based on the simulated data set (black dashed). A jittered rug plot along the $x$-axis shows where participant estimates were made. The plot shows an improvment in accuracy when estimates are made on the linear scale as opposed to the log scale as indicated by the linear peaks at the true difference and closest point. The two peaks illustrate how participants were reading reading the data points and not only the underlying trend.", fig.width = 9, fig.height = 9, out.width = "100%", message=FALSE, warning=FALSE, dev = "png"}
+```{r qi1-density-2, fig.scap = "Intermediate Q1 density (data set 2)", fig.cap = "Density of the participant estimates for the difference in population between years 20 and 40 for data set 2. Colors are associated to scale - linear (blue) and log (orange) - and vertical lines indicate the true difference based on the underlying model equation (black solid) and closest point difference based on the simulated data set (black dashed). A jittered rug plot along the $x$-axis shows where participant estimates were made. The plot shows an improvment in accuracy when estimates are made on the linear scale as opposed to the log scale as indicated by the linear peaks at the true difference and closest point. The two peaks illustrate how participants were reading reading the data points and not only the underlying trend.", fig.width = 9, fig.height = 9, out.width = "100%", message=FALSE, warning=FALSE}
 
 # DATA SET 2
 qi1_density_2a <- densityPlot(data = qi1_data, datasetID = "dataset2", "response", xlabel = "Estimated Year", x_limits = c(0,50000), zoom = T, scalesx = F, zoom_limits = c(10000,30000), gridlines = F, rugjitter = 100) +
