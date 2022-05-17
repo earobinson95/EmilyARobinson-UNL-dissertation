@@ -2,15 +2,18 @@
 
 This research evaluated the use of log scales to display exponentially increasing data from three different angles and levels of complexity: perception, prediction, and estimation.
 Each study provided us insight into the advantages and disadvantages of displaying exponentially increasing data on a log scale and in what context each choice of scale might be more appropriate.
-The first study laid the foundation for future studies by testing participants ability to perceptually distinguish between lines and curves.
-This study utilized statistical lineups and did not require participants to understand exponential growth, identify log scales, or have any mathematical training; instead, participants cognitive load relied on pattern recognition.
-An analysis on the accuracy of participants identification of the target plot provides us with insight to the perceptual implications of the scale.
-Results from the lineup analysis indicated the perceptual difference resulted from the contextual appearance of the trend.
-The choice of scale changes this contextual appearance leading to slight perceptual advantages for both scales depending on the curvatures being compared.
+
+The first study laid the foundation for future studies by testing participants ability to perceptually distinguish between \svp{different rates of exponential growth on a linear and log scale}.
+This study utilized statistical lineups and did not require participants to understand exponential growth, identify log scales, or have any mathematical training; instead, \svp{any findings rely on participants ability to perceive differences in curvature and slope.}
+An analysis on the accuracy of participants identification of the target plot provides us with insight to the perceptual implications of the \svp{choice of} scale.
+Results from the lineup analysis indicate \svp{that} the perceptual difference results from the contextual appearance of the trend.
+The choice of scale changes this contextual appearance leading to slight perceptual advantages for both scales depending on the curvatures \svp{of the trend lines} being compared.
 In general, when there were large curvature differences, the choice of scale had no impact and perceptual differences were easily identified on both scales.
 However, when minor differences in curvature occurred, there was a perceptual advantage for the scale which resulted in identified the trend which contextually appeared as a curve from the trends that appeared as a line.
 This revealed an advantage for the log scale when differences were subtle with an exception of the the linear scale leading to a perceptual advantage for identifying a trend with more curvature from one which appears to be more linear - contextually appears opposite on the log scale to identify a trend that contextually appears linear from ones that appear curved.
-The second study required interpretative processes to extend the pattern recognition and construct meaning.
+
+
+The second study required interpretative processes to extend the pattern recognition and construct meaning.\svp{Don't rehash what you did, focus on discussing what it means. First, you validated a new tool, and then you used that new tool to show that we suck at making exponential predictions (but we suck less on a log scale).}
 'You Draw It' interactive graphics were adapted from the New York Times and used to test the ability to make forecast predictions for exponentially increasing trends on both scales by drawing a visually fit line with a computer mouse.
 This study was supported by a sub-study which validated 'You Draw It' as a tool and method for testing statistical graphics and introduced an appropriate statistical analysis method using generalized additive mixed models for comparing visually fitted trend lines to statistical regression results.
 The results from the analysis related to visually fitted predictions for exponential trends showed a clear underestimation of forecasting trends with high exponential growth rates when participants were asked to make predictions on the linear scale.
@@ -18,25 +21,28 @@ Improvement in forecasts were made when participants were asked to make predicti
 These improvements can be explained by the change in contextual appearance of the data between the two scales; participants visually extended a linear trend on the log scale and an exponential trend on the linear scale.
 The graphical tasks from the first two studies were conducted independent of scenarios or contextual applications of log scales; instead, they focused how our visual system perceives and identifies patterns in exponential growth.
 This did not require participants to understand or read log scales.
+
+
 In order to understand the cognitive implications of displaying exponentially increasing data on a log scale, the third study evaluated graph comprehension as it relates to the contextual scenario of the data shown.
-This required participants to use integrative processes to relate the meanings of the graphic to the contextual scenario as inferred from labels and titles.
+This required participants to \svp{integrate information from the scenario, chart title, axes, and graphical forms}.
 In the study, participants were asked to quantitatively transform a graph of exponentially increasing data and extend their estimates to compare two points.
 We evaluated graph comprehension as it relates to two contextual scenarios by asking participants a series of questions based on the elementary (literally reading the data) and intermediate (reading between the data) level questions.
-The results of this study helped inform and aid in understanding the cognitive implications of displaying exponentially increasing data on a log scale.
+The results of this study inform \svp{our understanding of} the cognitive implications of displaying exponentially increasing data on a log scale.
+
 Overall, our results suggested that log logic is difficult and that we often misinterpret and miscalculate multiplicative reasoning.
 However, further investigation is necessary to determine if the misunderstanding occurs due to the ambiguity of language or scale. 
-By collecting information from the calculation and scratchpad inputs, we were able to better understand the strategies used to make estimations.
+By collecting information from the calculation and scratchpad inputs, we were able to better understand the strategies used \svp{in visual estimation}.
 Participants often made first level estimates when comparing two points rather than relying on their spatial awareness between grid lines on the log scale.
-They were resistant to make estimates between grid lines (anchored to grid lines) and tended to inaccurately equate spatial distance to numerical difference on the log scale, leading to a sacrifice in estimation accuracy; this resistance and misinterpretation leads to greater consequences for larger magnitudes when distances between grid lines is large.
+They were resistant to make estimates between grid lines (anchored to grid lines) and tended to inaccurately equate spatial distance to numerical difference on the log scale, sacrificing estimation accuracy \svp{for cognitive efficiency}; this resistance and misinterpretation leads to greater consequences for larger magnitudes when distances between grid lines is large.
 Further testing is required to evaluate this impact on log scales of different bases, such as base 10 where this spatial distance has a much larger effect than on base 2.
 Extension studies could also provide information about the impact including minor grid lines has on anchoring; for example, 10 visually unequal spaced minor grid lines (equal numerical difference) could be added to a log base 10 scale to potentially aid in participant estimation.
-Discrepancy in estimates between the two data sets implies a large portion of participants were reading the actual simulated data points as opposed to basing estimates on the underlying visual trend of the data.
+Discrepancy in estimates between the two data sets implies a large portion of participants were reading the actual simulated data points as opposed to basing estimates on the underlying visual trend of the data. \svp{$\leftarrow$ This seems disconnected from the rest of the paragraph}
 Overall, estimation accuracy for small magnitudes was improved by the use of the log scale, but sacrifices in accuracy on the log scale became apparent as magnitudes increased leading to advantages on the linear scale.
 
 The studies conducted in this research relied on graphical tasks of varying complexity in order to help us understand the perceptual and cognitive advantages and disadvantages of displaying exponentially increasing data on the log scale.
 Our results showed there are perceptual advantages of the use of log scales due to the change in contextual appearance; however, our understanding of log logic is flawed when translating the information into context.
 We recommend consideration of both user needs and graph specific tasks when presenting data on the log scale; caution should be taken when interpretation of large magnitudes is required, but advantages may appear when it is necessary to visually identify and interpret small magnitudes on the chart.
-In addition this research, further investigation is necessary to expand the use of log scales to data which does not follow an exponential trend - such as polynomial or sinusoidal curves.
-It is also necessary to evaluate the use of transforming the implications of transforming or displaying the $x$-axis on a log scale as we focused on the transformation of the $y$-axis.
+In addition this research, further investigation is necessary to expand the use of log scales to data which does not follow an exponential trend, \svp{but where log scales are otherwise appropriate} - such as polynomial curves \svp{spanning multiple orders of magnitude}.
+It is also necessary to evaluate the implications of transforming or displaying the $x$-axis on a log scale,  as \svp{this work} focused on the transformation of the $y$-axis.
 Follow-up studies for this research could provide further insight into the strategies of estimation by providing users the ability to interact with the graph with visual aids such as the arrows shown in sketches from [Chapter 4](#estimation) and how we make decisions based on data displayed on a log scale in order to evaluate the effect of scale on risk adversity.
 This research stands as a model for conducting an extensive series of graphical tasks on the same type of data and plot in order to gain a comprehensive understanding of both the perceptual and cognitive implications of the design choices.
