@@ -8,7 +8,7 @@ library(readr)
 library(knitr)
 ```
 
-```{r eyefitting-data, message=FALSE, warning=FALSE, echo = F}
+```{r eyefitting-data, message=FALSE, warning=FALSE, echo = F, cache = F}
 eyefitting_model_data <- read_csv("data/02b-eyefitting/eyefitting-model-data.csv") %>%
   dplyr::rename(`Parameter Choice` = parm_id)
 
