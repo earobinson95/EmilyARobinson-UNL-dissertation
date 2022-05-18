@@ -142,7 +142,7 @@ estimation_questions %>%
               values_from = "qtext") %>%
   mutate(q_id = c("Open Ended", "Elementary Q1", "Elementary Q2", "Intermediate Q1", "Intermediate Q2", "Intermediate Q3")) %>%
   kableExtra::kable("latex", booktabs = T, col.names = c("Question type", "Tribble scenario", "Ewok scenario"),
-               caption = "Estimation Questions")  %>%
+               caption = "Estimation questions")  %>%
   kableExtra::column_spec(2:3, width = "10em")
 ```
 

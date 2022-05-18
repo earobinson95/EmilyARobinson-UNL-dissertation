@@ -409,35 +409,35 @@ function setup_scales(state){
 The figures below illustrate the 8 interactive plots used to test exponential prediction.
 Two data sets were simulated with low and high exponential growth rates and shown four times each by truncating the points shown at both 50\% and 75\% of the domain as well as on both the log and linear scales following a 2 x 2 x 2 factorial treatment design. 
 
-```{r low-10-linear, fig.height = 4, fig.width = 4, out.width = "65%", fig.cap = "Exponential Prediction: low growth rate, points truncated at 50\\%, linear scale"}
+```{r low-10-linear, fig.height = 4, fig.width = 4, out.width = "65%", fig.scap = "Exponential prediction plot (low; 50\\%; linear)", fig.cap = "Exponential Prediction: low growth rate, points truncated at 50\\%, linear scale"}
 knitr::include_graphics("images/02-you-draw-it/low-10-linear.png")
 ```
 
-```{r low-10-log, fig.cap = "Exponential Prediction: low growth rate, points truncated at 50\\%, log scale", fig.height = 4, fig.width = 4, out.width = "65%"}
+```{r low-10-log, fig.scap = "Exponential prediction plot (low; 50\\%; log)", fig.cap = "Exponential Prediction: low growth rate, points truncated at 50\\%, log scale", fig.height = 4, fig.width = 4, out.width = "65%"}
 knitr::include_graphics("images/02-you-draw-it/low-10-log.png")
 ```
 
-```{r low-15-linear, fig.cap = "Exponential Prediction: low growth rate, points truncated at 75\\%, linear scale", fig.height = 4, fig.width = 4, out.width = "65%"}
+```{r low-15-linear, fig.scap = "Exponential prediction plot (low; 75\\%; linear)", fig.cap = "Exponential Prediction: low growth rate, points truncated at 75\\%, linear scale", fig.height = 4, fig.width = 4, out.width = "65%"}
 knitr::include_graphics("images/02-you-draw-it/low-15-linear.png")
 ```
 
-```{r low-15-log, fig.cap = "Exponential Prediction: low growth rate, points truncated at 75\\%, log scale", fig.height = 4, fig.width = 4, out.width = "65%"}
+```{r low-15-log, fig.scap = "Exponential prediction plot (low; 75\\%; log)", fig.cap = "Exponential Prediction: low growth rate, points truncated at 75\\%, log scale", fig.height = 4, fig.width = 4, out.width = "65%"}
 knitr::include_graphics("images/02-you-draw-it/low-15-log.png")
 ```
 
-```{r high-10-linear, fig.cap = "Exponential Prediction: high growth rate, points truncated at 50\\%, linear scale", fig.height = 4, fig.width = 4, out.width = "65%"}
+```{r high-10-linear, fig.scap = "Exponential prediction plot (high; 50\\%; linear)", fig.cap = "Exponential Prediction: high growth rate, points truncated at 50\\%, linear scale", fig.height = 4, fig.width = 4, out.width = "65%"}
 knitr::include_graphics("images/02-you-draw-it/high-10-linear.png")
 ```
 
-```{r high-10-log, fig.cap = "Exponential Prediction: high growth rate, points truncated at 50\\%, log scale", fig.height = 4, fig.width = 4, out.width = "65%"}
+```{r high-10-log, fig.scap = "Exponential prediction plot (high; 50\\%; log)", fig.cap = "Exponential Prediction: high growth rate, points truncated at 50\\%, log scale", fig.height = 4, fig.width = 4, out.width = "65%"}
 knitr::include_graphics("images/02-you-draw-it/high-10-log.png")
 ```
 
-```{r high-15-linear, fig.cap = "Exponential Prediction: high growth rate, points truncated at 75\\%, linear scale", fig.height = 4, fig.width = 4, out.width = "65%"}
+```{r high-15-linear,  fig.scap = "Exponential prediction plot (high; 75\\%; linear)",fig.cap = "Exponential Prediction: high growth rate, points truncated at 75\\%, linear scale", fig.height = 4, fig.width = 4, out.width = "65%"}
 knitr::include_graphics("images/02-you-draw-it/high-15-linear.png")
 ```
 
-```{r high-15-log, fig.cap = "Exponential Prediction: high growth rate, points truncated at 75\\%, log scale", fig.height = 4, fig.width = 4, out.width = "65%"}
+```{r high-15-log,  fig.scap = "Exponential prediction plot (high; 75\\%; log)",fig.cap = "Exponential Prediction: high growth rate, points truncated at 75\\%, log scale", fig.height = 4, fig.width = 4, out.width = "65%"}
 knitr::include_graphics("images/02-you-draw-it/high-15-log.png")
 ```
 

@@ -313,7 +313,7 @@ The choice of scale can change the shape of a graph, thus creating a conceptual 
 
 ## Logarithmic Scales and Mapping
 
-A major issue we encountered in the creation of COVID plots was how to display data from a wide range of values.
+A major issue we encountered in the creation of COVID-19 plots was how to display data from a wide range of values.
 When faced with data which spans several orders of magnitude, we must decide whether to show the data on its original scale (compressing the smaller magnitudes into relatively little area) or to transform the scale and alter the contextual appearance of the data.
 One common solution is to use a log scale transformation to display data over several orders of magnitude within one graph.
 Exponential curves are a common source of data in which smaller magnitudes are compressed into a smaller area; 
@@ -424,7 +424,7 @@ knitr::include_graphics("images/exponential-stages-comic.jpg")
 ```
 
 Early studies explored the estimation and prediction of exponential growth and found that growth is underestimated when presented both numerically and graphically [@wagenaar_misperception_1975].
-The hierarchy of plot objects found in @cleveland_graphical_1985 can provide a possible explanation for the underestimation the occurs in exponentially increasing trends; the exponential trend can be thought of as a series of tangential angles leading to less accurate judgement of the next points.
+The hierarchy of plot objects found in @cleveland_graphical_1985 can provide a possible explanation for the underestimation that occurs in exponentially increasing trends; the exponential trend can be thought of as a series of tangential angles leading to less accurate judgement of the next points.
 Results from @wagenaar_misperception_1975 indicated that numerical estimation is more accurate than graphical estimation for exponential curves. 
 Experimental studies were conducted in order to determine strategies to improve the accuracy of estimation of exponential growth [@wagenaar_misperception_1975; @jones_polynomial_1977; @mackinnon_feedback_1991].
 There was no improvement in estimation found when participants had contextual knowledge or experience with exponential growth, but instruction on exponential growth reduced the underestimation; participants adjusted their initial starting value but not their perception of the growth rate [@wagenaar_misperception_1975; @jones_polynomial_1977].
