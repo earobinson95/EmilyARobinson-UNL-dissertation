@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.5.10)  18 MAY 2022 10:04
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.5.10)  18 MAY 2022 14:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -913,7 +913,7 @@ File: t3enc.def 2001/12/31 T3 encoding
 \tipasavetokens=\toks59
 \tipachecktokens=\toks60
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2022-05-16 v7.00p Hypertext links for LaTeX
+Package: hyperref 2022-05-17 v7.00q Hypertext links for LaTeX
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
@@ -937,7 +937,7 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2022-05-16 v2.49 Cross-referencing by name of section
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
@@ -951,7 +951,7 @@ Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 \Hy@linkcounter=\count405
 \Hy@pagecounter=\count406
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2022-05-16 v7.00p Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2022-05-17 v7.00q Hyperref: PDFDocEncoding definition (HO)
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/etexcmds/etexcmds.sty
@@ -959,9 +959,9 @@ Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count407
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2022-05-16 v7.00p Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2022-05-17 v7.00q Hyperref: PDF Unicode definition (HO)
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/puenc-greekbasic.def
-File: puenc-greekbasic.def 2022-05-16 v7.00p Hyperref: PDF Unicode definition (greek block) (HO)
+File: puenc-greekbasic.def 2022-05-17 v7.00q Hyperref: PDF Unicode definition (greek block) (HO)
 ))
 Package hyperref Info: Option `setpagesize' set `false' on input line 4020.
 Package hyperref Info: Option `unicode' set `false' on input line 4020.
@@ -1007,7 +1007,7 @@ package with kernel methods
 )
 Package hyperref Info: Driver: hxetex.
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hxetex.def
-File: hxetex.def 2022-05-16 v7.00p Hyperref driver for XeTeX
+File: hxetex.def 2022-05-17 v7.00q Hyperref driver for XeTeX
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
@@ -1235,9 +1235,11 @@ File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 Class memoir Warning: The material used in the footer is too large
 (10.14995pt) for the given foot skip (0.0pt), it is recommended to
 either increase the foot skip or redesign the footer
-(in both cases you will find help in the memoir manual). on input line 239.
+(in both cases you will find help in the memoir manual). on input line 227.
 
 [4
+
+] [5
 
 ] (./thesis.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
@@ -1255,37 +1257,37 @@ File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 1.
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) [5
+) [6
 
 
 ]
 Overfull \hbox (1.66797pt too wide) detected at line 51
- \TU/lmr/bx/n/12 113
+ \TU/lmr/bx/n/12 115
  []
 
 
 Overfull \hbox (1.66797pt too wide) detected at line 52
- \TU/lmr/bx/n/12 118
- []
-
-
-Overfull \hbox (1.66797pt too wide) detected at line 53
  \TU/lmr/bx/n/12 120
  []
 
 
+Overfull \hbox (1.66797pt too wide) detected at line 53
+ \TU/lmr/bx/n/12 122
+ []
+
+
 Overfull \hbox (1.66797pt too wide) detected at line 54
- \TU/lmr/bx/n/12 125
+ \TU/lmr/bx/n/12 127
  []
 
 
 Overfull \hbox (1.66797pt too wide) detected at line 55
- \TU/lmr/bx/n/12 127
+ \TU/lmr/bx/n/12 129
  []
 
-) [6] (./thesis.lof [7
+) [7] (./thesis.lof [8
 
-] [8]) [9] [10] (./thesis.lot) [11
+] [9]) [10] (./thesis.lot) [11
 
 ] [1
 
@@ -1297,7 +1299,7 @@ File: images/covid19-summer2020-risk-map.png Graphic file (type bmp)
 <images/covid19-summer2020-risk-map.png>
 File: images/covid19-datawrapper-views-july2020.png Graphic file (type bmp)
 <images/covid19-datawrapper-views-july2020.png>
-[2]
+[2] [3]
 File: images/misleading-graphics-3d-pie-batteries.jpg Graphic file (type bmp)
 <images/misleading-graphics-3d-pie-batteries.jpg>
 File: images/misleading-graphics-bad-form-better-science.png Graphic file (type bmp)
@@ -1312,10 +1314,10 @@ File: images/misleading-graphics-pizza.png Graphic file (type bmp)
 <images/misleading-graphics-pizza.png>
 File: images/misleading-graphics-multiple-issues-pet-ownership.jpg Graphic file (type bmp)
 <images/misleading-graphics-multiple-issues-pet-ownership.jpg>
-[3] [4] [5]
+[4]
 File: images/covid-ga-recreation.jpg Graphic file (type bmp)
 <images/covid-ga-recreation.jpg>
-[6] [7]
+[5] [6] [7]
 File: images/graphic-flowchart.png Graphic file (type bmp)
 <images/graphic-flowchart.png>
 [8] [9]
@@ -1324,23 +1326,23 @@ File: images/eells-component-parts.png Graphic file (type bmp)
 [10]
 File: images/spence-1990-proportion.png Graphic file (type bmp)
 <images/spence-1990-proportion.png>
-[11] [12] [13]
+[11] [12] [13] [14]
 File: images/amer-poggendorff-illusion.png Graphic file (type bmp)
 <images/amer-poggendorff-illusion.png>
-[14] [15]
+[15]
 File: images/children-height.png Graphic file (type bmp)
 <images/children-height.png>
 [16] [17] [18] [19]
 File: thesis_files/figure-latex/log-scales-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/log-scales-1.pdf>
-[20]
+[20] [21]
 File: images/covid19-FT-03.23.2020-log.png Graphic file (type bmp)
 <images/covid19-FT-03.23.2020-log.png>
 File: images/covid19-FT-case-count-06.30.2020-linear.png Graphic file (type bmp)
 <images/covid19-FT-case-count-06.30.2020-linear.png>
 File: images/covid19-FT-case-count-06.30.2020-log.png Graphic file (type bmp)
 <images/covid19-FT-case-count-06.30.2020-log.png>
-[21] [22] [23]
+[22] [23]
 File: thesis_files/figure-latex/log-number-line-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/log-number-line-1.pdf>
 [24]
@@ -1349,120 +1351,121 @@ File: images/exponential-stages-comic.jpg Graphic file (type bmp)
 [25] [26]
 File: images/menge-plots.png Graphic file (type bmp)
 <images/menge-plots.png>
-[27] [28] [29] [30
+[27] [28] [29] [30] [31
 
 ]
 File: thesis_files/figure-latex/lineup-example-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/lineup-example-1.pdf>
-[31] [32]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 748.
-[33]
+[32] [33]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 749.
+[34]
 File: thesis_files/figure-latex/lof-density-curves-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/lof-density-curves-1.pdf>
-[34] [35]
+[35] [36]
 File: thesis_files/figure-latex/curvature-combination-example-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/curvature-combination-example-1.pdf>
-[36] [37] [38] [39]
+[37] [38] [39] [40]
 File: thesis_files/figure-latex/odds-ratio-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/odds-ratio-plot-1.pdf>
-[40] [41] [42] [43
+[41] [42] [43] [44
 
-] [44]
+] [45]
 File: images/02-you-draw-it/subjective-judgement-plot.png Graphic file (type bmp)
 <images/02-you-draw-it/subjective-judgement-plot.png>
 File: images/02-you-draw-it/eyefitting-straight-lines-plots.png Graphic file (type bmp)
 <images/02-you-draw-it/eyefitting-straight-lines-plots.png>
-[45] [46] [47]
+[46] [47] [48]
 File: images/02-you-draw-it/nyt-caraccidents-frame4.png Graphic file (type bmp)
 <images/02-you-draw-it/nyt-caraccidents-frame4.png>
-[48]
+[49]
 File: images/02-you-draw-it/raster-vs-vector.png Graphic file (type bmp)
 <images/02-you-draw-it/raster-vs-vector.png>
-[49]
+[50]
 File: images/02-you-draw-it/ydiExample-0.10-10-linear.png Graphic file (type bmp)
 <images/02-you-draw-it/ydiExample-0.10-10-linear.png>
-[50] [51] [52] [53]
+[51] [52] [53] [54]
 File: thesis_files/figure-latex/eyefitting-simplot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/eyefitting-simplot-1.pdf>
-[54] [55]
+[55] [56]
 File: thesis_files/figure-latex/ols-vs-pca-example-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/ols-vs-pca-example-1.pdf>
-[56]
+[57]
 File: thesis_files/figure-latex/eyefitting-example-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/eyefitting-example-plot-1.pdf>
-[57] [58] [59]
+[58] [59] [60]
 File: thesis_files/figure-latex/eyefitting-lmer-residualplots-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/eyefitting-lmer-residualplots-1.pdf>
 File: thesis_files/figure-latex/eyefitting-gamm-residualplots-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/eyefitting-gamm-residualplots-1.pdf>
-[60] [61] [62] [63]
+[61] [62] [63] [64]
 File: thesis_files/figure-latex/exponential-yloess-spaghetti-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/exponential-yloess-spaghetti-plot-1.pdf>
-[64] [65] [66]
+[65] [66] [67]
 File: thesis_files/figure-latex/exponential-prediction-gamm-preds-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/exponential-prediction-gamm-preds-1.pdf>
-[67] [68] [69] [70
+[68] [69] [70] [71
 
-] [71] [72] [73] [74]
+] [72] [73] [74] [75]
 File: thesis_files/figure-latex/estimation-simulated-data-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/estimation-simulated-data-1.pdf>
-[75] [76] [77]
+[76] [77] [78]
 File: thesis_files/figure-latex/estimation-word-cloud-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/estimation-word-cloud-1.pdf>
-[78]
+[79]
 File: images/03-estimation/qe1-sketch.png Graphic file (type bmp)
 <images/03-estimation/qe1-sketch.png>
-[79] [80]
+[80] [81]
 File: thesis_files/figure-latex/qe1-density-plot-10-all-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qe1-density-plot-10-all-1.pdf>
-[81] [82]
+[82] [83]
 File: thesis_files/figure-latex/spaghetti-dataset1-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/spaghetti-dataset1-1.pdf>
 File: thesis_files/figure-latex/spaghetti-dataset2-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/spaghetti-dataset2-1.pdf>
-[83] [84] [85] [86]
+[84] [85] [86] [87] [88]
 File: thesis_files/figure-latex/common-population-estimates-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/common-population-estimates-1.pdf>
-[87] [88]
+[89] [90]
 File: images/03-estimation/qe2-sketch.png Graphic file (type bmp)
 <images/03-estimation/qe2-sketch.png>
-[89] [90]
+[91]
 File: thesis_files/figure-latex/qe2-density-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qe2-density-plot-1.pdf>
-[91] [92] [93]
+[92] [93] [94]
 File: images/03-estimation/qi1-sketch.png Graphic file (type bmp)
 <images/03-estimation/qi1-sketch.png>
+[95]
 File: thesis_files/figure-latex/qi1-density-1-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi1-density-1-1.pdf>
 File: thesis_files/figure-latex/qi1-density-2-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi1-density-2-1.pdf>
-[94] [95] [96] [97]
+[96] [97] [98] [99]
 File: thesis_files/figure-latex/qi1-common-responses-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi1-common-responses-1.pdf>
-[98] [99] [100]
+[100] [101] [102]
 File: images/03-estimation/qi2-sketch.png Graphic file (type bmp)
 <images/03-estimation/qi2-sketch.png>
-[101] [102]
+[103] [104]
 File: thesis_files/figure-latex/qi2-plots-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi2-plots-1.pdf>
-[103] [104]
+[105] [106]
 File: thesis_files/figure-latex/qi2-density-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi2-density-1.pdf>
 File: thesis_files/figure-latex/qi2-common-responses-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi2-common-responses-1.pdf>
-[105] [106] [107]
+[107] [108] [109]
 File: images/03-estimation/qi3-sketch.png Graphic file (type bmp)
 <images/03-estimation/qi3-sketch.png>
 File: thesis_files/figure-latex/qi3-density-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi3-density-1.pdf>
-[108] [109] [110] [111] [112] [113
+[110] [111] [112] [113] [114] [115
 
-] [114] [115] [116] [117]
+] [116] [117] [118] [119]
 File: images/02-you-draw-it/r2d3+shiny.png Graphic file (type bmp)
 <images/02-you-draw-it/r2d3+shiny.png>
-[118
+[120
 
-] [119]
+] [121]
 File: images/02-you-draw-it/low-10-linear.png Graphic file (type bmp)
 <images/02-you-draw-it/low-10-linear.png>
 File: images/02-you-draw-it/low-10-log.png Graphic file (type bmp)
@@ -1479,24 +1482,24 @@ File: images/02-you-draw-it/high-15-linear.png Graphic file (type bmp)
 <images/02-you-draw-it/high-15-linear.png>
 File: images/02-you-draw-it/high-15-log.png Graphic file (type bmp)
 <images/02-you-draw-it/high-15-log.png>
-[120
+[122
 
-] [121] [122] [123] [124]
+] [123] [124] [125] [126]
 File: thesis_files/figure-latex/showed-work-comparison-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/showed-work-comparison-1.pdf>
-[125
+[127
 
-] [126] [127
+] [128] [129
 
-] [128] [129] [130] [131] [132] [133] [134] [135] [136] [137] [138]
+] [130] [131] [132] [133] [134] [135] [136] [137] [138] [139] [140]
 No file thesis.bbl.
 
 Class memoir Warning: The material used in the footer is too large
 (10.14995pt) for the given foot skip (0.0pt), it is recommended to
 either increase the foot skip or redesign the footer
-(in both cases you will find help in the memoir manual). on input line 2466.
+(in both cases you will find help in the memoir manual). on input line 2482.
 
-[139]
+[141]
 \tf@toc=\write7
 \openout7 = `thesis.toc'.
 
@@ -1513,10 +1516,10 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 Here is how much of TeX's memory you used:
  39357 strings out of 478132
  789956 string characters out of 5851803
- 1097435 words of memory out of 5000000
+ 1097436 words of memory out of 5000000
  59331 multiletter control sequences out of 15000+600000
  475567 words of font info for 72 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  123i,12n,120p,2324b,507s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on thesis.pdf (150 pages).
+Output written on thesis.pdf (152 pages).

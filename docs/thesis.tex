@@ -223,8 +223,8 @@
 \end{abstract}
 
 %% Optional
-% \begin{copyrightpage}
-% \end{copyrightpage}
+\begin{copyrightpage}
+\end{copyrightpage}
 
 %% Optional
 % \begin{dedication}
@@ -282,7 +282,7 @@ In order to make educated decisions when designing a chart, we need guidelines a
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.6\linewidth,]{images/91dovic-cases-july2021} 
+{\centering \includegraphics[width=0.75\linewidth,]{images/91dovic-cases-july2021} 
 
 }
 
@@ -291,7 +291,7 @@ In order to make educated decisions when designing a chart, we need guidelines a
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.6\linewidth,]{images/covid19-summer2020-risk-map} 
+{\centering \includegraphics[width=0.75\linewidth,]{images/covid19-summer2020-risk-map} 
 
 }
 
@@ -300,7 +300,7 @@ In order to make educated decisions when designing a chart, we need guidelines a
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.6\linewidth,]{images/covid19-datawrapper-views-july2020} 
+{\centering \includegraphics[width=0.75\linewidth,]{images/covid19-datawrapper-views-july2020} 
 
 }
 
@@ -311,7 +311,8 @@ In order to make educated decisions when designing a chart, we need guidelines a
 \section{Misleading Graphics}\label{misleading-graphics}}
 
 There are many ways in which plots may inaccurately display the data and be ineffective or misleading in sharing information and results (Szafir, 2018).
-Misleading charts might have (1) bad form such as 3D pie charts or .. \pcref{fig:misleading-graphics-form}, (2) include too much ``chartjunk'' resulting in clutter or displaying useless data \pcref{fig:misleading-graphics-chartjunk}, or (3) have bad axes such as a mismatch between scale and context or just plain bad math \pcref{fig:misleading-graphics-bad-axes}. \cref{fig:misleading-graphics-just-bad} demonstrates how a chart can be misleading in more than one way; the map of pet ownership violates guidelines by mapping too many variables to visual encodings which results in clutter and bad form.
+Misleading charts might have (1) bad form such as 3D pie charts or an incompatiable plot for the data \pcref{fig:misleading-graphics-form} (n.d.-a; Stewart-Lowndes et al., 2017), (2) include too much ``chartjunk'', resulting in clutter or displaying useless data \pcref{fig:misleading-graphics-chartjunk} ({``The US states that are the best at solving WORDLE,''} 2022; {``X86-64,''} 2022), or (3) have bad axes such as a mismatch between scale and context or just plain bad math \pcref{fig:misleading-graphics-bad-axes} (Lauren, 2018; Villa, 2022).
+\cref{fig:misleading-graphics-just-bad} demonstrates how a chart can be misleading in more than one way; the map of pet ownership violates guidelines by mapping too many variables to visual encodings which results in clutter and bad form (n.d.-b).
 
 \begin{figure}[tbp]
 
@@ -353,11 +354,11 @@ Baumer, Kaplan, \& Horton (2021) shares an example of a misleading graphic in th
 This graphic was highly misleading in communicating the state of the pandemic due to the ordering along the \(x\)-axis.
 Notice the case count for April \(17^{th}\) appears to the right of April \(19^{th}\), and that the order of the counties has been selected so that the case counts are monotonically decreasing for each day of reporting.
 The appearance of this graphic leads viewers to believe COVID cases are decreasing.
-Shortly after the graphic was released, the governor's office made a statement that in future charts, chronological order would be used to display time due to public demand. While both examples were misleading due to axis labels and scales, other issues such as incomplete data and partitions that do not add to a whole can lead to misrepresentation of information.
+Shortly after the graphic was released, the governor's office made a statement that in future charts, chronological order would be used to display time due to public demand.
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=0.85\linewidth,]{images/covid-ga-recreation} 
+{\centering \includegraphics[width=1\linewidth,]{images/covid-ga-recreation} 
 
 }
 
@@ -369,7 +370,7 @@ The authors rated 39\% of the 97 graphs sampled as poor, indicating there is sti
 More startling is the fact that the source of the graphic from an applied science or a graphic from statistics had no effect on the quality of the graphic.
 
 Although statistical graphics have become widely used and valued in science, business, and in many other aspects of life, we may be too accepting of easy-to-create, default data displays, using them without critically questioning the data and/or how effective the display is at displaying the data. Attempts to improve the creation and use of charts have been ongoing since the early \(20^{th}\) century (Croxton \& Stein, 1932; Croxton \& Stryker, 1927; Eells, 1926; Von Huhn, 1927).
-We address the ways in which researchers use experimentation to test statistical graphics in order to establish guidelines and improve graphics in \protect\hyperlink{testing-statistical-graphics}{Section 1.4}.
+We address the ways in which researchers use experimentation to test statistical graphics in order to establish guidelines and improve graphics in \protect\hyperlink{testing-statistical-graphics}{section 1.4}.
 In efforts to achieve a higher standard of the graphics being presented, work must be done to implement the academic research being conducted in graphics into practice.
 For example, better definitions of variables, units of measurements, scales, and other graphical elements is necessary in order to improve the overall quality of graphics.
 Changes in software defaults such as the originally set number of bins in a bar chart can help support the improvement of graphs in both statistics and the applied science.
@@ -404,7 +405,7 @@ All of these types of tests require different levels of use and manipulation of 
 
 The initial push to develop classification and recommendation systems for charts was grounded on heuristics rather than on experimentation (Kruskal, 1975; Macdonald-Ross, 1977).
 Requests were made for the validation of the perception and utility of statistical charts through graphical experiments.
-Initial experiments (Croxton \& Stein, 1932; Croxton \& Stryker, 1927; Eells, 1926) with most early experimentation stemmed from psychophysics research on the perception of size and shape (Teghtsoonian, 1965).
+Most early experimentation (Croxton \& Stein, 1932; Croxton \& Stryker, 1927; Eells, 1926) stemmed from psychophysics research on the perception of size and shape.
 In attempts to understand the human perception and judgment of component parts, Eells (1926) instructed students to think of each circle diagram \pcref{fig:eells-compoment-parts} as representing 100\% and write their best estimate of the percentage of the whole in each sector.
 Participants were told not to hurry, but to work steadily in order to determine efficiency of judgment.
 Students were then asked to analyze their mental processes used to make their estimates and indicate the method that best matches: by areas of sectors, by central angles, by arcs on the circumference, by subtending chords.
@@ -412,7 +413,7 @@ This process was repeated three days later by presenting students the same data 
 Results of the study led the authors to argue for the use of circle diagrams to show component parts based on both participant accuracy and speed.
 In response, Croxton \& Stryker (1927) evaluated the accuracy of judgment of two types of charts (bars and circles) in efforts to reach a consistent conclusion.
 During class, students were individually presented pairs of diagrams (without scales) on cards and asked to estimate the percentages displayed in the diagram.
-It was found that the bar was preferable to the circle when shown percentages that deviate from quarters, but that the circle is strongly preferred when shown percentages separating the diagrams into 25\% or 50\%; this introduces the concept of anchoring discussed further in \protect\hyperlink{estimation-biases}{Section 1.6.3}.
+It was found that the bar was preferable to the circle when shown percentages that deviate from quarters, but that the circle is strongly preferred when shown percentages separating the diagrams into 25\% or 50\%; this introduces the concept of anchoring discussed further in \protect\hyperlink{estimation-biases}{section 1.6.3}.
 
 \begin{figure}[tbp]
 
@@ -443,7 +444,7 @@ Cleveland \& McGill (1984) provides a basis for perceptual judgment, still utili
 In Cleveland \& McGill (1985), these plot objects are ordered by accuracy performed through graphical-perception tasks; for example, comparisons of angles resulted in more difficult judgments than between lengths of lines.
 Shah et al. (1999) established the notion that redesigning graphs can result in the improvement of the viewer's interpretation of the data.
 For example, the use of gestalt principles (Goldstein \& Cacciamani, 2021) such as proximity, similarity, and good continuation can help minimize the inferential processes and maximize the pattern association processes required to interpret relevant information.
-In \protect\hyperlink{underestimation}{Section 1.8} we see how the hierarchy of accuracy in plot objects presented in Cleveland \& McGill (1985) can explain biases in our interpretation and use of graphics.
+In \protect\hyperlink{underestimation}{section 1.8} we see how the hierarchy of accuracy in plot objects presented in Cleveland \& McGill (1985) can explain biases in our interpretation and use of graphics.
 
 During the \(\text{21}^{\text{st}}\) century, there have been advancements in the methodology used to investigate the effectiveness of statistical charts (Majumder, Hofmann, \& Cook, 2013).
 Buja et al. (2009a) introduced the lineup protocol in which data plots are depicted and interpreted as statistics.
@@ -472,7 +473,7 @@ Therefore, we must consider and determine how the viewer is perceiving and inter
 \section{Graph Comprehension}\label{graph-comprehension}}
 
 Higher order cognitive processes require viewers to translate the visual features into conceptual relations by interpreting titles, labels, and scales.
-In order to understand how viewers are interpreting and using the data and information displayed on the chart, studies have asked participants to read information directly from a chart and provide a quantitative estimate or answer a predefined question (Amer, 2005; Broersma \& Molenaar, 1985; Dunn, 1988; Peterson \& Schramm, 1954; Spence, 1990; Joseph K. Tan, 1994).
+In order to understand how viewers are interpreting and using the data and information displayed on the chart, studies have asked participants to read information directly from a chart and provide a quantitative estimate or answer a predefined question (Amer, 2005; Broersma \& Molenaar, 1985; Dunn, 1988; Peterson \& Schramm, 1954; Spence, 1990; Tan, 1994).
 For instance, Amer (2005) demonstrates that visual illusion may bias decision making and graph comprehension, even if the graphs are constructed according to best practice.
 Participants were presented a cost volume profit graph \pcref{fig:amer-poggendorff-illusion} with two crossing lines (revenue and cost) and asked to estimate three values: (1) the amount of total revenues on the ordinate corresponding to the endpoint of the total-revenue line plotted on the graph (2) the amount of total costs on the ordinate corresponding to the endpoint of the total-cost line plotted on the graph and (3) the amount of costs/revenues on the ordinate at the break even point---the point where the two lines cross.
 Results indicate that decision makers may consistently underestimate or overestimate the values displayed on line graphs due to what is called the ``Poggendorff illusion.''
@@ -494,8 +495,8 @@ Low level questions address the content and interpretation or explicit material 
 Three levels of graph comprehension have emerged from mathematics education research (Curcio, 1987; Friel, Curcio, \& Bright, 2001; Glazer, 2011; Jolliffe, 1991; R. Wood, 1968).
 The three behaviors related to graph comprehension involve (1) literal reading of the data (elementary level), (2) reading between the data (intermediate level), and (3) reading beyond the data (advanced level).
 Curcio (1987) aligns two multiple choice questions with each level of comprehension related to a graph showing the height of four children in centimeters \pcref{fig:children-height}.
-Two literal items required the viewer to read the data, title, or axis label in order to answer, ``What does this graph tell you'' or ``How tall was xxx?''
-Comparison items required comparisons and the use of mathematical concepts to answer, ``Who was the tallest'' and ``How much taller was x than y?''
+Two literal items required the viewer to read the data, title, or axis label in order to answer, ``What does this graph tell you?'' or ``How tall was xxx?''
+Comparison items required comparisons and the use of mathematical concepts to answer, ``Who was the tallest?'' and ``How much taller was x than y?''
 Lastly, extension items required an extension, prediction, or inference such as, ``If x grows 5 centimeters and y grows 10 centimeters by Sept.~1981, who will be taller and by how much?
 In Friel et al. (2001), several studies were reviewed and their questions were placed in the taxonomy of skills required for answering questions at each level.
 In addition to the graph's visual features and questioning, it is important for researchers to give careful consideration to the context of the graphic on the viewers comprehension.
@@ -525,7 +526,7 @@ Common strategies related to measurement estimation, involve reference point est
 Joram, Gabriele, Bertheau, Gelman, \& Subrahmanyam (2005) was interested in the relationship among strategy use and accuracy of students' representations of standard measurement units and measurement accuracy.
 In this study, students were asked to estimate the lengths of two objects and explain their process.
 The researchers used talk aloud protocols to prompt students to communicate their estimation strategies to an interviewer; results found that students who used a reference point had a more accurate representation of standard units and estimates of length than students who did not use a reference point.
-M. G. Jones, Gardner, Taylor, Forrester, \& Andre (2012) examined the effect of scale (metric verses English) and task context on the accuracy of measurement estimation for linear distances.
+Gail Jones, Gardner, Taylor, Forrester, \& Andre (2012) examined the effect of scale (metric verses English) and task context on the accuracy of measurement estimation for linear distances.
 The study showed that students were less accurate in estimating metric units as compared to English units and that estimation accuracy was highly dependent on task context.
 Forrester, Latham, \& Shire (1990) argues that estimation, approximating, and measuring are key components in the intuitive understanding of dimension and scale necessary to manipulate information and interact effectively with our environment.
 Without open ended conversations, our research demonstrates how the use of graphical tasks of varying complexities conducted through an online system can provide insight about the tactics and procedures used to extract meaning from a chart.
@@ -534,8 +535,8 @@ Without open ended conversations, our research demonstrates how the use of graph
 \subsection{Estimation Biases}\label{estimation-biases}}
 
 Certain biases including anchoring and rounding to multiples of five or ten arise in open-ended estimation tasks.
-When it comes to understanding graphics, anchoring is prominent in both graphical representations and data extraction tasks (Joseph KH Tan \& Benbasat, 1990).
-Anchoring bias refers to an individual using easily observed visual cues such as grid lines or ``anchors'' when extracting information such as the \(x\) or \(y\) value on a chart (Joseph K. Tan, 1994 ; Godlonton, Hernandez, \& Murphy, 2018).
+When it comes to understanding graphics, anchoring is prominent in both graphical representations and data extraction tasks (Tan \& Benbasat, 1990).
+Anchoring bias refers to an individual using easily observed visual cues such as grid lines or ``anchors'' when extracting information such as the \(x\) or \(y\) value on a chart (Tan, 1994 ; Godlonton, Hernandez, \& Murphy, 2018).
 In addition to \(x\)-value and \(y\)-value anchoring, entity anchoring refers to anchoring on group information withing a data set.
 Rounding errors occur out of natural human preference to provide rounded figures even if a precise estimate is desired or requested (Myers, 1954).
 Schneeweiss, Komlos, \& Ahmad (2010) outlines distortion in results as a consequence of rounding and suggests the use of corrections when conducting statistical regression analyses on data prone to rounding.
@@ -549,7 +550,7 @@ The choice of scale can change the shape of a graph, thus creating a conceptual 
 \hypertarget{logarithmic-scales-and-mapping}{%
 \section{Logarithmic Scales and Mapping}\label{logarithmic-scales-and-mapping}}
 
-A major issue we encountered in the creation of COVID plots was how to display data from a wide range of values.
+A major issue we encountered in the creation of COVID-19 plots was how to display data from a wide range of values.
 When faced with data which spans several orders of magnitude, we must decide whether to show the data on its original scale (compressing the smaller magnitudes into relatively little area) or to transform the scale and alter the contextual appearance of the data.
 One common solution is to use a log scale transformation to display data over several orders of magnitude within one graph.
 Exponential curves are a common source of data in which smaller magnitudes are compressed into a smaller area;
@@ -648,10 +649,10 @@ This misinterpretation can lead to decisions made under inaccurate understanding
 \end{figure}
 
 Early studies explored the estimation and prediction of exponential growth and found that growth is underestimated when presented both numerically and graphically (Wagenaar \& Sagaria, 1975).
-The hierarchy of plot objects found in Cleveland \& McGill (1985) can provide a possible explanation for the underestimation the occurs in exponentially increasing trends; the exponential trend can be thought of as a series of tangential angles leading to less accurate judgement of the next points.
+The hierarchy of plot objects found in Cleveland \& McGill (1985) can provide a possible explanation for the underestimation that occurs in exponentially increasing trends; the exponential trend can be thought of as a series of tangential angles leading to less accurate judgement of the next points.
 Results from Wagenaar \& Sagaria (1975) indicated that numerical estimation is more accurate than graphical estimation for exponential curves.
-Experimental studies were conducted in order to determine strategies to improve the accuracy of estimation of exponential growth (G. V. Jones, 1977; MacKinnon \& Wearing, 1991; Wagenaar \& Sagaria, 1975).
-There was no improvement in estimation found when participants had contextual knowledge or experience with exponential growth, but instruction on exponential growth reduced the underestimation; participants adjusted their initial starting value but not their perception of the growth rate (G. V. Jones, 1977; Wagenaar \& Sagaria, 1975).
+Experimental studies were conducted in order to determine strategies to improve the accuracy of estimation of exponential growth (Gregory Jones, 1977; MacKinnon \& Wearing, 1991; Wagenaar \& Sagaria, 1975).
+There was no improvement in estimation found when participants had contextual knowledge or experience with exponential growth, but instruction on exponential growth reduced the underestimation; participants adjusted their initial starting value but not their perception of the growth rate (Gregory Jones, 1977; Wagenaar \& Sagaria, 1975).
 MacKinnon \& Wearing (1991) found that estimation was improved by providing immediate feedback to participants about the accuracy of their current predictions.
 
 Our inability to accurately predict exponential growth might also be addressed by log transforming the data, however, this transformation introduces new complexities; most readers are not mathematically sophisticated enough to intuitively understand logarithmic math and translate that back into real-world effects.
@@ -703,7 +704,7 @@ The study in this chapter is conducted through visual inference and the use of s
 \hypertarget{visual-inference}{%
 \section{Visual Inference}\label{visual-inference}}
 
-In \protect\hyperlink{testing-statistical-graphics}{Section 1.4}, we explained how a data plot can be evaluated and treated as a visual statistic, a numerical function which summarizes the data.
+In \protect\hyperlink{testing-statistical-graphics}{section 1.4}, we explained how a data plot can be evaluated and treated as a visual statistic, a numerical function which summarizes the data.
 To evaluate a graph, the statistic (data plot) must be run through a visual evaluation - a person.
 We can conclude the visual statistics are significantly different if two different methods of presenting data result in qualitatively different results when evaluated visually.
 Recent graphical experiments have utilized statistical lineups to quantify the perception of graphical design choices (Hofmann, Follett, Majumder, \& Cook, 2012; Loy, Follett, \& Hofmann, 2016; Loy, Hofmann, \& Cook, 2017; VanderPlas \& Hofmann, 2017).
@@ -752,7 +753,7 @@ The heuristic data generation procedure is described in \cref{alg:lineup-paramet
     \State Determine the $y=-x$ line scaled to fit the assigned domain and range.
     \State Map the values $x_{mid} - 0.1$ and $x_{mid} + 0.1$ to the $y=-x$ line for two additional points.
     \State From the set points $(x_k, y_k)$ for $k = 1,2,3,4$, obtain the coefficients from the linear regression model $\ln(y_k) = b_0 +b_1x_k$ to obtain starting values - $\alpha_0 = e^{b_0}, \beta_0 =  b_1, \theta_0 = 0.5\cdot \min(y)$
-    \State Using the `nls` function from the base stats package in Rstudio and the starting parameter values - $\alpha_0, \beta_0, \theta_0$ - fit the nonlinear model, $y_k = \alpha\cdot e^{\beta\cdot x_k}+\theta$ to obtain estimated parameter values - $\hat\alpha, \hat\beta, \hat\theta.$
+    \State Using the \texttt{nls} function from the base \texttt{stats} package in Rstudio and the starting parameter values - $\alpha_0, \beta_0, \theta_0$ - fit the nonlinear model, $y_k = \alpha\cdot e^{\beta\cdot x_k}+\theta$ to obtain estimated parameter values - $\hat\alpha, \hat\beta, \hat\theta.$
   \end{algorithmic}
 \end{algorithm}
 
@@ -772,7 +773,7 @@ The heuristic data generation procedure is described in \cref{alg:lineup-paramet
 \hypertarget{lineups-parameter-selection}{%
 \section{Parameter Selection}\label{lineups-parameter-selection}}
 
-We followed a `Goldilocks' inspired procedure to choose three levels of curvature (low curvature, medium curvature, and high curvature). For each curvature level, we simulated 1000 data sets of \((x_{ij}, y_{ij})\) points for \(i = 1,...,50\) \(x\)-values and \(j = 1...10\) corresponding \(y\)-values per \(x\)-value.
+We followed a `Goldilocks' inspired procedure to choose three levels of trend curvature (low curvature, medium curvature, and high curvature). For each curvature level, we simulated 1000 data sets of \((x_{ij}, y_{ij})\) points for \(i = 1,...,50\) \(x\)-values and \(j = 1...10\) corresponding \(y\)-values per \(x\)-value.
 Each generated \(x_i\) point from \cref{alg:lineup-exponential-data-simulation-algorithm} was replicated ten times.
 On each of the individual data sets, we conducted a linear regression model and computed the lack of fit statistic (LOF) which measures the deviation of the data from the linear regression model.
 The density curves of the LOF statistics for each level of curvature are plotted \pcref{fig:lof-density-curves} to to provide a metric for differentiating between the curvature levels and thus detecting the target plot.
@@ -811,7 +812,7 @@ The \texttt{nullabor} package in R (Buja et al., 2009b) was used to randomly ass
 For example, a target plot with simulated data following an increasing exponential curve with high curvature is randomly embedded within null plots with simulated data following an increasing exponential trend with low curvature.
 By the implemented constraints, the target panel and null panels will span a similar domain and range.
 There are a total of six lineup curvature combinations; \cref{fig:curvature-combination-example} illustrates the six lineup curvature combinations (top: linear scale; bottom: log scale) where the green line indicates the curvature level designated to the target plot while the black line indicates the curvature level assigned to the null plots.
-Two sets of each lineup curvature combination were simulated (total of 12 test data sets) and plotted on both the linear scale and the log scale (total of 24 test lineup plots).
+Two sets of each lineup curvature combination were simulated (total of twelve test data sets) and plotted on both the linear scale and the log scale (total of 24 test lineup plots).
 In addition, there are three curvature combinations which generate homogeneous ``Rorschach'' lineups, where all panels are from the same distribution.
 Each participant evaluated one of these lineups, but for simplicity, these evaluations are not described in this chapter and their analysis is left to a later date.
 
@@ -854,7 +855,7 @@ Participants correctly identified the target panel in 47\% of the 1981 lineup ev
 Target plot identification was analyzed using the \texttt{glmer} function in the \texttt{lme4} R package (Bates, Mächler, Bolker, \& Walker, 2014).
 Estimates and odds ratio comparisons between the log and linear scales were calculated using the \texttt{emmeans} R package (Lenth, 2021).
 Each lineup plot evaluated was assigned a binary value based on the participant response (correct = 1, not correct = 0).
-Define \(Y_{ijkl}\) to be the event that participant \(l = 1,...,N_{participant}\) correctly identifies the target plot for data set \(k = 1,2\) with curvature combination \(j = 1,2,3,4,5,6\) plotted on scale \(i = 1,2\).
+Define \(Y_{ijkl}\) to be the event that participant \(l = 1,...,N_\text{participant}\) correctly identifies the target plot for data set \(k = 1,2\) with curvature combination \(j = 1,2,3,4,5,6\) plotted on scale \(i = 1,2\).
 The binary response was analyzed using a generalized linear mixed model following a binomial distribution with a logit link function with a row-column blocking design accounting for the variation due to participant and data set respectively as
 \begin{equation}
 \text{logit }P(Y_{ijk}) = \eta + \delta_i + \gamma_j + \delta \gamma_{ij} + s_l + d_k
@@ -876,7 +877,7 @@ Results indicate a strong interaction between the curvature combination and scal
 
 On both the log and linear scales, the highest accuracy occurred in lineup plots where the target model and null model had a large curvature difference and the target plot had more curvature than the null plots (high curvature target plot embedded in low curvature null plots).
 There is a decrease in accuracy on the linear scale when comparing a target plot with less curvature to null plots with more curvature (medium curvature target plot embedded in high curvature null plots; low curvature target plot embedded in medium curvature null plots; low curvature target plot embedded in high curvature null plots).
-Best, Smith, \& Stubbs (2007) found that accuracy of identifying the correct curve type was higher when nonlinear trends were presented indicating that it is hard to say something is linear (something has less curvature), but easy to say that it is not linear; our results concur with this observation.
+L. Best, Smith, \& Stubbs (2007) found that accuracy of identifying the correct curve type was higher when nonlinear trends were presented indicating that it is hard to say something is linear (something has less curvature), but easy to say that it is not linear; our results concur with this observation.
 \cref{fig:odds-ratio-plot} displays the estimated (log) odds ratio of successfully identifying the target panel on the log scale compared to the linear scale. The thumbnail figures to the right of the plot illustrate the curvature combination on both the linear (left thumbnail) and log base ten (right thumbnail) scales associated with the \(y\)-axis label.
 The choice of scale has no impact if curvature differences are large and the target plot had more curvature than the null plots (high curvature target plot embedded in low curvature null plots).
 However, presenting data on the log scale makes us more sensitive to slight changes in curvature (low or high curvature target plot embedded in medium curvature null plots; medium curvature target plot embedded in high curvature null plots) and large differences in curvature when the target plot has less curvature than the null plots (low curvature target plot embedded in high curvature null plots).
@@ -884,7 +885,7 @@ An exception occurs when identifying a plot with curvature embedded in null plot
 The results indicate that participants were more accurate at detecting the target panel on the linear scale than the log scale.
 When examining this curvature combination, the same perceptual effect occurs as what we previously saw, but in a different context of scales.
 On the linear scale, participants are perceptually identifying a curved trend from close to a linear trend whereas after the logarithmic transformation, participants are perceptually identifying a trend close to linear from a curved trend.
-This again supports the claim that it is easy to identify a curve in a bunch of lines but much harder to identify a line in a bunch of curves (Best et al., 2007).
+This again supports the claim that it is easy to identify a curve in a bunch of lines but much harder to identify a line in a bunch of curves (L. Best et al., 2007).
 
 \begin{figure}[tbp]
 
@@ -922,9 +923,9 @@ In this study, participants were asked to draw a line using their computer mouse
 \subsection{A Review of Regression and Prediction}\label{a-review-of-regression-and-prediction}}
 
 Our visual system is naturally built to look for structure and identify patterns.
-For instance, points going down from left to right indicates a negative correlation between the x and y variables.
+For instance, points going down from left to right indicates a negative correlation between the \(x\) and \(y\) variables.
 In the past, manual methods have been used to compare our intuitive visual sense of patterns to those determined by statistical methods.
-Initial studies in the 20th century explored the use of fitting lines by eye through a set of points (Finney, 1951; Mosteller, Siegel, Trapido, \& Youtz, 1981).
+Initial studies in the \(20^{th}\) century explored the use of fitting lines by eye through a set of points (Finney, 1951; Mosteller, Siegel, Trapido, \& Youtz, 1981).
 Common methods of fitting trends by eye involve maneuvering a string, black thread, or ruler until the fit is suitable, then drawing the line through the set of points.
 
 Researchers in Finney (1951) were interested in assessing the effect of stopping iterative maximum likelihood calculations after one iteration.
@@ -988,7 +989,7 @@ After the reader completed drawing the line, the actual observed values were rev
 
 Major news and research organizations such as the New York Times, FiveThirtyEight, Washington Post, and the Pew Research Center create and customize graphics with Data Driven Documents (D3).
 In June 2020, the New York Times released a front page displaying figures that represent each of the 100,000 lives lost from the COVID-19 pandemic until that point in time (Barry et al., 2020); this visualization was meant to bring about a visceral reaction and resonate with readers.
-During 2021 March Madness, FiveThirtyEight created a roster-shuffling machine which allowed readers to build their own NBA contender through interactivity (Ryanabest, 2021).
+During 2021 March Madness, FiveThirtyEight created a roster-shuffling machine which allowed readers to build their own NBA contender through interactivity (R. Best \& Boice, 2021).
 Data Driven Documents (D3) is an open-source JavaScript based graphing framework created by Mike Bostock during his time working on graphics at the New York Times.
 The grammar of D3 includes elements such as circles, paths, and rectangles with choices of attributes and styles such as color and size.
 Data Driven Documents depend on Extensible Markup Language (XML) to generate graphics and images by binding objects and layers to the plotting area as Scalable Vector Graphics (SVG) in order to preserve the shapes rather than the pixels \pcref{fig:raster-vs-vector} (Tol, 2021).
@@ -1077,9 +1078,9 @@ The data simulation procedure is described in \cref{alg:eyefitting-algorithm}.
     \Statex \textbullet~\textbf{Output Parameters:} List of point data and line data each indicating the parameter identification, $x$ value, and corresponding simulated or fitted $y$ value.
     \State Randomly select and jitter $N = 30$ $x$ values along the domain, $x_{i=1:N}\in [x_{min}, x_{max}]$.
     \State Determine the $y$-intercept, $\beta_0$, at $x = 0$ from the provided slope ($\beta_1$) and $y$ value at the mean of $x$ ($y_{\bar{x}}$) using point-slope equation of a line.
-    \State Generate "good" errors, $e_{i = 1:N}$ based on $N(0,\sigma)$ by setting a constraint requiring the mean of the first $\frac{1}{3}\text{N}$ errors $< |2\sigma|.$
+    \State Generate ``good" errors, $e_{i = 1:N}$ based on $N(0,\sigma)$ by setting a constraint requiring the mean of the first $\frac{1}{3}\text{N}$ errors $< |2\sigma|.$
     \State Simulate point data based on $y_i = \beta_0 + \beta_1 x_i + e_i$
-    \State Obtain ordinary least squares regression coefficients, $\hat\beta_0$ and $\hat\beta_1$, for the simulated point data using the `lm` function in the `stats` package in base R.
+    \State Obtain ordinary least squares regression coefficients, $\hat\beta_0$ and $\hat\beta_1$, for the simulated point data using the \texttt{lm} function in the \texttt{stats} package in base R.
     \State Obtain fitted values every 0.25 increment across the domain from the ordinary least squares regression $\hat y_{k,OLS} = \hat\beta_{0,OLS} + \hat\beta_{1,OLS} x_k$.
     \State Output data list of point data and line data each indicating the parameter identification, $x$ value, and corresponding simulated or fitted $y$ value.
   \end{algorithmic}
@@ -1134,7 +1135,7 @@ Fitted values, \(\hat y_{k,PCA}\) were then obtained every 0.25 increment across
 \caption[OLS vs PCA regression lines]{Comparison between an OLS regression equation which minimizes the vertical distance of points from the line and a regression equation with a slope calculated by the first principal component which minimizes the smallest distance of points from the line.}\label{fig:ols-vs-pca-example}
 \end{figure}
 
-For each participant, the final data set used for analysis contains \(x_{ijk}, y_{ijk,drawn}, \hat y_{ijk,OLS}\), and \(\hat y_{ijk,PCA}\) for parameter choice \(i = 1,2,3,4\), \(j = 1,...N_{participant}\), and \(x_{ijk}\) value \(k = 1, ...,4 x_{max} + 1\).
+For each participant, the final data set used for analysis contains \(x_{ijk}, y_{ijk,drawn}, \hat y_{ijk,OLS}\), and \(\hat y_{ijk,PCA}\) for parameter choice \(i = 1,2,3,4\), \(j = 1,...N_\text{participant}\), and \(x_{ijk}\) value \(k = 1, ...,4 x_{max} + 1\).
 Using both a linear mixed model (LMM) and a generalized additive mixed model (GAMM), comparisons of vertical residuals in relation to the OLS fitted values (\(e_{ijk,OLS} = y_{ijk,drawn} - \hat y_{ijk,OLS}\)) and PCA fitted values (\(e_{ijk,PCA} = y_{ijk,drawn} - \hat y_{ijk,PCA}\)) were made across the domain.
 \cref{fig:eyefitting-example-plot} displays an example of all three fitted trend lines for parameter choice F.
 
@@ -1158,11 +1159,11 @@ y_{ijk,drawn} - \hat y_{ijk,fit} = e_{ijk,fit} = \left[\gamma_0 + \alpha_i\right
 \begin{itemize}
 \tightlist
 \item
-  \(y_{ijk,drawn}\) is the drawn y-value for the \(i^{th}\) parameter choice, \(j^{th}\) participant, and \(k^{th}\) increment of x-value
+  \(y_{ijk,drawn}\) is the drawn y-value for the \(i^{th}\) parameter choice, \(j^{th}\) participant, and \(k^{th}\) increment of \(x\)-value
 \item
-  \(\hat y_{ijk,fit}\) is the fitted y-value for the \(i^{th}\) parameter choice, \(j^{th}\) participant, and \(k^{th}\) increment of x-value corresponding to either the OLS or PCA fit
+  \(\hat y_{ijk,fit}\) is the fitted y-value for the \(i^{th}\) parameter choice, \(j^{th}\) participant, and \(k^{th}\) increment of \(x\)-value corresponding to either the OLS or PCA fit
 \item
-  \(e_{ijk,fit}\) is the residual between the drawn and fitted y-values for the \(i^{th}\) parameter choice, \(j^{th}\) participant, and \(k^{th}\) increment of x-value corresponding to either the OLS or PCA fit
+  \(e_{ijk,fit}\) is the residual between the drawn and fitted y-values for the \(i^{th}\) parameter choice, \(j^{th}\) participant, and \(k^{th}\) increment of \(x\)-value corresponding to either the OLS or PCA fit
 \item
   \(\gamma_0\) is the overall intercept
 \item
@@ -1172,9 +1173,9 @@ y_{ijk,drawn} - \hat y_{ijk,fit} = e_{ijk,fit} = \left[\gamma_0 + \alpha_i\right
 \item
   \(\gamma_{2i}\) is the effect of the parameter choice on the slope
 \item
-  \(x_{ijk}\) is the x-value for the \(i^{th}\) parameter choice, \(j^{th}\) participant, and \(k^{th}\) increment
+  \(x_{ijk}\) is the \(x\)-value for the \(i^{th}\) parameter choice, \(j^{th}\) participant, and \(k^{th}\) increment
 \item
-  \(p_{j} \sim N(0, \sigma^2_{participant})\) is the random error due to the \(j^{th}\) participant's characteristics
+  \(p_{j} \sim N(0, \sigma^2_\text{participant})\) is the random error due to the \(j^{th}\) participant's characteristics
 \item
   \(\epsilon_{ijk} \sim N(0, \sigma^2)\) is the residual error.
 \end{itemize}
@@ -1191,19 +1192,19 @@ y_{ijk, drawn} - \hat y_{ijk, fit} = e_{ijk,fit} = \alpha_i + s_{i}(x_{ijk}) + p
 \begin{itemize}
 \tightlist
 \item
-  \(y_{ijk,drawn}\) is the drawn y-value for the \(i^{th}\) parameter choice, \(j^{th}\) participant, and \(k^{th}\) increment of x-value
+  \(y_{ijk,drawn}\) is the drawn y-value for the \(i^{th}\) parameter choice, \(j^{th}\) participant, and \(k^{th}\) increment of \(x\)-value
 \item
-  \(\hat y_{ijk,fit}\) is the fitted y-value for the \(i^{th}\) parameter choice, \(j^{th}\) participant, and \(k^{th}\) increment of x-value corresponding to either the OLS or PCA fit
+  \(\hat y_{ijk,fit}\) is the fitted y-value for the \(i^{th}\) parameter choice, \(j^{th}\) participant, and \(k^{th}\) increment of \(x\)-value corresponding to either the OLS or PCA fit
 \item
-  \(e_{ijk,fit}\) is the residual between the drawn and fitted y-values for the \(i^{th}\) parameter choice, \(j^{th}\) participant, and \(k^{th}\) increment of x-value corresponding to either the OLS or PCA fit
+  \(e_{ijk,fit}\) is the residual between the drawn and fitted y-values for the \(i^{th}\) parameter choice, \(j^{th}\) participant, and \(k^{th}\) increment of \(x\)-value corresponding to either the OLS or PCA fit
 \item
   \(\alpha_i\) is the intercept for the parameter choice \(i\)
 \item
   \(s_{i}\) is the smoothing spline for the \(i^{th}\) parameter choice
 \item
-  \(x_{ijk}\) is the x-value for the \(i^{th}\) parameter choice, \(j^{th}\) participant, and \(k^{th}\) increment
+  \(x_{ijk}\) is the \(x\)-value for the \(i^{th}\) parameter choice, \(j^{th}\) participant, and \(k^{th}\) increment
 \item
-  \(p_{j} \sim N(0, \sigma^2_{participant})\) is the error due to participant variation
+  \(p_{j} \sim N(0, \sigma^2_\text{participant})\) is the error due to participant variation
 \item
   \(s_{j}\) is the random smoothing spline for each participant.
 \end{itemize}
@@ -1236,7 +1237,7 @@ This study established `You Draw It' as a method for graphical testing and reinf
 \hypertarget{prediction-of-exponential-trends}{%
 \section{Prediction of Exponential Trends}\label{prediction-of-exponential-trends}}
 
-The results from the first sub-study validated `You Draw It' as a tool for testing graphics.
+The results from the first sub-study validated `You Draw It' as a tool for testing graphics and introduced an appropriate statistical analysis method for comparing visually fitted trend lines to statistical regression results.
 This sub-study was designed to test an individual's ability to make predictions for exponentially increasing data on both the log and linear scales, addressing cognitive understanding of log scales.
 Participants were asked to draw a line using their computer mouse through the exponentially increasing trend shown on both the log and linear scale.
 
@@ -1261,10 +1262,10 @@ The data simulation procedure is described in \cref{alg:exponential-prediction-a
     \Statex \textbullet~\textbf{Input Parameters:} $\beta$ growth rate; standard deviation from exponential curve $\sigma$; sample size of points $N = 30$; domain $x_{min}$ and $x_{max}$; fitted value increment $x_{by} = 0.25$.
     \Statex \textbullet~\textbf{Output Parameters:} List of point data and line data each indicating the parameter identification, $x$ value, and corresponding simulated or fitted $y$ value.
     \State Randomly select and jitter $N = 30$ $x$-values along the domain, $x_{i=1:N}\in [0, 20]$.
-    \State Generate "good" errors, $e_{i = 1:N}$ based on $N(0,\sigma)$ by setting a constraint requiring the mean of the first $\frac{1}{3} N$ errors $< |2\sigma|.$
+    \State Generate ``good" errors, $e_{i = 1:N}$ based on $N(0,\sigma)$ by setting a constraint requiring the mean of the first $\frac{1}{3} N$ errors $< |2\sigma|.$
     \State Simulate point data based on $y_i = e^{\beta x_i + e_i}$.
     \State Fit the equation $\log(y_i) = \beta x_i$ to obtain an estimated starting value $\beta_0$. 
-    \State Obtain nonlinear least squares regression coefficient, $\hat\beta_{NLS}$, for the simulated point data fitting using the `nls` function in the base `stats` R package.
+    \State Obtain nonlinear least squares regression coefficient, $\hat\beta_{NLS}$, for the simulated point data fitting using the \texttt{nls} function in the base \texttt{stats} R package.
     \State Obtain fitted values every 0.25 increment across the domain from the nonlinear least squares regression $\hat y_{m,NLS} = e^{\hat\beta_{NLS} x_m}$.
     \State Output data list of point data and line data each indicating the parameter identification, $x$ value, and corresponding simulated or fitted $y$ value.
   \end{algorithmic}
@@ -1281,7 +1282,7 @@ Reflecting the treatment design for each plot, the y-axis was assigned to be dis
 \subsection{Results}\label{results-2}}
 
 A LOESS smoother (local regression) was fit to each user line to allow for visual inspection.
-For each participant \(l = 1,...N_{participant}\), the final data set used for analysis contained \(x_{ijklm}, y_{ijklm,drawn}, \hat y_{ijklm,loess}\), and \(\hat y_{ijklm,NLS}\) for growth rate \(i = 1,2\), points truncated \(j = 1,2\), scale \(k = 1,2\) and \(x_{ijklm}\) value for increment \(m = 1, ...,81\).
+For each participant \(l = 1,...N_\text{participant}\), the final data set used for analysis contained \(x_{ijklm}, y_{ijklm,drawn}, \hat y_{ijklm,loess}\), and \(\hat y_{ijklm,NLS}\) for growth rate \(i = 1,2\), points truncated \(j = 1,2\), scale \(k = 1,2\) and \(x_{ijklm}\) value for increment \(m = 1, ...,81\).
 \cref{fig:exponential-yloess-spaghetti-plot} displays spaghetti plots for each of the eight treatment combinations.
 The spaghetti plot with a high growth rate suggests participants underestimated the exponential trend when asked to draw a trend line on the linear scale compared to when asked to draw a trend line on the log scale.
 In particular, this suggestion is most noticeable when points are truncated at 50\% with the underestimation beginning at a later \(x\) value when points are truncated at 75\%.
@@ -1317,9 +1318,9 @@ y_{ijklm,drawn} - \hat y_{ijklm,NLS} = e_{ijklm,nls} = \tau_{ijk} + s_{ijk}(x_{i
 \item
   \(s_{ijk}\) is the smoothing spline for the \(ijk^{th}\) treatment combination
 \item
-  \(x_{ijklm}\) is the x-value for the \(l^{th}\) participant, \(m^{th}\) increment, and \(ijk^{th}\) treatment combination
+  \(x_{ijklm}\) is the \(x\)-value for the \(l^{th}\) participant, \(m^{th}\) increment, and \(ijk^{th}\) treatment combination
 \item
-  \(p_{l} \sim N(0, \sigma^2_{participant})\) is the error due to the \(l^{th}\) participant's characteristics
+  \(p_{l} \sim N(0, \sigma^2_\text{participant})\) is the error due to the \(l^{th}\) participant's characteristics
 \item
   \(s_{l}\) is the random smoothing spline for the \(l^{th}\) participant.
 \end{itemize}
@@ -1375,15 +1376,15 @@ Graph comprehension is heavily dependent on the questions being asked of the vie
 Evaluation of how viewers explore a new and complex graphic requires long-term interaction with the chart displaying the data (Becker, Moore, \& Lawrence, 2019).
 While it is difficult to obtain an accurate representation of a viewers understanding of the graphic with a fixed set of numerical estimates, three levels of graph comprehension have emerged from literature (Curcio, 1987; Friel et al., 2001; Glazer, 2011; Jolliffe, 1991; R. Wood, 1968).
 The three behaviors related to graph comprehension involve (1) literal reading of the data (elementary level), (2) reading between the data (intermediate level), and (3) reading beyond the data (advanced level).
-We present examples of questions associated with the three levels of questioning in \protect\hyperlink{lit-questioning}{Section 1.6.1}.
+We present examples of questions associated with the three levels of questioning in \protect\hyperlink{lit-questioning}{section 1.6.1}.
 For instance, if shown a line graph of the value of a certain stock over time, an elementary level question might prompt the viewer to answer, ``what was the value of stock X on June 15th?'' and an intermediate level question would extend these estimates to ask the viewer, ``over the first five days, how did the value of stock X change'' (Friel et al., 2001).
 In addition to the graph's visual features and questioning, it is important for researchers to give careful consideration to the context of the graphic on the viewers comprehension.
 
 \hypertarget{estimation-biases-1}{%
 \subsection{Estimation Biases}\label{estimation-biases-1}}
 
-Certain well-known biases such as the tendency to round to multiples of five or ten or to anchor estimates to visual cues arise from open-ended estimation tasks (Joseph KH Tan \& Benbasat, 1990).
-Viewers may anchor their estimates to grid lines or round their approximations to rounded figures due to natural preference (Godlonton et al., 2018; Myers, 1954; Joseph K. Tan, 1994).
+Certain well-known biases such as the tendency to round to multiples of five or ten or to anchor estimates to visual cues arise from open-ended estimation tasks (Tan \& Benbasat, 1990).
+Viewers may anchor their estimates to grid lines or round their approximations to rounded figures due to natural preference (Godlonton et al., 2018; Myers, 1954; Tan, 1994).
 Estimation accuracy is also affected by scale and axis labels (Dunham \& Osborne, 1991); when alternate grid lines are labeled, viewers often read unlabeled grid lines as halves (Beeby \& Taylor, 1973).
 This misrepresentation is highlighted for asymmetric scales, such as a log scale, since spatial distance does not equate to numerical or quantitative difference.
 Therefore, careful consideration must be given to the choice of scale for the graphic and how the viewer will interpret the data and information displayed.
@@ -1393,7 +1394,7 @@ Therefore, careful consideration must be given to the choice of scale for the gr
 
 Participants in this study were asked to answer six questions related to each of two contextual scenarios and an associated scatter plot shown for a total of twelve questions.
 The text for each scenario is presented below; the context of both scenarios was selected to be similar.
-Each text describes a situation in which a fictional intergalactic species is exponentially increasing in population over a time chosen to reflect the popular culture media depiction of that species (Marquand, 1983; \emph{Star trek}, 1967; \emph{Star wars}, 1977).
+Each text describes a situation in which a fictional intergalactic species is exponentially increasing in population over a time chosen to reflect the popular culture media depiction of that species (\emph{Star trek}, 1967; \emph{Star wars}, 1977, 1983).
 For simplicity, we will refer to these fictional time components as a year throughout the rest of the chapter.
 
 \begin{quote}
@@ -1402,7 +1403,7 @@ For simplicity, we will refer to these fictional time components as a year throu
 \textbf{\textit{Ewok scenario.}} Hi, we're Ewoks! We are native to the forest moon of Endor. After the Galactic Civil War, some Ewoks traveled offworld to help Rebel veterans as 'therapy Ewoks' and began to repopulate. The Ewok population After the Battle of Yavin (ABY) is illustrated in the graph. We need your help answering a few questions regarding the population of Ewoks offworld.
 \end{quote}
 
-Fictional illustrations of the figures used in context were modified from artwork by Allison Horst and included on the main page for each scenario.
+Fictional illustrations of the figures used in context were modified from artwork by Horst and included on the main page for each scenario.
 The scale of the graphic and data set displayed was randomly assigned to scenarios for each individual.
 For instance, a participant may have seen a scatter plot of data set two displayed on the linear scale paired with the Ewok scenario text and a scatter plot of data set one displayed on the log scale paired with the Tribble scenario text.
 The order of the two scenarios and their assigned data set and scale was randomly assigned to each individual.
@@ -1413,7 +1414,7 @@ We did not focus on advanced level questioning since extrapolation and interpola
 
 \begin{table}
 
-\caption{\label{tab:estimation-questions-table}Estimation Questions}
+\caption{\label{tab:estimation-questions-table}Estimation questions}
 \centering
 \begin{tabular}[t]{l>{\raggedright\arraybackslash}p{10em}>{\raggedright\arraybackslash}p{10em}}
 \toprule
@@ -1581,14 +1582,12 @@ Participant calculations and scratch work provides support that participants equ
 \textit{Sample work 1} \nonumber\\
 2048-1024 &= 1024 \nonumber \\
 1024/2 &= 512 \nonumber\\
-512+1024 &= 1536 \nonumber
-\end{align}
-\begin{align}
+512+1024 &= 1536 \nonumber\\
+\nonumber\\
 \textit{Sample work 2} \nonumber\\
 2048 + 1024 & =3072 \nonumber\\
-3072/2 & =1536 \nonumber
-\end{align}
-\begin{align}
+3072/2 & =1536 \nonumber\\
+\nonumber\\
 \textit{Sample work 3} \nonumber\\
 32768-16384&=16384  \nonumber\\
 32768-16384&=16384  \nonumber\\
@@ -1668,9 +1667,8 @@ Sample participant work below shows correct logic on both the linear and log sca
 15000 - 2500 & = 12500\nonumber\\
 \text{Scratchpad: } &\text{In 20 ABY the population of Ewoks was 2500,}\nonumber\\
                    &\text{in 40 ABY the population was 15 000,}\nonumber\\
-                   &\text{i would make a substraction}\nonumber
-\end{align}
-\begin{align}
+                   &\text{i would make a substraction}\nonumber\\
+\nonumber\\
 \textit{Sample work 5: correct logic (log)} \nonumber\\
 2048 - 1024  & = 1024 \nonumber\\
 1024 - 512   & = 512 \nonumber\\
@@ -1728,7 +1726,7 @@ Sample participant work below shows common incorrect logic on both the linear an
 14848/1536&=9.67.\nonumber
 \end{align}
 
-In particular, sample work 5 shows how the participant first estimated halfway between the log grid lines and correctly subtracted the populations for the two given years before incorrectly changing their logic to divide the two populations.
+In particular, sample work 8 shows how the participant first estimated halfway between the log grid lines and correctly subtracted the populations for the two given years before incorrectly changing their logic to divide the two populations.
 One potential source of misinterpretation of this questions might be the particular order in which participants were asked the questions.
 For example, if participants were asked to provide an estimated increase in population after having been asked Intermediate Q2 which prompts participants to provide a multiplicative change in population, they may be more likely to misinterpret Intermediate Q1.
 However, participants answering questions on the second scenario would have seen both questioning frameworks in the previous scenario context.
@@ -1767,18 +1765,16 @@ Participants may also have made this comparison on the log scale by understandin
 \textit{Sample work 9: correct logic (linear)} \nonumber\\
 17500/1400&=12.5 \nonumber\\    
 \text{Scratchpad: } & \text{same as before, but a division} \nonumber\\
-\end{align}
-\begin{align}
+\nonumber\\
 \textit{Sample work 10: correct logic (linear)} \nonumber\\
 17000-1000&=16000 \nonumber\\
-17000/1000&=17  \nonumber
-\end{align}
-\begin{align}
+17000/1000&=17  \nonumber\\
+\nonumber\\
 \textit{Sample work 11: correct logic (log)} \nonumber\\
 24/1.4&=17.14    \nonumber\\ 
 \text{Scratchpad: } & \text{around 24k tribbles were at 4540, and} \nonumber\\
                    & \text{1.4k at 4520, make a division and thats}\nonumber\\
-                   & \text{how many times (without the k)}\nonumber
+                   & \text{how many times (without the k)}\nonumber\\
 \nonumber \\
 \textit{Sample work 12: correct logic (log)} \nonumber\\                   
 2048*5&=10240 \nonumber\\   
@@ -1819,9 +1815,8 @@ Sample work below demonstrate common incorrect logic and calculations conducted 
 
 \begin{align}
 \textit{Sample work 13: incorrect logic (linear)} \nonumber\\
-23800-1100&=22700 \nonumber
-\end{align}
-\begin{align}
+23800-1100&=22700 \nonumber\\
+\nonumber\\
 \textit{Sample work 14: incorrect logic (log)} \nonumber\\
 16384-1536&=14848. \nonumber
 \end{align}
@@ -2007,7 +2002,7 @@ Two data sets were simulated with low and high exponential growth rates and show
 
 }
 
-\caption{Exponential Prediction: low growth rate, points truncated at 50\%, linear scale}\label{fig:low-10-linear}
+\caption[Exponential prediction plot (low; 50\%; linear)]{Exponential Prediction: low growth rate, points truncated at 50\%, linear scale}\label{fig:low-10-linear}
 \end{figure}
 
 \begin{figure}[tbp]
@@ -2016,7 +2011,7 @@ Two data sets were simulated with low and high exponential growth rates and show
 
 }
 
-\caption{Exponential Prediction: low growth rate, points truncated at 50\%, log scale}\label{fig:low-10-log}
+\caption[Exponential prediction plot (low; 50\%; log)]{Exponential Prediction: low growth rate, points truncated at 50\%, log scale}\label{fig:low-10-log}
 \end{figure}
 
 \begin{figure}[tbp]
@@ -2025,7 +2020,7 @@ Two data sets were simulated with low and high exponential growth rates and show
 
 }
 
-\caption{Exponential Prediction: low growth rate, points truncated at 75\%, linear scale}\label{fig:low-15-linear}
+\caption[Exponential prediction plot (low; 75\%; linear)]{Exponential Prediction: low growth rate, points truncated at 75\%, linear scale}\label{fig:low-15-linear}
 \end{figure}
 
 \begin{figure}[tbp]
@@ -2034,7 +2029,7 @@ Two data sets were simulated with low and high exponential growth rates and show
 
 }
 
-\caption{Exponential Prediction: low growth rate, points truncated at 75\%, log scale}\label{fig:low-15-log}
+\caption[Exponential prediction plot (low; 75\%; log)]{Exponential Prediction: low growth rate, points truncated at 75\%, log scale}\label{fig:low-15-log}
 \end{figure}
 
 \begin{figure}[tbp]
@@ -2043,7 +2038,7 @@ Two data sets were simulated with low and high exponential growth rates and show
 
 }
 
-\caption{Exponential Prediction: high growth rate, points truncated at 50\%, linear scale}\label{fig:high-10-linear}
+\caption[Exponential prediction plot (high; 50\%; linear)]{Exponential Prediction: high growth rate, points truncated at 50\%, linear scale}\label{fig:high-10-linear}
 \end{figure}
 
 \begin{figure}[tbp]
@@ -2052,7 +2047,7 @@ Two data sets were simulated with low and high exponential growth rates and show
 
 }
 
-\caption{Exponential Prediction: high growth rate, points truncated at 50\%, log scale}\label{fig:high-10-log}
+\caption[Exponential prediction plot (high; 50\%; log)]{Exponential Prediction: high growth rate, points truncated at 50\%, log scale}\label{fig:high-10-log}
 \end{figure}
 
 \begin{figure}[tbp]
@@ -2061,7 +2056,7 @@ Two data sets were simulated with low and high exponential growth rates and show
 
 }
 
-\caption{Exponential Prediction: high growth rate, points truncated at 75\%, linear scale}\label{fig:high-15-linear}
+\caption[Exponential prediction plot (high; 75\%; linear)]{Exponential Prediction: high growth rate, points truncated at 75\%, linear scale}\label{fig:high-15-linear}
 \end{figure}
 
 \begin{figure}[tbp]
@@ -2070,7 +2065,7 @@ Two data sets were simulated with low and high exponential growth rates and show
 
 }
 
-\caption{Exponential Prediction: high growth rate, points truncated at 75\%, log scale}\label{fig:high-15-log}
+\caption[Exponential prediction plot (high; 75\%; log)]{Exponential Prediction: high growth rate, points truncated at 75\%, log scale}\label{fig:high-15-log}
 \end{figure}
 
 \hypertarget{estimation-comparison}{%
@@ -2125,17 +2120,20 @@ dataset2 & log2 & yes & 72\\
 
 \hypertarget{refs}{}
 \begin{CSLReferences}{1}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-reddit_dataisugly}{}}%
+(n.d.-a). \emph{r/dataisugly}. reddit. Retrieved from \url{https://www.reddit.com/r/dataisugly/comments/tgn4vq/argh/}
+
+\leavevmode\vadjust pre{\hypertarget{ref-reddit_CrappyDesign}{}}%
+(n.d.-b). \emph{r/CrappyDesign}. subreddit. Retrieved from \url{https://www.reddit.com/r/CrappyDesign/comments/ast3q6/this_map_about_pet_repartition_in_europe/}
+
 \leavevmode\vadjust pre{\hypertarget{ref-aisch_cox_quealy_2015}{}}%
 Aisch, G., Cox, A., \& Quealy, K. (2015, May). You draw it: How family income predicts children's college chances. \emph{The New York Times}. The New York Times. Retrieved from \url{https://www.nytimes.com/interactive/2015/05/28/upshot/you-draw-it-how-family-income-affects-childrens-college-chances.html}
-
-\leavevmode\vadjust pre{\hypertarget{ref-allison_horst}{}}%
-Allison Horst. Artwork by allison horst. Creative Commons. Retrieved from \url{https://github.com/allisonhorst/stats-illustrations}
 
 \leavevmode\vadjust pre{\hypertarget{ref-amer2005bias}{}}%
 Amer, T. (2005). Bias due to visual illusion in the graphical presentation of accounting information. \emph{Journal of Information Systems}, \emph{19}(1), 1--18.
 
 \leavevmode\vadjust pre{\hypertarget{ref-anderson_design_1974}{}}%
-Anderson, V. L., \& McLean, R. A. (1974). \emph{Design of experiments: A realistic approach}. New York: M. Dekker.
+Anderson, V., \& McLean, R. (1974). \emph{Design of experiments: A realistic approach}. New York: M. Dekker.
 
 \leavevmode\vadjust pre{\hypertarget{ref-NYTrememberinglives}{}}%
 Barry, D., Buchanan, L., Cargill, C., Daniel, A., Delaquérière, A., Gamio, L., \ldots{} al., et. (2020, May). Remembering the 100,000 lives lost to coronavirus in america. \emph{The New York Times}. The New York Times. Retrieved from \url{https://www.nytimes.com/interactive/2020/05/24/us/us-coronavirus-deaths-100000.html}
@@ -2144,19 +2142,22 @@ Barry, D., Buchanan, L., Cargill, C., Daniel, A., Delaquérière, A., Gamio, L.,
 Bates, D., Mächler, M., Bolker, B., \& Walker, S. (2014). Fitting linear mixed-effects models using lme4. \emph{arXiv Preprint arXiv:1406.5823}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-baumer2021texts}{}}%
-Baumer, B. S., Kaplan, D. T., \& Horton, N. J. (2021). \emph{Texts in statistical science: Modern data science with r}. Chapman; Hall/CRC.
+Baumer, B., Kaplan, D., \& Horton, N. (2021). \emph{Texts in statistical science: Modern data science with r}. Chapman; Hall/CRC.
 
 \leavevmode\vadjust pre{\hypertarget{ref-bavel_using_2020}{}}%
-Bavel, J. J. V., Baicker, K., Boggio, P. S., Capraro, V., Cichocka, A., Cikara, M., \ldots{} others. (2020). Using social and behavioural science to support COVID-19 pandemic response. \emph{Nature Human Behaviour}, \emph{4}(5), 460--471.
+Bavel, J., Baicker, K., Boggio, P., Capraro, V., Cichocka, A., Cikara, M., \ldots{} others. (2020). Using social and behavioural science to support COVID-19 pandemic response. \emph{Nature Human Behaviour}, \emph{4}(5), 460--471.
 
 \leavevmode\vadjust pre{\hypertarget{ref-becker2019trackr}{}}%
-Becker, G., Moore, S. E., \& Lawrence, M. (2019). Trackr: A framework for enhancing discoverability and reproducibility of data visualizations and other artifacts in r. \emph{Journal of Computational and Graphical Statistics}, \emph{28}(3), 644--658.
+Becker, G., Moore, S., \& Lawrence, M. (2019). Trackr: A framework for enhancing discoverability and reproducibility of data visualizations and other artifacts in r. \emph{Journal of Computational and Graphical Statistics}, \emph{28}(3), 644--658.
 
 \leavevmode\vadjust pre{\hypertarget{ref-beeby1973well}{}}%
 Beeby, A., \& Taylor, H. (1973). How well can we use graphs. \emph{The Communicator of Scientific and Technical Information}, \emph{17}, 7--11.
 
 \leavevmode\vadjust pre{\hypertarget{ref-best_perception_2007}{}}%
-Best, L. A., Smith, L. D., \& Stubbs, D. A. (2007). Perception of linear and nonlinear trends: Using slope and curvature information to make trend discriminations. \emph{Perceptual and Motor Skills}, \emph{104}(3), 707--721.
+Best, L., Smith, L., \& Stubbs, D. (2007). Perception of linear and nonlinear trends: Using slope and curvature information to make trend discriminations. \emph{Perceptual and Motor Skills}, \emph{104}(3), 707--721.
+
+\leavevmode\vadjust pre{\hypertarget{ref-ryanabest_2021}{}}%
+Best, R., \& Boice, J. (2021, June). Build an NBA contender with our roster-shuffling machine. \emph{FiveThirtyEight}. Retrieved from \url{https://projects.fivethirtyeight.com/nba-trades-2021/}
 
 \leavevmode\vadjust pre{\hypertarget{ref-broersma1985graphical}{}}%
 Broersma, H., \& Molenaar, I. (1985). Graphical perception of distributional aspects of data. \emph{Computational Statistics Quarterly}, \emph{2}(1), 53--72.
@@ -2165,43 +2166,43 @@ Broersma, H., \& Molenaar, I. (1985). Graphical perception of distributional asp
 Buchanan, L., Park, H., \& Pearce, A. (2017, January). You draw it: What got better or worse during obama's presidency. \emph{The New York Times}. The New York Times. Retrieved from \url{https://www.nytimes.com/interactive/2017/01/15/us/politics/you-draw-obama-legacy.html}
 
 \leavevmode\vadjust pre{\hypertarget{ref-buja_statistical_2009}{}}%
-Buja, A., Cook, D., Hofmann, H., Lawrence, M., Lee, E.-K., Swayne, D. F., \& Wickham, H. (2009a). Statistical inference for exploratory data analysis and model diagnostics. \emph{Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences}, \emph{367}(1906), 4361--4383.
+Buja, A., Cook, D., Hofmann, H., Lawrence, M., Lee, E.-K., Swayne, D., \& Wickham, H. (2009a). Statistical inference for exploratory data analysis and model diagnostics. \emph{Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences}, \emph{367}(1906), 4361--4383.
 
 \leavevmode\vadjust pre{\hypertarget{ref-nullabor}{}}%
-Buja, A., Cook, D., Hofmann, H., Lawrence, M., Lee, E.-K., Swayne, D. F., \& Wickham, H. (2009b). Statistical inference for exploratory data analysis and model diagnostics. \emph{Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences}, \emph{367}(1906), 4361--4383.
+Buja, A., Cook, D., Hofmann, H., Lawrence, M., Lee, E.-K., Swayne, D., \& Wickham, H. (2009b). Statistical inference for exploratory data analysis and model diagnostics. \emph{Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences}, \emph{367}(1906), 4361--4383.
 
 \leavevmode\vadjust pre{\hypertarget{ref-burnmurdoch_2020}{}}%
-Burn-Murdoch, J., Nevitt, C., Tilford, C., Rininsland, A., Kao, J. S., Elliott, O., \ldots{} Stabe, M. (2020). Coronavirus tracked: Has the epidemic peaked near you? \emph{Coronavirus chart: see how your country compares}. Financial Times. Retrieved from \url{https://ig.ft.com/coronavirus-chart/?areas=eur}
+Burn-Murdoch, J., Nevitt, C., Tilford, C., Rininsland, A., Kao, J., Elliott, O., \ldots{} Stabe, M. (2020). Coronavirus tracked: Has the epidemic peaked near you? \emph{Coronavirus chart: see how your country compares}. Financial Times. Retrieved from \url{https://ig.ft.com/coronavirus-chart/?areas=eur}
 
 \leavevmode\vadjust pre{\hypertarget{ref-carpenter1998model}{}}%
-Carpenter, P. A., \& Shah, P. (1998). A model of the perceptual and conceptual processes in graph comprehension. \emph{Journal of Experimental Psychology: Applied}, \emph{4}(2), 75.
+Carpenter, P., \& Shah, P. (1998). A model of the perceptual and conceptual processes in graph comprehension. \emph{Journal of Experimental Psychology: Applied}, \emph{4}(2), 75.
 
 \leavevmode\vadjust pre{\hypertarget{ref-ciccione2021can}{}}%
 Ciccione, L., \& Dehaene, S. (2021). Can humans perform mental regression on a graph? Accuracy and bias in the perception of scatterplots. \emph{Cognitive Psychology}, \emph{128}, 101406.
 
 \leavevmode\vadjust pre{\hypertarget{ref-cleveland_graphical_1984}{}}%
-Cleveland, W. S., \& McGill, R. (1984). Graphical perception: Theory, experimentation, and application to the development of graphical methods. \emph{Journal of the American statistical association}. Taylor \& Francis.
+Cleveland, W., \& McGill, R. (1984). Graphical perception: Theory, experimentation, and application to the development of graphical methods. \emph{Journal of the American statistical association}. Taylor \& Francis.
 
 \leavevmode\vadjust pre{\hypertarget{ref-cleveland_graphical_1985}{}}%
-Cleveland, W. S., \& McGill, R. (1985). Graphical perception and graphical methods for analyzing scientific data. \emph{Science}, \emph{229}(4716), 828--833.
+Cleveland, W., \& McGill, R. (1985). Graphical perception and graphical methods for analyzing scientific data. \emph{Science}, \emph{229}(4716), 828--833.
 
 \leavevmode\vadjust pre{\hypertarget{ref-croxton1932graphic}{}}%
-Croxton, F. E., \& Stein, H. (1932). Graphic comparisons by bars, squares, circles, and cubes. \emph{Journal of the American Statistical Association}, \emph{27}(177), 54--60.
+Croxton, F., \& Stein, H. (1932). Graphic comparisons by bars, squares, circles, and cubes. \emph{Journal of the American Statistical Association}, \emph{27}(177), 54--60.
 
 \leavevmode\vadjust pre{\hypertarget{ref-croxton1927bar}{}}%
-Croxton, F. E., \& Stryker, R. E. (1927). Bar charts versus circle diagrams. \emph{Journal of the American Statistical Association}, \emph{22}(160), 473--482.
+Croxton, F., \& Stryker, R. (1927). Bar charts versus circle diagrams. \emph{Journal of the American Statistical Association}, \emph{22}(160), 473--482.
 
 \leavevmode\vadjust pre{\hypertarget{ref-curcio1987comprehension}{}}%
-Curcio, F. R. (1987). Comprehension of mathematical relationships expressed in graphs. \emph{Journal for Research in Mathematics Education}, \emph{18}(5), 382--393.
+Curcio, F. (1987). Comprehension of mathematical relationships expressed in graphs. \emph{Journal for Research in Mathematics Education}, \emph{18}(5), 382--393.
 
 \leavevmode\vadjust pre{\hypertarget{ref-dehaene2008log}{}}%
 Dehaene, S., Izard, V., Spelke, E., \& Pica, P. (2008). Log or linear? Distinct intuitions of the number scale in western and amazonian indigene cultures. \emph{Science}, \emph{320}(5880), 1217--1220.
 
 \leavevmode\vadjust pre{\hypertarget{ref-deming1943statistical}{}}%
-Deming, W. E. (1943). Statistical adjustment of data.
+Deming, W. (1943). Statistical adjustment of data.
 
 \leavevmode\vadjust pre{\hypertarget{ref-dunham1991learning}{}}%
-Dunham, P. H., \& Osborne, A. (1991). Learning how to see: Students graphing difficulties. \emph{Focus on Learning Problems in Mathematics}, \emph{13}(4), 35--49.
+Dunham, P., \& Osborne, A. (1991). Learning how to see: Students graphing difficulties. \emph{Focus on Learning Problems in Mathematics}, \emph{13}(4), 35--49.
 
 \leavevmode\vadjust pre{\hypertarget{ref-dunn1988framed}{}}%
 Dunn, R. (1988). Framed rectangle charts or statistical maps with shading: An experiment in graphical perception. \emph{The American Statistician}, \emph{42}(2), 123--129.
@@ -2225,55 +2226,58 @@ Finney, D. (1951). Subjective judgment in statistical analysis: An experimental 
 Finney, D., \& Stevens, W. (1948). A table for the calculation of working probits and weights in probit analysis. \emph{Biometrika}, \emph{35}(1/2), 191--201.
 
 \leavevmode\vadjust pre{\hypertarget{ref-forrester1990exploring}{}}%
-Forrester, M. A., Latham, J., \& Shire, B. (1990). Exploring estimation in young primary school children. \emph{Educational Psychology}, \emph{10}(4), 283--300.
+Forrester, M., Latham, J., \& Shire, B. (1990). Exploring estimation in young primary school children. \emph{Educational Psychology}, \emph{10}(4), 283--300.
 
 \leavevmode\vadjust pre{\hypertarget{ref-friel2001making}{}}%
-Friel, S. N., Curcio, F. R., \& Bright, G. W. (2001). Making sense of graphs: Critical factors influencing comprehension and instructional implications. \emph{Journal for Research in Mathematics Education}, \emph{32}(2), 124--158.
+Friel, S., Curcio, F., \& Bright, G. (2001). Making sense of graphs: Critical factors influencing comprehension and instructional implications. \emph{Journal for Research in Mathematics Education}, \emph{32}(2), 124--158.
 
 \leavevmode\vadjust pre{\hypertarget{ref-glazer2011challenges}{}}%
 Glazer, N. (2011). Challenges with graph interpretation: A review of the literature. \emph{Studies in Science Education}, \emph{47}(2), 183--210.
 
 \leavevmode\vadjust pre{\hypertarget{ref-godlonton2018anchoring}{}}%
-Godlonton, S., Hernandez, M. A., \& Murphy, M. (2018). Anchoring bias in recall data: Evidence from central america. \emph{American Journal of Agricultural Economics}, \emph{100}(2), 479--501.
+Godlonton, S., Hernandez, M., \& Murphy, M. (2018). Anchoring bias in recall data: Evidence from central america. \emph{American Journal of Agricultural Economics}, \emph{100}(2), 479--501.
 
 \leavevmode\vadjust pre{\hypertarget{ref-goldstein2021sensation}{}}%
-Goldstein, E. B., \& Cacciamani, L. (2021). \emph{Sensation and perception}. Cengage Learning.
+Goldstein, B., \& Cacciamani, L. (2021). \emph{Sensation and perception}. Cengage Learning.
 
 \leavevmode\vadjust pre{\hypertarget{ref-gordon_statistician_2015}{}}%
 Gordon, I., \& Finch, S. (2015). Statistician heal thyself: Have we lost the plot? \emph{Journal of Computational and Graphical Statistics}, \emph{24}(4), 1210--1229.
 
 \leavevmode\vadjust pre{\hypertarget{ref-graesser2014new}{}}%
-Graesser, A. C., Swamer, S. S., Baggett, W. B., \& Sell, M. A. (2014). New models of deep comprehension. In \emph{Models of understanding text} (pp. 9--40). Psychology Press.
+Graesser, A., Swamer, S., Baggett, W., \& Sell, M. (2014). New models of deep comprehension. In \emph{Models of understanding text} (pp. 9--40). Psychology Press.
 
 \leavevmode\vadjust pre{\hypertarget{ref-green2009personal}{}}%
-Green, T. M., \& Fisher, B. (2009). The personal equation of complex individual cognition during visual interface interaction. In \emph{Workshop on human-computer interaction and visualization} (pp. 38--57). Springer.
+Green, T., \& Fisher, B. (2009). The personal equation of complex individual cognition during visual interface interaction. In \emph{Workshop on human-computer interaction and visualization} (pp. 38--57). Springer.
 
 \leavevmode\vadjust pre{\hypertarget{ref-haemer_presentation_1949}{}}%
-Haemer, K. W., \& Kelley, T. L. (1949). Presentation problems: Suiting the chart to the audience: Common graphic devices classified according to ease of reading. \emph{The American Statistician}, \emph{3}(5), 11--11.
+Haemer, K., \& Kelley, T. (1949). Presentation problems: Suiting the chart to the audience: Common graphic devices classified according to ease of reading. \emph{The American Statistician}, \emph{3}(5), 11--11.
 
 \leavevmode\vadjust pre{\hypertarget{ref-heckler_student_2013}{}}%
-Heckler, A. F., Mikula, B., \& Rosenblatt, R. (2013). Student accuracy in reading logarithmic plots: The problem and how to fix it. In \emph{2013 IEEE frontiers in education conference (FIE)} (pp. 1066--1071). IEEE.
+Heckler, A., Mikula, B., \& Rosenblatt, R. (2013). Student accuracy in reading logarithmic plots: The problem and how to fix it. In \emph{2013 IEEE frontiers in education conference (FIE)} (pp. 1066--1071). IEEE.
 
 \leavevmode\vadjust pre{\hypertarget{ref-hofmann_graphical_2012}{}}%
 Hofmann, H., Follett, L., Majumder, M., \& Cook, D. (2012). Graphical tests for power comparison of competing designs. \emph{IEEE Transactions on Visualization and Computer Graphics}, \emph{18}(12), 2441--2448.
 
 \leavevmode\vadjust pre{\hypertarget{ref-hogan2003quantitative}{}}%
-Hogan, T. P., \& Brezinski, K. L. (2003). Quantitative estimation: One, two, or three abilities? \emph{Mathematical Thinking and Learning}, \emph{5}(4), 259--280.
+Hogan, T., \& Brezinski, K. (2003). Quantitative estimation: One, two, or three abilities? \emph{Mathematical Thinking and Learning}, \emph{5}(4), 259--280.
+
+\leavevmode\vadjust pre{\hypertarget{ref-allison_horst}{}}%
+Horst, A. Artwork by allison horst. Creative Commons. Retrieved from \url{https://github.com/allisonhorst/stats-illustrations}
 
 \leavevmode\vadjust pre{\hypertarget{ref-jerne1949validity}{}}%
-Jerne, N. K., \& Wood, E. C. (1949). The validity and meaning of the results of biological assays. \emph{Biometrics}, \emph{5}(4), 273--299.
+Jerne, N., \& Wood, E. (1949). The validity and meaning of the results of biological assays. \emph{Biometrics}, \emph{5}(4), 273--299.
 
 \leavevmode\vadjust pre{\hypertarget{ref-jolliffe1991assessment}{}}%
-Jolliffe, F. R. (1991). Assessment of the understanding of statistical concepts. In \emph{Proceedings of the third international conference on teaching statistics} (Vol. 1, pp. 461--466).
+Jolliffe, F. (1991). Assessment of the understanding of statistical concepts. In \emph{Proceedings of the third international conference on teaching statistics} (Vol. 1, pp. 461--466).
 
 \leavevmode\vadjust pre{\hypertarget{ref-jones_polynomial_1977}{}}%
-Jones, G. V. (1977). Polynomial perception of exponential growth.
+Jones, Gregory. (1977). Polynomial perception of exponential growth.
 
 \leavevmode\vadjust pre{\hypertarget{ref-jones2012students}{}}%
-Jones, M. G., Gardner, G. E., Taylor, A. R., Forrester, J. H., \& Andre, T. (2012). Students' accuracy of measurement estimation: Context, units, and logical thinking. \emph{School Science and Mathematics}, \emph{112}(3), 171--178.
+Jones, Gail, Gardner, G., Taylor, A., Forrester, J., \& Andre, T. (2012). Students' accuracy of measurement estimation: Context, units, and logical thinking. \emph{School Science and Mathematics}, \emph{112}(3), 171--178.
 
 \leavevmode\vadjust pre{\hypertarget{ref-joram2005children}{}}%
-Joram, E., Gabriele, A. J., Bertheau, M., Gelman, R., \& Subrahmanyam, K. (2005). Children's use of the reference point strategy for measurement estimation. \emph{Journal for Research in Mathematics Education}, \emph{36}(1), 4--23.
+Joram, E., Gabriele, A., Bertheau, M., Gelman, R., \& Subrahmanyam, K. (2005). Children's use of the reference point strategy for measurement estimation. \emph{Journal for Research in Mathematics Education}, \emph{36}(1), 4--23.
 
 \leavevmode\vadjust pre{\hypertarget{ref-katz_2017}{}}%
 Katz, J. (2017, April). You draw it: Just how bad is the drug overdose epidemic? \emph{The New York Times}. The New York Times. Retrieved from \url{https://www.nytimes.com/interactive/2017/04/14/upshot/drug-overdose-epidemic-you-draw-it.html}
@@ -2281,11 +2285,14 @@ Katz, J. (2017, April). You draw it: Just how bad is the drug overdose epidemic?
 \leavevmode\vadjust pre{\hypertarget{ref-kruskal1975visions}{}}%
 Kruskal, W. (1975). Visions of maps and graphs. In \emph{Proceedings of the international symposium on computer-assisted cartography, auto-carto II} (pp. 27--36). Citeseer.
 
+\leavevmode\vadjust pre{\hypertarget{ref-lauren_2018}{}}%
+Lauren. (2018, February). The worst graphs of 2017. \emph{Dolphins}. Animalz. Retrieved from \url{https://getdolphins.com/blog/the-worst-graphs-of-2017/}
+
 \leavevmode\vadjust pre{\hypertarget{ref-leinhardt1990functions}{}}%
-Leinhardt, G., Zaslavsky, O., \& Stein, M. K. (1990). Functions, graphs, and graphing: Tasks, learning, and teaching. \emph{Review of Educational Research}, \emph{60}(1), 1--64.
+Leinhardt, G., Zaslavsky, O., \& Stein, M. (1990). Functions, graphs, and graphing: Tasks, learning, and teaching. \emph{Review of Educational Research}, \emph{60}(1), 1--64.
 
 \leavevmode\vadjust pre{\hypertarget{ref-emmeans}{}}%
-Lenth, R. V. (2021). \emph{Emmeans: Estimated marginal means, aka least-squares means}. Retrieved from \url{https://CRAN.R-project.org/package=emmeans}
+Lenth, R. (2021). \emph{Emmeans: Estimated marginal means, aka least-squares means}. Retrieved from \url{https://CRAN.R-project.org/package=emmeans}
 
 \leavevmode\vadjust pre{\hypertarget{ref-lewandowsky_perception_1989}{}}%
 Lewandowsky, S., \& Spence, I. (1989). The perception of statistical graphs. \emph{Sociological Methods \& Research}, \emph{18}(2-3), 200--242.
@@ -2303,31 +2310,28 @@ Luraschi, J., \& Allaire, J. (2018). \emph{r2d3: Interface to 'D3' visualization
 Macdonald-Ross, M. (1977). How numbers are shown. \emph{AV Communication Review}, \emph{25}(4), 359--409.
 
 \leavevmode\vadjust pre{\hypertarget{ref-mackinnon_feedback_1991}{}}%
-MacKinnon, A. J., \& Wearing, A. J. (1991). Feedback and the forecasting of exponential change. \emph{Acta Psychologica}, \emph{76}(2), 177--191.
+MacKinnon, A., \& Wearing, A. (1991). Feedback and the forecasting of exponential change. \emph{Acta Psychologica}, \emph{76}(2), 177--191.
 
 \leavevmode\vadjust pre{\hypertarget{ref-majumder_validation_2013}{}}%
 Majumder, M., Hofmann, H., \& Cook, D. (2013). Validation of visual statistical inference, applied to linear models. \emph{Journal of the American Statistical Association}, \emph{108}(503), 942--956.
 
-\leavevmode\vadjust pre{\hypertarget{ref-star_wars2}{}}%
-Marquand, R. (Director). (1983). \emph{Star wars: Episode VI - return of the jedi}. 20th Century Fox: Lucasfilm Ltd.
-
 \leavevmode\vadjust pre{\hypertarget{ref-menge_logarithmic_2018}{}}%
-Menge, D. N., MacPherson, A. C., Bytnerowicz, T. A., Quebbeman, A. W., Schwartz, N. B., Taylor, B. N., \& Wolf, A. A. (2018). Logarithmic scales in ecological data presentation may cause misinterpretation. \emph{Nature Ecology \& Evolution}, \emph{2}(9), 1393--1402.
+Menge, D., MacPherson, A., Bytnerowicz, T., Quebbeman, A., Schwartz, N., Taylor, B., \& Wolf, A. (2018). Logarithmic scales in ecological data presentation may cause misinterpretation. \emph{Nature Ecology \& Evolution}, \emph{2}(9), 1393--1402.
 
 \leavevmode\vadjust pre{\hypertarget{ref-mosteller_eye_1981}{}}%
-Mosteller, F., Siegel, A. F., Trapido, E., \& Youtz, C. (1981). Eye fitting straight lines. \emph{The American Statistician}, \emph{35}(3), 150--152.
+Mosteller, F., Siegel, A., Trapido, E., \& Youtz, C. (1981). Eye fitting straight lines. \emph{The American Statistician}, \emph{35}(3), 150--152.
 
 \leavevmode\vadjust pre{\hypertarget{ref-myers1954accuracy}{}}%
-Myers, R. J. (1954). Accuracy of age reporting in the 1950 united states census. \emph{Journal of the American Statistical Association}, \emph{49}(268), 826--831.
+Myers, R. (1954). Accuracy of age reporting in the 1950 united states census. \emph{Journal of the American Statistical Association}, \emph{49}(268), 826--831.
 
 \leavevmode\vadjust pre{\hypertarget{ref-nieder2003coding}{}}%
-Nieder, A., \& Miller, E. K. (2003). Coding of cognitive magnitude: Compressed scaling of numerical information in the primate prefrontal cortex. \emph{Neuron}, \emph{37}(1), 149--157.
+Nieder, A., \& Miller, E. (2003). Coding of cognitive magnitude: Compressed scaling of numerical information in the primate prefrontal cortex. \emph{Neuron}, \emph{37}(1), 149--157.
 
 \leavevmode\vadjust pre{\hypertarget{ref-corpus_pkg}{}}%
-Perry, P. O. (2021). \emph{Corpus: Text corpus analysis}. Retrieved from \url{https://CRAN.R-project.org/package=corpus}
+Perry, P. (2021). \emph{Corpus: Text corpus analysis}. Retrieved from \url{https://CRAN.R-project.org/package=corpus}
 
 \leavevmode\vadjust pre{\hypertarget{ref-peterson1954accurately}{}}%
-Peterson, L. V., \& Schramm, W. (1954). How accurately are different kinds of graphs read? \emph{Audio Visual Communication Review}, 178--189.
+Peterson, L., \& Schramm, W. (1954). How accurately are different kinds of graphs read? \emph{Audio Visual Communication Review}, 178--189.
 
 \leavevmode\vadjust pre{\hypertarget{ref-global_epidemics_2021}{}}%
 Risk levels. (2021, March). \emph{Global Epidemics}. Brown School of Public Health. Retrieved from \url{https://globalepidemics.org/key-metrics-for-covid-suppression/}
@@ -2338,20 +2342,17 @@ Romano, A., Sotis, C., Dominioni, G., \& Guidi, S. (2020). The scale of COVID-19
 \leavevmode\vadjust pre{\hypertarget{ref-rost_2020}{}}%
 Rost, L. C. (2020, December). You've informed the public with visualizations about the coronavirus. Thank you. \emph{Datawrapper Blog}. Retrieved from \url{https://blog.datawrapper.de/coronavirus-data-visualization-effect-datawrapper/}
 
-\leavevmode\vadjust pre{\hypertarget{ref-ryanabest_2021}{}}%
-Ryanabest. (2021, June). Build an NBA contender with our roster-shuffling machine. \emph{FiveThirtyEight}. Retrieved from \url{https://projects.fivethirtyeight.com/nba-trades-2021/}
-
 \leavevmode\vadjust pre{\hypertarget{ref-schneeweiss2010symmetric}{}}%
-Schneeweiss, H., Komlos, J., \& Ahmad, A. S. (2010). Symmetric and asymmetric rounding: A review and some new results. \emph{AStA Advances in Statistical Analysis}, \emph{94}(3), 247--271.
+Schneeweiss, H., Komlos, J., \& Ahmad, A. (2010). Symmetric and asymmetric rounding: A review and some new results. \emph{AStA Advances in Statistical Analysis}, \emph{94}(3), 247--271.
 
 \leavevmode\vadjust pre{\hypertarget{ref-mcr_pkg}{}}%
 Schuetzenmeister, A., \& Model, F. (2021). \emph{Mcr: Method comparison regression}. Retrieved from \url{https://CRAN.R-project.org/package=mcr}
 
 \leavevmode\vadjust pre{\hypertarget{ref-shah1999graphs}{}}%
-Shah, P., Mayer, R. E., \& Hegarty, M. (1999). Graphs as aids to knowledge construction: Signaling techniques for guiding the process of graph comprehension. \emph{Journal of Educational Psychology}, \emph{91}(4), 690.
+Shah, P., Mayer, R., \& Hegarty, M. (1999). Graphs as aids to knowledge construction: Signaling techniques for guiding the process of graph comprehension. \emph{Journal of Educational Psychology}, \emph{91}(4), 690.
 
 \leavevmode\vadjust pre{\hypertarget{ref-siegler_numerical_2017}{}}%
-Siegler, R. S., \& Braithwaite, D. W. (2017). Numerical development. \emph{Annual Review of Psychology}, \emph{68}, 187--213.
+Siegler, R., \& Braithwaite, D. (2017). Numerical development. \emph{Annual Review of Psychology}, \emph{68}, 187--213.
 
 \leavevmode\vadjust pre{\hypertarget{ref-tidytext_pkg}{}}%
 Silge, J., \& Robinson, D. (2016). Tidytext: Text mining and analysis using tidy data principles in r. \emph{Journal of Open Source Software}, \emph{1}(3), 37.
@@ -2365,17 +2366,26 @@ Spence, I. (1990). Visual psychophysics of simple graphical elements. \emph{Jour
 \leavevmode\vadjust pre{\hypertarget{ref-star_wars1}{}}%
 \emph{Star wars: Episode IV -- a new hope}. (1977). 20th Century Fox.
 
+\leavevmode\vadjust pre{\hypertarget{ref-star_wars2}{}}%
+\emph{Star wars: Episode VI - return of the jedi}. (1983). 20th Century Fox.
+
+\leavevmode\vadjust pre{\hypertarget{ref-lowndes2017our}{}}%
+Stewart-Lowndes, J., Best, B., Scarborough, C., Afflerbach, J., Frazier, M., O'Hara, C., \ldots{} Halpern, B. (2017). Our path to better science in less time using open data science tools. \emph{Nature Ecology \& Evolution}, \emph{1}(6), 1--7.
+
 \leavevmode\vadjust pre{\hypertarget{ref-szafir2018good}{}}%
-Szafir, D. A. (2018). The good, the bad, and the biased: Five ways visualizations can mislead (and how to fix them). \emph{Interactions}, \emph{25}(4), 26--33.
+Szafir, D. (2018). The good, the bad, and the biased: Five ways visualizations can mislead (and how to fix them). \emph{Interactions}, \emph{25}(4), 26--33.
 
 \leavevmode\vadjust pre{\hypertarget{ref-tan1994human}{}}%
-Tan, Joseph K. (1994). Human processing of two-dimensional graphics: Information-volume concepts and effects in graph-task fit anchoring frameworks. \emph{International Journal of Human-Computer Interaction}, \emph{6}(4), 414--456.
+Tan, J. (1994). Human processing of two-dimensional graphics: Information-volume concepts and effects in graph-task fit anchoring frameworks. \emph{International Journal of Human-Computer Interaction}, \emph{6}(4), 414--456.
 
 \leavevmode\vadjust pre{\hypertarget{ref-tan1990processing}{}}%
-Tan, Joseph KH, \& Benbasat, I. (1990). Processing of graphical information: A decomposition taxonomy to match data extraction tasks and graphical representations. \emph{Information Systems Research}, 416--439.
+Tan, J., \& Benbasat, I. (1990). Processing of graphical information: A decomposition taxonomy to match data extraction tasks and graphical representations. \emph{Information Systems Research}, 416--439.
 
 \leavevmode\vadjust pre{\hypertarget{ref-teghtsoonian1965judgment}{}}%
 Teghtsoonian, M. (1965). The judgment of size. \emph{The American Journal of Psychology}, \emph{78}(3), 392--402.
+
+\leavevmode\vadjust pre{\hypertarget{ref-graphcrimes_2022}{}}%
+The US states that are the best at solving WORDLE. (2022, March). \emph{GraphCrimes}. Twitter. Retrieved from \url{https://twitter.com/GraphCrimes/status/1500314716081692676}
 
 \leavevmode\vadjust pre{\hypertarget{ref-raster_vs_svg}{}}%
 Tol. (2021). Bitmap VS SVG. Retrieved from \url{https://commons.wikimedia.org/wiki/File:Bitmap_VS_SVG.svg}
@@ -2393,10 +2403,13 @@ VanderPlas, S., \& Hofmann, H. (2015). Spatial reasoning and data displays. \emp
 VanderPlas, S., \& Hofmann, H. (2017). Clusters beat trend!? Testing feature hierarchy in statistical graphics. \emph{Journal of Computational and Graphical Statistics}, \emph{26}(2), 231--242.
 
 \leavevmode\vadjust pre{\hypertarget{ref-varshney_why_2013}{}}%
-Varshney, L. R., \& Sun, J. Z. (2013). Why do we perceive logarithmically? \emph{Significance}, \emph{10}(1), 28--31.
+Varshney, L., \& Sun, J. (2013). Why do we perceive logarithmically? \emph{Significance}, \emph{10}(1), 28--31.
 
 \leavevmode\vadjust pre{\hypertarget{ref-vessey1991cognitive}{}}%
 Vessey, I. (1991). Cognitive fit: A theory-based analysis of the graphs versus tables literature. \emph{Decision Sciences}, \emph{22}(2), 219--240.
+
+\leavevmode\vadjust pre{\hypertarget{ref-villa_2022}{}}%
+Villa, M. (2022, February). The rouble collapse against US dollar. Twitter. Retrieved from \url{https://twitter.com/emmevilla/status/1498365717720223751}
 
 \leavevmode\vadjust pre{\hypertarget{ref-vonbergmann_2021}{}}%
 Von Bergmann, J. (2021, March). Xkcd\_exponential: Public health vs scientists. \emph{mountainMath}. GitHub. Retrieved from \url{https://github.com/mountainMath/xkcd_exponential}
@@ -2405,10 +2418,10 @@ Von Bergmann, J. (2021, March). Xkcd\_exponential: Public health vs scientists. 
 Von Huhn, R. (1927). Further studies in the graphic use of circles and bars: I: A discussion of the eells' experiment. \emph{Journal of the American Statistical Association}, \emph{22}(157), 31--36.
 
 \leavevmode\vadjust pre{\hypertarget{ref-waddell2005comparisons}{}}%
-Waddell, W. J. (2005). Comparisons of thresholds for carcinogenicity on linear and logarithmic dosage scales. \emph{Human \& Experimental Toxicology}, \emph{24}(6), 325--332.
+Waddell, W. (2005). Comparisons of thresholds for carcinogenicity on linear and logarithmic dosage scales. \emph{Human \& Experimental Toxicology}, \emph{24}(6), 325--332.
 
 \leavevmode\vadjust pre{\hypertarget{ref-wagenaar_misperception_1975}{}}%
-Wagenaar, W. A., \& Sagaria, S. D. (1975). Misperception of exponential growth. \emph{Perception \& Psychophysics}, \emph{18}(6), 416--422.
+Wagenaar, W., \& Sagaria, S. (1975). Misperception of exponential growth. \emph{Perception \& Psychophysics}, \emph{18}(6), 416--422.
 
 \leavevmode\vadjust pre{\hypertarget{ref-ggplot2}{}}%
 Wickham, H. (2016). \emph{ggplot2: Elegant graphics for data analysis}. springer.
@@ -2439,6 +2452,9 @@ Wood, S. (2017). \emph{Generalized additive models: An introduction with r} (2nd
 
 \leavevmode\vadjust pre{\hypertarget{ref-mgcv2}{}}%
 Wood, S., Pya, N., \& Säfken, B. (2016). Smoothing parameter and model selection for general smooth models. \emph{Journal of the American Statistical Association}, \emph{111}(516), 1548--1563.
+
+\leavevmode\vadjust pre{\hypertarget{ref-wikipedia_x86_64}{}}%
+X86-64. (2022, April). \emph{Wikipedia}. Wikimedia Foundation. Retrieved from \url{https://en.wikipedia.org/wiki/X86-64\#/media/}
 
 \end{CSLReferences}
 

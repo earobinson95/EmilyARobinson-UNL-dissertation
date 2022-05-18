@@ -849,9 +849,7 @@ For the Degree of \nu@degree\\[3\baselineskip]
 Major: \nu@major\\[3\baselineskip]
 Under the Supervision of Professors \nu@adviser\\[3\baselineskip]
 \nu@city, \nu@state\\[1\baselineskip]
-\nu@month, \nu@year\\[3\baselineskip]
-\MakeUppercase{#1}\\
-\copyright{} \nu@year, \theauthor%z
+\nu@month, \nu@year
 \end{center}
 \thispagestyle{empty}
 \cleardoublepage

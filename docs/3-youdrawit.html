@@ -271,11 +271,10 @@ In this study, participants were asked to draw a line using their computer mouse
 <div id="a-review-of-regression-and-prediction" class="section level3 hasAnchor" number="3.1.1">
 <h3><span class="header-section-number">3.1.1</span> A Review of Regression and Prediction<a href="3-youdrawit.html#a-review-of-regression-and-prediction" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Our visual system is naturally built to look for structure and identify patterns.
-For instance, points going down from left to right indicates a negative correlation between the x and y variables.
+For instance, points going down from left to right indicates a negative correlation between the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> variables.
 In the past, manual methods have been used to compare our intuitive visual sense of patterns to those determined by statistical methods.
-Initial studies in the 20th century explored the use of fitting lines by eye through a set of points <span class="citation">(Finney, 1951; Mosteller, Siegel, Trapido, &amp; Youtz, 1981)</span>.
+Initial studies in the <span class="math inline">\(20^{th}\)</span> century explored the use of fitting lines by eye through a set of points <span class="citation">(Finney, 1951; Mosteller, Siegel, Trapido, &amp; Youtz, 1981)</span>.
 Common methods of fitting trends by eye involve maneuvering a string, black thread, or ruler until the fit is suitable, then drawing the line through the set of points.</p>
-<!-- \svp{You can change this to active voice relatively easily by saying "researchers were interested in assessing..."} -->
 <p>Researchers in <span class="citation">Finney (1951)</span> were interested in assessing the effect of stopping iterative maximum likelihood calculations after one iteration.
 Many techniques in statistical analysis are performed with the aid of iterative calculations such as Newton’s method or Fisher’s scoring.
 Guesses are made at the best estimates of certain parameters and these guesses are then used as the basis of a computation which yields a new set of approximation to the parameter estimates; this same procedure is then performed on the new parameter estimates and the computing cycle is repeated until convergence, as determined by the statistician, is reached.
@@ -326,7 +325,7 @@ Figure 3.3: New York Times ‘You Draw It’ feature; readers were asked to use 
 <h3><span class="header-section-number">3.1.2</span> Data Driven Documents<a href="3-youdrawit.html#data-driven-documents" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Major news and research organizations such as the New York Times, FiveThirtyEight, Washington Post, and the Pew Research Center create and customize graphics with Data Driven Documents (D3).
 In June 2020, the New York Times released a front page displaying figures that represent each of the 100,000 lives lost from the COVID-19 pandemic until that point in time <span class="citation">(Barry et al., 2020)</span>; this visualization was meant to bring about a visceral reaction and resonate with readers.
-During 2021 March Madness, FiveThirtyEight created a roster-shuffling machine which allowed readers to build their own NBA contender through interactivity <span class="citation">(Ryanabest, 2021)</span>.
+During 2021 March Madness, FiveThirtyEight created a roster-shuffling machine which allowed readers to build their own NBA contender through interactivity <span class="citation">(R. Best &amp; Boice, 2021)</span>.
 Data Driven Documents (D3) is an open-source JavaScript based graphing framework created by Mike Bostock during his time working on graphics at the New York Times.
 <!-- Although the theoretical consider D3 the plotting framework for JavaScript equivalent to the `ggplot2` package in R [@ggplot2]. -->
 <!-- \svp{eek, that makes me squirm. D3 is not a grammar-of-graphics approach. It is a nice plotting framework though.} -->
@@ -418,7 +417,7 @@ Figure 3.7: Comparison between an OLS regression equation which minimizes the ve
 </p>
 </div>
 <!-- To calculate the first principal component fit: https://benediktehinger.de/blog/science/scatterplots-regression-lines-and-the-first-principal-component/ -->
-<p>For each participant, the final data set used for analysis contains <span class="math inline">\(x_{ijk}, y_{ijk,drawn}, \hat y_{ijk,OLS}\)</span>, and <span class="math inline">\(\hat y_{ijk,PCA}\)</span> for parameter choice <span class="math inline">\(i = 1,2,3,4\)</span>, <span class="math inline">\(j = 1,...N_{participant}\)</span>, and <span class="math inline">\(x_{ijk}\)</span> value <span class="math inline">\(k = 1, ...,4 x_{max} + 1\)</span>.
+<p>For each participant, the final data set used for analysis contains <span class="math inline">\(x_{ijk}, y_{ijk,drawn}, \hat y_{ijk,OLS}\)</span>, and <span class="math inline">\(\hat y_{ijk,PCA}\)</span> for parameter choice <span class="math inline">\(i = 1,2,3,4\)</span>, <span class="math inline">\(j = 1,...N_\text{participant}\)</span>, and <span class="math inline">\(x_{ijk}\)</span> value <span class="math inline">\(k = 1, ...,4 x_{max} + 1\)</span>.
 Using both a linear mixed model (LMM) and a generalized additive mixed model (GAMM), comparisons of vertical residuals in relation to the OLS fitted values (<span class="math inline">\(e_{ijk,OLS} = y_{ijk,drawn} - \hat y_{ijk,OLS}\)</span>) and PCA fitted values (<span class="math inline">\(e_{ijk,PCA} = y_{ijk,drawn} - \hat y_{ijk,PCA}\)</span>) were made across the domain.
 displays an example of all three fitted trend lines for parameter choice F.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:eyefitting-example-plot"></span>
@@ -435,15 +434,15 @@ y_{ijk,drawn} - \hat y_{ijk,fit} = e_{ijk,fit} = \left[\gamma_0 + \alpha_i\right
 \end{equation}\]</span>
 where</p>
 <ul>
-<li><span class="math inline">\(y_{ijk,drawn}\)</span> is the drawn y-value for the <span class="math inline">\(i^{th}\)</span> parameter choice, <span class="math inline">\(j^{th}\)</span> participant, and <span class="math inline">\(k^{th}\)</span> increment of x-value</li>
-<li><span class="math inline">\(\hat y_{ijk,fit}\)</span> is the fitted y-value for the <span class="math inline">\(i^{th}\)</span> parameter choice, <span class="math inline">\(j^{th}\)</span> participant, and <span class="math inline">\(k^{th}\)</span> increment of x-value corresponding to either the OLS or PCA fit</li>
-<li><span class="math inline">\(e_{ijk,fit}\)</span> is the residual between the drawn and fitted y-values for the <span class="math inline">\(i^{th}\)</span> parameter choice, <span class="math inline">\(j^{th}\)</span> participant, and <span class="math inline">\(k^{th}\)</span> increment of x-value corresponding to either the OLS or PCA fit</li>
+<li><span class="math inline">\(y_{ijk,drawn}\)</span> is the drawn y-value for the <span class="math inline">\(i^{th}\)</span> parameter choice, <span class="math inline">\(j^{th}\)</span> participant, and <span class="math inline">\(k^{th}\)</span> increment of <span class="math inline">\(x\)</span>-value</li>
+<li><span class="math inline">\(\hat y_{ijk,fit}\)</span> is the fitted y-value for the <span class="math inline">\(i^{th}\)</span> parameter choice, <span class="math inline">\(j^{th}\)</span> participant, and <span class="math inline">\(k^{th}\)</span> increment of <span class="math inline">\(x\)</span>-value corresponding to either the OLS or PCA fit</li>
+<li><span class="math inline">\(e_{ijk,fit}\)</span> is the residual between the drawn and fitted y-values for the <span class="math inline">\(i^{th}\)</span> parameter choice, <span class="math inline">\(j^{th}\)</span> participant, and <span class="math inline">\(k^{th}\)</span> increment of <span class="math inline">\(x\)</span>-value corresponding to either the OLS or PCA fit</li>
 <li><span class="math inline">\(\gamma_0\)</span> is the overall intercept</li>
 <li><span class="math inline">\(\alpha_i\)</span> is the effect of the <span class="math inline">\(i^{th}\)</span> parameter choice (F, S, V, N) on the intercept</li>
 <li><span class="math inline">\(\gamma_1\)</span> is the overall slope for <span class="math inline">\(x\)</span></li>
 <li><span class="math inline">\(\gamma_{2i}\)</span> is the effect of the parameter choice on the slope</li>
-<li><span class="math inline">\(x_{ijk}\)</span> is the x-value for the <span class="math inline">\(i^{th}\)</span> parameter choice, <span class="math inline">\(j^{th}\)</span> participant, and <span class="math inline">\(k^{th}\)</span> increment</li>
-<li><span class="math inline">\(p_{j} \sim N(0, \sigma^2_{participant})\)</span> is the random error due to the <span class="math inline">\(j^{th}\)</span> participant’s characteristics</li>
+<li><span class="math inline">\(x_{ijk}\)</span> is the <span class="math inline">\(x\)</span>-value for the <span class="math inline">\(i^{th}\)</span> parameter choice, <span class="math inline">\(j^{th}\)</span> participant, and <span class="math inline">\(k^{th}\)</span> increment</li>
+<li><span class="math inline">\(p_{j} \sim N(0, \sigma^2_\text{participant})\)</span> is the random error due to the <span class="math inline">\(j^{th}\)</span> participant’s characteristics</li>
 <li><span class="math inline">\(\epsilon_{ijk} \sim N(0, \sigma^2)\)</span> is the residual error.</li>
 </ul>
 <p>Eliminating the linear trend constraint, the <code>bam</code> function in the <code>mgcv</code> package <span class="citation">(S. Wood, 2003, 2004, 2011, 2017; S. Wood, Pya, &amp; Säfken, 2016)</span> is used to fit a GAMM separately to the OLS and PCA residuals to allow for estimation of smoothing splines.
@@ -455,13 +454,13 @@ y_{ijk, drawn} - \hat y_{ijk, fit} = e_{ijk,fit} = \alpha_i + s_{i}(x_{ijk}) + p
 \end{equation}\]</span>
 where</p>
 <ul>
-<li><span class="math inline">\(y_{ijk,drawn}\)</span> is the drawn y-value for the <span class="math inline">\(i^{th}\)</span> parameter choice, <span class="math inline">\(j^{th}\)</span> participant, and <span class="math inline">\(k^{th}\)</span> increment of x-value</li>
-<li><span class="math inline">\(\hat y_{ijk,fit}\)</span> is the fitted y-value for the <span class="math inline">\(i^{th}\)</span> parameter choice, <span class="math inline">\(j^{th}\)</span> participant, and <span class="math inline">\(k^{th}\)</span> increment of x-value corresponding to either the OLS or PCA fit</li>
-<li><span class="math inline">\(e_{ijk,fit}\)</span> is the residual between the drawn and fitted y-values for the <span class="math inline">\(i^{th}\)</span> parameter choice, <span class="math inline">\(j^{th}\)</span> participant, and <span class="math inline">\(k^{th}\)</span> increment of x-value corresponding to either the OLS or PCA fit</li>
+<li><span class="math inline">\(y_{ijk,drawn}\)</span> is the drawn y-value for the <span class="math inline">\(i^{th}\)</span> parameter choice, <span class="math inline">\(j^{th}\)</span> participant, and <span class="math inline">\(k^{th}\)</span> increment of <span class="math inline">\(x\)</span>-value</li>
+<li><span class="math inline">\(\hat y_{ijk,fit}\)</span> is the fitted y-value for the <span class="math inline">\(i^{th}\)</span> parameter choice, <span class="math inline">\(j^{th}\)</span> participant, and <span class="math inline">\(k^{th}\)</span> increment of <span class="math inline">\(x\)</span>-value corresponding to either the OLS or PCA fit</li>
+<li><span class="math inline">\(e_{ijk,fit}\)</span> is the residual between the drawn and fitted y-values for the <span class="math inline">\(i^{th}\)</span> parameter choice, <span class="math inline">\(j^{th}\)</span> participant, and <span class="math inline">\(k^{th}\)</span> increment of <span class="math inline">\(x\)</span>-value corresponding to either the OLS or PCA fit</li>
 <li><span class="math inline">\(\alpha_i\)</span> is the intercept for the parameter choice <span class="math inline">\(i\)</span></li>
 <li><span class="math inline">\(s_{i}\)</span> is the smoothing spline for the <span class="math inline">\(i^{th}\)</span> parameter choice</li>
-<li><span class="math inline">\(x_{ijk}\)</span> is the x-value for the <span class="math inline">\(i^{th}\)</span> parameter choice, <span class="math inline">\(j^{th}\)</span> participant, and <span class="math inline">\(k^{th}\)</span> increment</li>
-<li><span class="math inline">\(p_{j} \sim N(0, \sigma^2_{participant})\)</span> is the error due to participant variation</li>
+<li><span class="math inline">\(x_{ijk}\)</span> is the <span class="math inline">\(x\)</span>-value for the <span class="math inline">\(i^{th}\)</span> parameter choice, <span class="math inline">\(j^{th}\)</span> participant, and <span class="math inline">\(k^{th}\)</span> increment</li>
+<li><span class="math inline">\(p_{j} \sim N(0, \sigma^2_\text{participant})\)</span> is the error due to participant variation</li>
 <li><span class="math inline">\(s_{j}\)</span> is the random smoothing spline for each participant.</li>
 </ul>
 <p> and show the estimated trends of residuals (vertical deviation of participant drawn points from both the OLS and PCA fitted points) as modeled by a LMM and GAMM respectively.
@@ -486,7 +485,7 @@ Figure 3.10: Estimated trends of residuals (vertical deviation of participant dr
 </div>
 <div id="prediction-of-exponential-trends" class="section level2 hasAnchor" number="3.4">
 <h2><span class="header-section-number">3.4</span> Prediction of Exponential Trends<a href="3-youdrawit.html#prediction-of-exponential-trends" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The results from the first sub-study validated ‘You Draw It’ as a tool for testing graphics.
+<p>The results from the first sub-study validated ‘You Draw It’ as a tool for testing graphics and introduced an appropriate statistical analysis method for comparing visually fitted trend lines to statistical regression results.
 This sub-study was designed to test an individual’s ability to make predictions for exponentially increasing data on both the log and linear scales, addressing cognitive understanding of log scales.
 Participants were asked to draw a line using their computer mouse through the exponentially increasing trend shown on both the log and linear scale.</p>
 <div id="data-generation-2" class="section level3 hasAnchor" number="3.4.1">
@@ -513,7 +512,7 @@ Reflecting the treatment design for each plot, the y-axis was assigned to be dis
 <div id="results-2" class="section level3 hasAnchor" number="3.4.2">
 <h3><span class="header-section-number">3.4.2</span> Results<a href="3-youdrawit.html#results-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A LOESS smoother (local regression) was fit to each user line to allow for visual inspection.
-For each participant <span class="math inline">\(l = 1,...N_{participant}\)</span>, the final data set used for analysis contained <span class="math inline">\(x_{ijklm}, y_{ijklm,drawn}, \hat y_{ijklm,loess}\)</span>, and <span class="math inline">\(\hat y_{ijklm,NLS}\)</span> for growth rate <span class="math inline">\(i = 1,2\)</span>, points truncated <span class="math inline">\(j = 1,2\)</span>, scale <span class="math inline">\(k = 1,2\)</span> and <span class="math inline">\(x_{ijklm}\)</span> value for increment <span class="math inline">\(m = 1, ...,81\)</span>.
+For each participant <span class="math inline">\(l = 1,...N_\text{participant}\)</span>, the final data set used for analysis contained <span class="math inline">\(x_{ijklm}, y_{ijklm,drawn}, \hat y_{ijklm,loess}\)</span>, and <span class="math inline">\(\hat y_{ijklm,NLS}\)</span> for growth rate <span class="math inline">\(i = 1,2\)</span>, points truncated <span class="math inline">\(j = 1,2\)</span>, scale <span class="math inline">\(k = 1,2\)</span> and <span class="math inline">\(x_{ijklm}\)</span> value for increment <span class="math inline">\(m = 1, ...,81\)</span>.
 displays spaghetti plots for each of the eight treatment combinations.
 The spaghetti plot with a high growth rate suggests participants underestimated the exponential trend when asked to draw a trend line on the linear scale compared to when asked to draw a trend line on the log scale.
 In particular, this suggestion is most noticeable when points are truncated at 50% with the underestimation beginning at a later <span class="math inline">\(x\)</span> value when points are truncated at 75%.</p>
@@ -537,8 +536,8 @@ where</p>
 <li><span class="math inline">\(e_{ijklm,NLS}\)</span> is the residual between the drawn y-value and fitted y-value for the <span class="math inline">\(l^{th}\)</span> participant, <span class="math inline">\(m^{th}\)</span> increment, and <span class="math inline">\(ijk^{th}\)</span> treatment combination</li>
 <li><span class="math inline">\(\tau_{ijk}\)</span> is the intercept for the <span class="math inline">\(i^{th}\)</span> growth rate, <span class="math inline">\(j^{th}\)</span> point truncation, and <span class="math inline">\(k^{th}\)</span> scale treatment combination</li>
 <li><span class="math inline">\(s_{ijk}\)</span> is the smoothing spline for the <span class="math inline">\(ijk^{th}\)</span> treatment combination</li>
-<li><span class="math inline">\(x_{ijklm}\)</span> is the x-value for the <span class="math inline">\(l^{th}\)</span> participant, <span class="math inline">\(m^{th}\)</span> increment, and <span class="math inline">\(ijk^{th}\)</span> treatment combination</li>
-<li><span class="math inline">\(p_{l} \sim N(0, \sigma^2_{participant})\)</span> is the error due to the <span class="math inline">\(l^{th}\)</span> participant’s characteristics</li>
+<li><span class="math inline">\(x_{ijklm}\)</span> is the <span class="math inline">\(x\)</span>-value for the <span class="math inline">\(l^{th}\)</span> participant, <span class="math inline">\(m^{th}\)</span> increment, and <span class="math inline">\(ijk^{th}\)</span> treatment combination</li>
+<li><span class="math inline">\(p_{l} \sim N(0, \sigma^2_\text{participant})\)</span> is the error due to the <span class="math inline">\(l^{th}\)</span> participant’s characteristics</li>
 <li><span class="math inline">\(s_{l}\)</span> is the random smoothing spline for the <span class="math inline">\(l^{th}\)</span> participant.</li>
 </ul>
 <p> shows the estimated trends of the residuals (vertical deviation of participant drawn points from NLS fitted points) as modeled by the GAMM.

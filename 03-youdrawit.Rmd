@@ -64,12 +64,11 @@ In this study, participants were asked to draw a line using their computer mouse
 ### A Review of Regression and Prediction
 
 Our visual system is naturally built to look for structure and identify patterns. 
-For instance, points going down from left to right indicates a negative correlation between the x and y variables. 
+For instance, points going down from left to right indicates a negative correlation between the $x$ and $y$ variables. 
 In the past, manual methods have been used to compare our intuitive visual sense of patterns to those determined by statistical methods.
-Initial studies in the 20th century explored the use of fitting lines by eye through a set of points [@finney_subjective_1951; @mosteller_eye_1981]. 
+Initial studies in the $20^{th}$ century explored the use of fitting lines by eye through a set of points [@finney_subjective_1951; @mosteller_eye_1981]. 
 Common methods of fitting trends by eye involve maneuvering a string, black thread, or ruler until the fit is suitable, then drawing the line through the set of points. 
 
-<!-- \svp{You can change this to active voice relatively easily by saying "researchers were interested in assessing..."} -->
 Researchers in @finney_subjective_1951 were interested in assessing the effect of stopping iterative maximum likelihood calculations after one iteration. 
 Many techniques in statistical analysis are performed with the aid of iterative calculations such as Newton's method or Fisher's scoring. 
 Guesses are made at the best estimates of certain parameters and these guesses are then used as the basis of a computation which yields a new set of approximation to the parameter estimates; this same procedure is then performed on the new parameter estimates and the computing cycle is repeated until convergence, as determined by the statistician, is reached. 
@@ -197,9 +196,9 @@ The data simulation procedure is described in \cref{alg:eyefitting-algorithm}.
     \Statex \textbullet~\textbf{Output Parameters:} List of point data and line data each indicating the parameter identification, $x$ value, and corresponding simulated or fitted $y$ value.
     \State Randomly select and jitter $N = 30$ $x$ values along the domain, $x_{i=1:N}\in [x_{min}, x_{max}]$.
     \State Determine the $y$-intercept, $\beta_0$, at $x = 0$ from the provided slope ($\beta_1$) and $y$ value at the mean of $x$ ($y_{\bar{x}}$) using point-slope equation of a line.
-    \State Generate "good" errors, $e_{i = 1:N}$ based on $N(0,\sigma)$ by setting a constraint requiring the mean of the first $\frac{1}{3}\text{N}$ errors $< |2\sigma|.$
+    \State Generate ``good" errors, $e_{i = 1:N}$ based on $N(0,\sigma)$ by setting a constraint requiring the mean of the first $\frac{1}{3}\text{N}$ errors $< |2\sigma|.$
     \State Simulate point data based on $y_i = \beta_0 + \beta_1 x_i + e_i$
-    \State Obtain ordinary least squares regression coefficients, $\hat\beta_0$ and $\hat\beta_1$, for the simulated point data using the `lm` function in the `stats` package in base R.
+    \State Obtain ordinary least squares regression coefficients, $\hat\beta_0$ and $\hat\beta_1$, for the simulated point data using the \texttt{lm} function in the \texttt{stats} package in base R.
     \State Obtain fitted values every 0.25 increment across the domain from the ordinary least squares regression $\hat y_{k,OLS} = \hat\beta_{0,OLS} + \hat\beta_{1,OLS} x_k$.
     \State Output data list of point data and line data each indicating the parameter identification, $x$ value, and corresponding simulated or fitted $y$ value.
   \end{algorithmic}
@@ -336,7 +335,7 @@ ols_pca_plot
 
 <!-- To calculate the first principal component fit: https://benediktehinger.de/blog/science/scatterplots-regression-lines-and-the-first-principal-component/ -->
 
-For each participant, the final data set used for analysis contains $x_{ijk}, y_{ijk,drawn}, \hat y_{ijk,OLS}$, and $\hat y_{ijk,PCA}$ for parameter choice $i = 1,2,3,4$, $j = 1,...N_{participant}$, and $x_{ijk}$ value $k = 1, ...,4 x_{max} + 1$. 
+For each participant, the final data set used for analysis contains $x_{ijk}, y_{ijk,drawn}, \hat y_{ijk,OLS}$, and $\hat y_{ijk,PCA}$ for parameter choice $i = 1,2,3,4$, $j = 1,...N_\text{participant}$, and $x_{ijk}$ value $k = 1, ...,4 x_{max} + 1$. 
 Using both a linear mixed model (LMM) and a generalized additive mixed model (GAMM), comparisons of vertical residuals in relation to the OLS fitted values ($e_{ijk,OLS} = y_{ijk,drawn} - \hat y_{ijk,OLS}$) and PCA fitted values ($e_{ijk,PCA} = y_{ijk,drawn} - \hat y_{ijk,PCA}$) were made across the domain.
 \cref{fig:eyefitting-example-plot} displays an example of all three fitted trend lines for parameter choice F.
 
@@ -380,15 +379,15 @@ y_{ijk,drawn} - \hat y_{ijk,fit} = e_{ijk,fit} = \left[\gamma_0 + \alpha_i\right
 \end{equation}
 \noindent where
 
-+ $y_{ijk,drawn}$ is the drawn y-value for the $i^{th}$ parameter choice, $j^{th}$ participant, and $k^{th}$ increment of x-value
-+ $\hat y_{ijk,fit}$ is the fitted y-value for the $i^{th}$ parameter choice, $j^{th}$ participant, and $k^{th}$ increment of x-value corresponding to either the OLS or PCA fit
-+ $e_{ijk,fit}$ is the residual between the drawn and fitted y-values for the $i^{th}$ parameter choice, $j^{th}$ participant, and $k^{th}$ increment of x-value corresponding to either the OLS or PCA fit
++ $y_{ijk,drawn}$ is the drawn y-value for the $i^{th}$ parameter choice, $j^{th}$ participant, and $k^{th}$ increment of $x$-value
++ $\hat y_{ijk,fit}$ is the fitted y-value for the $i^{th}$ parameter choice, $j^{th}$ participant, and $k^{th}$ increment of $x$-value corresponding to either the OLS or PCA fit
++ $e_{ijk,fit}$ is the residual between the drawn and fitted y-values for the $i^{th}$ parameter choice, $j^{th}$ participant, and $k^{th}$ increment of $x$-value corresponding to either the OLS or PCA fit
 + $\gamma_0$ is the overall intercept
 + $\alpha_i$ is the effect of the $i^{th}$ parameter choice (F, S, V, N) on the intercept
 + $\gamma_1$ is the overall slope for $x$
 + $\gamma_{2i}$ is the effect of the parameter choice on the slope
-+ $x_{ijk}$ is the x-value for the $i^{th}$ parameter choice, $j^{th}$ participant, and $k^{th}$ increment
-+ $p_{j} \sim N(0, \sigma^2_{participant})$ is the random error due to the $j^{th}$ participant's characteristics
++ $x_{ijk}$ is the $x$-value for the $i^{th}$ parameter choice, $j^{th}$ participant, and $k^{th}$ increment
++ $p_{j} \sim N(0, \sigma^2_\text{participant})$ is the random error due to the $j^{th}$ participant's characteristics
 + $\epsilon_{ijk} \sim N(0, \sigma^2)$ is the residual error.
 
 Eliminating the linear trend constraint, the `bam` function in the `mgcv` package [@mgcv1; @mgcv2; @mgcv3; @mgcv4; @mgcv5] is used to fit a GAMM separately to the OLS and PCA residuals to allow for estimation of smoothing splines.
@@ -400,13 +399,13 @@ y_{ijk, drawn} - \hat y_{ijk, fit} = e_{ijk,fit} = \alpha_i + s_{i}(x_{ijk}) + p
 \end{equation}
 \noindent where
 
-+ $y_{ijk,drawn}$ is the drawn y-value for the $i^{th}$ parameter choice, $j^{th}$ participant, and $k^{th}$ increment of x-value
-+ $\hat y_{ijk,fit}$ is the fitted y-value for the $i^{th}$ parameter choice, $j^{th}$ participant, and $k^{th}$ increment of x-value corresponding to either the OLS or PCA fit
-+ $e_{ijk,fit}$ is the residual between the drawn and fitted y-values for the $i^{th}$ parameter choice, $j^{th}$ participant, and $k^{th}$ increment of x-value corresponding to either the OLS or PCA fit
++ $y_{ijk,drawn}$ is the drawn y-value for the $i^{th}$ parameter choice, $j^{th}$ participant, and $k^{th}$ increment of $x$-value
++ $\hat y_{ijk,fit}$ is the fitted y-value for the $i^{th}$ parameter choice, $j^{th}$ participant, and $k^{th}$ increment of $x$-value corresponding to either the OLS or PCA fit
++ $e_{ijk,fit}$ is the residual between the drawn and fitted y-values for the $i^{th}$ parameter choice, $j^{th}$ participant, and $k^{th}$ increment of $x$-value corresponding to either the OLS or PCA fit
 + $\alpha_i$ is the intercept for the parameter choice $i$
 + $s_{i}$ is the smoothing spline for the $i^{th}$ parameter choice
-+ $x_{ijk}$ is the x-value for the $i^{th}$ parameter choice, $j^{th}$ participant, and $k^{th}$ increment
-+ $p_{j} \sim N(0, \sigma^2_{participant})$ is the error due to participant variation
++ $x_{ijk}$ is the $x$-value for the $i^{th}$ parameter choice, $j^{th}$ participant, and $k^{th}$ increment
++ $p_{j} \sim N(0, \sigma^2_\text{participant})$ is the error due to participant variation
 + $s_{j}$ is the random smoothing spline for each participant.
 
 \cref{fig:eyefitting-lmer-residualplots} and \cref{fig:eyefitting-gamm-residualplots} show the estimated trends of residuals (vertical deviation of participant drawn points from both the OLS and PCA fitted points) as modeled by a LMM and GAMM respectively. 
@@ -500,7 +499,7 @@ eyefitting_gamm_plot
 
 ## Prediction of Exponential Trends
 
-The results from the first sub-study validated 'You Draw It' as a tool for testing graphics. 
+The results from the first sub-study validated 'You Draw It' as a tool for testing graphics and introduced an appropriate statistical analysis method for comparing visually fitted trend lines to statistical regression results.
 This sub-study was designed to test an individual's ability to make predictions for exponentially increasing data on both the log and linear scales, addressing cognitive understanding of log scales.
 Participants were asked to draw a line using their computer mouse through the exponentially increasing trend shown on both the log and linear scale. 
 
@@ -524,10 +523,10 @@ The data simulation procedure is described in \cref{alg:exponential-prediction-a
     \Statex \textbullet~\textbf{Input Parameters:} $\beta$ growth rate; standard deviation from exponential curve $\sigma$; sample size of points $N = 30$; domain $x_{min}$ and $x_{max}$; fitted value increment $x_{by} = 0.25$.
     \Statex \textbullet~\textbf{Output Parameters:} List of point data and line data each indicating the parameter identification, $x$ value, and corresponding simulated or fitted $y$ value.
     \State Randomly select and jitter $N = 30$ $x$-values along the domain, $x_{i=1:N}\in [0, 20]$.
-    \State Generate "good" errors, $e_{i = 1:N}$ based on $N(0,\sigma)$ by setting a constraint requiring the mean of the first $\frac{1}{3} N$ errors $< |2\sigma|.$
+    \State Generate ``good" errors, $e_{i = 1:N}$ based on $N(0,\sigma)$ by setting a constraint requiring the mean of the first $\frac{1}{3} N$ errors $< |2\sigma|.$
     \State Simulate point data based on $y_i = e^{\beta x_i + e_i}$.
     \State Fit the equation $\log(y_i) = \beta x_i$ to obtain an estimated starting value $\beta_0$. 
-    \State Obtain nonlinear least squares regression coefficient, $\hat\beta_{NLS}$, for the simulated point data fitting using the `nls` function in the base `stats` R package.
+    \State Obtain nonlinear least squares regression coefficient, $\hat\beta_{NLS}$, for the simulated point data fitting using the \texttt{nls} function in the base \texttt{stats} R package.
     \State Obtain fitted values every 0.25 increment across the domain from the nonlinear least squares regression $\hat y_{m,NLS} = e^{\hat\beta_{NLS} x_m}$.
     \State Output data list of point data and line data each indicating the parameter identification, $x$ value, and corresponding simulated or fitted $y$ value.
   \end{algorithmic}
@@ -544,7 +543,7 @@ Reflecting the treatment design for each plot, the y-axis was assigned to be dis
 ### Results
 
 A LOESS smoother (local regression) was fit to each user line to allow for visual inspection.
-For each participant $l = 1,...N_{participant}$, the final data set used for analysis contained $x_{ijklm}, y_{ijklm,drawn}, \hat y_{ijklm,loess}$, and $\hat y_{ijklm,NLS}$ for growth rate $i = 1,2$, points truncated $j = 1,2$, scale $k = 1,2$ and $x_{ijklm}$ value for increment $m = 1, ...,81$. 
+For each participant $l = 1,...N_\text{participant}$, the final data set used for analysis contained $x_{ijklm}, y_{ijklm,drawn}, \hat y_{ijklm,loess}$, and $\hat y_{ijklm,NLS}$ for growth rate $i = 1,2$, points truncated $j = 1,2$, scale $k = 1,2$ and $x_{ijklm}$ value for increment $m = 1, ...,81$. 
 \cref{fig:exponential-yloess-spaghetti-plot} displays spaghetti plots for each of the eight treatment combinations.
 The spaghetti plot with a high growth rate suggests participants underestimated the exponential trend when asked to draw a trend line on the linear scale compared to when asked to draw a trend line on the log scale.
 In particular, this suggestion is most noticeable when points are truncated at 50\% with the underestimation beginning at a later $x$ value when points are truncated at 75\%. 
@@ -583,8 +582,8 @@ y_{ijklm,drawn} - \hat y_{ijklm,NLS} = e_{ijklm,nls} = \tau_{ijk} + s_{ijk}(x_{i
 + $e_{ijklm,NLS}$ is the residual between the drawn y-value and fitted y-value for the $l^{th}$ participant, $m^{th}$ increment, and $ijk^{th}$ treatment combination 
 + $\tau_{ijk}$ is the intercept for the $i^{th}$ growth rate, $j^{th}$ point truncation, and $k^{th}$ scale treatment combination
 + $s_{ijk}$ is the smoothing spline for the $ijk^{th}$ treatment combination
-+ $x_{ijklm}$ is the x-value for the $l^{th}$ participant, $m^{th}$ increment, and $ijk^{th}$ treatment combination 
-+ $p_{l} \sim N(0, \sigma^2_{participant})$ is the error due to the $l^{th}$ participant's characteristics 
++ $x_{ijklm}$ is the $x$-value for the $l^{th}$ participant, $m^{th}$ increment, and $ijk^{th}$ treatment combination 
++ $p_{l} \sim N(0, \sigma^2_\text{participant})$ is the error due to the $l^{th}$ participant's characteristics 
 + $s_{l}$ is the random smoothing spline for the $l^{th}$ participant.
 
 \cref{fig:exponential-prediction-gamm-preds} shows the estimated trends of the residuals (vertical deviation of participant drawn points from NLS fitted points) as modeled by the GAMM. 
