@@ -154,7 +154,7 @@ knitr::include_graphics("images/misleading-graphics-multiple-issues-pet-ownershi
 This graphic was highly misleading in communicating the state of the pandemic due to the ordering along the $x$-axis.
 Notice the case count for April $17^{th}$ appears to the right of April $19^{th}$, and that the order of the counties has been selected so that the case counts are monotonically decreasing for each day of reporting.
 The appearance of this graphic leads viewers to believe COVID cases are decreasing.
-Shortly after the graphic was released, the governor's office made a statement that in future charts, chronological order would be used to display time due to public demand. While both examples were misleading due to axis labels and scales, other issues such as incomplete data and partitions that do not add to a whole can lead to misrepresentation of information.
+Shortly after the graphic was released, the governor's office made a statement that in future charts, chronological order would be used to display time due to public demand.
 
 ```{r covid-19-reporting, fig.cap = "COVID-19 reporting", out.width="100%"}
 knitr::include_graphics("images/covid-ga-recreation.jpg")
@@ -166,7 +166,7 @@ The authors rated 39% of the 97 graphs sampled as poor, indicating there is stil
 More startling is the fact that the source of the graphic from an applied science or a graphic from statistics had no effect on the quality of the graphic. 
 
 Although statistical graphics have become widely used and valued in science, business, and in many other aspects of life, we may be too accepting of easy-to-create, default data displays, using them without critically questioning the data and/or how effective the display is at displaying the data. Attempts to improve the creation and use of charts have been ongoing since the early $20^{th}$ century [@eells1926relative; @croxton1927bar; @von1927further; @croxton1932graphic]. 
-We address the ways in which researchers use experimentation to test statistical graphics in order to establish guidelines and improve graphics in [Section 1.4](#testing-statistical-graphics).
+We address the ways in which researchers use experimentation to test statistical graphics in order to establish guidelines and improve graphics in [section 1.4](#testing-statistical-graphics).
 In efforts to achieve a higher standard of the graphics being presented, work must be done to implement the academic research being conducted in graphics into practice.
 For example, better definitions of variables, units of measurements, scales, and other graphical elements is necessary in order to improve the overall quality of graphics.
 Changes in software defaults such as the originally set number of bins in a bar chart can help support the improvement of graphs in both statistics and the applied science.
@@ -194,7 +194,7 @@ All of these types of tests require different levels of use and manipulation of 
 
 The initial push to develop classification and recommendation systems for charts was grounded on heuristics rather than on experimentation [@kruskal1975visions; @macdonald1977numbers].
 Requests were made for the validation of the perception and utility of statistical charts through graphical experiments.
-Initial experiments [@eells1926relative; @croxton1927bar; @croxton1932graphic] with most early experimentation stemmed from psychophysics research on the perception of size and shape [@teghtsoonian1965judgment]. 
+Most early experimentation [@eells1926relative; @croxton1927bar; @croxton1932graphic] stemmed from psychophysics research on the perception of size and shape. 
 In attempts to understand the human perception and judgment of component parts, @eells1926relative instructed students to think of each circle diagram \pcref{fig:eells-compoment-parts} as representing 100\% and write their best estimate of the percentage of the whole in each sector.
 Participants were told not to hurry, but to work steadily in order to determine efficiency of judgment. 
 Students were then asked to analyze their mental processes used to make their estimates and indicate the method that best matches: by areas of sectors, by central angles, by arcs on the circumference, by subtending chords.
@@ -202,7 +202,7 @@ This process was repeated three days later by presenting students the same data 
 Results of the study led the authors to argue for the use of circle diagrams to show component parts based on both participant accuracy and speed.
 In response, @croxton1927bar evaluated the accuracy of judgment of two types of charts (bars and circles) in efforts to reach a consistent conclusion. 
 During class, students were individually presented pairs of diagrams (without scales) on cards and asked to estimate the percentages displayed in the diagram.
-It was found that the bar was preferable to the circle when shown percentages that deviate from quarters, but that the circle is strongly preferred when shown percentages separating the diagrams into 25\% or 50\%; this introduces the concept of anchoring discussed further in [Section 1.6.3](#estimation-biases).
+It was found that the bar was preferable to the circle when shown percentages that deviate from quarters, but that the circle is strongly preferred when shown percentages separating the diagrams into 25\% or 50\%; this introduces the concept of anchoring discussed further in [section 1.6.3](#estimation-biases).
 
 ```{r eells-compoment-parts, fig.cap = "Eells (1926) component parts diagrams", out.width="75%"}
 knitr::include_graphics("images/eells-component-parts.png")
@@ -223,7 +223,7 @@ Cognitive psychologists and statisticians made progress by conducting experiment
 In @cleveland_graphical_1985, these plot objects are ordered by accuracy performed through graphical-perception tasks; for example, comparisons of angles resulted in more difficult judgments than between lengths of lines. 
 @shah1999graphs established the notion that redesigning graphs can result in the improvement of the viewer's interpretation of the data.
 For example, the use of gestalt principles [@goldstein2021sensation] such as proximity, similarity, and good continuation can help minimize the inferential processes and maximize the pattern association processes required to interpret relevant information.
-In [Section 1.8](#underestimation) we see how the hierarchy of accuracy in plot objects presented in @cleveland_graphical_1985 can explain biases in our interpretation and use of graphics.
+In [section 1.8](#underestimation) we see how the hierarchy of accuracy in plot objects presented in @cleveland_graphical_1985 can explain biases in our interpretation and use of graphics.
 
 During the $\text{21}^{\text{st}}$ century, there have been advancements in the methodology used to investigate the effectiveness of statistical charts [@majumder_validation_2013]. 
 @buja_statistical_2009 introduced the lineup protocol in which data plots are depicted and interpreted as statistics. 
@@ -266,8 +266,8 @@ Low level questions address the content and interpretation or explicit material 
 Three levels of graph comprehension have emerged from mathematics education research [@wood1968objectives; @curcio1987comprehension; @jolliffe1991assessment; @friel2001making; @glazer2011challenges].
 The three behaviors related to graph comprehension involve (1) literal reading of the data (elementary level), (2) reading between the data (intermediate level), and (3) reading beyond the data (advanced level).
 @curcio1987comprehension aligns two multiple choice questions with each level of comprehension related to a graph showing the height of four children in centimeters \pcref{fig:children-height}.
-Two literal items required the viewer to read the data, title, or axis label in order to answer, "What does this graph tell you" or "How tall was xxx?"
-Comparison items required comparisons and the use of mathematical concepts to answer, "Who was the tallest" and "How much taller was x than y?"
+Two literal items required the viewer to read the data, title, or axis label in order to answer, "What does this graph tell you?" or "How tall was xxx?"
+Comparison items required comparisons and the use of mathematical concepts to answer, "Who was the tallest?" and "How much taller was x than y?"
 Lastly, extension items required an extension, prediction, or inference such as, "If x grows 5 centimeters and y grows 10 centimeters by Sept. 1981, who will be taller and by how much?
 In @friel2001making, several studies were reviewed and their questions were placed in the taxonomy of skills required for answering questions at each level.
 In addition to the graph's visual features and questioning, it is important for researchers to give careful consideration to the context of the graphic on the viewers comprehension.
