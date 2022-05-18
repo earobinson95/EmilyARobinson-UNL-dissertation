@@ -441,7 +441,7 @@ knitr::include_graphics("images/02-you-draw-it/high-15-linear.png")
 knitr::include_graphics("images/02-you-draw-it/high-15-log.png")
 ```
 
-## Scratchwork participant comparison {#estimation-comparison}
+# Scratchwork participant comparison {#estimation-comparison}
 
 In order to examine whether participants who used the provided resources for estimation differed in their numerical estimations from those who did not, we first compared population estimates from the explicitly asked year 10 location.
 About half of the participants fell into the category which provided scratch work and half did not \pcref{tab:showed-work-comparison-table}. 

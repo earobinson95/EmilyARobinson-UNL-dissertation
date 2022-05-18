@@ -266,7 +266,7 @@ div.csl-indent {
 <p class="author"><em>Emily Anna Robinson</em></p>
 <div class="abstract">
 <p class="abstract">Abstract</p>
-<p>Log scales are often used to display data over several orders of magnitude within one graph. Three graphical experimental tasks were conducted to evaluate the impact displaying data on the log scale has on human perception of exponentially increasing trends compared to displaying data on the linear scale. The first experiment evaluates whether our ability to perceptually notice differences in exponentially increasing trends is impacted by the choice of scale. Participants were shown a set of plots and asked to identify which plot appeared to differ most from the other plots. Results indicated that when there was a large difference in exponential curves, the choice of scale had no impact and participants accurately differentiated between the two curves on both the linear and log scale. However, displaying exponentially increasing data on a log scale improved the accuracy of differentiating between exponentially increasing curves with slight differences. An exception occurred when identifying an exponential curve from curves closely resembling a linear trend, indicating it is easy to identify a curve in a group of lines but much harder to identify a line in a group of curves. The other experimental tasks focus on determining whether there are cognitive disadvantages to log scales: do log scales make it harder to make use of graphical information? To test an individual’s ability to make predictions for exponentially increasing data, participants were asked to draw a line using their computer mouse through an exponentially increasing trend shown on both the linear and log scale. Results showed that when exponential growth rate is large, underestimation of exponential growth occurs when making predictions on a linear scale and there is an improvement in accuracy of predictions made on the log scale. The last experimental task is designed to test an individuals’ ability to translate a graph of exponentially increasing data into real value quantities and make comparisons of estimates. The results of the three experimental tasks provide guidelines for readers to actively choose which of many possible graphics to draw in order to ensure their charts are effective at communicating the intended result.</p>
+<p>Log scales are often used to display data over several orders of magnitude within one graph. We conducted a series of three graphical studies to evaluate the impact displaying data on the log scale has on human perception of exponentially increasing trends compared to displaying data on the linear scale. Each study was related to a different graphical task, each requiring a different level of interaction and cognitive use of the data being presented. The first experiment evaluated whether our ability to perceptually notice differences in exponentially increasing trends is impacted by the choice of scale. Participants were shown a set of plots and asked to identify which plot appeared to differ most from the other plots. Results indicated the choice of scale changes the contextual appearance of the data leading to slight perceptual advantages for both scales depending on the curvatures of the trend lines being compared. The second study validated a new method, ‘You Draw It’, for testing statistical graphics and introduced an appropriate statistical analysis method for comparing visually fitted trend lines to statistical regression results. This new method was then used to test participants ability to make forecast predictions for exponentially increasing trends on both scales. The results from the analysis showed a clear underestimation of forecasting trends with high exponential growth rates when participants were asked to make predictions on the linear scale; improvement in forecasts were made when participants were asked to make predictions on the log scale. The third study evaluated graph comprehension as it relates to the contextual scenario of the data shown. Overall, our results suggested that log logic is difficult and that anchoring and rounding biases result in a sacrifice in accuracy in estimates made on the log scale for large magnitudes. The studies conducted in this research relied on graphical tasks of varying complexity to help us understand the perceptual and cognitive advantages and disadvantages of displaying exponentially increasing data on the log scale. The results are instrumental in establishing guidelines for making design choices about scale which result in data visualizations effective at communicating the intended result.</p>
 </div>
 </div>
 <div id="literature-review" class="section level1 hasAnchor" number="1">
@@ -281,7 +281,8 @@ Other graphics displayed COVID-19 data as maps with color indicating the severit
 People began seeking out graphical displays of COVID-19 data as a direct result of these pieces of work <span class="citation">(Rost, 2020)</span>; providing increased and ongoing exposure to these graphics over time.
 illustrates the increased views Datawrapper, a user-friendly web tool used to create basic interactive charts, had during the COVID-19 pandemic <span class="citation">(Rost, 2020)</span>.
 Many of these graphics helped guide decision makers to implement policies such as shut-downs or mandated mask wearing, as well as facilitated communication with the public to increase compliance <span class="citation">(Bavel et al., 2020)</span>.
-As graphics began to play an important role in the communication of the pandemic, creators of graphics were faced with design choices in order to ensure their charts were effective at accurately communicating the current status of the pandemic.</p>
+As graphics began to play an important role in sharing information with the public, creators of graphics were faced with design choices in order to ensure their charts were effective at accurately communicating the current status of the pandemic.
+In order to make educated decisions when designing a chart, we need guidelines as established through experimentation to ensure the graphic is effective at communicating the intended result.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:91divoc-cases-july2021"></span>
 <img src="images/91dovic-cases-july2021.png" alt="91-DOVIC New Daily Case Counts as of July 2021" width="100%"  />
 <p class="caption">
@@ -300,22 +301,12 @@ Figure 1.2: COVID-19 Risk Level Map as of July 2020
 Figure 1.3: Datawrapper daily chart views during COVID-19
 </p>
 </div>
-<!-- Although statistical graphics have become widely used and valued in science, business, and in many other aspects of life, as creators of graphics, we are too accepting of them as default without asking critical questions about the graphics we create or view [@unwin_why_2020]. \svp{I would probably state this more moderately, e.g. "we may be too accepting of easy-to-create, default data displays, using them without critically questioning the data and/or how effective the display is at displaying the data."} -->
-<!-- @vanderplas_testing_2020 poses the general question we must ask ourselves, "how effective is this graph at communicating useful information?" -->
-<!-- An effective graphic accurately shows the data through the appropriate chart selection, axes and scales, and aesthetic design choices in order to successfully communicate the intended result.  -->
-<!-- [Section 1.2](#misleading-graphics) illustrates how graphics can be misleading and ineffective at communicating the intended result by inaccurately displaying the data. -->
 </div>
 <div id="misleading-graphics" class="section level2 hasAnchor" number="1.2">
 <h2><span class="header-section-number">1.2</span> Misleading Graphics<a href="index.html#misleading-graphics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Despite past attempts to improve the use of graphics in science, graphics displayed in academic research are still falling short of the standards. <span class="citation">Gordon &amp; Finch (2015)</span> evaluated 97 graphs for overall quality, based on five principles of graphical excellence including: (1) show the data clearly (2) use simplicity in design (3) use good alignment on a common scale for quantities to be compared (4) keep the visual encoding transparent (5) use graphical forms consistent with principles 1 and 4.
-The authors randomly sampled 97 graphs published in A* (top 5%) journals with work in statistics and applied science disciplines.
-There were 50 graphs sampled from the most recently available issues of A* journals in applied sciences such as environmental sciences, agricultural and veterinary sciences, medical and health sciences, education, economics, and psychology.
-The additional 47 graphs were randomly sampled from A* statistics journals.
-Each graph was scored based on 60 features related to the five principles, such as proper axes labels.
-Both authors assigned an overall quality rating (poor, adequate, good, or exemplary) to each of the graphs sampled; discussion between authors settled any discrepancies in ratings.
-The authors rated 39% of the 97 graphs sampled as poor, indicating there is still an astonishing lack in the quality of graphics.
-More startling is the fact that the source of the graphic from an applied science or a graphic from statistics had no effect on the quality of the graphic.</p>
-<p><span class="citation">Baumer, Kaplan, &amp; Horton (2021)</span> discuss a more recent example of a misleading graphic in the news shown in May 2020 when Georgia published a graphical display of COVID-19 cases .
+<p>There are many ways in which plots may inaccurately display the data and be ineffective or misleading in sharing information and results <span class="citation">(Szafir, 2018)</span>.
+Misleading charts might have (1) bad form such as 3D pie charts or .., (2) include too much “chartjunk” resulting in clutter or displaying useless data, or (3) have bad axes such as a mismatch between scale and contex or just plain bad math.
+<span class="citation">Baumer, Kaplan, &amp; Horton (2021)</span> shares an example of a misleading graphic in the news shown in May 2020 when Georgia published a graphical display of COVID-19 cases .
 This graphic was highly misleading in communicating the state of the pandemic due to the ordering along the <span class="math inline">\(x\)</span>-axis.
 Notice the case count for April <span class="math inline">\(17^{th}\)</span> appears to the right of April <span class="math inline">\(19^{th}\)</span>, and that the order of the counties has been selected so that the case counts are monotonically decreasing for each day of reporting.
 The appearance of this graphic leads viewers to believe COVID cases are decreasing.
@@ -326,16 +317,20 @@ Shortly after the graphic was released, the governor’s office made a statement
 Figure 1.4: COVID-19 reporting
 </p>
 </div>
+<p>Misleading charts are not only found in mass media, but graphics displayed in academic research and science are still falling short of the standards. <span class="citation">Gordon &amp; Finch (2015)</span> evaluated 97 graphs for overall quality, based on five principles of graphical excellence including: (1) show the data clearly (2) use simplicity in design (3) use good alignment on a common scale for quantities to be compared (4) keep the visual encoding transparent (5) use graphical forms consistent with principles 1 and 4.
+The authors rated 39% of the 97 graphs sampled as poor, indicating there is still an astonishing lack in the quality of graphics.
+More startling is the fact that the source of the graphic from an applied science or a graphic from statistics had no effect on the quality of the graphic.</p>
+<p>Although statistical graphics have become widely used and valued in science, business, and in many other aspects of life, we may be too accepting of easy-to-create, default data displays, using them without critically questioning the data and/or how effective the display is at displaying the data. Attempts to improve the creation and use of charts have been ongoing since the early <span class="math inline">\(20^{th}\)</span> century <span class="citation">(Croxton &amp; Stein, 1932; Croxton &amp; Stryker, 1927; Eells, 1926; Von Huhn, 1927)</span>.
+We address the ways in which researchers use experimentation to test statistical graphics in order to establish guidelines and improve graphics in <a href="index.html#testing-statistical-graphics">Section 1.4</a>.
+In efforts to achieve a higher standard of the graphics being presented, work must be done to implement the academic research being conducted in graphics into practice.
+For example, better definitions of variables, units of measurements, scales, and other graphical elements is necessary in order to improve the overall quality of graphics.
+Changes in software defaults such as the originally set number of bins in a bar chart can help support the improvement of graphs in both statistics and the applied science.</p>
 </div>
 <div id="graphical-guidelines" class="section level2 hasAnchor" number="1.3">
 <h2><span class="header-section-number">1.3</span> Graphical Guidelines<a href="index.html#graphical-guidelines" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Higher quality of technology has influenced the creation, replication, and complexity of graphics as there are an infinitely many number of graphical displays and design choices that can be implemented at faster speeds with more flexibility.
-The creator of a graphic makes decisions about the variables displayed, the type of graphic, the size of the graphic and the aspect ratio, the colors and symbols used, the scales and limits, and the ordering of categorical variables.
-In response to the increasing number of design choices, consistent themes and higher standards are being placed on graphics.
-Selecting from an extensive list of styles and choices of graphics in order to effectively communicate insights into the data is a challenging task.
-A consistent concern is the lack of theory of graphics available to build on; better theory should result in better graphics.
-Creators of graphics need an established set of concepts and terminology to build their graphics from so they can actively choose which of many possible graphics to draw in order to ensure their charts are effective at communicating the intended result.</p>
-<p>Many efforts have been made to provide guidelines for graphical designs including Wilkinson’s Grammar of Graphics <span class="citation">(Wilkinson, 2013)</span>.
+<p>A consistent concern is the lack of theory of graphics available to build on; better theory should result in better data visualizations.
+In order to improve the construction and distribution of charts, we need an established set of concepts and terminology so we can actively choose which of many possible graphics to draw in order to ensure our charts are effective at communicating the intended result.
+Many efforts have been made to provide guidelines for graphical designs including Wilkinson’s Grammar of Graphics <span class="citation">(Wilkinson, 2013)</span>.
 The grammar of graphics serves as the fundamental framework for data visualization with the notion that graphics are built from the ground up by specifying exactly how to create a particular graph from a given data set.
 Visual representations are constructed through the use of “tidy data” which is characterized as a data set in which each variable is in its own column, each observation is in its own row, and each value is in its own cell <span class="citation">(Wickham &amp; Grolemund, 2016)</span>.
 Graphics are viewed as a mapping from variables in a data set (or statistics computed from the data) to visual attributes such as the axes, colors, shapes, or facets on the canvas in which the chart is displayed.
@@ -347,17 +342,14 @@ Software, such as <code>ggplot2</code> <span class="citation">(Wickham, 2016)</s
 Figure 1.5: Graphic flowchart
 </p>
 </div>
-<p>In efforts to achieve a higher standard of the graphics being presented, work must be done to implement the academic research being conducted in graphics into practice.
-For example, better definitions of variables, units of measurements, scales, and other graphical elements is necessary in order to improve the overall quality of graphics.
-Changes in software defaults such as the originally set number of bins in a bar chart can help support the improvement of graphs in both statistics and the applied science.</p>
 </div>
 <div id="testing-statistical-graphics" class="section level2 hasAnchor" number="1.4">
 <h2><span class="header-section-number">1.4</span> Testing Statistical Graphics<a href="index.html#testing-statistical-graphics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>One way in which we determine the relationship between behavior and physiology is through the use of graphical tests <span class="citation">(Cleveland &amp; McGill, 1984; Lewandowsky &amp; Spence, 1989; Spence, 1990; VanderPlas &amp; Hofmann, 2015)</span>.
+<p>One way in which we establish guidelines is through the use of graphical tests <span class="citation">(Cleveland &amp; McGill, 1984; Lewandowsky &amp; Spence, 1989; Spence, 1990; VanderPlas &amp; Hofmann, 2015)</span>.
 These tests may take many forms: identifying differences in graphs, accurately reading information off a chart, using data to make correct real-world decisions, or predicting the next few observations.
 All of these types of tests require different levels of use and manipulation of the information presented in the chart.</p>
 <p>The initial push to develop classification and recommendation systems for charts was grounded on heuristics rather than on experimentation <span class="citation">(Kruskal, 1975; Macdonald-Ross, 1977)</span>.
-Request were made for the validation of the perception and utility of statistical charts through graphical experiments.
+Requests were made for the validation of the perception and utility of statistical charts through graphical experiments.
 Initial experiments <span class="citation">(Croxton &amp; Stein, 1932; Croxton &amp; Stryker, 1927; Eells, 1926)</span> with most early experimentation stemmed from psychophysics research on the perception of size and shape <span class="citation">(Teghtsoonian, 1965)</span>.
 In attempts to understand the human perception and judgment of component parts, <span class="citation">Eells (1926)</span> instructed students to think of each circle diagram as representing 100% and write their best estimate of the percentage of the whole in each sector.
 Participants were told not to hurry, but to work steadily in order to determine efficiency of judgment.
@@ -366,7 +358,7 @@ This process was repeated three days later by presenting students the same data 
 Results of the study led the authors to argue for the use of circle diagrams to show component parts based on both participant accuracy and speed.
 In response, <span class="citation">Croxton &amp; Stryker (1927)</span> evaluated the accuracy of judgment of two types of charts (bars and circles) in efforts to reach a consistent conclusion.
 During class, students were individually presented pairs of diagrams (without scales) on cards and asked to estimate the percentages displayed in the diagram.
-It was found that the bar was preferable to the circle when shown percentages that deviate from quarters, but that the circle is strongly preferred when shown percentages separating the diagrams into 25% or 50%; this introduces the concept of anchoring discussed further in <a href="index.html#estimation-biases">Section 1.4.3</a>.</p>
+It was found that the bar was preferable to the circle when shown percentages that deviate from quarters, but that the circle is strongly preferred when shown percentages separating the diagrams into 25% or 50%; this introduces the concept of anchoring discussed further in <a href="index.html#estimation-biases">Section 1.6.3</a>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:eells-compoment-parts"></span>
 <img src="images/eells-component-parts.png" alt="Eells (1926) component parts diagrams" width="75%"  />
 <p class="caption">
@@ -389,7 +381,7 @@ Figure 1.7: Spence (1990) task display
 In <span class="citation">Cleveland &amp; McGill (1985)</span>, these plot objects are ordered by accuracy performed through graphical-perception tasks; for example, comparisons of angles resulted in more difficult judgments than between lengths of lines.
 <span class="citation">Shah et al. (1999)</span> established the notion that redesigning graphs can result in the improvement of the viewer’s interpretation of the data.
 For example, the use of gestalt principles <span class="citation">(Goldstein &amp; Cacciamani, 2021)</span> such as proximity, similarity, and good continuation can help minimize the inferential processes and maximize the pattern association processes required to interpret relevant information.
-In <a href="index.html#underestimation">Section 1.5.2</a> we see how the hierarchy of accuracy in plot objects presented in <span class="citation">Cleveland &amp; McGill (1985)</span> can explain biases in our interpretation and use of graphics.</p>
+In <a href="index.html#underestimation">Section 1.8</a> we see how the hierarchy of accuracy in plot objects presented in <span class="citation">Cleveland &amp; McGill (1985)</span> can explain biases in our interpretation and use of graphics.</p>
 <p>During the <span class="math inline">\(\text{21}^{\text{st}}\)</span> century, there have been advancements in the methodology used to investigate the effectiveness of statistical charts <span class="citation">(Majumder, Hofmann, &amp; Cook, 2013)</span>.
 <span class="citation">Buja et al. (2009a)</span> introduced the lineup protocol in which data plots are depicted and interpreted as statistics.
 Supported by the grammar of graphics, a data plot can be characterized as a statistic, defined as, “a functional mapping of a variable or set of variables” <span class="citation">(Vanderplas et al., 2020)</span>.
@@ -415,25 +407,14 @@ Therefore, we must consider and determine how the viewer is perceiving and inter
 <div id="graph-comprehension" class="section level2 hasAnchor" number="1.6">
 <h2><span class="header-section-number">1.6</span> Graph Comprehension<a href="index.html#graph-comprehension" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Higher order cognitive processes require viewers to translate the visual features into conceptual relations by interpreting titles, labels, and scales.
-In order to understand how viewers are interpreting and using the data and information displayed on the chart, studies have asked participants to read information directly from a chart and provide a quantitative estimate or answer a predefined question <span class="citation">(Amer, 2005; Broersma &amp; Molenaar, 1985; Dunn, 1988; Peterson &amp; Schramm, 1954; Joseph K. Tan, 1994)</span>.
-<span class="citation">Spence (1990)</span> presents four example questions for comparing the sizes of individual graphical elements: (1) How much greater was the rainfall in September than May? (2) Is the price of oil in constant dollars increasing or decreasing from year to year? (3) Do more people subscribe to Time than Newsweek? and (4) Did the ABC Corporation pay the largest dividends last year, or did XYZ?
-<span class="citation">Amer (2005)</span> demonstrates that visual illusion may bias decision making and graph comprehension, even if the graphs are constructed according to best practice.
+In order to understand how viewers are interpreting and using the data and information displayed on the chart, studies have asked participants to read information directly from a chart and provide a quantitative estimate or answer a predefined question <span class="citation">(Amer, 2005; Broersma &amp; Molenaar, 1985; Dunn, 1988; Peterson &amp; Schramm, 1954; Spence, 1990; Joseph K. Tan, 1994)</span>.
+For instance, <span class="citation">Amer (2005)</span> demonstrates that visual illusion may bias decision making and graph comprehension, even if the graphs are constructed according to best practice.
 Participants were presented a cost volume profit graph with two crossing lines (revenue and cost) and asked to estimate three values: (1) the amount of total revenues on the ordinate corresponding to the endpoint of the total-revenue line plotted on the graph (2) the amount of total costs on the ordinate corresponding to the endpoint of the total-cost line plotted on the graph and (3) the amount of costs/revenues on the ordinate at the break even point—the point where the two lines cross.
-Results indicate that decision makers may consistently underestimate or overestimate the values displayed on line graphs due to what is called the “Poggendorff illusion.”
-In <span class="citation">Dunn (1988)</span>, participants were shown two maps, an unclassed choropleth map and a framed rectangle chart, indicating the murder rate of each US state .
-The goal of the study was to assess the relative accuracy with which quantitative information is extracted from both types of charts.
-Participants were strictly informed that the experiment was designed to test the ability of individuals to “read” or “decode” statistical maps and asked to write down their estimate of the murder rate as accurately as possible beside the 24 named states.
-Results indicate that subjects found it easier to extract quantitative information from the framed rectangle chart than from the unclassed choropleth map and that the between individual variability in the choropleth map was related to the area of the state.</p>
+Results indicate that decision makers may consistently underestimate or overestimate the values displayed on line graphs due to what is called the “Poggendorff illusion.”</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:amer-poggendorff-illusion"></span>
 <img src="images/amer-poggendorff-illusion.png" alt="Amer (2005) cost volume profit graph" width="100%"  />
 <p class="caption">
 Figure 1.8: Amer (2005) cost volume profit graph
-</p>
-</div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:framed-murder-rate-map"></span>
-<img src="images/framed-murder-rate-map.png" alt="Dunn (1988) maps" width="100%"  />
-<p class="caption">
-Figure 1.9: Dunn (1988) maps
 </p>
 </div>
 <div id="lit-questioning" class="section level3 hasAnchor" number="1.6.1">
@@ -451,7 +432,7 @@ In addition to the graph’s visual features and questioning, it is important fo
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:children-height"></span>
 <img src="images/children-height.png" alt="Comprehension of heights (1987) " width="80%"  />
 <p class="caption">
-Figure 1.10: Comprehension of heights (1987)
+Figure 1.9: Comprehension of heights (1987)
 </p>
 </div>
 </div>
@@ -468,12 +449,11 @@ A longer history of quantitative estimation can be found in psychometric literat
 Common strategies related to measurement estimation, involve reference point estimation, benchmark estimation, unit iteration, and guess and check.
 <span class="citation">Joram, Gabriele, Bertheau, Gelman, &amp; Subrahmanyam (2005)</span> was interested in the relationship among strategy use and accuracy of students’ representations of standard measurement units and measurement accuracy.
 In this study, students were asked to estimate the lengths of two objects and explain their process.
-In order to prompt students to communicate their estimation strategies, an interviewer asked questions such as, “How did you come up with your answer?” and “What were you thinking about when you came up with your answer?”.
-Further prompting such as, “Do you know how tall your cousin is?” was often necessary to identify whether the student was using a reference point strategy for estimation.
-Results from the study found that students who used a reference point had a more accurate representation of standard units and estimates of length than students who did not use a reference point.
+The researchers used talk aloud protocols to prompt students to communicate their estimation strategies to an interviewer; results found that students who used a reference point had a more accurate representation of standard units and estimates of length than students who did not use a reference point.
 <span class="citation">M. G. Jones, Gardner, Taylor, Forrester, &amp; Andre (2012)</span> examined the effect of scale (metric verses English) and task context on the accuracy of measurement estimation for linear distances.
 The study showed that students were less accurate in estimating metric units as compared to English units and that estimation accuracy was highly dependent on task context.
-<span class="citation">Forrester, Latham, &amp; Shire (1990)</span> argues that estimation, approximating, and measuring are key components in the intuitive understanding of dimension and scale necessary to manipulate information and interact effectively with our environment.</p>
+<span class="citation">Forrester, Latham, &amp; Shire (1990)</span> argues that estimation, approximating, and measuring are key components in the intuitive understanding of dimension and scale necessary to manipulate information and interact effectively with our environment.
+Without open ended conversations, our research demonstrates how the use of graphical tasks of varying complexities conducted through an online system can provide insight about the tactics and procedures used to extract meaning from a chart.</p>
 </div>
 <div id="estimation-biases" class="section level3 hasAnchor" number="1.6.3">
 <h3><span class="header-section-number">1.6.3</span> Estimation Biases<a href="index.html#estimation-biases" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -492,23 +472,21 @@ The choice of scale can change the shape of a graph, thus creating a conceptual 
 </div>
 <div id="logarithmic-scales-and-mapping" class="section level2 hasAnchor" number="1.7">
 <h2><span class="header-section-number">1.7</span> Logarithmic Scales and Mapping<a href="index.html#logarithmic-scales-and-mapping" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>When faced with data which spans several orders of magnitude, we must decide whether to show the data on its original scale (compressing the smaller magnitudes into relatively little area) or to transform the scale and alter the contextual appearance of the data.
+<p>A major issue we encountered in the creation of COVID plots was how to display data from a wide range of values.
+When faced with data which spans several orders of magnitude, we must decide whether to show the data on its original scale (compressing the smaller magnitudes into relatively little area) or to transform the scale and alter the contextual appearance of the data.
 One common solution is to use a log scale transformation to display data over several orders of magnitude within one graph.
-<!-- The usefulness of the log scale in science is illustrated in \cref{fig:log-scale-comic} [@munroe_2005] showing the challenge of displaying the fuel energy density of Uranium along side other sources of fuel due to differences in magnitude of density. -->
 Exponential curves are a common source of data in which smaller magnitudes are compressed into a smaller area;
 presents an exponential curve displayed on both the linear and log scale illustrating the use of the log scale when displaying data which spans several magnitudes.
 Logarithms convert multiplicative relationships (for example, 1 &amp; 10 displayed 10 units apart and 10 &amp; 100 displayed 90 units apart) to additive relationships (for example, 1 &amp; 10 and 10 &amp; 100 both equally spaced along the axis), showing proportional relationships and linearizing power functions <span class="citation">(Menge et al., 2018)</span>.
 They also have practical purposes, easing the computation of small numbers such as likelihoods and transforming data to fit statistical assumptions.
-When presenting log scaled data, it is possible to use either un-transformed scale labels (for example, values of 1, 10 and 100 are equally spaced along the axis) or log transformed scale labels (for example, 0, 1, and 2, showing the corresponding powers of 10).
-<!-- \svp{In the grammar of graphics/ggplot2 formulation, this is the difference between a scale and a transformation... it might be worth seeing if that is a hadley-ism or if that is a wider convention.} --></p>
+When presenting log scaled data, it is possible to use either un-transformed scale labels (for example, values of 1, 10 and 100 are equally spaced along the axis) or log transformed scale labels (for example, 0, 1, and 2, showing the corresponding powers of 10).</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:log-scales"></span>
 <img src="thesis_files/figure-html/log-scales-1.png" alt="Linear scale verses log scale" width="100%"  />
 <p class="caption">
-Figure 1.11: Linear scale verses log scale
+Figure 1.10: Linear scale verses log scale
 </p>
 </div>
-<p>We have recently experienced the benefits and pitfalls of using log scales as COVID-19 dashboards displayed
-case count data on both the log and linear scale <span class="citation">(Burn-Murdoch et al., 2020; Fagen-Ulmschneider, 2020)</span>.
+<p>We have recently experienced the benefits and pitfalls of using log scales as COVID-19 dashboards displayed case count data on both the log and linear scale <span class="citation">(Burn-Murdoch et al., 2020; Fagen-Ulmschneider, 2020)</span>.
 In spring 2020, during the early stages of the COVID-19 pandemic, there were large magnitude discrepancies in case counts at a given time point between different geographic regions (for example states and provinces as well as countries and continents).
 During this time, we saw the usefulness of log scale transformations showing case count curves for areas with few cases and areas with many cases within one chart.
 The usefulness of log scales in comparing deaths attributed to COVID-19 between countries as of March 2020 is illustrated in ; the diagonal reference lines provide a visual aid useful for interpretation <span class="citation">(Burn-Murdoch et al., 2020)</span>.
@@ -522,19 +500,19 @@ Given the widespread use of logarithmic scales, it is important to understand th
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:covid19-FT-deaths-march2020-log"></span>
 <img src="images/covid19-FT-03.23.2020-log.png" alt="Covid 19 Deaths (log scale) as of March 23, 2020" width="90%"  />
 <p class="caption">
-Figure 1.12: Covid 19 Deaths (log scale) as of March 23, 2020
+Figure 1.11: Covid 19 Deaths (log scale) as of March 23, 2020
 </p>
 </div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:covid19-FT-june2020-case-counts-linear"></span>
 <img src="images/covid19-FT-case-count-06.30.2020-linear.png" alt="Covid 19 Case Counts (linear scale) as of June 30, 2020" width="90%"  />
 <p class="caption">
-Figure 1.13: Covid 19 Case Counts (linear scale) as of June 30, 2020
+Figure 1.12: Covid 19 Case Counts (linear scale) as of June 30, 2020
 </p>
 </div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:covid19-FT-june2020-case-counts-log"></span>
 <img src="images/covid19-FT-case-count-06.30.2020-log.png" alt="Covid 19 Case Counts (log scale) as of June 30, 2020" width="90%"  />
 <p class="caption">
-Figure 1.14: Covid 19 Case Counts (log scale) as of June 30, 2020
+Figure 1.13: Covid 19 Case Counts (log scale) as of June 30, 2020
 </p>
 </div>
 <p>When we first learn to count, we begin counting by ones (for example, 1, 2, 3, etc.), then by tens (for example, 10, 20, 30, etc.), and advancing to hundreds (for example, 100, 200, 300, etc.), following the base10 order of magnitude system (for example, 1, 10, 100, etc.).
@@ -542,11 +520,14 @@ Research suggests our perception and mapping of numbers to a number line is loga
 For example, a kindergartner asked to place numbers one through ten along a number line would place three close to the middle, following the logarithmic perspective <span class="citation">(Varshney &amp; Sun, 2013)</span>; demonstrates how a kindergartner might map numbers along a number line.
 <span class="citation">Dehaene et al. (2008)</span> found that with basic training, members of remote cultures with a basic vocabulary and minimal education understood the concept that numbers can be mapped into a spacial space; for example, numbers can be mapped to a number line or numbers can be mapped onto a clock.
 There was a gradual transition from logarithmic to linear scale as the mapping of whole number magnitude representations transitioned from a compressed (approximately logarithmic) distribution to an approximately linear one.
-These results indicate the universal and cultural-dependent characteristics of the sense of number.</p>
+These results indicate the universal and cultural-dependent characteristics of the sense of number.
+Regardless of training, our visual system is still vulnerable to biases related to our perception of different stimuli such as weight, light, or sound.
+Known as <em>Weber’s law</em>, it was established that we do not notice absolute changes in stimuli, but instead that we notice the relative change <span class="citation">(Fechner, 1860)</span>.
+The <em>Weber-Fechner law</em> extended the discovery and states the relationship between the perceived intensity is logarithmic to the stimulus intensity when observed above a minimal threshold of perception.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:log-number-line"></span>
 <img src="thesis_files/figure-html/log-number-line-1.png" alt="Kindergarten example of mapping numbers 1-10 along a number line" width="65%"  />
 <p class="caption">
-Figure 1.15: Kindergarten example of mapping numbers 1-10 along a number line
+Figure 1.14: Kindergarten example of mapping numbers 1-10 along a number line
 </p>
 </div>
 <p>Assuming there is a direct relationship between perceptual and cognitive processes, it is reasonable to assume numerical representations should also be displayed on a nonlinear, compressed number scale. Therefore, if we perceive logarithmically by default, it is a natural (and presumably low effort) way to display information and should be easy to read and understand/use.
@@ -555,17 +536,17 @@ Similar to the training and education required to transition from logarithmic ma
 </div>
 <div id="underestimation" class="section level2 hasAnchor" number="1.8">
 <h2><span class="header-section-number">1.8</span> Underestimation of Exponential Growth<a href="index.html#underestimation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:exponential-stages-comic"></span>
-<img src="images/exponential-stages-comic.jpg" alt="Log scale comic" width="100%"  />
-<p class="caption">
-Figure 1.16: Log scale comic
-</p>
-</div>
-<p>People with diverse backgrounds can interpret the same display of data in vastly different ways; <span class="citation">(Von Bergmann, 2021)</span> illustrates how individuals in public health interpret exponential growth distinctly different from scientists during early, middle, and late stages of growth.
+<p>In addition to biases which result from the use of log scales, there is a general misinterpretation of exponential growth; <span class="citation">(Von Bergmann, 2021)</span> illustrates how individuals in public health interpret exponential growth distinctly different from scientists during early, middle, and late stages of growth.
 Exponential growth is often misjudged in early stages, appearing to have a small growth rate.
 As exponential growth continues, the middle stage appears to be growing, but not at an astounding rate, appearing more quadratic.
 It is not until late stages of exponential growth when it is quite apparent that there is exponential growth occurring.
 This misinterpretation can lead to decisions made under inaccurate understanding causing future consequences.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:exponential-stages-comic"></span>
+<img src="images/exponential-stages-comic.jpg" alt="Log scale comic" width="100%"  />
+<p class="caption">
+Figure 1.15: Log scale comic
+</p>
+</div>
 <p>Early studies explored the estimation and prediction of exponential growth and found that growth is underestimated when presented both numerically and graphically <span class="citation">(Wagenaar &amp; Sagaria, 1975)</span>.
 The hierarchy of plot objects found in <span class="citation">Cleveland &amp; McGill (1985)</span> can provide a possible explanation for the underestimation the occurs in exponentially increasing trends; the exponential trend can be thought of as a series of tangential angles leading to less accurate judgement of the next points.
 Results from <span class="citation">Wagenaar &amp; Sagaria (1975)</span> indicated that numerical estimation is more accurate than graphical estimation for exponential curves.
@@ -580,13 +561,13 @@ These misconceptions are a result of linear extrapolation assuming that a line i
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:menge-plots"></span>
 <img src="images/menge-plots.png" alt="Graphs viewed in Menge (2018) survey" width="100%"  />
 <p class="caption">
-Figure 1.17: Graphs viewed in Menge (2018) survey
+Figure 1.16: Graphs viewed in Menge (2018) survey
 </p>
 </div>
 <p>The ‘hand-hold fallacy’ stems from the misconception that steeper slopes in log-log relationships are steeper slopes in linear-linear space, illustrated in d-f. 
 In fact, it is not only the slope that matters, but also the intercept and the location on the horizontal axis since a line in log-log space represents a power law in linear-linear space (linear extrapolation).
 Emerging from ‘Zeno’s zero fallacy’ is the misconception that positively sloped lines in log-log space can imply a non-zero value of y when x is zero, illustrated in a-c and d-f.
-This is never true as positively sloped lines in log-log space actually imply that y = 0 when x = 0. This misconception again is a result of linear extrapolation assuming that a line in log-log space represents a line instead of the power law in linear-linear space.
+This is never true as positively sloped lines in log-log space actually imply that <span class="math inline">\(y = 0\)</span> when <span class="math inline">\(x = 0\)</span>. This misconception again is a result of linear extrapolation assuming that a line in log-log space represents a line instead of the power law in linear-linear space.
 The last misconception, ‘watch out for curves fallacies’ encompasses three faults: (1) lines in log-log space are lines in linear-linear space, illustrated in d-f, (2) lines in log-log space curve upward in linear-linear space, illustrated in d-f, and (3) curves in log-log space have the same curvature in linear-linear space, illustrated in g-i.
 Linear extrapolation is again responsible for the first and third faults while the second fault is a result of error in thinking that log-log lines represent power laws, and all exponential relationships curve upward; this is only true when the log-log slope is greater than one.
 <span class="citation">Menge et al. (2018)</span> found that in each of these scenarios, participants were confident in their incorrect responses, indicating incorrect knowledge rather than a lack of knowledge.</p>

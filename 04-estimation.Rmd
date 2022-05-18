@@ -100,7 +100,7 @@ Graph comprehension is heavily dependent on the questions being asked of the vie
 Evaluation of how viewers explore a new and complex graphic requires long-term interaction with the chart displaying the data [@becker2019trackr]. 
 While it is difficult to obtain an accurate representation of a viewers understanding of the graphic with a fixed set of numerical estimates, three levels of graph comprehension have emerged from literature [@wood1968objectives; @curcio1987comprehension; @jolliffe1991assessment; @friel2001making; @glazer2011challenges].
 The three behaviors related to graph comprehension involve (1) literal reading of the data (elementary level), (2) reading between the data (intermediate level), and (3) reading beyond the data (advanced level).
-We present examples of questions associated with the three levels of questioning in [Section 1.4.1](#lit-questioning).
+We present examples of questions associated with the three levels of questioning in [Section 1.6.1](#lit-questioning).
 For instance, if shown a line graph of the value of a certain stock over time, an elementary level question might prompt the viewer to answer, "what was the value of stock X on June 15th?" and an intermediate level question would extend these estimates to ask the viewer, "over the first five days, how did the value of stock X change" [@friel2001making].
 In addition to the graph's visual features and questioning, it is important for researchers to give careful consideration to the context of the graphic on the viewers comprehension.
 
@@ -409,12 +409,10 @@ This provides argument that estimates are highly subjective to the particular da
 As the year increases, we observe an increased accuracy in estimates made on the linear scale while estimates made on the log scale suffer in accuracy due to strong anchoring to grid lines and the larger quantitative difference between grid lines as population magnitudes increase.
 For instance, on the log scale, there was a tendency to overestimate the population for year 20 from data set one, underestimate the population for year 20 from data set two, and overestimate the population for year 40 from data set two.
 Inaccurate first level estimations can lead to consequences in estimations which require participants to make comparisons between two points (e.g. Intermediate Q1 and Q2).
-<!-- \svp{This observation needs to show up in your discussion very clearly - it's a great example of the tradeoffs between the two scales! (I'm not there yet, just making notes as I go along)} -->
 
 In extracting participant first level estimates from their calculation and scratch work, we observed participants were resistant to estimating between grid lines and had a greater tendency to anchor their estimates to the grid line estimates on the log scale. 
 <!-- \svp{Do you think this would be true if we'd used log 10 and had 10 grid lines? Might be worth bringing up in your conclusion section...} -->
 \cref{fig:common-population-estimates} illustrates the number of participants who provided that estimate on either the linear or log base two scale. 
-<!-- \svp{You should probably explain what "true" means here - that is, there are several different ways to visually estimate the truth. A picture might even help to demonstrate.} -->
 True values are based on the underlying model equation, closest simulated point values, and grid line breaks are indicated by the horizontal line types.
 In particular, for year 40 in data set one, the closest point (17046.94) falls close to the log grid line (16384); participants greatly anchored to the grid line of 16384 with some participants adjusting to 16500 or 17000, anchoring again to a base ten value.
 In a similar situation, for year 40 in data set two, the closest point (24186.34) falls close to the linear grid line (25000); more participants adjusted their estimates to 24500 or 24000 rather than anchoring to the grid line.
