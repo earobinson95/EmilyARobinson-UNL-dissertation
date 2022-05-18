@@ -237,10 +237,8 @@ div.csl-indent {
 <li class="chapter" data-level="5" data-path="5-conclusion.html"><a href="5-conclusion.html"><i class="fa fa-check"></i><b>5</b> Conclusion<span></span></a></li>
 <li class="appendix"><span><b>Appendix<span></span></b></span></li>
 <li class="chapter" data-level="A" data-path="A-youdrawit-with-shiny.html"><a href="A-youdrawit-with-shiny.html"><i class="fa fa-check"></i><b>A</b> You Draw It Setup with Shiny<span></span></a></li>
-<li class="chapter" data-level="B" data-path="B-exponential-prediction-plots.html"><a href="B-exponential-prediction-plots.html"><i class="fa fa-check"></i><b>B</b> Exponential Prediction Interactive Plots<span></span></a>
-<ul>
-<li class="chapter" data-level="B.1" data-path="B-exponential-prediction-plots.html"><a href="B-exponential-prediction-plots.html#estimation-comparison"><i class="fa fa-check"></i><b>B.1</b> Scratchwork participant comparison<span></span></a></li>
-</ul></li>
+<li class="chapter" data-level="B" data-path="B-exponential-prediction-plots.html"><a href="B-exponential-prediction-plots.html"><i class="fa fa-check"></i><b>B</b> Exponential Prediction Interactive Plots<span></span></a></li>
+<li class="chapter" data-level="C" data-path="C-estimation-comparison.html"><a href="C-estimation-comparison.html"><i class="fa fa-check"></i><b>C</b> Scratchwork participant comparison<span></span></a></li>
 <li><a href="references.html#references">References<span></span></a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -284,19 +282,19 @@ Many of these graphics helped guide decision makers to implement policies such a
 As graphics began to play an important role in sharing information with the public, creators of graphics were faced with design choices in order to ensure their charts were effective at accurately communicating the current status of the pandemic.
 In order to make educated decisions when designing a chart, we need guidelines as established through experimentation to ensure the graphic is effective at communicating the intended result.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:91divoc-cases-july2021"></span>
-<img src="images/91dovic-cases-july2021.png" alt="91-DOVIC New Daily Case Counts as of July 2021" width="100%"  />
+<img src="images/91dovic-cases-july2021.png" alt="91-DOVIC new daily case counts as of July 2021" width="60%"  />
 <p class="caption">
-Figure 1.1: 91-DOVIC New Daily Case Counts as of July 2021
+Figure 1.1: 91-DOVIC new daily case counts as of July 2021
 </p>
 </div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:covid19-summer2020-risk-map"></span>
-<img src="images/covid19-summer2020-risk-map.png" alt="COVID-19 Risk Level Map as of July 2020" width="100%"  />
+<img src="images/covid19-summer2020-risk-map.png" alt="COVID-19 risk level map as of July 2020" width="60%"  />
 <p class="caption">
-Figure 1.2: COVID-19 Risk Level Map as of July 2020
+Figure 1.2: COVID-19 risk level map as of July 2020
 </p>
 </div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:covid19-datawrapper-views-july2020"></span>
-<img src="images/covid19-datawrapper-views-july2020.png" alt="Datawrapper daily chart views during COVID-19" width="100%"  />
+<img src="images/covid19-datawrapper-views-july2020.png" alt="Datawrapper daily chart views during COVID-19" width="60%"  />
 <p class="caption">
 Figure 1.3: Datawrapper daily chart views during COVID-19
 </p>
@@ -305,8 +303,32 @@ Figure 1.3: Datawrapper daily chart views during COVID-19
 <div id="misleading-graphics" class="section level2 hasAnchor" number="1.2">
 <h2><span class="header-section-number">1.2</span> Misleading Graphics<a href="index.html#misleading-graphics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>There are many ways in which plots may inaccurately display the data and be ineffective or misleading in sharing information and results <span class="citation">(Szafir, 2018)</span>.
-Misleading charts might have (1) bad form such as 3D pie charts or .., (2) include too much “chartjunk” resulting in clutter or displaying useless data, or (3) have bad axes such as a mismatch between scale and contex or just plain bad math.
-<span class="citation">Baumer, Kaplan, &amp; Horton (2021)</span> shares an example of a misleading graphic in the news shown in May 2020 when Georgia published a graphical display of COVID-19 cases .
+Misleading charts might have (1) bad form such as 3D pie charts or .. , (2) include too much “chartjunk” resulting in clutter or displaying useless data , or (3) have bad axes such as a mismatch between scale and context or just plain bad math . demonstrates how a chart can be misleading in more than one way; the map of pet ownership violates guidelines by mapping too many variables to visual encodings which results in clutter and bad form.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:misleading-graphics-form"></span>
+<img src="images/misleading-graphics-3d-pie-batteries.jpg" alt="Misleading graphical form examples" width="49%"  /><img src="images/misleading-graphics-bad-form-better-science.png" alt="Misleading graphical form examples" width="49%"  />
+<p class="caption">
+Figure 1.4: Misleading graphical form examples
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:misleading-graphics-chartjunk"></span>
+<img src="images/misleading-graphics-wordle-map.jpg" alt="Misleading 'chartjunk' examples" width="49%"  /><img src="images/misleading-graphics-bad-form-supercomputers.png" alt="Misleading 'chartjunk' examples" width="49%"  />
+<p class="caption">
+Figure 1.5: Misleading ‘chartjunk’ examples
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:misleading-graphics-bad-axes"></span>
+<img src="images/misleading-graphics-bad-axes-rouble-to-dollar.jpg" alt="Misleading bad axes" width="49%"  /><img src="images/misleading-graphics-pizza.png" alt="Misleading bad axes" width="49%"  />
+<p class="caption">
+Figure 1.6: Misleading bad axes
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:misleading-graphics-just-bad"></span>
+<img src="images/misleading-graphics-multiple-issues-pet-ownership.jpg" alt="Misleading graphic multiple violations example" width="50%"  />
+<p class="caption">
+Figure 1.7: Misleading graphic multiple violations example
+</p>
+</div>
+<p><span class="citation">Baumer, Kaplan, &amp; Horton (2021)</span> shares an example of a misleading graphic in the news shown in May 2020 when Georgia published a graphical display of COVID-19 cases .
 This graphic was highly misleading in communicating the state of the pandemic due to the ordering along the <span class="math inline">\(x\)</span>-axis.
 Notice the case count for April <span class="math inline">\(17^{th}\)</span> appears to the right of April <span class="math inline">\(19^{th}\)</span>, and that the order of the counties has been selected so that the case counts are monotonically decreasing for each day of reporting.
 The appearance of this graphic leads viewers to believe COVID cases are decreasing.
@@ -314,7 +336,7 @@ Shortly after the graphic was released, the governor’s office made a statement
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:covid-19-reporting"></span>
 <img src="images/covid-ga-recreation.jpg" alt="COVID-19 reporting" width="85%"  />
 <p class="caption">
-Figure 1.4: COVID-19 reporting
+Figure 1.8: COVID-19 reporting
 </p>
 </div>
 <p>Misleading charts are not only found in mass media, but graphics displayed in academic research and science are still falling short of the standards. <span class="citation">Gordon &amp; Finch (2015)</span> evaluated 97 graphs for overall quality, based on five principles of graphical excellence including: (1) show the data clearly (2) use simplicity in design (3) use good alignment on a common scale for quantities to be compared (4) keep the visual encoding transparent (5) use graphical forms consistent with principles 1 and 4.
@@ -339,7 +361,7 @@ Software, such as <code>ggplot2</code> <span class="citation">(Wickham, 2016)</s
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:graphic-flowchart"></span>
 <img src="images/graphic-flowchart.png" alt="Graphic flowchart" width="50%"  />
 <p class="caption">
-Figure 1.5: Graphic flowchart
+Figure 1.9: Graphic flowchart
 </p>
 </div>
 </div>
@@ -362,7 +384,7 @@ It was found that the bar was preferable to the circle when shown percentages th
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:eells-compoment-parts"></span>
 <img src="images/eells-component-parts.png" alt="Eells (1926) component parts diagrams" width="75%"  />
 <p class="caption">
-Figure 1.6: Eells (1926) component parts diagrams
+Figure 1.10: Eells (1926) component parts diagrams
 </p>
 </div>
 <p>While a typical psychophysics experiment focuses on whether an effect is detectable and whether the magnitude of the effect can be accurately estimated, these early experiments instead depended on speed and accuracy for plot evaluation <span class="citation">(Lewandowsky &amp; Spence, 1989; Spence, 1990; Teghtsoonian, 1965)</span>.
@@ -373,7 +395,7 @@ Measuring the speed at which participants made their judgments, it was found tha
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:spence-1990-proportion"></span>
 <img src="images/spence-1990-proportion.png" alt="Spence (1990) task display" width="75%"  />
 <p class="caption">
-Figure 1.7: Spence (1990) task display
+Figure 1.11: Spence (1990) task display
 </p>
 </div>
 <p>Cognitive psychologists and statisticians made progress by conducting experiments to identify perceptual errors associated with different styles of graphics and charts <span class="citation">(Cleveland &amp; McGill, 1984, 1985; Shah, Mayer, &amp; Hegarty, 1999)</span>.
@@ -414,7 +436,7 @@ Results indicate that decision makers may consistently underestimate or overesti
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:amer-poggendorff-illusion"></span>
 <img src="images/amer-poggendorff-illusion.png" alt="Amer (2005) cost volume profit graph" width="100%"  />
 <p class="caption">
-Figure 1.8: Amer (2005) cost volume profit graph
+Figure 1.12: Amer (2005) cost volume profit graph
 </p>
 </div>
 <div id="lit-questioning" class="section level3 hasAnchor" number="1.6.1">
@@ -432,7 +454,7 @@ In addition to the graph’s visual features and questioning, it is important fo
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:children-height"></span>
 <img src="images/children-height.png" alt="Comprehension of heights (1987) " width="80%"  />
 <p class="caption">
-Figure 1.9: Comprehension of heights (1987)
+Figure 1.13: Comprehension of heights (1987)
 </p>
 </div>
 </div>
@@ -483,7 +505,7 @@ When presenting log scaled data, it is possible to use either un-transformed sca
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:log-scales"></span>
 <img src="thesis_files/figure-html/log-scales-1.png" alt="Linear scale verses log scale" width="100%"  />
 <p class="caption">
-Figure 1.10: Linear scale verses log scale
+Figure 1.14: Linear scale verses log scale
 </p>
 </div>
 <p>We have recently experienced the benefits and pitfalls of using log scales as COVID-19 dashboards displayed case count data on both the log and linear scale <span class="citation">(Burn-Murdoch et al., 2020; Fagen-Ulmschneider, 2020)</span>.
@@ -498,21 +520,21 @@ In <span class="citation">Waddell (2005)</span>, comparisons were made between t
 Results favored the use of logarithmic scales for doses in order to put the relative doses into perspective whereas using a linear scale to administer doses to animals with the same chemicals to which humans are exposed does not provide useful, comparative information.
 Given the widespread use of logarithmic scales, it is important to understand the implications of their use in order to provide guidelines for best use.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:covid19-FT-deaths-march2020-log"></span>
-<img src="images/covid19-FT-03.23.2020-log.png" alt="Covid 19 Deaths (log scale) as of March 23, 2020" width="90%"  />
+<img src="images/covid19-FT-03.23.2020-log.png" alt="Covid-19 deaths (log scale) as of March 23, 2020" width="90%"  />
 <p class="caption">
-Figure 1.11: Covid 19 Deaths (log scale) as of March 23, 2020
+Figure 1.15: Covid-19 deaths (log scale) as of March 23, 2020
 </p>
 </div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:covid19-FT-june2020-case-counts-linear"></span>
-<img src="images/covid19-FT-case-count-06.30.2020-linear.png" alt="Covid 19 Case Counts (linear scale) as of June 30, 2020" width="90%"  />
+<img src="images/covid19-FT-case-count-06.30.2020-linear.png" alt="Covid-19 case counts (linear scale) as of June 30, 2020" width="90%"  />
 <p class="caption">
-Figure 1.12: Covid 19 Case Counts (linear scale) as of June 30, 2020
+Figure 1.16: Covid-19 case counts (linear scale) as of June 30, 2020
 </p>
 </div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:covid19-FT-june2020-case-counts-log"></span>
-<img src="images/covid19-FT-case-count-06.30.2020-log.png" alt="Covid 19 Case Counts (log scale) as of June 30, 2020" width="90%"  />
+<img src="images/covid19-FT-case-count-06.30.2020-log.png" alt="Covid-19 case counts (log scale) as of June 30, 2020" width="90%"  />
 <p class="caption">
-Figure 1.13: Covid 19 Case Counts (log scale) as of June 30, 2020
+Figure 1.17: Covid-19 case counts (log scale) as of June 30, 2020
 </p>
 </div>
 <p>When we first learn to count, we begin counting by ones (for example, 1, 2, 3, etc.), then by tens (for example, 10, 20, 30, etc.), and advancing to hundreds (for example, 100, 200, 300, etc.), following the base10 order of magnitude system (for example, 1, 10, 100, etc.).
@@ -527,7 +549,7 @@ The <em>Weber-Fechner law</em> extended the discovery and states the relationshi
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:log-number-line"></span>
 <img src="thesis_files/figure-html/log-number-line-1.png" alt="Kindergarten example of mapping numbers 1-10 along a number line" width="65%"  />
 <p class="caption">
-Figure 1.14: Kindergarten example of mapping numbers 1-10 along a number line
+Figure 1.18: Kindergarten example of mapping numbers 1-10 along a number line
 </p>
 </div>
 <p>Assuming there is a direct relationship between perceptual and cognitive processes, it is reasonable to assume numerical representations should also be displayed on a nonlinear, compressed number scale. Therefore, if we perceive logarithmically by default, it is a natural (and presumably low effort) way to display information and should be easy to read and understand/use.
@@ -544,7 +566,7 @@ This misinterpretation can lead to decisions made under inaccurate understanding
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:exponential-stages-comic"></span>
 <img src="images/exponential-stages-comic.jpg" alt="Log scale comic" width="100%"  />
 <p class="caption">
-Figure 1.15: Log scale comic
+Figure 1.19: Log scale comic
 </p>
 </div>
 <p>Early studies explored the estimation and prediction of exponential growth and found that growth is underestimated when presented both numerically and graphically <span class="citation">(Wagenaar &amp; Sagaria, 1975)</span>.
@@ -561,7 +583,7 @@ These misconceptions are a result of linear extrapolation assuming that a line i
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:menge-plots"></span>
 <img src="images/menge-plots.png" alt="Graphs viewed in Menge (2018) survey" width="100%"  />
 <p class="caption">
-Figure 1.16: Graphs viewed in Menge (2018) survey
+Figure 1.20: Graphs viewed in Menge (2018) survey
 </p>
 </div>
 <p>The ‘hand-hold fallacy’ stems from the misconception that steeper slopes in log-log relationships are steeper slopes in linear-linear space, illustrated in d-f. 

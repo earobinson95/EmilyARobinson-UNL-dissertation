@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.5.10)  18 MAY 2022 00:02
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.5.10)  18 MAY 2022 10:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1260,27 +1260,32 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
 ]
 Overfull \hbox (1.66797pt too wide) detected at line 51
- \TU/lmr/bx/n/12 112
+ \TU/lmr/bx/n/12 113
  []
 
 
 Overfull \hbox (1.66797pt too wide) detected at line 52
- \TU/lmr/bx/n/12 117
+ \TU/lmr/bx/n/12 118
  []
 
 
 Overfull \hbox (1.66797pt too wide) detected at line 53
- \TU/lmr/bx/n/12 119
+ \TU/lmr/bx/n/12 120
+ []
+
+
+Overfull \hbox (1.66797pt too wide) detected at line 54
+ \TU/lmr/bx/n/12 125
  []
 
 
 Overfull \hbox (1.66797pt too wide) detected at line 55
- \TU/lmr/bx/n/12 126
+ \TU/lmr/bx/n/12 127
  []
 
 ) [6] (./thesis.lof [7
 
-] [8]) [9] (./thesis.lot) [10
+] [8]) [9] [10] (./thesis.lot) [11
 
 ] [1
 
@@ -1292,157 +1297,172 @@ File: images/covid19-summer2020-risk-map.png Graphic file (type bmp)
 <images/covid19-summer2020-risk-map.png>
 File: images/covid19-datawrapper-views-july2020.png Graphic file (type bmp)
 <images/covid19-datawrapper-views-july2020.png>
-[2] [3]
+[2]
+File: images/misleading-graphics-3d-pie-batteries.jpg Graphic file (type bmp)
+<images/misleading-graphics-3d-pie-batteries.jpg>
+File: images/misleading-graphics-bad-form-better-science.png Graphic file (type bmp)
+<images/misleading-graphics-bad-form-better-science.png>
+File: images/misleading-graphics-wordle-map.jpg Graphic file (type bmp)
+<images/misleading-graphics-wordle-map.jpg>
+File: images/misleading-graphics-bad-form-supercomputers.png Graphic file (type bmp)
+<images/misleading-graphics-bad-form-supercomputers.png>
+File: images/misleading-graphics-bad-axes-rouble-to-dollar.jpg Graphic file (type bmp)
+<images/misleading-graphics-bad-axes-rouble-to-dollar.jpg>
+File: images/misleading-graphics-pizza.png Graphic file (type bmp)
+<images/misleading-graphics-pizza.png>
+File: images/misleading-graphics-multiple-issues-pet-ownership.jpg Graphic file (type bmp)
+<images/misleading-graphics-multiple-issues-pet-ownership.jpg>
+[3] [4] [5]
 File: images/covid-ga-recreation.jpg Graphic file (type bmp)
 <images/covid-ga-recreation.jpg>
-[4] [5] [6]
+[6] [7]
 File: images/graphic-flowchart.png Graphic file (type bmp)
 <images/graphic-flowchart.png>
-[7]
+[8] [9]
 File: images/eells-component-parts.png Graphic file (type bmp)
 <images/eells-component-parts.png>
-[8]
+[10]
 File: images/spence-1990-proportion.png Graphic file (type bmp)
 <images/spence-1990-proportion.png>
-[9] [10] [11] [12]
+[11] [12] [13]
 File: images/amer-poggendorff-illusion.png Graphic file (type bmp)
 <images/amer-poggendorff-illusion.png>
-[13]
+[14] [15]
 File: images/children-height.png Graphic file (type bmp)
 <images/children-height.png>
-[14] [15] [16] [17]
+[16] [17] [18] [19]
 File: thesis_files/figure-latex/log-scales-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/log-scales-1.pdf>
-[18] [19]
+[20]
 File: images/covid19-FT-03.23.2020-log.png Graphic file (type bmp)
 <images/covid19-FT-03.23.2020-log.png>
 File: images/covid19-FT-case-count-06.30.2020-linear.png Graphic file (type bmp)
 <images/covid19-FT-case-count-06.30.2020-linear.png>
 File: images/covid19-FT-case-count-06.30.2020-log.png Graphic file (type bmp)
 <images/covid19-FT-case-count-06.30.2020-log.png>
-[20] [21]
+[21] [22] [23]
 File: thesis_files/figure-latex/log-number-line-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/log-number-line-1.pdf>
-[22]
+[24]
 File: images/exponential-stages-comic.jpg Graphic file (type bmp)
 <images/exponential-stages-comic.jpg>
-[23] [24]
+[25] [26]
 File: images/menge-plots.png Graphic file (type bmp)
 <images/menge-plots.png>
-[25] [26] [27] [28] [29
+[27] [28] [29] [30
 
 ]
 File: thesis_files/figure-latex/lineup-example-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/lineup-example-1.pdf>
-[30] [31]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 711.
-[32]
+[31] [32]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 748.
+[33]
 File: thesis_files/figure-latex/lof-density-curves-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/lof-density-curves-1.pdf>
-[33] [34]
+[34] [35]
 File: thesis_files/figure-latex/curvature-combination-example-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/curvature-combination-example-1.pdf>
-[35] [36] [37] [38]
+[36] [37] [38] [39]
 File: thesis_files/figure-latex/odds-ratio-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/odds-ratio-plot-1.pdf>
-[39] [40] [41] [42
+[40] [41] [42] [43
 
-] [43]
+] [44]
 File: images/02-you-draw-it/subjective-judgement-plot.png Graphic file (type bmp)
 <images/02-you-draw-it/subjective-judgement-plot.png>
 File: images/02-you-draw-it/eyefitting-straight-lines-plots.png Graphic file (type bmp)
 <images/02-you-draw-it/eyefitting-straight-lines-plots.png>
-[44] [45] [46]
+[45] [46] [47]
 File: images/02-you-draw-it/nyt-caraccidents-frame4.png Graphic file (type bmp)
 <images/02-you-draw-it/nyt-caraccidents-frame4.png>
-[47]
+[48]
 File: images/02-you-draw-it/raster-vs-vector.png Graphic file (type bmp)
 <images/02-you-draw-it/raster-vs-vector.png>
-[48]
+[49]
 File: images/02-you-draw-it/ydiExample-0.10-10-linear.png Graphic file (type bmp)
 <images/02-you-draw-it/ydiExample-0.10-10-linear.png>
-[49] [50] [51] [52]
+[50] [51] [52] [53]
 File: thesis_files/figure-latex/eyefitting-simplot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/eyefitting-simplot-1.pdf>
-[53] [54]
+[54] [55]
 File: thesis_files/figure-latex/ols-vs-pca-example-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/ols-vs-pca-example-1.pdf>
-[55]
+[56]
 File: thesis_files/figure-latex/eyefitting-example-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/eyefitting-example-plot-1.pdf>
-[56] [57] [58]
+[57] [58] [59]
 File: thesis_files/figure-latex/eyefitting-lmer-residualplots-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/eyefitting-lmer-residualplots-1.pdf>
 File: thesis_files/figure-latex/eyefitting-gamm-residualplots-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/eyefitting-gamm-residualplots-1.pdf>
-[59] [60] [61] [62]
+[60] [61] [62] [63]
 File: thesis_files/figure-latex/exponential-yloess-spaghetti-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/exponential-yloess-spaghetti-plot-1.pdf>
-[63] [64] [65]
+[64] [65] [66]
 File: thesis_files/figure-latex/exponential-prediction-gamm-preds-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/exponential-prediction-gamm-preds-1.pdf>
-[66] [67] [68] [69
+[67] [68] [69] [70
 
-] [70] [71] [72] [73]
+] [71] [72] [73] [74]
 File: thesis_files/figure-latex/estimation-simulated-data-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/estimation-simulated-data-1.pdf>
-[74] [75] [76]
+[75] [76] [77]
 File: thesis_files/figure-latex/estimation-word-cloud-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/estimation-word-cloud-1.pdf>
-[77]
+[78]
 File: images/03-estimation/qe1-sketch.png Graphic file (type bmp)
 <images/03-estimation/qe1-sketch.png>
-[78] [79]
+[79] [80]
 File: thesis_files/figure-latex/qe1-density-plot-10-all-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qe1-density-plot-10-all-1.pdf>
-[80] [81]
+[81] [82]
 File: thesis_files/figure-latex/spaghetti-dataset1-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/spaghetti-dataset1-1.pdf>
 File: thesis_files/figure-latex/spaghetti-dataset2-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/spaghetti-dataset2-1.pdf>
-[82] [83] [84] [85]
+[83] [84] [85] [86]
 File: thesis_files/figure-latex/common-population-estimates-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/common-population-estimates-1.pdf>
-[86] [87]
+[87] [88]
 File: images/03-estimation/qe2-sketch.png Graphic file (type bmp)
 <images/03-estimation/qe2-sketch.png>
-[88] [89]
+[89] [90]
 File: thesis_files/figure-latex/qe2-density-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qe2-density-plot-1.pdf>
-[90] [91] [92]
+[91] [92] [93]
 File: images/03-estimation/qi1-sketch.png Graphic file (type bmp)
 <images/03-estimation/qi1-sketch.png>
 File: thesis_files/figure-latex/qi1-density-1-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi1-density-1-1.pdf>
 File: thesis_files/figure-latex/qi1-density-2-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi1-density-2-1.pdf>
-[93] [94] [95] [96]
+[94] [95] [96] [97]
 File: thesis_files/figure-latex/qi1-common-responses-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi1-common-responses-1.pdf>
-[97] [98] [99]
+[98] [99] [100]
 File: images/03-estimation/qi2-sketch.png Graphic file (type bmp)
 <images/03-estimation/qi2-sketch.png>
-[100] [101]
+[101] [102]
 File: thesis_files/figure-latex/qi2-plots-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi2-plots-1.pdf>
-[102] [103]
+[103] [104]
 File: thesis_files/figure-latex/qi2-density-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi2-density-1.pdf>
 File: thesis_files/figure-latex/qi2-common-responses-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi2-common-responses-1.pdf>
-[104] [105] [106]
+[105] [106] [107]
 File: images/03-estimation/qi3-sketch.png Graphic file (type bmp)
 <images/03-estimation/qi3-sketch.png>
 File: thesis_files/figure-latex/qi3-density-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi3-density-1.pdf>
-[107] [108] [109] [110] [111] [112
+[108] [109] [110] [111] [112] [113
 
-] [113] [114] [115] [116]
+] [114] [115] [116] [117]
 File: images/02-you-draw-it/r2d3+shiny.png Graphic file (type bmp)
 <images/02-you-draw-it/r2d3+shiny.png>
-[117
+[118
 
-] [118]
+] [119]
 File: images/02-you-draw-it/low-10-linear.png Graphic file (type bmp)
 <images/02-you-draw-it/low-10-linear.png>
 File: images/02-you-draw-it/low-10-log.png Graphic file (type bmp)
@@ -1459,22 +1479,24 @@ File: images/02-you-draw-it/high-15-linear.png Graphic file (type bmp)
 <images/02-you-draw-it/high-15-linear.png>
 File: images/02-you-draw-it/high-15-log.png Graphic file (type bmp)
 <images/02-you-draw-it/high-15-log.png>
-[119
+[120
 
-] [120] [121] [122]
+] [121] [122] [123] [124]
 File: thesis_files/figure-latex/showed-work-comparison-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/showed-work-comparison-1.pdf>
-[123] [124] [125] [126
+[125
 
-] [127] [128] [129] [130] [131] [132] [133] [134] [135] [136] [137]
+] [126] [127
+
+] [128] [129] [130] [131] [132] [133] [134] [135] [136] [137] [138]
 No file thesis.bbl.
 
 Class memoir Warning: The material used in the footer is too large
 (10.14995pt) for the given foot skip (0.0pt), it is recommended to
 either increase the foot skip or redesign the footer
-(in both cases you will find help in the memoir manual). on input line 2429.
+(in both cases you will find help in the memoir manual). on input line 2466.
 
-[138]
+[139]
 \tf@toc=\write7
 \openout7 = `thesis.toc'.
 
@@ -1486,15 +1508,15 @@ either increase the foot skip or redesign the footer
 
 (./thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 001EBCE13B1F812C6F5CD8D3E8CAF08C;2649.
+(rerunfilecheck)             Checksum: 1037554BAA6FF4E81BDD67FA198715F6;2638.
  ) 
 Here is how much of TeX's memory you used:
- 39208 strings out of 478132
- 781974 string characters out of 5851803
- 1097432 words of memory out of 5000000
- 59189 multiletter control sequences out of 15000+600000
+ 39357 strings out of 478132
+ 789956 string characters out of 5851803
+ 1097435 words of memory out of 5000000
+ 59331 multiletter control sequences out of 15000+600000
  475567 words of font info for 72 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  123i,12n,120p,2324b,507s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on thesis.pdf (148 pages).
+Output written on thesis.pdf (150 pages).

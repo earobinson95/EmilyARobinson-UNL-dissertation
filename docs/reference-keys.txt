@@ -1,6 +1,10 @@
 fig:91divoc-cases-july2021
 fig:covid19-summer2020-risk-map
 fig:covid19-datawrapper-views-july2020
+fig:misleading-graphics-form
+fig:misleading-graphics-chartjunk
+fig:misleading-graphics-bad-axes
+fig:misleading-graphics-just-bad
 fig:covid-19-reporting
 fig:graphic-flowchart
 fig:eells-compoment-parts

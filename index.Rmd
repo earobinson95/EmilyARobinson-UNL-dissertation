@@ -95,22 +95,60 @@ Many of these graphics helped guide decision makers to implement policies such a
 As graphics began to play an important role in sharing information with the public, creators of graphics were faced with design choices in order to ensure their charts were effective at accurately communicating the current status of the pandemic.
 In order to make educated decisions when designing a chart, we need guidelines as established through experimentation to ensure the graphic is effective at communicating the intended result.
 
-```{r 91divoc-cases-july2021, fig.cap = "91-DOVIC New Daily Case Counts as of July 2021", out.width="100%"}
+```{r 91divoc-cases-july2021, fig.cap = "91-DOVIC new daily case counts as of July 2021", out.width="75%"}
 knitr::include_graphics("images/91dovic-cases-july2021.png")
 ```
 
-```{r covid19-summer2020-risk-map, fig.cap = "COVID-19 Risk Level Map as of July 2020", out.width="100%"}
+```{r covid19-summer2020-risk-map, fig.cap = "COVID-19 risk level map as of July 2020", out.width="75%"}
 knitr::include_graphics("images/covid19-summer2020-risk-map.png")
 ```
 
-```{r covid19-datawrapper-views-july2020, fig.cap = "Datawrapper daily chart views during COVID-19", out.width="100%"}
+```{r covid19-datawrapper-views-july2020, fig.cap = "Datawrapper daily chart views during COVID-19", out.width="75%"}
 knitr::include_graphics("images/covid19-datawrapper-views-july2020.png")
 ```
 
 ## Misleading Graphics {#misleading-graphics}
 
 There are many ways in which plots may inaccurately display the data and be ineffective or misleading in sharing information and results [@szafir2018good]. 
-Misleading charts might have (1) bad form such as 3D pie charts or .., (2) include too much "chartjunk" resulting in clutter or displaying useless data, or (3) have bad axes such as a mismatch between scale and contex or just plain bad math. \ear{ADD EXAMPLES HERE!!}
+Misleading charts might have (1) bad form such as 3D pie charts or .. \pcref{fig:misleading-graphics-form}, (2) include too much "chartjunk" resulting in clutter or displaying useless data \pcref{fig:misleading-graphics-chartjunk}, or (3) have bad axes such as a mismatch between scale and context or just plain bad math \pcref{fig:misleading-graphics-bad-axes}. \cref{fig:misleading-graphics-just-bad} demonstrates how a chart can be misleading in more than one way; the map of pet ownership violates guidelines by mapping too many variables to visual encodings which results in clutter and bad form.
+
+```{r misleading-graphics-form, fig.show = 'hold', fig.aligh = 'center', out.width = '49%', fig.cap = "Misleading graphical form examples"}
+knitr::include_graphics(c("images/misleading-graphics-3d-pie-batteries.jpg", "images/misleading-graphics-bad-form-better-science.png"))
+
+# https://www.reddit.com/r/dataisugly/comments/tgn4vq/argh/
+# @reddit_dataisugly
+
+# https://www.nature.com/articles/s41559-017-0160
+# @lowndes2017our
+```
+
+```{r misleading-graphics-chartjunk, fig.show = 'hold', fig.aligh = 'center', out.width = '49%', fig.cap = "Misleading 'chartjunk' examples"}
+knitr::include_graphics(c("images/misleading-graphics-wordle-map.jpg", "images/misleading-graphics-bad-form-supercomputers.png"))
+
+# https://twitter.com/GraphCrimes/status/1500314716081692676
+# @graphcrimes_2022
+
+# https://en.wikipedia.org/wiki/X86-64#/media/File:Processor_families_in_TOP500_supercomputers.svg
+# @wikipedia_x86_64
+```
+
+```{r misleading-graphics-bad-axes, fig.show = 'hold', fig.aligh = 'center', out.width = '49%', fig.cap = "Misleading bad axes"}
+knitr::include_graphics(c("images/misleading-graphics-bad-axes-rouble-to-dollar.jpg", "images/misleading-graphics-pizza.png"))
+
+# https://twitter.com/emmevilla/status/1498365717720223751
+# @villa_2022
+
+# https://getdolphins.com/blog/the-worst-graphs-of-2017/
+# @lauren_2018
+```
+
+```{r misleading-graphics-just-bad, fig.align = 'center', out.width="50%", fig.cap = "Misleading graphic multiple violations example"}
+knitr::include_graphics("images/misleading-graphics-multiple-issues-pet-ownership.jpg")
+
+# https://i.redd.it/sdx40wo1s1y11.jpg
+# @reddit_CrappyDesign
+```
+
 @baumer2021texts shares an example of a misleading graphic in the news shown in May 2020 when Georgia published a graphical display of COVID-19 cases \pcref{fig:covid-19-reporting}. 
 This graphic was highly misleading in communicating the state of the pandemic due to the ordering along the $x$-axis.
 Notice the case count for April $17^{th}$ appears to the right of April $19^{th}$, and that the order of the counties has been selected so that the case counts are monotonically decreasing for each day of reporting.
@@ -316,16 +354,16 @@ In @waddell2005comparisons, comparisons were made between the linear and logarit
 Results favored the use of logarithmic scales for doses in order to put the relative doses into perspective whereas using a linear scale to administer doses to animals with the same chemicals to which humans are exposed does not provide useful, comparative information.
 Given the widespread use of logarithmic scales, it is important to understand the implications of their use in order to provide guidelines for best use.
 
-```{r covid19-FT-deaths-march2020-log, fig.cap = "Covid 19 Deaths (log scale) as of March 23, 2020", out.width="90%"}
+```{r covid19-FT-deaths-march2020-log, fig.cap = "Covid-19 deaths (log scale) as of March 23, 2020", out.width="90%"}
 knitr::include_graphics("images/covid19-FT-03.23.2020-log.png")
 # https://eagereyes.org/blog/2020/in-praise-of-the-diagonal-reference-line
 ```
 
-```{r covid19-FT-june2020-case-counts-linear, fig.cap = "Covid 19 Case Counts (linear scale) as of June 30, 2020", out.width="90%"}
+```{r covid19-FT-june2020-case-counts-linear, fig.cap = "Covid-19 case counts (linear scale) as of June 30, 2020", out.width="90%"}
 knitr::include_graphics("images/covid19-FT-case-count-06.30.2020-linear.png")
 ```
 
-```{r covid19-FT-june2020-case-counts-log, fig.cap = "Covid 19 Case Counts (log scale) as of June 30, 2020", out.width="90%"}
+```{r covid19-FT-june2020-case-counts-log, fig.cap = "Covid-19 case counts (log scale) as of June 30, 2020", out.width="90%"}
 knitr::include_graphics("images/covid19-FT-case-count-06.30.2020-log.png")
 ```
 

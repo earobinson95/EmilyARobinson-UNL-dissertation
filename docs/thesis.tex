@@ -282,25 +282,25 @@ In order to make educated decisions when designing a chart, we need guidelines a
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=1\linewidth,]{images/91dovic-cases-july2021} 
+{\centering \includegraphics[width=0.6\linewidth,]{images/91dovic-cases-july2021} 
 
 }
 
-\caption{91-DOVIC New Daily Case Counts as of July 2021}\label{fig:91divoc-cases-july2021}
+\caption{91-DOVIC new daily case counts as of July 2021}\label{fig:91divoc-cases-july2021}
 \end{figure}
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=1\linewidth,]{images/covid19-summer2020-risk-map} 
+{\centering \includegraphics[width=0.6\linewidth,]{images/covid19-summer2020-risk-map} 
 
 }
 
-\caption{COVID-19 Risk Level Map as of July 2020}\label{fig:covid19-summer2020-risk-map}
+\caption{COVID-19 risk level map as of July 2020}\label{fig:covid19-summer2020-risk-map}
 \end{figure}
 
 \begin{figure}[tbp]
 
-{\centering \includegraphics[width=1\linewidth,]{images/covid19-datawrapper-views-july2020} 
+{\centering \includegraphics[width=0.6\linewidth,]{images/covid19-datawrapper-views-july2020} 
 
 }
 
@@ -311,7 +311,44 @@ In order to make educated decisions when designing a chart, we need guidelines a
 \section{Misleading Graphics}\label{misleading-graphics}}
 
 There are many ways in which plots may inaccurately display the data and be ineffective or misleading in sharing information and results (Szafir, 2018).
-Misleading charts might have (1) bad form such as 3D pie charts or .., (2) include too much ``chartjunk'' resulting in clutter or displaying useless data, or (3) have bad axes such as a mismatch between scale and contex or just plain bad math. \ear{ADD EXAMPLES HERE!!}
+Misleading charts might have (1) bad form such as 3D pie charts or .. \pcref{fig:misleading-graphics-form}, (2) include too much ``chartjunk'' resulting in clutter or displaying useless data \pcref{fig:misleading-graphics-chartjunk}, or (3) have bad axes such as a mismatch between scale and context or just plain bad math \pcref{fig:misleading-graphics-bad-axes}. \cref{fig:misleading-graphics-just-bad} demonstrates how a chart can be misleading in more than one way; the map of pet ownership violates guidelines by mapping too many variables to visual encodings which results in clutter and bad form.
+
+\begin{figure}[tbp]
+
+{\centering \includegraphics[width=0.49\linewidth,]{images/misleading-graphics-3d-pie-batteries} \includegraphics[width=0.49\linewidth,]{images/misleading-graphics-bad-form-better-science} 
+
+}
+
+\caption{Misleading graphical form examples}\label{fig:misleading-graphics-form}
+\end{figure}
+
+\begin{figure}[tbp]
+
+{\centering \includegraphics[width=0.49\linewidth,]{images/misleading-graphics-wordle-map} \includegraphics[width=0.49\linewidth,]{images/misleading-graphics-bad-form-supercomputers} 
+
+}
+
+\caption{Misleading 'chartjunk' examples}\label{fig:misleading-graphics-chartjunk}
+\end{figure}
+
+\begin{figure}[tbp]
+
+{\centering \includegraphics[width=0.49\linewidth,]{images/misleading-graphics-bad-axes-rouble-to-dollar} \includegraphics[width=0.49\linewidth,]{images/misleading-graphics-pizza} 
+
+}
+
+\caption{Misleading bad axes}\label{fig:misleading-graphics-bad-axes}
+\end{figure}
+
+\begin{figure}[tbp]
+
+{\centering \includegraphics[width=0.5\linewidth,]{images/misleading-graphics-multiple-issues-pet-ownership} 
+
+}
+
+\caption{Misleading graphic multiple violations example}\label{fig:misleading-graphics-just-bad}
+\end{figure}
+
 Baumer, Kaplan, \& Horton (2021) shares an example of a misleading graphic in the news shown in May 2020 when Georgia published a graphical display of COVID-19 cases \pcref{fig:covid-19-reporting}.
 This graphic was highly misleading in communicating the state of the pandemic due to the ordering along the \(x\)-axis.
 Notice the case count for April \(17^{th}\) appears to the right of April \(19^{th}\), and that the order of the counties has been selected so that the case counts are monotonically decreasing for each day of reporting.
@@ -548,7 +585,7 @@ Given the widespread use of logarithmic scales, it is important to understand th
 
 }
 
-\caption{Covid 19 Deaths (log scale) as of March 23, 2020}\label{fig:covid19-FT-deaths-march2020-log}
+\caption{Covid-19 deaths (log scale) as of March 23, 2020}\label{fig:covid19-FT-deaths-march2020-log}
 \end{figure}
 
 \begin{figure}[tbp]
@@ -557,7 +594,7 @@ Given the widespread use of logarithmic scales, it is important to understand th
 
 }
 
-\caption{Covid 19 Case Counts (linear scale) as of June 30, 2020}\label{fig:covid19-FT-june2020-case-counts-linear}
+\caption{Covid-19 case counts (linear scale) as of June 30, 2020}\label{fig:covid19-FT-june2020-case-counts-linear}
 \end{figure}
 
 \begin{figure}[tbp]
@@ -566,7 +603,7 @@ Given the widespread use of logarithmic scales, it is important to understand th
 
 }
 
-\caption{Covid 19 Case Counts (log scale) as of June 30, 2020}\label{fig:covid19-FT-june2020-case-counts-log}
+\caption{Covid-19 case counts (log scale) as of June 30, 2020}\label{fig:covid19-FT-june2020-case-counts-log}
 \end{figure}
 
 When we first learn to count, we begin counting by ones (for example, 1, 2, 3, etc.), then by tens (for example, 10, 20, 30, etc.), and advancing to hundreds (for example, 100, 200, 300, etc.), following the base10 order of magnitude system (for example, 1, 10, 100, etc.).
@@ -685,7 +722,7 @@ The lineup plot on the left displays increasing exponential data displayed on a 
 
 }
 
-\caption[Lineup Examples]{The lineup plot on the left displays increasing exponential data on a linear scale with panel (2 x 5) + 3 as the target. The lineup plot on the right displays increasing exponential data on the log scale with panel 2 x 2 as the target.}\label{fig:lineup-example}
+\caption[Lineup examples]{The lineup plot on the left displays increasing exponential data on a linear scale with panel (2 x 5) + 3 as the target. The lineup plot on the right displays increasing exponential data on the log scale with panel 2 x 2 as the target.}\label{fig:lineup-example}
 \end{figure}
 
 While explicit graphical tests direct the participant to a specific feature of a plot to answer a specific question, implicit graphical tests require the user to identify both the purpose and function of the plot in order to evaluate the plots shown (Vanderplas et al., 2020).
@@ -908,7 +945,7 @@ Results indicated that one cycle of iterations for calculating the relative pote
 
 }
 
-\caption[Subjective Judgement in Statistical Analysis (1951) Parallel Probits]{Parallel probit responses in a biological assay shown to study participants in Subjective Judgement in Statistical Analysis (1951). The $x$-axis is the $\log_{1.5}$ dose level and the $y$-axis is the corresponding probit response; circles correspond to the test preparation method while the crosses correspond to the standard preparation method.}\label{fig:subjective-judgement}
+\caption[Subjective Judgement in Statistical Analysis (1951) parallel probits]{Parallel probit responses in a biological assay shown to study participants in Subjective Judgement in Statistical Analysis (1951). The $x$-axis is the $\log_{1.5}$ dose level and the $y$-axis is the corresponding probit response; circles correspond to the test preparation method while the crosses correspond to the standard preparation method.}\label{fig:subjective-judgement}
 \end{figure}
 
 Thirty years later, Mosteller et al.~(1981), sought to understand the properties of least squares and other computed lines by establishing one systematic method of fitting lines by eye.
@@ -923,7 +960,7 @@ Without a formal analysis of the study, the researchers discussed the idea that 
 
 }
 
-\caption[Eye Fitting Straight Lines (1981) Data Sets]{Scatter plots of the data shown to study participants in Eye Fitting Straight Lines (1981).}\label{fig:mosteller-eyefitting-plot}
+\caption[Eye Fitting Straight Lines (1981) data sets]{Scatter plots of the data shown to study participants in Eye Fitting Straight Lines (1981).}\label{fig:mosteller-eyefitting-plot}
 \end{figure}
 
 Recently, Ciccione \& Dehaene (2021) conducted a comprehensive set of studies investigating human ability to detect trends in graphical representations from a psychophysical approach.
@@ -943,7 +980,7 @@ After the reader completed drawing the line, the actual observed values were rev
 
 }
 
-\caption[New York Times 'You Draw It' Feature]{New York Times 'You Draw It' feature; readers were asked to use their mouse to draw the line for the missing years in order to provide what they estimated to be the number of Americans who have died every year from car accidents, since 1990.}\label{fig:nyt-caraccidents}
+\caption[New York Times 'You Draw It' feature]{New York Times 'You Draw It' feature; readers were asked to use their mouse to draw the line for the missing years in order to provide what they estimated to be the number of Americans who have died every year from car accidents, since 1990.}\label{fig:nyt-caraccidents}
 \end{figure}
 
 \hypertarget{data-driven-documents}{%
@@ -963,7 +1000,7 @@ Advantages of using D3 include animation and allowing for movement and user inte
 
 }
 
-\caption{SVG vs Raster}\label{fig:raster-vs-vector}
+\caption{SVG vs raster}\label{fig:raster-vs-vector}
 \end{figure}
 
 A challenge of working with D3 is the environment necessary to display the graphics and images.
@@ -990,7 +1027,7 @@ Next, the yellow box region moved along as the participant drew their trend-line
 
 }
 
-\caption['You Draw It' Example]{Example of a 'You Draw It' interactive plot as shown to participants during the study. The first frame shows what the participant saw along with the prompt, \textit{'Use your mouse to fill in the trend in the yellow box region'}. Next, the yellow box region moved along as the participant drew their trend-line until the yellow region disappeared, indicating the participant had filled in the entire domain.}\label{fig:youdrawit-example}
+\caption['You Draw It' task plot example]{Example of a 'You Draw It' interactive plot as shown to participants during the study. The first frame shows what the participant saw along with the prompt, \textit{'Use your mouse to fill in the trend in the yellow box region'}. Next, the yellow box region moved along as the participant drew their trend-line until the yellow region disappeared, indicating the participant had filled in the entire domain.}\label{fig:youdrawit-example}
 \end{figure}
 
 \hypertarget{study-design-1}{%
@@ -1077,7 +1114,7 @@ Aesthetic design choices were made consistent across each of the interactive `Yo
 
 }
 
-\caption[Eye Fitting Straight Lines in the Modern Era Simulated Data Example]{Scatter plots of example simulated data in Eye Fitting Straight Lines in the Modern Era sub-study. The four parameter choices were intended to reflect the trends seen in \cref{fig:mosteller-eyefitting-plot}.}\label{fig:eyefitting-simplot}
+\caption[Eye Fitting Straight Lines in the Modern Era simulated data example]{Scatter plots of example simulated data in Eye Fitting Straight Lines in the Modern Era sub-study. The four parameter choices were intended to reflect the trends seen in \cref{fig:mosteller-eyefitting-plot}.}\label{fig:eyefitting-simplot}
 \end{figure}
 
 \hypertarget{results-1}{%
@@ -1094,7 +1131,7 @@ Fitted values, \(\hat y_{k,PCA}\) were then obtained every 0.25 increment across
 
 }
 
-\caption[OLS vs PCA Regression Lines]{Comparison between an OLS regression equation which minimizes the vertical distance of points from the line and a regression equation with a slope calculated by the first principal component which minimizes the smallest distance of points from the line.}\label{fig:ols-vs-pca-example}
+\caption[OLS vs PCA regression lines]{Comparison between an OLS regression equation which minimizes the vertical distance of points from the line and a regression equation with a slope calculated by the first principal component which minimizes the smallest distance of points from the line.}\label{fig:ols-vs-pca-example}
 \end{figure}
 
 For each participant, the final data set used for analysis contains \(x_{ijk}, y_{ijk,drawn}, \hat y_{ijk,OLS}\), and \(\hat y_{ijk,PCA}\) for parameter choice \(i = 1,2,3,4\), \(j = 1,...N_{participant}\), and \(x_{ijk}\) value \(k = 1, ...,4 x_{max} + 1\).
@@ -1107,7 +1144,7 @@ Using both a linear mixed model (LMM) and a generalized additive mixed model (GA
 
 }
 
-\caption[Eye Fitting Straight Lines in the Modern Era Feedback Data Example]{Example of three trend lines showing the the OLS fitted, PCA fitted, and participant drawn values overlaid on the simulated data points.}\label{fig:eyefitting-example-plot}
+\caption[Eye Fitting Straight Lines in the Modern Era feedback data example]{Example of three trend lines showing the the OLS fitted, PCA fitted, and participant drawn values overlaid on the simulated data points.}\label{fig:eyefitting-example-plot}
 \end{figure}
 
 Using the \texttt{lmer} function in the \texttt{lme4} package (Bates et al., 2014), a LMM is fit separately to the OLS and PCA residuals, constraining the fit to a linear trend.
@@ -1255,7 +1292,7 @@ In particular, this suggestion is most noticeable when points are truncated at 5
 
 }
 
-\caption[Exponential Prediction Spaghetti Plot]{Spaghetti plot of results from the exponential prediction sub-study. Participants drawn lines on the linear scale are shown in blue and the log scale are shown in orange. Variability in the statistically fitted regression lines occured due to a unique data set being simulated for each individual; the gray band shows the range fitted values from the statistically fitted regression lines.}\label{fig:exponential-yloess-spaghetti-plot}
+\caption[Exponential prediction spaghetti plot]{Spaghetti plot of results from the exponential prediction sub-study. Participants drawn lines on the linear scale are shown in blue and the log scale are shown in orange. Variability in the statistically fitted regression lines occured due to a unique data set being simulated for each individual; the gray band shows the range fitted values from the statistically fitted regression lines.}\label{fig:exponential-yloess-spaghetti-plot}
 \end{figure}
 
 Allowing for flexibility, the \texttt{bam} function in the \texttt{mgcv} package (S. Wood, 2003, 2004, 2011, 2017; S. Wood et al., 2016) was used to fit a GAMM to estimate trends of vertical residuals from the participant drawn line in relation to the NLS fitted values (\(e_{ijklm,NLS} = y_{ijklm,drawn} - \hat y_{ijklm,NLS}\)) across the domain.
@@ -1298,7 +1335,7 @@ In particular, this trend is more prominent in high exponential growth rates whe
 
 }
 
-\caption[Exponential Prediction GAMM Results]{Estimated trends of residuals (vertical deviation of participant drawn points from NLS fitted points) as fit by the generalized additive mixed model. Deviation for visual trends predicted on the linear scale are shown in blue and deviation for visual trends predicted on the log scale are shown in orange. A random sample of 75 participants was selected to display the individual participant residuals behind the overall trend.}\label{fig:exponential-prediction-gamm-preds}
+\caption[Exponential prediction GAMM results]{Estimated trends of residuals (vertical deviation of participant drawn points from NLS fitted points) as fit by the generalized additive mixed model. Deviation for visual trends predicted on the linear scale are shown in blue and deviation for visual trends predicted on the log scale are shown in orange. A random sample of 75 participants was selected to display the individual participant residuals behind the overall trend.}\label{fig:exponential-prediction-gamm-preds}
 \end{figure}
 
 \hypertarget{discussion-and-conclusion-1}{%
@@ -2037,7 +2074,7 @@ Two data sets were simulated with low and high exponential growth rates and show
 \end{figure}
 
 \hypertarget{estimation-comparison}{%
-\section{Scratchwork participant comparison}\label{estimation-comparison}}
+\chapter{Scratchwork participant comparison}\label{estimation-comparison}}
 
 In order to examine whether participants who used the provided resources for estimation differed in their numerical estimations from those who did not, we first compared population estimates from the explicitly asked year 10 location.
 About half of the participants fell into the category which provided scratch work and half did not \pcref{tab:showed-work-comparison-table}.

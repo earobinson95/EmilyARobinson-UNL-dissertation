@@ -21,7 +21,7 @@ If the viewer can identify the target panel randomly embedded within the set of 
 \cref{fig:lineup-example} provides examples of statistical lineups. 
 The lineup plot on the left displays increasing exponential data displayed on a linear scale with panel 13 as the target; the lineup plot on the right displays increasing exponential data on the log base ten scale with panel 4 as the target.
 
-```{r lineup-example, fig.height = 2.75, fig.width = 5.75, fig.scap = "Lineup Examples", fig.cap = "The lineup plot on the left displays increasing exponential data on a linear scale with panel (2 x 5) + 3 as the target. The lineup plot on the right displays increasing exponential data on the log scale with panel 2 x 2 as the target."}
+```{r lineup-example, fig.height = 2.75, fig.width = 5.75, fig.scap = "Lineup examples", fig.cap = "The lineup plot on the left displays increasing exponential data on a linear scale with panel (2 x 5) + 3 as the target. The lineup plot on the right displays increasing exponential data on the log scale with panel 2 x 2 as the target."}
 lineupData_linear <- read.csv(file = "data/01-lineups/lineup-example-data-linear.csv")
 linearPlot <- ggplot(lineupData_linear, aes(x=x, y=y)) +
   facet_wrap(~.sample, ncol=5) +

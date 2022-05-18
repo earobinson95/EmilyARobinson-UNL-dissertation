@@ -83,7 +83,7 @@ In this study, twenty-one scientists were recruited via postal mail and asked to
 The author then computed one iterative calculation of the relative potency based on starting values as indicated by the pair of lines provided by each participant and compared these relative potency estimates to that which was estimated by the full probit technique (reaching convergence through multiple iterations).
 Results indicated that one cycle of iterations for calculating the relative potency was sufficient based on the starting values provided by eye from the participants.
 
-```{r subjective-judgement, fig.scap = "Subjective Judgement in Statistical Analysis (1951) Parallel Probits", fig.cap = "Parallel probit responses in a biological assay shown to study participants in Subjective Judgement in Statistical Analysis (1951). The $x$-axis is the $\\log_{1.5}$ dose level and the $y$-axis is the corresponding probit response; circles correspond to the test preparation method while the crosses correspond to the standard preparation method.", out.width="50%"}
+```{r subjective-judgement, fig.scap = "Subjective Judgement in Statistical Analysis (1951) parallel probits", fig.cap = "Parallel probit responses in a biological assay shown to study participants in Subjective Judgement in Statistical Analysis (1951). The $x$-axis is the $\\log_{1.5}$ dose level and the $y$-axis is the corresponding probit response; circles correspond to the test preparation method while the crosses correspond to the standard preparation method.", out.width="50%"}
 knitr::include_graphics("images/02-you-draw-it/subjective-judgement-plot.png")
 ```
 
@@ -94,7 +94,7 @@ A latin square design [@anderson_design_1974] with packets of the set of points 
 Without a formal analysis of the study, the researchers discussed the idea that participants tended to fit the slope of the first principal component (error minimized orthogonally, both horizontal and vertical, to the regression line) over the slope of the least squares regression line (error minimized vertically to the regression line) \pcref{fig:ols-vs-pca-example}. 
 <!-- \svp{Mention that there wasn't an actual analysis here, just a discussion of the idea.} -->
 
-```{r mosteller-eyefitting-plot, fig.scap = "Eye Fitting Straight Lines (1981) Data Sets", fig.cap = "Scatter plots of the data shown to study participants in Eye Fitting Straight Lines (1981).", out.width="70%"}
+```{r mosteller-eyefitting-plot, fig.scap = "Eye Fitting Straight Lines (1981) data sets", fig.cap = "Scatter plots of the data shown to study participants in Eye Fitting Straight Lines (1981).", out.width="70%"}
 knitr::include_graphics("images/02-you-draw-it/eyefitting-straight-lines-plots.png")
 ```
 
@@ -109,7 +109,7 @@ The New York Times team utilizes Data Driven Documents (D3) that allow readers t
 \cref{fig:nyt-caraccidents} [@katz_2017] is one such example in which readers were asked to draw the line for the missing years providing what they estimated to be the number of Americans who have died every year from car accidents, since 1990.
 After the reader completed drawing the line, the actual observed values were revealed and the reader was able to check their estimated knowledge against the actual reported data.
 
-```{r nyt-caraccidents, fig.scap = "New York Times 'You Draw It' Feature", fig.cap = "New York Times 'You Draw It' feature; readers were asked to use their mouse to draw the line for the missing years in order to provide what they estimated to be the number of Americans who have died every year from car accidents, since 1990.", out.width="75%"}
+```{r nyt-caraccidents, fig.scap = "New York Times 'You Draw It' feature", fig.cap = "New York Times 'You Draw It' feature; readers were asked to use their mouse to draw the line for the missing years in order to provide what they estimated to be the number of Americans who have died every year from car accidents, since 1990.", out.width="75%"}
 knitr::include_graphics("images/02-you-draw-it/nyt-caraccidents-frame4.png")
 ```
 
@@ -126,7 +126,7 @@ The grammar of D3 includes elements such as circles, paths, and rectangles with 
 Data Driven Documents depend on Extensible Markup Language (XML) to generate graphics and images by binding objects and layers to the plotting area as Scalable Vector Graphics (SVG) in order to preserve the shapes rather than the pixels \pcref{fig:raster-vs-vector} [@raster_vs_svg].
 Advantages of using D3 include animation and allowing for movement and user interaction such as hovering, clicking, and brushing. 
 
-```{r raster-vs-vector, fig.cap = "SVG vs Raster", out.width="70%"}
+```{r raster-vs-vector, fig.cap = "SVG vs raster", out.width="70%"}
 knitr::include_graphics("images/02-you-draw-it/raster-vs-vector.png")
 # https://commons.wikimedia.org/wiki/File:Bitmap_VS_SVG.svg
 # https://creativecommons.org/licenses/by-sa/2.5/legalcode
@@ -149,7 +149,7 @@ r2d3(data = data,
      d3_version= "5")
 ```
 
-```{r youdrawit-example, fig.scap = "'You Draw It' Example", fig.cap = "Example of a 'You Draw It' interactive plot as shown to participants during the study. The first frame shows what the participant saw along with the prompt, \\textit{'Use your mouse to fill in the trend in the yellow box region'}. Next, the yellow box region moved along as the participant drew their trend-line until the yellow region disappeared, indicating the participant had filled in the entire domain.", out.width="100%"}
+```{r youdrawit-example, fig.scap = "'You Draw It' task plot example", fig.cap = "Example of a 'You Draw It' interactive plot as shown to participants during the study. The first frame shows what the participant saw along with the prompt, \\textit{'Use your mouse to fill in the trend in the yellow box region'}. Next, the yellow box region moved along as the participant drew their trend-line until the yellow region disappeared, indicating the participant had filled in the entire domain.", out.width="100%"}
 knitr::include_graphics("images/02-you-draw-it/ydiExample-0.10-10-linear.png")
 ```
 
@@ -231,7 +231,7 @@ In comparison, S resulted a trend with a positive slope with a small variance an
 \cref{fig:eyefitting-simplot} illustrates an example of simulated data for all four parameter choices intended to reflect the trends seen in \cref{fig:mosteller-eyefitting-plot}.
 Aesthetic design choices were made consistent across each of the interactive 'You Draw It' plots; the $y$-axis range extended 10\% beyond (above and below) the range of the simulated data points to allow for users to draw outside the simulated data set range and minimize participants anchoring their lines to the edges of the graph.
 
-```{r eyefitting-simplot, echo=F, fig.scap="Eye Fitting Straight Lines in the Modern Era Simulated Data Example", fig.cap = "Scatter plots of example simulated data in Eye Fitting Straight Lines in the Modern Era sub-study. The four parameter choices were intended to reflect the trends seen in \\cref{fig:mosteller-eyefitting-plot}.", fig.height=8, fig.width=8, message=FALSE, warning=FALSE, out.width="100%"}
+```{r eyefitting-simplot, echo=F, fig.scap="Eye Fitting Straight Lines in the Modern Era simulated data example", fig.cap = "Scatter plots of example simulated data in Eye Fitting Straight Lines in the Modern Era sub-study. The four parameter choices were intended to reflect the trends seen in \\cref{fig:mosteller-eyefitting-plot}.", fig.height=8, fig.width=8, message=FALSE, warning=FALSE, out.width="100%"}
 
 eyefitting_example_sim <- read_csv("data/02b-eyefitting/eyefitting-simdata-example.csv", show_col_types = F)
 eyefitting_example_simplot <- eyefitting_example_sim %>%
@@ -265,7 +265,7 @@ For each set of simulated data and parameter choice, the PCA regression slope, $
 Fitted values, $\hat y_{k,PCA}$ were then obtained every 0.25 increment across the domain from the PCA regression equation, $\hat y_{k,PCA} = \hat\beta_{0,PCA} + \hat\beta_{1,PCA} x_k$.
 \cref{fig:ols-vs-pca-example} illustrates the difference between an OLS regression equation which minimizes the vertical distance of points from the line and a regression equation with a slope calculated by the first principal component which minimizes the smallest distance of points from the line.
 
-```{r ols-vs-pca-example, fig.height = 6, fig.width = 8, warning = F, message = F, fig.scap="OLS vs PCA Regression Lines", fig.cap = "Comparison between an OLS regression equation which minimizes the vertical distance of points from the line and a regression equation with a slope calculated by the first principal component which minimizes the smallest distance of points from the line.", message=FALSE, warning=FALSE, out.width="100%"}
+```{r ols-vs-pca-example, fig.height = 6, fig.width = 8, warning = F, message = F, fig.scap="OLS vs PCA regression lines", fig.cap = "Comparison between an OLS regression equation which minimizes the vertical distance of points from the line and a regression equation with a slope calculated by the first principal component which minimizes the smallest distance of points from the line.", message=FALSE, warning=FALSE, out.width="100%"}
 library(ggplot2)
 library(magrittr)
 library(plyr)
@@ -340,7 +340,7 @@ For each participant, the final data set used for analysis contains $x_{ijk}, y_
 Using both a linear mixed model (LMM) and a generalized additive mixed model (GAMM), comparisons of vertical residuals in relation to the OLS fitted values ($e_{ijk,OLS} = y_{ijk,drawn} - \hat y_{ijk,OLS}$) and PCA fitted values ($e_{ijk,PCA} = y_{ijk,drawn} - \hat y_{ijk,PCA}$) were made across the domain.
 \cref{fig:eyefitting-example-plot} displays an example of all three fitted trend lines for parameter choice F.
 
-```{r eyefitting-example-plot, fig.height = 6, fig.width = 6, warning = F, message = F, fig.scap = "Eye Fitting Straight Lines in the Modern Era Feedback Data Example", fig.cap = "Example of three trend lines showing the the OLS fitted, PCA fitted, and participant drawn values overlaid on the simulated data points.", out.width="70%"}
+```{r eyefitting-example-plot, fig.height = 6, fig.width = 6, warning = F, message = F, fig.scap = "Eye Fitting Straight Lines in the Modern Era feedback data example", fig.cap = "Example of three trend lines showing the the OLS fitted, PCA fitted, and participant drawn values overlaid on the simulated data points.", out.width="70%"}
 
 eyefitting_example <- eyefitting_model_data %>%
   # filter(participant_id == "65c10d498eae365e108efcd3dcb75287", parm_id == "N") %>%
@@ -549,7 +549,7 @@ For each participant $l = 1,...N_{participant}$, the final data set used for ana
 The spaghetti plot with a high growth rate suggests participants underestimated the exponential trend when asked to draw a trend line on the linear scale compared to when asked to draw a trend line on the log scale.
 In particular, this suggestion is most noticeable when points are truncated at 50\% with the underestimation beginning at a later $x$ value when points are truncated at 75\%. 
 
-```{r exponential-yloess-spaghetti-plot, message=FALSE, warning=FALSE, fig.height = 8, fig.width = 8, out.width = "100%", fig.scap = "Exponential Prediction Spaghetti Plot", fig.cap = "Spaghetti plot of results from the exponential prediction sub-study. Participants drawn lines on the linear scale are shown in blue and the log scale are shown in orange. Variability in the statistically fitted regression lines occured due to a unique data set being simulated for each individual; the gray band shows the range fitted values from the statistically fitted regression lines."}
+```{r exponential-yloess-spaghetti-plot, message=FALSE, warning=FALSE, fig.height = 8, fig.width = 8, out.width = "100%", fig.scap = "Exponential prediction spaghetti plot", fig.cap = "Spaghetti plot of results from the exponential prediction sub-study. Participants drawn lines on the linear scale are shown in blue and the log scale are shown in orange. Variability in the statistically fitted regression lines occured due to a unique data set being simulated for each individual; the gray band shows the range fitted values from the statistically fitted regression lines."}
 
 spaghetti_plot <- youdrawit_model_data %>%
   ggplot(aes(x = x)) +
@@ -592,7 +592,7 @@ Examining the plots, the estimated trends of residuals for predictions made on t
 In comparisons, the estimated trends of residuals for predictions made on the log scale (orange) follow closely to the $y=0$ horizontal (dashed) line, implying exponential trends predicted on the log scale are more accurate than those predicted on the linear scale.
 In particular, this trend is more prominent in high exponential growth rates where underestimation becomes prominent after the aid of points is removed.
 
-```{r exponential-prediction-gamm-preds, message=FALSE, warning=FALSE, fig.height = 9, fig.width = 9, out.width = "100%", fig.scap = "Exponential Prediction GAMM Results", fig.cap = "Estimated trends of residuals (vertical deviation of participant drawn points from NLS fitted points) as fit by the generalized additive mixed model. Deviation for visual trends predicted on the linear scale are shown in blue and deviation for visual trends predicted on the log scale are shown in orange. A random sample of 75 participants was selected to display the individual participant residuals behind the overall trend."}
+```{r exponential-prediction-gamm-preds, message=FALSE, warning=FALSE, fig.height = 9, fig.width = 9, out.width = "100%", fig.scap = "Exponential prediction GAMM results", fig.cap = "Estimated trends of residuals (vertical deviation of participant drawn points from NLS fitted points) as fit by the generalized additive mixed model. Deviation for visual trends predicted on the linear scale are shown in blue and deviation for visual trends predicted on the log scale are shown in orange. A random sample of 75 participants was selected to display the individual participant residuals behind the overall trend."}
 
 set.seed(68505)
 participant_sample2 <- sample(unique(youdrawit_model_data$prolific_id), 75)
