@@ -110,7 +110,7 @@ knitr::include_graphics("images/covid19-datawrapper-views-july2020.png")
 ## Misleading Graphics {#misleading-graphics}
 
 There are many ways in which plots may inaccurately display the data and be ineffective or misleading in sharing information and results [@szafir2018good].
-Misleading charts might have (1) bad form such as 3D pie charts or an incompatiable plot for the data \pcref{fig:misleading-graphics-form} [@reddit_dataisugly; @lowndes2017our], (2) include too much "chartjunk", resulting in clutter or displaying useless data \pcref{fig:misleading-graphics-chartjunk} [@graphcrimes_2022; @wikipedia_x86_64], or (3) have bad axes such as a mismatch between scale and context or just plain bad math \pcref{fig:misleading-graphics-bad-axes} [@villa_2022; @lauren_2018].
+Misleading charts might have (1) bad form such as 3D pie charts or a plot type that is unsuitable for the type of data \pcref{fig:misleading-graphics-form} [@reddit_dataisugly; @lowndes2017our], (2) include too much "chartjunk", resulting in clutter or displaying useless data \pcref{fig:misleading-graphics-chartjunk} [@graphcrimes_2022; @wikipedia_x86_64], or (3) have bad axes such as a mismatch between scale and context or just plain bad math \pcref{fig:misleading-graphics-bad-axes} [@villa_2022; @lauren_2018].
 \cref{fig:misleading-graphics-just-bad} demonstrates how a chart can be misleading in more than one way; the map of pet ownership violates guidelines by mapping too many variables to visual encodings which results in clutter and bad form [@reddit_CrappyDesign].
 
 ```{r misleading-graphics-form, fig.show = 'hold', fig.aligh = 'center', out.width = '49%', fig.cap = "Misleading graphical form examples"}
@@ -171,20 +171,27 @@ In efforts to achieve a higher standard of the graphics being presented, work mu
 For example, better definitions of variables, units of measurements, scales, and other graphical elements is necessary in order to improve the overall quality of graphics.
 Changes in software defaults such as the originally set number of bins in a bar chart can help support the improvement of graphs in both statistics and the applied science.
 
-## Graphical Guidelines
+## Graphical \svp{Frameworks}
 
 A consistent concern is the lack of theory of graphics available to build on; better theory should result in better data visualizations.
 In order to improve the construction and distribution of charts, we need an established set of concepts and terminology so we can actively choose which of many possible graphics to draw in order to ensure our charts are effective at communicating the intended result. 
-Many efforts have been made to provide guidelines for graphical designs including Wilkinson's Grammar of Graphics [@wilkinson2013grammar].
+Many efforts have been made to provide \svp{frameworks and classification systems} for graphical designs; \svp{the most useful for our purposes is} Wilkinson's Grammar of Graphics [@wilkinson2013grammar].
 The grammar of graphics serves as the fundamental framework for data visualization with the notion that graphics are built from the ground up by specifying exactly how to create a particular graph from a given data set.
 Visual representations are constructed through the use of “tidy data” which is characterized as a data set in which each variable is in its own column, each observation is in its own row, and each value is in its own cell [@wickham2016r].
 Graphics are viewed as a mapping from variables in a data set (or statistics computed from the data) to visual attributes such as the axes, colors, shapes, or facets on the canvas in which the chart is displayed.
 \cref{fig:graphic-flowchart} illustrates the process of creating a graphic from a data set through the use of variable mapping, data transformations, coordinate systems, and aesthetic features [@vanderplas_testing_2020] 
-Software, such as `ggplot2` [@ggplot2], aims to implement the framework of creating charts and graphics as the grammar of graphics recommends. 
+Software, such as `ggplot2` [@ggplot2], aims to implement the framework of creating charts and graphics \svp{using the layered framework of the grammar of graphics}. 
 
 ```{r graphic-flowchart, fig.cap = "Graphic flowchart", out.width="50%"}
 knitr::include_graphics("images/graphic-flowchart.png")
 ```
+
+## Heuristics and "Good" Graphics
+
+\svp{Graphical guidelines/rules to discuss here: the graphics group ASME design guidelines. Tufte's "chartjunk". Hadley's 100 years of graphical criticism (and papers cited in there).}
+
+\svp{Helpful suggestions for creating "good" graphics are extremely common (and sometimes conflicting). In the absence of an underlying understanding of how graphics are perceived and used, these suggestions are largely ineffective and sometimes harmful. It is essential to have guidelines established through careful experimentation combined with an understanding of the perceptual and cognitive processes involved in the use of statistical graphics. }
+
 
 ## Testing Statistical Graphics {#testing-statistical-graphics}
 
@@ -343,13 +350,15 @@ log_scale <- data %>%
 grid.arrange(linear_scale,log_scale, ncol = 2)
 ```
 
-We have recently experienced the benefits and pitfalls of using log scales as COVID-19 dashboards displayed case count data on both the log and linear scale [@fagen-ulmschneider_2020; @burnmurdoch_2020]. 
+<!-- We have recently experienced the benefits and pitfalls of using log scales as COVID-19 dashboards displayed case count data on both the log and linear scale .  -->
 In spring 2020, during the early stages of the COVID-19 pandemic, there were large magnitude discrepancies in case counts at a given time point between different geographic regions (for example states and provinces as well as countries and continents).
 During this time, we saw the usefulness of log scale transformations showing case count curves for areas with few cases and areas with many cases within one chart. 
 The usefulness of log scales in comparing deaths attributed to COVID-19 between countries as of March 2020 is illustrated in \cref{fig:covid19-FT-deaths-march2020-log}; the diagonal reference lines provide a visual aid useful for interpretation [@burnmurdoch_2020]. 
 As the pandemic evolved, and the case counts were no longer spreading exponentially, graphs with linear scales seemed more effective at spotting early increases in case counts that signaled more localized outbreaks. In \cref{fig:covid19-FT-june2020-case-counts-linear} and \cref{fig:covid19-FT-june2020-case-counts-log}, the daily case counts as of June 30, 2020 are displayed on both the linear and log scales respectively [@burnmurdoch_2020]. 
 The effect of the linear scale \pcref{fig:covid19-FT-june2020-case-counts-linear} appears to evoke a stronger reaction from the public than the log scale \pcref{fig:covid19-FT-june2020-case-counts-log} as daily case counts are clearly rising rapidly during the summer wave. 
-This is only one recent example of a situation in which both log and linear scales are useful for showing different aspects of the same data. 
+This is only one recent example of a situation in which both log and linear scales are useful for showing different aspects of the same data[@fagen-ulmschneider_2020]. 
+
+
 There are long histories of using log scales to display results in ecology, psychophysics, engineering, and physics [@menge_logarithmic_2018; @heckler_student_2013].
 In @waddell2005comparisons, comparisons were made between the linear and logarithmic scales for the relationship between dosage and carcinogenicity in rodents.
 Results favored the use of logarithmic scales for doses in order to put the relative doses into perspective whereas using a linear scale to administer doses to animals with the same chemicals to which humans are exposed does not provide useful, comparative information.
