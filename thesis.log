@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.5.10)  18 MAY 2022 14:19
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.5.10)  19 MAY 2022 01:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1261,28 +1261,28 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
 
 ]
-Overfull \hbox (1.66797pt too wide) detected at line 51
- \TU/lmr/bx/n/12 115
- []
-
-
 Overfull \hbox (1.66797pt too wide) detected at line 52
- \TU/lmr/bx/n/12 120
+ \TU/lmr/bx/n/12 118
  []
 
 
 Overfull \hbox (1.66797pt too wide) detected at line 53
- \TU/lmr/bx/n/12 122
+ \TU/lmr/bx/n/12 123
  []
 
 
 Overfull \hbox (1.66797pt too wide) detected at line 54
- \TU/lmr/bx/n/12 127
+ \TU/lmr/bx/n/12 125
  []
 
 
 Overfull \hbox (1.66797pt too wide) detected at line 55
- \TU/lmr/bx/n/12 129
+ \TU/lmr/bx/n/12 130
+ []
+
+
+Overfull \hbox (1.66797pt too wide) detected at line 56
+ \TU/lmr/bx/n/12 132
  []
 
 ) [7] (./thesis.lof [8
@@ -1317,155 +1317,160 @@ File: images/misleading-graphics-multiple-issues-pet-ownership.jpg Graphic file 
 [4]
 File: images/covid-ga-recreation.jpg Graphic file (type bmp)
 <images/covid-ga-recreation.jpg>
-[5] [6] [7]
+[5] [6] [7] [8]
 File: images/graphic-flowchart.png Graphic file (type bmp)
 <images/graphic-flowchart.png>
-[8] [9]
+[9]
+File: images/statistical-atlas-state-population.jpg Graphic file (type bmp)
+<images/statistical-atlas-state-population.jpg>
+[10]
+File: images/standards-of-graphics-log-scale.jpg Graphic file (type bmp)
+<images/standards-of-graphics-log-scale.jpg>
+[11] [12] [13]
 File: images/eells-component-parts.png Graphic file (type bmp)
 <images/eells-component-parts.png>
-[10]
 File: images/spence-1990-proportion.png Graphic file (type bmp)
 <images/spence-1990-proportion.png>
-[11] [12] [13] [14]
+[14] [15] [16] [17]
 File: images/amer-poggendorff-illusion.png Graphic file (type bmp)
 <images/amer-poggendorff-illusion.png>
-[15]
+[18] [19]
 File: images/children-height.png Graphic file (type bmp)
 <images/children-height.png>
-[16] [17] [18] [19]
+[20] [21] [22] [23]
 File: thesis_files/figure-latex/log-scales-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/log-scales-1.pdf>
-[20] [21]
+[24]
 File: images/covid19-FT-03.23.2020-log.png Graphic file (type bmp)
 <images/covid19-FT-03.23.2020-log.png>
 File: images/covid19-FT-case-count-06.30.2020-linear.png Graphic file (type bmp)
 <images/covid19-FT-case-count-06.30.2020-linear.png>
 File: images/covid19-FT-case-count-06.30.2020-log.png Graphic file (type bmp)
 <images/covid19-FT-case-count-06.30.2020-log.png>
-[22] [23]
+[25] [26] [27]
 File: thesis_files/figure-latex/log-number-line-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/log-number-line-1.pdf>
-[24]
+[28]
 File: images/exponential-stages-comic.jpg Graphic file (type bmp)
 <images/exponential-stages-comic.jpg>
-[25] [26]
+[29]
 File: images/menge-plots.png Graphic file (type bmp)
 <images/menge-plots.png>
-[27] [28] [29] [30] [31
+[30] [31] [32] [33] [34
 
 ]
 File: thesis_files/figure-latex/lineup-example-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/lineup-example-1.pdf>
-[32] [33]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 749.
-[34]
+[35] [36]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 788.
+[37]
 File: thesis_files/figure-latex/lof-density-curves-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/lof-density-curves-1.pdf>
-[35] [36]
+[38] [39]
 File: thesis_files/figure-latex/curvature-combination-example-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/curvature-combination-example-1.pdf>
-[37] [38] [39] [40]
+[40] [41] [42] [43]
 File: thesis_files/figure-latex/odds-ratio-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/odds-ratio-plot-1.pdf>
-[41] [42] [43] [44
+[44] [45] [46] [47
 
-] [45]
+] [48]
 File: images/02-you-draw-it/subjective-judgement-plot.png Graphic file (type bmp)
 <images/02-you-draw-it/subjective-judgement-plot.png>
 File: images/02-you-draw-it/eyefitting-straight-lines-plots.png Graphic file (type bmp)
 <images/02-you-draw-it/eyefitting-straight-lines-plots.png>
-[46] [47] [48]
+[49] [50] [51]
 File: images/02-you-draw-it/nyt-caraccidents-frame4.png Graphic file (type bmp)
 <images/02-you-draw-it/nyt-caraccidents-frame4.png>
-[49]
+[52]
 File: images/02-you-draw-it/raster-vs-vector.png Graphic file (type bmp)
 <images/02-you-draw-it/raster-vs-vector.png>
-[50]
+[53]
 File: images/02-you-draw-it/ydiExample-0.10-10-linear.png Graphic file (type bmp)
 <images/02-you-draw-it/ydiExample-0.10-10-linear.png>
-[51] [52] [53] [54]
+[54] [55] [56] [57]
 File: thesis_files/figure-latex/eyefitting-simplot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/eyefitting-simplot-1.pdf>
-[55] [56]
+[58] [59]
 File: thesis_files/figure-latex/ols-vs-pca-example-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/ols-vs-pca-example-1.pdf>
-[57]
+[60]
 File: thesis_files/figure-latex/eyefitting-example-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/eyefitting-example-plot-1.pdf>
-[58] [59] [60]
+[61] [62] [63]
 File: thesis_files/figure-latex/eyefitting-lmer-residualplots-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/eyefitting-lmer-residualplots-1.pdf>
 File: thesis_files/figure-latex/eyefitting-gamm-residualplots-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/eyefitting-gamm-residualplots-1.pdf>
-[61] [62] [63] [64]
+[64] [65] [66] [67]
 File: thesis_files/figure-latex/exponential-yloess-spaghetti-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/exponential-yloess-spaghetti-plot-1.pdf>
-[65] [66] [67]
+[68] [69] [70]
 File: thesis_files/figure-latex/exponential-prediction-gamm-preds-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/exponential-prediction-gamm-preds-1.pdf>
-[68] [69] [70] [71
+[71] [72] [73] [74
 
-] [72] [73] [74] [75]
+] [75] [76] [77] [78]
 File: thesis_files/figure-latex/estimation-simulated-data-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/estimation-simulated-data-1.pdf>
-[76] [77] [78]
+[79] [80] [81]
 File: thesis_files/figure-latex/estimation-word-cloud-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/estimation-word-cloud-1.pdf>
-[79]
+[82]
 File: images/03-estimation/qe1-sketch.png Graphic file (type bmp)
 <images/03-estimation/qe1-sketch.png>
-[80] [81]
+[83] [84]
 File: thesis_files/figure-latex/qe1-density-plot-10-all-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qe1-density-plot-10-all-1.pdf>
-[82] [83]
+[85] [86]
 File: thesis_files/figure-latex/spaghetti-dataset1-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/spaghetti-dataset1-1.pdf>
 File: thesis_files/figure-latex/spaghetti-dataset2-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/spaghetti-dataset2-1.pdf>
-[84] [85] [86] [87] [88]
+[87] [88] [89] [90] [91]
 File: thesis_files/figure-latex/common-population-estimates-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/common-population-estimates-1.pdf>
-[89] [90]
+[92] [93]
 File: images/03-estimation/qe2-sketch.png Graphic file (type bmp)
 <images/03-estimation/qe2-sketch.png>
-[91]
+[94]
 File: thesis_files/figure-latex/qe2-density-plot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qe2-density-plot-1.pdf>
-[92] [93] [94]
+[95] [96] [97]
 File: images/03-estimation/qi1-sketch.png Graphic file (type bmp)
 <images/03-estimation/qi1-sketch.png>
-[95]
+[98]
 File: thesis_files/figure-latex/qi1-density-1-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi1-density-1-1.pdf>
 File: thesis_files/figure-latex/qi1-density-2-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi1-density-2-1.pdf>
-[96] [97] [98] [99]
+[99] [100] [101] [102]
 File: thesis_files/figure-latex/qi1-common-responses-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi1-common-responses-1.pdf>
-[100] [101] [102]
+[103] [104] [105]
 File: images/03-estimation/qi2-sketch.png Graphic file (type bmp)
 <images/03-estimation/qi2-sketch.png>
-[103] [104]
+[106] [107]
 File: thesis_files/figure-latex/qi2-plots-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi2-plots-1.pdf>
-[105] [106]
+[108] [109]
 File: thesis_files/figure-latex/qi2-density-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi2-density-1.pdf>
 File: thesis_files/figure-latex/qi2-common-responses-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi2-common-responses-1.pdf>
-[107] [108] [109]
+[110] [111] [112]
 File: images/03-estimation/qi3-sketch.png Graphic file (type bmp)
 <images/03-estimation/qi3-sketch.png>
 File: thesis_files/figure-latex/qi3-density-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi3-density-1.pdf>
-[110] [111] [112] [113] [114] [115
+[113] [114] [115] [116] [117] [118
 
-] [116] [117] [118] [119]
+] [119] [120] [121] [122]
 File: images/02-you-draw-it/r2d3+shiny.png Graphic file (type bmp)
 <images/02-you-draw-it/r2d3+shiny.png>
-[120
+[123
 
-] [121]
+] [124]
 File: images/02-you-draw-it/low-10-linear.png Graphic file (type bmp)
 <images/02-you-draw-it/low-10-linear.png>
 File: images/02-you-draw-it/low-10-log.png Graphic file (type bmp)
@@ -1482,24 +1487,24 @@ File: images/02-you-draw-it/high-15-linear.png Graphic file (type bmp)
 <images/02-you-draw-it/high-15-linear.png>
 File: images/02-you-draw-it/high-15-log.png Graphic file (type bmp)
 <images/02-you-draw-it/high-15-log.png>
-[122
+[125
 
-] [123] [124] [125] [126]
+] [126] [127] [128] [129]
 File: thesis_files/figure-latex/showed-work-comparison-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/showed-work-comparison-1.pdf>
-[127
+[130
 
-] [128] [129
+] [131] [132
 
-] [130] [131] [132] [133] [134] [135] [136] [137] [138] [139] [140]
+] [133] [134] [135] [136] [137] [138] [139] [140] [141] [142] [143] [144]
 No file thesis.bbl.
 
 Class memoir Warning: The material used in the footer is too large
 (10.14995pt) for the given foot skip (0.0pt), it is recommended to
 either increase the foot skip or redesign the footer
-(in both cases you will find help in the memoir manual). on input line 2482.
+(in both cases you will find help in the memoir manual). on input line 2542.
 
-[141]
+[145]
 \tf@toc=\write7
 \openout7 = `thesis.toc'.
 
@@ -1511,15 +1516,15 @@ either increase the foot skip or redesign the footer
 
 (./thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 1037554BAA6FF4E81BDD67FA198715F6;2638.
+(rerunfilecheck)             Checksum: 159DE7245B2B55282DBB650F12ADB920;2727.
  ) 
 Here is how much of TeX's memory you used:
- 39357 strings out of 478132
- 789956 string characters out of 5851803
- 1097436 words of memory out of 5000000
- 59331 multiletter control sequences out of 15000+600000
+ 39407 strings out of 478132
+ 792269 string characters out of 5851803
+ 1097435 words of memory out of 5000000
+ 59379 multiletter control sequences out of 15000+600000
  475567 words of font info for 72 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  123i,12n,120p,2324b,507s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on thesis.pdf (152 pages).
+Output written on thesis.pdf (156 pages).
