@@ -292,7 +292,7 @@ knitr::include_graphics("images/03-estimation/qe1-sketch.png")
 
 Density plots were used to illustrate the distribution of the quantitative estimates provided by participants.
 \pcref{fig:qe1-density-plot-10-all} reveals a larger variance in quantitative population estimates made on the linear scale compared to the log scale.
-As expected, it is clear that participants were anchoring to grid lines and base ten values as highlighted by the high density of estimates at 512 and 500 on the log scale as well as local maximums near multiples of ten such as 500 and 1000.
+As expected, it is clear that participants were anchoring to grid lines and base ten values as highlighted by the high density of estimates at 512 and 500 on the log scale as well as local maximums near multiples of ten such as 500 and 1,000.
 
 ```{r, eq1-data, message=FALSE, warning=FALSE}
 qe1_data <- estimation_model_data %>% 
@@ -333,8 +333,8 @@ In order to examine whether participants who used the provided resources for est
 About half of the participants fell into the category which provided scratch work and half did not. 
 It was determined there was no substantial difference or bias in estimates between the two groups, therefore, we proceeded to examine the estimated populations across scales from the first level estimates.
 
-The true population from the underlying parameters in year 20 was 1483.01 with closest simulated point values of 1529.19 and 1288.9 for data sets one and two respectively; this location still results in a relatively low magnitude of population, but is closer to the crux of the exponential curve. 
-In year 40, the true population from the underlying parameters in year 40 is 15846.35 with closest simulated point values of 17046.94 and 24186.34 for data sets one and two respectively. 
+The true population from the underlying parameters in year 20 was 1,483.01 with closest simulated point values of 1,529.19 and 1,288.9 for data sets one and two respectively; this location still results in a relatively low magnitude of population, but is closer to the crux of the exponential curve. 
+In year 40, the true population from the underlying parameters in year 40 is 15,846.35 with closest simulated point values of 17,046.94 and 24,186.34 for data sets one and two respectively. 
 It is important to note that there is a difference in simulated point values in year 40 between the two data sets; as a result, the multiplicative error causes larger variance in simulated points for later years and larger population magnitudes.
 
 ```{r estimation-spaghetti-plots}
@@ -413,12 +413,12 @@ Inaccurate first level estimations can lead to consequences in estimations which
 In extracting participant first level estimates from their calculation and scratch work, we observed participants were resistant to estimating between grid lines and had a greater tendency to anchor their estimates to the grid line estimates on the log scale. 
 \cref{fig:common-population-estimates} illustrates the number of participants who provided that estimate on either the linear or log base two scale. 
 True values are based on the underlying model equation, closest simulated point values, and grid line breaks are indicated by the horizontal line types.
-In particular, for year 40 in data set one, the closest point (17046.94) falls close to the log grid line (16384); participants greatly anchored to the grid line of 16384 with some participants adjusting to 16500 or 17000, anchoring again to a base ten value.
-In a similar situation, for year 40 in data set two, the closest point (24186.34) falls close to the linear grid line (25000); more participants adjusted their estimates to 24500 or 24000 rather than anchoring to the grid line.
+In particular, for year 40 in data set one, the closest point (17,046.94) falls close to the log grid line (16,384); participants greatly anchored to the grid line of 16,384 with some participants adjusting to 16,500 or 17,000, anchoring again to a base ten value.
+In a similar situation, for year 40 in data set two, the closest point (24,186.34) falls close to the linear grid line (25,000); more participants adjusted their estimates to 24,500 or 24,000 rather than anchoring to the grid line.
 This suggests that participants were more likely to provide estimates which deviated from grid lines when making estimates on the linear scale, indicating they are more comfortable with interpreting values on a linear scale as opposed to the log scale.
 When participants made estimates between grid lines on the log scale as indicated by their scratch work, they tended to estimate "halfway" between the two values indicated by the grid line breaks.
-For example, 1536 was a common population estimate for year 20 in data set one because visually the location of estimation lands about halfway between grid lines 1024 and 2048 (\cref{fig:qi1-sketch} and \cref{fig:qi2-sketch}).
-Another common halfway point on the log scale occurred at 24576 which visually lands between grid lines 16384 and 32768 for year 40 in data set two.
+For example, 1,536 was a common population estimate for year 20 in data set one because visually the location of estimation lands about halfway between grid lines 1,024 and 2,048 (\cref{fig:qi1-sketch} and \cref{fig:qi2-sketch}).
+Another common halfway point on the log scale occurred at 24,576 which visually lands between grid lines 16,384 and 32,768 for year 40 in data set two.
 Participant calculations and scratch work provides support that participants equated these as halfway numerically as indicated by the selected work provided below:
 
 \begin{align}
@@ -523,15 +523,15 @@ p5 / p6
 
 In conclusion, Elementary Q1 and the first level population estimates extracted from participant calculations and scratch work indicate that accuracy for low magnitudes are more accurate with lower variance in those estimates on the log scale than on the linear scale.
 Accuracy of population estimates made on the linear scale improve as the magnitude of the population increases.
-The results also provided support for the idea}that participants have a strong tendency to anchor their estimates to both grid lines and a base ten framework with resistance to estimating between grid lines on the log scale in particular, leading to a sacrifice in accuracy for larger magnitudes.
+The results also provided support for the idea that participants have a strong tendency to anchor their estimates to both grid lines and a base ten framework with resistance to estimating between grid lines on the log scale in particular, leading to a sacrifice in accuracy for larger magnitudes.
 Participant calculations and scratch work revealed a lack of understanding of logarithmic mapping due to considering spatial distance as indicative of numerical distance.
 
 ### Elementary Q2: Estimation of time
 
-In addition to estimating the population from a given year, participants were asked, \textit{"In what year does the population reach 4000?"} \pcref{fig:qe2-sketch}.
+In addition to estimating the population from a given year, participants were asked, \textit{"In what year does the population reach 4,000?"} \pcref{fig:qe2-sketch}.
 This required literal reading of the data by mapping a value given on the $y$-axis to its corresponding value on the $x$-axis.
-The true estimated year based on the underlying equation in which the population reached exactly 4000 was 28.45. 
-Unlike the previous question, there was no exact simulated point that aligned with the quantity to be estimated; the closest points for data set one occured at years 24 (population 3774.9) and 30 (population 5174.12) and for data set two at years 27 (population 3859.22) and 28 (population 4099.69).
+The true estimated year based on the underlying equation in which the population reached exactly 4,000 was 28.45. 
+Unlike the previous question, there was no exact simulated point that aligned with the quantity to be estimated; the closest points for data set one occurred at years 24 (population 3,774.9) and 30 (population 5,174.12) and for data set two at years 27 (population 3,859.22) and 28 (population 4,099.69).
 The median year estimated by participants for data set one was 24 on both scales with innerquartile ranges of 1 and 3 for the linear and log scale respectively; the median for data set two occurred at 27 for both data sets with innerquartile ranges of 2 and 1 for the linear and log scale respectively.
 
 ```{r qe2-sketch, eval = T, fig.height = 9, fig.width = 9, out.width = "100%", fig.scap = "Elementary Q2 sketch", fig.cap = "Sketch of the estimation procedure asked in Elementary Q2. Participants first locate 4000 along the $y$-axis and move to the right until they beleive they have found the correct location on the curve; then participants look down to the $x$-axis for their estimated year."}
@@ -555,7 +555,7 @@ qe2_data %>%
 ```
 
 While a small portion of participants provided estimates of years 5, 10 and 15, the density plots in \cref{fig:qe2-density-plot} focus on reasonable participant estimates between years 20 and 35.
-A population of 4000 occurs around a medium magnitude and is thus distinguishable on the linear scale, making the estimated location more visible.
+A population of 4,000 occurs around a medium magnitude and is thus distinguishable on the linear scale, making the estimated location more visible.
 Participants were consistently accurate across both the linear and log scales with a larger variance for data set one when estimates were made on the log scale.
 One possible explanation for the difference in variation between data sets is that some participants were first visually fitting a trend on on the log scale (results in a visually linear trend) while some participants were basing their estimates off the closest point (year 24).
 These competing strategies are clearly visible on the plot: some participants overestimated the closest point, while others made estimates more consistent with the true value based on the underlying (mean) equation. 
@@ -576,9 +576,9 @@ qe2_density_2 <- densityPlot(data = qe2_data, datasetID = "dataset2", "response"
 qe2_density_1  / qe2_density_2 
 ```
 
-Results from Elementary Q2 provide support that participants accurately estimated the year in which the population reaches 4000 on both scales.
+Results from Elementary Q2 provide support that participants accurately estimated the year in which the population reaches 4,000 on both scales.
 The accuracy on the linear scale can be explained by the visibility of a medium magnitude along with participant ability to make accurate estimates between grid lines on a linear scale.
-The population given aligned closely with grid line 4096 on the log scale, allowing participants to strongly anchor to the grid line for their estimation.
+The population given aligned closely with grid line 4,096 on the log scale, allowing participants to strongly anchor to the grid line for their estimation.
 In particular, for data set one, participants were slightly more likely to base their estimates off the underlying trend line on the log scale than on the linear scale.
 Estimated years were often provided in whole numbers and few participants showed an understanding that the population of interest could occur between years.
 
@@ -605,8 +605,8 @@ Sample participant work below shows correct logic on both the linear and log sca
 \text{Scratchpad: }  & \text{20 aby 1536} \nonumber\\
              & \text{40 16384.} \nonumber
 \end{align}
-The true estimated increase in population from year 20 to 40 based on the underlying equation is 14363.34 (15846.35 - 1483.01) with increases based on the closest points of 15517.75 (17046.94 - 1529.18) and 22897.45 (24186.34 - 1288.91) for data sets one and two respectively.
-The median estimated increase for data set one was 15000 (IQR = 3000) for the linear scale and 14784 (IQR = 2000) for the log scale while data set two resulted in larger estimates and variability with a median increase of 17500 (IQR = 10625) and 16500 (IQR = 8952) for the linear and log scale respectively.
+The true estimated increase in population from year 20 to 40 based on the underlying equation is 14,363.34 (15,846.35 - 1,483.01) with increases based on the closest points of 15,517.75 (17,046.94 - 1,529.18) and 2,2897.45 (24,186.34 - 1,288.91) for data sets one and two respectively.
+The median estimated increase for data set one was 15,000 (IQR = 3,000) for the linear scale and 14,784 (IQR = 2,000) for the log scale while data set two resulted in larger estimates and variability with a median increase of 17,500 (IQR = 10,625) and 16,500 (IQR = 8,952) for the linear and log scale respectively.
 The discrepancy in the summary between the two data sets provides further support that participants were inspecting the simulated data points in order to make their estimates.
 
 ```{r, qi1-sketch, eval = T, fig.height = 8, fig.width = 8, out.width = "100%", fig.scap = "Intermediate Q1 sketch", fig.cap = "Sketch of the estimation procedure asked in Intermediate Q1. Participants make first level population estimates at years 20 and 40, then calculate the difference between the two values."}
@@ -715,7 +715,7 @@ However, participants answering questions on the second scenario would have seen
 Estimates for the increase in population between year 20 and year 40 was distinctly more accurate for estimates made on the linear scale as indicated by the peak density occurring near the closest point and true value vertical lines.
 The slight shifts in the density on the log scale suggest participants are making inaccurate first level estimates.
 One explanation might be that participants were anchoring to the grid lines much stronger on the log scale as opposed to being more likely to adjust their estimates between grid lines on the linear scale.
-Common responses \pcref{fig:qi1-common-responses} on the log scale come from anchoring to grid lines (16384 - 1024 = 15360), halfway numerically between grid lines (16384 - 1536  = 14848; 24576 - 1536 = 2340), and base ten (16384 - 2000 = 14784) while participants on the linear scale anchored to multiples of 500 and 1000.
+Common responses \pcref{fig:qi1-common-responses} on the log scale come from anchoring to grid lines (16,384 - 1,024 = 15,360), halfway numerically between grid lines (16,384 - 1,536  = 14,848; 24,576 - 1536 = 2340), and base ten (16,384 - 2,000 = 14,784) while participants on the linear scale anchored to multiples of 500 and 1,000.
 This was dependent on the location of simulated points in relation to the grid lines and lead to an underestimation in difference for data set one and an overestimation in difference for data set two. 
 Variance in estimates appeared to be consistent across both scales for data set two with a smaller variance on the log scale for data set one.
 
@@ -835,7 +835,7 @@ knitr::include_graphics("images/03-estimation/qi2-sketch.png")
 
 The scratch work from participants gave insight about the estimation strategy participants followed when determining the estimated change in population.
 For instance, sample work 10 shows the participant first incorrectly calculated the additive increase in population before correcting their calculation through division while sample work 12 shows how the participant used a trial and error method.
-The true change in population based on the underlying equation was 10.69 times as many (15846.35/1483.01) with changes based on the closest points of 11.1 (17046.94/1529.18) and 18.8 (24186.34/1288.91) for data sets one and two respectively.
+The true change in population based on the underlying equation was 10.69 times as many (15,846.35/14,83.01) with changes based on the closest points of 11.1 (17,046.94/15,29.18) and 18.8 (24,186.34/12,88.91) for data sets one and two respectively.
 The median estimated change for data set one was 11.7 (IQR = 8.5) for the linear scale and 10.7 (IQR = 6) for the log scale while data set two resulted in larger estimates and variability with a median change of 15.3 (IQR = 14) and 16 (IQR = 8.5) for the linear and log scale respectively.
 The inconsistency between the two data sets aligns with previous evidence that participants were making estimates by reading the simulated data rather than based on the underlying trend.
 
@@ -896,7 +896,7 @@ qi2_plot_2
 
 As seen in the results for Intermediate Q1, some participants struggled to understand the value they were being asked to estimate.
 Similarly, \cref{fig:qi2-plots} illustrates a substantial number of participants provided estimates that more closely reflected that of the additive increase in population rather than the multiplicative change. 
-\cref{fig:qi2-common-responses} highlights that 15000 was still a common participant response.
+\cref{fig:qi2-common-responses} highlights that 15,000 was still a common participant response.
 Sample work below demonstrate common incorrect logic and calculations conducted by participants:
 
 \begin{align}

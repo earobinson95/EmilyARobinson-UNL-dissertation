@@ -55,8 +55,8 @@ youdrawit_preds_gamm_0.23 <- read_csv("data/02a-youdrawit/youdrawit-exponential-
 
 ## Introduction
 
-In [Chapter 2](#lineups), a base foundation for future exploration of the use of log scales was established by evaluating participants ability to identify differences in charts through the use of lineups. 
-This did not require that participants were able to understand exponential growth, identify log scales, or have any mathematical training; instead, it simply tested whether individuals are able to perceptually distinguish different curvature and slopes in a standard scatterplot. 
+In [Chapter 2](#lineups), a base foundation for future exploration of the use of log scales was established by evaluating participant's ability to identify differences in charts through the use of lineups. 
+This did not require that participants were able to understand exponential growth, identify log scales, or have any mathematical training; instead, it simply tested whether individuals are able to perceptually distinguish different curvature and slopes in a standard scatter plot. 
 This is necessary, but not sufficient, to determine whether individuals are capable of higher-level interaction with statistical data on log and linear scales.
 In order to determine whether there are cognitive disadvantages to log scales, we utilized interactive graphics to test an individual's ability to make predictions for exponentially increasing data. 
 In this study, participants were asked to draw a line using their computer mouse through an exponentially increasing trend shown on both the log and linear scales. 
@@ -86,7 +86,7 @@ Results indicated that one cycle of iterations for calculating the relative pote
 knitr::include_graphics("images/02-you-draw-it/subjective-judgement-plot.png")
 ```
 
-Thirty years later, Mosteller et al. (1981), sought to understand the properties of least squares and other computed lines by establishing one systematic method of fitting lines by eye. 
+Thirty years later, @mosteller_eye_1981, sought to understand the properties of least squares and other computed lines by establishing one systematic method of fitting lines by eye. 
 The authors recruited 153 graduate students and post doctoral researchers in Introductory Biostatistics. 
 Participants were asked to fit lines by eye to four sets of points \pcref{fig:mosteller-eyefitting-plot} using an 8.5 x 11 inch transparency with a straight line etched completely across the middle. 
 A latin square design [@anderson_design_1974] with packets of the set of points stapled together in four different sequences was used to determine if there is an effect of order of presentation; results indicated that order of presentation had no effect. 
@@ -101,7 +101,7 @@ Recently, @ciccione2021can conducted a comprehensive set of studies investigatin
 Participants were asked to judge trends, estimate slopes, and conduct extrapolation. 
 To estimate slopes, participants were asked to report the slope of the best-fitting regression line using a track-pad to adjust the tilt of a line on the screen. 
 Results indicated the slopes participants reported were always in excess of the ideal slopes, both in the positive and in the negative direction, and those biases increase with noise and with number of points.
-This supports the results found in Mosteller et al. (1981) and suggest that participants might use Deming regression [@deming1943statistical], which is equivalent to a regression equation based ont the first principal component or principal axes and minimizes the Euclidean distance of points from the line, when fitting a line to a noisy scatter-plot.
+This supports the results found in @mosteller_eye_1981 and suggest that participants might use Deming regression [@deming1943statistical], which is equivalent to a regression equation based on the first principal component or principal axes and minimizes the Euclidean distance of points from the line, when fitting a line to a noisy scatter-plot.
 
 While not explicitly intended for perceptual testing, in 2015, the New York Times introduced an interactive feature, called 'You Draw It' [@aisch_cox_quealy_2015; @buchanan_park_pearce_2017; @katz_2017], where readers input their own assumptions about various metrics and compare how these assumptions relate to reality.
 The New York Times team utilizes Data Driven Documents (D3) that allow readers to predict these metrics through the use of drawing a line on their computer screen with their computer mouse. 
