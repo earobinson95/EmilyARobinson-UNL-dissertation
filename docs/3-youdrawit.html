@@ -310,7 +310,7 @@ Figure 3.2: Scatter plots of the data shown to study participants in Eye Fitting
 Participants were asked to judge trends, estimate slopes, and conduct extrapolation.
 To estimate slopes, participants were asked to report the slope of the best-fitting regression line using a track-pad to adjust the tilt of a line on the screen.
 Results indicated the slopes participants reported were always in excess of the ideal slopes, both in the positive and in the negative direction, and those biases increase with noise and with number of points.
-This supports the results found in Mosteller et al. (1981) and suggest that participants might use Deming regression <span class="citation">(Deming, 1943)</span>, which is equivalent to a regression equation based ont the first principal component or principal axes and minimizes the Euclidean distance of points from the line, when fitting a line to a noisy scatter-plot.</p>
+This supports the results found in Mosteller et al. (1981) and suggest that participants might use Deming regression <span class="citation">(Deming, DEMING, Sons, Chapman, &amp; (Londyn)., 1943)</span>, which is equivalent to a regression equation based ont the first principal component or principal axes and minimizes the Euclidean distance of points from the line, when fitting a line to a noisy scatter-plot.</p>
 <p>While not explicitly intended for perceptual testing, in 2015, the New York Times introduced an interactive feature, called ‘You Draw It’ <span class="citation">(Aisch, Cox, &amp; Quealy, 2015; Buchanan, Park, &amp; Pearce, 2017; Katz, 2017)</span>, where readers input their own assumptions about various metrics and compare how these assumptions relate to reality.
 The New York Times team utilizes Data Driven Documents (D3) that allow readers to predict these metrics through the use of drawing a line on their computer screen with their computer mouse.
 <span class="citation">(Katz, 2017)</span> is one such example in which readers were asked to draw the line for the missing years providing what they estimated to be the number of Americans who have died every year from car accidents, since 1990.
@@ -427,7 +427,7 @@ displays an example of all three fitted trend lines for parameter choice F.</p>
 Figure 3.8: Example of three trend lines showing the the OLS fitted, PCA fitted, and participant drawn values overlaid on the simulated data points.
 </p>
 </div>
-<p>Using the <code>lmer</code> function in the <code>lme4</code> package <span class="citation">(Bates et al., 2014)</span>, a LMM is fit separately to the OLS and PCA residuals, constraining the fit to a linear trend.
+<p>Using the <code>lmer</code> function in the <code>lme4</code> package <span class="citation">(Bates et al., 2015)</span>, a LMM is fit separately to the OLS and PCA residuals, constraining the fit to a linear trend.
 Parameter choice, <span class="math inline">\(x\)</span>, and the interaction between <span class="math inline">\(x\)</span> and parameter choice were treated as fixed effects with a random participant effect accounting for variation due to participant.
 The LMM equation for each fit (OLS and PCA) residuals is given by:
 <span class="math display">\[\begin{equation}
