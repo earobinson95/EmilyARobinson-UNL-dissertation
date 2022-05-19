@@ -1,3 +1,4 @@
+% Encoding: UTF-8
 @article{loy_model_2017,
   title={Model choice and diagnostics for linear mixed-effects models using statistics on street corners},
   author={Loy, Adam and Hofmann, Heike and Cook, Dianne},
@@ -19,24 +20,6 @@
   year={2017},
   publisher={Nature Publishing Group}
 }
-
-@misc{reddit_dataisugly, 
- url={https://www.reddit.com/r/dataisugly/comments/tgn4vq/argh/},
- author = {{Reddit: r/dataisugly}}
-} 
-
-@misc{reddit_CrappyDesign, 
- url={https://www.reddit.com/r/CrappyDesign/comments/ast3q6/this_map_about_pet_repartition_in_europe/}, 
- author = {{Reddit: r/CrappyDesign}}
-} 
-
-@misc{graphcrimes_2022,
- title={The US States that are the Best at Solving WORDLE}, 
- url={https://twitter.com/GraphCrimes/status/1500314716081692676}, 
- author={{Twitter: @GraphCrimes}},
- year={2022}, 
- month={Mar}
-} 
  
 @article{dongarra1997top500,
   title={TOP500 supercomputer sites},
@@ -48,24 +31,14 @@
   publisher={ASFRA BV}
 }
 
-@misc{villa_2022, 
-  title={The rouble collapse against US dollar}, 
-  url={https://twitter.com/emmevilla/status/1498365717720223751}, 
-  publisher={Twitter}, 
-  author={Villa, Matteo}, 
-  year={2022}, 
-  month={Feb}
-} 
-
-@misc{lauren_2018, 
-  title={The worst graphs of 2017}, 
-  url={https://getdolphins.com/blog/the-worst-graphs-of-2017/}, 
-  journal={Dolphins}, 
-  publisher={Animalz}, 
-  author={Lauren}, 
-  year={2018}, 
-  month={Feb}
-} 
+@WWW{villa_2022,
+  author    = {Villa, Matteo},
+  title     = {The rouble collapse against US dollar},
+  year      = {2022},
+  url       = {https://twitter.com/emmevilla/status/1498365717720223751},
+  month     = {Feb},
+  publisher = {Twitter},
+}
 
 @article{wickham2010graphical,
   title={Graphical inference for infovis},
@@ -89,10 +62,13 @@
   publisher={Taylor \& Francis}
 }
 
-@article{walker1874statistical,
-  title={Statistical Atlas of the United States based on the results of the ninth census 1870: with contributions from many eminent men of science and several departments of the government comp. under the authority of Congress by Francis A. Walker},
-  author={Walker, Francis},
-  year={1874}
+@Book{walker1874statistical,
+  author    = {{United States Census Office. 9Th Census, 1870}, and Francis Amasa Walker},
+  title     = {Statistical atlas of the United States based on the results of the ninth censuswith contributions from many eminent men of science and several departments of the government},
+  year      = {1874},
+  publisher = {J. Bien},
+  location  = {New York},
+  url       = {https://www.loc.gov/item/05019329/},
 }
 
 @article{cleveland1987graphical,
@@ -202,13 +178,6 @@
   publisher={Annual Reviews}
 }
 
-@article{unwin_why_2020,
-  title={Why is data visualization important? what is important in data visualization?},
-  author={Unwin, Antony},
-  year={2020},
-  publisher={PubPub}
-}
-
 @article{varshney_why_2013,
   title={Why do we perceive logarithmically?},
   author={Varshney, Lav and Sun, John},
@@ -314,13 +283,6 @@
   publisher={Elsevier}
 }
 
-@article{deming1943statistical,
-  title={Statistical adjustment of data},
-  author={Deming, William},
-  year={1943},
-  publisher={wiley}
-}
-
 @Manual{mcr_pkg,
     title = {mcr: Method Comparison Regression},
     author = {Schuetzenmeister, Andre and Model, Fabian},
@@ -369,11 +331,13 @@
   publisher={Sage Publications}
 }
 
-@article{jones_polynomial_1977,
-  title={Polynomial perception of exponential growth.},
-  author={Jones, Gregory},
-  year={1977},
-  publisher={Psychonomic Society}
+@Article{jones_polynomial_1977,
+  author    = {Jones, Gregory},
+  title     = {Polynomial perception of exponential growth.},
+  journal   = {Perception \& Psychophysics},
+  year      = {1977},
+  date      = {1977-03-01},
+  publisher = {Psychonomic Society},
 }
 
 @article{best_perception_2007,
@@ -560,15 +524,15 @@
   publisher={Wiley Online Library}
 }
 
-@misc{cleveland_graphical_1984,
-  title={Graphical perception: Theory, experimentation, and application to the development of graphical methods},
-  author={Cleveland, William and McGill, Robert},
-  journal={Journal of the American statistical association},
-  volume={79},
-  number={387},
-  pages={531--554},
-  year={1984},
-  publisher={Taylor \& Francis}
+@Article{cleveland_graphical_1984,
+  author    = {Cleveland, William and McGill, Robert},
+  title     = {Graphical perception: Theory, experimentation, and application to the development of graphical methods},
+  journal   = {Journal of the American statistical association},
+  year      = {1984},
+  volume    = {79},
+  number    = {387},
+  pages     = {531--554},
+  publisher = {Taylor \& Francis},
 }
 
 @article{haemer_presentation_1949,
@@ -733,13 +697,6 @@
   publisher={IEEE}
 }
 
-@article{lme4,
-  title={Fitting linear mixed-effects models using lme4},
-  author={Bates, Douglas and M{\"a}chler, Martin and Bolker, Ben and Walker, Steve},
-  journal={arXiv preprint arXiv:1406.5823},
-  year={2014}
-}
-
 @manual{emmeans,
     title = {emmeans: Estimated Marginal Means, aka Least-Squares Means},
     author = {Lenth, Russell},
@@ -748,34 +705,38 @@
     url = {https://CRAN.R-project.org/package=emmeans},
 }
 
-@misc{aisch_cox_quealy_2015, 
-  title = {You Draw It: How Family Income Predicts Children's College Chances}, 
-  url = {https://www.nytimes.com/interactive/2015/05/28/upshot/you-draw-it-how-family-income-affects-childrens-college-chances.html}, 
-  journal = {The New York Times}, 
-  publisher = {The New York Times}, 
-  author = {Aisch, Gregor and Cox, Amanda and Quealy, Kevin}, 
-  year = {2015}, 
-  month = {May}
-} 
+@Article{aisch_cox_quealy_2015,
+  author    = {Aisch, Gregor and Cox, Amanda and Quealy, Kevin},
+  title     = {You Draw It: How Family Income Predicts Children's College Chances},
+  journal   = {The New York Times},
+  year      = {2015},
+  date      = {2015-05-28},
+  month     = {May},
+  url       = {https://www.nytimes.com/interactive/2015/05/28/upshot/you-draw-it-how-family-income-affects-childrens-college-chances.html},
+  publisher = {The New York Times},
+}
 
-@misc{buchanan_park_pearce_2017, 
-  title = {You Draw It: What Got Better or Worse During Obama's Presidency}, 
-  url = {https://www.nytimes.com/interactive/2017/01/15/us/politics/you-draw-obama-legacy.html}, 
-  journal = {The New York Times}, publisher={The New York Times}, 
-  author = {Buchanan, Larry and Park, Haeyoun and Pearce, Adam}, 
-  year = {2017}, 
-  month = {Jan}
-} 
+@Article{buchanan_park_pearce_2017,
+  author    = {Buchanan, Larry and Park, Haeyoun and Pearce, Adam},
+  title     = {You Draw It: What Got Better or Worse During Obama's Presidency},
+  journal   = {The New York Times},
+  year      = {2017},
+  date      = {2017-01-15},
+  month     = {Jan},
+  url       = {https://www.nytimes.com/interactive/2017/01/15/us/politics/you-draw-obama-legacy.html},
+  publisher = {The New York Times},
+}
 
-@misc{katz_2017, 
-  title = {You Draw It: Just How Bad Is the Drug Overdose Epidemic?}, 
-  url = {https://www.nytimes.com/interactive/2017/04/14/upshot/drug-overdose-epidemic-you-draw-it.html},
-  journal = {The New York Times}, 
-  publisher = {The New York Times}, 
-  author = {Katz, Josh}, 
-  year = {2017}, 
-  month = {Apr}
-} 
+@Article{katz_2017,
+  author    = {Katz, Josh},
+  title     = {You Draw It: Just How Bad Is the Drug Overdose Epidemic?},
+  journal   = {The New York Times},
+  year      = {2017},
+  date      = {2017-04-14},
+  month     = {Apr},
+  url       = {https://www.nytimes.com/interactive/2017/04/14/upshot/drug-overdose-epidemic-you-draw-it.html},
+  publisher = {The New York Times},
+}
 
 @manual{r2d3,
     title = {r2d3: Interface to 'D3' Visualizations},
@@ -784,24 +745,25 @@
     note = {R package version 0.2.3},
     url = {https://CRAN.R-project.org/package=r2d3},
   }
-  
-@misc{ryanabest_2021, 
-  title={Build An NBA Contender With Our Roster-Shuffling Machine}, 
-  url={https://projects.fivethirtyeight.com/nba-trades-2021/}, 
-  journal={FiveThirtyEight}, 
-  author={Best, Ryan and Boice, Jay}, 
-  year={2021}, 
-  month={Jun}
-} 
 
-@misc{NYTrememberinglives, 
-  title={Remembering the 100,000 Lives Lost to Coronavirus in America}, 
-  url={https://www.nytimes.com/interactive/2020/05/24/us/us-coronavirus-deaths-100000.html}, 
-  journal={The New York Times}, publisher={The New York Times}, 
-  author={Barry, Dan and Buchanan, Larry and Cargill, Clinton and Daniel, Annie and Delaquérière, Alain and Gamio, Lazaro and Gianordoli, Gabriel and Harris, Richard and Harvey, Barbara and Haskins, John and et al.}, 
-  year={2020}, 
-  month={May}
-} 
+@WWW{ryanabest_2021,
+  author  = {Best, Ryan and Boice, Jay},
+  title   = {Build An NBA Contender With Our Roster-Shuffling Machine},
+  year    = {2021},
+  url     = {https://projects.fivethirtyeight.com/nba-trades-2021/},
+  month   = {Jun},
+  journal = {FiveThirtyEight},
+}
+
+@WWW{NYTrememberinglives,
+  author    = {Barry, Dan and Buchanan, Larry and Cargill, Clinton and Daniel, Annie and Delaquérière, Alain and Gamio, Lazaro and Gianordoli, Gabriel and Harris, Richard and Harvey, Barbara and Haskins, John and et al.},
+  title     = {Remembering the 100,000 Lives Lost to Coronavirus in America},
+  year      = {2020},
+  url       = {https://www.nytimes.com/interactive/2020/05/24/us/us-coronavirus-deaths-100000.html},
+  month     = {May},
+  journal   = {The New York Times},
+  publisher = {The New York Times},
+}
 
 @article{mgcv1,
   title={Fast stable restricted maximum likelihood and marginal likelihood estimation of semiparametric generalized linear models},
@@ -888,23 +850,23 @@
   publisher={Wiley Online Library}
 }
 
-@misc{NYTimes_presidential_forecast, 
-  title={Live Presidential Forecast}, 
-  url={https://www.nytimes.com/elections/2016/forecast/president}, 
-  year = {2016},
-  journal={The New York Times}, 
-  publisher={The New York Times},
-  author = {Aisch, Gregor and Cohn, Nate and Cox, Amanda and Katz, Josh and Pearce, Adam and Quealy, Kevin}
-} 
+@WWW{NYTimes_presidential_forecast,
+  author    = {Aisch, Gregor and Cohn, Nate and Cox, Amanda and Katz, Josh and Pearce, Adam and Quealy, Kevin},
+  title     = {Live Presidential Forecast},
+  year      = {2016},
+  url       = {https://www.nytimes.com/elections/2016/forecast/president},
+  journal   = {The New York Times},
+  publisher = {The New York Times},
+}
 
-@misc{natesilver538_2020, 
-  title={2020 Election Forecast}, 
-  url={https://projects.fivethirtyeight.com/2020-election-forecast/}, 
-  journal={FiveThirtyEight}, 
-  author={Silver, Nate}, 
-  year={2020}, 
-  month={Nov}
-} 
+@WWW{natesilver538_2020,
+  author  = {Silver, Nate},
+  title   = {2020 Election Forecast},
+  year    = {2020},
+  url     = {https://projects.fivethirtyeight.com/2020-election-forecast/},
+  month   = {Nov},
+  journal = {FiveThirtyEight},
+}
 
 @book{carlson2010psychology,
   title={Psychology: The science of behaviour},
@@ -970,13 +932,16 @@
   publisher={Springer}
 }
 
-@misc{global_epidemics_2021, 
-  title={Risk Levels}, 
-  url={https://globalepidemics.org/key-metrics-for-covid-suppression/}, 
-  journal={Global Epidemics}, 
-  publisher={Brown School of Public Health}, 
-  year={2021}, 
-month={Mar}
+@WWW{global_epidemics_2021,
+  author    = {Ashish K. Jha and Danielle Allen and Thomas Tsai and Stefanie Friedhoff and Megan Ranney and Jose Figueroa},
+  title     = {Risk Levels},
+  year      = {2021},
+  date      = {2021-07-20},
+  url       = {https://globalepidemics.org/key-metrics-for-covid-suppression/},
+  month     = {Mar},
+  urldate   = {2022-05-19},
+  journal   = {Global Epidemics},
+  publisher = {Brown School of Public Health},
 }
 
 @book{fechner1860elemente,
@@ -987,15 +952,16 @@ month={Mar}
   publisher={Breitkopf u. H{\"a}rtel}
 }
 
-@misc{vonbergmann_2021, 
- title={xkcd_exponential: Public Health vs Scientists}, 
- url={https://github.com/mountainMath/xkcd_exponential}, 
- journal={mountainMath}, 
- publisher={GitHub}, 
- author={Von Bergmann, Jens}, 
- year={2021}, 
- month={Mar}
-} 
+@Online{vonbergmann_2021,
+  author    = {Von Bergmann, Jens},
+  title     = {xkcd_exponential: Public Health vs Scientists},
+  year      = {2021},
+  date      = {2021-03-17},
+  url       = {https://github.com/mountainMath/xkcd_exponential},
+  month     = {Mar},
+  journal   = {mountainMath},
+  publisher = {GitHub},
+}
 
 @article{von1927further,
   title={Further Studies in the Graphic Use of Circles and Bars: I: A Discussion of the Eells' Experiment},
@@ -1178,14 +1144,6 @@ month={Mar}
   publisher = {Broadcast on NBC}
 }
 
-@misc{allison_horst, 
-  title={Artwork by Allison Horst}, 
-  url={https://github.com/allisonhorst/stats-illustrations},
-  publisher={Creative Commons}, 
-  author={Horst, Alison},
-  year = 
-}
-
 @article{tidytext_pkg,
   title={tidytext: Text mining and analysis using tidy data principles in R},
   author={Silge, Julia and Robinson, David},
@@ -1362,3 +1320,112 @@ month={Mar}
   year={2010},
   publisher={Springer}
 }
+@Online{reddit_CrappyDesign,
+  author  = {{Benjamin-Cat}},
+  title   = {European pet dog, cat, and bird ownership per capita with average age of leaving parental home (of human beings)},
+  year    = {2018},
+  date    = {2018-11-13},
+  url     = {www.reddit.com/r/europe/comments/9wmu3x/european_pet_dog_cat_and_bird_ownership_per/},
+  month   = nov,
+  urldate = {2022-05-19},
+  file    = {Reddit Post Snapshot:/home/susan/.Zotero/storage/VYVM48WA/european_pet_dog_cat_and_bird_ownership_per.html:text/html},
+  journal = {r/europe},
+  type    = {Reddit {Post}},
+}
+
+@Online{reddit_dataisugly,
+  author     = {BusyAd6668},
+  title      = {{ARGH}?!},
+  year       = {2022},
+  date       = {2022-03-17},
+  url        = {www.reddit.com/r/dataisugly/comments/tgn4vq/argh/},
+  month      = mar,
+  urldate    = {2022-05-19},
+  file       = {Reddit Post Snapshot:/home/susan/.Zotero/storage/4XZUT8VE/argh.html:text/html},
+  journal    = {r/dataisugly},
+  shorttitle = {{ARGH}?},
+  type       = {Reddit {Post}},
+}
+
+@Book{deming1943statistical,
+  author    = {Deming, W.E. and DEMING, W.E.A. and Sons, John Wiley \& and {Chapman} and (Londyn)., Hall},
+  title     = {Statistical adjustment of data},
+  year      = {1943},
+  series    = {Dover books on elementary and intermediate mathematics},
+  note      = {tex.lccn: 43018051},
+  publisher = {J. Wiley \& Sons, Incorporated},
+  url       = {https://books.google.com/books?id=9awgAAAAMAAJ},
+}
+
+@WWW{allison_horst,
+  author  = {Allison Horst},
+  title   = {R \& stats illustrations},
+  year    = {2021},
+  date    = {2021-09-02},
+  url     = {https://github.com/allisonhorst/stats-illustrations/},
+  month   = sep,
+  urldate = {2022-05-19},
+  journal = {Stats-Illustrations},
+  type    = {Github {Repository}},
+}
+
+@Article{lme4,
+  author    = {Bates, Douglas and Mächler, Martin and Bolker, Ben and Walker, Steve},
+  title     = {Fitting {Linear} {Mixed}-{Effects} {Models} {Using} lme4},
+  journal   = {Journal of Statistical Software},
+  year      = {2015},
+  language  = {en},
+  volume    = {67},
+  month     = oct,
+  pages     = {1--48},
+  issn      = {1548-7660},
+  doi       = {10.18637/jss.v067.i01},
+  url       = {https://doi.org/10.18637/jss.v067.i01},
+  urldate   = {2022-05-19},
+  abstract  = {Maximum likelihood or restricted maximum likelihood (REML) estimates of the parameters in linear mixed-effects models can be determined using the lmer function in the lme4 package for R. As for most model-fitting functions in R, the model is described in an lmer call by a formula, in this case including both fixed- and random-effects terms. The formula and data together determine a numerical representation of the model from which the profiled deviance or the profiled REML criterion can be evaluated as a function of some of the model parameters. The appropriate criterion is optimized, using one of the constrained optimization functions in R, to provide the parameter estimates. We describe the structure of the model, the steps in evaluating the profiled deviance or REML criterion, and the structure of classes or types that represents such a model. Sufficient detail is included to allow specialization of these structures by users who wish to write functions to fit specialized linear mixed models, such as models incorporating pedigrees or smoothing splines, that are not easily expressible in the formula language used by lmer.},
+  copyright = {Copyright (c) 2015 Douglas Bates, Martin Mächler, Ben Bolker, Steve Walker},
+  file      = {Full Text:/home/susan/.Zotero/storage/RPJLFHIP/Bates et al. - 2015 - Fitting Linear Mixed-Effects Models Using lme4.pdf:application/pdf},
+  keywords  = {Cholesky decomposition},
+}
+
+@Article{unwin_why_2020,
+  author  = {Unwin, Antony},
+  title   = {Why is Data Visualization Important? What is Important in Data Visualization?},
+  journal = {Harvard Data Science Review},
+  year    = {2020},
+  date    = {2020-01-31},
+  volume  = {2},
+  number  = {1},
+  month   = {1},
+  note    = {https://hdsr.mitpress.mit.edu/pub/zok97i7p},
+  doi     = {10.1162/99608f92.8ae4d525},
+  url     = {https://hdsr.mitpress.mit.edu/pub/zok97i7p},
+  day     = {31},
+}
+
+@WWW{graphcrimes_2022,
+  author  = {{Wordtips}},
+  title   = {Where in the {World} {Is} the {Best} at {Solving} {Wordle}?},
+  year    = {2022},
+  date    = {2022-01},
+  url     = {https://word.tips/wordle-wizards/},
+  urldate = {2022-05-19},
+  file    = {Where in the World Is the Best at Solving Wordle?:/home/susan/.Zotero/storage/8B4NRQS3/wordle-wizards.html:text/html},
+  journal = {Where in the World Is the Best at Solving Wordle?},
+}
+
+@WWW{lauren_2018,
+  author     = {Matthew Smith},
+  editor     = {{YouGov}},
+  title      = {Does pineapple belong on a pizza?},
+  year       = {2017},
+  date       = {2017-03-06},
+  url        = {https://yougov.co.uk/topics/politics/articles-reports/2017/03/06/does-pineapple-belong-pizza},
+  language   = {en-gb},
+  urldate    = {2022-05-19},
+  abstract   = {The President of Iceland sparked headlines worldwide with his desire to ban pineapple from pizza. But how do Brits feel about the humble Hawaiian?},
+  file       = {Snapshot:/home/susan/.Zotero/storage/SIMXBNY2/does-pineapple-belong-pizza.html:text/html},
+  shorttitle = {Does pineapple belong on a pizza?},
+}
+
+@Comment{jabref-meta: databaseType:biblatex;}
