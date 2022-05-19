@@ -12,7 +12,6 @@ In general, when there were large curvature differences, the choice of scale had
 However, when minor differences in curvature occurred, there was a perceptual advantage for the scale which resulted in identified the trend which contextually appeared as a curve from the trends that appeared as a line.
 This revealed an advantage for the log scale when differences were subtle with an exception of the the linear scale leading to a perceptual advantage for identifying a trend with more curvature from one which appears to be more linear - contextually appears opposite on the log scale to identify a trend that contextually appears linear from ones that appear curved.
 
-<!-- \svp{Don't rehash what you did, focus on discussing what it means. First, you validated a new tool, and then you used that new tool to show that we suck at making exponential predictions (but we suck less on a log scale).} -->
 'You Draw It' interactive graphics were adapted from the New York Times and used to test the ability to make forecast predictions for exponentially increasing trends on both scales by drawing a visually fit line with a computer mouse.
 
 The second study required interpretative processes to extend the pattern recognition and construct meaning.
