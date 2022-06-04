@@ -12,6 +12,7 @@ Log scales are often used to display data over several orders of magnitude withi
 
 **Project Links**
 + Working dissertation document -  [pdf](https://earobinson95.github.io/EmilyARobinson-UNL-dissertation/thesis.pdf).
++ Defense presentation slides - [html](https://earobinson95.github.io/presentations/Dissertation/2022-06-16-final-defense/index.html#1)
 + Project development GitHub repository can be found [here](https://github.com/srvanderplas/Perception-of-Log-Scales).
 + Final study GitHub repository can be found [here](https://github.com/earobinson95/log-perception-prolific)
 
