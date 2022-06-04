@@ -1,10 +1,10 @@
-# Human perception of exponentially increasing data displayed on a log scale
+# Human perception of exponentially increasing data displayed on a log scale evaluated through experimental graphics tasks
 ## Emily Anna Robinson
 ### University of Nebraska - Lincoln, Expected Graduation August 2022
 
 **Purpose**
 
-Contains the blogdown files for my dissertation document titled, *Human perception of exponentially increasing data displayed on a log scale*. 
+Contains the blogdown files for my dissertation document titled, *Human perception of exponentially increasing data displayed on a log scale evaluated through experimental graphics tasks*. 
 
 **Abstract**
 
