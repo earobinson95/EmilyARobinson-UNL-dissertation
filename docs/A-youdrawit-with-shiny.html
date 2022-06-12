@@ -262,16 +262,16 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="youdrawit-with-shiny" class="section level1 hasAnchor" number="6">
 <h1><span class="header-section-number">A</span> You Draw It Setup with Shiny<a href="A-youdrawit-with-shiny.html#youdrawit-with-shiny" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Interactive plots for the you draw it study were created using the <code>r2d3</code> package and integrating D3 source code with an R shiny application.
-I conducted all data simulation and processing in R and outputted two data sets - point data and line data - containing (x, y) coordinates corresponding to either a simulated point or fitted value predicted by a statistical model respectively.
-Then, the r2d3 package converted the data sets in R to JSON to be interpreted by the D3.js code.
-I define functions in D3.js to draw the initial plot and set up draw-able points for the user drawn line.
-Drag events in D3.js were utilized to react to observe and react to user input.
+<p>Interactive plots for the ‘You Draw It’ study were created using the <code>r2d3</code> package and integrating D3 source code with an R shiny application.
+I conducted all data simulation and processing in R and outputted two data sets - point data and line data - containing (<span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>) coordinates corresponding to either a simulated point or fitted value predicted by a statistical model respectively.
+Then, the <code>r2d3</code> package converted the data sets in R to JSON to be interpreted by the <code>D3.js</code> code.
+I define functions in <code>D3.js</code> to draw the initial plot and set up draw-able points for the user drawn line.
+Drag events in <code>D3.js</code> were utilized to observe and react to user input.
 Shiny Messages were used to communicate the user interaction between the D3 code and the R environment.
-The plot was then rendered and updated on user interaction into the R shiny application with the RenderD3 and d3Output functions.
-Parameters for aesthetic design choices were defined in a list of options and r2d3 passes these to the D3.js code.
+The plot was then rendered and updated on user interaction into the R shiny application with the <code>RenderD3</code> and <code>d3Output</code> functions.
+Parameters for aesthetic design choices were defined in a list of options and r2d3 passes these to the <code>D3.js</code> code.
 For instance, I specified the buffer space allowed for the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> axes to avoid users anchoring their lines to the axes limits. For D3.js source code, visit GitHub <a href="https://github.com/srvanderplas/Perception-of-Log-Scales/blob/master/you-draw-it-development/you-draw-it-test-app/main.js">here</a>.
-provides a visual aid of the process of creating the you draw it experimental study in <a href="3-youdrawit.html#youdrawit">Chapter 3</a>.</p>
+provides a visual aid of the process of ‘creating the ’You Draw It’ experimental study in <a href="3-youdrawit.html#youdrawit">Chapter 3</a>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:r2d3-shiny-flowchart"></span>
 <img src="images/02-you-draw-it/r2d3+shiny.png" alt="Interactive plot development" width="100%"  />
 <p class="caption">

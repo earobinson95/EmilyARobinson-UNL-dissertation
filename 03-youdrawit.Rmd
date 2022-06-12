@@ -55,10 +55,10 @@ youdrawit_preds_gamm_0.23 <- read_csv("data/02a-youdrawit/youdrawit-exponential-
 
 ## Introduction
 
-In [Chapter 2](#lineups), a base foundation for future exploration of the use of log scales was established by evaluating participant's ability to identify differences in charts through the use of lineups. 
-This did not require that participants were able to understand exponential growth, identify log scales, or have any mathematical training; instead, it simply tested whether individuals are able to perceptually distinguish different curvature and slopes in a standard scatter plot. 
+In [Chapter 2](#lineups) we established a foundation for future exploration of the use of log scales by evaluating participant's ability to identify differences in charts through the use of lineups. 
+This did not require that participants were able to understand exponential growth, identify log scales, or have any mathematical training; instead, it simply tested whether individuals are able to perceptually distinguish different curvature and slopes in a standard scatter-plot. 
 This is necessary, but not sufficient, to determine whether individuals are capable of higher-level interaction with statistical data on log and linear scales.
-In order to determine whether there are cognitive disadvantages to log scales, we utilized interactive graphics to test an individual's ability to make predictions for exponentially increasing data. 
+To determine whether there are cognitive disadvantages to log scales, we utilized interactive graphics to test an individual's ability to make predictions for exponentially increasing data. 
 In this study, participants were asked to draw a line using their computer mouse through an exponentially increasing trend shown on both the log and linear scales. 
 
 ### A Review of Regression and Prediction
@@ -71,12 +71,12 @@ Common methods of fitting trends by eye involve maneuvering a string, black thre
 
 Researchers in @finney_subjective_1951 were interested in assessing the effect of stopping iterative maximum likelihood calculations after one iteration. 
 Many techniques in statistical analysis are performed with the aid of iterative calculations such as Newton's method or Fisher's scoring. 
-Guesses are made at the best estimates of certain parameters and these guesses are then used as the basis of a computation which yields a new set of approximation to the parameter estimates; this same procedure is then performed on the new parameter estimates and the computing cycle is repeated until convergence, as determined by the statistician, is reached. 
+Guesses are made at the best estimates of certain parameters and these guesses are then used as the basis of a computation which yields a new set of approximate parameter estimates; this same procedure is then performed on the new parameter estimates and the computing cycle is repeated until convergence, as determined by the statistician, is reached. 
 The author was interested in whether one iteration of calculations was sufficient in the estimation of parameters connected with dose-response relationships. 
-One measure of interest in dose-response relationships is the relative potency between a test preparation of doses and standard preparation of does; relative potency is calculated as the ratio of two equally effective doses between the two preparation methods. 
+One measure of interest in dose-response relationships is the relative potency between a test preparation of doses and standard preparation of doses; relative potency is calculated as the ratio of two equally effective doses between the two preparation methods. 
 \cref{fig:subjective-judgement} shows a pair of parallel probit responses in a biological assay.
 The $x$-axis is the $\log_{1.5}$ dose level for four dose levels (for example, doses 4, 6, 9, and 13 correspond correspond to equally spaced values on a logarithmic scale, labeled  0, 1, 2, and 3) and the $y$-axis is the corresponding probit response as calculated in @finney1948table; circles correspond to the test preparation method while the crosses correspond to the standard preparation method.
-For these sort of assays, the does-response relationship follows a linear regression of the probit response on the logarithm of the dose levels; the two preparation methods can be constrained to be parallel [@jerne1949validity], limiting the relative potency to one consistent value. 
+For these sort of assays, the dose-response relationship follows a linear regression of the probit response on the logarithm of the dose levels; the two preparation methods can be constrained to be parallel [@jerne1949validity], limiting the relative potency to one consistent value. 
 In this study, twenty-one scientists were recruited via postal mail and asked to "rule two lines" in order to judge by eye the positions for a pair of parallel probit regression lines in a biological assay \pcref{fig:subjective-judgement}.
 <!-- https://www.quantics.co.uk/blog/what-is-relative-potency/ -->
 The author then computed one iterative calculation of the relative potency based on starting values as indicated by the pair of lines provided by each participant and compared these relative potency estimates to that which was estimated by the full probit technique (reaching convergence through multiple iterations).
@@ -93,7 +93,7 @@ A latin square design [@anderson_design_1974] with packets of the set of points 
 Without a formal analysis of the study, the researchers discussed the idea that participants tended to fit the slope of the first principal component (error minimized orthogonally, both horizontal and vertical, to the regression line) over the slope of the least squares regression line (error minimized vertically to the regression line) \pcref{fig:ols-vs-pca-example}. 
 <!-- \svp{Mention that there wasn't an actual analysis here, just a discussion of the idea.} -->
 
-```{r mosteller-eyefitting-plot, fig.scap = "Eye Fitting Straight Lines (1981) data sets", fig.cap = "Scatter plots of the data shown to study participants in Eye Fitting Straight Lines (1981).", out.width="70%"}
+```{r mosteller-eyefitting-plot, fig.scap = "Eye Fitting Straight Lines (1981) data sets", fig.cap = "Scatter-plots of the data shown to study participants in Eye Fitting Straight Lines (1981).", out.width="70%"}
 knitr::include_graphics("images/02-you-draw-it/eyefitting-straight-lines-plots.png")
 ```
 
@@ -101,20 +101,20 @@ Recently, @ciccione2021can conducted a comprehensive set of studies investigatin
 Participants were asked to judge trends, estimate slopes, and conduct extrapolation. 
 To estimate slopes, participants were asked to report the slope of the best-fitting regression line using a track-pad to adjust the tilt of a line on the screen. 
 Results indicated the slopes participants reported were always in excess of the ideal slopes, both in the positive and in the negative direction, and those biases increase with noise and with number of points.
-This supports the results found in @mosteller_eye_1981 and suggest that participants might use Deming regression [@deming1943statistical], which is equivalent to a regression equation based on the first principal component or principal axes and minimizes the Euclidean distance of points from the line, when fitting a line to a noisy scatter-plot.
+This supports the results found in @mosteller_eye_1981 and suggests that participants might use Deming regression [@deming1943statistical], which is equivalent to a regression equation based on the first principal component or principal axes and minimizes the Euclidean distance of points from the line, when fitting a line to a noisy scatter-plot.
 
-While not explicitly intended for perceptual testing, in 2015, the New York Times introduced an interactive feature, called 'You Draw It' [@aisch_cox_quealy_2015; @buchanan_park_pearce_2017; @katz_2017], where readers input their own assumptions about various metrics and compare how these assumptions relate to reality.
+While not explicitly intended for perceptual testing, in 2015, the New York Times introduced an interactive feature, called 'You Draw It' [@aisch_cox_quealy_2015; @buchanan_park_pearce_2017; @katz_2017], where readers input their own assumptions about various metrics and compare these assumptions to reality.
 The New York Times team utilizes Data Driven Documents (D3) that allow readers to predict these metrics through the use of drawing a line on their computer screen with their computer mouse. 
 \cref{fig:nyt-caraccidents} [@katz_2017] is one such example in which readers were asked to draw the line for the missing years providing what they estimated to be the number of Americans who have died every year from car accidents, since 1990.
 After the reader completed drawing the line, the actual observed values were revealed and the reader was able to check their estimated knowledge against the actual reported data.
 
-```{r nyt-caraccidents, fig.scap = "New York Times 'You Draw It' feature", fig.cap = "New York Times 'You Draw It' feature; readers were asked to use their mouse to draw the line for the missing years in order to provide what they estimated to be the number of Americans who have died every year from car accidents, since 1990.", out.width="75%"}
+```{r nyt-caraccidents, fig.scap = "New York Times 'You Draw It' feature", fig.cap = "New York Times 'You Draw It' feature; readers were asked to use their mouse to draw the line (dashed) for the missing years in order to provide what they estimated to be the number of Americans who have died every year from car accidents, since 1990.", out.width="75%"}
 knitr::include_graphics("images/02-you-draw-it/nyt-caraccidents-frame4.png")
 ```
 
 ### Data Driven Documents
 
-Major news and research organizations such as the New York Times, FiveThirtyEight, Washington Post, and the Pew Research Center create and customize graphics with Data Driven Documents (D3).
+Major news and research organizations such as the New York Times, FiveThirtyEight, the Washington Post, and the Pew Research Center create and customize graphics with Data Driven Documents (D3).
 In June 2020, the New York Times released a front page displaying figures that represent each of the 100,000 lives lost from the COVID-19 pandemic until that point in time [@NYTrememberinglives]; this visualization was meant to bring about a visceral reaction and resonate with readers. 
 During 2021 March Madness, FiveThirtyEight created a roster-shuffling machine which allowed readers to build their own NBA contender through interactivity [@ryanabest_2021].
 Data Driven Documents (D3) is an open-source JavaScript based graphing framework created by Mike Bostock during his time working on graphics at the New York Times.
@@ -135,7 +135,7 @@ A challenge of working with D3 is the environment necessary to display the graph
 The `r2d3` package in R provides an efficient integration of D3 visuals and R by displaying them in familiar HTML output formats such as RMarkdown or Shiny applications [@r2d3].
 The creator of the graphic applies `D3.js` source code to visualize data which has previously been processed within an R setting. 
 
-The example R code illustrates the structure of the `r2d3` function which includes specification of a data frame in R (converted to a JSON file), the D3.js source code file, and the D3 version that accompanies the source code.
+The example R code illustrates the structure of the `r2d3` function which includes specification of a data frame in R (converted JavaScript Object Notation (JSON) file format), the `D3.js` source code file, and the D3 version that accompanies the source code.
 A default SVG container for layering elements is then generated by the `r2d3` function which renders the plot using the source code. 
 [Appendix A](#youdrawit-with-shiny) outlines the development of the 'You Draw It' interactive plots used in this study through the use of `r2d3` and R shiny applications. 
 \cref{fig:youdrawit-example} provides an example of a 'You Draw It' interactive plot as was shown to participants during the study. 
@@ -172,8 +172,8 @@ Participant recruitment and study deployment was conducted via Prolific, a crowd
 
 ## Eye Fitting Straight Lines in the Modern Era
 
-@finney_subjective_1951 and @mosteller_eye_1981 use methods such as using a ruler, string, or transparency sheet to fit straight lines through a set of points.
-This section replicates the study found in @mosteller_eye_1981 and extends this study with formal statistical analysis methods in order to establish 'You Draw It' as a tool and method for testing graphics.
+@finney_subjective_1951 and @mosteller_eye_1981 use methods such as a ruler, string, or transparency sheet to fit straight lines through a set of points.
+This section replicates the study found in @mosteller_eye_1981 and extends this study with formal statistical analysis methods to establish 'You Draw It' as a tool and method for testing graphics.
 
 ### Data Generation
 
@@ -184,8 +184,8 @@ Data were simulated based on linear model with additive errors:
 y_i & = \beta_0 + \beta_1 x_i + e_i \\
 \text{with } e_i & \sim N(0, \sigma^2). \nonumber
 \end{align} 
-The parameters $\beta_0$ and $\beta_1$ were selected to replicate @mosteller_eye_1981 with $e_i$ generated by rejection sampling in order to guarantee the points shown align with that of the fitted line. 
-An ordinary least squares regression was then fit to the simulated points in order to obtain the best fit line and fitted values in 0.25 increments across the domain, $(x_k, \hat y_{k,OLS}), k = 1, ..., 4 x_{max} +1$.
+The parameters $\beta_0$ and $\beta_1$ were selected to replicate @mosteller_eye_1981 with $e_i$ generated by rejection sampling to guarantee the points shown align with that of the fitted line. 
+An ordinary least squares regression was then fit to the simulated points to obtain the best fit line and fitted values in 0.25 increments across the domain, $(x_k, \hat y_{k,OLS}), k = 1, ..., 4 x_{max} +1$.
 The data simulation function then outputted a list of point data and line data both indicating the parameter identification, $x$ value, and corresponding simulated or fitted $y$ value.
 The data simulation procedure is described in \cref{alg:eyefitting-algorithm}.
 
@@ -226,11 +226,11 @@ data.frame(Parm = c("F", "N", "S", "V"),
 Simulated model equation parameters were selected to reflect the four data sets (F, N, S, and V) used in @mosteller_eye_1981 \pcref{tab:eyefitting-parameters}. 
 Parameter choices F, N, and S simulated data across a domain of 0 to 20. 
 Parameter choice F produced a trend with a positive slope and a large variance while N had a negative slope and a large variance. 
-In comparison, S resulted a trend with a positive slope with a small variance and V yielded a steep positive slope with a small variance over the domain of 4 to 16. 
+In comparison, S resulted in a trend with a positive slope with a small variance. V yielded a steep positive slope with a small variance over the domain of 4 to 16. 
 \cref{fig:eyefitting-simplot} illustrates an example of simulated data for all four parameter choices intended to reflect the trends seen in \cref{fig:mosteller-eyefitting-plot}.
 Aesthetic design choices were made consistent across each of the interactive 'You Draw It' plots; the $y$-axis range extended 10\% beyond (above and below) the range of the simulated data points to allow for users to draw outside the simulated data set range and minimize participants anchoring their lines to the edges of the graph.
 
-```{r eyefitting-simplot, echo=F, fig.scap="Eye Fitting Straight Lines in the Modern Era simulated data example", fig.cap = "Scatter plots of example simulated data in Eye Fitting Straight Lines in the Modern Era sub-study. The four parameter choices were intended to reflect the trends seen in \\cref{fig:mosteller-eyefitting-plot}.", fig.height=8, fig.width=8, message=FALSE, warning=FALSE, out.width="100%"}
+```{r eyefitting-simplot, echo=F, fig.scap="Eye Fitting Straight Lines in the Modern Era simulated data example", fig.cap = "Scatter-plots of example simulated data in Eye Fitting Straight Lines in the Modern Era sub-study. The four parameter choices were intended to reflect the trends seen in \\cref{fig:mosteller-eyefitting-plot}.", fig.height=8, fig.width=8, message=FALSE, warning=FALSE, out.width="100%"}
 
 eyefitting_example_sim <- read_csv("data/02b-eyefitting/eyefitting-simdata-example.csv", show_col_types = F)
 eyefitting_example_simplot <- eyefitting_example_sim %>%
@@ -260,7 +260,7 @@ eyefitting_example_simplot
 ### Results
 
 In addition to the participant drawn points, $(x_k, y_{k,drawn})$, and the ordinary least squares (OLS) regression fitted values, $(x_k, \hat y_{k,OLS})$, a regression equation with a slope based on the first principal component (PCA) was used to calculate fitted values, $(x_k, \hat y_{k,PCA})$.
-For each set of simulated data and parameter choice, the PCA regression slope, $\hat\beta_{1,PCA}$, and y-intercept, $\hat\beta_{0,PCA}$, were determined by using the `mcreg` function in the `mcr` package in R [@mcr_pkg] which implements Deming regression (equivalent to a regression based on the slope of the first principal component).
+For each set of simulated data and parameter choice, the PCA regression slope, $\hat\beta_{1,PCA}$, and y-intercept, $\hat\beta_{0,PCA}$, were determined using the `mcreg` function in the `mcr` package in R [@mcr_pkg] which implements Deming regression (equivalent to a regression based on the slope of the first principal component).
 Fitted values, $\hat y_{k,PCA}$ were then obtained every 0.25 increment across the domain from the PCA regression equation, $\hat y_{k,PCA} = \hat\beta_{0,PCA} + \hat\beta_{1,PCA} x_k$.
 \cref{fig:ols-vs-pca-example} illustrates the difference between an OLS regression equation which minimizes the vertical distance of points from the line and a regression equation with a slope calculated by the first principal component which minimizes the smallest distance of points from the line.
 
@@ -505,15 +505,15 @@ Participants were asked to draw a line using their computer mouse through the ex
 
 ### Data Generation
 
-All data processing was conducted in R before being passed to the D3.js source code. 
+All data processing was conducted in R before being passed to the `D3.js` source code. 
 A total of $N = 30$ points $(x_i, y_i), i = 1,...N$ were generated for $x_i\in [x_{min}, x_{max}]$ where $x$ and $y$ have an exponential relationship.
 Data were simulated based on a one parameter exponential model with multiplicative errors: 
 \begin{align}
 y_i & = e^{\beta x_i + e_i} \\
 \text{with } e_i & \sim N(0, \sigma^2). \nonumber
 \end{align} 
-The parameter, $\beta$, was selected to reflect the rate of exponential growth with $e_i$ generated by rejection sampling in order to guarantee the points shown align with that of the fitted line displayed in the initial plot frame. 
-A nonlinear least squares regression is then fit to the simulated points in order to obtain the best fit line and fitted values in 0.25 increments across the domain, $(x_m, \hat y_{m,NLS}), k = 1, ..., 4 x_{max} +1$.
+The parameter, $\beta$, was selected to reflect the rate of exponential growth with $e_i$ generated by rejection sampling to guarantee the points shown align with that of the fitted line displayed in the initial plot frame. 
+A nonlinear least squares regression is then fit to the simulated points to obtain the best fit line and fitted values in 0.25 increments across the domain, $(x_m, \hat y_{m,NLS}), k = 1, ..., 4 x_{max} +1$.
 The data simulation function then outputs a list of point data and line data both indicating the parameter identification, $x$ value, and corresponding simulated or fitted $y$ value.
 The data simulation procedure is described in \cref{alg:exponential-prediction-alg}.
 
@@ -538,7 +538,7 @@ Each growth rate parameter was used to simulate data across a domain of 0 to 20.
 The two simulated data sets (low and high exponential growth rates) were then shown four times each by truncating the points shown at both 50\% and 75\% of the domain as well as on both the log and linear scales for a total of eight interactive plots reflecting a factorial treatment design. 
 [Appendix B](#exponential-prediction-plots) displays visual examples of all eight interactive plots.
 Aesthetic design choices were made consistent across each of the interactive 'You Draw It' plots; the $y$-axis extended 50\% below the lower limit of the simulated data range and 200\% beyond the upper limit of the simulated data range to allow for users to draw outside the data set range, and participants were asked to start drawing at 50\% of the domain (for example, at $x = 10$).
-Reflecting the treatment design for each plot, the y-axis was assigned to be displayed on either the linear scale or log scale.
+Reflecting the treatment design for each plot, the $y$-axis was assigned to be displayed on either the linear scale or log scale.
 
 ### Results
 

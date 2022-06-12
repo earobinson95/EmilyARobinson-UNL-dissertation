@@ -3,18 +3,17 @@
 This research evaluated the use of log scales to display exponentially increasing data from three different angles and levels of complexity: perception, prediction, and estimation.
 Each study provided us insight into the advantages and disadvantages of displaying exponentially increasing data on a log scale and in what context each choice of scale might be more appropriate.
 
-The first study laid the foundation for future studies by testing participants ability to perceptually distinguish between different rates of exponential growth on a linear and log scale.
-This study utilized statistical lineups and did not require participants to understand exponential growth, identify log scales, or have any mathematical training; instead, any findings rely on participants ability to perceive differences in curvature and slope.
-An analysis on the accuracy of participants identification of the target plot provides us with insight to the perceptual implications of the choice of scale.
+The first study laid the foundation for future studies by testing participants' ability to perceptually distinguish between different rates of exponential growth on a linear and log scale.
+This study utilized statistical lineups and did not require participants to understand exponential growth, identify log scales, or have any mathematical training; instead, any findings rely on participants' to perceive differences in curvature and slope.
+An analysis of the accuracy of participants identification of the target plot provides us with insight to the perceptual implications of the choice of scale.
 Results from the lineup analysis indicate that the perceptual difference results from the contextual appearance of the trend.
 The choice of scale changes this contextual appearance leading to slight perceptual advantages for both scales depending on the curvatures of the trend lines being compared.
 In general, when there were large curvature differences, the choice of scale had no impact and perceptual differences were easily identified on both scales.
-However, when minor differences in curvature occurred, there was a perceptual advantage for the scale which resulted in identified the trend which contextually appeared as a curve from the trends that appeared as a line.
-This revealed an advantage for the log scale when differences were subtle with an exception of the the linear scale leading to a perceptual advantage for identifying a trend with more curvature from one which appears to be more linear - contextually appears opposite on the log scale to identify a trend that contextually appears linear from ones that appear curved.
+However, when minor differences in curvature occurred, there was a perceptual advantage for the scale in which the target plot contextually appeared as a curve among null plots with trends that contextually appeared as a line.
+This revealed an advantage for the log scale when differences were subtle with an exception of the linear scale leading to a perceptual advantage for identifying a trend with more curvature from one which appears to be more linear - contextually appears opposite on the log scale to identify a trend that contextually appears linear from ones that appear curved.
 
+The second study required interpretative processes to extend the pattern recognition and construct meaning. 
 'You Draw It' interactive graphics were adapted from the New York Times and used to test the ability to make forecast predictions for exponentially increasing trends on both scales by drawing a visually fit line with a computer mouse.
-
-The second study required interpretative processes to extend the pattern recognition and construct meaning.
 This study was supported by a sub-study which validated 'You Draw It' as a tool and method for testing statistical graphics and introduced an appropriate statistical analysis method using generalized additive mixed models for comparing visually fitted trend lines to statistical regression results.
 This new method was then used to test participants ability to make forecast predictions for exponentially increasing trends on both scales.
 The results from the analysis showed a clear underestimation of forecasting trends with high exponential growth rates when participants were asked to make predictions on the linear scale.
@@ -45,5 +44,5 @@ Our results showed there are perceptual advantages of the use of log scales due 
 We recommend consideration of both user needs and graph specific tasks when presenting data on the log scale; caution should be taken when interpretation of large magnitudes is required, but advantages may appear when it is necessary to visually identify and interpret small magnitudes on the chart.
 In addition to this research, further investigation is necessary to expand the use of log scales to data which does not follow an exponential trend, but where log scales are otherwise appropriate - such as polynomial curves spanning multiple orders of magnitude.
 It is also necessary to evaluate the implications of transforming or displaying the $x$-axis on a log scale, as this work focused on the transformation of the $y$-axis.
-Follow-up studies for this research could provide further insight into the strategies of estimation by providing users the ability to interact with the graph with visual aids such as the arrows shown in sketches from [Chapter 4](#estimation) and how we make decisions based on data displayed on a log scale in order to evaluate the effect of scale on risk adversity.
+Follow-up studies for this research could provide further insight into the strategies of estimation by providing users the ability to interact with the graph with visual aids such as the arrows shown in sketches from [Chapter 4](#estimation) and how we make decisions based on data displayed on a log scale to evaluate the effect of scale on risk adversity.
 This research stands as a model for conducting an extensive series of graphical tasks on the same type of data and plot in order to gain a comprehensive understanding of both the perceptual and cognitive implications of the design choices.

@@ -1,11 +1,11 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.5.10)  19 MAY 2022 16:05
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.6.2)  12 JUN 2022 14:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **thesis.tex
 (./thesis.tex
 LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2022-05-04> (./nuthesis.cls
+L3 programming layer <2022-05-30> (./nuthesis.cls
 Document Class: nuthesis 2017/10/12 v0.7.2 University of Nebraska Thesis class
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
@@ -808,7 +808,7 @@ File: dirtree.tex 2012/12/11 v0.32 `dirtree' (jcc)
 \c@lemma=\count377
 \c@cor=\count378
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
-Package: fancyvrb 2022/04/12 4.2 verbatim text (tvz,hv)
+Package: fancyvrb 2022/05/26 4.2a verbatim text (tvz,hv)
 \FV@CodeLineNo=\count379
 \FV@InFile=\read4
 \FV@TabBox=\box73
@@ -857,7 +857,7 @@ Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.sty (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2022-05-04 L3 programming layer (loader) 
+Package: expl3 2022-05-30 L3 programming layer (loader) 
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
 File: l3backend-xetex.def 2022-04-20 L3 backend support: XeTeX
 \g__graphics_track_int=\count388
@@ -866,7 +866,7 @@ File: l3backend-xetex.def 2022-04-20 L3 backend support: XeTeX
 \g__pdf_backend_annotation_int=\count390
 \g__pdf_backend_link_int=\count391
 ))
-Package: xparse 2022-01-12 L3 Experimental document command parser
+Package: xparse 2022-05-30 L3 Experimental document command parser
 )
 Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
@@ -1304,14 +1304,14 @@ File: images/misleading-graphics-3d-pie-batteries.jpg Graphic file (type bmp)
 <images/misleading-graphics-3d-pie-batteries.jpg>
 File: images/misleading-graphics-bad-form-better-science.png Graphic file (type bmp)
 <images/misleading-graphics-bad-form-better-science.png>
-File: images/misleading-graphics-wordle-map.jpg Graphic file (type bmp)
-<images/misleading-graphics-wordle-map.jpg>
 File: images/misleading-graphics-bad-form-supercomputers.png Graphic file (type bmp)
 <images/misleading-graphics-bad-form-supercomputers.png>
-File: images/misleading-graphics-bad-axes-rouble-to-dollar.jpg Graphic file (type bmp)
-<images/misleading-graphics-bad-axes-rouble-to-dollar.jpg>
+File: images/misleading-graphics-wordle-map.jpg Graphic file (type bmp)
+<images/misleading-graphics-wordle-map.jpg>
 File: images/misleading-graphics-pizza.png Graphic file (type bmp)
 <images/misleading-graphics-pizza.png>
+File: images/misleading-graphics-bad-axes-rouble-to-dollar.jpg Graphic file (type bmp)
+<images/misleading-graphics-bad-axes-rouble-to-dollar.jpg>
 File: images/misleading-graphics-multiple-issues-pet-ownership.jpg Graphic file (type bmp)
 <images/misleading-graphics-multiple-issues-pet-ownership.jpg>
 [4]
@@ -1326,9 +1326,10 @@ File: images/statistical-atlas-state-population.jpg Graphic file (type bmp)
 [10]
 File: images/standards-of-graphics-log-scale.jpg Graphic file (type bmp)
 <images/standards-of-graphics-log-scale.jpg>
-[11] [12] [13]
+[11] [12]
 File: images/eells-component-parts.png Graphic file (type bmp)
 <images/eells-component-parts.png>
+[13]
 File: images/spence-1990-proportion.png Graphic file (type bmp)
 <images/spence-1990-proportion.png>
 [14] [15] [16] [17]
@@ -1439,12 +1440,11 @@ File: thesis_files/figure-latex/qe2-density-plot-1.pdf Graphic file (type pdf)
 [95] [96] [97]
 File: images/03-estimation/qi1-sketch.png Graphic file (type bmp)
 <images/03-estimation/qi1-sketch.png>
-[98]
 File: thesis_files/figure-latex/qi1-density-1-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi1-density-1-1.pdf>
 File: thesis_files/figure-latex/qi1-density-2-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi1-density-2-1.pdf>
-[99] [100] [101] [102]
+[98] [99] [100] [101] [102]
 File: thesis_files/figure-latex/qi1-common-responses-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/qi1-common-responses-1.pdf>
 [103] [104] [105]
@@ -1497,19 +1497,19 @@ File: thesis_files/figure-latex/showed-work-comparison-1.pdf Graphic file (type 
 ] [131] [132
 
 ]
-Overfull \hbox (116.99373pt too wide) in paragraph at lines 2208--2210
+Overfull \hbox (116.99373pt too wide) in paragraph at lines 2207--2209
  [][]\TU/lmr/m/n/12 www.reddit.com/r/europe/comments/9wmu3x/european_pet_dog_cat_and_bird_ownership_per/[][]  
  []
 
-[133] [134] [135] [136] [137] [138] [139] [140] [141] [142] [143] [144] [145]
+[133] [134] [135] [136] [137] [138] [139] [140] [141] [142] [143] [144]
 No file thesis.bbl.
 
 Class memoir Warning: The material used in the footer is too large
 (10.14995pt) for the given foot skip (0.0pt), it is recommended to
 either increase the foot skip or redesign the footer
-(in both cases you will find help in the memoir manual). on input line 2573.
+(in both cases you will find help in the memoir manual). on input line 2557.
 
-[146]
+[145]
 \tf@toc=\write7
 \openout7 = `thesis.toc'.
 
@@ -1524,12 +1524,12 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 159DE7245B2B55282DBB650F12ADB920;2727.
  ) 
 Here is how much of TeX's memory you used:
- 39407 strings out of 478132
- 792269 string characters out of 5851803
- 1097436 words of memory out of 5000000
- 59379 multiletter control sequences out of 15000+600000
+ 39407 strings out of 478126
+ 792269 string characters out of 5851685
+ 1097764 words of memory out of 5000000
+ 59385 multiletter control sequences out of 15000+600000
  475567 words of font info for 72 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  123i,12n,120p,2326b,507s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on thesis.pdf (159 pages).
+Output written on thesis.pdf (158 pages).

@@ -281,7 +281,7 @@ In [Section 1.8](#underestimation) we see how the hierarchy of accuracy in plot 
 During the $\text{21}^{\text{st}}$ century, advancements were made in the methodology used to investigate the effectiveness of statistical charts [@majumder_validation_2013]. 
 A notable advancement was made in @buja_statistical_2009 which introduced the lineup protocol.
 Supported by the grammar of graphics, the lineup protocol characterizes a data plot as a statistic, defined as, "a functional mapping of a variable or set of variables" [@vanderplas_testing_2020].
-This allows the data plot to be tested similar to other statistics; by comparing the actual data plot to a set of plots with the absence of any data structure, we can test the likelihood of any perceived structure being significant.
+This allows the data plot to be tested similar to other statistics; by comparing the actual data plot to a set of plots with the absence of any data structure, we can test the likelihood of any perceived structure being visually significant [@vanderplas2021statistical].
 The construction of data plots as statistics allows for easy experimentation, granting researchers the ability to compare the effectiveness of and understand the perception of different types of charts.
 While the lineup protocol differs from methodology used in earlier studies, the focus is still on initial perception with a relatively small amount of work conducted to understand the effect of design choices on higher cognitive processes such as learning or analysis [@green2009personal]. 
 Lineups serve as a powerful tool for testing *perceived* differences by eliminating ambiguous questions. 

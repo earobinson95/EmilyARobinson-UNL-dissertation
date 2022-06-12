@@ -8,16 +8,16 @@ library(tidyverse)
 
 # You Draw It Setup with Shiny {#youdrawit-with-shiny}
 
-Interactive plots for the you draw it study were created using the `r2d3` package and integrating D3 source code with an R shiny application. 
-I conducted all data simulation and processing in R and outputted two data sets - point data and line data - containing (x, y) coordinates corresponding to either a simulated point or fitted value predicted by a statistical model respectively. 
-Then, the r2d3 package converted the data sets in R to JSON to be interpreted by the D3.js code. 
-I define functions in D3.js to draw the initial plot and set up draw-able points for the user drawn line. 
-Drag events in D3.js were utilized to react to observe and react to user input. 
+Interactive plots for the 'You Draw It' study were created using the `r2d3` package and integrating D3 source code with an R shiny application. 
+I conducted all data simulation and processing in R and outputted two data sets - point data and line data - containing ($x$, $y$) coordinates corresponding to either a simulated point or fitted value predicted by a statistical model respectively. 
+Then, the `r2d3` package converted the data sets in R to JSON to be interpreted by the `D3.js` code. 
+I define functions in `D3.js` to draw the initial plot and set up draw-able points for the user drawn line. 
+Drag events in `D3.js` were utilized to observe and react to user input. 
 Shiny Messages were used to communicate the user interaction between the D3 code and the R environment. 
-The plot was then rendered and updated on user interaction into the R shiny application with the RenderD3 and d3Output functions.
-Parameters for aesthetic design choices were defined in a list of options and r2d3 passes these to the D3.js code.
+The plot was then rendered and updated on user interaction into the R shiny application with the `RenderD3` and `d3Output` functions.
+Parameters for aesthetic design choices were defined in a list of options and r2d3 passes these to the `D3.js` code.
 For instance, I specified the buffer space allowed for the $x$ and $y$ axes to avoid users anchoring their lines to the axes limits. For D3.js source code, visit GitHub [here](https://github.com/srvanderplas/Perception-of-Log-Scales/blob/master/you-draw-it-development/you-draw-it-test-app/main.js).
-\cref{fig:r2d3-shiny-flowchart} provides a visual aid of the process of creating the you draw it experimental study in [Chapter 3](#youdrawit).
+\cref{fig:r2d3-shiny-flowchart} provides a visual aid of the process of 'creating the 'You Draw It' experimental study in [Chapter 3](#youdrawit).
 
 ```{r r2d3-shiny-flowchart, fig.cap = "Interactive plot development", out.width="100%"}
 knitr::include_graphics("images/02-you-draw-it/r2d3+shiny.png")
@@ -443,9 +443,9 @@ knitr::include_graphics("images/02-you-draw-it/high-15-log.png")
 
 # Scratchwork participant comparison {#estimation-comparison}
 
-In order to examine whether participants who used the provided resources for estimation differed in their numerical estimations from those who did not, we first compared population estimates from the explicitly asked year 10 location.
+To examine whether participants who used the provided resources for estimation differed in their numerical estimations from those who did not, we first compared population estimates from the explicitly asked year 10 location.
 About half of the participants fell into the category which provided scratch work and half did not \pcref{tab:showed-work-comparison-table}. 
-The  was determined there was no substantial difference or bias in estimates between the two groups, therefore, we proceeded to examine the estimated populations across scales from the first level estimates \pcref{fig:showed-work-comparison}.
+We determined there was no substantial difference or bias in estimates between the two groups, therefore, we proceeded to examine the estimated populations across scales from the first level estimates \pcref{fig:showed-work-comparison}.
 See [4.4.2](#eq1-results) for follow-up comparisons.
 
 ```{r, showed-work-comparison, echo = F, fig.cap = "Estimation showed work density plot comparison", fig.height = 9, fig.width = 9, out.width = "100%", warning = F, message = F}
