@@ -1,16 +1,16 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.6.2)  12 JUN 2022 14:07
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.6.13)  17 JUN 2022 09:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **thesis.tex
 (./thesis.tex
-LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2022-05-30> (./nuthesis.cls
+LaTeX2e <2022-06-01> pre-release-0 (develop 2022-6-13 branch)
+L3 programming layer <2022-06-02> (./nuthesis.cls
 Document Class: nuthesis 2017/10/12 v0.7.2 University of Nebraska Thesis class
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
@@ -138,14 +138,14 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \midPoemTitleskip=\skip115
 \afterPoemTitleskip=\skip116
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/array.sty
-Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
+Package: array 2022/03/10 v2.5f Tabular extension package (FMi)
 \col@sep=\dimen143
-\ar@mcellbox=\box50
+\ar@mcellbox=\box51
 \extrarowheight=\dimen144
 \NC@list=\toks18
 \extratabsurround=\skip117
 \backup@length=\skip118
-\ar@cellbox=\box51
+\ar@cellbox=\box52
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/dcolumn.sty
 Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/delarray.sty
@@ -186,7 +186,7 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \crtok=\toks20
 \@mincolumnwidth=\dimen163
 \c@newflo@tctr=\count277
-\mem@margin@floatbox=\box52
+\mem@margin@floatbox=\box53
 \@contcwidth=\skip121
 \@contindw=\skip122
 \abovecaptionskip=\skip123
@@ -198,8 +198,8 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \subfloatlabelskip=\skip129
 \subfloatcapmargin=\dimen164
 \c@@contsubnum=\count278
-\m@mscap@capbox=\box53
-\m@mscap@fbox=\box54
+\m@mscap@capbox=\box54
+\m@mscap@fbox=\box55
 \sidecapsep=\dimen165
 \sidecapwidth=\dimen166
 \m@m@tempdima=\dimen167
@@ -372,22 +372,22 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutvoffset=\dimen190
 \Gm@dimlist=\toks25
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: xetex.def on input line 227.
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-def/xetex.def
 File: xetex.def 2022/04/16 v5.0m Graphics/color driver for xetex
-)
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
-Package xcolor Info: Model `RGB' extended on input line 1368.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 ))) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty
@@ -412,7 +412,7 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@headsep=\skip193
 \dth@everypar=\toks32
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2021/10/15 v2.17l AMS math features
+Package: amsmath 2022/04/08 v2.17n AMS math features
 \@mathmargin=\skip194
 For additional information on amsmath, use the `?' option.
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -425,24 +425,34 @@ File: amsgen.sty 1999/11/30 v2.0 generic functions
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen192
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 2021/08/26 v2.02 operator names
+Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count309
 LaTeX Info: Redefining \frac on input line 234.
 \uproot@=\count310
 \leftroot@=\count311
 LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
 \classnum@=\count312
 \DOTSCASE@=\count313
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box55
-\strutbox@=\box56
+\Mathstrutbox@=\box56
+\strutbox@=\box57
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
 \big@size=\dimen193
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \macc@depth=\count314
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
 \c@MaxMatrixCols=\count315
 \dotsspace@=\muskip16
 \c@parentequation=\count316
@@ -462,8 +472,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \multlinegap=\skip195
 \multlinetaggap=\skip196
 \mathdisplay@stack=\toks37
-LaTeX Info: Redefining \[ on input line 2938.
-LaTeX Info: Redefining \] on input line 2939.
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/wasysym/wasysym.sty
 Package: wasysym 2020/01/19 v2.4 Wasy-2 symbol support package
 \symwasy=\mathgroup6
@@ -475,7 +485,7 @@ Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
@@ -501,7 +511,7 @@ Invalid UTF-8 byte or sequence at line 296 replaced by U+FFFD.
 \quotelinenumbersep=\dimen260
 \bframerule=\dimen261
 \bframesep=\dimen262
-\bframebox=\box57
+\bframebox=\box58
 LaTeX Info: Redefining \\ on input line 3056.
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/todonotes/todonotes.sty
 Package: todonotes 2021/06/04 v1.1.5 Todonotes source and documentation.
@@ -519,7 +529,7 @@ File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 \pgfutil@tempdima=\dimen263
 \pgfutil@tempdimb=\dimen264
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box58
+\pgfutil@abb=\box59
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
 ))
@@ -575,7 +585,7 @@ Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen275
 \pgfmath@count=\count337
-\pgfmath@box=\box59
+\pgfmath@box=\box60
 \pgfmath@toks=\toks48
 \pgfmath@stack@operand=\toks49
 \pgfmath@stack@operation=\toks50
@@ -607,9 +617,9 @@ File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@shorten@start@additional=\dimen293
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfpic=\box60
-\pgf@hbox=\box61
-\pgf@layerbox@main=\box62
+\pgfpic=\box61
+\pgf@hbox=\box62
+\pgf@layerbox@main=\box63
 \pgf@picture@serial@count=\count339
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
@@ -637,7 +647,7 @@ File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfexternal@startupbox=\box63
+\pgfexternal@startupbox=\box64
 )) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
@@ -648,7 +658,7 @@ File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ))) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfnodeparttextbox=\box64
+\pgfnodeparttextbox=\box65
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
@@ -679,10 +689,10 @@ File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \tikz@lastmovetoy=\dimen310
 \tikzleveldistance=\dimen311
 \tikzsiblingdistance=\dimen312
-\tikz@figbox=\box65
-\tikz@figbox@bg=\box66
-\tikz@tempbox=\box67
-\tikz@tempbox@bg=\box68
+\tikz@figbox=\box66
+\tikz@figbox@bg=\box67
+\tikz@tempbox=\box68
+\tikz@tempbox@bg=\box69
 \tikztreelevel=\count343
 \tikznumberofchildren=\count344
 \tikznumberofcurrentchild=\count345
@@ -714,7 +724,7 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \c@@todonotes@numberoftodonotes=\count354
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count355
-\lst@gtempboxa=\box69
+\lst@gtempboxa=\box70
 \lst@token=\toks53
 \lst@length=\count356
 \lst@currlwidth=\dimen315
@@ -729,7 +739,7 @@ LaTeX Info: Redefining \addtolength on input line 81.
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 \c@lstnumber=\count361
 \lst@skipnumbers=\count362
-\lst@framebox=\box70
+\lst@framebox=\box71
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
@@ -741,7 +751,7 @@ Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
 \c@r@tfl@t=\count363
 \rotFPtop=\skip256
 \rotFPbot=\skip257
-\rot@float@box=\box71
+\rot@float@box=\box72
 \rot@mess@toks=\toks54
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
@@ -779,7 +789,7 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip258
 \enit@outerparindent=\dimen329
 \enit@toks=\toks55
-\enit@inbox=\box72
+\enit@inbox=\box73
 \enit@count@id=\count368
 \enitdp@description=\count369
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/dirtree/dirtree.sty
@@ -808,10 +818,10 @@ File: dirtree.tex 2012/12/11 v0.32 `dirtree' (jcc)
 \c@lemma=\count377
 \c@cor=\count378
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
-Package: fancyvrb 2022/05/26 4.2a verbatim text (tvz,hv)
+Package: fancyvrb 2022/06/06 4.5 verbatim text (tvz,hv)
 \FV@CodeLineNo=\count379
 \FV@InFile=\read4
-\FV@TabBox=\box73
+\FV@TabBox=\box74
 \c@FancyVerbLine=\count380
 \FV@StepNumber=\count381
 \FV@OutFile=\write5
@@ -834,11 +844,11 @@ Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
 \LTpost=\skip264
 \LTchunksize=\count382
 \LTcapwidth=\dimen342
-\LT@head=\box74
-\LT@firsthead=\box75
-\LT@foot=\box76
-\LT@lastfoot=\box77
-\LT@gbox=\box78
+\LT@head=\box75
+\LT@firsthead=\box76
+\LT@foot=\box77
+\LT@lastfoot=\box78
+\LT@gbox=\box79
 \LT@cols=\count383
 \LT@rows=\count384
 \c@LT@tables=\count385
@@ -857,16 +867,16 @@ Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.sty (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2022-05-30 L3 programming layer (loader) 
+Package: expl3 2022-06-02 L3 programming layer (loader) 
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
 File: l3backend-xetex.def 2022-04-20 L3 backend support: XeTeX
 \g__graphics_track_int=\count388
-\l__pdf_internal_box=\box79
+\l__pdf_internal_box=\box80
 \g__pdf_backend_object_int=\count389
 \g__pdf_backend_annotation_int=\count390
 \g__pdf_backend_link_int=\count391
 ))
-Package: xparse 2022-05-30 L3 Experimental document command parser
+Package: xparse 2022-06-07 L3 Experimental document command parser
 )
 Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
@@ -900,10 +910,10 @@ LaTeX Info: Redefining \TeX on input line 193.
 LaTeX Info: Redefining \LaTeX on input line 202.
 LaTeX Info: Redefining \LaTeXe on input line 219.
 )
-\l__xetex_show_hyphens_wrapping_box=\box80
-\l__xetex_show_hyphens_temp_box=\box81
-\l__xetex_show_hyphens_final_box=\box82
-\g__xetex_show_hyphens_word_box=\box83
+\l__xetex_show_hyphens_wrapping_box=\box81
+\l__xetex_show_hyphens_temp_box=\box82
+\l__xetex_show_hyphens_final_box=\box83
+\g__xetex_show_hyphens_word_box=\box84
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/xelatex/xunicode/xunicode.sty
 File: xunicode.sty 2011/09/09 v0.981 provides access to latin accents and many other characters in Unicode lower plane
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tipa/t3enc.def
@@ -913,7 +923,7 @@ File: t3enc.def 2001/12/31 T3 encoding
 \tipasavetokens=\toks59
 \tipachecktokens=\toks60
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2022-05-17 v7.00q Hypertext links for LaTeX
+Package: hyperref 2022-06-13 v7.00r Hypertext links for LaTeX
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
@@ -951,7 +961,7 @@ Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 \Hy@linkcounter=\count405
 \Hy@pagecounter=\count406
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2022-05-17 v7.00q Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2022-06-13 v7.00r Hyperref: PDFDocEncoding definition (HO)
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/etexcmds/etexcmds.sty
@@ -959,9 +969,9 @@ Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count407
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2022-05-17 v7.00q Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2022-06-13 v7.00r Hyperref: PDF Unicode definition (HO)
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/puenc-greekbasic.def
-File: puenc-greekbasic.def 2022-05-17 v7.00q Hyperref: PDF Unicode definition (greek block) (HO)
+File: puenc-greekbasic.def 2022-06-13 v7.00r Hyperref: PDF Unicode definition (greek block) (HO)
 ))
 Package hyperref Info: Option `setpagesize' set `false' on input line 4020.
 Package hyperref Info: Option `unicode' set `false' on input line 4020.
@@ -995,8 +1005,6 @@ Package hyperref Info: backreferencing OFF on input line 6016.
 Package hyperref Info: Link coloring ON on input line 6019.
 Package hyperref Info: Link coloring with OCG OFF on input line 6026.
 Package hyperref Info: PDF/A mode OFF on input line 6031.
-LaTeX Info: Redefining \ref on input line 6078.
-LaTeX Info: Redefining \pageref on input line 6078.
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
@@ -1007,11 +1015,11 @@ package with kernel methods
 )
 Package hyperref Info: Driver: hxetex.
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hxetex.def
-File: hxetex.def 2022-05-17 v7.00q Hyperref driver for XeTeX
+File: hxetex.def 2022-06-13 v7.00r Hyperref driver for XeTeX
 (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-\pdfm@box=\box84
+\pdfm@box=\box85
 \c@Hy@AnnotLevel=\count413
 \HyField@AnnotCount=\count414
 \Fld@listcount=\count415
@@ -1058,9 +1066,9 @@ Package cleveref Info: always capitalise cross-reference names on input line 785
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count419
 \float@exts=\toks61
-\float@box=\box85
+\float@box=\box86
 \@float@everytoks=\toks62
-\@floatcapt=\box86
+\@floatcapt=\box87
 ) (c:/Users/ERobi/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/algorithms/algorithm.sty
 Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
@@ -1497,7 +1505,7 @@ File: thesis_files/figure-latex/showed-work-comparison-1.pdf Graphic file (type 
 ] [131] [132
 
 ]
-Overfull \hbox (116.99373pt too wide) in paragraph at lines 2207--2209
+Overfull \hbox (116.99373pt too wide) in paragraph at lines 2211--2213
  [][]\TU/lmr/m/n/12 www.reddit.com/r/europe/comments/9wmu3x/european_pet_dog_cat_and_bird_ownership_per/[][]  
  []
 
@@ -1507,7 +1515,7 @@ No file thesis.bbl.
 Class memoir Warning: The material used in the footer is too large
 (10.14995pt) for the given foot skip (0.0pt), it is recommended to
 either increase the foot skip or redesign the footer
-(in both cases you will find help in the memoir manual). on input line 2557.
+(in both cases you will find help in the memoir manual). on input line 2561.
 
 [145]
 \tf@toc=\write7
@@ -1524,10 +1532,10 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 159DE7245B2B55282DBB650F12ADB920;2727.
  ) 
 Here is how much of TeX's memory you used:
- 39407 strings out of 478126
- 792269 string characters out of 5851685
- 1097764 words of memory out of 5000000
- 59385 multiletter control sequences out of 15000+600000
+ 39442 strings out of 477884
+ 792969 string characters out of 5845905
+ 1105353 words of memory out of 5000000
+ 59659 multiletter control sequences out of 15000+600000
  475567 words of font info for 72 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  123i,12n,120p,2326b,507s stack positions out of 10000i,1000n,20000p,200000b,200000s

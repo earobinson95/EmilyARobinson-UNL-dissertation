@@ -286,7 +286,7 @@ In order to examine the effect of scale on literal reading of the data, particip
 The true estimated population in year 10 based on the underlying parameter estimates was 481.61 with simulated points of 445.48 and 466.9 for data sets one and two respectively.
 The median participant estimate across both scales and data sets was 500, with interquartile ranges of 500 and 400 for data set one and data set two respectively when displayed on the linear scale and 48 and 12 for data set one and data set two respectively when displayed on the log scale.
 
-```{r qe1-sketch, eval = T, fig.height = 8, fig.width = 8, out.width = "100%", fig.scap = "Elementary Q1 sketch", fig.cap = "Sketch of the estimation procedure asked in Elementary Q1. Participants first locate 10 along the $x$-axis and move upward until they beleive they have found the correct location on the curve; then participants look to the $y$-axis for their estimated population."}
+```{r qe1-sketch, eval = T, fig.height = 8, fig.width = 8, out.width = "100%", fig.scap = "Elementary Q1 sketch", fig.cap = "Sketch of the estimation procedure asked in Elementary Q1. Participants first locate 10 along the $x$-axis and move upward until they believe they have found the correct location on the curve; then participants look to the $y$-axis for their estimated population."}
 knitr::include_graphics("images/03-estimation/qe1-sketch.png")
 ```
 

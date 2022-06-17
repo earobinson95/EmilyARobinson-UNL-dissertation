@@ -569,20 +569,24 @@ spaghetti_plot
 ```
 
 Allowing for flexibility, the `bam` function in the `mgcv` package [@mgcv1; @mgcv2; @mgcv3; @mgcv4; @mgcv5] was used to fit a GAMM to estimate trends of vertical residuals from the participant drawn line in relation to the NLS fitted values ($e_{ijklm,NLS} = y_{ijklm,drawn} - \hat y_{ijklm,NLS}$) across the domain. 
-The combination between growth rate, point truncation, and scale was treated as a fixed effect with no estimated intercept and a separate smoothing spline for $x$ was estimated for each treatment combination. 
+Due to discrepancy in variance magnitudes, we fit separate models for the low and high growth rates ($i=1,2$) with the combination between point truncation and scale was treated as a fixed effect with no estimated intercept and a separate smoothing spline for $x$ was estimated for each point truncation and scale combination. 
 A random participant effect accounting for variation due to participant and a random spline for each participant accounted for variation in spline for each participant.
-The GAMM equation for residuals is given by:
+The GAMM equations for residuals is given by:
 \begin{equation}
-y_{ijklm,drawn} - \hat y_{ijklm,NLS} = e_{ijklm,nls} = \tau_{ijk} + s_{ijk}(x_{ijklm}) + p_{l} + s_{l}(x_{ijklm})
+y_{1jklm,drawn} - \hat y_{1jklm,NLS} = e_{1jklm,nls} = \tau_{1jk} + s_{1jk}(x_{1jklm}) + p_{l} + s_{l}(x_{1jklm})
+\end{equation}
+and
+\begin{equation}
+y_{2jklm,drawn} - \hat y_{2jklm,NLS} = e_{2jklm,nls} = \tau_{2jk} + s_{2jk}(x_{2jklm}) + p_{l} + s_{l}(x_{2jklm})
 \end{equation}
 \noindent where
 
-+ $y_{ijklm,drawn}$ is the drawn y-value for the $l^{th}$ participant, $m^{th}$ increment, and $ijk^{th}$ treatment combination 
-+ $\hat y_{ijklm,NLS}$ is the NLS fitted y-value for the $l^{th}$ participant, $m^{th}$ increment, and $ijk^{th}$ treatment combination 
-+ $e_{ijklm,NLS}$ is the residual between the drawn y-value and fitted y-value for the $l^{th}$ participant, $m^{th}$ increment, and $ijk^{th}$ treatment combination 
-+ $\tau_{ijk}$ is the intercept for the $i^{th}$ growth rate, $j^{th}$ point truncation, and $k^{th}$ scale treatment combination
-+ $s_{ijk}$ is the smoothing spline for the $ijk^{th}$ treatment combination
-+ $x_{ijklm}$ is the $x$-value for the $l^{th}$ participant, $m^{th}$ increment, and $ijk^{th}$ treatment combination 
++ $y_{ijklm,drawn}$ is the drawn y-value for the $i^{th}$ growth rate model, $l^{th}$ participant, $m^{th}$ increment, and $jk^{th}$ point truncation and scale combination
++ $\hat y_{ijklm,NLS}$ is the NLS fitted y-value for the $i^{th}$ growth rate model, $l^{th}$ participant, $m^{th}$ increment, and  $jk^{th}$ point truncation and scale combination
++ $e_{ijklm,NLS}$ is the residual between the drawn y-value and fitted y-value for the $i^{th}$ growth rate model, $l^{th}$ participant, $m^{th}$ increment, and $jk^{th}$ point truncation and scale combination
++ $\tau_{ijk}$ is the intercept for the $i^{th}$ growth rate model, $j^{th}$ point truncation, and $k^{th}$ scale treatment combination
++ $s_{ijk}$ is the smoothing spline for the $i^{th}$ growth rate model and $jk^{th}$ point truncation and scale combination
++ $x_{ijklm}$ is the $x$-value for the $i^{th}$ growth rate model, $l^{th}$ participant, $m^{th}$ increment, and $jk^{th}$ point truncation and scale combination
 + $p_{l} \sim N(0, \sigma^2_\text{participant})$ is the error due to the $l^{th}$ participant's characteristics 
 + $s_{l}$ is the random smoothing spline for the $l^{th}$ participant.
 
